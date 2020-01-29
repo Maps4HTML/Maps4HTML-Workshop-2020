@@ -5,12 +5,12 @@
   <img src="assets/media/background-sm.png" alt="Map of Montreal" />
   <h1 id="top">W3C Workshop on Maps for the Web</h1>
   <p>Monday June 15th to Wednesday June 17th 2020, Montreal, Canada</p>
-  (<a href="call-for-participation.html">venue</a>)</p>
+  (<a href="call-for-participation">venue</a>)</p>
   <nav class="menu" id="menu">
     <ul>
       {% for link in site.data.nav %}
         <li>
-          <a href="{{ link.link }}">{{ link.text }}</a>
+          <a href="{{ site.url }}{{ link.link }}">{{ link.text }}</a>
         </li>
       {% endfor %}
     </ul>
