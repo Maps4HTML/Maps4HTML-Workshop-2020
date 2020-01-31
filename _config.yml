@@ -1,0 +1,11 @@
+title: W3C Workshop on Maps for the Web
+description: >-
+  Monday June 15th to Wednesday June 17th 2020, Montreal, Canada
+url: "https://maps4html.github.io/Maps4HTML-Workshop-2020"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

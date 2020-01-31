@@ -26,6 +26,30 @@ body {
   padding: 3em;
 }
 
+
+body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+  color: #005a9c;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skip-link:focus {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .header :first-child {
   margin-top: 0;
 }
