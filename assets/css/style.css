@@ -443,7 +443,7 @@ summary .time span { font-size: 67%; }
   height: 100%;
   margin: 0 13px 0 0;
   order: -1;
-  min-width: 6em;
+  min-width: 6.5em;
 }
 
 .type:empty {
@@ -456,7 +456,7 @@ dt.type {
   margin: 0;
 }
 
-.type-lightning {
+.type-lightning, .type-discussion {
   background-color: #ffe7ba;
 }
 

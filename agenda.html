@@ -1,5 +1,163 @@
 ---
 permalink: /agenda
+layout: default
+schedule:
+- title: "Day 1: Presentation Day 1"
+- agenda:
+  - time: "08:15–08:45AM"
+    title: Registration
+  - time: "08:45–09:00AM"
+    title: Opening Remarks
+    type: plenary # plenary, discussion or breakout
+    open: true # defaults to open element if true
+    details: # delete if no details
+      - Goals for workshop:
+        - <a href="#">Test Link</a>. Description here.
+      - Talks:
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+      - Scribe:
+        - Name
+  - time: "12:00–12:30PM"
+    title: Lunch
+- title: "Day 2: Presentation Day 2"
+- agenda:
+  - time: "08:15–08:45AM"
+    title: Registration
+  - time: "08:45–09:00AM"
+    title: Opening Remarks
+    type: breakout # plenary, discussion or breakout
+    open: true # defaults to open element if true
+    details: # delete if no details
+      - Goals for workshop:
+        - <a href="#">Test Link</a>. Description here.
+          Multiline is possible,
+          if you wish to use Semantic Line Breaks.
+      - Talks:
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+      - Scribe:
+        - Name
+  - time: "12:00–12:30PM"
+    title: Lunch
+- title: "Day 3: Workshop Day 1"
+- agenda:
+  - time: "08:15–08:45AM"
+    title: Registration
+  - time: "08:45–09:00AM"
+    title: Opening Remarks
+    type: discussion # plenary, discussion or breakout
+    open: true # defaults to open element if true
+    details: # delete if no details
+      - Goals for workshop:
+        - <a href="#">Test Link</a>. Description here.
+      - Talks:
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+        - <a href="#">Talk Title</a>
+          <span>Name</span>
+      - Scribe:
+        - Name
+  - time: "12:00–12:30PM"
+    title: Lunch
 ---
 <h1>Workshop Agenda</h1>
 <p>A detailed workshop agenda will be established based on received submissions.</p>
+
+<article>
+{% for day in page.schedule %}
+  <h3>{{ day.title }}</h3>
+  <ol class="schedule">
+    {% for item in day.agenda %}
+      <li class="{% unless item.details %}no-details{% endunless %}{% if item.title contains 'Break' or item.title contains 'Lunch' %} break {% endif %}">
+        <details {% if item.open %}open{% endif %}>
+          <summary>
+            <span class="desc">
+              <span class="time">{{ item.time | replace: 'AM', ' <span>AM</span>' | replace: 'PM', ' <span>PM</span>' }}</span>
+              <span class="title">{{ item.title }}</span>
+              <span class="type type-{{ item.type }}">{{ item.type }}</span>
+            </span>
+          </summary>
+          {% if item.details %}
+            <dl>
+              {% for detail in item.details %}
+                {% for detail_item in detail %}
+                  <dt>{{ detail_item[0] }}</dt>
+                  {% for description in detail_item[1] %}
+                    <dd>{{ description }}</dd>
+                  {% endfor %}
+                {% endfor %}
+              {% endfor %}
+            </dl>
+          {% endif %}
+        </details>
+      </li>
+    {% endfor %}
+  </ol>
+{% endfor %}
+</article>
+
+<article>
+  <h2>
+    Instructions for participants
+  </h2>
+  <p>
+    The workshop focuses on topics raised by participants in expressions of interest and position statements.
+    Each topic gets introduced by one or more short or lightning talk(s),
+    and discussed among participants, possibly in smaller groups.
+    The goal of each discussion at the workshop is not to resolve the technical issues of the topic,
+    but to determine its relevance and priority to standardization.
+  </p>
+  <h3>
+    Format
+  </h3>
+  <dl class="format">
+    <dt class="type type-plenary" id="plenary">
+      plenary
+    </dt>
+    <dd>
+      Plenary sessions introduce and summarize generic information relevant to all participants.
+    </dd>
+    <dt class="type type-lightning" id="lightning">
+      discussion
+    </dt>
+    <dd>
+      A typical discussion session (45-75 minutes) starts with a few talks by speakers nominated in advance.
+      Talks will either be short (&lt;15 minutes) or <em>very</em> short (<a href="https://en.wikipedia.org/wiki/Lightning_talk">lightning talks</a>).
+      They will be followed by a discussion among participants to exchange ideas, assess priorities, and identify possible standardization actions.
+    </dd>
+    <dt class="type type-breakout" id="breakout">
+      breakout
+    </dt>
+    <dd>
+      Participants break into smaller breakout groups to discuss more specific topics over a period of maximum 60 minutes.
+      The breakout session schedule is built collaboratively by the participants in the course of the workshop.
+      Each group will provide a written summary of their breakout session.
+    </dd>
+  </dl>
+  <h3>
+    Tools
+  </h3>
+  <h4>
+    Chat
+  </h4>
+  <p>
+    We will take notes on IRC during the workshop:
+    <a href="#">IRC web client</a>
+  </p>
+  <h4>
+    Meeting notes
+  </h4>
+  <p>
+    Meeting notes will be recorded on IRC during sessions.
+    These notes will be made public.
+    A scribe will be nominated for each session,
+    however note-taking help from all the participants is very much welcome
+    to ensure correctness and completeness of the notes
+    We wish to make note-taking a collaborative exercise at this workshop.
+  </p>
+</article>
