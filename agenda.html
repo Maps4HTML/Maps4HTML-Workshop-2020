@@ -4,69 +4,118 @@ layout: default
 schedule:
 - title: "Day 1: Presentation Day 1"
   agenda:
-  - time: "08:15–08:45AM"
+# Each agenda item should contain
+# time, as a string describing the range
+# title, as non-interactive HTML (optional for breaks)
+# type, one of plenary, keynote, discussion, lightning, breakout, workshop, break (or none, for admin and such)
+# open, (optional) boolean indicating whether the details element will be open by default
+# details (optional), a list of headings
+#   each of which is mapped to a list of (one or more) bullet points, as HTML
+#   e.g., goals, speakers, scribe
+#
+# EXAMPLES
+#
+# - time: "09:15–10:30AM"
+#   title: Important topic
+#   type: discussion
+#   open: true
+#   details:
+#     - Goals for workshop:
+#       - <a href="#">Test Link</a>. Description here.
+#     - Talks:
+#       - <a href="#">Talk Title</a>
+#         <span>Name</span>
+#       - <a href="#">Talk Title</a>
+#         <span>Name</span>
+#     - Scribe:
+#       - Name
+# - time: "12:00–12:30PM"
+#   title: Lunch
+#   type: break
+
+  - time: "08:15–09:00AM"
     title: Registration
-  - time: "08:45–09:00AM"
+  - time: "09:00–09:15AM"
     title: Opening Remarks
-    type: plenary # plenary, discussion or breakout
-    open: true # defaults to open element if true
-    details: # delete if no details
-      - Goals for workshop:
-        - <a href="#">Test Link</a>. Description here.
-      - Talks:
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-      - Scribe:
-        - Name
-  - time: "12:00–12:30PM"
+    type: plenary
+  - time: "09:15–10:30AM"
+    title: Talks on a theme
+    type: discussion
+    open: true 
+    details:
+      - Structure:
+        - 1 to 3 talks (max 15-minute each) or a panel on a topic of interest
+        - Questions and open discussion
+        - Resolutions on key points for the minutes/report
+  - time: "10:30-10:45AM"
+    type: break
+  - time: "10:45-12:00PM"
+    title: Talks on a theme
+    type: discussion
+  - time: "12:00–13:00PM"
     title: Lunch
+    type: break
+  - time: "13:00–13:30PM"
+    title: Quick talks
+    type: lightning
+    open: true 
+    details:
+      - Structure:
+        - 4 to 6 lightning talks (max 5-minute each) introducing various topics
+        - Questions and discussion to follow in breakout sessions
+  - time: "13:30–15:00PM"
+    title: Breakout sessions
+    type: breakout
+    open: true 
+    details:
+      - Structure:
+        - Open one-hour session for discussions in smaller groups on specific topics proposed by workshop participants.
+        - Resolutions on key points to present back to the main group.
+  - time: "15:00-15:15PM"
+    type: break
+  - time: "15:15-15:45PM"
+    title: Recap breakout session conclusions
+    type: discussion
+  - time: "15:45-17:00PM"
+    title: Talks on a theme
+    type: discussion
+#
 - title: "Day 2: Presentation Day 2"
   agenda:
-  - time: "08:15–08:45AM"
+  - time: "08:15–09:00AM"
     title: Registration
-  - time: "08:45–09:00AM"
-    title: Opening Remarks
-    type: breakout # plenary, discussion or breakout
-    open: true # defaults to open element if true
-    details: # delete if no details
-      - Goals for workshop:
-        - <a href="#">Test Link</a>. Description here.
-          Multiline is possible,
-          if you wish to use Semantic Line Breaks.
-      - Talks:
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-      - Scribe:
-        - Name
-  - time: "12:00–12:30PM"
+  - time: "09:00–12:00PM"
+    title: Talks, panels, and breakout sessions
+    type: discussion
+  - time: "12:00–13:00PM"
     title: Lunch
-- title: "Day 3: Workshop Day 1"
+    type: break
+  - time: "13:00–16:00PM"
+    title: Talks, panels, and breakout sessions
+    type: discussion
+  - time: "16:00–17:00PM"
+    title: Closing remarks
+    type: plenary
+#
+- title: "Day 3: Hack Day"
   agenda:
-  - time: "08:15–08:45AM"
+  - time: "08:15–09:00AM"
     title: Registration
-  - time: "08:45–09:00AM"
-    title: Opening Remarks
-    type: discussion # plenary, discussion or breakout
-    open: true # defaults to open element if true
-    details: # delete if no details
-      - Goals for workshop:
-        - <a href="#">Test Link</a>. Description here.
-      - Talks:
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-        - <a href="#">Talk Title</a>
-          <span>Name</span>
-      - Scribe:
-        - Name
-  - time: "12:00–12:30PM"
-    title: Lunch
+  - time: "09:00–17:00PM"
+    title: Workshop hack sessions
+    type: workshop
+    open: true
+    details:
+      - Structure:
+        - Breakout sessions on specific proposals and options
+        - Collaborative software development or demonstrations
 ---
 <h1>Workshop Agenda</h1>
-<p>A detailed workshop agenda will be established based on received submissions.</p>
+<p>A detailed workshop agenda will be established based on received submissions.
+  The following schedule provides a rough outline.
+  To suggest talk, panel, or breakout session topics,
+  please see the <a href="call-for-participation">call for participation</a>.
+</p>
 <p>
   See the <a href="#tips">instructions for participants</a>, below,
   to help prepare for an effective workshop.
@@ -78,7 +127,7 @@ schedule:
   <h3>{{ day.title }}</h3>
   <ol class="schedule">
     {% for item in day.agenda %}
-      <li class="{% unless item.details %}no-details{% endunless %}{% if item.title contains 'Break' or item.title contains 'Lunch' %} break {% endif %}">
+      <li class="{% unless item.details %}no-details{% endunless %}{% if item.type == 'break' %} break{% endif %}">
         <details {% if item.open %}open{% endif %}>
           <summary>
             <span class="desc">
@@ -127,8 +176,11 @@ schedule:
     <dd>
       Plenary sessions introduce and summarize generic information relevant to all participants.
     </dd>
-    <dt class="type type-lightning" id="lightning">
+    <dt class="type type-discussion" id="discussion">
       discussion
+    </dt>
+    <dt class="type type-lightning" id="lightning">
+      lightning
     </dt>
     <dd>
       A typical discussion session (45-75 minutes) starts with a few talks by speakers nominated in advance.
@@ -139,7 +191,8 @@ schedule:
       breakout
     </dt>
     <dd>
-      Participants break into smaller breakout groups to discuss more specific topics over a period of maximum 60 minutes.
+      Participants break into smaller breakout groups to discuss more specific topics,
+      or to hack on software solutions.
       The breakout session schedule is built collaboratively by the participants in the course of the workshop.
       Each group will provide a written summary of their breakout session.
     </dd>

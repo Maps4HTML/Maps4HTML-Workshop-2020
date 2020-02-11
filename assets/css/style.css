@@ -460,7 +460,7 @@ dt.type {
   background-color: #ffe7ba;
 }
 
-.type-plenary {
+.type-plenary, .type-keynote {
   background-color: #b9d3ee;
 }
 
