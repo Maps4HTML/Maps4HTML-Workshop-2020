@@ -67,8 +67,13 @@ schedule:
 ---
 <h1>Workshop Agenda</h1>
 <p>A detailed workshop agenda will be established based on received submissions.</p>
+<p>
+  See the <a href="#tips">instructions for participants</a>, below,
+  to help prepare for an effective workshop.
+</p>
 
 <article>
+<h2 id="schedule">Schedule</h2>
 {% for day in page.schedule %}
   <h3>{{ day.title }}</h3>
   <ol class="schedule">
@@ -102,7 +107,7 @@ schedule:
 </article>
 
 <article>
-  <h2>
+  <h2 id="tips">
     Instructions for participants
   </h2>
   <p>
@@ -112,8 +117,8 @@ schedule:
     The goal of each discussion at the workshop is not to resolve the technical issues of the topic,
     but to determine its relevance and priority to standardization.
   </p>
-  <h3>
-    Format
+  <h3 id="session-formats">
+    Session Formats
   </h3>
   <dl class="format">
     <dt class="type type-plenary" id="plenary">
@@ -139,25 +144,39 @@ schedule:
       Each group will provide a written summary of their breakout session.
     </dd>
   </dl>
-  <h3>
+  <h3 id="tools">
     Tools
   </h3>
   <h4>
-    Chat
+    Live Chat
   </h4>
   <p>
-    We will take notes on IRC during the workshop:
-    <a href="#">IRC web client</a>
+    We will take notes on IRC during the workshop,
+    using the W3C's IRC server.
+    Channel name will be announced later.
   </p>
+  <ul>
+    <li><a href="https://www.w3.org/wiki/IRC">Tips on IRC at W3C</a></li>
+    <li><a href="http://irc.w3.org/">Join using the IRC web client</a></li>
+    <li><a href="irc://irc.w3.org:6665">Link for your favourite IRC client</a></li>
+  </ul>
   <h4>
-    Meeting notes
+    Meeting minutes
   </h4>
   <p>
-    Meeting notes will be recorded on IRC during sessions.
-    These notes will be made public.
-    A scribe will be nominated for each session,
-    however note-taking help from all the participants is very much welcome
+    Meeting minutes from the IRC transcripts
+    <a href="report">will be published after the event</a>.
+  </p>
+  <p>
+    A scribe will be nominated for each session.
+    However, note-taking help from all the participants is very much welcome
     to ensure correctness and completeness of the notes
     We wish to make note-taking a collaborative exercise at this workshop.
+  </p>
+  <h3 id="suggested-reading">Suggested Reading</h3>
+  <p>
+    If you can, please review the
+    <a href="position-statements">participant position statements and other submissions</a>
+    before the meeting.
   </p>
 </article>
