@@ -657,15 +657,10 @@ cite { font-weight: bold;}
 ol ol { margin: 1.5rem;}
 
 .warning {
+  background-color: #fda;
   box-shadow: 10px 5px 3px 0px gray;
-  border-top-width: thin;
-  border-right-width: thin;
-  border-bottom-width: thin;
-  border-left-width: thin;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
+  border-width: thin;
+  border-style: solid;
   border-radius: 3px;
   width: 80%;
   padding-top: 0.5em;
