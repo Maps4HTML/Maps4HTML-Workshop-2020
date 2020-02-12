@@ -2,66 +2,128 @@
 permalink: "/"
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>
-  Maps are a facet of our daily lives. From deciding what route to take to work,
-  to vacation planning, to researching the effects of climate change, the Web
-  provides maps that guide our decisions and inform our world view. The rise of
-  powerful mobile processors and access to open and free high resolution spatial
-  information yields the opportunity to augment the access of every citizen to
-  location information.
+  Maps are a facet of our daily lives.
+  The web (and other internet-connected applications)
+  have made maps more personal and more pervasive.
+  From deciding what route to take to work,
+  to vacation planning, to researching the effects of climate change,
+  online maps guide our decisions and inform our world view.
+</p>
+<p>
+  Maps on the web have the potential to empower individuals,
+  connecting our physical environment
+  to online information and applications.
+  But that hyperconnectivity comes with risks:
+  that people's movements may be tracked,
+  or that their lives and livelihoods may become dependent
+  on closed, proprietary data and services.
+</p>
+<p>
+  This workshop brings together experts in
+  geographic standards and web map data services,
+  web mapping client tools and applications,
+  and web platform standards and browser development,
+  for 3 days of exploration of the potential of maps for the web.
+</p>
+
+<h2 id="topics">Scope and Potential Topics</h2>
+
+<p>
+  The workshop is specifically about map content displayed to end users —
+  usually in an explorable, interactive viewer —
+  within the context of websites and other applications built using the web platform.
+  Broader uses of internet-connected geographic data or spatial metadata
+  are only in scope so far as they share technologies and impacts with web maps.
 </p>
 
 <p>
-  The unprecedented growth in map content is driven by factors such as advances
-  in mobile computing, and a broad and growing recognition of the importance of
-  the location of and visualization of spatial information in decision making.
-  We see evidence of this in the growth of world wide contributions to projects
-  such as Open Street Map, as well as in the public investments by governments
-  in open spatial data infrastructures.
-</p>
-
-<p>
-  From a standards perspective however, there is an important story to tell. The
-  geospatial information community has, for more than two decades, developed
-  standards and applications that support and secure the infrastructural
-  investments that society has made, and is making, in geospatial content.
-  Certainly, lessons about the ingredients for successful geospatial information
-  standards have been learned, some the hard way.
-</p>
-
-<p>
-  World wide, spatial data infrastructures and Web map content are accessed
-  through services that implement OGC standards such as the Web Map Service
-  (WMS), Web Feature Service (WFS), Catalog Services, Web Map Tile Service
-  (WMTS) and other standards. There is a distinct trend towards JSON-ified
-  hypermedia API versions of all of these legacy standards, making this content
-  accessible to Web developers in a simplified fashion. The recently published
-  <a href="https://www.opengeospatial.org/standards/ogcapi-features"
-    >OGC API - Features</a
-  >
-  standard is a response, in part, to the growing popularity of Web APIs. And
-  yet, there are few dedicated Web platform standards to support and unify this
-  growth. The support the Web platform offers is purely that of a scripted
-  rendering platform, which results in a suboptimal use of resources by society
-  by keeping the bar to using map content too high.
-</p>
-
-<p>
-  This workshop is dedicated to uncovering how the evolving Web platform could
-  help society by lowering barriers to Web mapping, and by unifying the
-  burgeoning universe of standard and non-yet-standard spatial information.
-  Topics of interest include:
+  The final <a href="agenda">agenda</a> of talks and workshop sessions
+  will be determined based on responses to the
+  <a href="call-for-participation">call for participation</a>.
+  However, the following areas are of particular interest:
 </p>
 
 <ul>
-  <li>a native map viewer, like that provided for video content</li>
-  <li>standards for how such a map widget might use map services links</li>
   <li>
-    semantic rendering of spatial “things” to support spatial accessibility
+    Adding a native map viewer for the web platform, 
+    similar to how HTML <code>&ltvideo&gt</code> was added for video content;
+    including
+    <ul>
+      <li>essential, possible, or impractical user-focused
+        features and capabilities of a built-in web map viewer</li>
+      <li>architecture for defining a map viewer in markup</li>
+      <li>new scripting APIs for web authors to enhance map viewers</li>
+      <li>CSS integration for styling maps and map features</li>
+      <li>other integration / relationship of maps with existing browser APIs
+        (e.g., geolocation API, geo/map URL protocols,
+          image maps, SVG and canvas graphics)
+      </li>
+      <li>other web platform applications
+        for map-viewer display and interaction patterns</li>
+    </ul>
   </li>
-  <li>standardized browser elements and APIs</li>
-  <li>crawlers, indexes and search to support discovery of Web resources</li>
-  <li>map feature styling, accessibility, creation / forms</li>
-  <li>federated map services with linking</li>
+  <li>
+    Standards for how a browser-based map viewer
+    could fetch data from map services
+    and how that data should be formatted;
+    including
+    <ul>
+      <li>benefits and limitations of existing map data sources
+        for web use</li>
+      <li>working with offline cached map data</li>
+      <li>integrating geographic data and (hyper)text annotations
+        or other semantic information about spatial things</li>
+      <li>working with map data in different projections
+        or coordinate reference systems</li>
+      <li>federating map services with links between providers</li>
+      <li>supporting discovery of Web-based geospatial resources by
+        crawlers, indexes, and search engines
+      </li>
+    </ul>
+  <li>
+    Creating accessible and international web map experiences;
+    including
+    <ul>
+      <li>best-practice interaction patterns
+        for manipulating web (and other interactive/slippy) maps
+        using different input methods (mouse, touch, keyboard, etc.)</li>
+      <li>communicating spatial information through non-visual technologies</li>
+      <li>personalization of map viewer display and capabilities</li>
+      <li>using spatial information to enhance accessibility
+        in the physical environment</li>
+      <li>linguistic and cultural considerations
+        when internationalizing map data
+        and map-viewer interaction patterns</li>
+    </ul>
+  </li>
+  <li>
+    Limiting privacy and security impacts of a more geo-enhanced web;
+    including
+    <ul>
+      <li>identifying both obvious and indirect ways malicious actors
+        could misuse web maps to expose personal data
+        or fingerprintable patterns
+      </li>
+      <li>
+        creating options to support user-friendly functionality
+        while limiting exposure of personal location and geographic data
+        (e.g., allowing a user to do a one-time location-aware search without
+          granting ongoing permission for location tracking;
+          sandboxing personalized map views and interactions
+          from web map services providing the underlying data)
+      </li>
+      <li>communication of the impacts and risks of sharing location data</li>
+      <li>validation and verification of map data sources,
+        and avoiding misinformation</li>
+      <li>cross-origin security risks when integrating map data sources
+        (some of which may be personalized,
+        or contain confidential business information)
+      </li>
+    </ul>
+  </li>
 </ul>
+
+<p>See the <a href="call-for-participation">call for participation</a>
+  for how to get involved, or to suggest additional topics.</p>
