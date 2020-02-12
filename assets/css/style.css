@@ -243,16 +243,23 @@ a.ref {
 
 ul {
   list-style: square;
+  list-style: "❑ ";
   margin-left: 0;
   padding-left: 1em;
+}
+ul ul {
+  list-style: circle;
+  list-style: "➢ ";
+  margin: 0.5rem 0 1.5rem;
 }
 
 blockquote {
   margin-left: 1em;
 }
 
-.main {
-  margin-top: 3rem;
+main {
+  margin-top: 2rem;
+  max-width: 42rem;
 }
 
 dd {

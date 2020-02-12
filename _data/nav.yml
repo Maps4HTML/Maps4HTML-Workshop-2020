@@ -1,10 +1,10 @@
 - link: /
-  text: Home Page
+  text: Overview
 - link: /call-for-participation
   text: Call for Participation
 - link: /agenda
   text: Workshop Agenda
-- link: /position-statements
-  text: Position Statements
+- link: /supporting-material
+  text: Participant Submissions
 - link: /report
   text: Minutes & Report
