@@ -186,7 +186,6 @@ a.ref {
 }
 
 .menu {
-  background: #005a9c;
   font-size: 1rem;
   margin: 0 0 2em;
 }
@@ -204,11 +203,16 @@ a.ref {
   padding: 0;
 }
 
-.menu li + li a {
-  border-left: 2px solid #fff;
+.menu li {
+  margin: 0;
+}
+
+.menu li + li {
+  margin-left: 2px;
 }
 
 .menu a {
+  background: #005a9c;
   color: #eee;
   display: block;
   font-size: .95rem;
@@ -228,6 +232,10 @@ a.ref {
   background: #111;
   color: #fff;
 }
+.menu a:focus {
+  outline: dashed 2px;
+  outline-offset: -4px;
+}
 
 .menu a:active {
   opacity: .75;
@@ -243,7 +251,9 @@ a.ref {
 
 ul {
   list-style: square;
-  list-style: "❑ ";
+  list-style: "✯ ";
+}
+ul, ol {
   margin-left: 0;
   padding-left: 1em;
 }
@@ -251,6 +261,12 @@ ul ul {
   list-style: circle;
   list-style: "➢ ";
   margin: 0.5rem 0 1.5rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+li li {
+  margin-bottom: 0;
 }
 
 blockquote {
@@ -314,13 +330,8 @@ address {
     display: block;
   }
 
-  .menu li + li a {
-    border-top: 2px solid #fff;
-    border-left: 0;
-  }
-
-  .menu li + li a {
-    margin-left: 0;
+  .menu li + li {
+    margin: 2px 0 0;
   }
 
   .graphic {
