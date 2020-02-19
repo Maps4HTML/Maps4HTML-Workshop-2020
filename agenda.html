@@ -41,7 +41,7 @@ schedule:
   - time: "09:15–10:30AM"
     title: Talks on a theme
     type: discussion
-    open: true 
+    open: true
     details:
       - Structure:
         - 1 to 3 talks (max 15-minute each) or a panel on a topic of interest
@@ -58,7 +58,7 @@ schedule:
   - time: "13:00–13:30PM"
     title: Quick talks
     type: lightning
-    open: true 
+    open: true
     details:
       - Structure:
         - 4 to 6 lightning talks (max 5-minute each) introducing various topics
@@ -66,7 +66,7 @@ schedule:
   - time: "13:30–15:00PM"
     title: Breakout sessions
     type: breakout
-    open: true 
+    open: true
     details:
       - Structure:
         - Open one-hour session for discussions in smaller groups on specific topics proposed by workshop participants.
@@ -124,7 +124,7 @@ schedule:
 <article>
 <h2 id="schedule">Schedule</h2>
 {% for day in page.schedule %}
-  <h3>{{ day.title }}</h3>
+  <h3 id="day-{{ forloop.index }}">{{ day.title }}</h3>
   <ol class="schedule">
     {% for item in day.agenda %}
       <li class="{% unless item.details %}no-details{% endunless %}{% if item.type == 'break' %} break{% endif %}">
@@ -200,7 +200,7 @@ schedule:
   <h3 id="tools">
     Tools
   </h3>
-  <h4>
+  <h4 id="live-chat">
     Live Chat
   </h4>
   <p>
@@ -213,7 +213,7 @@ schedule:
     <li><a href="http://irc.w3.org/">Join using the IRC Web client</a></li>
     <li><a href="irc://irc.w3.org:6665">Link for your favourite IRC client</a></li>
   </ul>
-  <h4>
+  <h4 id="minutes">
     Meeting minutes
   </h4>
   <p>
