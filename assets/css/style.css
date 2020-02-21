@@ -295,6 +295,10 @@ img {
   display: block;
   max-width: 100%;
 }
+img.inline {
+  display: inline-block;
+  vertical-align: middle;
+}
 
 h1,
 h2,
