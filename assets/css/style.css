@@ -209,7 +209,6 @@ a.ref {
 }
 
 .menu,
-.menu ul,
 .menu li {
   width: 100%;
 }
@@ -217,25 +216,22 @@ a.ref {
 .menu ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: -2px 0 0 -2px; /* manually collapse margins from children (recreate flex gap) */
   padding: 0;
 }
 
 .menu li {
-  margin: 0;
-}
-
-.menu li + li {
-  margin-left: 2px;
+  margin: 2px 0 0 2px;
+  flex: 10rem;
 }
 
 .menu a {
   background: #005a9c;
   color: #eee;
   display: block;
-  font-size: .8rem;
+  font-size: .9rem;
   height: 100%;
-  padding: .6rem;
+  padding: .5rem .3rem;
   text-align: center;
   text-decoration: none;
   transition: .05s background ease-in-out, .05s color ease-in-out;
@@ -344,15 +340,12 @@ h4 {
   }
 
   .menu ul {
-    display: block;
+    flex-wrap: wrap;
   }
-
-  .menu li + li {
-    margin: 2px 0 0;
-  }
-
-  .menu a {
-    font-size: 0.9rem;
+  .menu li:first-child:nth-last-child(odd) {
+    /* if there's an odd number of items,
+      make the first one big instead of the last */
+    flex: 100%;
   }
 
   .graphic {
