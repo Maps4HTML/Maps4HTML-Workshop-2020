@@ -12,7 +12,7 @@
      {{ site.title }} {% if page.title %} - {{ page.title }}{% endif %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
 
   <body>
@@ -23,6 +23,6 @@
     </main>
     {% include host.html %}
     {% include sponsors.html %}
-    <script src="assets/js/script.js"></script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
 </html>
