@@ -272,12 +272,13 @@ a.ref {
   margin: 2px 0 0 2px;
   flex: 10rem;
 }
-
+.menu a {
+  display: block;
+}
 .menu a,
-.menu details summary {
+.menu summary {
   background: #005a9c;
   color: #eee;
-  display: block;
   font-size: .9rem;
   height: 100%;
   padding: .5rem .3rem;
@@ -383,12 +384,12 @@ h4 {
       "footer";
   }
 
-  .menu details {
+  .menu details:not(.no-details-support) {
     display: block;
     margin-bottom: 2px;
   }
 
-  .menu details:not([open]) + ul {
+  .menu details:not(.no-details-support):not([open]) + ul {
     display: none;
   }
 
@@ -399,7 +400,8 @@ h4 {
   .menu details[open] summary {
     width: max-content;
     margin-left: auto;
-    list-style: "×"
+    padding: 0.5rem;
+    list-style-type: "× ";
   }
 
   .menu ul {

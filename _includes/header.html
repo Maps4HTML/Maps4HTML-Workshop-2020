@@ -30,8 +30,20 @@
     </picture>
   </figure>
   <nav class="menu" id="menu">
-    <details><summary><span class="menu-hide">Hide </span>Menu…</summary></details>
-    <ul>
+    <details id="nav-toggle" open role="presentation"
+      ><summary aria-controls="nav-menu"
+        ><span class="menu-hide">Hide </span>Menu…</summary
+      ><script>
+        (function() {
+          var d = document.getElementById("nav-toggle");
+          if (d.constructor.name === 'HTMLDetailsElement') {
+            d.removeAttribute('open');
+          } else {
+            d.classList.add('no-details-support');
+          }
+        })();
+      </script></details>
+    <ul id="nav-menu">
       {% for link in site.data.nav %}
         <li>
           <a href="{{ link.link | relative_url }}">{{ link.text }}</a>
