@@ -8,16 +8,10 @@
 
 html {
   background: #005a9c;
+  padding: 1rem 3rem;
 }
 body {
   background: #fff;
-}
-
-html {
-  padding: 3em;
-}
-
-body {
   display: grid;
   grid-template:
     "header header   " min-content
@@ -32,7 +26,7 @@ body {
   font: 100%/1.3 Helvetica, Arial, Verdana, sans-serif;
   hyphens: none;
   margin: 0 auto;
-  max-width: 65rem;
+  max-width: 66rem;
   padding: 3em;
 }
 body > header {
@@ -41,6 +35,8 @@ body > header {
 body > main {
   grid-area: main;
   max-width: 42rem;
+  scroll-margin-top: 5rem;
+  scroll-behavior: smooth;
 }
 body > footer {
   grid-area: footer;
@@ -56,6 +52,54 @@ body::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.header-figure {
+  position: relative;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+.header-figure picture {
+  display: block;
+  display: contents;
+}
+.header-map {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 16rem);
+  object-fit: cover;
+  object-position: bottom right;
+}
+.header-wordmark {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  max-height: 100%;
+  max-width: calc(100% - 3rem);
+}
+@media (max-height: 30rem) {
+  /* size figure to the wordmark, not the map */
+  .header-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: none;
+  }
+  .header-wordmark {
+    position: relative;
+  }
+  /* float logos to the side */
+  .header-logos {
+    float: right;
+    text-align: right;
+  }
+  .header-logos img.inline {
+    display: block;
+    margin: auto;
+  }
+  .header-figure {
+    margin-top: 0;
+  }
 }
 
 .skip-link {
@@ -84,7 +128,7 @@ p,
 dl,
 ul,
 ol {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 main    > :first-child,
 section > :first-child,
@@ -137,7 +181,7 @@ a.ref {
 
 .graphic {
   height: 13em;
-  margin: 0 -1.5em;
+  margin: 0 -1em;
   overflow: hidden;
   position: relative;
 }
@@ -205,7 +249,11 @@ a.ref {
 
 .menu {
   font-size: 0.9rem;
-  margin: 0 0 2em;
+  margin: 0 0 1rem;
+}
+
+.menu details {
+  display: none; /* don't show toggle by default (see media query below) */
 }
 
 .menu,
@@ -225,7 +273,8 @@ a.ref {
   flex: 10rem;
 }
 
-.menu a {
+.menu a,
+.menu details summary {
   background: #005a9c;
   color: #eee;
   display: block;
@@ -242,11 +291,13 @@ a.ref {
   width: 100%;
 }
 
-.menu a:hover {
-  background: #111;
+.menu a:hover,
+.menu summary:hover {
+  background: #222;
   color: #fff;
 }
-.menu a:focus {
+.menu a:focus,
+.menu summary:focus {
   outline: dashed 2px;
   outline-offset: -4px;
 }
@@ -274,13 +325,10 @@ ul, ol {
 ul ul {
   list-style: circle;
   list-style: "➢ ";
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.5rem 0 1rem;
 }
 li {
   margin-bottom: 0.5rem;
-}
-li li {
-  margin-bottom: 0;
 }
 
 blockquote {
@@ -313,10 +361,6 @@ h4 {
   line-height: 1.2;
 }
 
-.main h2 {
-  margin-top: 1.5em;
-}
-
 @media all and (max-width: 40rem) {
   /* remove extra spacing at edges */
   html {
@@ -339,6 +383,25 @@ h4 {
       "footer";
   }
 
+  .menu details {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .menu details:not([open]) + ul {
+    display: none;
+  }
+
+  .menu details:not([open]) .menu-hide {
+    display: none;
+  }
+
+  .menu details[open] summary {
+    width: max-content;
+    margin-left: auto;
+    list-style: "×"
+  }
+
   .menu ul {
     flex-wrap: wrap;
   }
@@ -355,6 +418,7 @@ h4 {
 
   .box {
     width: auto;
+    margin-left: 0;
   }
 }
 
@@ -508,19 +572,23 @@ span.title {
   order: 1;
 }
 
-summary::-webkit-details-marker {
+.schedule summary::-webkit-details-marker {
   display: none;
 }
 
-summary::-moz-list-bullet {
+.schedule summary::-moz-list-bullet {
   list-style-type: none;
 }
 
-li:not(.no-details) details summary .desc {
+.schedule summary {
+  list-style-type: none;
+}
+
+.schedule li:not(.no-details) details summary .desc {
   cursor: pointer;
 }
 
-details summary .desc:before {
+.schedule details summary .desc:before {
   color: #999;
   content: "▶";
   display: inline-block;
@@ -530,7 +598,7 @@ details summary .desc:before {
   width: 1.1em;
 }
 
-details[open] summary .desc:before {
+.schedule details[open] summary .desc:before {
   color: #666;
   transform: rotate(90deg);
   position: relative;
@@ -538,26 +606,17 @@ details[open] summary .desc:before {
   top: 2px;
 }
 
-.no-details details .desc:before {
+.schedule .no-details details .desc:before {
   content: "";
-}
-
-details,
-.no-details details:hover {
-  opacity: .9;
-}
-
-details summary {
-  outline: none;
-}
-
-details:hover,
-details[open] summary {
-  opacity: 1;
 }
 
 .schedule details {
   width: 100%;
+}
+
+.schedule summary:focus-visible {
+  outline: dotted thin #005c9c;
+  outline-offset: 2px;
 }
 
 .schedule details dl {
@@ -612,7 +671,7 @@ details[open] summary {
 }
 
 .format dd {
-  margin: 0 1rem 1.5rem;
+  margin: 0 1rem 1rem;
 }
 
 .sponsors-section {
@@ -679,7 +738,7 @@ details[open] summary {
 
 cite { font-weight: bold;}
 
-ol ol { margin: 1.5rem;}
+ol ol { margin: 1rem;}
 
 .warning {
   background-color: #fda;
