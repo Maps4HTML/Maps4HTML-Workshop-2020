@@ -1,0 +1,18 @@
+# Each tier consists of a tier name,
+# and a list of sponsors.
+# Each sponsor should contain
+# name, a string that will be used to populate alt text
+# image, an absolute path to the logo
+# link, a URL to the sponsor's website
+
+# - tier: Platinum
+#   sponsors:
+#     - name: Sponsor Name
+#       image: /assets/media/your-logo-here.png
+#       link: '#'
+# - tier: Gold
+#   sponsors:
+# - tier: Silver
+#   sponsors:
+# - tier: Supporters
+#   sponsors:
