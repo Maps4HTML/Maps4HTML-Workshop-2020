@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 302.4" height="302.4" width="600">
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 226.8h450V0H0z"/>
+    </clipPath>
+    <clipPath id="b" clipPathUnits="userSpaceOnUse">
+      <path d="M0 226.8h450V0H0z"/>
+    </clipPath>
+  </defs>
+  <style>
+  @media (max-height: 64px) AND (max-resolution: 1.4dppx),
+    (max-width: 129px) AND (max-resolution: 1.4dppx) {
+    path { shape-rendering: crispEdges; }
+  }
+  </style>
+  <text transform="matrix(1.33333 0 0 1.33333 77.702 250.52)" font-weight="700" font-size="30" font-family="Times New Roman" fill="#215483">
+    <tspan y="0" x="0 29.07 44.82 62.25 71.339996 88.769997 104.52 121.02 130.11 145.86 159.92999 175.67999 186.42 195.50999 211.25999 228.69 245.19 259.26001 275.01001 292.44 309.87 320.60999">Making location count.</tspan>
+  </text>
+  <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 302.4)">
+    <path d="M433.786 26.965c0-6.496-5.275-11.762-11.783-11.762H28.656c-6.508 0-11.785 5.266-11.785 11.762v173.07c0 6.497 5.277 11.762 11.785 11.762h393.347c6.508 0 11.783-5.265 11.783-11.761z" fill="none" stroke="#2b638f" stroke-width="3.5"/>
+  </g>
+  <text transform="matrix(1.33333 0 0 1.33333 502.667 93.823)" font-weight="700" font-size="36" font-family="Times New Roman" fill="#215483">
+    <tspan y="0" x="0">®</tspan>
+  </text>
+  <g clip-path="url(#b)" transform="matrix(1.33333 0 0 -1.33333 0 302.4)">
+    <text transform="matrix(.95415 0 0 -1 43.5 75.588)" font-weight="700" font-size="154.168" font-family="Times New Roman" fill="#215483">
+      <tspan y="0" x="0 119.94263 239.88525">OGC</tspan>
+    </text>
+  </g>
+</svg>
