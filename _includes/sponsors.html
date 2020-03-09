@@ -1,32 +1,25 @@
-<aside class="box" id="sponsor">
-  <h2 class="footnote">Sponsors</h2>
-  <p>
-    Platinum, Gold and Silver Sponsorships available
-  </p>
-  <section class="sponsors-section sponsors-section-platinum">
-    <h3 id="platinum-sidebar">Platinum Sponsors</h3>
+<aside class="box box-sponsor {% if site.data.sponsors == false %}box-emphasis{% endif %}" id="sponsor">
+  {% if site.data.sponsors %}
+    <h2>Sponsors</h2>
     <p>
-      <a href="" class="image-link"><img src="" alt=""/></a>
+      Platinum, Gold and Silver Sponsorships available
     </p>
-  </section>
-  <section class="sponsors-section sponsors-section-gold">
-    <h3 id="gold-sidebar">Gold Sponsors</h3>
+    {% for tier in site.data.sponsors %}
+      <section class="sponsors-section sponsors-section-{{ tier.tier | downcase }}">
+        <h3 id="{{ tier.tier | downcase }}-sidebar">{{ tier.tier }} {% unless tier.tier == 'Supporters' %}Sponsors{% endunless %}</h3>
+        {% for sponsor in tier.sponsors %}
+          <p>
+            <a href="{{ sponsor.link }}" class="image-link"><img src="{{ sponsor.image | relative_url }}" alt="{{ sponsor.name }}"/></a>
+          </p>
+        {% endfor %}
+      </section>
+    {% endfor %}
     <p>
-      <a href="" class="image-link"><img src="" alt=""/></a>
+      <a href="{{ '/sponsorship' | relative_url }}">Sponsorship package info.</a>
     </p>
-  </section>
-  <section class="sponsors-section sponsors-section-silver">
-    <h3 id="silver-sidebar">Silver Sponsors</h3>
-    <p>
-      <a href="" class="image-link"><img src="" alt=""/></a>
+  {% else %}
+    <p class="seeking-sponsors">
+      Currently <a href="{{ '/sponsorship' | relative_url }}">Seeking Sponsorships</a>
     </p>
-
-    <h3 id="supporters-sidebar">Supporters</h3>
-    <p class="image-paragraph">
-      <a href="" class="image-link"><img src="" alt=""/></a>
-    </p>
-  </section>
-  <p>
-    <a href="sponsorship">Sponsorship package info.</a>
-  </p>
+  {% endif %}
 </aside>

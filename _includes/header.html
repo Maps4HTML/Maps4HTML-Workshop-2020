@@ -1,21 +1,53 @@
-<header class="header">
-  <div class="warning">
+<header id="top" class="header">
+  <p class="warning">
       You're viewing an unofficial, work-in-progress website!
       File issues in <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020">the repo</a> or <a href="mailto:public-maps-workshop-pc@w3.org">email the program committee</a>.
-  </div>
-  <p>
+  </p>
+  <div class="header-logos">
     <a href="https://www.w3.org/"><img class="inline" alt="W3C" src="https://www.w3.org/Icons/w3c_home" height="48" width="72"></a>
     <a href="https://www.opengeospatial.org/"><img class="inline" alt="OGC" src="./assets/media/OGC_Logo_2D_Blue.svg" height="56" width="110"></a>
-  </p>
-  <img src="assets/media/background-sm.png" alt="Map of Montreal" />
-  <h1 id="top">W3C/OGC Joint Workshop on Maps for the Web</h1>
-  <p>Monday June 15th to Wednesday June 17th 2020, Montreal, Canada</p>
-  (<a href="call-for-participation">venue</a>)</p>
+  </div>
+  <figure class="header-figure">
+    <style>
+    </style>
+    <picture>
+      <source media="(orientation: portrait) AND (max-width: 54rem),
+                     (orientation: landscape) AND (max-height: 30rem)"
+        srcset="{{ '/assets/media/header-map/map_960x540.jpg' | relative_url }} 960w,
+        {{ '/assets/media/header-map/map_480x270.jpg' | relative_url }} 480w"
+        sizes="(max-width: 40rem) calc(100vw - 2rem), calc(100vw - 6rem)" />
+      <img class="header-map" width="960" height="540"
+        src="{{ '/assets/media/header-map/map_960x540_with_code.jpg' | relative_url }}"
+        srcset="{{ '/assets/media/header-map/map_1600x900_with_code.jpg' | relative_url }} 2x"
+        alt="Maps of Montreal, past, present, and future." />
+    </picture>
+    <picture>
+      <source media="(orientation: portrait) AND (max-width: 54rem),
+                     (orientation: landscape) AND (max-height: 30rem)"
+        srcset="{{ '/assets/media/wordmark/logo_horizontal_blue_path.svg' | relative_url }}" />
+      <img class="header-wordmark"
+        src="{{ '/assets/media/wordmark/logo_vertical_blue_path.svg' | relative_url }}"
+        alt="Maps for the Web — 15–17 June 2020, Montreal." />
+    </picture>
+  </figure>
   <nav class="menu" id="menu">
-    <ul>
+    <details id="nav-toggle" open role="presentation"
+      ><summary aria-controls="nav-menu"
+        ><span class="menu-hide">Hide </span>Menu…</summary
+      ><script>
+        (function() {
+          var d = document.getElementById("nav-toggle");
+          if (d.constructor.name === 'HTMLDetailsElement') {
+            d.removeAttribute('open');
+          } else {
+            d.classList.add('no-details-support');
+          }
+        })();
+      </script></details>
+    <ul id="nav-menu">
       {% for link in site.data.nav %}
         <li>
-          <a href="{{ site.url }}{{ link.link }}">{{ link.text }}</a>
+          <a href="{{ link.link | relative_url }}">{{ link.text }}</a>
         </li>
       {% endfor %}
     </ul>

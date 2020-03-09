@@ -6,31 +6,100 @@
     padding: 0;
 }
 
-html,
+html {
+  background: #005a9c;
+  padding: 1rem 3rem;
+}
 body {
   background: #fff;
-}
+  display: grid;
+  grid-template:
+    "header header   " min-content
+    "main   sidebar-1" min-content
+    "main   sidebar-2" 1fr
+    "footer footer   " min-content
+    / 1fr   min-content;
+  align-items: baseline;
 
-html {
-  font-size: 14px;
-  padding: 3em;
-}
-
-body {
   border-radius: .6em;
   color: #333;
-  font: 1.1em/1.3 Helvetica, Arial, Verdana, sans-serif;
+  font: 100%/1.3 Helvetica, Arial, Verdana, sans-serif;
   hyphens: none;
   margin: 0 auto;
-  max-width: 65em;
+  max-width: 66rem;
   padding: 3em;
 }
-
+body > header {
+  grid-area: header;
+}
+body > main {
+  grid-area: main;
+  max-width: 42rem;
+  scroll-margin-top: 5rem;
+  scroll-behavior: smooth;
+}
+body > footer {
+  grid-area: footer;
+}
+.box-host {
+  grid-area: sidebar-1;
+}
+.box-sponsor {
+  grid-area: sidebar-2;
+}
 
 body::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.header-figure {
+  position: relative;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+.header-figure picture {
+  display: block;
+  display: contents;
+}
+.header-map {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 16rem);
+  object-fit: cover;
+  object-position: bottom right;
+}
+.header-wordmark {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  max-height: 100%;
+  max-width: calc(100% - 3rem);
+}
+@media (max-height: 30rem) {
+  /* size figure to the wordmark, not the map */
+  .header-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: none;
+  }
+  .header-wordmark {
+    position: relative;
+  }
+  /* float logos to the side */
+  .header-logos {
+    float: right;
+    text-align: right;
+  }
+  .header-logos img.inline {
+    display: block;
+    margin: auto;
+  }
+  .header-figure {
+    margin-top: 0;
+  }
 }
 
 .skip-link {
@@ -50,15 +119,6 @@ body::after {
   pointer-events: auto;
 }
 
-.header :first-child {
-  margin-top: 0;
-}
-
-
-.footer :last-child {
-  margin-bottom: 0;
-}
-
 h1,
 h2,
 h3,
@@ -68,7 +128,14 @@ p,
 dl,
 ul,
 ol {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+}
+main    > :first-child,
+section > :first-child,
+aside   > :first-child,
+header  > :first-child,
+footer  > :first-child {
+  margin-top: 0;
 }
 
 a,
@@ -114,7 +181,7 @@ a.ref {
 
 .graphic {
   height: 13em;
-  margin: 0 -1.5em;
+  margin: 0 -1em;
   overflow: hidden;
   position: relative;
 }
@@ -133,15 +200,16 @@ a.ref {
   border: 1px solid #ccc;
 }
 
-/* If you rather clip than squeeze the image, remove `height: 100%`. */
 .box {
-  clear: right;
   color: #666;
-  float: right;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-left: 3rem;
   padding: 1em;
   width: 19em;
+}
+
+.box-emphasis {
+  background-color: #f1f7ff;
 }
 
 .box + .box {
@@ -149,9 +217,7 @@ a.ref {
 }
 
 .box h2 {
-  font-size: 1.2rem;
-  line-height: 1.4;
-  margin: 0;
+  font-size: 1.25rem;
 }
 
 .box *:last-child {
@@ -171,7 +237,7 @@ a.ref {
 }
 
 .image-link img {
-  max-width: 225px;
+  max-width: 14rem;
   padding: 2.5vmin 0;
   width: 100%;
 }
@@ -180,18 +246,21 @@ a.ref {
   border-top: 1px solid #eee;
   clear: both;
   color: #777;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 2rem 0;
   padding-top: .5rem;
 }
 
 .menu {
-  font-size: 1rem;
-  margin: 0 0 2em;
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+}
+
+.menu details {
+  display: none; /* don't show toggle by default (see media query below) */
 }
 
 .menu,
-.menu ul,
 .menu li {
   width: 100%;
 }
@@ -199,25 +268,24 @@ a.ref {
 .menu ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: -2px 0 0 -2px; /* manually collapse margins from children (recreate flex gap) */
   padding: 0;
 }
 
 .menu li {
-  margin: 0;
+  margin: 2px 0 0 2px;
+  flex: 10rem;
 }
-
-.menu li + li {
-  margin-left: 2px;
-}
-
 .menu a {
+  display: block;
+}
+.menu a,
+.menu summary {
   background: #005a9c;
   color: #eee;
-  display: block;
-  font-size: .95rem;
+  font-size: .9rem;
   height: 100%;
-  padding: .6rem;
+  padding: .5rem .3rem;
   text-align: center;
   text-decoration: none;
   transition: .05s background ease-in-out, .05s color ease-in-out;
@@ -228,11 +296,13 @@ a.ref {
   width: 100%;
 }
 
-.menu a:hover {
-  background: #111;
+.menu a:hover,
+.menu summary:hover {
+  background: #222;
   color: #fff;
 }
-.menu a:focus {
+.menu a:focus,
+.menu summary:focus {
   outline: dashed 2px;
   outline-offset: -4px;
 }
@@ -260,22 +330,14 @@ ul, ol {
 ul ul {
   list-style: circle;
   list-style: "➢ ";
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.5rem 0 1rem;
 }
 li {
   margin-bottom: 0.5rem;
 }
-li li {
-  margin-bottom: 0;
-}
 
 blockquote {
   margin-left: 1em;
-}
-
-main {
-  margin-top: 2rem;
-  max-width: 42rem;
 }
 
 dd {
@@ -295,6 +357,7 @@ img {
   display: block;
   max-width: 100%;
 }
+
 img.inline {
   display: inline-block;
   vertical-align: middle;
@@ -305,37 +368,58 @@ h2,
 h3,
 h4 {
   break-after: avoid;
+  line-height: 1.2;
 }
 
-.main h2 {
-  margin-top: 1.5em;
-}
-
-address {
-  line-height: .25em;
-}
-
-@media all and (min-width: 699px) {
-  html {
-    background: #005a9c;
-  }
-}
-
-@media all and (max-width: 860px) {
+@media all and (max-width: 40rem) {
+  /* remove extra spacing at edges */
   html {
     padding: 0;
   }
-
   body {
     border-radius: 0;
+    padding: 1rem;
+  }
+}
+
+@media all and (max-width: 54rem) {
+  /* single-column layout */
+  body {
+    grid-template:
+      "header"
+      "main"
+      "sidebar-1"
+      "sidebar-2"
+      "footer";
+  }
+
+  .menu details:not(.no-details-support) {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .menu details:not(.no-details-support):not([open]) + ul {
+    display: none;
+  }
+
+  .menu details:not([open]) .menu-hide {
+    display: none;
+  }
+
+  .menu details[open] summary {
+    width: max-content;
+    margin-left: auto;
+    padding: 0.5rem;
+    list-style-type: "× ";
   }
 
   .menu ul {
-    display: block;
+    flex-wrap: wrap;
   }
-
-  .menu li + li {
-    margin: 2px 0 0;
+  .menu li:first-child:nth-last-child(odd) {
+    /* if there's an odd number of items,
+      make the first one big instead of the last */
+    flex: 100%;
   }
 
   .graphic {
@@ -343,11 +427,9 @@ address {
     margin: 0;
   }
 
-  /* The right-floating boxes become normal blocks. */
   .box {
-    float: none;
-    margin-left: 0;
     width: auto;
+    margin-left: 0;
   }
 }
 
@@ -400,7 +482,7 @@ h2.footnote:after {
 
 a.footnote-ref:after {
   content: counter(footnote-ref_counter);
-  font-size: .6em;
+  font-size: .5em;
   margin-left: .25em;
   vertical-align: super;
 }
@@ -501,29 +583,33 @@ span.title {
   order: 1;
 }
 
-summary::-webkit-details-marker {
+.schedule summary::-webkit-details-marker {
   display: none;
 }
 
-summary::-moz-list-bullet {
+.schedule summary::-moz-list-bullet {
   list-style-type: none;
 }
 
-li:not(.no-details) details summary .desc {
+.schedule summary {
+  list-style-type: none;
+}
+
+.schedule li:not(.no-details) details summary .desc {
   cursor: pointer;
 }
 
-details summary .desc:before {
+.schedule details summary .desc:before {
   color: #999;
   content: "▶";
   display: inline-block;
-  height: 18px;
-  margin-right: 8px;
+  height: 1.1em;
+  margin-right: 0.5em;
   order: -2;
-  width: 18px;
+  width: 1.1em;
 }
 
-details[open] summary .desc:before {
+.schedule details[open] summary .desc:before {
   color: #666;
   transform: rotate(90deg);
   position: relative;
@@ -531,26 +617,17 @@ details[open] summary .desc:before {
   top: 2px;
 }
 
-.no-details details .desc:before {
+.schedule .no-details details .desc:before {
   content: "";
-}
-
-details,
-.no-details details:hover {
-  opacity: .9;
-}
-
-details summary {
-  outline: none;
-}
-
-details:hover,
-details[open] summary {
-  opacity: 1;
 }
 
 .schedule details {
   width: 100%;
+}
+
+.schedule summary:focus-visible {
+  outline: dotted thin #005c9c;
+  outline-offset: 2px;
 }
 
 .schedule details dl {
@@ -598,22 +675,18 @@ details[open] summary {
 }
 
 .format dt {
-  font-size: 1.1rem;
+  font-size: 1rem;
   /*font-weight: 600;*/
   margin: .5rem 0 1.25rem;
   padding: .5rem 1rem;
 }
 
 .format dd {
-  margin: 0 1rem 1.5rem;
+  margin: 0 1rem 1rem;
 }
 
 .sponsors-section {
   margin-top: 1rem;
-}
-
-.sponsors-section :first-child {
-  margin-top: 0;
 }
 
 .sponsors-section :last-child {
@@ -676,7 +749,7 @@ details[open] summary {
 
 cite { font-weight: bold;}
 
-ol ol { margin: 1.5rem;}
+ol ol { margin: 1rem;}
 
 .warning {
   background-color: #fda;
@@ -684,7 +757,6 @@ ol ol { margin: 1.5rem;}
   border-width: thin;
   border-style: solid;
   border-radius: 3px;
-  width: 80%;
   padding-top: 0.5em;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
@@ -719,4 +791,11 @@ ol ol { margin: 1.5rem;}
 button {
   font-size: 75%;
   padding: 0.3em;
+}
+
+.seeking-sponsors {
+  color: #005a9c;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
 }
