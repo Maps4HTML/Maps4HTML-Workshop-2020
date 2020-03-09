@@ -419,7 +419,7 @@ h4 {
   .menu li:first-child:nth-last-child(odd) {
     /* if there's an odd number of items,
       make the first one big instead of the last */
-    flex: 100%;
+    flex: calc(20rem + 2px) 2;
   }
 
   .graphic {
@@ -751,16 +751,25 @@ cite { font-weight: bold;}
 
 ol ol { margin: 1rem;}
 
+.warning, .info {
+  box-shadow: 10px 5px 3px 0px gray;
+  border: thin solid 3px;
+  padding: 0.5em;
+  margin: 0.5em 0 0.5em -0.5em;
+}
 .warning {
   background-color: #fda;
-  box-shadow: 10px 5px 3px 0px gray;
-  border-width: thin;
-  border-style: solid;
-  border-radius: 3px;
-  padding-top: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
+}
+.info {
+  background-color: #afc;
+}
+.warning > :first-child,
+.info > :first-child {
+  margin-top: 0;
+}
+.warning > :last-child,
+.info > :last-child {
+  margin-bottom: 0;
 }
 
 .warning h1 {
@@ -768,11 +777,6 @@ ol ol { margin: 1rem;}
   font-style: italic;
   font-weight: bold;
   text-align: center;
-
-}
-
-.warning p {
-  font-size: 110%;
 }
 
 .todo {
