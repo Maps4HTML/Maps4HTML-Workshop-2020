@@ -208,6 +208,10 @@ a.ref {
   width: 19em;
 }
 
+.box-emphasis {
+  background-color: #f1f7ff;
+}
+
 .box + .box {
   margin-top: 2rem;
 }
@@ -782,4 +786,11 @@ ol ol { margin: 1rem;}
 button {
   font-size: 75%;
   padding: 0.3em;
+}
+
+.seeking-sponsors {
+  color: #005a9c;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
 }
