@@ -238,8 +238,9 @@ a.ref {
 
 .image-link img {
   max-width: 14rem;
-  padding: 2.5vmin 0;
+  margin: 1rem auto;
   width: 100%;
+  max-height: 5rem;
 }
 
 .footer {
