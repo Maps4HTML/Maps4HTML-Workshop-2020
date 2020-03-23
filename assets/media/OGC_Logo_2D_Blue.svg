@@ -7,12 +7,6 @@
       <path d="M0 226.8h450V0H0z"/>
     </clipPath>
   </defs>
-  <style>
-  @media (max-height: 64px) AND (max-resolution: 1.4dppx),
-    (max-width: 129px) AND (max-resolution: 1.4dppx) {
-    path { shape-rendering: crispEdges; }
-  }
-  </style>
   <text transform="matrix(1.33333 0 0 1.33333 77.702 250.52)" font-weight="700" font-size="30" font-family="Times New Roman" fill="#215483">
     <tspan y="0" x="0 29.07 44.82 62.25 71.339996 88.769997 104.52 121.02 130.11 145.86 159.92999 175.67999 186.42 195.50999 211.25999 228.69 245.19 259.26001 275.01001 292.44 309.87 320.60999">Making location count.</tspan>
   </text>
