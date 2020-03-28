@@ -6,8 +6,6 @@ description: >-
   the W3C/OGC Joint Workshop on Maps for the Web, 15−17 June, 2020 in Montreal.
 layout: default
 schedule:
-- title: "Day 1: Presentation Day 1"
-  agenda:
 # Each agenda item should contain
 # time, as a string describing the range
 # title, as non-interactive HTML (optional for breaks)
@@ -36,94 +34,28 @@ schedule:
 # - time: "12:00–12:30PM"
 #   title: Lunch
 #   type: break
-
-  - time: "08:15–09:00AM"
-    title: Registration
-  - time: "09:00–09:15AM"
-    title: Opening Remarks
-    type: plenary
-  - time: "09:15–10:30AM"
-    title: Talks on a theme
-    type: discussion
-    open: true
-    details:
-      - Structure:
-        - 1 to 3 talks (max 15-minute each) or a panel on a topic of interest
-        - Questions and open discussion
-        - Resolutions on key points for the minutes/report
-  - time: "10:30-10:45AM"
-    type: break
-  - time: "10:45-12:00PM"
-    title: Talks on a theme
-    type: discussion
-  - time: "12:00–13:00PM"
-    title: Lunch
-    type: break
-  - time: "13:00–13:30PM"
-    title: Quick talks
-    type: lightning
-    open: true
-    details:
-      - Structure:
-        - 4 to 6 lightning talks (max 5-minute each) introducing various topics
-        - Questions and discussion to follow in breakout sessions
-  - time: "13:30–15:00PM"
-    title: Breakout sessions
-    type: breakout
-    open: true
-    details:
-      - Structure:
-        - Open one-hour session for discussions in smaller groups on specific topics proposed by workshop participants.
-        - Resolutions on key points to present back to the main group.
-  - time: "15:00-15:15PM"
-    type: break
-  - time: "15:15-15:45PM"
-    title: Recap breakout session conclusions
-    type: discussion
-  - time: "15:45-17:00PM"
-    title: Talks on a theme
-    type: discussion
-#
-- title: "Day 2: Presentation Day 2"
-  agenda:
-  - time: "08:15–09:00AM"
-    title: Registration
-  - time: "09:00–12:00PM"
-    title: Talks, panels, and breakout sessions
-    type: discussion
-  - time: "12:00–13:00PM"
-    title: Lunch
-    type: break
-  - time: "13:00–16:00PM"
-    title: Talks, panels, and breakout sessions
-    type: discussion
-  - time: "16:00–17:00PM"
-    title: Closing remarks
-    type: plenary
-#
-- title: "Day 3: Hack Day"
-  agenda:
-  - time: "08:15–09:00AM"
-    title: Registration
-  - time: "09:00–17:00PM"
-    title: Workshop hack sessions
-    type: workshop
-    open: true
-    details:
-      - Structure:
-        - Breakout sessions on specific proposals and options
-        - Collaborative software development or demonstrations
 ---
 
-<p>A detailed workshop agenda will be established based on received submissions.
-  The following schedule provides a rough outline.
-  To suggest talk, panel, or breakout session topics,
-  please see the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>.
-</p>
+
+<div class="info">
+  <p>
+  Due to risks associated with global travel and the spread COVID-19,
+  the Maps for the Web workshop in 2020 will be online only,
+  using a distributed, asynchronous model to encourage in-depth participation
+  regardless of time zones.
+  </p>
+  <p>
+  This is a new format for a W3C or OGC Workshop,
+  and we're still finalizing the details of what it will look like.
+  Suggestions from registered participants are welcome.
+  </p>
+</div>
+<!--
 <p>
   See the <a href="#tips">instructions for participants</a>, below,
   to help prepare for an effective workshop.
 </p>
+-->
 
 <article>
 <h2 id="schedule">Schedule</h2>
@@ -156,18 +88,35 @@ schedule:
       </li>
     {% endfor %}
   </ol>
+{% else %}
+<p>
+  A detailed workshop agenda will be established based on received submissions.
+  The current plan is for themed video sessions (panels or presentations)
+  posted daily for roughly two weeks (21 September − 2 October 2020).
+  Questions and open discussion will then continue using online forums,
+  which will remain open for a month afterwards.
+</p>
+<p>
+  In parallel, we will host breakout and hack sessions,
+  using a mix of video presentations, live video chat or IRC chat, and written forums.
+</p>
+<p>
+  To suggest talk, panel, or breakout session, or a hack project,
+  please see the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>.
+</p>
 {% endfor %}
 </article>
 
+<!--
 <article>
   <h2 id="tips">
     Instructions for participants
   </h2>
   <p>
     The workshop focuses on topics raised by participants in expressions of interest and position statements.
-    Each topic gets introduced by one or more short or lightning talk(s),
-    and discussed among participants, possibly in smaller groups.
-    The goal of each discussion at the workshop is not to resolve the technical issues of the topic,
+    Each topic will be introduced by one or more short (or lightning) talks, or an expert panel,
+    and is then discussed among participants in the forums.
+    The goal of each discussion at the workshop is not to resolve all technical issues of the topic,
     but to determine its relevance and priority to standardization.
   </p>
   <h3 id="session-formats">
@@ -237,3 +186,4 @@ schedule:
     before the meeting.
   </p>
 </article>
+-->
