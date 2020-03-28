@@ -54,6 +54,22 @@ body::after {
   clear: both;
 }
 
+.header-logos-etc {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  flex-shrink: 0;
+}
+.header-tagline {
+  display: block;
+  margin: 0 1rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  order: 10; /* move visually after the icons */
+}
 .header-figure {
   position: relative;
   margin: 0.5rem 0;
@@ -78,6 +94,10 @@ body::after {
   max-width: calc(100% - 3rem);
 }
 @media (max-height: 30rem) {
+  body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   /* size figure to the wordmark, not the map */
   .header-map {
     position: absolute;
@@ -88,12 +108,17 @@ body::after {
   .header-wordmark {
     position: relative;
   }
+  .header-logos-etc {
+    display: block;
+    display: contents;
+  }
   /* float logos to the side */
-  .header-logos {
+  .header-logo {
     float: right;
+    clear: right;
     text-align: right;
   }
-  .header-logos img.inline {
+  .header-logo img.inline {
     display: block;
     margin: auto;
   }
@@ -255,6 +280,7 @@ a.ref {
 .menu {
   font-size: 0.9rem;
   margin: 0 0 1rem;
+  clear: both;
 }
 
 .menu details {
@@ -381,9 +407,20 @@ h4 {
     border-radius: 0;
     padding: 1rem;
   }
+  .header-logos-etc {
+    flex-wrap: wrap;
+  }
+  .header-tagline {
+    margin: 0;
+  }
 }
 
 @media all and (max-width: 54rem) {
+  .header-tagline {
+    font-weight: normal;
+    font-size: 90%;
+  }
+
   /* single-column layout */
   body {
     grid-template:
@@ -754,7 +791,6 @@ ol ol { margin: 1rem;}
 
 .warning, .info {
   box-shadow: 10px 5px 3px 0px gray;
-  border: thin solid 3px;
   padding: 0.5em;
   margin: 0.5em 0 0.5em -0.5em;
 }
@@ -762,7 +798,7 @@ ol ol { margin: 1rem;}
   background-color: #fda;
 }
 .info {
-  background-color: #afc;
+  background-color: #dfe;
 }
 .warning > :first-child,
 .info > :first-child {

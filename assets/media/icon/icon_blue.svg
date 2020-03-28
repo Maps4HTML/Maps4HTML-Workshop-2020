@@ -1,0 +1,24 @@
+<svg class="icon"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="200" height="200" viewBox="0 0 1000 1000">
+	<style>
+		.svg-background { fill: #005a9c; }
+		.arrow, .arc { fill: #fff; }
+	</style>
+	<rect class="svg-background" x="0" y="0" width="1000" height="1000"></rect>
+	<g class="arrow">
+		<path id="arrow"
+			d="M319,34L550,284 448,296 506,444 458,462 401,314 318,375Z"/>
+		<use xlink:href="#arrow" transform="rotate(90, 500,500)"/>
+		<use xlink:href="#arrow" transform="rotate(180, 500,500)"/>
+		<use xlink:href="#arrow" transform="rotate(270, 500,500)"/>
+	</g>
+	<g class="arc">
+		<path id="arc"
+			d="M 419,106 A400,400 0 0 1 845,293 L752,293 A335,335 0 0 0 482,174 Z"/>
+		<use xlink:href="#arc" transform="rotate(90, 500,500)"/>
+		<use xlink:href="#arc" transform="rotate(180, 500,500)"/>
+		<use xlink:href="#arc" transform="rotate(270, 500,500)"/>
+	</g>
+</svg>
