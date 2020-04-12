@@ -354,7 +354,7 @@ ul, ol {
   margin-left: 0;
   padding-left: 1em;
 }
-ul ul {
+ul ul, ol ul, dl ul {
   list-style: circle;
   list-style: "➢ ";
   margin: 0.5rem 0 1rem;
@@ -368,16 +368,23 @@ blockquote {
 }
 
 dd {
-  margin: 0 0 .6em;
+  margin: 0 0 0.5rem;
 }
 
 dt {
   font-weight: 700;
   margin-top: 1rem;
 }
-
-.main dt {
-  margin-top: 2rem;
+dd {
+  border: solid #ddd 0.25rem;
+  border-style: solid none none solid;
+  padding: 0.5rem 0 0 0.5rem;
+}
+dd p {
+  margin: 0.5rem 0 0
+}
+dd > :first-child {
+  margin-top: 0;
 }
 
 img {
@@ -396,6 +403,10 @@ h3,
 h4 {
   break-after: avoid;
   line-height: 1.2;
+}
+
+code {
+  font: 100% ui-monospace, "Consolas", "Menlo", monospace;
 }
 
 @media all and (max-width: 40rem) {

@@ -1,58 +1,135 @@
 ---
 permalink: /supporting-material
-title: Participant Submissions &amp; Other Supporting Material
+title: Participant Submissions &amp; Other Background Material
 description: >-
   Essential background reading for
   the W3C/OGC Joint Workshop on Maps for the Web, 15−17 June, 2020 in Montreal.
 ---
 
 <p>
-  Participants are invited to submit summaries of their projects and priorities,
-  for review by others before the event.
-  See the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a> for more.
+  This page collects background reading material
+  from and for workshop participants.
 </p>
 
-<h2 id="background">Background</h2>
-
-<p>
-  The unprecedented growth in Web map content is driven by factors such as advances
-  in mobile computing, and a broad and growing recognition of the importance of
-  the location of and visualization of spatial information in decision making.
-  We see evidence of this in the growth of world wide contributions to projects
-  such as Open Street Map, as well as in the public investments by governments
-  in open spatial data infrastructures.
-</p>
-<p>
-  From a standards perspective, the story of Web maps is mixed.
-  The geospatial information community has, for more than two decades, developed
-  standards and applications that support and secure the infrastructural
-  investments that society has made, and is making, in geospatial content.
-  Certainly, lessons about the ingredients for successful geospatial information
-  standards have been learned, some the hard way.
-</p>
-<p>
-  World wide, spatial data infrastructures and Web map content are accessed
-  through services that implement OGC standards such as the Web Map Service
-  (WMS), Web Feature Service (WFS), Catalog Services, Web Map Tile Service
-  (WMTS) and other standards. There is a distinct trend towards JSON-ified
-  hypermedia API versions of all of these legacy standards, making this content
-  accessible to Web developers in a simplified fashion. The recently published
-  <a href="https://www.opengeospatial.org/standards/ogcapi-features"
-    >OGC API - Features</a
-  >
-  standard is a response, in part, to the growing popularity of Web APIs. And
-  yet, there are few dedicated Web platform standards to support and unify this
-  growth. The support the Web platform offers is purely that of a scripted
-  rendering platform, which results in a suboptimal use of resources by society
-  by keeping the bar to using map content too high.
-</p>
-
-<p>
-  more…
-</p>
+<div class="info">
+  <p>
+    Participants are invited to submit summaries of their projects and priorities,
+    for review by others before the event.
+    See the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a> for more.
+  </p>
+  <p>
+    In addition to the formal position statements from individuals and organizations,
+    the organizers welcome suggestions of links to
+    related standards, research, reports,
+    proposals and explainers,
+    software projects, or datasets.
+    These can be submitted by email to the
+    <a href="{{ '/call-for-participation#programming-committee' | relative_url }}">programming committee</a>,
+    or by <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/issues">filing a GitHub issue</a>
+    on the workshop website.
+  </p>
+</div>
 
 <h2 id="position-statements">Participant Position Statements</h2>
 
-<h2 id="explainers">Proposals and Explainers</h2>
+<p>
+Position statements can be submitted on behalf of an organization,
+or as an individual.
+Either way, they should be short introductions,
+to help other workshop participants understand your priorities and experience.
+</p>
 
-<h2 id="projects">Related Projects</h2>
+<dl>
+  <i>(none submitted yet)</i>
+</dl>
+
+<h2 id="reports-explainers">Related Standards, Proposals and Other Reports</h2>
+
+<p>
+  Existing standards for online geospatial data provide relevant context;
+  successful ones should be integrated into maps for the web,
+  while less successful ones provide important warnings.
+  Proposals can be compared and critiqued,
+  to find the shared goals and strategies.
+  Reports compiling requirements for different use cases
+  provide a framework for measuring those proposals.
+</p>
+
+<dl>
+<dt id="mapml">
+  MapML and related proposals from the Maps for HTML Community Group
+</dt>
+<dd>
+  <p>
+    The Maps for HTML Community Group is a W3C community
+    of individuals and organizations who share the objective
+    of extending HTML with maps and location.
+  </p>
+  <ul>
+    <li><a href="https://www.w3.org/community/maps4html/">CG blog & joining information</a></li>
+    <li><a href="https://maps4html.org/">Links and info</a></li>
+  </ul>
+  <p>
+    A primary focus of work has been a proposal for
+    a native HTML <code>map</code> element,
+    and a matching markup-based map layer data format, MapML:
+  </p>
+  <ul>
+    <li><a href="https://github.com/Maps4HTML/MapML-Proposal#the-mapml-proposal---explainermd">Explainer</a></li>
+    <li>Draft specs —
+      <a href="https://maps4html.org/MapML/spec/">MapML</a>
+      and <a href="https://maps4html.org/HTML-Map-Element/spec/">HTML extensions</a>
+    </li>
+    <li><a href="https://www.w3.org/community/maps4html/2019/12/09/the-design-of-mapml/">The Design of MapML (blog post)</a></li>
+</dd>
+
+<dt id="maps4html-use-cases">
+  Use Cases and Requirements for Standardizing Web Maps
+</dt>
+<dd>
+  <p>
+    An on-going effort by members of the Maps for HTML Community Group,
+    to comprehensively summarize requirements for a native HTML web map viewer,
+    by reviewing the capabilities of existing (JavaScript-based) map viewers
+    currently used on the Web.
+  </p>
+  <ul>
+    <li><a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">Draft report</a></li>
+    <li><a href="https://github.com/Maps4HTML/HTML-Map-Element-UseCases-Requirements/issues/">GitHub issue discussion</a></li>
+  </ul>
+</dd>
+
+<dt id="OGC-standards">OGC standards for Web map services</dt>
+<dd>
+<p>
+  World wide, spatial data infrastructures and Web map content are accessed
+  through services that implement OGC standards, including:
+</p>
+<ul>
+  <li><a href="https://www.ogc.org/standards/wms">Web Map Service (WMS)</a></li>
+  <li><a href="https://www.ogc.org/standards/wfs">Web Feature Service (WFS)</a></li>
+  <li><a href="https://www.ogc.org/standards/cat">Catalog Services</a></li>
+  <li><a href="https://www.ogc.org/standards/wmts">Web Map Tile Service (WMTS)</a></li>
+</ul>
+<p>There is a distinct trend towards JSON-ified
+  hypermedia API versions of all of these legacy standards, making this content
+  accessible to Web developers in a simplified fashion. The recently published
+  <a href="https://www.opengeospatial.org/standards/ogcapi-features"
+    >OGC API - Features</a>
+  standard is a response, in part, to the growing popularity of Web APIs.
+</p>
+</dd>
+
+</dl>
+
+<h2 id="projects">Software Projects and Geospatial Data</h2>
+
+<p>
+Many organizations, both open/non-profit and commercial,
+are actively working on Web map software and supporting data sets.
+Their experience is essential for a standardization effort.
+</p>
+
+<dl>
+  <i>(none submitted yet)</i>
+</dl>
