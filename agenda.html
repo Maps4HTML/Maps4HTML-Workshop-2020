@@ -9,7 +9,7 @@ schedule:
 # Each agenda item should contain
 # time, as a string describing the range
 # title, as non-interactive HTML (optional for breaks)
-# type, one of plenary, keynote, discussion, lightning, breakout, workshop, break (or none, for admin and such)
+# type, one of plenary, breakout, or hack
 # open, (optional) boolean indicating whether the details element will be open by default
 # details (optional), a list of headings
 #   each of which is mapped to a list of (one or more) bullet points, as HTML
@@ -36,6 +36,16 @@ schedule:
 #   type: break
 ---
 
+<p>
+  The workshop series will consist of schedules sessions
+  and asynchronous discussion.
+  All the main workshop presentations will be posted online
+  so that participants can watch at their own schedule.
+  In parallel, there will be a schedule of
+  breakout and hack sessions organized by workshop participants.
+  Discussion will continue online through the month of October,
+  in the hopes of gaining wide input towards a consensus on key issues.
+</p>
 
 <div class="info">
   <p>
@@ -91,99 +101,132 @@ schedule:
 {% else %}
 <p>
   A detailed workshop series agenda will be established based on received submissions.
-  The current plan is for themed video sessions (panels or presentations)
-  posted daily for roughly two weeks (21 September − 2 October 2020).
-  Questions and open discussion will then continue using online forums,
-  which will remain open for a month afterwards.
+  The current plan is as follows:
 </p>
+<ul>
+<li>
+  The main series of workshop presentations will be spread out,
+  approximately one per day, for two weeks (21 September − 2 October 2020).
+  The recorded sessions will be posted online for asynchronous viewing.
+  Questions and open discussion will continue using online forums,
+  which will remain open until the end of October.
+</li>
+<li>
+  Breakout and hack sessions will be scheduled during the same period.
+  These may include a mix of video presentations,
+  live video chat or IRC chat,
+  and written forums.
+</li>
+<li>
+  In late October, moderators will post final calls for consensus,
+  summarizing the conclusions of each discussion.
+  These summaries will then be integrated into a workshop report.
+</li>
+</ul>
 <p>
-  In parallel, we will host breakout and hack sessions,
-  using a mix of video presentations, live video chat or IRC chat, and written forums.
-</p>
-<p>
-  To suggest talk, panel, or breakout session, or a hack project,
+  To suggest a talk, panel, breakout session, or hack project,
   please see the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>.
 </p>
 {% endfor %}
 </article>
 
-<!--
-<article>
-  <h2 id="tips">
-    Instructions for participants
-  </h2>
+<h2 id="tips">
+  Instructions for participants
+</h2>
+<p>
+  The workshop series focuses on topics raised by participants in expressions of interest and position statements.
+  Each topic will be introduced by one or more short (or lightning) talks, or an expert panel,
+  and is then discussed among participants in the forums.
+  The goal of each workshop discussion is not to resolve all technical issues of the topic,
+  but to determine its relevance and priority to standardization.
+</p>
+<h3 id="session-formats">
+  Session Formats
+</h3>
+<dl class="format">
+  <dt class="type type-plenary" id="plenary">
+    plenary
+  </dt>
+  <dd>
+    <p>
+      Plenary sessions introduce topics for discussion
+      which are expected to be relevant to all participants.
+      Speakers are selected in advance by the programming committee;
+      an assigned moderator will introduce the speakers and coordinate the discussion.
+    </p>
+    <p>
+      A typical plenary session would be 30-60 minutes
+      and include short talks (&lt;15 minutes),
+      <a href="https://en.wikipedia.org/wiki/Lightning_talk">lightning talks</a>,
+      and/or panel Q&A discussion.
+    </p>
+    <p>
+      The structured video sessions are only the start:
+      the topics they introduce will be the start of open discussion online,
+      where all workshop participants are encouraged
+      to exchange ideas, assess priorities,
+      and identify possible standardization actions.
+      The moderator will be tasked with keeping the discussion on topic,
+      and identifying areas of consensus for the final workshop report.
+    </p>
+  </dd>
+  <dt class="type type-breakout" id="breakout">
+    breakout
+  </dt>
+  <dt class="type type-hack" id="hack">
+    hack
+  </dt>
+  <dd>
+    <p>
+      These sessions will support more collaborative discussion
+      by smaller groups.
+      Breakout sessions will cover more specific technical topics
+      that didn't fit into the main workshop schedule.
+      Hack sessions will welcome new collaborators to a software or data project,
+      as discussed in the <a href="{{ '/call-for-participation#hack-day-proposals' | relative_url }}">call for participation</a>.
+    </p>
+    <p>
+      The specific format will depend on the topic and goals of the session,
+      but could include a mix of video presentations, live chat, and written discussion.
+      Regardless of format,
+      each group is expected to provide a written summary of their session.
+    </p>
+  </dd>
+</dl>
+<h3 id="tools">
+  Tools
+</h3>
+<div class="info">
   <p>
-    The workshop series focuses on topics raised by participants in expressions of interest and position statements.
-    Each topic will be introduced by one or more short (or lightning) talks, or an expert panel,
-    and is then discussed among participants in the forums.
-    The goal of each workshop discussion is not to resolve all technical issues of the topic,
-    but to determine its relevance and priority to standardization.
-  </p>
-  <h3 id="session-formats">
-    Session Formats
-  </h3>
-  <dl class="format">
-    <dt class="type type-plenary" id="plenary">
-      plenary
-    </dt>
-    <dd>
-      Plenary sessions introduce and summarize generic information relevant to all participants.
-    </dd>
-    <dt class="type type-discussion" id="discussion">
-      discussion
-    </dt>
-    <dt class="type type-lightning" id="lightning">
-      lightning
-    </dt>
-    <dd>
-      A typical discussion session (45-75 minutes) starts with a few talks by speakers nominated in advance.
-      Talks will either be short (&lt;15 minutes) or <em>very</em> short (<a href="https://en.wikipedia.org/wiki/Lightning_talk">lightning talks</a>).
-      They will be followed by a discussion among participants to exchange ideas, assess priorities, and identify possible standardization actions.
-    </dd>
-    <dt class="type type-breakout" id="breakout">
-      breakout
-    </dt>
-    <dd>
-      Participants break into smaller breakout groups to discuss more specific topics,
-      or to hack on software solutions.
-      The breakout session schedule is built collaboratively by the participants in the course of the workshop.
-      Each group will provide a written summary of their breakout session.
-    </dd>
-  </dl>
-  <h3 id="tools">
-    Tools
-  </h3>
-  <h4 id="live-chat">
-    Live Chat
-  </h4>
-  <p>
-    We will take notes on IRC during the workshop,
-    using the W3C's IRC server.
-    Channel name will be announced later.
-  </p>
-  <ul>
-    <li><a href="https://www.w3.org/wiki/IRC">Tips on IRC at W3C</a></li>
-    <li><a href="http://irc.w3.org/">Join using the IRC Web client</a></li>
-    <li><a href="irc://irc.w3.org:6665">Link for your favourite IRC client</a></li>
-  </ul>
-  <h4 id="minutes">
-    Meeting minutes
-  </h4>
-  <p>
-    Meeting minutes from the IRC transcripts
-    <a href="{{ '/report' | relative_url }}">will be published after the event</a>.
+    We're still collecting information on the different options
+    for remote collaboration tools.
+    Your feedback is welcome!
+    We especially want to ensure that the chosen tools are accessible to all.
   </p>
   <p>
-    A scribe will be nominated for each session.
-    However, note-taking help from all the participants is very much welcome
-    to ensure correctness and completeness of the notes
-    We wish to make note-taking a collaborative exercise at this workshop.
+    Add suggestions to our discussion issues
+    for <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/issues/39">video conferencing and video hosting</a>,
+    or <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/issues/40">text-based forums</a>.
   </p>
-  <h3 id="suggested-reading">Suggested Reading</h3>
-  <p>
-    If you can, please review the
-    <a href="{{ '/supporting-material' | relative_url }}">participant position statements and other supporting material</a>
-    before the meeting.
-  </p>
-</article>
--->
+</div>
+<h4 id="minutes">
+  Maintaining records
+</h4>
+<p>
+  All session organizers are expected to create records
+  of what was discussed,
+  what conclusions or consensus was reached,
+  and any major areas of discussion or concern.
+</p>
+<p>
+  Breakout session organizers will be able to use the W3C's
+  IRC server and meeting-management bots.
+  See <a href="https://www.w3.org/wiki/IRC">tips on IRC at W3C</a>.
+</p>
+
+<h3 id="suggested-reading">Suggested Reading</h3>
+<p>
+  If you can, please review the
+  <a href="{{ '/supporting-material' | relative_url }}">participant position statements and other background material</a>
+  before the workshops.
+</p>

@@ -607,22 +607,15 @@ summary .time span { font-size: 67%; }
 dt.type {
   font-size: 100%;
   margin: 0;
-}
-
-.type-lightning, .type-discussion {
-  background-color: #ffe7ba;
+  text-align: center;
 }
 
 .type-plenary, .type-keynote {
   background-color: #b9d3ee;
 }
 
-.type-breakout {
-  background-color: #c0d9af;
-}
-
-.type-workshop {
-  background-color: #ffe4e1;
+.type-breakout, .type-hack {
+  background-color: #ffe7ba;
 }
 
 span.title {
@@ -719,19 +712,11 @@ span.title {
   margin-top: 1rem;
 }
 
-.format {
-  margin-bottom: 2.25rem;
-}
-
 .format dt {
   font-size: 1rem;
   /*font-weight: 600;*/
-  margin: .5rem 0 1.25rem;
+  margin: .5rem 0 .75rem;
   padding: .5rem 1rem;
-}
-
-.format dd {
-  margin: 0 1rem 1rem;
 }
 
 .sponsors-section {
@@ -801,7 +786,7 @@ cite { font-weight: bold;}
 ol ol { margin: 1rem;}
 
 .warning, .info {
-  box-shadow: 10px 5px 3px 0px gray;
+  box-shadow: 0.5rem 0.5rem 0.1rem rgba(0,0,0,.1);
   padding: 0.5em;
   margin: 0.5em 0 0.5em -0.5em;
 }
