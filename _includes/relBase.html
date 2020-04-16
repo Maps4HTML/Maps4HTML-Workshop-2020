@@ -1,4 +1,4 @@
-{#
+{% comment %}
 
 Generates a relative path fragment from the current page.url
 back to the root of the repo.
@@ -11,7 +11,7 @@ Then, write the URL you want to relativize as
 href="{{ relBase }}/abs/path/in/repo"
 (note the / at the start of the absolute path)
 
-#}
+{% endcomment %}
 {% assign relBase = '' %}
 {% assign tempDepth = page.url | append: 'hackish-solution' | split: '/' | size | minus: 2 %}
 {% for i in (1..tempDepth) %}
