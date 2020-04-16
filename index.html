@@ -2,6 +2,7 @@
 permalink: "/"
 # See _config.yml for site title and description
 ---
+{% include relBase.html %}
 
 <p><a id="introduction"></a>
   This workshop series brings together experts in
@@ -84,9 +85,9 @@ permalink: "/"
 <h2 id="topics">Potential Topics</h2>
 
 <p>
-  The final <a href="{{ '/agenda' | relative_url }}">agenda</a> of talks and workshop sessions
+  The final <a href="{{ relBase }}/agenda">agenda</a> of talks and workshop sessions
   will be determined based on responses to the
-  <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>.
+  <a href="{{ relBase }}/call-for-participation">call for participation</a>.
   However, the following areas are of particular interest:
 </p>
 
@@ -182,5 +183,5 @@ permalink: "/"
   </li>
 </ul>
 
-<p>See the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>
+<p>See the <a href="{{ relBase }}/call-for-participation">call for participation</a>
   for how to get involved, or to suggest additional topics.</p>

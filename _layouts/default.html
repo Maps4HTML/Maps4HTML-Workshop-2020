@@ -1,3 +1,4 @@
+{% include relBase.html %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +7,7 @@
      {% if page.title %}{{ page.title }} — {% endif %}{{ site.title }} 
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ relBase }}/assets/css/style.css" />
     <link name="canonical" href="{{ site.url }}{{ page.url }}" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
@@ -16,9 +17,9 @@
           content="{{ page.description | default: site.description }}" />
     <meta name="twitter:site" content="@maps4html" />
     <meta name="twitter:image"
-          content="{{ '/assets/media/icon/icon_blue_288x288.png' | relative_url }}" />
+          content="{{ relBase }}/assets/media/icon/icon_blue_288x288.png" />
     <meta property="og:image"
-          content="{{ 'assets/media/wordmark/logo_horizontal_blue_fb_1200x630.png' | relative_url }}" />
+          content="{{ relBase }}assets/media/wordmark/logo_horizontal_blue_fb_1200x630.png" />
   </head>
 
   <body>
@@ -31,6 +32,6 @@
     {% include host.html %}
     {% include sponsors.html %}
     {% include footer.html %}
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <script src="{{ relBase }}/assets/js/script.js"></script>
   </body>
 </html>

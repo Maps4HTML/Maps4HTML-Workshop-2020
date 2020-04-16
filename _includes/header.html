@@ -10,7 +10,7 @@
       of map viewers built using the web platform
     </em>
     <a class="header-logo" href="https://www.w3.org/"><img class="inline" alt="W3C" src="https://www.w3.org/Icons/w3c_home" height="48" width="72"></a>
-    <a class="header-logo" href="https://www.opengeospatial.org/"><img class="inline" alt="OGC" src="./assets/media/OGC_Logo_2D_Blue.svg" height="56" width="110"></a>
+    <a class="header-logo" href="https://www.opengeospatial.org/"><img class="inline" alt="OGC" src="{{ relBase }}/assets/media/OGC_Logo_2D_Blue.svg" height="56" width="110"></a>
   </div>
   <figure class="header-figure">
     <style>
@@ -18,20 +18,20 @@
     <picture>
       <source media="(orientation: portrait) AND (max-width: 54rem),
                      (orientation: landscape) AND (max-height: 30rem)"
-        srcset="{{ '/assets/media/header-map/map_960x540.jpg' | relative_url }} 960w,
-        {{ '/assets/media/header-map/map_480x270.jpg' | relative_url }} 480w"
+        srcset="{{ relBase }}/assets/media/header-map/map_960x540.jpg 960w,
+        {{ relBase }}/assets/media/header-map/map_480x270.jpg 480w"
         sizes="(max-width: 40rem) calc(100vw - 2rem), calc(100vw - 6rem)" />
       <img class="header-map" width="960" height="540"
-        src="{{ '/assets/media/header-map/map_960x540_with_code.jpg' | relative_url }}"
-        srcset="{{ '/assets/media/header-map/map_1600x900_with_code.jpg' | relative_url }} 2x"
+        src="{{ relBase }}/assets/media/header-map/map_960x540_with_code.jpg"
+        srcset="{{ relBase }}/assets/media/header-map/map_1600x900_with_code.jpg 2x"
         alt="Maps of Montreal, past, present, and future." />
     </picture>
     <picture>
       <source media="(orientation: portrait) AND (max-width: 54rem),
                      (orientation: landscape) AND (max-height: 30rem)"
-        srcset="{{ '/assets/media/wordmark/logo_horizontal_blue_path.svg' | relative_url }}" />
+        srcset="{{ relBase }}/assets/media/wordmark/logo_horizontal_blue_path.svg" />
       <img class="header-wordmark"
-        src="{{ '/assets/media/wordmark/logo_vertical_blue_path.svg' | relative_url }}"
+        src="{{ relBase }}/assets/media/wordmark/logo_vertical_blue_path.svg"
         alt="Maps for the Web — 15–17 June 2020, Montreal." />
     </picture>
   </figure>
@@ -52,7 +52,7 @@
     <ul id="nav-menu">
       {% for link in site.data.nav %}
         <li>
-          <a href="{{ link.link | relative_url }}">{{ link.text }}</a>
+          <a href="{{ relBase }}{{ link.link }}">{{ link.text }}</a>
         </li>
       {% endfor %}
     </ul>

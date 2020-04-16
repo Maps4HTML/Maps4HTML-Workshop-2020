@@ -35,6 +35,7 @@ schedule:
 #   title: Lunch
 #   type: break
 ---
+{% include relBase.html %}
 
 <p>
   The workshop series will consist of schedules sessions
@@ -125,7 +126,7 @@ schedule:
 </ul>
 <p>
   To suggest a talk, panel, breakout session, or hack project,
-  please see the <a href="{{ '/call-for-participation' | relative_url }}">call for participation</a>.
+  please see the <a href="{{ relBase }}/call-for-participation">call for participation</a>.
 </p>
 {% endfor %}
 </article>
@@ -183,7 +184,7 @@ schedule:
       Breakout sessions will cover more specific technical topics
       that didn't fit into the main workshop schedule.
       Hack sessions will welcome new collaborators to a software or data project,
-      as discussed in the <a href="{{ '/call-for-participation#hack-day-proposals' | relative_url }}">call for participation</a>.
+      as discussed in the <a href="{{ relBase }}/call-for-participation#hack-day-proposals">call for participation</a>.
     </p>
     <p>
       The specific format will depend on the topic and goals of the session,
@@ -227,6 +228,6 @@ schedule:
 <h3 id="suggested-reading">Suggested Reading</h3>
 <p>
   If you can, please review the
-  <a href="{{ '/supporting-material' | relative_url }}">participant position statements and other background material</a>
+  <a href="{{ relBase }}/supporting-material">participant position statements and other background material</a>
   before the workshops.
 </p>
