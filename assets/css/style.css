@@ -268,13 +268,16 @@ a.ref {
   max-height: 5rem;
 }
 
-.footer {
-  border-top: 1px solid #eee;
+footer, hr {
+  border: none;
+  border-top: 2px solid #ddd;
   clear: both;
-  color: #777;
+}
+footer {
+  color: #555;
   font-size: 0.9rem;
-  margin: 2rem 0;
-  padding-top: .5rem;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
 }
 
 .menu {
