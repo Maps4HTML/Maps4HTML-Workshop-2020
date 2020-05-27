@@ -15,6 +15,7 @@ body {
   display: grid;
   grid-template:
     "header header   " min-content
+    "main   sidebar-0" min-content
     "main   sidebar-1" min-content
     "main   sidebar-2" 1fr
     "footer footer   " min-content
@@ -40,6 +41,9 @@ body > main {
 }
 body > footer {
   grid-area: footer;
+}
+.box-register {
+  grid-area: sidebar-0;
 }
 .box-host {
   grid-area: sidebar-1;
@@ -833,7 +837,7 @@ button {
   padding: 0.3em;
 }
 
-.seeking-sponsors {
+.cta {
   color: #005a9c;
   font-size: 1.25rem;
   font-weight: 700;
