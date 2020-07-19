@@ -8,7 +8,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{{ relBase }}/assets/css/style.css" />
-    <link name="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:title" name="twitter:title"
@@ -17,9 +17,13 @@
           content="{{ page.description | default: site.description }}" />
     <meta name="twitter:site" content="@maps4html" />
     <meta name="twitter:image"
-          content="{{ relBase }}/assets/media/icon/icon_blue_288x288.png" />
+          content="{{ site.url }}/assets/media/icon/icon_blue_288x288.png" />
     <meta property="og:image"
-          content="{{ relBase }}/assets/media/wordmark/logo_horizontal_blue_fb_1200x630.png" />
+          content="{{ site.url }}/assets/media/wordmark/logo_horizontal_blue_fb_1200x630.png" />
+    <meta property="og:image:alt"
+          content="Maps for the Web, Sept−Oct 2020, #Maps4HTML" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   </head>
 
   <body>
@@ -29,6 +33,7 @@
       <h1>{{page.title | default: site.title}}</h1>
       {{ content }}
     </main>
+    {% include register-cta.html %}
     {% include host.html %}
     {% include sponsors.html %}
     {% include footer.html %}
