@@ -42,8 +42,10 @@ body > main {
 body > footer {
   grid-area: footer;
 }
-.box-register {
-  grid-area: sidebar-0;
+@media (min-width: 54.01em) {
+  .box-register {
+    grid-area: sidebar-0;
+  }
 }
 .box-host {
   grid-area: sidebar-1;
