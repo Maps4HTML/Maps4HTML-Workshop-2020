@@ -845,3 +845,7 @@ button {
   font-weight: 700;
   text-align: center;
 }
+
+main a[href$=".pdf"]::after {
+	content: " (PDF)";
+}
