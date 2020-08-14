@@ -4,13 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <title>
-     {% if page.title %}{{ page.title }} — {% endif %}{{ site.title }} 
+     {% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{{ relBase }}/assets/css/style.css" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:title" name="twitter:title"
           content="{{ page.title | default: site.title }}" />
     <meta property="og:description" name="description"
@@ -19,11 +19,11 @@
     <meta name="twitter:image"
           content="{{ site.url }}/assets/media/icon/icon_blue_288x288.png" />
     <meta property="og:image"
-          content="{{ site.url }}/assets/media/wordmark/logo_horizontal_blue_fb_1200x630.png" />
+          content="{{ site.url }}/assets/media/opengraph-image.png" />
     <meta property="og:image:alt"
           content="Maps for the Web, Sept−Oct 2020, #Maps4HTML" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:height" content="600" />
   </head>
 
   <body>
