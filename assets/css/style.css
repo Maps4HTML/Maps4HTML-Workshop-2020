@@ -708,6 +708,8 @@ span.title {
 
 .schedule details dd {
   margin: 0 0 0 1rem;
+  border: none;
+  padding: 0;
 }
 
 .schedule details dd span {
