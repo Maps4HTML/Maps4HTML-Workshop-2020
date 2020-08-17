@@ -225,13 +225,9 @@ a.ref {
   width: 100%;
 }
 
-.box,
-.type {
+.box {
   box-shadow: .3em .3em 0 rgba(0,0,0,.1);
   border: 1px solid #ccc;
-}
-
-.box {
   color: #666;
   font-size: 0.9rem;
   margin-left: 3rem;
@@ -554,126 +550,78 @@ a.footnote-ref:after {
   padding: .1em .5em;
 }
 
-.schedule {
-  list-style: none;
+.agenda h3 {
+  background: #005a9c;
+  color: white;
+  box-shadow: 0 0 0 0.2rem #005a9c,
+    0.1rem 0.1rem 0 0.2rem rgba(0,0,0,0.4);
+  border-radius: 0.2rem;
 }
 
-.schedule li,
-summary .desc {
-  display: flex;
+.schedule-time {
+  display: block;
+  font-weight: normal;
+}
+.schedule-time .utc {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.schedule {
+  list-style: none;
 }
 
 .schedule li + li {
   margin-top: .5rem;
 }
 
-summary .time {
-  background-color: #005c9c;
-  border-radius: 5px 0 0 5px;
-  color: #fff;
+.schedule-item summary {
+  list-style-position: outside;
+  position: relative;
+}
+.schedule-item summary::-webkit-details-marker {
+  position: absolute;
+  left: -1rem;
+}
+
+.schedule-item .summary-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-item-title {
+  padding-left: 0.2em;
+}
+
+.schedule-item-type {
+  background-color: #ddd;
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 80%;
   min-width: 8em;
-  vertical-align: top;
+  padding: 0.2em 0.5em;
   white-space: nowrap;
 }
-
-summary .time,
-.title,
-.type {
-  padding: 3px 6px;
-}
-
-.break summary .time {
-  background-color: #666;
-  color: #fff;
-}
-
-.break .title {
-  color: gray;
-  font-style: italic;
-}
-
-summary .time span { font-size: 67%; }
-
-.type {
-  clear: right;
-  display: inline-block;
-  font-size: 67%;
-  font-weight: normal;
-  height: 100%;
-  margin: 0 13px 0 0;
-  order: -1;
-  min-width: 6.5em;
-}
-
-.type:empty {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-dt.type {
-  font-size: 100%;
-  margin: 0;
+.schedule-item-type > * {
+  display: block;
   text-align: center;
 }
 
-.type-plenary, .type-keynote {
+.schedule-item-type.type-plenary,
+.schedule-item-type.type-presentations,
+.schedule-item-type.type-keynote {
   background-color: #b9d3ee;
 }
 
-.type-breakout, .type-hack {
+.schedule-item-type.type-panel {
+  background-color: #d6f6b6;
+}
+
+.schedule-item-type.type-breakout,
+.schedule-item-type.type-hack,
+.schedule-item-type.type-demo {
   background-color: #ffe7ba;
-}
-
-span.title {
-  display: block;
-  flex: 1;
-  margin-left: 5px;
-  order: 1;
-}
-
-.schedule summary::-webkit-details-marker {
-  display: none;
-}
-
-.schedule summary::-moz-list-bullet {
-  list-style-type: none;
-}
-
-.schedule summary {
-  list-style-type: none;
-}
-
-.schedule li:not(.no-details) details summary .desc {
-  cursor: pointer;
-}
-
-.schedule details summary .desc:before {
-  color: #999;
-  content: "▶";
-  display: inline-block;
-  height: 1.1em;
-  margin-right: 0.5em;
-  order: -2;
-  width: 1.1em;
-}
-
-.schedule details[open] summary .desc:before {
-  color: #666;
-  transform: rotate(90deg);
-  position: relative;
-  left: -2px;
-  top: 2px;
-}
-
-.schedule .no-details details .desc:before {
-  content: "";
-}
-
-.schedule details {
-  width: 100%;
 }
 
 .schedule summary:focus-visible {
@@ -681,43 +629,35 @@ span.title {
   outline-offset: 2px;
 }
 
-.schedule details dl {
-  box-shadow: .3em .3em 0 rgba(0,0,0,.1);
+.schedule-item-details,
+.schedule-item .summary-wrapper {
+  box-shadow: 0.3rem 0.3rem 0 rgba(0,0,0,.1);
   border: 1px solid #ccc;
+}
+.schedule-item-details {
   margin: 9px 0 5px 27px;
   padding: 1rem;
   position: relative;
 }
 
-/* from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
-.schedule details dl::after {
-  border-color: #005c9c transparent;
-  border-style: solid;
-  border-width: 15px 15px 0;
-  content: "";
-  display: block;
-  left: 8em;
-  position: absolute;
-  top: -16px;
-  width: 0;
-}
-
-.schedule details dt {
+.schedule-item-details dt {
   margin: 0;
 }
 
-.schedule details dd {
+.schedule-item-details dd {
   margin: 0 0 0 1rem;
+  border: none;
+  padding: 0;
 }
 
-.schedule details dd span {
+.schedule-item-details dd span {
   font-size: 75%;
   color: #888;
   display: block;
   margin-bottom: .25em;
 }
 
-.schedule details dd + dt {
+.schedule-item-details dd + dt {
   margin-top: 1rem;
 }
 
