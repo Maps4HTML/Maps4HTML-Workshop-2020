@@ -1,0 +1,12 @@
+{% include relBase.html %}
+{% assign handle = include.participant | split: ',' | first | slugify: "latin" %}
+{% assign url = site.data.position-statements[handle] %}
+{% if url %}
+  <span aria-hidden="true">{{ include.participant }}</span>:
+  <a href="{{ relBase }}/supporting-material-uploads/position-statements/{{ url }}">
+    <span class="visually-hidden">{{ include.participant }}</span>
+    position statement
+  </a>
+{% else %}
+  {{ include.participant }}
+{% endif %}
