@@ -587,11 +587,12 @@ a.footnote-ref:after {
 
 .schedule-item .summary-wrapper {
   display: flex;
+  align-items:center;
   justify-content: space-between;
 }
 
 .schedule-item-title {
-  padding-left: 0.2em;
+  padding: 0.2em 0.5em;
 }
 
 .schedule-item-type {
@@ -650,7 +651,7 @@ a.footnote-ref:after {
   padding: 0;
 }
 
-.schedule-item-details dd span {
+.schedule-item-details dd .author {
   font-size: 75%;
   color: #888;
   display: block;
@@ -788,4 +789,13 @@ button {
 
 main a[href$=".pdf"]::after {
 	content: " (PDF)";
+}
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
