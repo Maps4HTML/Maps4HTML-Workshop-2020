@@ -5,7 +5,7 @@
   <span aria-hidden="true">{{ include.participant }}</span>:
   <a href="{{ relBase }}/supporting-material-uploads/position-statements/{{ url }}">
     <span class="visually-hidden">{{ include.participant }}</span>
-    position statement
+    {% if url contains 'Joint' %}joint {% endif %}position statement
   </a>
 {% else %}
   {{ include.participant }}
