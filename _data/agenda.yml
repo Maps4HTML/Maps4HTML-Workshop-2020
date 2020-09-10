@@ -209,8 +209,11 @@
       type: panel
       duration: "1 hour"
       details:
-        - Panelists:
-            - to be confirmed…
+        - Panelists:	 
+            - Thomas Lee, Mapbox
+	    - Daniel Lewis, Geotab
+	    - Ed Parsons, Google
+	    - more to be confirmed…
         - Moderator:
             - Ted Guild
     - title: "Map Whiteboard: Collaborative Map-Making"
