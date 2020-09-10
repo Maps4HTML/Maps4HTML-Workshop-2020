@@ -32,7 +32,7 @@
             - title: OGC APIs for web use
               author: Gobe Hobona
             - title: pygeoapi
-              author: Tom Angelos Francesco
+              author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli 
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
             - title: Limitations to use of OGC services
@@ -231,7 +231,7 @@
         - Talks:
             - title: User Research on Maps in HTML
               author: Terence Eden
-    - title: "Stakeholders: Open source for mapping & browsers"
+    - title: "Stakeholders: Open Source for Web Mapping"
       type: panel
       duration: "1 hour"
       details:
