@@ -210,6 +210,7 @@
       duration: "1 hour"
       details:
         - Panelists:	 
+            - Johannes Lauer, HERE
             - Thomas Lee, Mapbox
             - Daniel Lewis, Geotab
             - Ed Parsons, Google
