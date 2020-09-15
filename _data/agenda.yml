@@ -100,9 +100,9 @@
         - Talks:
             - title: UI patterns in existing web map widgets
               author: Nic Chan
-            - title: Audio maps
+            - title: Introduction to Digital Nonvisual Maps
               author: Brandon Biggs
-    - title: Building Cross-Sensory Maps Using Audiom
+    - title: <a target="_blank" href="https://xrnavigation.io/audiom-getting-started/">Building Cross-Sensory Maps Using Audiom</a>
       type: breakout
       duration: "60 minutes"
       details:
