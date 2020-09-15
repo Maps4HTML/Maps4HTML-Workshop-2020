@@ -103,6 +103,7 @@
               author: Brandon Biggs
     - title: Building Cross-Sensory Maps Using Audiom
       type: breakout
+      duration: "60 minutes"
       details:
         - Facilitator: Brandon Biggs
     - title: "The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)"
@@ -134,7 +135,7 @@
             - Amelia Bellamy-Royds
     - title: "Building better map data services/formats for web use"
       type: presentations
-      duration: "45 minutes"
+      duration: "60 minutes"
       details:
         - Talks:
             - title: Advanced Analytics Software Project for Geospatial Data
@@ -143,6 +144,8 @@
               author: Danielle Dupuy
             - title: The History of Meteorology and Cartography
               author: Chris Little
+            - title: Web GIS application for Indian Prime Minister's Rural Road Programme
+              author: Sajeevan G
 - title: "Week 2, Day 2"
   start: 2020-09-29T12:00Z
   agenda:
