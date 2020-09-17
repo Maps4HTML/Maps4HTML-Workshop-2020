@@ -69,7 +69,13 @@ layout: default
         <details open>
           <summary>
             <span class="summary-wrapper">
-              <span class="schedule-item-title">{{ item.title }}</span>
+              <span class="schedule-item-title">
+                {% if item.link %}
+                  <a href="{{ item.link }}">{{ item.title }}</a>
+                {% else %}
+                  {{ item.title }}
+                {% endif %}
+              </span>
             <span class="schedule-item-type type-{{ item.type }}">
               <span class="type">{{ item.type }}</span>
               <span class="duration">{{ item.duration }}</span>
