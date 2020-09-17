@@ -32,7 +32,7 @@
             - title: OGC APIs for web use
               author: Gobe Hobona
             - title: pygeoapi
-              author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli 
+              author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
             - title: Limitations to use of OGC services
@@ -102,9 +102,10 @@
               author: Nic Chan
             - title: Introduction to Digital Nonvisual Maps
               author: Brandon Biggs
-    - title: <a target="_blank" href="https://xrnavigation.io/audiom-getting-started/">Building Cross-Sensory Maps Using Audiom</a>
+    - title: Building Cross-Sensory Maps Using Audiom
       type: breakout
       duration: "60 minutes"
+      link: https://xrnavigation.io/audiom-getting-started/
       details:
         - Facilitator: Brandon Biggs
     - title: "The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)"
@@ -213,7 +214,7 @@
       type: panel
       duration: "1 hour"
       details:
-        - Panelists:	 
+        - Panelists:
             - Johannes Lauer, HERE
             - Thomas Lee, Mapbox
             - Daniel Lewis, Geotab
@@ -256,30 +257,35 @@
             - title: Conclusions and take aways
               author: The workshop program committee
 # Each agenda item should contain
-# time, as a string describing the range
 # title, as non-interactive HTML (optional for breaks)
 # type, one of presentations, breakout, or hack
-# open, (optional) boolean indicating whether the details element will be open by default
+# duration, a string for the session duration
+# link (optional), a link for the agenda item
 # details (optional), a list of headings
-#   each of which is mapped to a list of (one or more) bullet points, as HTML
+#   each of which is mapped to a list of (one or more) bullet points, as a string
 #   e.g., goals, speakers, scribe
+# "Talks" is a special type of details item, where each talk expects a title and an author property.
 #
 # EXAMPLES
-#
-# - time: "09:15–10:30AM"
-#   title: Important topic
-#   type: discussion
-#   open: true
-#   details:
-#     - Goals for workshop:
-#       - <a href="#">Test Link</a>. Description here.
-#     - Talks:
-#       - <a href="#">Talk Title</a>
-#         author: Name
-#       - <a href="#">Talk Title</a>
-#         author: Name
-#     - Scribe:
-#       - Name
-# - time: "12:00–12:30PM"
-#   title: Lunch
-#   type: break
+#   agenda:
+#     - title: "Introduction"
+#       type: presentations
+#       duration: "30 minutes"
+#       details:
+#         - Welcome:
+#             - The workshop program committee
+#         - Talks:
+#             - title: Why maps for the web
+#               author: Peter Rushforth
+#     - title: "Stakeholders: Government geospatial data providers & the web"
+#       type: panel
+#       duration: "1 hour"
+#       details:
+#         - Panelists:
+#             - Emilio López Romero, National Centre of Geographic Information (Spain)
+#             - Cameron Wilson, Canadian Spatial Data Infrastructure
+#             - Don Sullivan, NASA
+#             - Sébastien Durand, Canadian Federal Geospatial Platform
+#             - Roy Rathbun, NGA
+#         - Moderator:
+#             - Peter Rushforth
