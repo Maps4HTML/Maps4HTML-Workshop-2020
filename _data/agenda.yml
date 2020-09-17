@@ -73,7 +73,7 @@
         - Talks:
             - title: Multilingual text rendering
               author: Brandon Liu
-            - title: A privacy preserving mode for geolocation
+            - title: Fuzzy Geolocation
               author: Thijs Brentjens
     - title: "Worldwide Web Maps: Challenges in the global context"
       type: panel
@@ -86,7 +86,7 @@
             - Thijs Brentjens, Geonovum
         - Moderator:
             - Doug Schepers
-    - title: "The future of GeoJSON"
+    - title: "Extending GeoJSON for Web Applications"
       type: breakout
       details:
         - Facilitator: Gethin Rees
