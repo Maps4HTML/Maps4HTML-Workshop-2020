@@ -63,7 +63,7 @@
               author: Peter Rushforth
             - title: Bocoup's Review of the MapML Proposal
               author: Simon Pieters
-            - title: SVGMap and Distributed Web Maps
+            - title: Quad Tree Composite Tiling and the standardization of tiling; Decentralized Web Mapping
               author: Satoru Takagi
     - title: "Internationalization and Security"
       type: presentations
@@ -73,7 +73,7 @@
         - Talks:
             - title: Multilingual text rendering
               author: Brandon Liu
-            - title: Fuzzy geolocation
+            - title: A privacy preserving mode for geolocation
               author: Thijs Brentjens
     - title: "Worldwide Web Maps: Challenges in the global context"
       type: panel
@@ -86,7 +86,7 @@
             - Thijs Brentjens, Geonovum
         - Moderator:
             - Doug Schepers
-    - title: "Map Projections and Vector Symbology"
+    - title: "The future of GeoJSON"
       type: breakout
       details:
         - Facilitator: Gethin Rees
@@ -120,7 +120,7 @@
       details:
         - Talks:
             - title: Physical accessibility data in maps
-              author: Sebastian Zappe
+              author: Sebastian Felix Zappe
             - title: Indoor maps
               author: Claudia Loitsch & Julian Striegl
     - title: "Web Maps for Cognitive Accessibility"
@@ -175,8 +175,8 @@
         - Talks:
             - title: "GeoPose: From point-of-interest to maps-of-objects"
               author: Jan-Erik Vinje
-            - title: "How GeoPose aligns with use cases and requirements for Web maps author"
-              author: Christine Perey
+            - title: "How GeoPose aligns with use cases and requirements for Web map authors"
+              author: Christine Perey and Josh Lieberman
     - title: Maps and augmented reality
       type: panel
       duration: "30 minutes"
@@ -243,7 +243,8 @@
         - Panelists:
             - Andreas Hocevar, OpenLayers
             - Simon Pieters, Bocoup
-            - more to be confirmed…
+            - Will Mortenson, NGA
+            - Daniel Morissette, MapGears
         - Moderator:
             - Tom Kralidis
     - title: "Conclusion / Next Steps"
