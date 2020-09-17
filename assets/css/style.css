@@ -603,6 +603,7 @@ a.footnote-ref:after {
   min-width: 8em;
   padding: 0.2em 0.5em;
   white-space: nowrap;
+  align-self: stretch;
 }
 .schedule-item-type > * {
   display: block;
