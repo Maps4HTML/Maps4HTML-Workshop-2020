@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en-us>
+
+<head>
+  <meta charset=utf-8>
+  <title>Fuzzy geolocation</title>
+  <meta name=viewport content="width=device-width">
+  <link rel=stylesheet href="maps.css">
+  <script src="shower.js"></script> <!-- Alternative: b6plus.js -->
+  <style>
+    img.map {
+      height: 8rem;
+    }
+
+    img.map.notused {
+      opacity: 0.8;
+      filter: grayscale();
+    }
+  </style>
+</head>
+
+<body class="shower fade-in">
+
+  <section class="cover slide clear" id="cover">
+    <h1>Fuzzy geolocation</h1>
+    <address>Thijs Brentjens, Geonovum (the Netherlands)</address>
+    <p>September 23rd 2020<br>
+      W3C/OGC Joint Workshop Series on Maps for the Web<br>
+      <a href="https://www.w3.org/2020/maps/">w3.org/2020/maps/</a></p>
+  </section>
+
+  <section class="slide side right" id="context-analogue-age">
+    <h2>Context</h2>
+    <img class="side" src="images/ancient-map.jpg" alt="Picture of an ancient map">
+    <p>
+      In the age of analogue maps, who else than the user knew exactly what a user was looking for on a map?
+    </p>
+  </section>
+
+  <section class="slide" id="context-digital-age">
+    <h2>Context</h2>
+    <p>For many digital applications (mobile, desktop) geolocation is valuable.</p>
+    <p class="next">Use cases with extra attention for security and privacy:</p>
+    <ol>
+      <li class="next">Somebody wants to navigate to the doctor</li>
+      <li class="next">A police officer investigates a specific area for possible criminal activities</li>
+    </ol>
+    <p class="next">Sending a (very) accurate geolocation to online services may <em>compromise privacy</em> or may be a <em>security risk</em>.</p>
+  </section>
+
+  <section class="slide side right" id="locationsecured">
+    <h2>Can we do better?</h2>
+    <img class="side" src="images/location-secured.jpg" alt="Secured location">
+    <ul>
+      <li class="next">Just don't send the exact geolocation or area of interest to online services (APIs, websites, data services)</li>
+      <li class="next">But then we need some smarter processing in the interaction with services</li>
+    </ul>
+  </section>
+
+
+  <section class="slide" id="fuzzygeolocation">
+    <h2>Fuzzy geolocation</h2>
+    <p>Example of an interaction pattern</p>
+    <ul>
+      <li class="next">Give a map around this location<br />
+        <img class="map" src="images/preciselocation.png" alt="Precise geolocation"></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="preparerequest">
+    <h2>Fuzzy geolocation</h2>
+    <p>Example of an interaction pattern</p>
+    <ul>
+      <li>Change the center, enlarge area of interest, add random other areas, ...<br />
+        <img class="map" src="images/randomarea.png" alt="Random other area"> <img class="map" src="images/largearea.png" alt="Larger area">
+      </li>
+      <li class="next">Interact with services <em>with the modified positions / area</em> and random requests</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="modifyresponse">
+    <h2>Fuzzy geolocation</h2>
+    <p>Example of an interaction pattern</p>
+    <ul>
+      <li>Modify (filter) the response(s) to fit the original / intended area<br /><img class="map notused" src="images/randomarea.png" alt="Random other area"> <img class="map" src="images/preciselocation-largearea-filtered.png" alt="Larger area">
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide" id="architecture">
+    <h2>Adding fuzziness</h2>
+    <ul>
+      <li>by a broker / trusted third party:
+        <ul>
+          <li>add fuzziness, interact with services, deliver final result to user agent</li>
+          <li>possibly provide additional services: caching of map resources, random requests, fake users</li>
+        </ul>
+      </li>
+      <li>in mapping clients / user agents: smarter way of preparing the requests / interacting (built-in fuzziness for requests)</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="collaborate">
+    <h2>Invitation to collaborate</h2>
+    <p>Let's explore a privacy preserving mode for geolocation</p>
+    <ul>
+      <li>Geonovum will create a PoC for a basic broker and live demonstrator</li>
+      <li>Use OGC APIs (OGC API Maps / Tiles, OGC API Features) as standardized interfaces</li>
+      <li>Share ideas, feedback, review, discuss</li>
+    </ul>
+    <div class="next">
+      <h3>We are also available to help:</h3>
+      <ul>
+        <li>provide sample Web APIs and usage examples</li>
+        <li>other resources: code repositories, basic web hosting, coding, ...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="clear cover slide" id="end">
+    <h2>Thank you!</h2>
+    <p>t.brentjens@geonovum.nl<br>
+      Twitter: @thijsbrentjens @geonovum<br>
+      <a href="//geonovum.nl">geonovum.nl</a>
+      <p>September 23rd 2020<br>
+        W3C/OGC Joint Workshop Series on Maps for the Web<br>
+        <a href="https://www.w3.org/2020/maps/">w3.org/2020/maps/</a></p>
+  </section>
+
+</body>
+
+</html>
