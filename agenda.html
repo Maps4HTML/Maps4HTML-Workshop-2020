@@ -104,7 +104,7 @@ layout: default
                           {{ talk.title }}
                         {% endif %}
                         {% if talk.link %}
-                          <a href="{{ talk.link }}">(slides)</a>
+                          <a href="{{ relBase }}{{ talk.link }}">(slides)</a>
                         {% endif %}
                         <span class="author">{% include participant-link.html participant=talk.author %}</span>
                       </dd>
