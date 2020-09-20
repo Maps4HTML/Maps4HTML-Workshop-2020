@@ -10,10 +10,10 @@ layout: default
 
 <div class="info">
   <p>
-   Workshop particpants are invited to join the 
+   Workshop particpants are invited to join the
    <a href="https://gitter.im/Maps4HTML/W3C-OGC-Workshop-Maps-For-Web">
    workshop gitter chat</a> to exchange information with other participants,
-   and the program committee. You'll need either a GitHub, GitLab or Twitter 
+   and the program committee. You'll need either a GitHub, GitLab or Twitter
    account to join.
   </p>
 </div>
@@ -98,10 +98,13 @@ layout: default
                   {% if detail_item[0] == 'Talks' %}
                     {% for talk in detail_item[1] %}
                       <dd>
-                        {% if talk.link %}
-                          <a href="{{ talk.link }}">{{ talk.title }}</a>
+                        {% if talk.recording %}
+                          <a href="{{ talk.recording }}">{{ talk.title }}</a>
                         {% else %}
                           {{ talk.title }}
+                        {% endif %}
+                        {% if talk.link %}
+                          <a href="{{ talk.link }}">(slides)</a>
                         {% endif %}
                         <span class="author">{% include participant-link.html participant=talk.author %}</span>
                       </dd>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>UI patterns in existing web map widgets</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="maps.css" />
+    <script src="shower.js"></script>
+    <!-- Alternative: b6plus.js -->
+  </head>
+
+  <body class="shower fade-in">
+    <div class="progress"></div>
+
+    <section class="cover slide clear" id="cover">
+      <h1>UI patterns in existing web map widgets</h1>
+      <address>Nic Chan</address>
+      <p>
+        24 September 2020<br />
+        W3C/OGC Joint Workshop Series on Maps for the Web<br />
+        <a href="https://www.w3.org/2020/maps/">w3.org/2020/maps/</a>
+      </p>
+    </section>
+
+    <section class="slide" id="slide-definitions">
+      <h2>Definitions</h2>
+      <dl>
+        <dt>Widgets</dt>
+        <dd>
+          An embeddable map, typically in an iframe or something similar that
+          requires minimal code to implement.
+        </dd>
+        <dt>Client-side Mapping APIs</dt>
+        <dd>
+          JavaScript Libraries that allow website developers to create more
+          customized map viewers.
+        </dd>
+        <dt>Accessibility</dt>
+        <dd>The degree to which these maps are usable by disabled people.</dd>
+        <dt>WCAG (Web Content Accessibility Guidelines)</dt>
+        <dd>
+          A series of guidelines by the W3C in order to provide a shared
+          standard for developing accessible web content.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="slide" id="slide-tools">
+      <h2>Tools Reviewed</h2>
+      <ul class="text--sm">
+        <li>Google Maps embed</li>
+        <li>Google Maps API</li>
+        <li>Bing Maps embed</li>
+        <li>Bing Maps Control API</li>
+        <li>MapKit JS (Apple Maps) API</li>
+        <li>Leaflet JS API</li>
+        <li>OpenStreet Map Embed</li>
+        <li>OpenLayers API</li>
+        <li>MapBox Studio embed</li>
+        <li>MapBox GL JS API</li>
+        <li>TomTom Maps SDK for Web</li>
+      </ul>
+      <p>
+        <a href="https://tinyurl.com/wcag-maps"
+          >https://tinyurl.com/wcag-maps</a
+        >
+        by Robert Linder
+      </p>
+    </section>
+
+    <section class="slide" id="slide-nontext-content">
+      <h2>Non-text Content</h2>
+      <p class="text--callout">5/11 tools failed</p>
+      <ul>
+        <li>Unlabelled images (ie. logo)</li>
+        <li>Unlabelled controls (icon buttons +/-)</li>
+      </ul>
+      <h3>Example techniques</h3>
+      <code class="code-block">
+        &lt;img src="logo.svg" alt="[Vendor] Logo"&gt;
+      </code>
+      <code class="code-block">
+        &lt;button aria-label="Zoom In"&gt;+&lt;/button&gt;
+      </code>
+    </section>
+
+    <section class="slide" id="slide-info">
+      <h2>Info & Relationships</h2>
+      <p class="text--callout">11/11 tools failed</p>
+      <ul>
+        <li>Failure to label map's structure as a distinct piece of content</li>
+        <li>Failure to distinguish control states</li>
+      </ul>
+      <h3>Example technique</h3>
+      <code class="code-block">
+        &lt;button aria-label="Zoom In" disabled&gt;+&lt;/button&gt;
+      </code>
+    </section>
+
+    <section class="slide side right" id="slide-contrast">
+      <h2>Contrast (minimum)</h2>
+      <img
+        class="side"
+        src="./assets/text-contrast.PNG"
+        alt="Map library that has lacking contrast between the medium blue text label and the light blue ocean background"
+      />
+      <p class="text--callout">9/11 tools failed</p>
+      <ul>
+        <li>Map controls (ie. buttons) can lack text contrast</li>
+        <li>More commonly, map labels lack adequate text contrast</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="slide-keyboard">
+      <h2>Keyboard</h2>
+      <p class="text--callout">7/11 tools failed</p>
+      <ul>
+        <li>
+          Custom map controls may not able to be accessed or activated by the
+          keyboard
+        </li>
+        <li>Pointer gestures should have equivalent keyboard shortcuts</li>
+      </ul>
+      <code class="code-block">
+        &lt;-- Use this --&gt; <br />
+        &lt;button&gt;Please just style me&lt;/button&gt;<br />
+        &lt;-- Not this --&gt; <br />
+        &lt;a href="#"&gt;I'm not a button, I'm a link!&lt;/a&gt;
+      </code>
+    </section>
+
+    <section class="slide" id="slide-shortcuts">
+      <h2>Character Key Shortcuts</h2>
+      <p class="text--callout">1/11 tools failed</p>
+      <p>
+        If a keyboard shortcut is implemented in content using only letter,
+        punctuation, number, or symbol characters, then one of these
+        alternatives must available:
+      </p>
+      <ol>
+        <li>Turn off</li>
+        <li>Remap</li>
+        <li>
+          Active only on focus. This technique is the de-facto standard in web
+          maps.
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" id="slide-focus">
+      <h2>Focus Order</h2>
+      <p class="text--callout">2/11 tools failed</p>
+      <p>
+        Interactable elements should be focusable according to the reading
+        order.
+      </p>
+    </section>
+
+    <section class="slide" id="slide-focus-example">
+      <h2>Focus Order Example</h2>
+      <img
+        style="float:left; margin-right: 2rem;"
+        src="./assets/google-maps-embed.png"
+        alt="Google Maps focus order diagram"
+      />
+      <ol class="text--sm">
+        <li>"Google Maps Frame"</li>
+        <li>"Terms of Use link"</li>
+        <li>"View Larger Map link"</li>
+        <li>"Zoom in button"</li>
+        <li>"Zoom out button"</li>
+        <li>"Clickable"</li>
+      </ol>
+    </section>
+
+    <section class="slide side right" id="slide-focus-visible">
+      <h2>Focus Visible</h2>
+      <img
+        class="side"
+        src="./assets/focus-ring-example.png"
+        alt="Google Maps and the default Chrome focus ring"
+      />
+      <p class="text--callout">7/11 tools failed</p>
+      <ul>
+        <li>
+          Do not remove outlines in CSS (avoid <code>outline: none</code>)
+          without replacing them with your own styles
+        </li>
+        <li>Outlines must be persistently visible</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="slide-lang">
+      <h2>Language of parts</h2>
+      <p class="text--callout">9/11 tools failed</p>
+      <p>Content should have a lang attribute.</p>
+      <code class="code-block">
+        &lt;-- Parent level language --&gt; <br />
+        &lt;html lang="en"&gt; <br /><br />
+        &lt;-- String level language --&gt; <br />
+        &lt;span lang="zh"&gt;香港&lt;/span&gt;
+      </code>
+    </section>
+
+    <section class="slide" id="slide-focus-example">
+      <h2>On Input</h2>
+      <p class="text--callout">2/11 tools failed</p>
+      <img
+        style="float: right; width: 65%"
+        src="./assets/tomtom-scroll.gif"
+        alt="Tomtom maps page scrolls as you try pan the map with arrow keys"
+      />
+    </section>
+
+    <section class="clear cover slide" id="end">
+      <h2>Thank you!</h2>
+      <p><a href="mailto:nic@nicchan.me">nic@nicchan.me</a></p>
+
+      <p>
+        24 September 2020<br />
+        W3C/OGC Joint Workshop Series on Maps for the Web<br />
+        <a href="https://www.w3.org/2020/maps/">w3.org/2020/maps/</a>
+      </p>
+    </section>
+  </body>
+</html>
