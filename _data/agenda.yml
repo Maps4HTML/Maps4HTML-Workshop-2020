@@ -10,7 +10,7 @@
         - Talks:
             - title: Why maps for the web
               author: Peter Rushforth
-              link: /supporting-material-uploads/presentations/Why Maps for HTML - Peter Rushforth.pptx
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx
     - title: "State of Web map widgets today"
       type: presentations
       duration: "1 hour"
@@ -21,6 +21,7 @@
               author: Amelia Bellamy-Royds
             - title: Geomoose
               author: Dan Little
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf
               link: /supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf
     - title: "Video for day 1"
       type: recording
@@ -37,12 +38,16 @@
         - Talks:
             - title: OGC APIs for web use
               author: Gobe Hobona
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx
             - title: pygeoapi
               author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli
+              link: https://pygeoapi.io/presentations/default/#/frontpage
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx
             - title: Limitations to use of OGC services
               author: Jonathan Moules
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.odp
     - title: "Stakeholders: Government geospatial data providers & the web"
       type: panel
       duration: "1 hour"
@@ -52,7 +57,6 @@
             - Cameron Wilson, Canadian Spatial Data Infrastructure
             - Don Sullivan, NASA
             - Sébastien Durand, Canadian Federal Geospatial Platform
-            - Roy Rathbun, NGA
         - Moderator:
             - Peter Rushforth
 - title: "Week 1, Day 3"
@@ -63,7 +67,7 @@
       duration: "1 hour"
       details:
         - Talks:
-            - title: Extending the web
+            - title: "Extending the Web: Maps, The Commons, and Pie"
               author: Brian Kardell
             - title: The MapML proposal
               author: Peter Rushforth
