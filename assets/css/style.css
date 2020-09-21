@@ -42,10 +42,8 @@ body > main {
 body > footer {
   grid-area: footer;
 }
-@media (min-width: 54.01em) {
-  .box-register {
-    grid-area: sidebar-0;
-  }
+.box-register {
+  grid-area: sidebar-0;
 }
 .box-host {
   grid-area: sidebar-1;
@@ -421,7 +419,8 @@ code {
   }
   body {
     border-radius: 0;
-    padding: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .header-logos-etc {
     flex-wrap: wrap;
@@ -441,10 +440,13 @@ code {
   body {
     grid-template:
       "header"
+      "sidebar-0"
       "main"
       "sidebar-1"
       "sidebar-2"
       "footer";
+    grid-template-columns: 100%; /* somehow prevents overflow */
+    max-width: 100vw;
   }
 
   .menu details:not(.no-details-support) {
