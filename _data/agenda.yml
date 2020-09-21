@@ -100,6 +100,12 @@
       type: breakout
       details:
         - Facilitator: Gethin Rees
+        - Talks:
+            - title: Expressing GeoJSON as JSON-LD 1.1
+              author: Bryan Haberberger, Walter J. Ong
+            - title: "GeoJSON-T: Adding time to the GeoJSON standard"
+              author: Karl Grossner
+
 - title: "Week 1, Day 4"
   start: 2020-09-24T22:00Z
   agenda:
