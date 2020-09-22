@@ -68,12 +68,16 @@
         - Talks:
             - title: "Extending the Web: Maps, The Commons, and Pie"
               author: Brian Kardell
-            - title: The MapML proposal
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-commons.pdf
+            - title: The MapML Proposal - Part One
               author: Peter Rushforth
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pptx
             - title: Bocoup's Review of the MapML Proposal
               author: Simon Pieters
+              link: https://slides.com/zcorpan/bocoup-review-mapml/
             - title: Quad Tree Composite Tiling and the standardization of tiling; Decentralized Web Mapping
               author: Satoru Takagi
+              link: https://satakagi.github.io/mapsForWebWS2020-docs/
     - title: "Internationalization and Security"
       type: presentations
       duration: "30 minutes"
@@ -82,8 +86,10 @@
         - Talks:
             - title: Multilingual text rendering
               author: Brandon Liu
+              link: http://bdon.org/maps-for-the-web/
             - title: Fuzzy Geolocation
               author: Thijs Brentjens
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Thijs_Brentjens/fuzzy-geolocation/
     - title: "Worldwide Web Maps: Challenges in the global context"
       type: panel
       duration: "30 minutes"
@@ -102,8 +108,10 @@
         - Talks:
             - title: Expressing GeoJSON as JSON-LD 1.1
               author: Bryan Haberberger, Walter J. Ong
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/bryan_haberberger-geojson-presentation.pptx
             - title: "GeoJSON-T: Adding time to the GeoJSON standard"
               author: Karl Grossner
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Grossner_geojson-t.pptx
 
 - title: "Week 1, Day 4"
   start: 2020-09-24T22:00Z
