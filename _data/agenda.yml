@@ -1,5 +1,6 @@
 - title: "Week 1, Day 1"
   start: 2020-09-21T04:00Z
+  video: https://www.youtube.com/watch?v=Ji3HF35Hpso&list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ&index=1
   agenda:
     - title: "Introduction"
       type: presentations
@@ -10,6 +11,7 @@
         - Talks:
             - title: Why maps for the web
               author: Peter Rushforth
+              discourse: https://discourse.wicg.io/t/why-maps-for-html/4797/2
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx
     - title: "State of Web map widgets today"
       type: presentations
@@ -19,15 +21,16 @@
         - Talks:
             - title: Use Cases
               author: Amelia Bellamy-Royds
+              discourse: https://discourse.wicg.io/t/use-cases-and-requirements-for-web-maps/4796/3
+              link: https://maps4html.org/HTML-Map-Element-UseCases-Requirements/
+              linktype: draft report
             - title: Geomoose
               author: Dan Little
+              discourse: https://discourse.wicg.io/t/the-geomoose-web-mapping-framework/4799
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf
-    - title: "Video for day 1"
-      type: recording
-      duration: "1 hour 20 minutes"
-      link: https://www.youtube.com/watch?v=Ji3HF35Hpso&list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ&index=1
 - title: "Week 1, Day 2"
   start: 2020-09-22T12:00Z
+# video: YouTube-URL-for-day-2
   agenda:
     - title: "State of map data & server standards today"
       type: presentations
@@ -40,9 +43,11 @@
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx
             - title: pygeoapi
               author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli
+              discourse: https://discourse.wicg.io/t/pygeoapi-an-ogc-api-to-geospatial-data/4814
               link: https://pygeoapi.io/presentations/default/#/frontpage
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
+              discourse: https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx
             - title: Limitations to use of OGC services
               author: Jonathan Moules
@@ -77,6 +82,7 @@
               link: https://slides.com/zcorpan/bocoup-review-mapml/
             - title: Quad Tree Composite Tiling and the standardization of tiling; Decentralized Web Mapping
               author: Satoru Takagi
+              discourse: https://discourse.wicg.io/t/vector-tiling-on-svgmap/3135
               link: https://satakagi.github.io/mapsForWebWS2020-docs/
     - title: "Internationalization and Security"
       type: presentations
@@ -158,6 +164,8 @@
             - John Rochford
         - Moderator:
             - Amelia Bellamy-Royds
+        - Background Reading:
+            - '<a href="https://w3c.github.io/coga/issue-papers/wayfinding-indoors.html">COGA Issue Paper on Indoor Navigation / Wayfinding</a>'
     - title: "Building better map data services/formats for web use"
       type: presentations
       duration: "60 minutes"
@@ -300,6 +308,9 @@
 #         - Talks:
 #             - title: Why maps for the web
 #               author: Peter Rushforth
+#               discourse: url-of-discourse-page
+#               link: url-of-slides-or-paper
+#               linktype: link text if not slides
 #     - title: "Stakeholders: Government geospatial data providers & the web"
 #       type: panel
 #       duration: "1 hour"

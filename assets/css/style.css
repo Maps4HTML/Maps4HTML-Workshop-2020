@@ -560,11 +560,24 @@ a.footnote-ref:after {
   border-radius: 0.2rem;
 }
 
+.schedule-video-link {
+  display: inline-block;
+  padding: 0.25em;
+  border-radius: 0.2em;
+  background: white;
+  color: #005a9c;
+}
+.schedule-video-link::before {
+  content: "🎦 ";
+  font-size: 90%;
+  margin-left: -0.1em;
+}
 .schedule-time {
   display: block;
   font-weight: normal;
 }
-.schedule-time .utc {
+.schedule-time.past-event,
+.schedule-time:not(.past-event) .utc {
   display: block;
   font-size: 1rem;
   opacity: 0.8;
@@ -649,16 +662,21 @@ a.footnote-ref:after {
 }
 
 .schedule-item-details dd {
-  margin: 0 0 0 1rem;
-  border: none;
+  margin: 0 0 0.5rem;
+  border-top: none;
   padding: 0;
 }
+.schedule-item-details dd:last-child {
+  margin-bottom: 0;
+}
 
-.schedule-item-details dd .author {
-  font-size: 75%;
-  color: #888;
+.schedule-talk-info {
+  font-size: 90%;
   display: block;
   margin-bottom: .25em;
+}
+.schedule-talk-info::before {
+  content: "→ ";
 }
 
 .schedule-item-details dd + dt {
@@ -792,6 +810,9 @@ button {
 
 main a[href$=".pdf"]::after {
 	content: " (PDF)";
+}
+main a.slides-link[href$=".pdf"]::after {
+	content: none;
 }
 
 .visually-hidden {
