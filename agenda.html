@@ -71,7 +71,12 @@ layout: default
 </p>
 {% for day in site.data.agenda %}
   <h3 id="day-{{ forloop.index }}">{{ day.title }}:
-    <time class="schedule-time" datetime="{{ day.start }}">{{ day.start | date: "%Y-%m-%d %H:%M" }}UTC</time></h3>
+    {% if day.video %}
+    <a class="schedule-video-link" href="{{ day.video }}"
+      >Watch recording<span class="visually-hidden"> of {{ day.title }} sessions</span></a>
+    {% endif %}
+    <time class="schedule-time{% if day.video %} past-event{% endif %}"
+          datetime="{{ day.start }}">{{ day.start | date: "%Y-%m-%d %H:%M" }}UTC</time></h3>
   <ol class="schedule">
     {% for item in day.agenda %}
       <li class="schedule-item">
@@ -104,9 +109,12 @@ layout: default
                           {{ talk.title }}
                         {% endif %}
                         {% if talk.link %}
-                          <a href="{{ talk.link }}">(slides)</a>
+                          <a class="slides-link" href="{{ talk.link }}">({{ talk.linktype | default: "slides"}})</a>
                         {% endif %}
-                        <span class="author">{% include participant-link.html participant=talk.author %}</span>
+                        <span class="author schedule-talk-info">{% include participant-link.html participant=talk.author %}</span>
+                        {% if talk.discourse %}
+                        <span class="discussion schedule-talk-info"><a href="{{ talk.discourse }}">Join the discussion!</a></span>
+                        {% endif %}
                       </dd>
                     {% endfor %}
                   {% elsif detail_item[0] == 'Panelists' %}
