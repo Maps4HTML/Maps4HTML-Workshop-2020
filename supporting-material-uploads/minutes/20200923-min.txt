@@ -1,0 +1,351 @@
+11:37 <AmeliaBR> @dmorissette @tguild is doing the uploads & he warned that he had a busy day yesterday, so it might not go up until later today. But yes, we are planning on posting them all!
+11:38 <IvanSanchez_gitlab> > Leaflet allows you to place any element in a grid, but I imagine getting all those videos synched up would be a challenge.
+11:38 <IvanSanchez_gitlab> 
+11:38 <IvanSanchez_gitlab> I don't think it's a big deal, assuming all videos have the same length and are seekable. Keep a timer (a variable holding `performance.now()`) at the load of the first tile, then for every other tiles set the position of the video with `.fastSeek()`when they are loaded. Possibly listen to the video's `stalled` and `seeking` events to keep things in sync. But it doesn't sound too hard.
+11:38 <tguild> I edited the video this morning, trimming some noise at the start, aligned the captions and uploaded to youtube. it is supposedly processing post upload but showing %0 complete
+11:38 <IvanSanchez_gitlab> I did some experiments with animated `.gif` tiles way back in the past, though. It was glittery fun.
+11:38 <tguild> assuming ui just not refreshing, if it doesn't clear i'll upload again
+11:39 <tguild> @IvanSanchez_gitlab you also utilize the <blink> tag? 
+11:39 <tguild> :)
+11:41 <IvanSanchez_gitlab> [![imagen.png](https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/thumb/imagen.png)](https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/imagen.png)
+11:41 <IvanSanchez_gitlab> @tguild You bet :-D 
+11:42 <IvanSanchez_gitlab> So my stance on animated maps is: encode the data in whatever format you want, then go full-on crazy with WebGL for the data display
+11:42 <IvanSanchez_gitlab> sync-wise, it's much easier to have a WebGL `uniform` around, that applies to all tiles at the exact same time
+11:43 <IvanSanchez_gitlab> Plus, I think the Right Way™ to do temporal data is multisample GeoTIFFs
+11:43 <IvanSanchez_gitlab> Ah, explanation of teh glittermap https://ivan.sanchezortega.es:444/devel/2019/01/19/teh-glittermap.html
+11:44 <IvanSanchez_gitlab> ...and teh glittermap itself https://ivan.sanchezortega.es:444/glittermap/
+11:46 <IvanSanchez_gitlab> And since I'm going off-topic already, may I ask everyone to read the MDN compatibility report that has been published today at https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Browser-Compatibility-Report-2020.pdf (seen at https://twitter.com/foolip/status/1308423009011732480 )
+12:02 <prushforth> https://www.w3.org/Consortium/cepc/
+12:05 <AmeliaBR> scribenick: AmeliaBR
+12:05 <AmeliaBR> The link to Brian's slides live: https://slides.com/briankardell/ewm-maps-and-pie/live
+12:13 <fredesch> Seems like Brian is talking about React...
+12:19 <IvanSanchez_gitlab> Nononono don't put SVG on GL, read my rant on `<tml>` first
+12:20 <zcorpan> Agree, great presentation @briankardell_twitter  :)
+12:22 <AmeliaBR> I don't think he meant to suggest React components, but rather standard web components! (but if we can make React components easier to make user friendly, too, that wouldn't be bad…)
+12:25 <briankardell_twitter> > Seems like Brian is talking about React...
+12:25 <briankardell_twitter> 
+12:25 <briankardell_twitter> how so?
+12:25 <briankardell_twitter> Thanks @zcorpan 
+12:26 <briankardell_twitter> I like that it works for other planets :)
+12:26 <AmeliaBR> From the Zoom chat, when Brian was talking about other use cases for map viewer behavior:
+12:26 <AmeliaBR> From Badita Florin to Everyone:  10:19 AM
+12:26 <AmeliaBR> And group maps, for class/school/ teams, Collaborative group maps
+12:26 <AmeliaBR> 
+12:30 <SebastienDurand> I would say even that min and max zoom is also critical at the layer level
+12:31 <AmeliaBR> Are you suggesting that the layer should automatically disappear if the map zooms in/out beyond the zoom range for the layer?
+12:31 <SebastienDurand> yes in some case this is critical to protect the data integrity and user experience
+12:31 <AmeliaBR> (because yes, that's a very good use case, and an intuitive way to describe it!)
+12:31 <briankardell_twitter> I guess it is possible that not all layers can even show all tiles
+12:32 <baditaflorin> Thanks @AmeliaBR for posting the suggestion I have written on Zoom. To see one use-case, this is what I did at the university where I was, so that students can call persons when they are in other parts of the city if they want to meet with a fellow student at home or where they work https://umap.openstreetmap.fr/en/map/locatie-studenti-cros_12736#13/44.4264/26.1084
+12:33 <thehabes> A unified coordinate reference system...that is quite the battle
+12:33 <SebastienDurand> For example legal boundaries depicted a special precision should not be seen passed a specific scale because they position on the basemap would become innaccurate
+12:33 <IvanSanchez_gitlab> Re: tile zoom, See the Leaflet concep of  `max`/`minZoom` vs  `max`/`minNativeZoom` https://leafletjs.com/reference-1.7.1.html#gridlayer-minzoom
+12:33 <IvanSanchez_gitlab> One is the zoom levels that the thing is visible at, the other is the levels of the tile pyramid with available data
+12:33 <SebastienDurand> [edit] For example legal boundaries have a precision to them and should not be seen passed a specific scale because their position on the basemap would become inaccurate
+12:35 <SebastienDurand> I am aware of these capacities in leaflet. I was just stating a behavioral requirement for map on and associated data representation in HTML. I am a big fan on leaflet at this point in time.
+12:36 <kgeographer> Are layer sources limited to tiles?
+12:36 <briankardell_twitter> thanks peter, nice presentation on the idea
+12:36 <briankardell_twitter> @prushforth ^
+12:37 <prushforth> Thanks @briankardell_twitter you too, great talk. Gives us a dose of reality.  Break it down, and build community to help
+12:39 <prushforth> @kgeographer no I will describe more in my breakout tomorrow. but no.
+12:39 <fredesch> Has anyone made a MapML react component?
+12:40 <prushforth> Yes MicroXML was what we thought was the right idea at the time, but realize that HTML parser rules.  We can , and will switch  asap.
+12:41 <prushforth> We would like to make TCRS into the concrete proposal that CSS WG seeks.
+12:41 <briankardell_twitter> yay :)
+12:42 <prushforth> @fredesch  no I don't know React but would like to see how that would work.
+12:42 <shepazu> Zoom and pan for CSS would be great for SVG, as well
+12:43 <prushforth> We can build a coalition of needs with the SVG community
+12:43 <briankardell_twitter> so many use cases for this, in so many diverse cases - lots of common and complex solutions over and over
+12:44 <fredesch> @prushforth  I do react components, ping me later about this,
+12:44 <briankardell_twitter> :clap:  @zcorpan  nice assessment
+12:44 <thehabes> Very cool to see a live time review!
+12:44 <baditaflorin> bit.ly/bocoup-testbed16 
+12:44 <prushforth> @zcorpan great presentation thanks for your help with this, looking forward to more work together.
+12:44 <zcorpan> Thanks @prushforth !
+12:45 <briankardell_twitter> It would be great if the people from mapping libraries were inovled in those discussion about a proposal for pan/zoom and how this could reduce their complexity
+12:45 <zcorpan> Link to my slides https://slides.com/zcorpan/bocoup-review-mapml/
+12:45 <satakagi> https://satakagi.github.io/mapsForWebWS2020-docs/De-centralizedWebMapping.html
+12:45 <satakagi> 
+12:45 <satakagi> https://satakagi.github.io/mapsForWebWS2020-docs/QuadTreeCompositeTilingAndVectorTileStandard.html
+12:45 <satakagi> 
+12:46 <satakagi> Since my English is not good, I have prepared two short papers instead of a presentation. I would like you to read them in the time allocated to my presentation. I'll put the links on gitter.
+12:46 <satakagi> 
+12:47 <satakagi> And, below is my position statement. I think you can understand the background of my papers.
+12:47 <satakagi> https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Satoru_Takagi-KDDI.pdf
+12:47 <satakagi> 
+12:47 <briankardell_twitter> @zcorpan we should talk later - are you talking to nicole sullivan about this at all?
+12:48 <zcorpan> @briankardell_twitter happy to chat. I haven't discussed with Nicole
+12:48 <satakagi> I am grateful to Peter for explaining on my behalf.
+12:48 <briankardell_twitter> @zcorpan let me know whevener you want to talk!
+12:51 <IvanSanchez_gitlab> @satakagi I think there's a lot of overlap between your tiling proposal and Cesium 3d Tiles (https://cesium.com/blog/2015/08/10/introducing-3d-tiles/)  - have you look at that?
+12:52 <SebastienDurand> There is obviously a lot of work done already on MapML. I am wondering what are the real road blocks to see MapML extent HTML code base and been adopted by Browsers. How can this community officialise these requirements and seek  international adoption. Has this work ever been presented to the United Nation GGIM?
+12:53 <satakagi> @IvanSanchez_gitlab 
+12:53 <satakagi> Yes, I have only skimmed through it yet, but I see it as a rather close design.
+12:53 <satakagi> 
+12:53 <briankardell_twitter> @SebastienDurand I think that @zcorpan's document is a good start on the challenges
+12:54 <zcorpan> 👉 https://bit.ly/bocoup-testbed16
+12:55 <prushforth> @SebastienDurand @briankardell_twitter @zcorpan I take all this feedback very seriously, and we are looking for contributors to help us increase the velocity.  Contributions can come in many forms.  Igalia and Bocoup need "pie" to help us move forward.
+12:57 <satakagi> @zcorpan 
+12:57 <satakagi> http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/
+12:59 <briankardell_twitter> @satakagi would  hardware accelerated svgs be helpful here ^
+13:00 <satakagi> @briankardell_twitter 
+13:00 <satakagi> I think so, and there are cases where SVG can outperform WebGL.
+13:00 <briankardell_twitter> igalia is working on adding this in webkit ^  https://www.igalia.com/chats/Igalia-Chats-Niko-SVG-WPE if you want to hear more
+13:01 <satakagi> [edit] @briankardell_twitter 
+13:01 <satakagi> [edit] I think so, and there are cases where SVG can outperform WebGL.
+13:01 <satakagi> [edit] Since it is possible to implement a renderer that is optimized at the level of a more optimized webGPU.
+13:03 <thehabes> Oh man I hate when my map shows random windings because someone didn't get UTF-8 (or 16) right.
+13:06 <fredesch> lang attribute?
+13:07 <AmeliaBR> Fred, my thought too — that's definitely the HTML way to do that, but I guess the issue is that it's not always included in the geospatial data formats.
+13:07 <AmeliaBR> And there we go…
+13:08 <thehabes> We see that same need in JSON data
+13:08 <fredesch> Most maps use a single language on a map
+13:08 <thehabes> Especially for things like `label`
+13:09 <shepazu> Any questions?
+13:09 <thehabes> How could we support the same label, but multiple language, and offer choice?
+13:09 <fredesch> An odd use case is European towns that have different names in different languages - like the village has a Czech name and a German language
+13:10 <thehabes> Fred gets it
+13:10 <satakagi> There is a trend around me to stop creating multi-lingual pages these days because of the advances in automatic browser translation capabilities.
+13:10 <SebastienDurand> the standard on locales can support a text string that define more then one language (if I am not wrong and also define default language...)
+13:10 <briankardell_twitter> seems like you would use Intl for that in canvas, no?
+13:10 <thehabes> @satakagi it is interesting how much that has helped these kinds of pipelines
+13:11 <briankardell_twitter> ecma 402 has a lot of investment
+13:11 <shepazu> (Fred, that's an exonym and endonym, FYI)
+13:12 <AmeliaBR> This isn't an Intl thing, @briankardell_twitter , because it's not about the output character string, it's about the glyphs that are selected from the font.
+13:13 <briankardell_twitter> I see
+13:13 <briankardell_twitter> the web vtt stuff is something that needs pie :)
+13:13 <AmeliaBR> So, the main message I'm getting is the Firefox is best for locale-aware CJK text rendering
+13:14 <AmeliaBR> :cake: :pizza: (no pie emoji)
+13:14 <briankardell_twitter> "This needs pizza" doesn't have the same ring to it, but sure, that works
+13:14 <prushforth> @bdon_gitlab great and informative presentation!!! Eye opening for me
+13:14 <thehabes> Yes, the user mainly, but the developer may want to pick different primary language for different scenarios to show by default
+13:15 <thehabes> Yep, like @bdon_gitlab is saying, its a bit for the user, a bit for the developer, a bit for the machine
+13:18 <SebastienDurand> Having a solution to this multi-language situation would be invaluable for Canada and Belgium or any other countries or organisations who has to makes products in different languages. E.g.: to answer for COVID-19 in Canada if 10 web map had to be created that equated to 20... because of the language (EN and FR) effort and resources are limited. In this time an age one would expect a single should be produce
+13:18 <SebastienDurand> and text should simply adapt to the user requirements.
+13:18 <SebastienDurand> [edit] Having a solution to this multi-language situation would be invaluable for Canada and Belgium or any other countries or organisations who has to makes products in different languages. E.g.: to answer for COVID-19 in Canada if 10 web map had to be created that equated to 20... because of the language (EN and FR) effort and resources are limited. In this time an age one would expect a single solution
+13:18 <SebastienDurand> should be produce and text should simply adapt to the user requirements.
+13:20 <prushforth> Indigenous languages also need to be supported in Canadian maps
+13:21 <prushforth> @thijsbrentjens private mode map browsing is a vital necessity for a public Web imho
+13:22 <briankardell_twitter> sorry for stepping on you there @shepazu  
+13:22 <SebastienDurand> There was a lot of application that was created under COVID and canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+13:23 <SebastienDurand> [edit] There was a lot of application that was created under COVID in canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+13:23 <SebastienDurand> [edit] There was a lot of applications that was created under COVID in canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+13:24 <shepazu> Any questions for Thijs?
+13:25 <SebastienDurand> What is the path he recommends to see this done? Should there be an OGC geolocation privacy/fuzzy api?
+13:25 <prushforth> @thijsbrentjens A "user" agent should provide a private map browsing mode!
+13:25 <thehabes> I like how this lives in the realm of computer ethics too.  Fuzzy location to alleviate some ethical concerns.
+13:26 <SebastienDurand> [edit] What is the path @thjsbrentjens recommends to see this done? Should there be an OGC geolocation privacy/fuzzy api?
+13:26 <briankardell_twitter> are we adding a queue to ask questions or just typing them
+13:27 <prushforth> Type them here or to Doug
+13:27 <prushforth> I will copy pasta
+13:29 <briankardell_twitter> it feels like this could be more easily specified for a larger element than at another level? The UA can moderate the delta between granularity 
+13:34 <thehabes> How is the OGC API going to handle complicated Feature sets?  Representing arrays as strings in attribute has a lot of pit falls.  
+13:35 <thehabes> OGC API/MapML pipeline, not just the API, sry
+13:36 <fredesch> How will you get browser manufactures to implement a map element?
+13:36 <prushforth> Build community, break the problem down, provide practical proposals based on "cow paths", common sense.
+13:37 <briankardell_twitter> can someone paste the questions here? 
+13:37 <briankardell_twitter> I keep missing the beginning of them and I odnt seen them written somewherE?
+13:37 <prushforth> I will try to move them both directions
+13:38 <briankardell_twitter> where is the "other direction" peter?
+13:38 <fredesch> What browser preferences should be supported - for example a user does not want to use their bandwidth on a map on a page.
+13:38 <fredesch> ?
+13:38 <prushforth> I thought you mean the zoom chat, but these questions are in an email. I will cut and paste
+13:38 <briankardell_twitter> I see
+13:39 <prushforth> 1) OGC and W3C have Spatial Data on the Web best practices and OGC is very actively working on new API specifications, that could facilitate better publication (and easier use) of geospatial data. But how do you think we could get this in practice in active projects?
+13:39 <prushforth> 2) There are many localization features of maps that would benefit from browser support. Some examples are:
+13:39 <prushforth> - the ability to produce place names in a writing system the user can read
+13:39 <prushforth> - designing or authoring a multi-lingual map based on the locale
+13:39 <prushforth> - handle dynamic formatting of numeric or time related data
+13:39 <prushforth> - other interesting cartographic practices from around the world aren't yet widespread in digital mapmaking, like vertical text What should web browsers and web standards do to provide solutions?
+13:39 <prushforth> 
+13:39 <prushforth> 3) What are the challenges for security and privacy for personal geospatial data in an international context)?
+13:39 <prushforth> 4) Web Mercator is a "de facto" standard for the web, but has well documented flaws: for example, Pacific-centered mapmaking. What's the right balance for web standards in making these choices for users and developers?
+13:40 <prushforth> 5) Bonus question: W3C is a leader in accessibility (e.g. WCAG), and accessibility is now demanded by law in several countries. But it's difficult (or not seriously tried) to apply these guidelines for mapping and geopspatial data. (Note that we have 2 panels planned later in this workshop on accessibility.) What can we do to make this easier?
+13:40 <prushforth> That is all
+13:40 <prushforth> Over to you to add to them
+13:41 <AmeliaBR> I know that the language tag system allows a script modifier, I don't know if it's possible to say "any other language with this script", though…
+13:43 <prushforth> How are context menus handled internationally?
+13:47 <satakagi> -> 4)
+13:47 <satakagi> Even if it's a tiling system, I think there needs to be a system that can be defined freely using javascript.
+13:48 <satakagi> [edit] -> 4)
+13:48 <satakagi> [edit] Even if it's a tiling system, I think there needs to be a system that can be defined freely using javascript. As described in my second paper.
+13:48 <AmeliaBR> Fred's question was good, if we have the time: in the global challenge, how do data costs & performance get factored in?
+13:49 <prushforth> Also svgmap uses js to address the projection issue, making it the most flexible
+13:51 <satakagi> Yes, with js, you are free to define and use almost any projection method yourself.
+13:51 <satakagi> I'm in the process of implementing that feature in SVGMap.js.
+13:51 <SebastienDurand> the use of the right projection is an administrative and political requirement for Canada. The Arctic situation cannot be represented well with web mercator
+13:51 <thegsi> With print maps projection changes based on use case.
+13:51 <fredesch> Using other projects is painful - most projections require central meridian or parallel or two and when you change the reference shapes change
+13:53 <briankardell_twitter> 6) Just a really general question: Aside from  the CG custom element - are people aware of other attempts at element-ifying things with custom elements?  Do any of the major map libraries have them?  I see not especially helpful httparchive data on it that might shed light on other experiments around this.  I see some other markup-oriented things like xaml have a map element - any thoughts
+13:53 <briankardell_twitter> on/experience with that.. It's not the web platform but it's got some similarities at least
+13:54 <satakagi> The geolocation API is fixed to WGS84.
+13:54 <fredesch> what about haptic maps synced with a screen reader
+13:55 <prushforth> > what about haptic maps synced with a screen reader
+13:55 <prushforth> great idea
+13:55 <briankardell_twitter> how is the accessibility on the native controls or xaml like ones that exist(ed)?
+14:03 <AmeliaBR> Gethin Rees is now leading the breakout on Extending GeoJSON. The speakers are coming from the side of cultural heritage presentation (museums etc.). They're talking about some extensions they've been developing in that community. Although they don't need to be standardized in something like MapML, but they want feedback from the broader community.
+14:04 <AmeliaBR> This is a breakout session, so the presentations will be short, than we'll open it up for questions & discussion.
+14:05 <AmeliaBR> Bryan Haberberger will be talking about expressing GeoJSON as JSON-LD/
+14:06 <AmeliaBR> LD (linked data) allows semantics of data to be cross-linked, so that well-encoded data from different sources can be integrated.
+14:07 <AmeliaBR> Rather than talking about the GeoJSON-LD spec itself (it's a W3C spec, recently updated), but rather about the semantic vocabulary created for it.
+14:08 <AmeliaBR> One issue: Nested GeoJSON coordinate arrays are not compatible with the JSON-LD model. So it cannot process polygon model — which is a massive problem.
+14:08 <AmeliaBR> (Bryan demonstrates by copying some GeoJSON into a JSON-LD validator.)
+14:09 <AmeliaBR> And this is why… the JSON-LD 1.1 spec now explicitly supports lists of lists! (new validator works!)
+14:10 <AmeliaBR> The key addition for GeoJSON-LD is the addition of these URLs to the semantic definitions — so it's clear that “geometry” refers to the GeoJSON definition of geometry.
+14:10 <baditaflorin>  in the future we will need to be able to have a standard that would allow for smaller GeoJSON files, by not repeating the long variables or something different.
+14:10 <baditaflorin> I`m now working with some GeoJSON files that load over the internet and that have over 50.000k data points and this becomes a bottleneck. 
+14:10 <baditaflorin> 
+14:11 <AmeliaBR> Another W3C specification that's related is Web Annotations. I need to be able to add descriptive material to content that's owned on another web server.
+14:11 <baditaflorin> ```So maybe instead of this:
+14:11 <baditaflorin> {
+14:11 <baditaflorin>        "type": "FeatureCollection",
+14:11 <baditaflorin>        "features": [{
+14:11 <baditaflorin>            "type": "Feature",
+14:11 <baditaflorin>            "geometry": {
+14:11 <baditaflorin>                "type": "Point",
+14:11 <baditaflorin>                "coordinates": [102.0, 0.5]
+14:11 <baditaflorin>            },
+14:11 <baditaflorin>            "properties": {
+14:11 <baditaflorin>                "prop0": "value0"
+14:11 <baditaflorin>            }
+14:11 <baditaflorin>        }, {
+14:11 <baditaflorin>            "type": "Feature",
+14:11 <baditaflorin>            "geometry": {
+14:11 <baditaflorin>                "type": "LineString",
+14:11 <baditaflorin>                "coordinates": [
+14:11 <baditaflorin>                    [102.0, 0.0],
+14:11 <baditaflorin>                    [103.0, 1.0],
+14:11 <baditaflorin>                    [104.0, 0.0],
+14:11 <baditaflorin>                    [105.0, 1.0]
+14:11 <baditaflorin>                ]
+14:11 <baditaflorin>            }
+14:11 <baditaflorin> }
+14:11 <baditaflorin> We could keep just the first char or 2 characters, having a standard that would allow programmers to take in consideration either the expanded query or the abbreviated version.  
+14:11 <baditaflorin> {
+14:11 <baditaflorin>        "t": "FC",
+14:11 <baditaflorin>        "fs": [{
+14:11 <baditaflorin>            "t": "F",
+14:11 <baditaflorin>            "g": {
+14:11 <baditaflorin>                "t": "P",
+14:11 <baditaflorin>                "c": [102.0, 0.5]
+14:11 <baditaflorin>            },
+14:11 <baditaflorin>            "p": {
+14:11 <baditaflorin>                "prop0": "value0"
+14:11 <baditaflorin>            }
+14:11 <baditaflorin>        }, {
+14:11 <baditaflorin>            "t": "F",
+14:11 <baditaflorin>            "g": {
+14:11 <baditaflorin>                "t": "LS",
+14:11 <baditaflorin>                "c": [
+14:11 <baditaflorin>                    [102.0, 0.0],
+14:11 <baditaflorin>                    [103.0, 1.0],
+14:11 <baditaflorin>                    [104.0, 0.0],
+14:11 <baditaflorin>                    [105.0, 1.0]
+14:11 <baditaflorin>                ]
+14:11 <baditaflorin>            }
+14:11 <baditaflorin> }```
+14:11 <AmeliaBR> @AmeliaBR aside, if you're not W3C folks, this is me minuting since we don't have captioning anymore
+14:12 <shepazu> I love that he's bringing another one of my babies into this, Web Annotation :)
+14:12 <prushforth> :thumbsup: 
+14:12 <prushforth> And maps what's not to like
+14:12 <AmeliaBR> Bryan: [loads up an HTML data record from a Stanford portal] And now I can load up the JSON for this. And using that data, bringing it into my map, I can see that it is somewhere in California.
+14:14 <AmeliaBR> And since this was already JSON-LD 1.1, I can easily connect everything up. I can link up the coordinate data in the JSON, and it automatically pulls out the labels for it. If they update it later, I will get the update. I didn't need to modify their data.
+14:15 <AmeliaBR> (more examples)
+14:16 <AmeliaBR> As we disccused earlier, with internationalization we often need multiple labels for different languages. So we need to extend the web annotations concept, and no the labels are an array of different values. The IIIF API uses it's own annotations, but within that list they are all standard web annotations.
+14:17 <AmeliaBR> The IIIF group is trying to finalize this specification and get it into an organization where it can be maintained.
+14:17 <AmeliaBR> The next speaker, Carl, will talk about how to extend this model to additional dimensions of data.
+14:18 <thehabes> Feel free to use the demo yourself...http://geo.rerum.io
+14:18 <AmeliaBR> Gethin: Thanks Bryan. Great explanation of how we can make different annotations or predicates of geo features: it is within, it is beyond something else.
+14:19 <AmeliaBR> Karl Grossner will be speaking about GeoJSON-T, something we're using at the British Library.
+14:19 <thehabes> We were hoping to have heard the presentation @prushforth is giving tomorrow on MapML.  Darn the chronology
+14:20 <AmeliaBR> Karl: I'll say that before this session, I wasn't aware of MapML as an extension to HTML; I'm still not entirely clear how it handles vector data. I come from the background of using HTML and JS for web maps.
+14:20 <AmeliaBR> GeoJSON is a standard in the admittedly messy world of getting maps into web screens.
+14:21 <AmeliaBR> GeoJSON consists of feature collections, which consist of features, which have geometry. 
+14:22 <AmeliaBR> Some issues I encounter working on historical applications: time is an absolutely essential aspect. It's not just where something is, but when. This demo shows the borders of Poland, it changes over time, and disappeared for a while.
+14:22 <thehabes> And quite often people believe geospatial involves time.  Geospatial solutions, specifically, only focus on place.  Spatiotemporal is a whole different thing.
+14:23 <AmeliaBR> Karl: This example shows port connections from Venice, this one is a trajectory of a journey taken sometime during the 4th century. The temporal attributes are relevant both overall, and as a way of establishing the sequence.
+14:23 <AmeliaBR> All these cases aren't included in GeoJSON in any standard way. People make do, using the <properties> element, and then they figure it out in the browser.
+14:24 <AmeliaBR> My proposal is to include a standardized "when" attribute. It could be part of a feature, or it could be part of the geometry, making the geometry into a geometry collection of different values.
+14:24 <prushforth> @kgeographer great use cases of maps.  We need to "look through" the use case to what "should" (or even could, and how) be handled by the browser, vs what "should" be handled by the Web site/ script developer.  I think the Leaflet plugin model gives us a good architecture to emulate, actually.
+14:25 <AmeliaBR> The idea is that there will be some standard structure for the "when" element, wherever it appears within GeoJSON, so that software knows what to do with it.
+14:25 <thehabes> http://kgeographer.org/
+14:25 <AmeliaBR> Karl: A When object could include timespans, or periods, durations, with more options for sequences and so on.
+14:27 <AmeliaBR> This last slide isn't in the slide deck. Gethin's group at the British Library has been working on this WebMaps-T interface. It is intended to work towards a set of modules that web map developers can just plug in to work with it.
+14:28 <AmeliaBR> Karl: I mostly just want to raise the idea that time matters, and to learn about the efforts you're creating.
+14:28 <shepazu> Great presentations
+14:28 <satakagi> As for time, I see a lot of complexity in my practical experience.
+14:28 <satakagi> Weather forecast data, for example, published at time A, weather forecasts for time B.
+14:29 <shepazu> @kgeographer, I hadn't thought about time in maps, but it's obvious that it needs be built in
+14:29 <AmeliaBR> Amelia: Just to jump in on the question of the MapML model, for vector's it's designed to be as compatible as possible with GeoJSON, just converted to markup.
+14:31 <AmeliaBR> Peter: Yes, and I'll be mentioning a bit about the time issue when I do my break-out on MapML tomorrow. Amelia has also been capturing these sorts of requests in the use cases & requirements document. But of course, as Bryan and Simon discussed, we also have this push to keep things to the minimum viable proposal.
+14:31 <AmeliaBR> Bryan: That's good to know. For me, the question is: if all I have is the features, how do I convert that to a MapML map?
+14:32 <AmeliaBR> Peter: Well, we do have a <feature> element, based on GeoJSON, so the idea is to make those features and give them a place in HTML. I'll talk more on that tomorrow.
+14:32 <AmeliaBR> Karl: I mean, one way or another, all this stuff ends up in the DOM, when we're drawing them with Leaflet or something.
+14:33 <AmeliaBR> Peter: But the goal is to make them recognizable by search crawlers or such.
+14:33 <AmeliaBR> Bryan: So we want all this linked data to also get included, for the semantic structure.
+14:34 <AmeliaBR> Karl: One point on that, GeoJSON-T is not currently LD compatible. I hope that we can one day get that integrated, so it is GeoJSON-LD-T.
+14:35 <AmeliaBR> Bryan: And that could be done, just be defining this new "when" element, and what the structure inside it should be. And then eventually get that approved as a formal extension to the standard.
+14:35 <AmeliaBR> Karl: I think that's a way out. I haven't had a lot of response from that group yet, but I want more feedback from the people who would use this, so they can help me develop it to meet their needs.
+14:36 <AmeliaBR> Bryan: And as the chair of the IIIF TF, I can take that as an action, bring it to the group. We may be a year out from considering time ourselves, but if someone is already working on it, we can start from that.
+14:37 <thehabes> "events"...https://www.w3.org/TR/activitystreams-core/
+14:37 <AmeliaBR> Karl: And I take Peter's comment on the MVP seriously, we need to think about what needs to happen first. But I think that this big task of merging space and time has been somewhat ignored, in the standardization process.
+14:37 <briankardell_twitter> ah hmm, I thought we were done - was there more?
+14:38 <AmeliaBR> Doug: On the topic of MVP, the key part is “viable”. To be viable, it must be extensible to adding new features. Which means that in the intial discovery phase, we need to know what's out there that we don't want to exclude.
+14:38 <AmeliaBR> @AmeliaBR brian, this is breakout discussion on GeoJSON
+14:38 <theduckylittle> There also needs the ability to `src=` any featuresets
+14:38 <thehabes> "stories" : https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps
+14:38 <AmeliaBR> Peter: I think of this a lot from the terms of progressive enhancement.
+14:39 <theduckylittle> `<featureset src=... />` because flooding any of the DOM parsers with 100+ `<feature />` tags is going to be painful.
+14:39 <theduckylittle> And a relatively "simple" dataset like gas-stations in a large city will hit that size very quickly.
+14:40 <theduckylittle> ack, s/featureset/featurecollection/ ... to keep it in GeoJSON terms
+14:40 <AmeliaBR> Doug: There are 2 ways, in the HTML context, that time is dealt with. Timed media, like video, and then animation. If Karl's data from Poland, you could use CSS of SVG to tween between the different geographic boundaries. What are the native animation capabilities of the web, and how does that feed into the geometric expression of the data?
+14:41 <AmeliaBR> Doug: I'd love to see animations of these changes, and other historical trends. Animations of trade routes — animations of slave routes, I saw one recently that was really compelling, where the movement started & ended up, until it eventually trailed off. That was really powerful.
+14:42 <AmeliaBR> Doug: Other things, maps of business, not only where but when are they open or closed. E.g., Brandon's map of 80s NYC. I don't think we can represent geospatial information unless it's also temporal.
+14:43 <AmeliaBR> Karl: That's the money line. All the cases you've talked about are quite routinely done within academic applications today, but each time is with a custom or proprietary extension. Since we're trying to move towards a linked data world, it needs to be standardized.
+14:44 <prushforth> @theduckylittle  In "MapML" (that is, map-specific content proposal in html), we have proposed <layer src="..."> which would include *any* map content into the layer context, including <feature> elements.  We don't want to get carried away and bury the DOM, but we think features have value for many reasons.  I will try to explain tomorrow.
+14:44 <AmeliaBR> Karl: I don't know much about stores and such, I'm coming more from the historical perspective, but I do know that there is a W3C group that is working on it.
+14:44 <AmeliaBR> Doug: Agreed, may main point is that we should also be looking at how existing web standards represent time, e.g., CSS animations, and make sure that the data will be compatible with that.
+14:46 <AmeliaBR> Gethin: When we get academics together, we always talk about these edge cases. E.g., a building that gets moved. So I hope that's something that this community can bring to the discussion and the use cases.
+14:46 <theduckylittle> @prushforth - Cool, I'll try to dial in and pay closer attention tomorrow. Busy busy week at work. But I think just as Javascript code is "discoverable" but not necessarily in the DOM, there could be space for bringing in GeoJSON similarly.
+14:47 <AmeliaBR> Amelia: What happens next? Beside the new collaboration with GeoJSON-LD and GeoJSON-T.
+14:48 <AmeliaBR> Bryan: My next task is to get GeoJSON-LD standardized in the next version, even if that means making things more restrictive.
+14:49 <AmeliaBR> Bryan: Also want to work with other map types. Right now, lots of maps are really just pictures of maps. They need coordinates, for geo-rectification to connect them & allow them to work together. And then of course someone like Karl comes in with the time dimension, and we hadn't thought of that.
+14:49 <AmeliaBR> Doug: Web annotations does consider time; annotations can be time stamped.
+14:49 <AmeliaBR> Bryan: But not images.
+14:50 <AmeliaBR> Peter: This is one thing with MapML, you can use an image, but then also add the extra information to geo-rectify it.
+14:50 <AmeliaBR> Gethin: If people don't have further questions…
+14:51 <AmeliaBR> Peter: What about layers? I think that's a fundamental primative of maps. What do you all think of “what is a primative feature of maps?” In my world, layers are everywhere. As Ivan Sanchez says, everything is a layer.
+14:52 <AmeliaBR> Bryan: And we can talk about layers as both transcription and translation. We don't use layers explicitly in IIIF, but we have these groups of annotations and features.
+14:53 <AmeliaBR> Peter: it would be great to get links to that explanation.
+14:53 <AmeliaBR> Amelia: I've got the notes in the chat, which we can copy over to Discourse, so this definitely doesn't have to be the end of the conversation.
+14:55 <AmeliaBR> Karl: That's good. You talked about next steps, and one thing we've had difficulty so far is how to get these extensions standardized. The GeoJSON spec allows extra data, but emphasizes that it should generally just be ignored. I'd like to get this actually standardized. Maybe through GeoJSON-LD, but so far that is fully standardized, either. I'll keep working with Gethin, to try to move forward with the models they need
+14:55 <AmeliaBR> for their work.
+14:56 <AmeliaBR> Bryan: And if he's working with communities like us, even in an incomplete stage, we can definitely help get that into a form which can one day be standardized.
+14:56 <AmeliaBR> Karl: And the IIIF community is good for that. In the meantime, I'm writing software.
+14:56 <AmeliaBR> Doug: and that's a good thing. Gives us the cowpaths to pave later.
+14:57 <AmeliaBR> Karl: The example from my last slide, the web gazetteer is part of that. It's got when wherever it.
+14:57 <AmeliaBR> Peter: what do you do for scale? GeoJSON doesn't have a concept of zoom built in.
+14:58 <AmeliaBR> Karl: I use all sorts of different tools. It's a bit of spaghetti. The whole idea of sharing, that the LD universe proposes, is really what I'm interested in. It almost compells standardized models and ontologies.
+14:59 <AmeliaBR> Bryan: The big next thing I'd like to see is a banner "Geospatial ≠ spatial-temporal” they're so connected, people just assume. But just because software can do one, doesn't mean it can do the other. Machines don't like abstractions, it needs to be in the data.
+15:00 <AmeliaBR> Karl: And we haven't even mentioned fuzzy time and uncertainty and so on.
+15:00 <AmeliaBR> Bryan: there was discussion in gitter about building maps as static pages, but of course you can't do that for continuous movement unless you have another page for every second.
+15:01 <AmeliaBR> Doug: One final comment: Someone mentioned that they weren't sure how things related to MapML. I wanted to emphasize that this isn't a MapML conference. It's a Maps for the Web workshop, and that includes all sorts of aspects. So everyone's contributions within that are welcome and needed.
+15:03 <AmeliaBR> Peter: Yes,  on that: the point of this workshop, which we should have had long ago, is to really make connections & identify what is important for people working on communicating maps on the web. So temporal data is clearly part of that. We've been working on MapML and the Maps4HTML CG for years now, and over time I've become more convinced that time is relevant.
+15:05 <AmeliaBR> Badita Florin: On that, I'm really glad this workshop is happening. I've been working on maps in many ways, but I hope for the one day when Leaflet and all those tools aren't necessary. And there are other limitations. Like when I'm working with large data sets, the DOM can't really handle that, so we need a better way to deal with that. And although Leaflet has got better, I worry that many contributors are now at MapBox &
+15:05 <AmeliaBR> maybe are more focused on improving MapBox vs Leaflet. So I really think it's important to have a standardized solution.
+15:06 <AmeliaBR> Peter: I definitely agree with that. I really don't think we
+15:07 <AmeliaBR> ... will ever have a solution for 15 thousand points in the browser, there will need to be strategies for that.
+15:07 <AmeliaBR> **** OK, we're wrapping up the Extending GeoJSON session ***
+15:08 <AmeliaBR> Sorry for somewhat drowning the chat, my task for the rest of the day & tomorrow will be going through the gitter logs & pulling out all the comments to copy over to the Discourse pages, so they're easier to find later.
+15:08 <kgeographer> Thanks for these notes, Amelia - very helpful
+15:09 <AmeliaBR> 👍🏽
+15:11 <baditaflorin> Btw, if you have any solutions of what would be the best approach for creating a collaborative map? What technical stack do you recommend? Allow loading data from geojson/DB but also allow auth/non-auth users to add points/lines on the map. I did not find a open github repo addressing this and I`m interested in starting to tackle this. 
+15:15 <thehabes> @baditaflorin  So for us, we let people register with our RERUM annotation store.  Our API and DB encourages Linked Open Data.  At a simple level, everyone can see one LOD Map and all provide separate assertions syncronously, and see them all in one place.  Versioning allows for edits without overwrites, as well as conflicts, which is good for discussion and collaboration
+15:16 <thehabes> Our institution chose the IIIF framework to accomplish this pipeline, and many other cultural hertitage institutions have jumped on board.  https://iiif.io/community/
+15:18 <thehabes> A collaborative map and the data used to supplement it better be interoperable if you want collaboration...that's the part you need to figure out.
+15:19 <thehabes> RERUM : http://rerum.io
+17:55 <thehabes> Multilingual Label Handling : https://iiif.io/api/presentation/3.0/#label
+17:55 <thehabes> Metadata Handling: https://iiif.io/api/presentation/3.0/#metadata
+17:55 <thehabes> 
+17:55 <thehabes> Just thought you might find that interesting since it came up a couple times today.  Internationalization always means complexity.  We can't just have strings anymore :(
+17:55 <thehabes> 

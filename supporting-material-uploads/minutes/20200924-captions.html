@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Captions from W3C/OGC Maps for the Web workshop -- 24 Sep 2020</title>
+</head>
+<body>
+<p>Peter Rushforth: On day four of the joint W3C/OGC maps for the web workshop and Peter Rushforth: We're going to be starting the the agenda tonight with Peter Rushforth: On the topic of creating accessible web map widgets with two presentations for the first from Nick Chen, who will be presenting first her and Robert lenders work who are Robert and Nick are both members of the master HTML community group and they've done.</p>
+
+<p>Peter Rushforth: A review of the end evaluation of various map what mapping libraries again and compared them with the Web Content Accessibility Guidelines and she'll be reporting on their work and then we're going to proceed to an introduction to non digital non visual maps.</p>
+
+<p>Peter Rushforth: From Brandon Biggs of Smith kettlebell Institute.</p>
+
+<p>Peter Rushforth: And after that, we'll have a breakout.</p>
+
+<p>Peter Rushforth: After that, we'll have a breakout presentation from Brandon Peter Rushforth: About building cross sensory maps using audio done Peter Rushforth: And Peter Rushforth: At that point we'll cut over and I will finish my part two of the math ML proposal and maybe give a little demo of our, our custom elements suite that we've been developing in the master HTML community group.</p>
+
+<p>Peter Rushforth: So I'd like to just remind everybody that we welcome lots of interaction on getter and discourse in particular, get lots of comments and feedback on people's presentations through those avenues.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: I hope somebody will paste the links in there so that it's easily to get to and the comments can can come anytime.</p>
+
+<p>So we can do it 24 seven Peter Rushforth: And I also just remind everybody that we have a code of conduct that we're following the W three C code of conduct and you're free to Peter Rushforth: Express yourselves in a polite and respectful manner and all that.</p>
+
+<p>And if you feel that you have not been treated in a fair way please approach one of the committee, and we will do what we can to address your concerns.</p>
+
+<p>So with that, I'm going to play Nick chance Peter Rushforth: Slide.</p>
+
+<p>So maybe I'll share Peter Rushforth: share my screen and Nick has recorded Peter Rushforth: Her presentation so Peter Rushforth: I will switch over to that.</p>
+
+<p>Peter Rushforth: Chair.</p>
+
+<p>Peter Rushforth: Here we go.</p>
+
+<p>Hello everyone, my name is Nick Chen and I have been contributing to the maps for HTML community group over the past year with a particular focus on the use cases and requirements Report.</p>
+
+<p>Today I will be presenting on the accessibility of existing map widgets and tools.</p>
+
+<p>Before I get into the details of the analysis.</p>
+
+<p>I'd like to lay out some definitions that will frame this discussion.</p>
+
+<p>The map tools discuss today fall into two general categories widgets and client side mapping APIs.</p>
+
+<p>Widgets refer to an embeddable map, typically in an iframe or something similar that requires minimal code to implement These include things like the Google Maps embed that small business owners may use to share their store location.</p>
+
+<p>Client Side mapping APIs, our JavaScript libraries that allow website developers to create more customized map viewers.</p>
+
+<p>They typically require the developer to do more configuration and instantiate and work with the benefit of offering more control over the end result, you would typically find these as a part of web apps like store finders or delivery services.</p>
+
+<p>In this presentation, I'd like to frame accessibility as the degree to which these maps are usable by disabled people.</p>
+
+<p>Some contexts may use the term accessibility to encompass other things like Costa and size of these tools and how that pertains to access, but in this case we will be focusing on the usability aspect and especially how these mapping tools measure up to our next term, what can What can short for Web Content Accessibility Guidelines is the series of guidelines developed by the W three see in order to provide a shared standard for developing accessible web content.</p>
+
+<p>It is important to note that the webcam is not the be all and end all of accessibility.</p>
+
+<p>When it comes to things like maps a tool could meet every single criterion, but still not be accessible.</p>
+
+<p>There are many outstanding questions which will be discussed in greater detail by other presenters and panelists.</p>
+
+<p>About what would constitute an equivalent experience to what a map can communicate for low vision and blind users.</p>
+
+<p>However, it is still worthwhile to examine the existing tools with the wicked in mind so that we can account for other disabled users beyond low vision and blind users, such as people who have motor impairments.</p>
+
+<p>By looking at these existing tools, we can determine any common patterns worth adopting for a native HTML map element.</p>
+
+<p>Not all the cat criteria are relevant to web maps.</p>
+
+<p>So I've pulled out some of the most applicable and interesting ones where the map tools meet these criteria and with varying degrees of success.</p>
+
+<p>Tools reviewed.</p>
+
+<p>The tools today include both widgets and libraries from vendors like Google, Bing Apple matte box and Tom.</p>
+
+<p>Tom, as well as some open source solutions with Open Street Map tiles.</p>
+
+<p>For a full breakdown of how each tool measures up and the details of each criterion, please visit Robert lenders full evaluation at tiny URL com slash what CAD hyphen maps.</p>
+
+<p>Robert, is a member of the maps or HTML community group and his contributions have been invaluable.</p>
+
+<p>With that out of the way, let's begin.</p>
+
+<p>Non text content five out of 11 tools failed this criterion states that all non text content has an equivalent text alternative None of the map tools offer any meaningful texts alternative to the map content by default.</p>
+
+<p>So on that front.</p>
+
+<p>All of the maps would fail, unless context is provided by the site developer As mentioned earlier, what this alternative content could look like is a very complicated question, that depends on the content of the map and also warrants larger discussion.</p>
+
+<p>Because developers and authors may choose to provide additional context when evaluating this criteria we are focused on text alternative to controls, other than the map itself.</p>
+
+<p>In this case, this criterion also applies to things like alternative text for logo images and making sure all icon buttons are labeled descriptive Lee for a screen reader users.</p>
+
+<p>As an example, maps, often use the plus and minus symbol to indicate and zooming in and out.</p>
+
+<p>As a sighted user, I can see the visual context.</p>
+
+<p>These buttons are in, and I can also see the combat zooms in and out.</p>
+
+<p>When I press the buttons.</p>
+
+<p>However, if you just hear plus button.</p>
+
+<p>The context is a little more unclear.</p>
+
+<p>It could be adding a pin to the map or changing the quantity of another control.</p>
+
+<p>We can include context without changing the visual appearance of the control by adding things like alt text, images or an aria label to the control a possible solution to resolve this example might be to add an aria label to the button.</p>
+
+<p>Info and relationships 11 out of 11 tools failed this criteria requires that all information, including a controls state or structure can be determined programmatically or is otherwise available through text.</p>
+
+<p>Tools often failed to label the map structure as a distinct piece of content and as a control.</p>
+
+<p>A map generated by these tools is not just a static image, it is a control in and of itself.</p>
+
+<p>When the map has focus most tools will allow you to do things like pan and rotate the map using keyboard shortcuts, or your mouse pointer.</p>
+
+<p>Does that map needs to be labeled so that is identifiable as a control, not just an image.</p>
+
+<p>And tool authors defense.</p>
+
+<p>There isn't a set standard or consensus for how to approach this yet as map is not yet a valid component role.</p>
+
+<p>So there may be uncertainty on how to appropriately label this map container.</p>
+
+<p>The other most common reason for failure is the lack of attention paid to control state.</p>
+
+<p>For example, all of these web maps allow users to zoom in and out to an extent.</p>
+
+<p>Once you've hit the zoom limit the appropriate control should be disabled but very few examples communicate this programmatically and most only adjust the styles.</p>
+
+<p>Furthermore, screen reader users will often have no idea of the current zoom level thing stands out amongst the examples as it announces the current zoom level.</p>
+
+<p>In addition to the buttons state so user of an audio interface will always know what the current state is Contrast nine out of 11 tools failed to pass this criterion all text should pass a minimum contrast ratio of 4.5 for regular sized text.</p>
+
+<p>The contrast ratio refers to the contrast between the text color and the background color.</p>
+
+<p>Because many widgets.</p>
+
+<p>Do not allow for color customization having accessible defaults would go a very long way in terms of ensuring that accessibility this contrast criteria and can apply to both the map controls and the actual map content.</p>
+
+<p>Somewhere some apps have text buttons that did not meet the contrast ratio fixing this is as simple as changing the text color on the buttons.</p>
+
+<p>Most maps had contrast issues within the map content, particularly with labels for bodies of water and minor roads, such as in this example here.</p>
+
+<p>This screenshot shows the ocean filled in with a light blue color, but the text on top of it that says North Atlantic Ocean is a medium blue and it never gets any darker or larger.</p>
+
+<p>No matter how much you zoom in.</p>
+
+<p>Maps are in a tricky position as color hierarchy is very important for establishing focal points and there is a need to D prioritize certain map features to avoid making the map too noisy.</p>
+
+<p>When a map zoomed out is understandable is some minor labels are below the average font size or have lacking color contrast However, when a map zoomed into an area.</p>
+
+<p>A good map may have these minor labels take visual priority and be displayed larger and with more contrast Some apps included a thin white outline around each label to increase the text contrast, a technique that is commonly used and closed captions for TV keyboard seven out of 11 tools failed.</p>
+
+<p>Every functionality that is available to mouse or touch users must also be available for keyboard only users.</p>
+
+<p>This includes all interactive controls as well as functions activated by pointer gestures, which most maps do have Most failures in this instance, are due to the use of non native controls.</p>
+
+<p>When a semantic element like an HTML button is used all the behaviors that are expected of the control are handled automatically by the browser.</p>
+
+<p>It is very common for developers to add a click handler to a div element and ignore the other required behavior.</p>
+
+<p>Some custom buttons are not able to be accessed by hitting the tab key and cannot be activated because they cannot be accessed at all, whereas others can be focused, but do not have any means of activation through the keyboard.</p>
+
+<p>A user with the pointer device can pan across the map by dragging the map interface some apps like a way to do this with the keyboard, either because the map container is not focused or because they lack the keyboard shortcuts necessary.</p>
+
+<p>Character key shortcuts, one out of 11 tools failed this criteria in states that if a keyboard shortcut is implemented using character keys that at least one of the following is true.</p>
+
+<p>Mechanism is available to turn the shortcut off or a mechanism is available to remap the shortcut to use modifier keys such a shift control or Alt or the keyboard shortcut is only active when that component has focus This criteria exist to prevent conflicts with assistive technology shortcuts and web interface shortcuts.</p>
+
+<p>The NBA screen reader uses arrow keys to navigate text and it may conflict with the use of arrow keys to pen and scroll the map.</p>
+
+<p>None of the web maps analyzed use techniques, one or two, the websites that have shortcuts and pass this criterion have opted for a technique three only allowing the keyboard shortcuts.</p>
+
+<p>When the map container has focus Focus order to out of 11 tools failed to pass this criterion elements must receive focus and an order that matches the content reading order.</p>
+
+<p>In English and other left to right, languages, we have an expectation that elements will be interoperable from left to right, top to bottom in the same order.</p>
+
+<p>We read text.</p>
+
+<p>Here's a diagram which displays the focus order of the Google Maps embed the numbers indicate which element receipts.</p>
+
+<p>Okay, and what order.</p>
+
+<p>The first focus single element is the map container which makes sense as a focus order should go from outward to inwards.</p>
+
+<p>Next is the terms of use button which is in the bottom right hand corner.</p>
+
+<p>After that comes the view larger map button which is in the opposite corner in the top left.</p>
+
+<p>We returned to both zoom control buttons in the bottom right.</p>
+
+<p>And finally, the unlabeled toggle satellite imagery button in the bottom left corner.</p>
+
+<p>In this case, the developers use styles to position the controls arbitrarily without proper focus order the experience of tapping through the Map component is quite jarring and unnecessarily disorienting to bounce from corner to corner.</p>
+
+<p>Focus visible seven out of 11 tools failed.</p>
+
+<p>This criterion is related to the previous one.</p>
+
+<p>The focus really is an indicator, which shows which interactive element currently has focus, an example of which is shown here.</p>
+
+<p>We can see the zoom out button currently has focused thick black rain that Chrome applies.</p>
+
+<p>And its present by default and all browsers, but this is common for developers to remove this indicator without replacing it with their own styles.</p>
+
+<p>In combination with the previous criterion this criteria is serious enough to render a Map component unusable for a sighted keyboard only users because there is no way for them to determine what element is currently selected.</p>
+
+<p>In some cases, and focus isn't persistently visible, which is due to the addition of scripts that remove the outline once element is focused This criteria is an example of the default behavior being accessible and the developers have overwritten this default behavior to make an ultimately an accessible design choice.</p>
+
+<p>Language of parts, nine out of 11 tools failed.</p>
+
+<p>The requirement passes criteria is fairly simple.</p>
+
+<p>All it requires is that the contents language is included in the market.</p>
+
+<p>This is important for many accessibility reasons such as making sure screen readers read words with the correct intonation.</p>
+
+<p>And can be useful for features like on the fly language translation, despite the fact this criterion is simple to achieve many vendors fail to implement this.</p>
+
+<p>Passing this criteria is as simple as adding a single line attribute to the containing element and lying attributes to texts in other languages.</p>
+
+<p>The next slide has a jiff which demonstrates an unexpected scrolling appearance viewers with vestibular issues may wish to look away for a second.</p>
+
+<p>On input to out of 11 tools failed.</p>
+
+<p>This criteria states at teaching any setting and a user interface component should not trigger any changes of context, unless a user has been warned about it.</p>
+
+<p>In layman's terms, if a control is used there shouldn't be any unexpected side effects like changing the viewport size.</p>
+
+<p>Here we have a jiff where the up and down arrow keys are being used to pan the map, but unfortunately the viewport schools, up and down as well.</p>
+
+<p>And this can be quite disorienting.</p>
+
+<p>So it's important to test for side effects like this.</p>
+
+<p>Peter Rushforth: Building accessible web maps is no easy task, the base level of accessibility for existing Web Map solutions is quite poor.</p>
+
+<p>Overall, and no one widget or library stands out as being far superior to the rest Peter Rushforth: Criteria where almost every tool fails are often due to the lack of standardization and this is where having a native HTML Matt element can really set the bar for what Matt widget should strive to be Peter Rushforth: Regardless, there are a few quick and easy wins to be had, I hope, any developers who work with these math libraries can consider implementing some of the low hanging fruit are brought up here.</p>
+
+<p>Peter Rushforth: Thank you.</p>
+
+<p>If you have any questions about the material covered, feel free to reach out to me at Nick at Nick ten.me Amelia Bellamy-Royds: Spirit.</p>
+
+<p>Peter Rushforth: Yay.</p>
+
+<p>Yeah, we're back.</p>
+
+<p>Peter Rushforth: That was very interesting.</p>
+
+<p>Thank you very much.</p>
+
+<p>Neck really excellent presentation and with all kinds of little Peter Rushforth: Short lessons short and digestible lessons that we can go back to Peter Rushforth: as need be.</p>
+
+<p>Peter Rushforth: So with that, I guess.</p>
+
+<p>Peter Rushforth: I'd like to hand it over to Brandon.</p>
+
+<p>Are you ready for the stage.</p>
+
+<p>Brandon Biggs: Yeah.</p>
+
+<p>Can you hear me.</p>
+
+<p>Peter Rushforth: We can, yeah.</p>
+
+<p>Brandon Biggs: Let me share my screen here.</p>
+
+<p>Brandon Biggs: All right.</p>
+
+<p>Brandon Biggs: My, my screen meter here for a sec.</p>
+
+<p>Brandon Biggs: Okay.</p>
+
+<p>Brandon Biggs: Are you guys able to see my screen.</p>
+
+<p>Amelia Bellamy-Royds: No, not right now.</p>
+
+<p>Brandon Biggs: Alright.</p>
+
+<p>Brandon Biggs: Perfect.</p>
+
+<p>Awesome.</p>
+
+<p>Brandon Biggs: Cool.</p>
+
+<p>So yeah, this basically is going to be a an extremely rapid introduction to non visual maps, it's, it's going to be really, really brief because there's a lot more to cover in Brandon Biggs: Two modalities and there is typically and like officials an introduction to visual maps alone because audio and tactile are kind of big money will go through this, the real briefly here.</p>
+
+<p>Brandon Biggs: This is what most web maps are today.</p>
+
+<p>Basically, it's what we saw in the last presentation, basically.</p>
+
+<p>Brandon Biggs: I'm looking at particular widgets.</p>
+
+<p>So, the ones that are like embedded into a website and can show like a camp, there's typically a canvas that it used to pan around and see the vectors are the raster data.</p>
+
+<p>Brandon Biggs: Presented in the campus.</p>
+
+<p>Brandon Biggs: So there's some problems with these, not least of which are that 285 million people in the world can't utilize those maps.</p>
+
+<p>Brandon Biggs: And they're not non visual and currently the work hag guidelines say that you can use the text description, but there's a huge problem with text descriptions in that the Brandon Biggs: The whole fields of cartography and data visualization arose because text descriptions were not adequate enough.</p>
+
+<p>And so if we think that that text descriptions are adequate, then we don't really need data visualization or photographers.</p>
+
+<p>So that's, that's just, you know, Brandon Biggs: I don't, I don't think that takes descriptions can convey the spatial information, a lot of studies that show that text descriptions are not Brandon Biggs: Do not provide the same information as an actual map.</p>
+
+<p>Brandon Biggs: So I'm going to look at three different sorry two different types of Brandon Biggs: Maps tactile maps and auditory maps and each one of these has very similar Brandon Biggs: Requirements.</p>
+
+<p>So one of them is that each Map needs to have a name attribute.</p>
+
+<p>So Brandon Biggs: When you're in one of these other modalities, they're more egocentric.</p>
+
+<p>So basically you're moving like your finger through the map or you're Brandon Biggs: Moving your head through the map like as a listener and you're not necessarily viewing the map in totality that you would an Alice centric point of view, like you would using Brandon Biggs: Like the map that we saw at the beginning of the presentation.</p>
+
+<p>So if you have an unmarked polygon point or line that's basically not extremely useful because it doesn't provide any kind of context of why that exists.</p>
+
+<p>There's also Brandon Biggs: You.</p>
+
+<p>Yeah, so that's that's basically.</p>
+
+<p>Those are the commonalities between these different types Brandon Biggs: Of the first type of non visual map will look at our visual, auditory maps and these Brandon Biggs: Are presented on a tablet and you move your finger around the screen.</p>
+
+<p>And when you reach a line or a polygon or point it'll vibrate and when there's intersections, like say for example, Brandon Biggs: It has to do lines intersect.</p>
+
+<p>There'll be like a pulse and then it will tell you.</p>
+
+<p>Brandon Biggs: What the name of that intersection is with it.</p>
+
+<p>But the two lines are the names that two lines are that intersect and then you can go move your finger along the the intersecting, you know, what if you want to keep going or along the intersecting line.</p>
+
+<p>Brandon Biggs: And and this uses the the the audio vibration API.</p>
+
+<p>So the web vibration API.</p>
+
+<p>I don't think it's actually been incorporated in the web, but the web version API, I think, is probably adequate enough to do this.</p>
+
+<p>Brandon Biggs: Here's some citations for the Brandon Biggs: The bro audio maps and you can read more about them and watch them videos and try them out.</p>
+
+<p>Brandon Biggs: So the next section is on digital auditory maps.</p>
+
+<p>And this is actually my specialty.</p>
+
+<p>So I'm probably going to talk a little bit more about these than I am on the video, audio maps.</p>
+
+<p>So the digital auditory maps basically Brandon Biggs: They use Brandon Biggs: A, as I said before, and Alice egocentric point of view.</p>
+
+<p>So basically, use your arrow keys or some sort of Brandon Biggs: control mechanism to move your listener through the space and they use something called by normal audio and by normal audio is where the sounds.</p>
+
+<p>Brandon Biggs: That the features in the map have different sounds.</p>
+
+<p>And you can hear those sounds around you in spatial audio and a lot of features also will have their own sound.</p>
+
+<p>So when you're moving over a a feature that will make a sound.</p>
+
+<p>Brandon Biggs: Here's an example of a city map using that that's in Brandon Biggs: Taking Open Street Map data and it's it's a Brandon Biggs: Call the team system.</p>
+
+<p>And basically this is Like This is the team audio system and we are currently in London on Gabriel's wharf.</p>
+
+<p>facing south, and I'm going to do a scan to see what's around us.</p>
+
+<p>So our dialogue press to have to navigate for landmark Restaurant 32 meters, two o'clock.</p>
+
+<p>Bernie Spain gardens 14 meters, eight o'clock Bernie Spain gardens 54 meters 10 O'clock restaurants studio 616 meters 12 o'clock.</p>
+
+<p>So we saw that there's a a garden which we can hear at eight o'clock and on that fear.</p>
+
+<p>And there's a restaurant in front of us.</p>
+
+<p>Here.</p>
+
+<p>I'm going to walk towards the restaurant.</p>
+
+<p>Restaurant studio 600 Gabriel's more Brandon Biggs: So this basically does takes the type that's in Brandon Biggs: Open Street Map like restaurant or Park and assigns a looping sound to it that you can hear in spatial audio and then it also uses the Name attribute, as you saw to label, what exactly you're in when you reach the polygon that like the restaurant.</p>
+
+<p>Brandon Biggs: Here is the the references for the city map that we just saw.</p>
+
+<p>And you can go and view those papers, if you want, or try the, the team system yourself, it's pretty interesting.</p>
+
+<p>Brandon Biggs: So the next type of map.</p>
+
+<p>We're going to look at our heat maps and you probably pretty familiar with these.</p>
+
+<p>They're basically they show different points data points throughout the map and and and how they change through the Jeep to do the geography of the Intro song is an interactive sanitation tool that allows the vision users to explore map data such as population densities, we are looking at a US base map of population.</p>
+
+<p>The population for each state is presented by a violin sound.</p>
+
+<p>A high pitch means high value.</p>
+
+<p>So California has more people than Alaska.</p>
+
+<p>The Saudis exterior.</p>
+
+<p>So the sound for Alaska comes from the left.</p>
+
+<p>And the sound for me from the right Pressing the Space key with all the details about a state.</p>
+
+<p>Brandon Biggs: Basically that's that's kind of a really brief overview and the heat maps and you can go test these out.</p>
+
+<p>Brandon Biggs: There we go.</p>
+
+<p>He meant references.</p>
+
+<p>There you go.</p>
+
+<p>You can go try this out as well.</p>
+
+<p>It's called Sonic.</p>
+
+<p>And it's very interesting, and also the Brandon Biggs: Didn't mention this year, but the SS graphics accelerator also has a Brandon Biggs: Is an audio heat map as an audio heat map as well.</p>
+
+<p>And so, yeah, that's basically it's a pretty, I would say it's probably one of the more standard types of auditory maps nowadays.</p>
+
+<p>Brandon Biggs: Is an enclosed space map.</p>
+
+<p>It's very similar to the first map where you have a yourself as a listener in the space.</p>
+
+<p>And there's different sounds throughout around you.</p>
+
+<p>But this one has a Brandon Biggs: Little more.</p>
+
+<p>Brandon Biggs: You can hear a little more sounds in this first person view.</p>
+
+<p>Ram Eva's bridge.</p>
+
+<p>Ground carousel.</p>
+
+<p>2518 spinner.</p>
+
+<p>Playground.</p>
+
+<p>Walk me spinner Lazar heart is very far off ahead and to the right.</p>
+
+<p>The nearest President 2846 Laser our grid view playground want main 20 to 49 Lazar heart 2014 Les Brown.</p>
+
+<p>20 to 30 Brandon Biggs: So that's basically Brandon Biggs: So that's basically a another version of an Brandon Biggs: enclosed space maps.</p>
+
+<p>That'd be like a building or playground.</p>
+
+<p>This is a playground and or something like Disneyland, which is a little bit different than a city map or a heat map.</p>
+
+<p>Brandon Biggs: And these are some references for using this map and watch you try this after this presentation because I'm actually the one who made that and see, hear my voice in there.</p>
+
+<p>So basically, Brandon Biggs: I'm, um, these are the maps that that non visual users have created for themselves or have had a lot of research done on them.</p>
+
+<p>Brandon Biggs: And if you have any questions about non visual maps any type, please get in contact with me.</p>
+
+<p>My email is Brandon dot Biggs at XR navigation i o b r a n d o n dot big G s at x are in a vI GH T IO and Brandon Biggs: I would like to acknowledge the funding funding sources of NIH and neither Brandon Biggs: Thank you and hope you stick around for the workshop Peter Rushforth: I assure you, Brandon, we will.</p>
+
+<p>It's a pretty interesting talk.</p>
+
+<p>Peter Rushforth: And so I think, I think you're up.</p>
+
+<p>Next up again.</p>
+
+<p>Brandon Biggs: All right.</p>
+
+<p>Brandon Biggs: Let me Brandon Biggs: Let me share my screen.</p>
+
+<p>Brandon Biggs: No.</p>
+
+<p>Brandon Biggs: Can you guys see my screen.</p>
+
+<p>Yeah.</p>
+
+<p>Brandon Biggs: Okay, one sec.</p>
+
+<p>Brandon Biggs: Last zoom Brandon Biggs: Oh, to me, intense Brandon Biggs: If you go to the website.</p>
+
+<p>Brandon Biggs: XR navigation iOS.</p>
+
+<p>Brandon Biggs: A UTI. Oh.</p>
+
+<p>Brandon Biggs: Yeah you di o m dash d etc i n g dash Sta.</p>
+
+<p>Brandon Biggs: There you go.</p>
+
+<p>Audio extra navigation to Iowa slash audience dash getting started.</p>
+
+<p>Brandon Biggs: You can Brandon Biggs: Go through this kind of at your own pace.</p>
+
+<p>Basically, we need to do is login to the audio website and I must preface this by this is kind of a new system.</p>
+
+<p>So there's not a lot of polish on it yet.</p>
+
+<p>So Brandon Biggs: We're in the midst of building it out and you should, if, if you want to keep exploring this after today, there'll be a lot of updates in the next couple of weeks because they're really starting to work on it now.</p>
+
+<p>So anyways, basically.</p>
+
+<p>Brandon Biggs: The event is.</p>
+
+<p>Yeah.</p>
+
+<p>Doug Schepers: Oh.</p>
+
+<p>Hey Brandon sorry this is Doug, I just want to make sure that people that that we're setting the context.</p>
+
+<p>So that was the end of the presentations.</p>
+
+<p>Doug Schepers: The pre read the earlier presentations.</p>
+
+<p>We're now entering into a the the breakout which is building cross sensory maps using audio in audio.</p>
+
+<p>Doug Schepers: And so, and Brandon is also is the facilitator for this.</p>
+
+<p>So I just want to make sure people understood that the presentations have ended, and now we're actually in a in a breakout session.</p>
+
+<p>Peter Rushforth: Yeah, good point.</p>
+
+<p>Thank you.</p>
+
+<p>Doug Schepers: No problem.</p>
+
+<p>Peter Rushforth: Just Doug Schepers: Making sure people understood Brandon Biggs: Awesome.</p>
+
+<p>But you should definitely stick around.</p>
+
+<p>So Brandon Biggs: So audio is a tool that allows you to make maps that have an audio component and a visual component with the same data set.</p>
+
+<p>And currently, they run off of geo JSON.</p>
+
+<p>Brandon Biggs: And but I'm but I'm adding other feature.</p>
+
+<p>Sorry.</p>
+
+<p>Other types as as I get to it.</p>
+
+<p>But let me know if you want me to add a particular map type and i can i can data type, and I can add that Brandon Biggs: So I guess one major Khan of this is that restroom apps are accessible by default, just because they're a bunch of pictures and Brandon Biggs: They don't have any information that can tell the computer.</p>
+
+<p>What exactly is happening and and just can't tell the user what's happening.</p>
+
+<p>Who's using the computer.</p>
+
+<p>Brandon Biggs: And so, so it can it can just tell you kind of what colors are at a particular location.</p>
+
+<p>So anyways vector maps are really the only way to make accessible maps.</p>
+
+<p>I'm using this method.</p>
+
+<p>Brandon Biggs: So first, you go to audio dot x on navigation.io and sign up Brandon Biggs: And then you will enter into Brandon Biggs: And you're here and you can read a lot about audience.</p>
+
+<p>Brandon Biggs: Here, sure.</p>
+
+<p>I got the latest version.</p>
+
+<p>Anyways, so basically Brandon Biggs: The first step is to go to Brandon Biggs: Data sources.</p>
+
+<p>Brandon Biggs: And here, click the Add the Create New button.</p>
+
+<p>Brandon Biggs: And that's going to bring you to a Brandon Biggs: A form here so you can enter a name.</p>
+
+<p>So I'm just going to call this Box.</p>
+
+<p>Brandon Biggs: Here's where you can write your do Jason.</p>
+
+<p>So I like to use.</p>
+
+<p>I have people use a geo json.io and I linked to it in the guide.</p>
+
+<p>Brandon Biggs: I'm it's actually not accessible for blind people and I'm in the midst of also building a map editor using the same technology for blind people, but it's not quite ready yet.</p>
+
+<p>So I actually wrote out some geo JSON by hand.</p>
+
+<p>Brandon Biggs: You want to feature collection.</p>
+
+<p>Brandon Biggs: So I'm gonna go ahead and paste that here.</p>
+
+<p>Brandon Biggs: And then, and click the Create button.</p>
+
+<p>Brandon Biggs: That created the data source.</p>
+
+<p>Now I'm going to go Brandon Biggs: Click on maps.</p>
+
+<p>Brandon Biggs: And there's some existing maps here on the playground map.</p>
+
+<p>Brandon Biggs: You want to try Brandon Biggs: Playground.</p>
+
+<p>Brandon Biggs: We can go create a new map.</p>
+
+<p>Brandon Biggs: And this is box one one app.</p>
+
+<p>Brandon Biggs: And then I'm going to leave these other fields blank.</p>
+
+<p>Brandon Biggs: Will do a Brandon Biggs: Box.</p>
+
+<p>Brandon Biggs: As our data source.</p>
+
+<p>Brandon Biggs: And create Brandon Biggs: And Brandon Biggs: Blank Space, one, two.</p>
+
+<p>Now we can go explore this.</p>
+
+<p>And so what this did scurry scurry building three story building for two.</p>
+
+<p>So I'm looking here that Brandon Biggs: The box in there was called scary building and I'm going to switch to using a screen reader, because I really don't like that but that voice.</p>
+
+<p>But basically, now you can go through and explore the map that was there.</p>
+
+<p>Brandon Biggs: You can see that there's, you know, all the different information about the geometries there, which is really cool.</p>
+
+<p>Brandon Biggs: And there's the visual Brandon Biggs: Don't know if you guys can see it.</p>
+
+<p>I can't see it, but I know it's there.</p>
+
+<p>And I think there should be Brandon Biggs: Some sort of thing that like a green dot that that shows your characters at your, your listeners that on the, on the, the audio map.</p>
+
+<p>So anyways, that's, that's basically how you you create the audio maps in an audience.</p>
+
+<p>And you can add sounds to your different Brandon Biggs: Objects.</p>
+
+<p>Brandon Biggs: By adding different attributes like short underscore sound or it's all in the guides.</p>
+
+<p>If you want to learn how to make these or you can contact me and we talked about making some of your data sources.</p>
+
+<p>Brandon Biggs: Accessible and audio.</p>
+
+<p>So another cool thing here is you can copy and paste this embed URL into your own website and and audio will be there right now there's kind of a limited Brandon Biggs: Number of shares.</p>
+
+<p>I think it's like 1000 or something like that.</p>
+
+<p>So, um, if you want.</p>
+
+<p>Badita Florin: Because they see that you can embed an iframe.</p>
+
+<p>Does it have a possibility of like showing the location.</p>
+
+<p>Like, imagine that I want to create for a park.</p>
+
+<p>Badita Florin: And they use, I will need to to ask for the geolocation, so we can pinpoint him that's possible.</p>
+
+<p>Currently, or it will be or can be done or not.</p>
+
+<p>Brandon Biggs: So let me let me understand your question.</p>
+
+<p>So basically you say you're saying that you want to have your apart.</p>
+
+<p>Brandon Biggs: Directions from your current location to a park.</p>
+
+<p>Badita Florin: Or have you.</p>
+
+<p>Yeah, let's say that I will take a group of 10 people that have problem with site and I would bring them to that power.</p>
+
+<p>They will each have an app that will be loaded and the to track their location with where they are now.</p>
+
+<p>So kind of the point to update based on the location.</p>
+
+<p>Brandon Biggs: Yeah, so that's not currently available, but that's definitely something that that we're going to be adding pretty soon, because I believe Brandon Biggs: I've never actually done it yet, but Brandon Biggs: I'm pretty sure the do the Web API. There's a web API to get your current location.</p>
+
+<p>So yeah, that's definitely, I got some funding to build the app.</p>
+
+<p>So it's definitely in the short the short list of features that we're going to be making Badita Florin: Yeah.</p>
+
+<p>Brandon Biggs: Awesome.</p>
+
+<p>So yeah, let me know if you have any questions, and please feel free to make as many maps.</p>
+
+<p>Do you want and share them with your friends and Brandon Biggs: Yes, that's, that's basically audience.</p>
+
+<p>Peter Rushforth: Thank you very much, your brand.</p>
+
+<p>And that's pretty cool.</p>
+
+<p>Very story tinkering with it.</p>
+
+<p>I'll be sure and get touch.</p>
+
+<p>So you want us to play with it now and Peter Rushforth: Yeah, give you some questions.</p>
+
+<p>Brandon Biggs: Sure, absolutely.</p>
+
+<p>Brandon Biggs: Yeah.</p>
+
+<p>Brandon Biggs: I'm trying to find zoom.</p>
+
+<p>One sec.</p>
+
+<p>Let me find zoom Brandon Biggs: See my zoom Brandon Biggs: Okay.</p>
+
+<p>Brandon Biggs: All right now.</p>
+
+<p>Now, you should be able to see you mean my screen.</p>
+
+<p>Actually Badita Florin: Has a code when I'm trying to access the ID for public map.</p>
+
+<p>Brandon Biggs: Yeah, sorry that's that's a, that's a bug.</p>
+
+<p>Don't just those four Brandon Biggs: Were Yeah, those, those two maps are to have an error.</p>
+
+<p>Sorry.</p>
+
+<p>Badita Florin: Oh, I see.</p>
+
+<p>They have like the playground.</p>
+
+<p>Also, I know the plugin works.</p>
+
+<p>The, the demo also Badita Florin: The eight ID.</p>
+
+<p>Yes.</p>
+
+<p>Badita Florin: Okay.</p>
+
+<p>Brandon Biggs: The ad is is the one Brandon Biggs: Me.</p>
+
+<p>Know, Brandon Biggs: I think, I think we're seeing Brandon Biggs: We're seeing everybody's maps that everybody's been making.</p>
+
+<p>So those are those are being shared here, so everybody can see them at the moment.</p>
+
+<p>Brandon Biggs: During this presentation.</p>
+
+<p>Brandon Biggs: So that's that.</p>
+
+<p>Yeah.</p>
+
+<p>So somebody, somebody created that.</p>
+
+<p>And if it's giving an error.</p>
+
+<p>That means that the data isn't formatted correctly.</p>
+
+<p>Doug Schepers: Branded.</p>
+
+<p>Yep.</p>
+
+<p>Doug Schepers: FYI. I just want to make sure you know you are still sharing your screen.</p>
+
+<p>Brandon Biggs: Yeah, that's Brandon Biggs: Zoom to stop.</p>
+
+<p>Okay.</p>
+
+<p>Amelia Bellamy-Royds: Would you prefer to stop cuz coast can cut you out.</p>
+
+<p>Brandon Biggs: Okay, it's up to you guys.</p>
+
+<p>I'm not Brandon Biggs: Yeah so data sources search data sources is where you look for the name of the source that you are Brandon Biggs: You want to add to your math.</p>
+
+<p>So basically if you added a data source, then you've typed in the name, and it should auto populate and then you click Create map and that's that's that's that's Badita Florin: And another suggestion would be because Badita Florin: Probably most of the use of the people that we create the maps will be people that they will be able to see so Badita Florin: Maybe to have the ability to add like a slip to have like a tie left behind.</p>
+
+<p>So for me, my use case, I would want to like see okay the points are really where they should be based on Badita Florin: The roadmap for like oil same or like being images or something.</p>
+
+<p>Brandon Biggs: Yeah, I guess the, the issue with that.</p>
+
+<p>I want to see if there's Brandon Biggs: Some sort of detailed vector layer that we can hook into because the tile maps.</p>
+
+<p>I mean, Brandon Biggs: Like it completely defeats the purpose of the map.</p>
+
+<p>If you, if you start using raster data.</p>
+
+<p>Badita Florin: Because I'm thinking just when designing like when you will Badita Florin: Get website.</p>
+
+<p>Maybe not all in the sense we are, but at least two for designing part Brandon Biggs: Yeah, that's definitely a good, a good point.</p>
+
+<p>Um, yeah, I can definitely look into that right now if you created on Jay Jason I know I oh I know they definitely have a raster background.</p>
+
+<p>Brandon Biggs: We don't have a map editor yet so Brandon Biggs: Yeah, that's, yeah, definitely, definitely look into that and hopefully there's a good a better solution than just like not using rester data because I would like to Brandon Biggs: Figure out, you know, a good alternative to restroom data.</p>
+
+<p>Brandon Biggs: You're a little bit quiet.</p>
+
+<p>Bryan Haberberger: There.</p>
+
+<p>Sorry.</p>
+
+<p>Sorry, I had the microphone away from my face.</p>
+
+<p>I got it.</p>
+
+<p>Um, where do you like do I assume you have to save some of that data somehow, whether you're doing it in cash or an actual file somewhere.</p>
+
+<p>So I'm just kind of curious how you save that that map data and that geo JSON data.</p>
+
+<p>Brandon Biggs: Yes apparently it's just a blog.</p>
+
+<p>I'm in SQL database.</p>
+
+<p>Brandon Biggs: Enter your question.</p>
+
+<p>Brandon Biggs: Each each each data sources its own blog in SQL.</p>
+
+<p>Bryan Haberberger: I choose.</p>
+
+<p>So you're doing like you do your SQL query.</p>
+
+<p>And then on its way out you just to sort of like, I'm just forcing you know right in between the shim to make sure Brandon Biggs: So when you when you load a map.</p>
+
+<p>It's parsing the geo JSON data in real time.</p>
+
+<p>Gotcha.</p>
+
+<p>Bryan Haberberger: Thank you.</p>
+
+<p>That doesn't answer my question.</p>
+
+<p>Brandon Biggs: I'm sorry.</p>
+
+<p>Bryan Haberberger: I'm sorry, I'm sorry.</p>
+
+<p>I'm gonna hit you with the next one that my pillow more pressure.</p>
+
+<p>Have you thought about a non SQL solution in the background.</p>
+
+<p>Brandon Biggs: Yeah, I've thought about it.</p>
+
+<p>If you have any good suggestions.</p>
+
+<p>Let me know, because one.</p>
+
+<p>One of the issues that Brandon Biggs: That we kept running into was, you know, being able to separate out different data sources so like a lot of different people wanted to have, you know, different data sources is there like an easy way to do that without making like a ton of different tables in the database.</p>
+
+<p>Brandon Biggs: And or how to do that scale globally.</p>
+
+<p>Brandon Biggs: So this is definitely not.</p>
+
+<p>I'm not a big expert in NGO databases.</p>
+
+<p>So yeah, any, any suggestions will definitely help Bryan Haberberger: Yeah, I mean, I think it's a whole maybe another conversation.</p>
+
+<p>We don't have to have right here.</p>
+
+<p>But yeah, I think I would definitely have a couple ideas.</p>
+
+<p>Brandon Biggs: Awesome.</p>
+
+<p>Yeah, please get in contact with me.</p>
+
+<p>Brandon Biggs: I'd love to talk to you more about that because it's a big issue.</p>
+
+<p>Amelia Bellamy-Royds: Brandon, can I ask you a more higher level question.</p>
+
+<p>I'm not specifically about audio, but about audio maps.</p>
+
+<p>Amelia Bellamy-Royds: Um, Amelia Bellamy-Royds: What is like a reasonable amount of detail.</p>
+
+<p>Amelia Bellamy-Royds: Because Amelia Bellamy-Royds: With a visual map you can fill in lots of space and use other cues to emphasize what's important or not.</p>
+
+<p>But with these Amelia Bellamy-Royds: exportable audio maps are you able to really filter through extra detail, or is it best to keep it stripped down Brandon Biggs: Know, you can definitely filter through a lot of detail.</p>
+
+<p>Um, now I haven't a Brandon Biggs: Tip typically you'd look at it like the viewport.</p>
+
+<p>And so you do filter out the data in this particular chunk and explore that particular chunk.</p>
+
+<p>And so, say for example you're looking for.</p>
+
+<p>Brandon Biggs: One particular point you would use probably a list view rather than then then like this this particular grid view so Brandon Biggs: There's three different modes that you can navigate this map, and there's a grid view where, basically, that's the default and it says you moving through you can hear the coordinates and you can hear the Brandon Biggs: Like the polygons that you're over and then there's another one on that's more first person and you can you can navigate around like you're in a real environment, and then another one where you basically can view menu of all the different options and so Brandon Biggs: You can definitely do a lot of detail you can view view as much detail as you want.</p>
+
+<p>Just like you can zoom in and out as much, you know, as you want.</p>
+
+<p>Brandon Biggs: And you can you can view view it granularity very, very granular Lee, or you can go zoom out and see it in a more overview, you might miss some small features like say for example, there's Brandon Biggs: You want to view things that are kilometer level.</p>
+
+<p>And there's some meter stuff you won't be able to notice those your stuff.</p>
+
+<p>Unless you turn on some sort of setting.</p>
+
+<p>Brandon Biggs: But you can go into a menu and see all the different items there.</p>
+
+<p>And if you know what you're looking for.</p>
+
+<p>You want to really quickly move to that list you can like, press the down arrow and Brandon Biggs: Here the different objects in the list.</p>
+
+<p>Very, very quickly, but this is definitely Brandon Biggs: Some big, big maps or not or something.</p>
+
+<p>I need to continue exploring Amelia Bellamy-Royds: So an audience.</p>
+
+<p>Does that sort of level of detail scaling out automatically or Amelia Bellamy-Royds: Yeah.</p>
+
+<p>Brandon Biggs: I mean, so basically Brandon Biggs: You can zoom in and out.</p>
+
+<p>Yes, with audio.</p>
+
+<p>Brandon Biggs: And I wouldn't right now it's built, it's, it's this particular this particular time it's it's particular particular the Brandon Biggs: Put four meters.</p>
+
+<p>And so when you put in a geo JSON object.</p>
+
+<p>Brandon Biggs: You're moving by meters in the map and so Brandon Biggs: There's some parsing of the coordinates that that's done, and you're put into a sensible plane because you don't want to be hearing coordinates spoken out every time you move to a different square because that's just a little bit nuts.</p>
+
+<p>Brandon Biggs: And so, so it does turn it into meters and but definitely it's not hard to to turn it into kilometers.</p>
+
+<p>Brandon Biggs: And just trying to figure out a good user friendly way of doing that.</p>
+
+<p>Brandon Biggs: For for the map readers.</p>
+
+<p>Doug Schepers: Um, Doug Schepers: Brandon, Doug, I Doug Schepers: Are, are you expecting people to upload their own Doug Schepers: soundscapes, what do you, what do you call a particular sound icon for like the looping audio that you're running for say a playground.</p>
+
+<p>Brandon Biggs: Or yes, Sam Pat's so that's that's basically what I call them I'm Doug Schepers: Sorry, I didn't understand what you said.</p>
+
+<p>Brandon Biggs: Sounded packs.</p>
+
+<p>Doug Schepers: Sound packs.</p>
+
+<p>Yep.</p>
+
+<p>Okay.</p>
+
+<p>Are you expecting people to upload their own sound packs are you going to make sound packs available by default.</p>
+
+<p>Doug Schepers: Both okay Brandon Biggs: There's already one in there by default.</p>
+
+<p>Unfortunately, the current update on production bill doesn't show it um Brandon Biggs: But yeah, so there there definitely is a default, it should be there tomorrow, but you should be able to just go, you know, click and listen to the different sounds.</p>
+
+<p>Brandon Biggs: So there is going to be one by default.</p>
+
+<p>And I'm going to continue building on it as time goes on, and hopefully I should have different sound packs that you can you can use by default, or you can Brandon Biggs: Eventually, you should be able to upload your own and and and use those in your maps so like the playground for example uses a custom sound pack and Brandon Biggs: If I wanted to use the sound pack for the map that I just made, I could do that.</p>
+
+<p>Doug Schepers: So it seems to me, have you done it seems to me that having familiar Doug Schepers: Sound packs or having a familiar sound icon.</p>
+
+<p>I'll use or or soundscape icon for Doug Schepers: Similar or Doug Schepers: Like for restaurants, having the same Doug Schepers: Thing.</p>
+
+<p>Seems like a useful orientation tool.</p>
+
+<p>Brandon Biggs: Yeah yeah absolutely would be Doug Schepers: Have you, have you done any studies to see the extent to which Doug Schepers: I mean obviously when you're walking around in the real world, right, you're hearing.</p>
+
+<p>It's not every restaurant.</p>
+
+<p>Sounds like right but you can identify them as restaurant.</p>
+
+<p>Doug Schepers: Right, yeah.</p>
+
+<p>But it seems that in a constraint.</p>
+
+<p>Doug Schepers: Industry strictly constrained Doug Schepers: Environment like like this that it might be useful to have Doug Schepers: The same sound icon being used.</p>
+
+<p>Doug Schepers: And I Doug Schepers: Wonder if you've done any studies that show Doug Schepers: One way or the other, whether that's whether that's the case.</p>
+
+<p>Brandon Biggs: Not really the best thing I can think of is that the team system that you saw earlier in my presentation was did did have a specific sound set of sounds for different types of locations.</p>
+
+<p>So like a bar was particular sound in a restaurant was a particular sound that looped Brandon Biggs: But as for like a standardized sound.</p>
+
+<p>Uh, no, there's no standard auditory icons for Brandon Biggs: For for these and I don't think there's been any studies to to determine Brandon Biggs: What people would would recognize Brandon Biggs: Most naturally as like a restaurant or street, for example, but one thing that you can depend on probably is, is that and there's been some studies on this particular fact is that Brandon Biggs: There, you do have an ecological connection to the world.</p>
+
+<p>So if you hear like a sound of would Brandon Biggs: Would would sound like that.</p>
+
+<p>That's a sound of wood and there's no other sound that that could be.</p>
+
+<p>It's like, you know, when you see a draft that has a draft there's there's no other thing you could really be Brandon Biggs: Or you know if Brandon Biggs: There's there's connections to the real world, that, that, that you can kind of depend on and so Brandon Biggs: That that definitely helps with with creating these these maps so you can use these is real world sounds in your maps and that makes it Brandon Biggs: Much more Brandon Biggs: Relatable so that people don't necessarily need to use a lot of cognitive processing to understand what you're trying to convey Doug Schepers: I think that's, I understand what you're saying.</p>
+
+<p>I think that sounds right to me.</p>
+
+<p>But I also know that fully artists.</p>
+
+<p>Doug Schepers: Create sounds that are nothing like real world sound, but for some reason they strike people as being the right sound, for example.</p>
+
+<p>Doug Schepers: You know hawks don't sound like you hear hawks in the movies, right.</p>
+
+<p>Doug Schepers: Yeah, they sound very different, but that that is the standard sound for hawk so fully artists in sound, sound effects people use the sound for hawk for hawks, but that's not what a lot sound like Doug Schepers: Yeah, they exaggerate sounds in order to emphasize key characteristics like the Clock.</p>
+
+<p>Clock of the horse.</p>
+
+<p>Brandon Biggs: Right.</p>
+
+<p>Yep.</p>
+
+<p>Yeah.</p>
+
+<p>I Doug Schepers: I see actually that Doug Schepers: Amelia is pointy on a zoom issue.</p>
+
+<p>Doug Schepers: We can talk about this offline.</p>
+
+<p>It's just, I'd like to Doug Schepers: Better how how what that relation with the ship with the sound icon says Brandon Biggs: Yeah.</p>
+
+<p>Yeah, absolutely.</p>
+
+<p>Doug Schepers: Amelia has a question.</p>
+
+<p>Doug Schepers: How do I get the gallery view zoom issue.</p>
+
+<p>How do I get back to gallery views the OH.</p>
+
+<p>Amelia Bellamy-Royds: Brandon, that's for anybody knows zoom better than I do.</p>
+
+<p>Sorry for interrupting.</p>
+
+<p>Doug Schepers: I apologize.</p>
+
+<p>No, you're not interrupting.</p>
+
+<p>I was dominating the conversation with with Brendan Badita Florin: I think in the top left the top right corner, you have the view and against select between galleries Pico full screen.</p>
+
+<p>Amelia Bellamy-Royds: Yes, it's come back on that Peter has this video I guess if nobody has video on it doesn't even bother showing the speaker names.</p>
+
+<p>Anyways, Sorry for the distraction.</p>
+
+<p>Doug Schepers: So, Amelia Bellamy-Royds: You have any other questions for Brandon, people who are maybe playing around with the examples.</p>
+
+<p>Badita Florin: I wanted to ask him, and I put the link in the chat to with if he knows the game for which is a website that shows most all of the most used the key value pairs, no essential, you can find like top 10 or top five 500 if you want the most use like amenities or the location.</p>
+
+<p>So you Badita Florin: Would be an identified because this will be the most that you will find noise.</p>
+
+<p>Same so it would be useful to create for them.</p>
+
+<p>Brandon Biggs: Yeah, that's, that's good, that's good to know.</p>
+
+<p>So one thing we're going to be doing really, really soon is actually hook up Brandon Biggs: Very similar to our team did.</p>
+
+<p>We're going to hook up the whole entire audience system to open street maps.</p>
+
+<p>So all the data and Open Street Map should be available if it's Brandon Biggs: Got the correct labels in it and I'll be trying to parse those out into it and see exactly what it is.</p>
+
+<p>But that's something in our short list, we have a project that we're doing that right now so Badita Florin: If you have a problem with like loading the planet and things like that.</p>
+
+<p>Tell me, I have somebody that they already loading the planet and processing good for vector tiles investor tiles and I can, I could connect you Brandon Biggs: Oh, that'd be great.</p>
+
+<p>Yeah, it's not not something I've investigated to too heavily going in and doing queries on open street maps, not, not Badita Florin: In all Badita Florin: The planet is huge is like the extract Badita Florin: The ladies like 600 gigabytes or more Brandon Biggs: Yeah.</p>
+
+<p>Yeah, so there's there's a good way to go and and and grab little chunks of that.</p>
+
+<p>Brandon Biggs: Yeah, let me know, because that's definitely something I'm gonna have to deal with.</p>
+
+<p>Badita Florin: Yeah, and probably will need like a point where self.</p>
+
+<p>If you don't have to store the data because podcast is kind of the best because you also have, like, oh geez with like the extension.</p>
+
+<p>Brandon Biggs: Yeah, and Badita Florin: It's really good.</p>
+
+<p>And there are some tools for automatically logged into podcasts and other things like that.</p>
+
+<p>Brandon Biggs: But, yeah, yeah.</p>
+
+<p>Yeah, that's definitely something I need to.</p>
+
+<p>I need to investigate palm and I'll probably end up creating my own Brandon Biggs: I know another company that uses Open Street Map and they made their own server for Open Street Map and and definitely coming in after do that.</p>
+
+<p>Yeah.</p>
+
+<p>Peter Rushforth: Brian hamburger has a question.</p>
+
+<p>Brandon Biggs: On the Peter Rushforth: On get her.</p>
+
+<p>I'll read it out.</p>
+
+<p>I have a question on granularity.</p>
+
+<p>If you see this being granular enough to help someone get around their favorite baseball soccer, football.</p>
+
+<p>Football Stadium, Stadium.</p>
+
+<p>But yes, it could it help you get to the vendor you want or the bathrooms nearby.</p>
+
+<p>Brandon Biggs: Absolutely, yeah.</p>
+
+<p>Brandon Biggs: Absolutely.</p>
+
+<p>I've done it for a lot of conferences made these maps for several different conferences and an indoor spaces so that playground map that you saw you saw Brandon Biggs: It, it can definitely help you get from from, you know, the bridge to the the slide man to the bridge to the stepping sounds.</p>
+
+<p>It's not not hard to do.</p>
+
+<p>Brandon Biggs: So yeah, absolutely.</p>
+
+<p>And especially if you get more detail in there like, you know, putting walls and stuff like that.</p>
+
+<p>And you can tell people where to walk in and we're not walk and Brandon Biggs: Yeah, absolutely.</p>
+
+<p>Badita Florin: And also, I don't know.</p>
+
+<p>Do you know overpass Tubal Brandon Biggs: Not a big expert on Open Street Map.</p>
+
+<p>But not really, no.</p>
+
+<p>Badita Florin: Okay overpass Tupac is a service where you can do like queries you can I acquire a filter and you can select like okay, give me the US dissent dissent is so Badita Florin: And so what you could do is like the user, you get the location of the user.</p>
+
+<p>And you will have like the bounding box of an area.</p>
+
+<p>It could be like Brandon Biggs: Oh, yes.</p>
+
+<p>Yeah.</p>
+
+<p>Badita Florin: And he's gonna it can download any can export directly to you can have it like geo JSON exported.</p>
+
+<p>So this could kind of help you to not create the whole planet to end.</p>
+
+<p>Badita Florin: Of each each you client to do it in the most of the daunting and then you just have some JavaScript that will process and yeah Brandon Biggs: I think that's probably we're going to do initially Brandon Biggs: Is use use that Brandon Biggs: Use overpass turbo.</p>
+
+<p>Yes, I do.</p>
+
+<p>I do.</p>
+
+<p>I knew no overpass i didn't i didn't i don't i didn't know there was one turbo but Badita Florin: This is for Badita Florin: Like visual.</p>
+
+<p>So instead of doing everything like this.</p>
+
+<p>This will kind of show you on the map and you can also style it and other things like that is more user friendly.</p>
+
+<p>Brandon Biggs: I see.</p>
+
+<p>Okay.</p>
+
+<p>Doug Schepers: Did you yeah Doug Schepers: Right, what is Doug Schepers: overpass and overpass turbo Brandon Biggs: For Open Street Map.</p>
+
+<p>Badita Florin: Is the API that you can use to access and download parts of, you know, for him data overpass two boys kind of Badita Florin: Report over bus that allows you to create more friendly queries to to to query the database and instead of showing the data like the JSON response you you see like visually in a leaflet map.</p>
+
+<p>I think you see visually the points that it is returning Doug Schepers: Okay, thank you.</p>
+
+<p>Brandon Biggs: Me until it gets into an audio map but Brandon Biggs: Yeah, listen, look into that.</p>
+
+<p>Amelia Bellamy-Royds: So to go back to the question of, Is this useful for Amelia Bellamy-Royds: Navigating in places.</p>
+
+<p>Amelia Bellamy-Royds: At this point are you working only on Amelia Bellamy-Royds: Something that people can explore ahead of time, or are you connecting this up to something that could be live Amelia Bellamy-Royds: On their mobile device as they're actually in a place Brandon Biggs: Yeah, so, um, there's a couple issues there.</p>
+
+<p>First is, we need to build a mobile interface for this right now, if you have a keyboard, you can use a keyboard on your mobile device, but a lot of people don't usually bring that with them so Brandon Biggs: We have to build a touchscreen interface for this and that's on our list of stuff to do.</p>
+
+<p>And then Brandon Biggs: Once that's built, then yes, we're looking into, you know, getting positioning Brandon Biggs: But typically, this is a pre pre trip planning for the next, you know, several months.</p>
+
+<p>This will be just primarily used as a pre trip planning tool.</p>
+
+<p>Brandon Biggs: And or Badita Florin: Indeed, Brandon Biggs: Or any other thing where you were using map for that that's not necessarily that you are here.on on the Google Maps or whatever, as you're walking so that's that's the only I'm Brandon Biggs: Pretty much the only major feature at the moment that you shouldn't you can't really do with this yet.</p>
+
+<p>And so, um, but, yeah, it's definitely on our list of things to do.</p>
+
+<p>Yeah.</p>
+
+<p>Amelia Bellamy-Royds: Definitely.</p>
+
+<p>I mean, we have a couple talks of this the next session.</p>
+
+<p>So Sunday night Monday morning, we are talks on one specifically on maps of indoor spaces and the others.</p>
+
+<p>Amelia Bellamy-Royds: Ones are also talking about way finding and maps for in person accessibility.</p>
+
+<p>So it definitely all flows together.</p>
+
+<p>Yeah.</p>
+
+<p>Badita Florin: I wanted to add that to Illinois, Sam.</p>
+
+<p>You have close to 1 million Badita Florin: Locations that also contain information if that place is accessible for persons with with whichever and thinking that some of the, of the users that Badita Florin: Will use these maybe they are being also in wheelchair so that would be useful for them to kind of maybe they could know like okay this is accessible or not and Badita Florin: Also the like opening up for around.</p>
+
+<p>I think half a million also points.</p>
+
+<p>Badita Florin: But Brandon Biggs: Yeah, absolutely.</p>
+
+<p>I think, I think one of the things I'm going to Brandon Biggs: Try and do eventually is when you Brandon Biggs: You know, hover over the box or whatever with your mouse.</p>
+
+<p>Brandon Biggs: On the visual view, it'll give you, you can explore the properties and you can, you know, see.</p>
+
+<p>Brandon Biggs: If it has, if it's accessible or not.</p>
+
+<p>And then same with the Brandon Biggs: The audio view, you should be able to see these different properties and see, you know, if it's accessible and you should be able to filter by items that are accessible or not.</p>
+
+<p>Brandon Biggs: But unfortunately, it's not all the items but you know one millions of really good number.</p>
+
+<p>And typically Brandon Biggs: They, you're probably not going to get a lot of really terrible sidewalks.</p>
+
+<p>If it's accessible to wheelchair users, which is nice for Brandon Biggs: Almost everybody so Badita Florin: And in voice and also for the votes.</p>
+
+<p>I think you can.</p>
+
+<p>There is tags to to say that if there is like a sidewalk on the left on the light, not many use it in Germany, they usually use it.</p>
+
+<p>But yeah, this is something to consider.</p>
+
+<p>Brandon Biggs: Yeah, that's really important.</p>
+
+<p>Yeah.</p>
+
+<p>Brandon Biggs: Always.</p>
+
+<p>Am I don't even think gives a level of detail a blind person would really like to have Brandon Biggs: A lot of people when when I've done studies they say that the most the features they want most are parked cars, the planters the doors like where exactly the door is in the building.</p>
+
+<p>Brandon Biggs: And poles ambushes which are typically used in also the side of the side of the street that you're on and Badita Florin: Probably Brandon Biggs: Yeah, trees, yeah.</p>
+
+<p>Brandon Biggs: So anyways, yeah that's that's like you were asking about detail before like that's kind of the level of detail that that bump up the bidding want in a map.</p>
+
+<p>And so, yeah, you can get down to that level and that that's really the level that I'm at people.</p>
+
+<p>People like Peter Rushforth: Couple more questions in the chat and maybe I'll read it first thinking about audio 3D printer an audio 3D preview of the venue.</p>
+
+<p>Want to go Peter Rushforth: To to get your bearings ahead of time.</p>
+
+<p>Peter Rushforth: Will it be able to support 3D sound Cox, not sure if that is a whole new file type or something.</p>
+
+<p>Brandon Biggs: No.</p>
+
+<p>So how it works is Brandon Biggs: We use the Web Audio API and in the Web Audio API you use Brandon Biggs: The, the sounds are put into Brandon Biggs: The coordinate in space and then you're the listener and you move around those coordinates.</p>
+
+<p>And as you move the sound changes.</p>
+
+<p>It's on position relative to you.</p>
+
+<p>And so like you here in the playground map on and so Brandon Biggs: Are you really need is the looping sound and that gives you the 3D audio.</p>
+
+<p>Brandon Biggs: That you need for Brandon Biggs: I guess for any type of map.</p>
+
+<p>So I'm, I'm not sure that's exactly what you were asking, but Brandon Biggs: It's really just any type of any type of sound that you can put into this map so Doug Schepers: Just to clarify, you that your system takes care of the positioning Doug Schepers: Yes, they just have to sell it.</p>
+
+<p>It's already doing 3D positioning.</p>
+
+<p>Yes.</p>
+
+<p>And they just put in the sound that is going to be positioned Brandon Biggs: Exactly.</p>
+
+<p>Brandon Biggs: You can just attach it to your feature.</p>
+
+<p>Uh huh.</p>
+
+<p>Doug Schepers: Right there may be a follow up question, which is, can you design.</p>
+
+<p>Is there any other way of designing your own 3D features or is this taking care of, like, I don't know what that would be.</p>
+
+<p>I'm just speculating that for some reason somebody might want to Doug Schepers: For example, have level of detail.</p>
+
+<p>So it's not just the Doug Schepers: It's not just the positioning, but it could be Doug Schepers: How loud or faint, something is or how much detail you hear from a particular restaurant, like if you go to if you if you start off, you might hear chatter, just like voices and as you get closer, you might hear, for example, the clinking of silverware and glasses and plates.</p>
+
+<p>Brandon Biggs: Yeah, so I'm Brandon Biggs: At the moment, those that type of event is not there yet, but that's definitely something I want to add and probably won't be for a while.</p>
+
+<p>Brandon Biggs: Because I want to try and get Open Street Map and all that kind of other stuff added him first.</p>
+
+<p>But definitely that level of detail is something I'm want to add Brandon Biggs: Eventually, and so you could basically build your own virtual reality spaces.</p>
+
+<p>I'm using this map and do all kinds of granular support.</p>
+
+<p>It's definitely has the capability but Brandon Biggs: It's not, it's not there yet.</p>
+
+<p>Brandon Biggs: Okay, yeah, we just use the automatic positioning now.</p>
+
+<p>Doug Schepers: Okay, cool.</p>
+
+<p>Thank you.</p>
+
+<p>Peter Rushforth: And there's another comment says, I wonder if in the future if this could link with sensor data to provide live navigation based on real conditions.</p>
+
+<p>For example, if I'm walking in a sensor knows there's ice or snow bank is something in front of me I could be a directed away from my house.</p>
+
+<p>Brandon Biggs: Yeah.</p>
+
+<p>Um, so Brandon Biggs: Sensors, um, I don't know, very many that actually work.</p>
+
+<p>Brandon Biggs: For for that kind of level of detail what what we are looking at is Brandon Biggs: There's a Brandon Biggs: Smith Kettlewell and several other companies are building indoor way finding apps that are basically use computer vision and inertial dormitory to to Brandon Biggs: Position yourself in the in the indoor space.</p>
+
+<p>And so we're going to be hooking up audience to that and and that should be able to kind of act as your, your Brandon Biggs: green.as you're moving through the building and you should be able to use both the audience features and the features of that way finding out to tell what's around you.</p>
+
+<p>But for sensor data.</p>
+
+<p>Yeah, that's not Brandon Biggs: A guess the closest could be maybe like real time information through satellites or something like that that that Brandon Biggs: That you can get through an API.</p>
+
+<p>Brandon Biggs: But yeah, I don't know.</p>
+
+<p>I don't know.</p>
+
+<p>Very many sensors are reliable enough to give you enough information other than the cane.</p>
+
+<p>Amelia Bellamy-Royds: So one other question since you have a lot of Amelia Bellamy-Royds: Web Map developers on the line.</p>
+
+<p>Amelia Bellamy-Royds: Is there like his audio some open source are you Amelia Bellamy-Royds: The listener and contributions.</p>
+
+<p>Brandon Biggs: Yeah.</p>
+
+<p>So currently it's not open source.</p>
+
+<p>Um, it's a Brandon Biggs: Kind of a prototype commercial product at the moment.</p>
+
+<p>And so Brandon Biggs: If you want to continue developing or, you know, CC continuous development on it or use it in your project, just contact me and we can talk about it.</p>
+
+<p>Bryan Haberberger: So I have one more sort of peripheral kind of comment here yesterday there was a presentation on geo JSON T, which was taking geo JSON and adding time to it.</p>
+
+<p>If you ever thought about an actual geo JSON extension to attach audio.</p>
+
+<p>Brandon Biggs: So, Brandon Biggs: I kind of have built my own God Jason format.</p>
+
+<p>If you look through the the guide on attaching audio.</p>
+
+<p>Brandon Biggs: I've kind of built in my own property set Brandon Biggs: And that is, that's what I use for Brandon Biggs: For for determining the sounds so Brandon Biggs: Once, once it gets a little more standard, then maybe we can, you know, think about adding an official, you know, quote, unquote.</p>
+
+<p>Brandon Biggs: Audio or cross sensory Brandon Biggs: Feature set and Brandon Biggs: It's a property said, I don't know.</p>
+
+<p>I don't know exactly.</p>
+
+<p>I didn't see that presentation yesterday, what exactly they did.</p>
+
+<p>Bryan Haberberger: Good sir, I mean it's it's simple instead of running into properties.</p>
+
+<p>He just proposed a new property this thing called Bryan Haberberger: When and then the data goes in there, you know, Bryan Haberberger: Okay.</p>
+
+<p>Stay yeah style thing.</p>
+
+<p>Yeah.</p>
+
+<p>Brandon Biggs: Okay, yeah, that makes sense.</p>
+
+<p>Um, I guess, the closest thing I did was I i for for custom if you have a custom Brandon Biggs: You're not using the the geography.</p>
+
+<p>So for example, the, the playground doesn't use coordinates.</p>
+
+<p>Brandon Biggs: Like the lat long coordinates.</p>
+
+<p>I have a custom thing that you put in that you use a custom coordinate system, and that's Brandon Biggs: That then it just uses your coordinate system.</p>
+
+<p>So that's the closest thing I've got to it, but hopefully once more maps are created, probably in a couple years, we should have enough Brandon Biggs: Standardization for creating an official set of Jason Bryan Haberberger: Yeah, cuz I know again just in my biases humanities, because that's what I work in, there's just a lot of interest around attaching sound in space.</p>
+
+<p>It's just, you know, it's really for the mike.</p>
+
+<p>I keep saying like poetry in the music studies kinds of people that are looking for that and Brandon Biggs: Yeah.</p>
+
+<p>Bryan Haberberger: I hadn't ever really seen a real extension that connected sound and he says one kind of, you know, wrapped up standard.</p>
+
+<p>Yeah.</p>
+
+<p>Brandon Biggs: Yeah, that's going to be very Bryan Haberberger: Interesting.</p>
+
+<p>I think you're working on something pretty unique and it's just, it's interesting.</p>
+
+<p>I said wondered if we thought about that yet.</p>
+
+<p>Brandon Biggs: Ya know, I've definitely thought about like how we represent buildings in geo JSON and and you know how we represent campuses and other spaces and, you know, multiple layers and how you Brandon Biggs: You show relationships, but I just kind of added in properties audio.</p>
+
+<p>I didn't really think too much about it.</p>
+
+<p>Bryan Haberberger: Before.</p>
+
+<p>That's what everybody else is doing.</p>
+
+<p>That's why we have these kinds of workshops Yeah.</p>
+
+<p>Yeah, absolutely.</p>
+
+<p>Brandon Biggs: But I hope, I hope, like the Name attribute like that.</p>
+
+<p>That's one thing that's really important.</p>
+
+<p>Brandon Biggs: Because as you can tell, like when you're moving to the grid.</p>
+
+<p>It tells you a name every single time you move through the space.</p>
+
+<p>And if you don't have a name.</p>
+
+<p>It's just going to say, you know, blink polygon like polygon.</p>
+
+<p>And boy, Bryan Haberberger: Yeah.</p>
+
+<p>And if you only have the English name then you make the rest of the world, man.</p>
+
+<p>You know, so the internal internationalization will become a part of that and all the sudden, your ability to just use a string disappears.</p>
+
+<p>Brandon Biggs: Yeah, if you have a good method for Brandon Biggs: Doing internationalization with your Jason and names, let me know.</p>
+
+<p>But typically names are actually Brandon Biggs: Pretty, pretty darn universal Brandon Biggs: Country names.</p>
+
+<p>So, um, so I don't think it's that big of an issue but Brandon Biggs: But yeah, it's definitely something to think about.</p>
+
+<p>Brandon Biggs: Especially for countries and states.</p>
+
+<p>Doug Schepers: If there are other questions.</p>
+
+<p>Doug Schepers: Please feel free to ask them, but I think we're officially taking a 10 minute break before the start of the next session.</p>
+
+<p>Doug Schepers: But Doug Schepers: Everyone should in 10 minutes will be starting Doug Schepers: The next session, which is Doug Schepers: Which is the map and to layer speculative Polly Phil and that's being facilitated by for map ML and that's being facilitated by Peter rush for Brandon Biggs: Awesome.</p>
+
+<p>Thank you, everybody.</p>
+
+<p>Peter Rushforth: Thanks, Brandon, very, very interesting and Peter Rushforth: fascinating subject and looks like it's gonna be an awesome product.</p>
+
+<p>Brandon Biggs: Awesome.</p>
+
+<p>Yeah, and get in contact with me.</p>
+
+<p>There's the Brandon Biggs: Contact Form of here.</p>
+
+<p>Brandon Biggs: And the feedback button, you can contact me.</p>
+
+<p>Doug Schepers: I look forward to talking to more offline about this.</p>
+
+<p>Yep.</p>
+
+<p>Brandon Biggs: Absolutely AMERICA CAN YOU WERE stop my screen share now.</p>
+
+<p>Doug Schepers: How your screen has Doug Schepers: Been stopped shared Brandon Biggs: Sorrow.</p>
+
+<p>Perfect.</p>
+
+<p>Awesome.</p>
+
+<p>Brandon Biggs: Isn't a hearing my screen reader.</p>
+
+<p>Awesome.</p>
+
+<p>Thank you.</p>
+
+<p>Great.</p>
+
+<p>Peter Rushforth: Okay, we'll reconvene with the channel open for eight minutes and then we'll reconvene Peter Rushforth: Well, actually I couldn't be a bit more ready but Peter Rushforth: I apologize if it's got some rough edges but I'm trying to explain part two for the map ML proposal that I introduced last night or yesterday.</p>
+
+<p>Peter Rushforth: And so here we go.</p>
+
+<p>I will share my screen.</p>
+
+<p>Good evening, and good morning in this presentation, I'll give part two of an overview of the map ML proposal.</p>
+
+<p>In part one, I explained why it is that I and others in our community believe we need maps to be understood natively by the browser.</p>
+
+<p>This is not uncontroversial and the presentations that proceeded and follow my own outline some of the challenges that lie ahead.</p>
+
+<p>I then described the function of the proposed map layer and extent elements I concluded by explaining the concept of tiled coordinate reference system.</p>
+
+<p>Which is our attempt to consolidate the terms and concepts behind spatial coordinate reference systems in order to make them implementable by the browser.</p>
+
+<p>In part two.</p>
+
+<p>I'll talk about the details of many important parts of the map and the proposal, as defined as far as I understand them.</p>
+
+<p>Your help is solicited to clarify or better define these things so that they can become implementable if they aren't already A location in Location in math Ml is a general term for anything that can be characterized by coordinates and zoom value this concept could include simple feature geometries eventually Extent processing is conceived so far location is an event associated to the extent that is fired as the browser requires new content to paint this can be a single tile, with its four Sides and corners repeated such events will eventually cover the extent or it can be a rectangle, the size and position of which is calculated at runtime by the rendering engine such that the rectangle covers the entire extent.</p>
+
+<p>That's described yesterday during extent processing location inputs are used to refer to end declarative Lee access location event properties, specifically the individual access values of the events location as well as positions that are relative to the shape of the event.</p>
+
+<p>Also, as described yesterday, the extent itself is bound to the viewport of the map and the whole extent can be treated as a location event for some purposes.</p>
+
+<p>Specifically when requesting content from services like WNs the link rail to which the input is bound by template variable reference dictates the nature of the event that is generated For example, the link rel equals image will generate a location event for a rectangle that covers the extent which is useful for WNs while a link rel equals tile will generate enough repeated tile coordinate events as tiles are required to cover the extent Tile and image location events have sides and corners, which can be referred to by the enumerated position attribute associated to the link rel equals image element in the above example we suit to two additional inputs with type equals width and type equals height, respectively.</p>
+
+<p>These new input types are required by the current proposal because I could not think of another reasonable way.</p>
+
+<p>To declarative Lee request the result of a calculation in the location input, such as for might be expressed as with equals top right minus top left.</p>
+
+<p>For example, which would obviously yield the width of the required image.</p>
+
+<p>So we propose to create the width and height inputs in order to declarative Lee access these properties of the image event rectangle that encloses the extent Your advice is requested.</p>
+
+<p>In the above examples.</p>
+
+<p>We're using input type equals location to see realize the parts that is the scale or property values.</p>
+
+<p>Not the whole composite object of tile event coordinates which have a regular location and geometry as well as corners of mapping stance which are dynamic but known at runtime, which are pixel based but have variable width and height.</p>
+
+<p>In the future we anticipate that it may be possible to rotate the map, in which case the calculation of the image or the set of tiles that covers the extent will be slightly more complicated for the browser engine, but not for the author.</p>
+
+<p>The above should still work, we believe The coordinates of a location may be expressed in any of the coordinate systems associated with a given T CRS although sometimes such expressions, don't make sense.</p>
+
+<p>For example, trying to describe a mapping step with tile rows and columns, maybe slightly inaccurate.</p>
+
+<p>We think locations should always have a zoom level associated to them, which is to say coordinates on a map should always have a scale.</p>
+
+<p>It might be possible to eliminate the input type equals zoom proposal if we find zoom as a an axis of the coordinate systems.</p>
+
+<p>Then we we would be able to serialized the zoom axis of a location event with an input type equals location.</p>
+
+<p>The location units attribute identifies by acronym the coordinate system that the location event will take place in, for example, units equals tile matrix identifies that a location event at a tile and a tile matrix is being serialized The location access attribute is used to identify the scale or access value that should be returned The location access attribute can refer to any access of any associated coordinate system for the event.</p>
+
+<p>This doesn't seem to useful for a tile event where what you want to receive is the row or call them access.</p>
+
+<p>So why would you want to ask for eating of a tile event.</p>
+
+<p>The value of being able to request the serialization of the location event of any access becomes clearer when you need to use the projected or geographic coordinates of a corner of the event.</p>
+
+<p>You can do so by specifying the corner location you want using the position attribute with a value such as top left, bottom right, etc.</p>
+
+<p>In this example, I'm showing the use of tile events to access an actual WNs which is very useful for WNs layers that don't have labels or polygon lines that can be visually disrupted by tile boundaries.</p>
+
+<p>Note that while location units attribute refers to the tile matrix coordinate system and the link rel equals tile will generate a tile event.</p>
+
+<p>The corners of the tile are being serialized in web Mercator projected coordinate reference system units or PC RS meters, because we have requested the relative position with the position attribute and the PCs coordinate for that position with the access equals Eastern value.</p>
+
+<p>So far we've not described how the browser can avoid asking for titles or content that don't exist.</p>
+
+<p>The first means is by specifying the min and max attributes on individual info inputs associated to a link template.</p>
+
+<p>The extent within which I'll link URL template should request content from the server is determined by the min and max attributes associated input type equals location and zoom variable References If such limits are not provided or not understood on a PR template basis, the client will look for extent scope values as provided as meta elements that I'll talk about in a minute.</p>
+
+<p>If such values aren't provided or understood the client will use the limits to find for the T CRS as a whole.</p>
+
+<p>I mentioned that we can provide semi custom extends from alpha male documents by specifying the extent in a meta element, according to the proposed syntax shown like bias.</p>
+
+<p>We can specify default document properties of mapping.</p>
+
+<p>They'll content such as projection zoom and coordinate system.</p>
+
+<p>Domain charting is a technique that tile caches, such as Open Street Map used to work around per domain connection limits established by browsers, in order to improve rendering performance.</p>
+
+<p>In this instance, we've set up a hidden type input with the map specific shard keyword indicating that the browser should distribute the requests made against the linked cash in round robin fashion using the values from the associated data list.</p>
+
+<p>Select inputs in the extent scope may be used to solicit input variables from the user.</p>
+
+<p>These selects could be displayed in a standard location.</p>
+
+<p>For example, in the layer control.</p>
+
+<p>The value of the select made by the user.</p>
+
+<p>For example, the date parameter shown here could be used to allow the map to query and display dimensional data such as Web Map Service dimensions.</p>
+
+<p>HTML uses undifferentiated HTML uses undifferentiated opaque URLs in various ways for different reasons which are reflected In a few elements.</p>
+
+<p>The link a trap element, the image source attribute and the A ATRA Form all represent different markup and reasons for associating document first to help keep separate concerns separate.</p>
+
+<p>There's the link element.</p>
+
+<p>Which is used to associate one file with another in various relationships, such as style sheet or JavaScript inclusion.</p>
+
+<p>Next, the source attribute is used to imply a composition relation between the source document and the link resource.</p>
+
+<p>Finally, a truth markup is defined to be a hyperlink and serves as the glue for the Federated nature of the web itself.</p>
+
+<p>The use of links that we've already seen a little bit earlier, is as a layer reference in the layer source attribute This usage of plain undifferentiated opaque URLs is vital to gain the advantages of simple sharing of information over the web.</p>
+
+<p>No API, apart from that HTTP with it standard Standardized media types should be needed to access map content.</p>
+
+<p>We hope that it will be possible for browsers to treat such URLs in a way similar to how they manage a URL to an image or video file.</p>
+
+<p>In those cases, the browser browser synthesizes a simple HTML document around the resource and renders it Is hard to summarize in a few sentences about how important this feature is so I won't try.</p>
+
+<p>I did a lightning talk about this idea.</p>
+
+<p>A few years back, and that tries to explain some of the reasoning which I'll paste into the chat window now.</p>
+
+<p>Next in layers may refer to externally defined legends using the link rel equals legend link relation This is an extension of the supported link relations in HTML and reflects the use of legend links in WNs It might work similarly to the rel equals icon link in relation link relation in HTML, but it might also need more specifying in this proposal.</p>
+
+<p>If map widgets supported a legend control this link could be could work good work by that be used by that control, if not the URL of the legend is available through the DOM, or possibly through another high level API.</p>
+
+<p>Next, the link rel equals license link relation with associated title attribute indicates the licensing and attribution associated to the map content.</p>
+
+<p>Peter Rushforth: So part of the part of the proposal is also for to implement alternate styles as sort of defined by name styles in the WNs specification and Peter Rushforth: This would be done by a series of essentially alternate alternate links that would be characterized by the style REL and the style that is the currently the current.</p>
+
+<p>The that identifies the current style of base map would have the additional Peter Rushforth: real value of self style as shown here.</p>
+
+<p>So this allows you to simulate you know like in Google Maps, for example, satellite or or Matthew or hybrid view kind of thing.</p>
+
+<p>Peter Rushforth: So a key value of links in HTML is to refer to as a separate Peter Rushforth: Content from presentation rules in style sheets and that is supported by the proposal for map for map content and style sheets relating to map content.</p>
+
+<p>Peter Rushforth: And so there are small set of projections that are supported by Peter Rushforth: The proposal currently and rather than asking browsers to fully support projection transformations Peter Rushforth: We propose an alternate mechanism for negotiating projection through a link relation of alternate with a projection and an added projection attribute.</p>
+
+<p>So as a as a map.</p>
+
+<p>Peter Rushforth: Defined by the browser would have a defined projection.</p>
+
+<p>If someone tried to add a Peter Rushforth: Layer that didn't match that projection.</p>
+
+<p>It could say, well, well, if the projection didn't match the map, it wouldn't allow it to be drawn would just be inert.</p>
+
+<p>Peter Rushforth: But if, if the the incoming URL supported or content supported alternate projections, it would simply follow the appropriate alternate and and use that instead Peter Rushforth: So the there are so link relations for meta, meta references so tiles images and features feature and imager essentially synonymous, but they they Peter Rushforth: Are it probably should be factored out into media types so so consolidate the tile and extent or some other Thailand map link relation and and distinguish between images and Peter Rushforth: Features by media type Peter Rushforth: And then we've implemented a kind of Peter Rushforth: Link that allows you to set up like a zoom in relation or zoom out relations.</p>
+
+<p>So you can transfer Peter Rushforth: The source of the layer from from one data source to another, depending on whether the user scrolls zooms in or out.</p>
+
+<p>And that, I think that needs to be has more work done on user interface and so on, but it seems to be pretty functional Peter Rushforth: And then we have the query support for feature query and Peter Rushforth: That way that it's set up by a link relation of query and it's fed by that by Peter Rushforth: Inputs and so on for the location inputs and zoom inputs and so on, as per the content.</p>
+
+<p>Peter Rushforth: Thing content requests and I'll describe Peter Rushforth: That a little bit.</p>
+
+<p>Now one of the fundamental use cases of maps is to identify the properties of a feature of interest.</p>
+
+<p>This is supported in many standard geospatial API's both on the server and client.</p>
+
+<p>Peter Rushforth: One of the key challenges of this use case is to make it accessible what's shown in this short clip is a keyboard user manipulating the map extent and using the keyboard to interrogate the top layer at the center point of the map.</p>
+
+<p>In the example a single feature element with a polygon geometry is returned by the server and drawn on top of the map highlighted in yellow.</p>
+
+<p>With no fill the properties of the feature in the response from the server is loaded into a browsing context, in this case the context is confined to a pop up balloon.</p>
+
+<p>The OTC simple features model is the most successful standard no GC history and is the backbone of the spatial data processing industry and on the web geo JSON is the most appropriate current standard for encoding it as text.</p>
+
+<p>HTML is arguably the most successful standard in history.</p>
+
+<p>While it's not the intent of the proposals to suggest that all features in Maps.</p>
+
+<p>Should be represented as HTML elements.</p>
+
+<p>It's a natural step if we're going to create maps in HTML to create a browser render evolved version of the simple features model in HTML that supports markup of the earth and objects in real and hyperspace.</p>
+
+<p>With the same technology and for the same reasons that human text is rendered as markup in HTML style double accessible hypertext The proposed feature element would be a natural DOM representation of geo JSON content in that its properties element could contain arbitrary standard HTML.</p>
+
+<p>The geometry property of the geo JSON feature object would be represented a semantic markup with sequences of coordinates elements representing corresponding coordinate pair arrays in the geo JSON property.</p>
+
+<p>The native zoom or intended scale of the feature and its properties is represented by the feature zoom attribute The coordinates are in horizontal axis space vertical axis order that is commonly referred to as x y order.</p>
+
+<p>I don't refer to it as such because there are several associated coordinate systems in a TC RS and it should be legal to represent geometries in any of them and the coordinate system used for a geometry should be identified by the geometry CS attribute The geometry content model is based on the standard or GC simple features model.</p>
+
+<p>And so it's not unlike K ML geo JSON shape files and many others.</p>
+
+<p>It's intended to be fully selectable and scalable with CSS and linkable in a way similar to human readable text.</p>
+
+<p>This demands a mixed content model for geometry coordinates sharing the simple features geometry model of so many formats means that there are many existing libraries that can be used or easily adopted to serialized it Moreover, since there is a negligible impedance mismatch between this and geo JSON geometry model styling and rendering is simplified and will work with any JavaScript process that already uses to JSON.</p>
+
+<p>Having a CSS selectors compatible component model means that CSS can be used to render.</p>
+
+<p>For example, tiled vector content in an efficient and standards compliant way.</p>
+
+<p>Links embedded in content or the feature that sets the web, apart from all previous and future platforms web maps should use this facet of the web to enable Federation of services in the same way that HTML pages are federated you link to the thing you want people to go see The same should be true of web maps a web cartographer should be able to link to the thing that should replace the layer or map the user is looking at when they activate the link Links while style level should hit the geo web with a predefined canonical style and accessibility behavior so that users recognize them as something they are expected to activate activating a link should replace the current browsing context.</p>
+
+<p>Or with the link to layer or if the responses text HTML, it should open to a new top level browsing context or something like that.</p>
+
+<p>The proposal started off with actual tile elements and they still respond to requirements for static map documents.</p>
+
+<p>This might be a way in which custom renders could be managed the developer could set up an event cycle for tiles, which they want to be responsible for the content.</p>
+
+<p>Via the Canvas image or other thing, the browser could generate the tile for the developer handing them the painting surface when appropriate.</p>
+
+<p>The browser would still be responsible for tile lifecycle management and could even create a local tile cash.</p>
+
+<p>So that was painted it could be reused.</p>
+
+<p>When the link rel equals image construct is used a request for an image to cover the extent ensues.</p>
+
+<p>This image is currently rendered at 00 of the map coordinate system.</p>
+
+<p>Because currently, we can't rotate our maps so the Image fills the entire viewport in both dimensions.</p>
+
+<p>Generally, the implication of this is that a virtual image element is created.</p>
+
+<p>And rendered at an absolute position in the TC RS and the image covers the entire viewpoint, possibly with hidden overlaps outside the box.</p>
+
+<p>This could lead to a useful concept arbitrary HTML, including SVG, of course, should be render a bowl on a map layer just as map tiles and features and images are This would be a great help with cartographic communication as maps often have embedded metadata and this could be a natural and accessible way to include that.</p>
+
+<p>A key feature of spatial data infrastructure is the ability to use in place without copying authoritative data.</p>
+
+<p>This was what gave rise to a GC web services which will eventually give away to OTC API's.</p>
+
+<p>I know that this aspect of the proposal is similar or related to that of Takagi songs SVG map JS layer concept.</p>
+
+<p>It key feature of the web is the ability to share stuff using plain undifferentiated opaque URLs that are inter mediated mostly by web browsers.</p>
+
+<p>The idea of sharing here is broadly defined to include, among other things, links between documents links to media resource resources bookmarks separation of style from content inclusion of script to extend behavior, etc.</p>
+
+<p>The proposal began by specifying map them out as a vocabulary in micro XML based on the authors in evolving understanding of how to propose stuff for compatibility with HTML.</p>
+
+<p>I now realize that I went a little too far in banishing all names faces and XML syntax, we should have started with the XML namespace and syntax of HTML5.</p>
+
+<p>I believe we can easily fix this by adding the HTML namespace to our XML serialization and the plan is to add an HTML parse are compatible version when appropriate.</p>
+
+<p>Just to be clear, the dock type mapping now and the map ML elements, shown here is not HTML parts are compatible today and we need to close the issue on that conversation before moving forward with the HTML syntax idea.</p>
+
+<p>In any case, the core idea here is that, including map content should be about as easy as including a video, audio or image by using the layer source attribute, as shown to point to math ML content.</p>
+
+<p>Peter Rushforth: So, Peter Rushforth: What does it mean for a map to be accessible Robert Linder and Nick Chen contributed to Peter Rushforth: That discussion tonight and Robert has been helping to make the Web Map custom element more accessible.</p>
+
+<p>But there's more that needs to be done.</p>
+
+<p>Peter Rushforth: And we welcome new contributions and contributors.</p>
+
+<p>My hope is that by allowing websites to represent the physical world in a standard way it will be a first step in enabling augmented reality for users.</p>
+
+<p>Peter Rushforth: Much like what we saw with a dream come true it earlier in Brandon's presentations that is by defining standard geospatial markup that is understood by browsers you enable browsers to read the world which is appropriate support for users.</p>
+
+<p>Peter Rushforth: While the declarative form is less powerful ie not Turing complete it isn't necessarily simple as we've seen, Peter Rushforth: Simplicity, however, is a goal, and one that is intention with sufficient function.</p>
+
+<p>Peter Rushforth: The ambition of the proposal is to define enough to be a solid and performant foundation or progressive enhancement, while not trying to replace the ecosystem of Geospatial web developers who create and use maps.</p>
+
+<p>Peter Rushforth: So, Peter Rushforth: Animation is obviously something that hasn't really been considered yet in the proposal, and that's something that we should Peter Rushforth: Factor into future discussions, you know, as a thought process, as mentioned by Doug earlier or yesterday.</p>
+
+<p>Peter Rushforth: That the thought occurs to me that we need to have the ability to create geospatial content using web browsers.</p>
+
+<p>And so that would lead perhaps naturally to Peter Rushforth: Using reusing repurposing the input type, location to serialized the different simple features geometries in in forms that were associated to Map Layers.</p>
+
+<p>Peter Rushforth: I think Peter Rushforth: The DOM API is of elements and attributes is already you know there's already pretty elaborate one specified here.</p>
+
+<p>But, um, is there is there more that we need to specify um Peter Rushforth: That's an open question.</p>
+
+<p>I think what we need to do is to build a web app web mapping applications using the fall, I feel, to examine exactly what what what Peter Rushforth: Web developers will need to progressively enhanced that Peter Rushforth: And so could the DOM API as as sort of envisaged.</p>
+
+<p>Peter Rushforth: Be a foundation for you know version.</p>
+
+<p>What I don't know what version of open layers is that, but the next generation of open layers could be more readily and performant Lee and compact Lee built upon Peter Rushforth: Upon a Web Map element and layer element.</p>
+
+<p>And what would that look like in the objective would be to make that easier and more maintainable.</p>
+
+<p>Peter Rushforth: And how can we Peter Rushforth: Build Car.</p>
+
+<p>Car graphic requirements into CSS, that's a conversation is very much Peter Rushforth: Interested, we're very much interested in having and three, could we add 3D rendering through something like a map with projection equals globe attribute.</p>
+
+<p>So that with geo pose like started condition.</p>
+
+<p>So we're going to hear a bit quite a bit from the augmented reality community and Peter Rushforth: The geo post community in particular could help.</p>
+
+<p>Peter Rushforth: flesh out this concept.</p>
+
+<p>Peter Rushforth: So cores security.</p>
+
+<p>I don't, I'm not a security expert, but there's obviously lots of security implications and Peter Rushforth: Layering content vertically in the browser from different domains and a lot of risks.</p>
+
+<p>So that needs to be thought about and designed and maybe you know we need to find out if there are showstoppers in there.</p>
+
+<p>Peter Rushforth: So queries queries could be met, like what, when we see the browser interrogating polygons on the on the map that could that's a chorus situation as well because you're receiving content from over the web.</p>
+
+<p>Peter Rushforth: As currently envisaged a map document would not have executable JavaScript in it.</p>
+
+<p>So I mean that's maybe one saving grace, but Peter Rushforth: To be determined.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: The HTML parse or should be used because of the math mail document requirements.</p>
+
+<p>This seems to be a challenge.</p>
+
+<p>Peter Rushforth: So when SVG is parsed and referred to by an image source attribute seems to be a similar scenario.</p>
+
+<p>So, as described.</p>
+
+<p>And so that's all I have for my presentation.</p>
+
+<p>I'd be happy to do a demo or or answer questions as we go along.</p>
+
+<p>Amelia Bellamy-Royds: So I think we've had some questions coming in on the chat so might be worth going through a few of those.</p>
+
+<p>Although I was also hoping you'd have turned to play around with your poly filled him.</p>
+
+<p>Oh.</p>
+
+<p>Amelia Bellamy-Royds: Yeah, I'm Peter Rushforth: Up for that.</p>
+
+<p>So maybe talk a few Amelia Bellamy-Royds: We've only got a small group so Amelia Bellamy-Royds: People can probably jump in and unmute themselves when they like.</p>
+
+<p>But to start it off.</p>
+
+<p>Amelia Bellamy-Royds: Fred ash.</p>
+
+<p>Amelia Bellamy-Royds: commented earlier on, why are you reusing input element isn't HTML input already complicated enough and later a problem with reusing element names that exists in HTML is it confuses validation tools that already have problems with Amelia Bellamy-Royds: SVG and map mo will make that worse.</p>
+
+<p>So Peter.</p>
+
+<p>You and I have had many conversations on this so you know my opinions on it, but Amelia Bellamy-Royds: Do you want to kind of explain the thinking that led to the current proposal and what what can maybe be done to change things.</p>
+
+<p>Peter Rushforth: If no so input.</p>
+
+<p>We're not reusing where we are using those we're proposing extensions to existing elements so Peter Rushforth: The, the notion is that this is part of HTML.</p>
+
+<p>So every, every new attribute and every new element is a proposed new attribute or an element in HTML.</p>
+
+<p>So yes, that's, that's a challenge because of the expense and effort of doing this.</p>
+
+<p>Peter Rushforth: But I believe that the HTML design principles success suggest that you not create new market forms where you know there is already an existing market form.</p>
+
+<p>Peter Rushforth: For a given semantic so Peter Rushforth: There, you know, there are lots of ways to think about that, for example, Peter Rushforth: The Peter Rushforth: You know, they didn't invent a new image element when they went to provide responsive design for or for images they they looked at, well, Peter Rushforth: Where do images come from on the web and where do we mark them up in in the web and can we provide a new interface for that.</p>
+
+<p>That is Peter Rushforth: Understandable in the context of images.</p>
+
+<p>And so that is the reasoning behind using are targeting the input element.</p>
+
+<p>So yes, the proposal would probably benefit from Peter Rushforth: A nested type of new type of input, like a button or something like that or like an application input that you could factor out axes into different elements and so on.</p>
+
+<p>But HTML already has inputs and so like anything, you know, some people hate them was Brian Cordell still on the line.</p>
+
+<p>Peter Rushforth: Some people hate them.</p>
+
+<p>Fred Esch: Alone puts our form elements and working as an accessibility person getting developers to do something totally different.</p>
+
+<p>And this other sense Fred Esch: They would pick up attributes and it would be a nightmare keeping them from using wrong attributes and roll in the wrong place, and your validation tools are just going to go not Fred Esch: So I really hate that idea myself but Peter Rushforth: I did fork the HTML Parker and create a validator, you know, create the Peter Rushforth: validator for the Malcolm know vocabulary and Peter Rushforth: You know, it's possible.</p>
+
+<p>Peter Rushforth: I said, Of course it's not the only validator on on the planet.</p>
+
+<p>But, you know, change when you do make changes to a language you want to make them.</p>
+
+<p>Peter Rushforth: In the right places.</p>
+
+<p>So Peter Rushforth: Maybe that maybe three see validation service has problems with embedded SVG.</p>
+
+<p>Fred Esch: Coming giving you false negative failures and that battle.</p>
+
+<p>Just go not Doug Schepers: I don't think that we should Doug Schepers: I don't think that we should Doug Schepers: Predicate any particular enhancements on Doug Schepers: What existing tools with on the, on the, on the flaws of existing tools.</p>
+
+<p>I know the SVG parse or the SVG feature or the SVG validation and WCS validator is not very good.</p>
+
+<p>That's Doug Schepers: That's a flaw in the validator not in the proposal now I it's not that I disagree with you.</p>
+
+<p>I'm just saying, Let's not say that just because one tool does something poorly that we need that we can't do something else.</p>
+
+<p>Right.</p>
+
+<p>We shouldn't be predicated only on tools.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>So anyhow, my understanding of the HTML design principles is that you should look for a semantic entry point for for making proposals for changes for, you know, for Fred Esch: Yeah, but an input is a form element.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>So as I described the extent is a new type of form element so Fred Esch: Extended user input.</p>
+
+<p>Peter Rushforth: Know like a form.</p>
+
+<p>So a form is not a visible kind of construct so Nora's extent extent is a is the the conceptual rectangle of the of the years viewport and and for the map and that rectangle Peter Rushforth: Is bound to the extent element and the inputs and and links that are children of that extent omen.</p>
+
+<p>So the extent element provides our Peter Rushforth: Scope.</p>
+
+<p>Let's say for for the the inputs and links that are in it in the same ways that way that the form element provides a scope for inputs and the action attribute the single action attribute to which it is directed you know the difference between an extent and a form, you know, Peter Rushforth: I mean, there's an overlap in in in the idea, at least, but the differences are that the extent could have more than one URL to which it Peter Rushforth: It makes requests, whereas a form is down to the action now you Amelia Bellamy-Royds: Yeah, I mean, there is a course similarity in that form and form inputs are used to access a Amelia Bellamy-Royds: Possibly infinite set of possible URLs by building up a URL from parts, based on the user's action and in that way they extend to the inputs that in Peters proposal.</p>
+
+<p>Amelia Bellamy-Royds: They are used to build up the possibly infinite combinations of URLs, based on the users panning and zooming up the map.</p>
+
+<p>Amelia Bellamy-Royds: And so there is a logical similar guarantee there that you know the form inputs define the sort of parameters that a database query accepts and the extent inputs define the parameters that Map Server accepts Amelia Bellamy-Royds: Yeah.</p>
+
+<p>Not just that, said I, I see the logic of it, but I also very much agree with friends.</p>
+
+<p>Amelia Bellamy-Royds: Concerned about just reusing a very overloaded element.</p>
+
+<p>Doug Schepers: Yeah, I, I, even though I don't think we should predicate things on existing tools that we can't even get the input new input elements implemented for Doug Schepers: For common things like, I don't know, work the calendar is but there are several inputs that do not that are not interoperable.</p>
+
+<p>A implemented.</p>
+
+<p>Doug Schepers: So several the new HTML5 input types are not interoperable implemented in browsers in that goes to that speaks to how willing browsers are to fiddle with these new existing Doug Schepers: Tools.</p>
+
+<p>So I agree with Fred, in essence, although I i Doug Schepers: Yeah.</p>
+
+<p>Doug Schepers: I think that overloading input at this point is probably asking Doug Schepers: For a lot from browsers, even though I understand, logically, like there's a certain elegance to it, but it's, it becomes less elegant when you consider Doug Schepers: How overloaded.</p>
+
+<p>Doug Schepers: The different input types are already.</p>
+
+<p>And again, what that does mean for not just parsing, but actually adding behavior to them.</p>
+
+<p>Peter Rushforth: I mean, I, I'm sympathetic, but also would hurt.</p>
+
+<p>Hurt everybody's attention back to the HTML design principles and like if there's a, you know, something that does what an input does which is Peter Rushforth: Provide a variable value.</p>
+
+<p>Peter Rushforth: To the, to a a server.</p>
+
+<p>Peter Rushforth: Should you go around inventing a new mechanism for that in HTML, like I didn't feel like it was my place to say this is the new style of input that that HTML expects.</p>
+
+<p>I said, you know, we said inputs are what they use today.</p>
+
+<p>Peter Rushforth: So, you know, Peter Rushforth: Like unless you're freezing HTML forever.</p>
+
+<p>Peter Rushforth: You know, Doug Schepers: I think that I totally get where you're coming from.</p>
+
+<p>And theoretically, you're correct.</p>
+
+<p>But I really think you need to look at Doug Schepers: The recent history of Doug Schepers: Of how of the of extending markup within the HTML group and it's it there's a Doug Schepers: There's definitely strong resistance to changing things about inputs at this point.</p>
+
+<p>So even though you're theoretically correct Doug Schepers: And even though long term, it might be the better solution.</p>
+
+<p>Doug Schepers: I the extent to which you're changing the inputs makes them.</p>
+
+<p>Doug Schepers: Much more complicated to implement it might just be easier to try to find out the mechanism.</p>
+
+<p>Peter Rushforth: Yeah, um, Peter Rushforth: Well, if I if another mechanism would fly better, I'd say, sure.</p>
+
+<p>Peter Rushforth: No problem.</p>
+
+<p>We can redo that proposal part of the proposal, but I you know I Peter Rushforth: Anyhow, I'm saying they're like inputs in forms and we need to maybe start the debate at that point.</p>
+
+<p>Peter Rushforth: Not what you can't do inputs, because we hate them.</p>
+
+<p>Well, so inputs are dead.</p>
+
+<p>Fred Esch: To change gears, um, Fred Esch: Google Maps uses a zoom level and a center point.</p>
+
+<p>And it's pretty simple.</p>
+
+<p>What, why do you have a different way of doing you're defining where your map is because they're they're using raster tiles.</p>
+
+<p>Peter Rushforth: Okay, well that was in part one, Fred.</p>
+
+<p>So yeah, we, we, we have the same simplicity we have map zoom equals whatever lot equals whatever long equals whatever and and that's your starting conditions for the map.</p>
+
+<p>Fred Esch: Okay, I thought I saw that.</p>
+
+<p>But I thought today, you were talking about corners and all sorts of stuff.</p>
+
+<p>Peter Rushforth: Well, I mean, I'm talking about how the logic for getting content into the math works.</p>
+
+<p>And that's a pretty important when you know these maps are, you know, hundreds or thousands, thousands of gigabytes Ivan, you've got a question.</p>
+
+<p>Doug Schepers: Do you are you muted.</p>
+
+<p>Peter Rushforth: Maybe you have to acknowledge the end in this this thing I can do a demo.</p>
+
+<p>If anybody wants to see that.</p>
+
+<p>Doug Schepers: He doesn't seem to be muted, but we can't hear you them.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Doug Schepers: Oh no, he's gone.</p>
+
+<p>Oh no, he's not there he is.</p>
+
+<p>Peter Rushforth: Your microphone is not working.</p>
+
+<p>Doug Schepers: Oh, Peter Rushforth: You want to type it in the in the chat type your question.</p>
+
+<p>Amelia Bellamy-Royds: No.</p>
+
+<p>Still nothing.</p>
+
+<p>Amelia Bellamy-Royds: Okay, we'll switch around Brian, you mentioned you had some questions.</p>
+
+<p>Bryan Haberberger: And I yes I do have a couple.</p>
+
+<p>So, stop me if you feel like I'm taking up too much time.</p>
+
+<p>Um, is it okay if I share my screen just super fast.</p>
+
+<p>Mm hmm.</p>
+
+<p>Bryan Haberberger: So you're probably predicated to this question.</p>
+
+<p>You probably know it's coming.</p>
+
+<p>So a lot like what you just said.</p>
+
+<p>Bryan Haberberger: Essentially what we have is forms and we use HTML form to build into an API and a database so that you didn't have to write JavaScript to do it.</p>
+
+<p>Bryan Haberberger: Um, so we came across a lot of the things you know what a Bryan Haberberger: Primitive what is something that needs to be known.</p>
+
+<p>You know what type of things being saved by the form.</p>
+
+<p>Who's the person creating the form.</p>
+
+<p>What's the motivation for it.</p>
+
+<p>That's a very web annotation thing.</p>
+
+<p>Don't worry about it.</p>
+
+<p>Bryan Haberberger: Um, but really specifically was being able to provide context.</p>
+
+<p>So I saw that you had a lot of link sort of primitive things and one of those very early slides you showed Bryan Haberberger: And I was wondering if you have considered one of those for supplying schema, sort of like an already FS XML style schema or or even like a JSON LD context like this.</p>
+
+<p>Bryan Haberberger: That's.</p>
+
+<p>That's my first question.</p>
+
+<p>Peter Rushforth: Out of my scope of extra expertise, frankly, Brian.</p>
+
+<p>Bryan Haberberger: That's okay.</p>
+
+<p>I was just curious because all it is is just, you know, here I have an array of them, which is a whole nother thing to charge to talk about arrays as attributes and you can see here Bryan Haberberger: Like you're proposing your, you have to implement some kind of syntax and take away some kind of eliminated from the user to make sure we can parse these things correctly.</p>
+
+<p>Bryan Haberberger: And that just turns into a nightmare.</p>
+
+<p>So I'm really curious how you're going to express hierarchy in those coordinates which is my second question.</p>
+
+<p>Peter Rushforth: Well, there are arrays of coordinate element coordinates elements you know so.</p>
+
+<p>Oh.</p>
+
+<p>Bryan Haberberger: I see.</p>
+
+<p>So you're going to use the element itself.</p>
+
+<p>Peter Rushforth: Yeah, so the coordinates element is the the the deepest child.</p>
+
+<p>Well, I mean, I guess in my proposal you would be able to wrap spans around coordinates and Peter Rushforth: A Peter Rushforth: A Peter Rushforth: High hyperlink anchors around coordinates or around, you know, parts of coordinates.</p>
+
+<p>Bryan Haberberger: Gotcha.</p>
+
+<p>Peter Rushforth: So, Peter Rushforth: So, yeah.</p>
+
+<p>Peter Rushforth: The coordinates are basically Peter Rushforth: The lowest level element and you could so you could style different rings differently or multiple times, I guess.</p>
+
+<p>Bryan Haberberger: I see, I see.</p>
+
+<p>So it's not.</p>
+
+<p>Can you like nest a coordinate element in another coordinate Peter Rushforth: No, no, no.</p>
+
+<p>Bryan Haberberger: No.</p>
+
+<p>Peter Rushforth: So no, it's based on based on geo JSON simple theaters, mon.</p>
+
+<p>OK, and now Peter Rushforth: All of these, these Peter Rushforth: Formats of this similarity that way.</p>
+
+<p>Bryan Haberberger: Good.</p>
+
+<p>That's good answer.</p>
+
+<p>That's what I was looking for.</p>
+
+<p>Bryan Haberberger: Good.</p>
+
+<p>So then, I guess what I'm no.</p>
+
+<p>Can you still hear me I push the button.</p>
+
+<p>Bryan Haberberger: Yeah, yeah.</p>
+
+<p>Okay.</p>
+
+<p>Bryan Haberberger: So when you when you did that.so.</p>
+
+<p>This is something I just have no knowledge about when you did that doc type map ML was that sort of your way of telling the browser developers.</p>
+
+<p>I'm using that markup language schema is that how at that level.</p>
+
+<p>You were like, hey, Peter Rushforth: So the, the, the, the purpose of the doc type math ML and concept is Peter Rushforth: To.</p>
+
+<p>It's like the media type.</p>
+
+<p>So it's a second second level of processing that beyond the media type.</p>
+
+<p>So when you have when you exchange messages on the web, you have the content type and the accept headers to Peter Rushforth: Dictate you know media type metadata.</p>
+
+<p>So you could say text HTML is this text map analysis is this response to a source attribute required.</p>
+
+<p>Okay.</p>
+
+<p>And because that's, you know, layer element, it gets drawn Peter Rushforth: Drawn by the by the render in the in the coordinate space that is set set up as a leg.</p>
+
+<p>Peter Rushforth: But when you when you Peter Rushforth: So just to fit into the HTML parts or, you know, the HTML elements of void syntax and some of them are, you know, there's an idiosyncrasy to HTML that Peter Rushforth: That Peter Rushforth: You would have to follow like the few us inputs.</p>
+
+<p>For example, if you extend inputs.</p>
+
+<p>They are void element.</p>
+
+<p>So you have to have a have a not no closing tag.</p>
+
+<p>Peter Rushforth: For example, and Peter Rushforth: So a doc type Matha would be like it mode so that when you when you loaded it when you load a an SVG off a off a SVG URL, you've got that SVG media type to guide you.</p>
+
+<p>But when you're loaded off a file system.</p>
+
+<p>There's no, there's not necessarily the right Peter Rushforth: Media type and that's their map to different file types and and stuff like that.</p>
+
+<p>So the browser would Peter Rushforth: Needs to have more clues like that are in the document.</p>
+
+<p>And so, I mean, we haven't close the close the loop on this conversation with Simon and the what way experts, but I'm still pushing for a doc type math ML as a as a sort of Peter Rushforth: A second tier of media type indication Bryan Haberberger: Yeah.</p>
+
+<p>Bryan Haberberger: You know, yeah, that makes great sense.</p>
+
+<p>I just, you know, I've been developing for 10 years doing doc type HTML at the top and never asked anybody why I had to do that.</p>
+
+<p>Peter Rushforth: Yeah, I think it's, it's like I'm processing mode for the partner Simon could definitely give you a couple of our discussion on that.</p>
+
+<p>But, um, Peter Rushforth: You know they don't like to change the parts are at all.</p>
+
+<p>Peter Rushforth: And you know even adding new elements, I guess, makes them nervous.</p>
+
+<p>So adding new modes is like a double nervous.</p>
+
+<p>So anyhow, we have to walk that line.</p>
+
+<p>Bryan Haberberger: Yes.</p>
+
+<p>So my last question is a softball exciting to to point me to the right place.</p>
+
+<p>Bryan Haberberger: At some point, you had to write and using you know feature tag.</p>
+
+<p>Here's the vocabulary for that feature tag or something, you know, some description about it somehow.</p>
+
+<p>Where is that so I can sort of kind of get a better idea about the exact definition of elements us Peter Rushforth: Yeah, so that's the math and now specification which is evolving.</p>
+
+<p>Let's Bryan Haberberger: Say, Peter Rushforth: You know my Bryan Haberberger: Standard all the good ones are.</p>
+
+<p>That's how we do it for things open open minds.</p>
+
+<p>Peter Rushforth: So in the master race now community group on GitHub.</p>
+
+<p>I'll paste it into the chat here.</p>
+
+<p>Bryan Haberberger: Yes, please.</p>
+
+<p>Peter Rushforth: And I yeah Peter Rushforth: There is the math ML repository, and you'll find a link to that to the spec for that.</p>
+
+<p>And in there like there are some things in there that are probably a bit confusing at this point because it's Peter Rushforth: It's a you know a challenge for me to do everything.</p>
+
+<p>Now, keep it up to date.</p>
+
+<p>Our lender is keeping me like Peter Rushforth: On track here because he's got he's got a very sharp eye for detail so it'll probably come up to speed, again soon.</p>
+
+<p>But Peter Rushforth: You know, we're talking about the proposal in general here not specifying at the moment.</p>
+
+<p>So maybe I'll just do a quick demo.</p>
+
+<p>If there's any more time.</p>
+
+<p>Amelia Bellamy-Royds: Yeah.</p>
+
+<p>What did you take the last five minutes, unless anybody has urgent questions.</p>
+
+<p>Fred Esch: Do you have any support.</p>
+
+<p>Fred Esch: For guests.</p>
+
+<p>Ted Guild: From earlier.</p>
+
+<p>I'm sorry I Fred Esch: Am XML. Peter Rushforth: What was the question.</p>
+
+<p>Sorry, say again.</p>
+
+<p>Fred Esch: You have support for guess it gets a tier Geographic Names.</p>
+
+<p>I'm Peter Rushforth: Like a.</p>
+
+<p>Is that a, it's a kind of a query interface right Peter Rushforth: Oh no no no support yet.</p>
+
+<p>Oh, specifically anyway.</p>
+
+<p>Peter Rushforth: So, Ted Guild: Here, if I had a question.</p>
+
+<p>Ted Guild: For the Okay.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Ted Guild: Let me scroll back and find it.</p>
+
+<p>Ted Guild: The use case for not specifying map view as center, zoom, lot of people want to specify maximum Matt Baume you to display at most 180 degrees of love to Ted Guild: Get those Ted Guild: Sorry.</p>
+
+<p>Ted Guild: And a Ted Guild: Mystic again.</p>
+
+<p>Peter Rushforth: A best case for not specifying Matthew as a center Zoom is a lot of people want to specify maximum math bounds.</p>
+
+<p>As a starting condition.</p>
+
+<p>You mean Amelia Bellamy-Royds: So there was the option of Amelia Bellamy-Royds: Setting be box bounding box dimensions, instead of just the center point.</p>
+
+<p>And actually, Amelia Bellamy-Royds: Takaki sign also was commenting on how bounding box can be a lot more flexible than a zoom levels, which only have, you know, integer options, but with a vector graph, you don't need to restrict yourself to the tight levels, you can have continuous zoom Peter Rushforth: Yeah, so, um, we have the concept of extent for for a layer so you can set the set the extent, for a given layer and then I think that you could simulate like zoom it like a big box starting conditioned by zooming to that.</p>
+
+<p>Peter Rushforth: Extent like having a zoom to extent.</p>
+
+<p>Peter Rushforth: Thing is that good enough that give me a thumbs up or not.</p>
+
+<p>Peter Rushforth: So let me share.</p>
+
+<p>And I don't know if it where we're at in the Peter Rushforth: In the evolution of the poly feel will help us.</p>
+
+<p>Peter Rushforth: Share this guy.</p>
+
+<p>Peter Rushforth: So this is the poly Phil Peter Rushforth: And it's based on leaflet and get, you know, a modified leaflet.</p>
+
+<p>Well, not to modify it actually is pretty rapidly flip.</p>
+
+<p>But we extend our, our thing and it allows you to Peter Rushforth: Yeah, so starting conditions are like currently based on lat long zoom.</p>
+
+<p>But, you know, the geo pose and so on.</p>
+
+<p>They have they've got some Amelia Bellamy-Royds: Pet your video working, we're getting your audio.</p>
+
+<p>Peter Rushforth: Cut my video something I do.</p>
+
+<p>Yeah.</p>
+
+<p>Can you hear me.</p>
+
+<p>Doug Schepers: I was that better.</p>
+
+<p>Amelia Bellamy-Royds: Much better.</p>
+
+<p>Peter Rushforth: Okay, so, so Peter Rushforth: If I just, we've got a little menu setup here.</p>
+
+<p>So the debug mode.</p>
+
+<p>Peter Rushforth: debug mode.</p>
+
+<p>Peter Rushforth: It shows you the extent of the layer in a outlined in red, and it shows you the tile the tile grid and Peter Rushforth: And so we could we, we have we have the properties of the properties of the map and Peter Rushforth: Our setup.</p>
+
+<p>Peter Rushforth: Let's see.</p>
+
+<p>Peter Rushforth: So the Peter Rushforth: The properties of the map of each layer has an extent property.</p>
+
+<p>So you could have them.</p>
+
+<p>Peter Rushforth: So that the the coordinates of the corners of the extent are stored in that in that Peter Rushforth: Toggle debug mode just reload.</p>
+
+<p>Peter Rushforth: There right f 12 and I select the elements, the Peter Rushforth: Layer itself has Peter Rushforth: An extent property.</p>
+
+<p>Peter Rushforth: That Peter Rushforth: That has the coordinates of the, of the, the layer.</p>
+
+<p>Peter Rushforth: In Peter Rushforth: Cop right and bottom left, and all the different coordinate systems associated to the TC RS and so Peter Rushforth: Like, I think there's a zoom to function built into leaflet and we copied it into the the mouth element as an API type of thing.</p>
+
+<p>So you could calculate calculate the center point of that bounding box and zoom to that.</p>
+
+<p>Peter Rushforth: We haven't got the zoom to layer thing, but the plan was to fit that bounding box at the at the, the maximum possible zoom Peter Rushforth: Onto the map as as as possible and then zoom to that.</p>
+
+<p>So that was sort of like the bounding box starting conditions, but I mean, then you would have to save the Save the starting conditions as lat long zoom in the current, current Peter Rushforth: Proposal so so that's sort of the best answer I can give you.</p>
+
+<p>Yvonne Badita Florin: I'm not sure, can I intervene alto so Peter Rushforth: Are we Badita Florin: Failing because like this is in the beginning, you will zoom to a specific location, let's say, a CT or neighborhood.</p>
+
+<p>Badita Florin: But I'm not sure if the question was more okay maybe indirectly, let's say New York use zoom in Brooklyn and the maximum extent that you can zoom out to be the surface of the city of New York, you cannot go to city or country level.</p>
+
+<p>Is this about or Peter Rushforth: Oh, I see.</p>
+
+<p>So you couldn't zoom out past that.</p>
+
+<p>Badita Florin: This like the least use cases for like CDs or other things like that where you don't want users, maybe to go Peter Rushforth: Yeah.</p>
+
+<p>Badita Florin: And I said I shared the link Badita Florin: In the chat for like an example.</p>
+
+<p>What I'm doing now for a city in Greece not polka forbidden event where you can you have a maximum zone because he would be useful for them to multiple because it's just what a CD.</p>
+
+<p>Peter Rushforth: I guess there's no declarative means for setting that up right now.</p>
+
+<p>I mean, we'd have to think about how you could do that using the DOM API for this thing.</p>
+
+<p>So like Peter Rushforth: Like check the properties of lat long zoom and compare them against compare them against your preferred thing and prevent that event from occurring.</p>
+
+<p>Peter Rushforth: I'm not sure if that's a, is that a progressive enhancement or is that something that should be built into the, the declarative function that's a, that's a question not a statement.</p>
+
+<p>Yeah.</p>
+
+<p>Peter Rushforth: So yeah, just quickly, I've got to server setup.</p>
+
+<p>So we've got, like, if you we've got a version of this built into geo server.</p>
+
+<p>So if you if you've got different Peter Rushforth: Data sets and geo server, you can serve them, it'll serve them in the in the math ML projections that you that you specify Peter Rushforth: So there's WGS at four and the projection negotiation deal was we take that WGS at four layer and we drag it onto the map, which just adds a layer element to the to the map DOM.</p>
+
+<p>Peter Rushforth: And but it's now it's got the curved curved shape of the Emperor conformal contract.</p>
+
+<p>So it's not doing any projection transformation while do geo servers, doing all of that stuff so that the server side content management systems are still still whatever they are, but Peter Rushforth: And so that's, um, that's the projection negotiation deal and it'll do you know like I mean it works pretty well for for Peter Rushforth: W MS and titles and stuff.</p>
+
+<p>I mean, it's a basic system.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: So, so what I was showing you earlier was the ability to query it at that particular locations.</p>
+
+<p>Peter Rushforth: And that that is actually the geo server is returning a methanol document with the map feature in it for the shape of Texas and Peter Rushforth: And the properties are shown in the leaflet popped up.</p>
+
+<p>Peter Rushforth: And I guess in lots of modern web map frameworks, they've they've gone from pop ups to pull out or whatever.</p>
+
+<p>So one of the challenges is to think of Peter Rushforth: Okay, well, how can we allow a web developer to say, I don't like pop ups I wanna, I want to have a slider or a slider kind of thing or a slide up Peter Rushforth: That kind of thing and capture the event and and and do that for themselves, so that the web designer has their own ideas of how this should be handled or what should be pulled out of it.</p>
+
+<p>Peter Rushforth: And I think Emilio and Brian were both referring to how difficult a challenge that is um but I get there should be like a default Peter Rushforth: Like the user agent would provide a default way to do that.</p>
+
+<p>And if you want to capture the event and do it yourself you while you have the you have the the feature data to do it with and Peter Rushforth: So yeah, it's on there is that is available on GitHub as the Web Map custom element.</p>
+
+<p>Peter Rushforth: And in the end, there are there are releases of it and we should probably get a new release.</p>
+
+<p>So, but you can just, there's no it's not on MPM.</p>
+
+<p>You just have to download it and unzip it and Peter Rushforth: And it should work.</p>
+
+<p>You should be able to use it from a web directory.</p>
+
+<p>And so, yeah, you don't have to have a geometry associated to a query response.</p>
+
+<p>You can just get it an HTML file back like you do here and the the remote document is a you know simple view source type of document.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: You can Peter Rushforth: You can add layers willy nilly to this thing.</p>
+
+<p>If you want if you so desire.</p>
+
+<p>I mean, there's a limit.</p>
+
+<p>Peter Rushforth: But so, so a layer is like five and said everything's layer.</p>
+
+<p>So a layer could contain templates so they're a layer can't contain other layers but a layer can contain Peter Rushforth: As many templates and as much content as you want to put into it and those and those those templates should be Peter Rushforth: While they are part of the DOM, I guess, and they should be, you should be able to change their said index, you know, by moving them around by changing the Zed index and so on.</p>
+
+<p>Same way that you do in any other part of HTML and SVG.</p>
+
+<p>Peter Rushforth: And this is apparently Robert lender was showing you that I broken the Back button on this.</p>
+
+<p>Peter Rushforth: On this web page and it needs to be updated.</p>
+
+<p>But I was trying to just sort of bookmark bookmark pages so that you could Peter Rushforth: You know when you copy the when you copy to a location on the page, you would go, you could go send that bookmark back to somebody and it would go to that point.</p>
+
+<p>And it's not doing it.</p>
+
+<p>So it's broken, and I wrote the back pocket button.</p>
+
+<p>But anyhow, Peter Rushforth: If that wouldn't be built into the math on it said itself.</p>
+
+<p>It's really a part of the part of the Peter Rushforth: HTML authors responsibility, right, because you could have five maps on one page and which one would get access to the URLs, an open question.</p>
+
+<p>Um, so what else is there to show a while.</p>
+
+<p>Again it the math ML extension to Geo server, you can you can set it up so that Peter Rushforth: You can set it up so that Peter Rushforth: You can serve it as tiles are a WNs.</p>
+
+<p>So, for example, for Peter Rushforth: The image the imagery layer here North American imagery that would be good to know.</p>
+
+<p>Hang on.</p>
+
+<p>There's Peter Rushforth: Edit this layer.</p>
+
+<p>Peter Rushforth: So publishing so Peter Rushforth: Publishing there some Nathanael panel and you can say use tiles and that will just use WNs requests over over the thing as tiles or you can actually set it up to cash the tiles.</p>
+
+<p>So if I I have particular like OSM tile and WGS at four.</p>
+
+<p>Peter Rushforth: And, and, you know, CBS tile.</p>
+
+<p>I can set them up and it'll, it'll it caches.</p>
+
+<p>Peter Rushforth: These things on the first use automatically Peter Rushforth: And then so when I go to Layer preview these tiles for the imagery, it should come in and time files.</p>
+
+<p>Peter Rushforth: Yeah, you can see the file showing up.</p>
+
+<p>Well that's being done by the geo server on the back end.</p>
+
+<p>So these are all this is like geospatial content management systems could be equipped Peter Rushforth: Really quickly to start pumping out HTML math ML and, you know, we would have like a content universe on day one of this thing, appearing in browsers.</p>
+
+<p>Peter Rushforth: So that's my pitch.</p>
+
+<p>Badita Florin: Can ask questions regarding mock mock and regarding like I don't know if you know tough GS that all go, which is you can do a lot of transformational, things like that.</p>
+
+<p>And they have things like buffer or or the Badita Florin: This would be something that maybe probably not now, but in the future could be Badita Florin: built in.</p>
+
+<p>So the idea is if you would have different points that they would have different values like population of cities or the things like that they could do scale based on that, like using a buffer or for selecting elements inside like 300 meters videos.</p>
+
+<p>Peter Rushforth: Um, I think that these could be like managed by the API.</p>
+
+<p>You know, like, so you could have like developers, the developer ecosystem still should Peter Rushforth: I mean, the browser engine can't do everything right.</p>
+
+<p>Peter Rushforth: So, so the developer ecosystem should be Peter Rushforth: Just facilitated by by the proposal not replaced.</p>
+
+<p>I mean, I guess there's a certain amount of rendering responsibility and so on, that could be replaced and it would probably be welcome.</p>
+
+<p>I don't know for sure.</p>
+
+<p>I've Yvonne and Peter Rushforth: Andreas, but Peter Rushforth: I, my sense is that that the rendering is is a full time job.</p>
+
+<p>Peter Rushforth: Um, Peter Rushforth: So yeah, I mean, Peter Rushforth: I would, I would encourage like progressive progressive enhancement is the way I described that I don't know if that's the right term, but having an API, upon which you can build is Peter Rushforth: Is is a core value.</p>
+
+<p>Peter Rushforth: So I guess that's that's about it, unless people have more comments.</p>
+
+<p>I'm happy to take questions.</p>
+
+<p>I'll try and go through the chat if there are questions in there and comments and respond Bryan Haberberger: I do have one last quick one.</p>
+
+<p>If you're alright with it.</p>
+
+<p>Yeah, please.</p>
+
+<p>Bryan Haberberger: So something that I have a ton of trouble within leaflet is like say I've got a bunch of points, um, there's no like way for me to say I only want to see those points that have this property.</p>
+
+<p>Bryan Haberberger: Like to do that and leaflet.</p>
+
+<p>You have to write a custom JavaScript function that goes over every layer and find the features and read the properties out, which is an extremely expensive function as you can imagine.</p>
+
+<p>Bryan Haberberger: So I saw you like doing some filtering with layers there because you were doing the checkboxes.</p>
+
+<p>Bryan Haberberger: Do you think you'd be able to sort of filter, you know, hide show features buy properties, kind of thing.</p>
+
+<p>Peter Rushforth: Well, so I think that that is like, Whoa, that was the Peter Rushforth: So that was Peter Rushforth: The Bryan Haberberger: You know, I could see that being a well when we have the API that's the kind of things we'd like you know to be able to stick into the API.</p>
+
+<p>I'm just curious because that's something that you just really cannot do right now with with like the matte box and leaflet stuff that's out there.</p>
+
+<p>Peter Rushforth: So, well, it's, I don't have a magic bullet.</p>
+
+<p>But let me share my screen.</p>
+
+<p>And so this this file here was the has a select element in it.</p>
+
+<p>And I think this is an app, an area that needs more research and and collaboration.</p>
+
+<p>Peter Rushforth: Um, yeah.</p>
+
+<p>So in this in this select the.</p>
+
+<p>It's called the year select and I've got a bunch of our GIS WNs layer IDs separated by commas, because that's their that's their way of parameters using their Peter Rushforth: Their web masters by layer IDs and then I tied that you know those layer IDs on the server.</p>
+
+<p>This was set up after someone are already set up this data service.</p>
+
+<p>Peter Rushforth: So, though they said, Okay, well, this is the less List of layer IDs that in, in, in that order that constitute 1867 and so on.</p>
+
+<p>And then as the Peter Rushforth: As the, you know, the user can query that Peter Rushforth: Can query that that file by clicking on the control Peter Rushforth: In the, in the, in the layer list and they get a different query against the server through, you know.</p>
+
+<p>So now whenever I'm panning and zooming I'm looking at 1874 right so it's it's it's looking at Peter Rushforth: At that, as defined by the server.</p>
+
+<p>So, I mean, I think there's there's probably a lot more to this but anyhow.</p>
+
+<p>Badita Florin: And the different venues represent to each to count each state or is the order like the day of being like, this is the middle Peter Rushforth: Yeah, so like layer 17 is the labels and layer 12 is the is, I don't know, Ontario, or the polygons and other things the lines that kind of thing.</p>
+
+<p>Badita Florin: But if they would be like on over and target that would be another layer of like showing the trees, it would be render the before and after volley.</p>
+
+<p>It could be this set or is like, how is the engine and then delete like random or we teach you Peter Rushforth: It was like in terms of the DOM order.</p>
+
+<p>Peter Rushforth: Yeah, so if you add another layer element on to the into the map element as a as a child, it just draws on top just like Peter Rushforth: So well, not like, Well, just like the image maps.</p>
+
+<p>Right.</p>
+
+<p>So, okay.</p>
+
+<p>Peter Rushforth: The image image map.</p>
+
+<p>Peter Rushforth: image element draws as the base, base layer in the areas draw on top of it.</p>
+
+<p>So there and Dom order, I guess.</p>
+
+<p>Peter Rushforth: Sort of like a layer elements in this.</p>
+
+<p>And so by default the layers in this thing are drawn in Peter Rushforth: Document order down the page.</p>
+
+<p>But let's say you want it to have like a GIS solution where you have the layer stacked up on on on the left or something like that.</p>
+
+<p>Peter Rushforth: You should be able to shut the controls off and do your own make your own controls using HTML, you know, Peter Rushforth: Just like you can do with the video element right you receive events to control and stop the video.</p>
+
+<p>Well, you should be able to get these events, I'm off the math on it and and do the same thing.</p>
+
+<p>So you just get a boost in performance and so on, off the rendering engine.</p>
+
+<p>Bryan Haberberger: Yeah, that was a good analogy.</p>
+
+<p>Thank you.</p>
+
+<p>Bryan Haberberger: My pleasure.</p>
+
+<p>I hope that helps.</p>
+
+<p>Peter Rushforth: I mean i i think this is a this is just an area we we played with a little bit.</p>
+
+<p>I think there's, you know, that's why inputs.</p>
+
+<p>Peter Rushforth: Fred's probably not on anymore.</p>
+
+<p>But this white inputs could be like a useful thing to work with here rather than reinvent Peter Rushforth: Even though everybody hates them.</p>
+
+<p>Peter Rushforth: Let's see.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Peter Rushforth: In to talk with the satori sciences in SVG map digests and made this kind of custom form functionality free to free to design in the web apps assigning it all to each layer.</p>
+
+<p>Yeah, so that's sort of the same approach, but we haven't played around with it too much here.</p>
+
+<p>Peter Rushforth: Other than to say that controls, you know, from the controls that are oriented to to the user interface or directed towards the layer control and controls that are location specific and zoom specific and with specific are getting essentially they're Peter Rushforth: Invisible Peter Rushforth: And yeah, so we would we would really love you to play around with this and give us comments apologize for bugs and stuff.</p>
+
+<p>It is my fault.</p>
+
+<p>So Peter Rushforth: We will will will iterate, though.</p>
+
+<p>Bryan Haberberger: The most important thing to take away is your direct contact, then Yeah.</p>
+
+<p>Amelia Bellamy-Royds: Yeah, and all the math ML stuff, both the spec and the poly fills are on GitHub.</p>
+
+<p>And there's open discussion in the community group.</p>
+
+<p>Peter Rushforth: So, Yvonne Peter Rushforth: Yvonne said ideally the dome scripting interface would have the same functionalities and sadly flip open layers.</p>
+
+<p>So stuff like custom tile buffers.</p>
+
+<p>Peter Rushforth: Could be in.</p>
+
+<p>Yeah, absolutely.</p>
+
+<p>So we would like to.</p>
+
+<p>Yeah, for sure.</p>
+
+<p>Let Die for the sophisticated stuff that you know cutting edge.</p>
+
+<p>Peter Rushforth: Let's just leave it to the ingenuity of web developers to fill in.</p>
+
+<p>So yeah leaflet the core model of leaflet like the core and extension model of leaflet is what Peter Rushforth: Is sort of inspiring in terms of Peter Rushforth: In terms of what should be in versus out.</p>
+
+<p>I mean, there's stuff that you even in leaflet as as as cut down as it is as as core as the core is there still stuff that you know the HTML guys are not going on like Peter Rushforth: So we gotta, we gotta think think hard about what what is in and what is possible.</p>
+
+<p>Amelia Bellamy-Royds: Okay, we're about ready to wrap it up.</p>
+
+<p>Then Peter Amelia Bellamy-Royds: already gone over time.</p>
+
+<p>Yeah, sorry.</p>
+
+<p>Amelia Bellamy-Royds: Go, there's lots to talk about Yeah.</p>
+
+<p>Peter Rushforth: Okay.</p>
+
+<p>Well, thank you very much everyone Peter Rushforth: Thanks a lot for going through this with us.</p>
+
+<p>Bryan Haberberger: Thank you, Peter.</p>
+
+<p>Badita Florin: Thanks for organizing Peter Rushforth: Great.</p>
+
+<p>Amelia Bellamy-Royds: And we'll see you all next week.</p>
+
+<p>Amelia Bellamy-Royds: Same Amelia Bellamy-Royds: Time didn't days as it was this week.</p>
+
+<p>Amelia Bellamy-Royds: You will have the agenda.</p>
+
+<p>Peter Rushforth: Great.</p>
+
+<p>Peter Rushforth: Thank you and goodnight.</p>
+
+<p>Amelia Bellamy-Royds: Or.</p>
+
+<p>Good morning.</p>
+
+<p>Bryan Haberberger: See, everybody.</p>
+
+<p>Know,</p>
+</body></html>

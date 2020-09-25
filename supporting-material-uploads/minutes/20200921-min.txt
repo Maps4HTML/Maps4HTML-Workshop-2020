@@ -1,0 +1,90 @@
+23:26 <theduckylittle> Have any of the hosting links been posted/emailed out yet?
+23:27 <tguild> hosting links? you mean to zoom?
+23:27 <prushforth> Zoom meeting invite went out Dan, is that what you're looking for?
+23:27 <theduckylittle> For zoom, yes. Sorry, the agenda said they would arrive by email but I haven't seen anything!
+23:28 <prushforth> I just forwarded the email for tonight to yu
+23:28 <theduckylittle> Perfect! Got it now. Thank you!
+23:28 <prushforth> I can send the rest of them if you  like?
+23:29 <theduckylittle> That would be great!
+23:30 <tguild> confirm sent on 16 September, see gmail received it from my mail logs
+23:31 <tguild> From:	Maps4HTML Workshop Program Committee <group-maps-submission@w3.org>
+23:31 <tguild> Subject:	OGC/W3C Maps for the Web Workshop logistics
+23:33 <theduckylittle> Found it now, thanks!
+23:33 <tguild> good, was hoping gmail didn't flag it as suspect
+23:33 <tguild> thanks for looking
+23:34 <theduckylittle> This is a basic case of my failure to import the calendar (the ics file was in downloads) _and_ Gmail search being nearly useless.
+23:35 <tguild> no worries, well not now... but you had me a tad worried
+23:36 <prushforth> lol what this thing needs is... emoji!
+23:39 <thehabes> ¯\_(ツ)_/¯
+23:40 <prushforth> !!tthat's it!!
+23:55 <satakagi> :blush:
+23:55 <satakagi> https://gist.github.com/rxaviers/7360908#file-gistfile1-md
+23:56 <prushforth> @satakagi genius!
+23:56 <AmeliaBR> :thumbsup: 
+00:02 <tguild> Amelia welcomes attendees to workshop, explains captioning 
+00:02 <tguild> scribenick: tguild
+00:02 <tguild> Minuting will be light, will defer to video+caption record
+00:03 <tguild> https://www.w3.org/2020/maps/agenda#day-1
+00:05 <tguild> Amelia opens workshop, gives background on OGC and W3C
+00:06 <tguild> provides motivation for workshop and recognizs our host Natural Resources Canada
+00:11 <karenmyers> https://www.w3.org/Consortium/cepc/
+00:11 <tguild> logistics and reminder of code of conduct
+00:12 <tguild> introduces Peter Rushforth NRCan
+00:17 <tguild> Peter's prerecorded presentation
+00:31 <zcorpan> MDN DNA: https://insights.developer.mozilla.org/
+00:31 <SebastienDurand> GReat presentation Peter
+00:32 <thehabes>  One of the hardest things I have ever had to work with is arrays in HTML attributes...that is what I feat about lat/long attributes
+00:33 <prushforth> At least they're named lat and lon!
+00:33 <thehabes> That's true...does order matter :)
+00:33 <prushforth> Exactly!
+00:34 <prushforth> Kind of stops there, though.
+00:39 <thehabes> [edit]  One of the hardest things I have ever had to work with is arrays in HTML attributes...that is what I fear about lat/long attributes
+00:46 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx Peter Rushforth's slides
+00:47 <thehabes> Good code comparison.  Good point.  
+00:47 <tguild> Amelia provides use cases and demos some different tools
+00:51 <thehabes> typeof(address)
+00:51 <thehabes> String
+00:52 <satakagi> https://github.com/tuupola/lazyload
+00:53 <satakagi> The ability to dynamically retrieve a tiled image according to its viewport is commonly used not only for maps, but also for general websites.
+00:55 <satakagi> https://www.w3.org/TR/resource-priorities/
+00:56 <shepazu> Zooming and panning medical scans is another related case
+00:57 <shepazu> And for that case, you'd want to be able to tag a relative location/feature (a discoloration or a mass), and annotate it
+00:57 <shepazu> Both things useful for a map
+00:58 <thehabes> Both are also useful for images in general...Image of a Map and Image of an X-Ray can be treated with the same considerations. 
+00:59 <thehabes> Annotation as Features is also very key
+01:00 <satakagi> https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location/
+01:01 <tguild> -> https://maps4html.org/HTML-Map-Element-UseCases-Requirements/ Use cases and requirements shared by Amelia
+01:01 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf Dan Little's slides
+01:07 <prushforth> Nothing  **is** more fun than a code snippet, @theduckylittle 
+01:15 <thehabes> Heck yea.  I can target all your data with GeoJSON-LD Web Annotations...
+01:17 <satakagi> @thehabes  , 
+01:17 <satakagi> Shiyō no rinku wa doko?
+01:17 <satakagi> 10/5000
+01:17 <satakagi> Where is the specification link?
+01:17 <satakagi> [edit] @thehabes  , 
+01:17 <satakagi> [edit] Where is the specification link dfor  GeoJSON-LD Web Annotations?
+01:18 <satakagi> [edit] @thehabes  , 
+01:18 <satakagi> [edit] Where is the specification link for  GeoJSON-LD Web Annotations?
+01:20 <thehabes> @satakagi https://www.w3.org/TR/annotation-model/ with GeoJSON bodies + https://www.w3.org/TR/json-ld11/ context control.  LD context is at https://geojson.org/geojson-ld/.  It isn't all put together as an official solution, but is very possible : https://preview.iiif.io/cookbook/0182-geolocated-simple-manifest/recipe/0182-geolocated-simple-manifest/.  This is what I will talk about on the Wednesday breakout, so no more
+01:20 <thehabes> spoilers.  
+01:22 <IvanSanchez_gitlab> @theduckylittle I have a secret plan to describe multiband raster data. Teach raster people GLSL instead of their domain-specific raster algebra language :-)
+01:23 <zcorpan> https://discourse.wicg.io/
+01:23 <shepazu> Good presentation, @theduckylittle, thanks!
+01:23 <theduckylittle> @IvanSanchez_gitlab ;) We can keep chatting! I'm doing some active work in that space.
+01:23 <satakagi> :+1:
+01:23 <SebastienDurand> Agreed 
+01:24 <ghobona> @theduckylittle Great presentation!
+01:24 <prushforth> https://discourse.wicg.io/c/web-mapping/22
+01:24 <ghobona> @prushforth Great presentation!
+01:24 <thehabes> @theducky Way to get the initial groundwork done with XML.  How fast did you get yourself into GeoJSON
+01:26 <theduckylittle> Very quickly :) We've never replaced the XML work but GeoJSON provides a lot of useful tools for lightweight communication of features.
+01:27 <thehabes> @theducky I have people feeding me XML and KML files for Leaflet, but their scripts for GeoJSON to get it to draw.  Then I ask "well do you have it as GeoJSON"?  "Yeah, but I've always just fed it the XML"
+01:27 <theduckylittle> The current application also uses Redux to manage state and since GeoJSON can be described with Javascript primitives we can use GeoJSON to describe features in the map.
+01:27 <tguild> [adjourned]
+01:29 <thehabes> Yep, JSONing around Features has done wonders for the Web.  What Feature format draws in the most viewers out of the box would you say in your experience?  I am comparatively new to this, and GeoJSON seems to be one of those de facto things.  
+01:31 <prushforth> OK, well thanks everyone for participating tonight, it was early or late or what have you.  I am sad that the workshop can't be in-person, as a big part of the value of workshops is chatting.  So if you want to chat, by text or hangout,  in groups or otherwise, I would be happy to do so in the next couple of weeks, as long as it's not the middle of the night.
+01:34 <shepazu> @theduckylittle, have you been contributing to the use cases and requirements document? That would be really helpful
+01:35 <shepazu> your experience is invaluable
+01:35 <thehabes> +1
+01:37 <prushforth> @thehabes GeoJSON is the simplest thing that works,.  HTML could be even better, I think, because  it supports linking, but it could be a natural receiver for GeoJSON, if it had a <feature> element. Not to give out spoilers though.
+01:40 <prushforth> @theduckylittle you and GeoMoose have been through almost the full evolution of Web maps.  Congratulations for that longevity, for one thing.  Great perspective on both server and client concerns.

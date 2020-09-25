@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Captions from W3C/OGC Maps for the Web workshop -- 21 Sep 2020</title>
+</head>
+<body>
+<p>Amelia Bellamy-Royds: Hello everyone who's joined so far.</p>
+
+<p>Amelia Bellamy-Royds: I think we might wait a moment or two, just to make sure people Amelia Bellamy-Royds: Figured out the technology.</p>
+
+<p>Amelia Bellamy-Royds: I wanted to confirm that our capture was all hooked up, and I see it's already working.</p>
+
+<p>So that's great.</p>
+
+<p>Amelia Bellamy-Royds: If you would like that somewhere near the bottom of the screen there should probably be a CC button.</p>
+
+<p>Amelia Bellamy-Royds: It might be hidden in the three dots more menu and you'll get subtitles of what people are saying In case.</p>
+
+<p>Amelia Bellamy-Royds: You Amelia Bellamy-Royds: Have hard hearing or hard time with English or people's accents.</p>
+
+<p>Hopefully this will help Amelia Bellamy-Royds: As I said all wait a couple more minutes and then we'll actually get started.</p>
+
+<p>Amelia Bellamy-Royds: Shall we begin Amelia Bellamy-Royds: So, welcome.</p>
+
+<p>Oh.</p>
+
+<p>Amelia Bellamy-Royds: Thank you for joining us, especially if this is an awkward time of day for you.</p>
+
+<p>Amelia Bellamy-Royds: My name is Amelia Bellamy Royds I'm one of the members of the programming committee who has been organizing this workshop Amelia Bellamy-Royds: So welcome to what you are participating in is the W three see oh GC.</p>
+
+<p>Get this title correctly.</p>
+
+<p>Amelia Bellamy-Royds: W three C OTC workshop on maps for the web.</p>
+
+<p>Amelia Bellamy-Royds: Um, Amelia Bellamy-Royds: So our host organizations.</p>
+
+<p>The WCC the World Wide Web can search him.</p>
+
+<p>Amelia Bellamy-Royds: Works on standards for the web platform.</p>
+
+<p>Amelia Bellamy-Royds: The OTC the Open Geospatial Consortium works on standards for Amelia Bellamy-Royds: Geospatial data and mapping and Amelia Bellamy-Royds: Are Amelia Bellamy-Royds: More specific hosts the maps for HTML community group which is a Amelia Bellamy-Royds: Open to Amelia Bellamy-Royds: Pretty much every one group of people interested in getting a Amelia Bellamy-Royds: Map presentation on the web more standardized and our host slash sponsor is Natural Resources Canada who have been Amelia Bellamy-Royds: Funding.</p>
+
+<p>A lot of this work and who are Amelia Bellamy-Royds: Paying for the captioning and a few other logistics related to the workshop Amelia Bellamy-Royds: So speaking of logistics.</p>
+
+<p>If you are here in person, then you have successfully join the zoom conference.</p>
+
+<p>Amelia Bellamy-Royds: glad you made it here.</p>
+
+<p>If you are watching a archived video because you weren't able to join the zoom conference.</p>
+
+<p>Amelia Bellamy-Royds: For reasons due to troublemakers jumping on zoom calls.</p>
+
+<p>We're not posting the live zoom links on the web.</p>
+
+<p>But if you registered for the conference in advance.</p>
+
+<p>You should have gotten an email from Ted guild that says something about workshop logistics in the title and it will have the Amelia Bellamy-Royds: Zoom link.</p>
+
+<p>Amelia Bellamy-Royds: If you are registered and you Amelia Bellamy-Royds: Can't find that email, then do try to reach out to the programming committee members their email addresses on the website and we will try and get you connected up for the rest of the workshop Amelia Bellamy-Royds: I'm Amelia Bellamy-Royds: Related to that, if you can't participate in the live sessions.</p>
+
+<p>Amelia Bellamy-Royds: They are going to be all different times of the day and we know they aren't convenient for everyone.</p>
+
+<p>We will be recording all the sessions and trying to post them online within a day or two, so you can catch up by watching the recording.</p>
+
+<p>Amelia Bellamy-Royds: And Amelia Bellamy-Royds: The recordings will be hosted on the WCC YouTube channel.</p>
+
+<p>The discussion will continue on the W IC G discourse server.</p>
+
+<p>Amelia Bellamy-Royds: And we'll have kind of open forum on each topic where people can add comments add more examples really go in more depth than we can on videoconference situation.</p>
+
+<p>Amelia Bellamy-Royds: There is also a live chat on get her that we've set up.</p>
+
+<p>So that's just Amelia Bellamy-Royds: more casual conversation as we go along.</p>
+
+<p>Amelia Bellamy-Royds: It's where we'll be sharing links and such as we go.</p>
+
+<p>Amelia Bellamy-Royds: And just during the course of the workshop.</p>
+
+<p>It's a way to ask questions of other participants or any logistical issues that come up Amelia Bellamy-Royds: And if you're not familiar with get her.</p>
+
+<p>It's just a Amelia Bellamy-Royds: chat application.</p>
+
+<p>Amelia Bellamy-Royds: single column chat room, you can log in with a GitHub account with a Twitter account.</p>
+
+<p>I think you might be able to make an account directly on the site, but hopefully most participants have at least one of those ways to login Amelia Bellamy-Royds: And finally, a note there is a chat built into the zoom interface.</p>
+
+<p>Amelia Bellamy-Royds: We're going to try and keep that to zoom specific comments.</p>
+
+<p>If there are technical difficulties.</p>
+
+<p>If you can't hear someone if you can't see their screen share you can Amelia Bellamy-Royds: Put it in the zoom chat, but Amelia Bellamy-Royds: The Gator and discourse will be kind of the more lasting chat that persist even after we close down the telecom Amelia Bellamy-Royds: I'm one final important thing to mention this is a professional event we are operating under the W three C's code of conduct, we expect Amelia Bellamy-Royds: Respectful treatment of everyone.</p>
+
+<p>If you have any concerns about that if you want to read the full code of content is linked from the Web site.</p>
+
+<p>Amelia Bellamy-Royds: Somebody could even put a link into the chat so you can show that the chat works and if you do have any concerns about Amelia Bellamy-Royds: Any of the content in the of the behavior of other participants, you can reach out to the programming committee members or the W three see on boots office.</p>
+
+<p>Amelia Bellamy-Royds: And I think that was all my Amelia Bellamy-Royds: Logistics and introduction home I took 10 minutes Amelia Bellamy-Royds: So with Amelia Bellamy-Royds: That all out of the way, I'd like to introduce our first speaker of the workshop Amelia Bellamy-Royds: Peter Rushforth Amelia Bellamy-Royds: Is a Amelia Bellamy-Royds: Geologist in GIS expert who now works at National Resources Canada with a specific focus on standardization for geospatial information and maps and he's been one of the most persistent driving forces behind the maps for HTML project.</p>
+
+<p>Amelia Bellamy-Royds: He is going to be talking to us today, kind of as a Amelia Bellamy-Royds: Big intro introduction to the whole purpose of the workshop why maps for the web are worth talking about are worth standardizing are worth getting excited about.</p>
+
+<p>Amelia Bellamy-Royds: Okay, Peter, are you ready to go.</p>
+
+<p>Peter Rushforth: Good evening, and good morning.</p>
+
+<p>My name is Peter rush forth, and I work for natural resources, Canada's Peter Rushforth: Center from Earth observation in the Canadian geospatial data infrastructure division.</p>
+
+<p>Today I want to talk about why we need to standardize maps for the web in HTML.</p>
+
+<p>There are many reasons that people need or want to make web maps in the domain in which I work, it's a requirement of most projects.</p>
+
+<p>But how do you make a Web Map.</p>
+
+<p>It's easy right there are lots of ways to make a Web Map.</p>
+
+<p>You just need to pick a framework.</p>
+
+<p>Each framework has its merits.</p>
+
+<p>Some are easy to get started with some come with a bunch of free lit data layers built right in.</p>
+
+<p>Others require significant knowledge and or manipulation of data and access to computing resources accessibility is not guaranteed and it's easy to mess it up.</p>
+
+<p>Interoperability pretty much does not exist.</p>
+
+<p>In short, there is no simplest choice and it can be a big decision.</p>
+
+<p>Once you decide, all the code that you write does belong to you, except it's bound to the framework, you've chosen making any change expensive and painful, the result.</p>
+
+<p>The result is silos.</p>
+
+<p>Although each web mapping framework is somewhat similar known share the same foundation and they are not interoperable, except in that the user can see a map.</p>
+
+<p>The result is bad for users and the web.</p>
+
+<p>Why do silos exist.</p>
+
+<p>So I know this might be caused by a proprietary interest, such as those created to lock users into software platforms, but more likely they exist because we didn't take the trouble to collaborate and eliminate the barriers or or to create interoperability.</p>
+
+<p>Proposal.</p>
+
+<p>We'd like to make in this workshop is, why don't we work together to support all the users mapping framework providers are all trying to serve their users collectively collectively, the sum of their users is approximately equivalent to humanity as a whole.</p>
+
+<p>All the map providers use the web as their medium of choice to deliver their products together let's improve the web to serve all of the providers equally well Possibly reducing their individual frameworks responsibilities.</p>
+
+<p>Let's make a standard that helps with the common core that these providers can progressively enhance if need be.</p>
+
+<p>Let's make a standard to serve users needs directly through common accessibility privacy safety linguistic and usability infrastructure, just as we try to do for users in the real world with roads, bridges, sidewalks crosswalks science, etc.</p>
+
+<p>While we're at it.</p>
+
+<p>Let's make the standard and natural first step in learning so that maps can be taught at school, giving children a common starting point for learning about geography and the web without frameworks.</p>
+
+<p>Can silos truly disappear.</p>
+
+<p>Though the test of independent invention first described by Tim burners Lee is a kind of thought experiment.</p>
+
+<p>The notion is that any new protocol or format must be designed for introduction into an environment that has incumbents or it cannot succeed.</p>
+
+<p>At the invention of the web for example FTP gopher waste all existed in the mainstream already HTTP, HTML and URLs were designed to work with the existing protocols somewhat satisfying the test of in independent invention, which can never be perfectly resolved, you can't make silos disappear.</p>
+
+<p>But over time, they can resolve on their own.</p>
+
+<p>In the real world, infrastructure, often describes public facilities created for the benefit of all without prejudice.</p>
+
+<p>Such infrastructure must be safe and accessible safe for everyone to use it must be fair and inclusive.</p>
+
+<p>What good would roads and bridges be if you could only drive a Ford on them.</p>
+
+<p>It must be durable, because everybody uses it infrastructure must be built to serve.</p>
+
+<p>And last, and finally, it must be cost effective.</p>
+
+<p>Infrastructure should make it less costly for everyone to achieve their goals knows that that that this does not mean that it's free.</p>
+
+<p>In fact, it can be quite costly, but it should be maximally shareable In the virtual world, the world wide web, and the software that supports it is virtual but nonetheless real infrastructure.</p>
+
+<p>But how do we avoid creating more silos in standardizing maps and spatial data for the web.</p>
+
+<p>The situation in web mapping Stan standards is a little bit like this x case CD comic There are probably more than 14 different ways to create a Web Map and trying to make the situation better by adding another framework risks creating a worse situation.</p>
+
+<p>So what to do.</p>
+
+<p>Can we fix the situation by adding another standard, probably not.</p>
+
+<p>Many existing formats for to geospatial information already exist if one of them was suitable it probably would be a web standard The challenge is to create a new format that enables web maps without requiring web browsers to radically change or change their architecture which is impossible.</p>
+
+<p>proposed solution is to add and extend mapping elements in HTML.</p>
+
+<p>HTML is widespread and it's the foundation of web architecture and browsers are based on processing it The bonuses that HTML already implements basic map semantics.</p>
+
+<p>HTML.</p>
+
+<p>Pictured here is the core language of the web and it was designed to bridge the divide between programmers and users.</p>
+
+<p>Ideally it allows everyone to have access to content regardless of ability.</p>
+
+<p>Further, it is straightforward enough to allow users to to become authors.</p>
+
+<p>This is embodied in the idea of view source culture in which the medium itself teaches the user what is possible and how to achieve it.</p>
+
+<p>Why are maps in HTML preferred over maps in JavaScript in the future because HTML requires and delivers interoperability, the browser will become a spatial integration platform shared standardized semantics mean interoperability.</p>
+
+<p>Discovery because of the rule of least for power web pages could have location indexing pages by location search engines will become spatial discovery platforms.</p>
+
+<p>HTML requires and delivers inclusive pretty understandable and created by created by browser authors who are not necessarily programmers or authors who are not necessarily matters for that matter.</p>
+
+<p>HTML requires and delivers accessibility because things, not just web pages of location, the browser will tell the user about their physical environment, as described by a Web Map or website for public spaces real infrastructure will be represented also as virtual infrastructure.</p>
+
+<p>HTML requires and delivers performance less runtime costs to HTML into JavaScript mean map rendering is better and more suitable for native code.</p>
+
+<p>HTML requires and delivers scalability related to performance and inclusive city and possibly other aspects of this list.</p>
+
+<p>Scalability means maps will work in constrained or powerful environments.</p>
+
+<p>HTML is like the standard library of the web, a single element encapsulates processing steps, especially rendering from the layers below.</p>
+
+<p>Maps and location belong in the web's standard library so that sophisticated applications can be built on top of the web, without having to reinvent the wheel.</p>
+
+<p>HTML is simple enough for a web crawler to understand but scales to underlie very sophisticated application development, even though modern web crawlers can execute web applications to reveal the application generated HTML and text content.</p>
+
+<p>They can't understand semantics that aren't there, such as maps and location which don't exist yet in HTML standardized location is important not only for search and discovery, but also for accessibility and internationalization.</p>
+
+<p>Peter Rushforth: A key aspect of HTML is that it is standard its elements have defined visual and accessibility semantics, making it inherently inclusive.</p>
+
+<p>Peter Rushforth: Adding maps to HTML could aid important use cases for users, such as search and discovery.</p>
+
+<p>Peter Rushforth: Reducing the need for special purpose catalogs and the same link ability or web superpower that allows crawlers to enable search and discovery will also enable Map Service Federation and location information sharing Peter Rushforth: HTML is inherently cross platform, making it the ideal target for standardizing location information.</p>
+
+<p>Peter Rushforth: These aspects, taken together mean that maps in HTML will be more economically effective than our current silos, leading to better return on investments for society.</p>
+
+<p>Peter Rushforth: Is Tim and I was a massive decade long effort and there's little appetite in the web standards community to repeat such an effort Peter Rushforth: HTML does however constantly change and today the HTML standard itself is evergreen with new ideas being integrated and browsers implementing constantly Peter Rushforth: So how does the process work ideally developers like us who use JavaScript, HTML and CSS provide feedback to the web platform engineers.</p>
+
+<p>Peter Rushforth: Who prioritize implementing low level features that are views to the largest number of people often these features are of JavaScript, but also of CSS and HTML.</p>
+
+<p>As low level features are implemented the thinking goes developers will hot will develop high level features as libraries or custom elements.</p>
+
+<p>As the high level functionality that browser that becomes widely used, it just becomes an emergent or de facto standard These de facto standards can then be implemented natively by browser developers, giving rise to wider and improved use of the web and consequent generation of new requirements from new communities like our own participating in the virtuous cycle and so on.</p>
+
+<p>That maps are an emergent characteristic of the web even constituting a geo web is obvious to the most casual observer.</p>
+
+<p>Maps in the HTML of the future might look like this, starting with a map element containing one or more child layer elements.</p>
+
+<p>There already exists as somewhat neglected map element in HTML with similar enough semantics to provide a good extension point in keeping with the HTML design principles.</p>
+
+<p>by specifying a new child layer element HTML could immediately incorporate dynamic Web Map semantics as commonly understood providing the shareable infrastructure that web maps and geospatial information require HTML has evolved over time.</p>
+
+<p>It began as simple as simple text documents linked together.</p>
+
+<p>It was the linking that made them special linking has been described as the web superpower.</p>
+
+<p>Overtime media types have been added in response to user needs.</p>
+
+<p>And most recently, with the advent of the mobile web and responsive design not should be the next big thing.</p>
+
+<p>So we're actually is this virtuous feedback loop of which I spoke the maps for HTML community group was created based on the conviction that web mapping is an emergent or de facto standard of the web.</p>
+
+<p>As sought by the extensible web manifesto.</p>
+
+<p>The main way to provide feedback to the browser standards community is for you, especially representing your organization or company to join them apps for HTML community group to contribute ideas comments and even code.</p>
+
+<p>Another important path for feedback from web mapping community to the web platform, folks, is the annual Mozilla web developer needs assessment or web DNA survey, please share the link mentioned web mapping mentioned maps in HTML.</p>
+
+<p>A key feature of the URL driven web of HTML is the ability to share documents using their URL.</p>
+
+<p>This feature of the web.</p>
+
+<p>also enables linking within and between resources, not to mention search and discovery, the simple architectural characteristic could make web map a geo web of the future, a benefit to users around the globe and to the interests that rely on it.</p>
+
+<p>In other words, everyone.</p>
+
+<p>HTML will provide a common foundation for maps and location for all stakeholders.</p>
+
+<p>spatial information is infrastructure and a standard that represents is common foundation will unlock the true value of that infrastructure.</p>
+
+<p>Maps standardized in HTML will allow us to encode and share our understanding of the world.</p>
+
+<p>Let's achieve the understanding of our physical world by enabling the representation of that world in HTML together.</p>
+
+<p>Thank you.</p>
+
+<p>Peter Rushforth: Hello.</p>
+
+<p>Peter Rushforth: I'm done is that Amelia Bellamy-Royds: Okay.</p>
+
+<p>Thank you, Peter.</p>
+
+<p>Peter Rushforth: Thank you.</p>
+
+<p>Amelia Bellamy-Royds: Okay, I think, in future, we'll probably have breaks between themes.</p>
+
+<p>But since today is a short day I might just jump right ahead.</p>
+
+<p>Amelia Bellamy-Royds: So, Amelia Bellamy-Royds: Next talk of the day is by Amelia Bellamy right that's me.</p>
+
+<p>Amelia Bellamy-Royds: So before I got Amelia Bellamy-Royds: Distracted into organizing a workshop Amelia Bellamy-Royds: My first Amelia Bellamy-Royds: Task working Amelia Bellamy-Royds: With the mouse for HTML community group was to really Amelia Bellamy-Royds: Assess the project that Peter and others in the geospatial community had done and focus on ways it can move forward within the web standards world.</p>
+
+<p>I've been working within web standards for a few years now, primarily Amelia Bellamy-Royds: SVG vector graphic CSS also accessibility as it relates to those two topics and Amelia Bellamy-Royds: Found the potential of web standards and also some of the Amelia Bellamy-Royds: Limitations.</p>
+
+<p>We can't just Amelia Bellamy-Royds: Add everything and anything to the web because the web platform is implemented in multiple environments that need to run on all sorts of devices and Amelia Bellamy-Royds: It's not unlimited what these devices can do.</p>
+
+<p>We can't just keep adding code and whatever we do add pretty much has to Amelia Bellamy-Royds: Stick indefinitely or at least that's the goal of web standardization that once we have websites that are out there and that were web browsers.</p>
+
+<p>Try to support those going forward as much as possible.</p>
+
+<p>So we, there's a lot of Amelia Bellamy-Royds: Caution in the web standards world about adding new features to make sure that those features.</p>
+
+<p>Amelia Bellamy-Royds: Are the right ones and are designed correctly.</p>
+
+<p>Amelia Bellamy-Royds: So, Amelia Bellamy-Royds: One of the most important mental frameworks that is currently adopted by web standards, folks, is this idea Amelia Bellamy-Royds: Of an extensible web that the best thing the web platform can do is to create tools from which website authors and web application developers.</p>
+
+<p>Amelia Bellamy-Royds: Can build the features they want and test them out and get the right shape of the features as the website authors like them.</p>
+
+<p>And as website users like them.</p>
+
+<p>Amelia Bellamy-Royds: With the end goal, at least in theory that by demonstrating that there is a demand for a certain feature in a certain design then Amelia Bellamy-Royds: They can bring that to the web standardization process and say this is a tested idea.</p>
+
+<p>This is a proven design pattern there is clear demand for it.</p>
+
+<p>Let scattered in standards so Amelia Bellamy-Royds: Now I'm coming from with Amelia Bellamy-Royds: The maps for HTML project.</p>
+
+<p>My first task was to Amelia Bellamy-Royds: Look at what maps are already on the web.</p>
+
+<p>And there are maps on the web.</p>
+
+<p>There have been maps on the web, since the Amelia Bellamy-Royds: Very beginning Amelia Bellamy-Royds: Of well almost the beginning.</p>
+
+<p>Ever since there's been images on the web.</p>
+
+<p>There have been maps on the web.</p>
+
+<p>There have been Amelia Bellamy-Royds: Pictures of maps the same way in a printed textbook, you have a picture of a map and shortly after that there was the first interactive maps using the map element that Peter mentioned briefly.</p>
+
+<p>Amelia Bellamy-Royds: The map element as it currently exists in HTML isn't specifically about geographic maps, but it can be used for it and you'll see on my screen.</p>
+
+<p>I have a image map that is on one of the websites I use every day.</p>
+
+<p>The weather forecast in Canada and Amelia Bellamy-Royds: It's just a simple picture that they generate on their web server have a map of Canada with icons and text baked in.</p>
+
+<p>Amelia Bellamy-Royds: But then there are different links to different forecast and you can click through and find out that here where I am in Edmonton, it's currently 14 degrees Celsius on a Sunday evening.</p>
+
+<p>Amelia Bellamy-Royds: Now this has nice features, it's supported widely in most browsers.</p>
+
+<p>It's even accessible to keyboard, although I discovered when I was Amelia Bellamy-Royds: Playing with it earlier, that it's no longer fully accessible in Chrome, because I tapping through these links in the picture and you can't tell where I'm tapping.</p>
+
+<p>So even browser is bake break accessibility now and then.</p>
+
+<p>And that's not a great thing, but Amelia Bellamy-Royds: The good thing about it is, once they fix this bug every image map will get fixed on the browser, because the browser actually knows what it's looking at it knows that these are links, it knows that the links have a certain shape.</p>
+
+<p>Amelia Bellamy-Royds: And so there is some semantic information there.</p>
+
+<p>But this is really all the browser knows about a map is a picture with certain regions of that picture, having links on them that isn't Amelia Bellamy-Royds: The map as we think about web maps today.</p>
+
+<p>So the current conception of a Web Map probably looks something more like this.</p>
+
+<p>Here's a Google Maps embed Amelia Bellamy-Royds: And it's zoomed in to Edmonton, but I can zoom out.</p>
+
+<p>So you can see all of North America, I can pan over to Europe, I can do lots of things.</p>
+
+<p>And I could also have links on this, but it's interactive it's Amelia Bellamy-Royds: Not just a single image, it's a complex data model behind what the map is so Amelia Bellamy-Royds: This is really the very simplest modern conception of a Web Map is something which we can work with and the user can find the information that they need within it.</p>
+
+<p>Amelia Bellamy-Royds: So, Amelia Bellamy-Royds: From that Amelia Bellamy-Royds: We go into this idea of what are the use cases and requirements for web maps, if we actually define what are those features that make what we now consider to be a Web Map.</p>
+
+<p>Amelia Bellamy-Royds: Um, and because I'm working from this extensible web model of looking at what website developers and users have already come to expect the approach taken for this report, which is still incomplete draft and we welcome your contributions, is we're going to be looking at Amelia Bellamy-Royds: It existing implementations of web maps and what are the common features that they have, what are the use cases they serve.</p>
+
+<p>And also, what are the limitations.</p>
+
+<p>Amelia Bellamy-Royds: Because of course, if the existing web maps solve all the use cases, then we don't need to change anything.</p>
+
+<p>We don't need any new standards, but there are limitations that come from the fact that Amelia Bellamy-Royds: These maps are being rendered using a lot of code that needs to be downloaded and every website and the final representation doesn't have a semantic meaning that the browser can understand and build on and adapt.</p>
+
+<p>Amelia Bellamy-Royds: So the specific Amelia Bellamy-Royds: Exam examples, we're looking at, and we can maybe add more these but they get a lot.</p>
+
+<p>So we're looking at two types.</p>
+
+<p>The Amelia Bellamy-Royds: Sort of more declarative approach that's currently available on the web are anybody can go to one of these major mapping services, create a map in the Amelia Bellamy-Royds: User Interface visual or user interface that looks good and get an embed code which they can copy somewhere else.</p>
+
+<p>So that's the easy to use for a website author content creator who might not be an expert in web mapping Amelia Bellamy-Royds: Excuse me.</p>
+
+<p>And then the other type of web maps, we're looking at are the JavaScript frameworks which are Amelia Bellamy-Royds: Require a little more expertise for the website author to code them up and Amelia Bellamy-Royds: Run the code on their site that builds the map dynamically, but they're a lot more flexible for website developers who want to add their own features or their own content.</p>
+
+<p>Amelia Bellamy-Royds: So this page is one of the many pages of examples for building for the report, just so we can look at how these different existing tools.</p>
+
+<p>Amelia Bellamy-Royds: Implement the features.</p>
+
+<p>So this is the very minimum basic combat that comes up.</p>
+
+<p>What do you get when you just say put them up on this web page on some cases it's very plain don't labels.</p>
+
+<p>Amelia Bellamy-Royds: Have a more content in the initial Amelia Bellamy-Royds: And we've for the scripted ones we've got the examples of how much code you need to include in order to get that map on your web page, which of course goes to the accessibility for Amelia Bellamy-Royds: Website authors.</p>
+
+<p>Amelia Bellamy-Royds: Not gets me to a question when we're talking about use cases, it's worth thinking about use cases for whom, who are we thinking of using these web mapping tools.</p>
+
+<p>So within the report, we're looking at three main groups.</p>
+
+<p>Amelia Bellamy-Royds: Or against Amelia Bellamy-Royds: Three main groups, the content author who's creating a website or creating content for a website or a blog or something on the web and they just want to add a map to their blog post to their article to their Web Store.</p>
+
+<p>Amelia Bellamy-Royds: They're not geospatial experts, they're not necessarily programming experts.</p>
+
+<p>They want the map for the content, it presents and so Amelia Bellamy-Royds: What type of content.</p>
+
+<p>What are the basic types of maps.</p>
+
+<p>Amelia Bellamy-Royds: Simple Amelia Bellamy-Royds: Point on a map for this is where my restaurant is located.</p>
+
+<p>This is where my store is located.</p>
+
+<p>Amelia Bellamy-Royds: More complex data or more complex imagery it Amelia Bellamy-Royds: Builds up depending on where they are.</p>
+
+<p>So some of the slightly more complex examples, we're looking at our have a pop up next to the marker.</p>
+
+<p>So there's a marker on the map, but you want extra information, a little bit of HTML.</p>
+
+<p>So Amelia Bellamy-Royds: We've got an example of the different ways you can do that in different Amelia Bellamy-Royds: Libraries and the amount of code that it takes to do that.</p>
+
+<p>So leaflet has a very built in method of how to create a pop up and you get a lot out of the box from a couple lines of authoring code and you get event handling for opening and closing and it positions and you can Amelia Bellamy-Royds: Zoom out.</p>
+
+<p>And it still works.</p>
+
+<p>Amelia Bellamy-Royds: So there's a lot of behavior there other libraries takes a little more manual code to get the same behavior that's the open layers code for the demo.</p>
+
+<p>And so Amelia Bellamy-Royds: The website author to get this particular same behavior of a pop up from a marker point needs little more work.</p>
+
+<p>So those are the kinds of things we're looking at use cases.</p>
+
+<p>Amelia Bellamy-Royds: Not only what you're doing.</p>
+
+<p>But how much work it takes far as writing code to make that happen.</p>
+
+<p>Amelia Bellamy-Royds: Some other quick examples of content author use cases highlighting a region, rather than just a marker point.</p>
+
+<p>So for this example, we're using geo JSON as the data format for describing that polygon.</p>
+
+<p>Amelia Bellamy-Royds: And how easy is it to get that custom geo JSON shape into our map so that it lines up and can be styled custom Amelia Bellamy-Royds: Sorry soon popping up and blocking my Screen.</p>
+
+<p>Amelia Bellamy-Royds: Go over there.</p>
+
+<p>Okay.</p>
+
+<p>Amelia Bellamy-Royds: Then another use case is actually not mapping at all.</p>
+
+<p>This is Amelia Bellamy-Royds: Not a map.</p>
+
+<p>It's a painting, but it's a painting rendered within the mapping applications.</p>
+
+<p>This is leaflet JS, not with Open Street Map tiles.</p>
+
+<p>Amelia Bellamy-Royds: But the reason you might want to have a painting in a mapping application is so that you can use the tiling with zoom effect.</p>
+
+<p>Amelia Bellamy-Royds: Where as you zoom in you load.</p>
+
+<p>Additional images with higher resolution instead of loading a giant file at the beginning.</p>
+
+<p>So this is an important Amelia Bellamy-Royds: Aspect that we're considering within our use cases report is how can the mapping tools and the features that are necessary for a good web maps.</p>
+
+<p>How can they also be used for other things that people want to do within the web platform.</p>
+
+<p>Amelia Bellamy-Royds: And if we can find these connections find these additional use cases for the primitives, then we find more people who are interested in getting these features standardized and Amelia Bellamy-Royds: Working to.</p>
+
+<p>Now I said a little content author the website owner is only one target ever use cases is the next one is our website visitor.</p>
+
+<p>So is someone going to a Amelia Bellamy-Royds: Website have things that I want to do with a map that maybe the website owner didn't think about so Amelia Bellamy-Royds: I'm Amelia Bellamy-Royds: Maybe the website on it didn't think about accessibility and the fact that I need to use my keyboard to tab through things.</p>
+
+<p>And I'd like to see what's currently focused Amelia Bellamy-Royds: Maybe the Amelia Bellamy-Royds: website owner didn't think about the fact that I'm going to need to print out that map or I'm going to need to export an address in a form that I can use in my GPS somehow Amelia Bellamy-Royds: There are lots of use cases that are from that end user perspective that are separate from Amelia Bellamy-Royds: The Amelia Bellamy-Royds: Desires or plans of the person who actually created the website.</p>
+
+<p>Amelia Bellamy-Royds: And I'm not going to get too much detail here.</p>
+
+<p>We've actually got a another talk later in the week Nick Chan will be talking about her assessment for this report on some of the interaction patterns in the Amelia Bellamy-Royds: Various web mapping tools and what that relates to the accessibility of the web maps for people who use the web in various ways.</p>
+
+<p>Amelia Bellamy-Royds: So moving on to our third category of use cases.</p>
+
+<p>That's your application developer.</p>
+
+<p>So this is again a website creator, but someone who's interested in maps in a more complicated level interested in adding new features, because Amelia Bellamy-Royds: There is so much that could be done with maps on the web.</p>
+
+<p>And we're never going to have those all built into a standard tool.</p>
+
+<p>Amelia Bellamy-Royds: There are always going to be custom use cases.</p>
+
+<p>In addition, so for the application developer who wants to build additional geospatial features.</p>
+
+<p>Amelia Bellamy-Royds: The use cases are about how much they can extend and build on the Amelia Bellamy-Royds: Standard tool.</p>
+
+<p>Amelia Bellamy-Royds: Without having to recreate all the basic features from scratch.</p>
+
+<p>Amelia Bellamy-Royds: So one of our use case examples we've got is add a extra control that does something so trying to keep it simple so Amelia Bellamy-Royds: Was our contributor Nick Fitzsimmons who added this one.</p>
+
+<p>So this is the feature it describes where the math is centered as we move it shows Amelia Bellamy-Royds: A different latitude and longitude and I can mark the current lot a tude and launch it at the center of it and I can pan away, and then I hit another button and it returns back so Amelia Bellamy-Royds: Simple functionality, but actually there is a lot going on here.</p>
+
+<p>Amelia Bellamy-Royds: Updating when I pan the map and it's changing the position of the marker and then it's changing the position of the map on a different button and it's responding to the button clicks, as well as the movement of the map itself and so Amelia Bellamy-Royds: We've got lots of different interaction patterns between what the user is doing what the Amelia Bellamy-Royds: Web Map library code is doing.</p>
+
+<p>And then what the custom JavaScript is doing.</p>
+
+<p>And again, we've got this implemented in many different libraries with Amelia Bellamy-Royds: Similar behavior we can mark the center pan away, return back Amelia Bellamy-Royds: Again, differing amounts of code, depending on how well Amelia Bellamy-Royds: Optimized Amelia Bellamy-Royds: The library is for these particular things we're trying to do, although at this point.</p>
+
+<p>Pretty much all of them.</p>
+
+<p>There's a lot of custom code because that's what we're doing.</p>
+
+<p>We're extending the map.</p>
+
+<p>Amelia Bellamy-Royds: So within all these use cases.</p>
+
+<p>As I said, there are a lot of little pieces that need to go together.</p>
+
+<p>So we're calling those the individual capabilities.</p>
+
+<p>So these are the low level features that need to be available in order for you to build up the full use case.</p>
+
+<p>Amelia Bellamy-Royds: And within of the each of these capabilities were then looking at is it implemented in existing tools is implemented in a consistent way where we can say there is a clear pattern of be Amelia Bellamy-Royds: Implementation that this is how the standards should be designed, because this is how users or developers expect it to be designed Amelia Bellamy-Royds: We're looking at, are there any connections to existing web standards that could be Amelia Bellamy-Royds: reused in a pattern that's consistent with the web or their proposals that are for other web features that we could connect up and are their use cases for this low level feature that is use cases beyond so Amelia Bellamy-Royds: I've already shown the example of wanting to be able to zoom in and adjust resolution on non that content more generally just having pan and zoom as Amelia Bellamy-Royds: It's a really complex interaction.</p>
+
+<p>There's different ways of panning and zooming depending on using mouse or keyboard gestures and there are lots of stuff on the web that use pan and zoom Amelia Bellamy-Royds: Zooming in on a product photo on a store that's not a map related, but there are similarities.</p>
+
+<p>And so if we had these low level features and sort of browser awareness of what pan and zoom is it could be used in multiple places.</p>
+
+<p>Amelia Bellamy-Royds: The idea of having a pop up tool tip.</p>
+
+<p>Amelia Bellamy-Royds: Sort of or an info box that pops up that something that happens in lots of user interfaces.</p>
+
+<p>Amelia Bellamy-Royds: But we don't have a built in way to position, things that are pop this up next to Amelia Bellamy-Royds: Some other anchored thing but don't let it go off the edge of the screen or don't let it obscure something else that's Amelia Bellamy-Royds: Anybody who's done a website coded that by hand those.</p>
+
+<p>There's a lot of things you have to think about to get right.</p>
+
+<p>If there was a built in primitive feature in the web for positioning a pop up where the browser.</p>
+
+<p>Amelia Bellamy-Royds: Can do it once and do it right for every website instead of every website author having to do is to write that code again.</p>
+
+<p>Amelia Bellamy-Royds: There are lots of use cases for that beyond mapping Amelia Bellamy-Royds: But that said, there are lots of things that are needed for maps that are map specific you need maps need to understand latitude and longitude.</p>
+
+<p>They need to understand how that gets sent to different projections and coordinate systems.</p>
+
+<p>Amelia Bellamy-Royds: And Amelia Bellamy-Royds: Beyond this, Amelia Bellamy-Royds: basic primitives within all the little parts that you need for a map.</p>
+
+<p>There is definitely once you have those there's a benefit of having the integrated features the very convenient declarative features so that the Amelia Bellamy-Royds: restaurant owner who just wants to put a map on their website with a pointer to the restaurant doesn't have to think of all the little parts that go into making them up.</p>
+
+<p>They can just say, here's the location.</p>
+
+<p>Draw me the map.</p>
+
+<p>Amelia Bellamy-Royds: So, Amelia Bellamy-Royds: That's a brief overview of the project.</p>
+
+<p>One thing that Amelia Bellamy-Royds: Has been very clear working on this project is just how many detailed creatures.</p>
+
+<p>There are once you start trying to list them all within the standard maps.</p>
+
+<p>So we are still working on the report we are welcoming contributors to the report, it's all on Amelia Bellamy-Royds: GitHub.</p>
+
+<p>And Amelia Bellamy-Royds: We've got Amelia Bellamy-Royds: Sort of issue discussion pages for every section of the report that are linked back from Amelia Bellamy-Royds: Sorry link back from each section about Amelia Bellamy-Royds: Let's discuss what should we mentioned a year.</p>
+
+<p>What should we conclude about, is this an essential feature of a Web Map.</p>
+
+<p>Is this a nice to have feature of a Web Map, is this okay this is never going to happen in the browser feature.</p>
+
+<p>Amelia Bellamy-Royds: And we're going to have all of those.</p>
+
+<p>But we definitely welcome your contributions and I've gone follow for 15 minutes.</p>
+
+<p>So I'm going to wrap this up now.</p>
+
+<p>Amelia Bellamy-Royds: And go back to my hosting duties.</p>
+
+<p>Amelia Bellamy-Royds: Final talk of the day is by Dan duck little who has been building maps on the web for many years since 2004 Amelia Bellamy-Royds: When JavaScript was still Amelia Bellamy-Royds: New and wild so geo moose is built using XML and Dan will be telling us about some of the lessons learned from that project and Amelia Bellamy-Royds: Take it away.</p>
+
+<p>Hopefully we can hear you.</p>
+
+<p>Duck Little: Oh, thank you.</p>
+
+<p>Am I getting through a little bit here.</p>
+
+<p>Duck Little: Okay, fantastic.</p>
+
+<p>So this is going to be a little bit different.</p>
+
+<p>I'm going to be covering something that's maybe a little bit more in the style of a retrospective on a project that's been around for a while.</p>
+
+<p>Duck Little: Which uses Duck Little: Which is playing on the tune instead of HTML.</p>
+
+<p>We've used XML.</p>
+
+<p>Duck Little: I can be found all over the internet with the handle the ducky little if anyone wants to have some follow up conversation, but do moose, or any of the controversial things I may or may not end up saying today a Duck Little: Little bit of background on the project itself.</p>
+
+<p>It's actually an OS geo project.</p>
+
+<p>Duck Little: It do moose is a web client that started with a co worker and myself at the city of St. Paul in Minnesota in the US.</p>
+
+<p>Duck Little: The first release was back in, oh four and our big kind of coming out party was at the 2005 Map Server user group meeting for folks who are maybe not into Duck Little: Open Source GIS software.</p>
+
+<p>History The Map Server user groups were the precursor to the foster G conference.</p>
+
+<p>So this is how, like, I started feeling old knowing that we were presenting at conferences that were the precursor to phosphor Jade.</p>
+
+<p>Duck Little: And we've done some cool stuff.</p>
+
+<p>Amelia mentioned that we use XML.</p>
+
+<p>And yes, we use XML and a healthy dose of JavaScript as much of it as we've been able to squeak through the browser through the years, but to do some really cool things such as describing pop ups.</p>
+
+<p>Duck Little: providing detailed measure tools in the browser.</p>
+
+<p>That seems to be the like one of the next logical steps as soon as you can put a map in it, can I measure it.</p>
+
+<p>Duck Little: And a lot of health, a lot of having support for GC services through the years, including WF s t supports doing editing on the web and also adopting sort of web friendly technologies as they come through such as, you know, the early GL geo JSON and matte box vector tiles.</p>
+
+<p>Duck Little: But I'm going to put us in the Wayback Machine and talk about the web of Duck Little: It was a different place.</p>
+
+<p>Duck Little: There was a lot of Duck Little: Things going on that were really innovative, but people were still trying to figure it out for us as a GIS project one of our big first goals was to talk to Map Server.</p>
+
+<p>Duck Little: So I mentioned that we come out of Minnesota and folks may remember that Map Server used to be called Minnesota Map Server or the University of Minnesota Map Server and Duck Little: My coworker James clustering, and I did actually work with Steve L'chaim on early Map Server code and it was sort of the de facto standard for how you render Duck Little: A complex map for the web.</p>
+
+<p>And because it's 2003 we wanted to use all of the cool features of the latest and greatest browser at the time, IE six Duck Little: There might be a few of you on this call, or, you know, kind of curse at on a regular basis.</p>
+
+<p>The, the word Internet Explorer, but it was our best deploy platform at the time.</p>
+
+<p>Duck Little: Now, those two things were both pretty normal.</p>
+
+<p>Actually, there are other people working in the space that we that really have those two goals in mind.</p>
+
+<p>Duck Little: What made you most unique was that we were dealing with a data for for large municipality that had multiple departments that were trying to inventory lots and lots of different assets and that meant we had hundreds of different data layers that were being digitized and produced Duck Little: So this was sort of Genesis.</p>
+
+<p>You'll notice that there isn't hundreds of layers here but it deals with Duck Little: Trying to describe different layers and catalog.</p>
+
+<p>It has basic map controls.</p>
+
+<p>Duck Little: This was what a modern web application, including occasionally the broken images senior looked like circa 2003.</p>
+
+<p>But this is sort of what we started with.</p>
+
+<p>And one of our first keys was the fact that we can describe these layers and controls actually using XML.</p>
+
+<p>Duck Little: So, Duck Little: We put all of this together and created an XML catalog.</p>
+
+<p>Because really we looked at the various pieces that we had and that we need to assemble some app servers configured using a format called map file.</p>
+
+<p>You can think of that is like a styling file for an for for a shape file.</p>
+
+<p>Duck Little: Because that's also what would have been popular circa 2000 307 and we had a lot of people contributing so XML was really, really.</p>
+
+<p>Duck Little: Unique for us and having a very basic markup was necessary for us because we needed to be able to describe you know how to organize all of these individual smaller pieces of work.</p>
+
+<p>Duck Little: So what juice became was a really, really fancy access Lt. So that took the XML and translated to HTML, which then also had a giant JavaScript file next to it to render it Duck Little: So I'm very sympathetic to the idea of we need to make the browser do more of this work.</p>
+
+<p>I really would have been sympathetic and oh yeah during this development time to Duck Little: And because nothing's more fun than a code snippet, we can take a look at what this actually turned into.</p>
+
+<p>You can see that we described a map book.</p>
+
+<p>If you've ever looked at Old School maps, particularly atlases, those were referred to frequently as a map book generically.</p>
+
+<p>Duck Little: Because you had a book with multiple pages of different maps.</p>
+
+<p>So we created a map book XML format.</p>
+
+<p>Duck Little: And it had the ability to organize things hierarchically, so we call it the catalog was part of the map book each layer got a label and a description to its source file and whether it was on or off could also be grouped because again we're dealing with hundreds of different layers.</p>
+
+<p>Duck Little: And this is what we got you from that Genesis moment to this and you can see a lot of interesting components that are going on here.</p>
+
+<p>Duck Little: As the maps evolved.</p>
+
+<p>There was a lot of things that were necessary.</p>
+
+<p>We're also trying to convert people from using dedicated AutoCAD licenses for viewing maps so Duck Little: If this looks more like a cat application than we achieved our goal at the time, but you can see in the catalog.</p>
+
+<p>Many, many layers very well organized Duck Little: rudimentary controls for navigation were available and Duck Little: This entire user interface was described using XML.</p>
+
+<p>Duck Little: And then we made it pretty Duck Little: Um, one of the cool things that we were able to do is because Duck Little: At the time the FTC was offering grants that allowed for cross community collaborations.</p>
+
+<p>Duck Little: To share data.</p>
+
+<p>Well, having data defined as an XML format made it easy for us to interchange with other cities and counties.</p>
+
+<p>Duck Little: And so we were able to access some of that funding to develop the application some more and refined the XML format a bit more so that we could exchange these formats and the applications with different counties.</p>
+
+<p>Duck Little: At one point, nearly every county in Minnesota had a moose website because and quite a few in North Dakota and other neighboring Duck Little: US states.</p>
+
+<p>In fact, we keep finding juice installations all across the world because people were able to really dig into the idea that you could describe a map using XML.</p>
+
+<p>Duck Little: And whoa, it was good things were really fast to render even on you know hardware that would have come with it six as the upgrade browser, it still ran really fast.</p>
+
+<p>Duck Little: And just like we were talking about HTML earlier being really great for editors and that that sort of source driven Duck Little: epiphany that you can have by looking at the site and looking at the source we had that by being able to directly map in the definition of the way or an XML to what they would see in the user interface.</p>
+
+<p>Duck Little: some drawbacks to this.</p>
+
+<p>Duck Little: One of the big ones was that the order in the catalog.</p>
+
+<p>So how do you define that XML structure was how it was seen in the map.</p>
+
+<p>Duck Little: So if for some reason somebody put an aerial photography layer at the top of their catalog because they wanted users to see it.</p>
+
+<p>It would also end up being the layer that was had the top of their map obscuring the entire view.</p>
+
+<p>Duck Little: There was also because we had targeted Map Server and event and then evolve that to WNs there wasn't really good ways of Duck Little: targeting different types of data sources as much as you can come up with a way for defining how to describe that there's a data source there.</p>
+
+<p>Duck Little: The data sources are always going to be varied and that's continued to grow through the web at even though there are standard ways of doing it.</p>
+
+<p>Duck Little: The other issue.</p>
+
+<p>We had this was an implementation detail is that every layer created an image tag really really cool because again, Ajax wasn't a thing.</p>
+
+<p>But then we started doing tiled maps.</p>
+
+<p>It broke, it broke it was making hundreds of requests in a second.</p>
+
+<p>Duck Little: So we started the next version of the project.</p>
+
+<p>Duck Little: Because you moose was built using a custom mapping library we were sort of the 15th standard that x Casey refers to whereas Duck Little: And the reason for that was because open layers itself wasn't functional enough for us to switch over, but around 2007 it did.</p>
+
+<p>Duck Little: It also had much better cross browser support because, well, you know, seven.</p>
+
+<p>You could still basically target IE and run everywhere.</p>
+
+<p>Duck Little: And we also work with later versions of Netscape because they had the bank men, the JavaScript debugger.</p>
+
+<p>Duck Little: But early versions of Firefox for coming out there.</p>
+
+<p>We're getting really usable JavaScript was becoming slightly less Wild Wild West it with the concept of classes and even user interface toolkits Duck Little: But really the main motivation was we needed to fix the relationship between a layer in the map and the definition of the map source.</p>
+
+<p>Duck Little: So we evolved the format.</p>
+
+<p>Duck Little: Here you can see it's a map book we gave it a version of 2.0 Duck Little: And we define this code snippet here that is for in this case aware of Fire, fire stations.</p>
+
+<p>It's saying that the type of this data is coming from Map Server.</p>
+
+<p>Duck Little: The name of the sources, the map source and this file element here is a shorthand to tell it.</p>
+
+<p>Okay, this is the map file so form the URL to work with that map file and inside of that map file.</p>
+
+<p>There's a layer name fire stations.</p>
+
+<p>Duck Little: This allows you to do quite a few things.</p>
+
+<p>First of all, it allows you to group multiple layers into a single request because you can put 10 layers from single WNs source in that way.</p>
+
+<p>Duck Little: It also lets you break out as an administrator.</p>
+
+<p>The defining the catalog.</p>
+
+<p>You can have a difference between how those layers are stacked where there's where those layer where those rendered layers are getting data from and how they're sorted in the hierarchy of your catalog.</p>
+
+<p>Duck Little: And this is a pretty basic juice two point O application, you can still see there's many, many layers that it's processing all at the same time.</p>
+
+<p>It's providing that asynchronous layer stack here in the map, along with a number of controls.</p>
+
+<p>Duck Little: But not everything was great about it.</p>
+
+<p>Duck Little: In terms of technical implementation, we had issues with what required what was a basically a custom Java compiler to Duck Little: Put the different bits of JavaScript together certain components stop working on newer versions of Internet Explorer.</p>
+
+<p>Duck Little: And a lot of JavaScript is moved to functional programming models which there was no way we could support with what we were doing.</p>
+
+<p>But most importantly, the downside was Duck Little: Because we had push all of the description into our map book XML format it got unwieldy large, it was unsustainable to define every UI element inside of the XML.</p>
+
+<p>We enlightened.</p>
+
+<p>All of these all of the code for styling data feedback, including pop ups and identify templates and Duck Little: So it was hard to keep moving it forward is hard to evolve the application because we've sort of built ourselves into A into a tag corner in XML.</p>
+
+<p>Duck Little: Some other pretty important things happened while we were developing it Google tell the whole world about 10 different times and about 10 different ways people started putting mobile supercomputers in their hands.</p>
+
+<p>Duck Little: The Open Street Map project started.</p>
+
+<p>You know, publishing new innovative ways of structuring some Geo data.</p>
+
+<p>Duck Little: And a lot of vector data has gone to the web.</p>
+
+<p>You know, you think about the adaptation of geo JSON or matte box vector tiles.</p>
+
+<p>And the way you an administrator used to think about data was I have shaped files.</p>
+
+<p>I'm going to render them using my favorite Duck Little: Map rendering service and it's going to get put in the browser.</p>
+
+<p>But now, Duck Little: You could just have data sitting in in an S3 bucket somewhere.</p>
+
+<p>And I want to put that on my map, and that includes Duck Little: You know, Geo JSON data includes like matte box vector tiles could pre render a whole region of vector tiles and this even includes when you Duck Little: More stream bubble formats like cloud optimized.</p>
+
+<p>Notice what if I just have a picture.</p>
+
+<p>I want to slice and dice and it's properly index.</p>
+
+<p>Duck Little: Or streaming will JSON, things like new line to eliminate JSON that work with stream mobile web servers.</p>
+
+<p>I mean, cheap cloud compute means you can put terabytes of data on a map for pennies.</p>
+
+<p>Duck Little: So we thought we should adapt to the times and that brought about the juice 3.0 development.</p>
+
+<p>Duck Little: But even during our evaluation, even with all of the modern stuff that we were trying to to adopt and looking at new patterns.</p>
+
+<p>Duck Little: Of programming, we still came back to the best way to describe some of this stuff is knowing that there's a map that there are layers and that there are map sources and we can describe an XML.</p>
+
+<p>Duck Little: So we can still use us pretty familiar tags.</p>
+
+<p>So the new implementation was so fresh and so clean Duck Little: And looked almost exactly the same to to a lot of users, because what we were able to Duck Little: Develop a brand new application on a completely fresh stack, both to our administrators who are real target and Duck Little: To the users the application looked very, very the same.</p>
+
+<p>In fact, we were able to write a small conversion tool that allowed users of june moves to to upgrade their XML to June was three.</p>
+
+<p>In fact about 90% of the tags were able to migrate forward.</p>
+
+<p>Duck Little: This has helped a lot.</p>
+
+<p>We've got the ability to handle different types of data sources be them be them raster vector or even Duck Little: Things like JSON and vector tiles.</p>
+
+<p>We can parse them natively and render them for users.</p>
+
+<p>Duck Little: We also created the idea of a query as concept because sometimes you have browsers have different capabilities and you might want to present the data differently.</p>
+
+<p>Duck Little: For example you we have the ability to define a layer as being displayed in the map using a WNs source.</p>
+
+<p>But if you want to get the attributes for a future it'll use W Fs.</p>
+
+<p>Duck Little: But we learned some stuff and some real important lessons here cartography, it's hard.</p>
+
+<p>Duck Little: Picking how you want to style those features once they're in the browser can be very, very difficult.</p>
+
+<p>And there's been a lot of successes and failures.</p>
+
+<p>Over the years, you know, map CSS.</p>
+
+<p>Duck Little: There's been I think three different flavors of that throughout the years.</p>
+
+<p>Duck Little: So LD the OTC standard for how to define a layer that gets pretty verbose, and can be very scary for people, even with editors.</p>
+
+<p>Duck Little: Matte box GL style sheets has been sort of a one organization show though it's been pretty innovative open layer styles styling, as you saw, as you could see in previous examples.</p>
+
+<p>Duck Little: Just in the demo set can get very complicated for simple things like a point and Map Server map files are really Duck Little: Great for styling stuff on the server.</p>
+
+<p>But there's no implementation in the client.</p>
+
+<p>And these are just the ones I could think of quickly that were mostly successes.</p>
+
+<p>At one point, there's been a lot of other things that have failed that the haven't quite made it through.</p>
+
+<p>Duck Little: The other thing we discovered is that performance can be quite hard.</p>
+
+<p>It's important to think about what happens when someone takes that really cheap available cloud compute power and tries to stuff it into your browser.</p>
+
+<p>Duck Little: Even with Web GL. You don't want to put gigabyte.</p>
+
+<p>You need to think about how you're going to put gigabytes of data onto your map.</p>
+
+<p>Duck Little: And communicating.</p>
+
+<p>How do you the complex definitions can be hard as well.</p>
+
+<p>The query ass thing that I was previously bragging about is also one of the hardest concepts to explain to our administrators who are trying to do is get their data on the web.</p>
+
+<p>Duck Little: Also some future challenges just in the mapping sphere that I think are are Duck Little: We're trying to deal with as a project we're trying to think about them.</p>
+
+<p>The first is 3D that beyond how you define that data and how you communicate that data.</p>
+
+<p>Duck Little: point clouds are as a technology really really evolving.</p>
+
+<p>There's an end, there's a project called entwine that puts 3D points into the map.</p>
+
+<p>Duck Little: And they've also become cheap and available because you can put a light or puck on relatively inexpensive hardware and collect gigabytes worth of 3D points very, very quickly.</p>
+
+<p>Duck Little: Growing through mobile.</p>
+
+<p>It was also hard people just expect a single site to work on just about every device that they have no one wants to think about going to the slash m dot HTML site anymore.</p>
+
+<p>Duck Little: And a lot of maps cheat this by having an m dot HTML site somewhere or require or saying this doesn't work in your browser.</p>
+
+<p>But users are no longer accepting that they wanted to work on their tablet their laptop.</p>
+
+<p>Duck Little: Their 30 inch screen and their 3.75 inch diagonal screen that they carry with them all the time.</p>
+
+<p>Duck Little: The other thing that's really ramping up that that it's going to get harder to describe is with a lot of the new satellite data Lance at Planet, etc.</p>
+
+<p>There's a lot of accessibility towards detailed multi band data that are getting pushed to the browser.</p>
+
+<p>Duck Little: And that's going to be a future challenge for describing a map.</p>
+
+<p>Duck Little: So some big takeaways from the GMOs project through the years, you can XML it.</p>
+
+<p>There is a way of describing maps.</p>
+
+<p>Duck Little: Where we can use XML and HTML tags to describe them and describe them effectively.</p>
+
+<p>We've got 15 years in the business at doing this.</p>
+
+<p>And so I think, and I think we do a good job.</p>
+
+<p>Duck Little: Also, I really think the idea of having a map source definition and a layer definition is very, very important.</p>
+
+<p>You'll hit a wall very quickly if there isn't some sort of definition between there.</p>
+
+<p>Duck Little: Styling is hard and gets complicated and needs to be considered hard and yes eventually a user will indeed try to stuff multiple gigabytes of data and render it in your browser.</p>
+
+<p>Duck Little: All right, I went kind of fast because it's Duck Little: Hoping to get a lot of content.</p>
+
+<p>But I'm always open to questions.</p>
+
+<p>Peter Rushforth: Thanks, Dan.</p>
+
+<p>That was really interesting.</p>
+
+<p>Amelia Bellamy-Royds: Indeed, and Amelia Bellamy-Royds: A great Amelia Bellamy-Royds: Starting session for the workshop to give that historical perspective of how much has changed and how much we still have to work on.</p>
+
+<p>Amelia Bellamy-Royds: The main forum for questions that we're going to Amelia Bellamy-Royds: Try and encourage people to Amelia Bellamy-Royds: Use is the discourse.</p>
+
+<p>Amelia Bellamy-Royds: Discourse dot W IC g.io and Amelia Bellamy-Royds: That way people can ask questions, even if they weren't here on the live session, they can Amelia Bellamy-Royds: Follow up from watching the video.</p>
+
+<p>Amelia Bellamy-Royds: So unless anyone else has any logistics.</p>
+
+<p>I think we will wrap it up for the day.</p>
+
+<p>Amelia Bellamy-Royds: remind everyone to check the agenda for the next session, which is a little over 30 hours from now.</p>
+
+<p>Amelia Bellamy-Royds: So either tomorrow or the next day depending on what time zone.</p>
+
+<p>You're starting in and Amelia Bellamy-Royds: I will not be hosting that one I think Peter rush fourth is up for hosting day two.</p>
+
+<p>Amelia Bellamy-Royds: Will be talking about Amelia Bellamy-Royds: The map data and server standards OTC and how those standards are good for the web or maybe not good enough for the web.</p>
+
+<p>And we'll also have a hopefully very interesting panel.</p>
+
+<p>Amelia Bellamy-Royds: Representatives from government geospatial data providers on Amelia Bellamy-Royds: What web maps mean to their organizations.</p>
+
+<p>Amelia Bellamy-Royds: So I'd Amelia Bellamy-Royds: Like to thank everyone who has joined us today, or who is watching after the fact.</p>
+
+<p>Peter Rushforth: posted links to the discourse.</p>
+
+<p>Peter Rushforth: Discourse forum with some topics.</p>
+
+<p>And as soon as that Dan's a presentation is available via video, I will post a link to that.</p>
+
+<p>But I'll post a link to his slides.</p>
+
+<p>First out with my appreciation Dennis really interesting, I would like to chat.</p>
+
+<p>Peter Rushforth: Anytime offline.</p>
+
+<p>Duck Little: Thanks, everyone.</p>
+
+<p>Peter Rushforth: Thank you.</p>
+
+<p>Peter Rushforth: All right, we'll see you tomorrow.</p>
+</body></html>

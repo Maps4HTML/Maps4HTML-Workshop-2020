@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>W3C/OGC Maps for the Web workshop -- 23 Sep 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="W3C/OGC Maps for the Web workshop" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1>W3C/OGC Maps for the Web workshop</h1>
+<h2>23 Sep 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>AmeliaBR</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<p class='phone'>
+@dmorissette @tguild is doing the uploads &amp; he warned that he had a busy day yesterday, so it might not go up until later today. But yes, we are planning on posting them all!
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; &gt; Leaflet allows you to place any element in a grid, but I imagine getting all those videos synched up would be a challenge.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I don't think it's a big deal, assuming all videos have the same length and are seekable. Keep a timer (a variable holding `performance.now()`) at the load of the first tile, then for every other tiles set the position of the video with `.fastSeek()`when they are loaded. Possibly listen to the video's `stalled` and `seeking` events to keep things in sync. But it doesn't sound too hard.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; I edited the video this morning, trimming some noise at the start, aligned the captions and uploaded to youtube. it is supposedly processing post upload but showing %0 complete
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I did some experiments with animated `.gif` tiles way back in the past, though. It was glittery fun.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; assuming ui just not refreshing, if it doesn't clear i'll upload again
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; @IvanSanchez_gitlab you also utilize the &lt;blink&gt; tag?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; :)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [![imagen.png](<a href="https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/thumb/imagen.png)](https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/imagen.png)">https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/thumb/imagen.png)](https://files.gitter.im/5f5a7673d73408ce4fee95e4/plHJ/imagen.png)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @tguild You bet :-D
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; So my stance on animated maps is: encode the data in whatever format you want, then go full-on crazy with WebGL for the data display
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; sync-wise, it's much easier to have a WebGL `uniform` around, that applies to all tiles at the exact same time
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Plus, I think the Right Way™ to do temporal data is multisample GeoTIFFs
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Ah, explanation of teh glittermap <a href="https://ivan.sanchezortega.es:444/devel/2019/01/19/teh-glittermap.html">https://ivan.sanchezortega.es:444/devel/2019/01/19/teh-glittermap.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; ...and teh glittermap itself <a href="https://ivan.sanchezortega.es:444/glittermap/">https://ivan.sanchezortega.es:444/glittermap/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; And since I'm going off-topic already, may I ask everyone to read the MDN compatibility report that has been published today at <a href="https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Browser-Compatibility-Report-2020.pdf">https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Browser-Compatibility-Report-2020.pdf</a> (seen at <a href="https://twitter.com/foolip/status/1308423009011732480">https://twitter.com/foolip/status/1308423009011732480</a>)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="https://www.w3.org/Consortium/cepc/">https://www.w3.org/Consortium/cepc/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; scribenick: AmeliaBR
+</p>
+
+<p class='phone'>
+The link to Brian's slides live: <a href="https://slides.com/briankardell/ewm-maps-and-pie/live">https://slides.com/briankardell/ewm-maps-and-pie/live</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Seems like Brian is talking about React...
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Nononono don't put SVG on GL, read my rant on `&lt;tml&gt;` first
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Agree, great presentation @briankardell_twitter  :)
+</p>
+
+<p class='phone'>
+I don't think he meant to suggest React components, but rather standard web components! (but if we can make React components easier to make user friendly, too, that wouldn't be bad…)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; &gt; Seems like Brian is talking about React...
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; how so?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; Thanks @zcorpan
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I like that it works for other planets :)
+</p>
+
+<p class='phone'>
+From the Zoom chat, when Brian was talking about other use cases for map viewer behavior:
+</p>
+
+<p class='phone'>
+From Badita Florin to Everyone:  10:19 AM
+</p>
+
+<p class='phone'>
+And group maps, for class/school/ teams, Collaborative group maps
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; I would say even that min and max zoom is also critical at the layer level
+</p>
+
+<p class='phone'>
+Are you suggesting that the layer should automatically disappear if the map zooms in/out beyond the zoom range for the layer?
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; yes in some case this is critical to protect the data integrity and user experience
+</p>
+
+<p class='phone'>
+(because yes, that's a very good use case, and an intuitive way to describe it!)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I guess it is possible that not all layers can even show all tiles
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; Thanks @AmeliaBR for posting the suggestion I have written on Zoom. To see one use-case, this is what I did at the university where I was, so that students can call persons when they are in other parts of the city if they want to meet with a fellow student at home or where they work <a href="https://umap.openstreetmap.fr/en/map/locatie-studenti-cros_12736#13/44.4264/26.1084">https://umap.openstreetmap.fr/en/map/locatie-studenti-cros_12736#13/44.4264/26.1084</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; A unified coordinate reference system...that is quite the battle
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; For example legal boundaries depicted a special precision should not be seen passed a specific scale because they position on the basemap would become innaccurate
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Re: tile zoom, See the Leaflet concep of  `max`/`minZoom` vs  `max`/`minNativeZoom` <a href="https://leafletjs.com/reference-1.7.1.html#gridlayer-minzoom">https://leafletjs.com/reference-1.7.1.html#gridlayer-minzoom</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; One is the zoom levels that the thing is visible at, the other is the levels of the tile pyramid with available data
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] For example legal boundaries have a precision to them and should not be seen passed a specific scale because their position on the basemap would become inaccurate
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; I am aware of these capacities in leaflet. I was just stating a behavioral requirement for map on and associated data representation in HTML. I am a big fan on leaflet at this point in time.
+</p>
+
+<p class='irc'>
+&lt;<cite>kgeographer</cite>&gt; Are layer sources limited to tiles?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; thanks peter, nice presentation on the idea
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @prushforth ^
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Thanks @briankardell_twitter you too, great talk. Gives us a dose of reality.  Break it down, and build community to help
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @kgeographer no I will describe more in my breakout tomorrow. but no.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Has anyone made a MapML react component?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Yes MicroXML was what we thought was the right idea at the time, but realize that HTML parser rules.  We can , and will switch  asap.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; We would like to make TCRS into the concrete proposal that CSS WG seeks.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; yay :)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @fredesch  no I don't know React but would like to see how that would work.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Zoom and pan for CSS would be great for SVG, as well
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; We can build a coalition of needs with the SVG community
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; so many use cases for this, in so many diverse cases - lots of common and complex solutions over and over
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @prushforth  I do react components, ping me later about this,
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; :clap:  @zcorpan  nice assessment
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Very cool to see a live time review!
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; bit.ly/bocoup-testbed16 
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @zcorpan great presentation thanks for your help with this, looking forward to more work together.
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Thanks @prushforth !
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; It would be great if the people from mapping libraries were inovled in those discussion about a proposal for pan/zoom and how this could reduce their complexity
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Link to my slides <a href="https://slides.com/zcorpan/bocoup-review-mapml/">https://slides.com/zcorpan/bocoup-review-mapml/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="https://satakagi.github.io/mapsForWebWS2020-docs/De-centralizedWebMapping.html">https://satakagi.github.io/mapsForWebWS2020-docs/De-centralizedWebMapping.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="https://satakagi.github.io/mapsForWebWS2020-docs/QuadTreeCompositeTilingAndVectorTileStandard.html">https://satakagi.github.io/mapsForWebWS2020-docs/QuadTreeCompositeTilingAndVectorTileStandard.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Since my English is not good, I have prepared two short papers instead of a presentation. I would like you to read them in the time allocated to my presentation. I'll put the links on gitter.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; And, below is my position statement. I think you can understand the background of my papers.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Satoru_Takagi-KDDI.pdf">https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Satoru_Takagi-KDDI.pdf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @zcorpan we should talk later - are you talking to nicole sullivan about this at all?
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; @briankardell_twitter happy to chat. I haven't discussed with Nicole
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I am grateful to Peter for explaining on my behalf.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @zcorpan let me know whevener you want to talk!
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @satakagi I think there's a lot of overlap between your tiling proposal and Cesium 3d Tiles (<a href="https://cesium.com/blog/2015/08/10/introducing-3d-tiles/)">https://cesium.com/blog/2015/08/10/introducing-3d-tiles/)</a>  - have you look at that?
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; There is obviously a lot of work done already on MapML. I am wondering what are the real road blocks to see MapML extent HTML code base and been adopted by Browsers. How can this community officialise these requirements and seek  international adoption. Has this work ever been presented to the United Nation GGIM?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @IvanSanchez_gitlab
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Yes, I have only skimmed through it yet, but I see it as a rather close design.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @SebastienDurand I think that @zcorpan's document is a good start on the challenges
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; 👉 <a href="https://bit.ly/bocoup-testbed16">https://bit.ly/bocoup-testbed16</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @SebastienDurand @briankardell_twitter @zcorpan I take all this feedback very seriously, and we are looking for contributors to help us increase the velocity.  Contributions can come in many forms.  Igalia and Bocoup need "pie" to help us move forward.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @zcorpan
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/">http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @satakagi would  hardware accelerated svgs be helpful here ^
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @briankardell_twitter
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I think so, and there are cases where SVG can outperform WebGL.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; igalia is working on adding this in webkit ^  <a href="https://www.igalia.com/chats/Igalia-Chats-Niko-SVG-WPE">https://www.igalia.com/chats/Igalia-Chats-Niko-SVG-WPE</a> if you want to hear more
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] @briankardell_twitter
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] I think so, and there are cases where SVG can outperform WebGL.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Since it is possible to implement a renderer that is optimized at the level of a more optimized webGPU.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Oh man I hate when my map shows random windings because someone didn't get UTF-8 (or 16) right.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; lang attribute?
+</p>
+
+<p class='phone'>
+Fred, my thought too — that's definitely the HTML way to do that, but I guess the issue is that it's not always included in the geospatial data formats.
+</p>
+
+<p class='phone'>
+And there we go…
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; We see that same need in JSON data
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Most maps use a single language on a map
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Especially for things like `label`
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Any questions?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; How could we support the same label, but multiple language, and offer choice?
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; An odd use case is European towns that have different names in different languages - like the village has a Czech name and a German language
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Fred gets it
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; There is a trend around me to stop creating multi-lingual pages these days because of the advances in automatic browser translation capabilities.
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; the standard on locales can support a text string that define more then one language (if I am not wrong and also define default language...)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; seems like you would use Intl for that in canvas, no?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @satakagi it is interesting how much that has helped these kinds of pipelines
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; ecma 402 has a lot of investment
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (Fred, that's an exonym and endonym, FYI)
+</p>
+
+<p class='phone'>
+This isn't an Intl thing, @briankardell_twitter , because it's not about the output character string, it's about the glyphs that are selected from the font.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I see
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; the web vtt stuff is something that needs pie :)
+</p>
+
+<p class='phone'>
+So, the main message I'm getting is the Firefox is best for locale-aware CJK text rendering
+</p>
+
+<p class='phone'>
+:cake: :pizza: (no pie emoji)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; "This needs pizza" doesn't have the same ring to it, but sure, that works
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @bdon_gitlab great and informative presentation!!! Eye opening for me
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yes, the user mainly, but the developer may want to pick different primary language for different scenarios to show by default
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yep, like @bdon_gitlab is saying, its a bit for the user, a bit for the developer, a bit for the machine
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; Having a solution to this multi-language situation would be invaluable for Canada and Belgium or any other countries or organisations who has to makes products in different languages. E.g.: to answer for COVID-19 in Canada if 10 web map had to be created that equated to 20... because of the language (EN and FR) effort and resources are limited. In this time an age one would expect a single should be produce
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; and text should simply adapt to the user requirements.
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] Having a solution to this multi-language situation would be invaluable for Canada and Belgium or any other countries or organisations who has to makes products in different languages. E.g.: to answer for COVID-19 in Canada if 10 web map had to be created that equated to 20... because of the language (EN and FR) effort and resources are limited. In this time an age one would expect a single solution
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; should be produce and text should simply adapt to the user requirements.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Indigenous languages also need to be supported in Canadian maps
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @thijsbrentjens private mode map browsing is a vital necessity for a public Web imho
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; sorry for stepping on you there @shepazu
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; There was a lot of application that was created under COVID and canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] There was a lot of application that was created under COVID in canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] There was a lot of applications that was created under COVID in canada that were never published because there was a lack in confidence on the process used to ensure geolocation privacy, this is indeed a requirements and a concern and was found to be a bottleneck in the COVID response and monitoring
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Any questions for Thijs?
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; What is the path he recommends to see this done? Should there be an OGC geolocation privacy/fuzzy api?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @thijsbrentjens A "user" agent should provide a private map browsing mode!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I like how this lives in the realm of computer ethics too.  Fuzzy location to alleviate some ethical concerns.
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] What is the path @thjsbrentjens recommends to see this done? Should there be an OGC geolocation privacy/fuzzy api?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; are we adding a queue to ask questions or just typing them
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Type them here or to Doug
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; I will copy pasta
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; it feels like this could be more easily specified for a larger element than at another level? The UA can moderate the delta between granularity
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; How is the OGC API going to handle complicated Feature sets?  Representing arrays as strings in attribute has a lot of pit falls.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; OGC API/MapML pipeline, not just the API, sry
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; How will you get browser manufactures to implement a map element?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Build community, break the problem down, provide practical proposals based on "cow paths", common sense.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; can someone paste the questions here?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I keep missing the beginning of them and I odnt seen them written somewherE?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; I will try to move them both directions
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; where is the "other direction" peter?
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; What browser preferences should be supported - for example a user does not want to use their bandwidth on a map on a page.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; ?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; I thought you mean the zoom chat, but these questions are in an email. I will cut and paste
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I see
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; 1) OGC and W3C have Spatial Data on the Web best practices and OGC is very actively working on new API specifications, that could facilitate better publication (and easier use) of geospatial data. But how do you think we could get this in practice in active projects?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; 2) There are many localization features of maps that would benefit from browser support. Some examples are:
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; - the ability to produce place names in a writing system the user can read
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; - designing or authoring a multi-lingual map based on the locale
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; - handle dynamic formatting of numeric or time related data
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; - other interesting cartographic practices from around the world aren't yet widespread in digital mapmaking, like vertical text What should web browsers and web standards do to provide solutions?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; 3) What are the challenges for security and privacy for personal geospatial data in an international context)?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; 4) Web Mercator is a "de facto" standard for the web, but has well documented flaws: for example, Pacific-centered mapmaking. What's the right balance for web standards in making these choices for users and developers?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; 5) Bonus question: W3C is a leader in accessibility (e.g. WCAG), and accessibility is now demanded by law in several countries. But it's difficult (or not seriously tried) to apply these guidelines for mapping and geopspatial data. (Note that we have 2 panels planned later in this workshop on accessibility.) What can we do to make this easier?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; That is all
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Over to you to add to them
+</p>
+
+<p class='phone'>
+I know that the language tag system allows a script modifier, I don't know if it's possible to say "any other language with this script", though…
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; How are context menus handled internationally?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; -&gt; 4)
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Even if it's a tiling system, I think there needs to be a system that can be defined freely using javascript.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] -&gt; 4)
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Even if it's a tiling system, I think there needs to be a system that can be defined freely using javascript. As described in my second paper.
+</p>
+
+<p class='phone'>
+Fred's question was good, if we have the time: in the global challenge, how do data costs &amp; performance get factored in?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Also svgmap uses js to address the projection issue, making it the most flexible
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Yes, with js, you are free to define and use almost any projection method yourself.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I'm in the process of implementing that feature in SVGMap.js.
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; the use of the right projection is an administrative and political requirement for Canada. The Arctic situation cannot be represented well with web mercator
+</p>
+
+<p class='irc'>
+&lt;<cite>thegsi</cite>&gt; With print maps projection changes based on use case.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Using other projects is painful - most projections require central meridian or parallel or two and when you change the reference shapes change
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; 6) Just a really general question: Aside from  the CG custom element - are people aware of other attempts at element-ifying things with custom elements?  Do any of the major map libraries have them?  I see not especially helpful httparchive data on it that might shed light on other experiments around this.  I see some other markup-oriented things like xaml have a map element - any thoughts
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; on/experience with that.. It's not the web platform but it's got some similarities at least
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The geolocation API is fixed to WGS84.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; what about haptic maps synced with a screen reader
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; &gt; what about haptic maps synced with a screen reader
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; great idea
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; how is the accessibility on the native controls or xaml like ones that exist(ed)?
+</p>
+
+<p class='phone'>
+Gethin Rees is now leading the breakout on Extending GeoJSON. The speakers are coming from the side of cultural heritage presentation (museums etc.). They're talking about some extensions they've been developing in that community. Although they don't need to be standardized in something like MapML, but they want feedback from the broader community.
+</p>
+
+<p class='phone'>
+This is a breakout session, so the presentations will be short, than we'll open it up for questions &amp; discussion.
+</p>
+
+<p class='phone'>
+Bryan Haberberger will be talking about expressing GeoJSON as JSON-LD/
+</p>
+
+<p class='phone'>
+LD (linked data) allows semantics of data to be cross-linked, so that well-encoded data from different sources can be integrated.
+</p>
+
+<p class='phone'>
+Rather than talking about the GeoJSON-LD spec itself (it's a W3C spec, recently updated), but rather about the semantic vocabulary created for it.
+</p>
+
+<p class='phone'>
+One issue: Nested GeoJSON coordinate arrays are not compatible with the JSON-LD model. So it cannot process polygon model — which is a massive problem.
+</p>
+
+<p class='phone'>
+(Bryan demonstrates by copying some GeoJSON into a JSON-LD validator.)
+</p>
+
+<p class='phone'>
+And this is why… the JSON-LD 1.1 spec now explicitly supports lists of lists! (new validator works!)
+</p>
+
+<p class='phone'>
+The key addition for GeoJSON-LD is the addition of these URLs to the semantic definitions — so it's clear that “geometry” refers to the GeoJSON definition of geometry.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; in the future we will need to be able to have a standard that would allow for smaller GeoJSON files, by not repeating the long variables or something different.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; I`m now working with some GeoJSON files that load over the internet and that have over 50.000k data points and this becomes a bottleneck.
+</p>
+
+<p class='phone'>
+Another W3C specification that's related is Web Annotations. I need to be able to add descriptive material to content that's owned on another web server.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; ```So maybe instead of this:
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "type": "FeatureCollection",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "features": [{
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "type": "Feature",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "geometry": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "type": "Point",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "coordinates": [102.0, 0.5]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; },
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "properties": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "prop0": "value0"
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }, {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "type": "Feature",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "geometry": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "type": "LineString",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "coordinates": [
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [102.0, 0.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [103.0, 1.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [104.0, 0.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [105.0, 1.0]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; ]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; We could keep just the first char or 2 characters, having a standard that would allow programmers to take in consideration either the expanded query or the abbreviated version.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "t": "FC",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "fs": [{
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "t": "F",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "g": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "t": "P",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "c": [102.0, 0.5]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; },
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "p": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "prop0": "value0"
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }, {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "t": "F",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "g": {
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "t": "LS",
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; "c": [
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [102.0, 0.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [103.0, 1.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [104.0, 0.0],
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; [105.0, 1.0]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; ]
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; }```
+</p>
+
+<p class='phone'>
+@AmeliaBR aside, if you're not W3C folks, this is me minuting since we don't have captioning anymore
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I love that he's bringing another one of my babies into this, Web Annotation :)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; :thumbsup:
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; And maps what's not to like
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> [loads up an HTML data record from a Stanford portal] And now I can load up the JSON for this. And using that data, bringing it into my map, I can see that it is somewhere in California.
+</p>
+
+<p class='phone'>
+And since this was already JSON-LD 1.1, I can easily connect everything up. I can link up the coordinate data in the JSON, and it automatically pulls out the labels for it. If they update it later, I will get the update. I didn't need to modify their data.
+</p>
+
+<p class='phone'>
+(more examples)
+</p>
+
+<p class='phone'>
+As we disccused earlier, with internationalization we often need multiple labels for different languages. So we need to extend the web annotations concept, and no the labels are an array of different values. The IIIF API uses it's own annotations, but within that list they are all standard web annotations.
+</p>
+
+<p class='phone'>
+The IIIF group is trying to finalize this specification and get it into an organization where it can be maintained.
+</p>
+
+<p class='phone'>
+The next speaker, Carl, will talk about how to extend this model to additional dimensions of data.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Feel free to use the demo yourself...<a href="http://geo.rerum.io">http://geo.rerum.io</a>
+</p>
+
+<p class='phone'>
+<cite>Gethin:</cite> Thanks Bryan. Great explanation of how we can make different annotations or predicates of geo features: it is within, it is beyond something else.
+</p>
+
+<p class='phone'>
+Karl Grossner will be speaking about GeoJSON-T, something we're using at the British Library.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; We were hoping to have heard the presentation @prushforth is giving tomorrow on MapML.  Darn the chronology
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I'll say that before this session, I wasn't aware of MapML as an extension to HTML; I'm still not entirely clear how it handles vector data. I come from the background of using HTML and JS for web maps.
+</p>
+
+<p class='phone'>
+GeoJSON is a standard in the admittedly messy world of getting maps into web screens.
+</p>
+
+<p class='phone'>
+GeoJSON consists of feature collections, which consist of features, which have geometry.
+</p>
+
+<p class='phone'>
+Some issues I encounter working on historical applications: time is an absolutely essential aspect. It's not just where something is, but when. This demo shows the borders of Poland, it changes over time, and disappeared for a while.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; And quite often people believe geospatial involves time.  Geospatial solutions, specifically, only focus on place.  Spatiotemporal is a whole different thing.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> This example shows port connections from Venice, this one is a trajectory of a journey taken sometime during the 4th century. The temporal attributes are relevant both overall, and as a way of establishing the sequence.
+</p>
+
+<p class='phone'>
+All these cases aren't included in GeoJSON in any standard way. People make do, using the &lt;properties&gt; element, and then they figure it out in the browser.
+</p>
+
+<p class='phone'>
+My proposal is to include a standardized "when" attribute. It could be part of a feature, or it could be part of the geometry, making the geometry into a geometry collection of different values.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @kgeographer great use cases of maps.  We need to "look through" the use case to what "should" (or even could, and how) be handled by the browser, vs what "should" be handled by the Web site/ script developer.  I think the Leaflet plugin model gives us a good architecture to emulate, actually.
+</p>
+
+<p class='phone'>
+The idea is that there will be some standard structure for the "when" element, wherever it appears within GeoJSON, so that software knows what to do with it.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; <a href="http://kgeographer.org/">http://kgeographer.org/</a>
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> A When object could include timespans, or periods, durations, with more options for sequences and so on.
+</p>
+
+<p class='phone'>
+This last slide isn't in the slide deck. Gethin's group at the British Library has been working on this WebMaps-T interface. It is intended to work towards a set of modules that web map developers can just plug in to work with it.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I mostly just want to raise the idea that time matters, and to learn about the efforts you're creating.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Great presentations
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; As for time, I see a lot of complexity in my practical experience.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Weather forecast data, for example, published at time A, weather forecasts for time B.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; @kgeographer, I hadn't thought about time in maps, but it's obvious that it needs be built in
+</p>
+
+<p class='phone'>
+<cite>Amelia:</cite> Just to jump in on the question of the MapML model, for vector's it's designed to be as compatible as possible with GeoJSON, just converted to markup.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> Yes, and I'll be mentioning a bit about the time issue when I do my break-out on MapML tomorrow. Amelia has also been capturing these sorts of requests in the use cases &amp; requirements document. But of course, as Bryan and Simon discussed, we also have this push to keep things to the minimum viable proposal.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> That's good to know. For me, the question is: if all I have is the features, how do I convert that to a MapML map?
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> Well, we do have a &lt;feature&gt; element, based on GeoJSON, so the idea is to make those features and give them a place in HTML. I'll talk more on that tomorrow.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I mean, one way or another, all this stuff ends up in the DOM, when we're drawing them with Leaflet or something.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> But the goal is to make them recognizable by search crawlers or such.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> So we want all this linked data to also get included, for the semantic structure.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> One point on that, GeoJSON-T is not currently LD compatible. I hope that we can one day get that integrated, so it is GeoJSON-LD-T.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> And that could be done, just be defining this new "when" element, and what the structure inside it should be. And then eventually get that approved as a formal extension to the standard.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I think that's a way out. I haven't had a lot of response from that group yet, but I want more feedback from the people who would use this, so they can help me develop it to meet their needs.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> And as the chair of the IIIF TF, I can take that as an action, bring it to the group. We may be a year out from considering time ourselves, but if someone is already working on it, we can start from that.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; "events"...<a href="https://www.w3.org/TR/activitystreams-core/">https://www.w3.org/TR/activitystreams-core/</a>
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> And I take Peter's comment on the MVP seriously, we need to think about what needs to happen first. But I think that this big task of merging space and time has been somewhat ignored, in the standardization process.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; ah hmm, I thought we were done - was there more?
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> On the topic of MVP, the key part is “viable”. To be viable, it must be extensible to adding new features. Which means that in the intial discovery phase, we need to know what's out there that we don't want to exclude.
+</p>
+
+<p class='phone'>
+@AmeliaBR brian, this is breakout discussion on GeoJSON
+</p>
+
+<p class='irc'>
+&lt;<cite>theduckylittle</cite>&gt; There also needs the ability to `src=` any featuresets
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; "stories" : <a href="https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps">https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps</a>
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> I think of this a lot from the terms of progressive enhancement.
+</p>
+
+<p class='irc'>
+&lt;<cite>theduckylittle</cite>&gt; `&lt;featureset src=... /&gt;` because flooding any of the DOM parsers with 100+ `&lt;feature /&gt;` tags is going to be painful.
+</p>
+
+<p class='irc'>
+&lt;<cite>theduckylittle</cite>&gt; And a relatively "simple" dataset like gas-stations in a large city will hit that size very quickly.
+</p>
+
+<p class='irc'>
+&lt;<cite>theduckylittle</cite>&gt; ack, s/featureset/featurecollection/ ... to keep it in GeoJSON terms
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> There are 2 ways, in the HTML context, that time is dealt with. Timed media, like video, and then animation. If Karl's data from Poland, you could use CSS of SVG to tween between the different geographic boundaries. What are the native animation capabilities of the web, and how does that feed into the geometric expression of the data? <br>
+... I'd love to see animations of these changes, and other historical trends. Animations of trade routes — animations of slave routes, I saw one recently that was really compelling, where the movement started &amp; ended up, until it eventually trailed off. That was really powerful. <br>
+... Other things, maps of business, not only where but when are they open or closed. E.g., Brandon's map of 80s NYC. I don't think we can represent geospatial information unless it's also temporal.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> That's the money line. All the cases you've talked about are quite routinely done within academic applications today, but each time is with a custom or proprietary extension. Since we're trying to move towards a linked data world, it needs to be standardized.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @theduckylittle  In "MapML" (that is, map-specific content proposal in html), we have proposed &lt;layer src="..."&gt; which would include *any* map content into the layer context, including &lt;feature&gt; elements.  We don't want to get carried away and bury the DOM, but we think features have value for many reasons.  I will try to explain tomorrow.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I don't know much about stores and such, I'm coming more from the historical perspective, but I do know that there is a W3C group that is working on it.
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> Agreed, may main point is that we should also be looking at how existing web standards represent time, e.g., CSS animations, and make sure that the data will be compatible with that.
+</p>
+
+<p class='phone'>
+<cite>Gethin:</cite> When we get academics together, we always talk about these edge cases. E.g., a building that gets moved. So I hope that's something that this community can bring to the discussion and the use cases.
+</p>
+
+<p class='irc'>
+&lt;<cite>theduckylittle</cite>&gt; @prushforth - Cool, I'll try to dial in and pay closer attention tomorrow. Busy busy week at work. But I think just as Javascript code is "discoverable" but not necessarily in the DOM, there could be space for bringing in GeoJSON similarly.
+</p>
+
+<p class='phone'>
+<cite>Amelia:</cite> What happens next? Beside the new collaboration with GeoJSON-LD and GeoJSON-T.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> My next task is to get GeoJSON-LD standardized in the next version, even if that means making things more restrictive. <br>
+... Also want to work with other map types. Right now, lots of maps are really just pictures of maps. They need coordinates, for geo-rectification to connect them &amp; allow them to work together. And then of course someone like Karl comes in with the time dimension, and we hadn't thought of that.
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> Web annotations does consider time; annotations can be time stamped.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> But not images.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> This is one thing with MapML, you can use an image, but then also add the extra information to geo-rectify it.
+</p>
+
+<p class='phone'>
+<cite>Gethin:</cite> If people don't have further questions…
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> What about layers? I think that's a fundamental primative of maps. What do you all think of “what is a primative feature of maps?” In my world, layers are everywhere. As Ivan Sanchez says, everything is a layer.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> And we can talk about layers as both transcription and translation. We don't use layers explicitly in IIIF, but we have these groups of annotations and features.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> it would be great to get links to that explanation.
+</p>
+
+<p class='phone'>
+<cite>Amelia:</cite> I've got the notes in the chat, which we can copy over to Discourse, so this definitely doesn't have to be the end of the conversation.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> That's good. You talked about next steps, and one thing we've had difficulty so far is how to get these extensions standardized. The GeoJSON spec allows extra data, but emphasizes that it should generally just be ignored. I'd like to get this actually standardized. Maybe through GeoJSON-LD, but so far that is fully standardized, either. I'll keep working with Gethin, to try to move forward with the models they need
+</p>
+
+<p class='phone'>
+for their work.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> And if he's working with communities like us, even in an incomplete stage, we can definitely help get that into a form which can one day be standardized.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> And the IIIF community is good for that. In the meantime, I'm writing software.
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> and that's a good thing. Gives us the cowpaths to pave later.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> The example from my last slide, the web gazetteer is part of that. It's got when wherever it.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> what do you do for scale? GeoJSON doesn't have a concept of zoom built in.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> I use all sorts of different tools. It's a bit of spaghetti. The whole idea of sharing, that the LD universe proposes, is really what I'm interested in. It almost compells standardized models and ontologies.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> The big next thing I'd like to see is a banner "Geospatial ≠ spatial-temporal” they're so connected, people just assume. But just because software can do one, doesn't mean it can do the other. Machines don't like abstractions, it needs to be in the data.
+</p>
+
+<p class='phone'>
+<cite>Karl:</cite> And we haven't even mentioned fuzzy time and uncertainty and so on.
+</p>
+
+<p class='phone'>
+<cite>Bryan:</cite> there was discussion in gitter about building maps as static pages, but of course you can't do that for continuous movement unless you have another page for every second.
+</p>
+
+<p class='phone'>
+<cite>Doug:</cite> One final comment: Someone mentioned that they weren't sure how things related to MapML. I wanted to emphasize that this isn't a MapML conference. It's a Maps for the Web workshop, and that includes all sorts of aspects. So everyone's contributions within that are welcome and needed.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> Yes,  on that: the point of this workshop, which we should have had long ago, is to really make connections &amp; identify what is important for people working on communicating maps on the web. So temporal data is clearly part of that. We've been working on MapML and the Maps4HTML CG for years now, and over time I've become more convinced that time is relevant.
+</p>
+
+<p class='phone'>
+Badita Florin: On that, I'm really glad this workshop is happening. I've been working on maps in many ways, but I hope for the one day when Leaflet and all those tools aren't necessary. And there are other limitations. Like when I'm working with large data sets, the DOM can't really handle that, so we need a better way to deal with that. And although Leaflet has got better, I worry that many contributors are now at MapBox &amp;
+</p>
+
+<p class='phone'>
+maybe are more focused on improving MapBox vs Leaflet. So I really think it's important to have a standardized solution.
+</p>
+
+<p class='phone'>
+<cite>Peter:</cite> I definitely agree with that. I really don't think we <br>
+... will ever have a solution for 15 thousand points in the browser, there will need to be strategies for that.
+</p>
+
+<p class='phone'>
+**** OK, we're wrapping up the Extending GeoJSON session ***
+</p>
+
+<p class='phone'>
+Sorry for somewhat drowning the chat, my task for the rest of the day &amp; tomorrow will be going through the gitter logs &amp; pulling out all the comments to copy over to the Discourse pages, so they're easier to find later.
+</p>
+
+<p class='irc'>
+&lt;<cite>kgeographer</cite>&gt; Thanks for these notes, Amelia - very helpful
+</p>
+
+<p class='phone'>
+👍🏽
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; Btw, if you have any solutions of what would be the best approach for creating a collaborative map? What technical stack do you recommend? Allow loading data from geojson/DB but also allow auth/non-auth users to add points/lines on the map. I did not find a open github repo addressing this and I`m interested in starting to tackle this.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @baditaflorin  So for us, we let people register with our RERUM annotation store.  Our API and DB encourages Linked Open Data.  At a simple level, everyone can see one LOD Map and all provide separate assertions syncronously, and see them all in one place.  Versioning allows for edits without overwrites, as well as conflicts, which is good for discussion and collaboration
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Our institution chose the IIIF framework to accomplish this pipeline, and many other cultural hertitage institutions have jumped on board.  <a href="https://iiif.io/community/">https://iiif.io/community/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; A collaborative map and the data used to supplement it better be interoperable if you want collaboration...that's the part you need to figure out.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; RERUM : <a href="http://rerum.io">http://rerum.io</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Multilingual Label Handling : <a href="https://iiif.io/api/presentation/3.0/#label">https://iiif.io/api/presentation/3.0/#label</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Metadata Handling: <a href="https://iiif.io/api/presentation/3.0/#metadata">https://iiif.io/api/presentation/3.0/#metadata</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Just thought you might find that interesting since it came up a couple times today.  Internationalization always means complexity.  We can't just have strings anymore :(
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>

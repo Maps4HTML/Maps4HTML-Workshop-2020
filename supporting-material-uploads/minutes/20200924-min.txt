@@ -1,0 +1,297 @@
+18:06 <tguild> Topic: UI patterns in existing web map widgets, Nic Chan
+18:07 <tguild> -> https://www.youtube.com/watch?v=V-Gx0e5Gkzg Nic Chan's slides
+18:08 <AmeliaBR> @Malvoz's review & discussion:
+18:08 <AmeliaBR> https://github.com/Malvoz/web-maps-wcag-evaluation/blob/master/README.md
+18:08 <AmeliaBR> https://github.com/Maps4HTML/chat/issues/10
+18:08 <AmeliaBR> 
+18:09 <tguild> other channel @AmeliaBR?
+18:09 <tguild> s/other channel @AmeliaBR?//
+18:10 <tguild> s/slides/presentation video/
+18:14 <briankardell_twitter> note this is another place we might have a common lower level thing - tv and games also have spatial navigation needs
+18:15 <thehabes> I am guilty.  I like the `<a>` better than the `<button>` in Chota CSS.  I'll rethink my habits.
+18:16 <briankardell_twitter> there's an interesting conversation on a whatwg log in web components whatwg from like 09 on this example actually 
+18:18 <thehabes> The label thing is fascinating.  I have never even thought about having to handle that in, like, Leaflet.  I am not sure I would even be able to change that kind of behavior without some hefty helper function to traverse layers and find those darn things.
+18:19 <briankardell_twitter> this was a good presentation, I'm not sure the nick but very interesting
+18:19 <IvanSanchez_gitlab> I do remember there was one issue in the Leaflet bug tracker regarding the i18n of the alt text for the default controls (i.e. being able to translate "zoom in")
+18:19 <zcorpan> Very insightful, thanks @nchan0154 !
+18:20 <satakagi> :+1:
+18:20 <thehabes> Yes, thank you @nchan0154 .  It was tough to be called out, but these are the exact kind of oversights that happen with devs.
+18:21 <fredesch> what screen reader are you using?
+18:22 <briankardell_twitter> I lost connection for a minute - what is the talk now? I missed the title
+18:22 <AmeliaBR> Nic's slides: https://wcag-maps.nicchan.me/
+18:22 <AmeliaBR> (sorry we didn't have that link on the agenda)
+18:22 <briankardell_twitter> it might be helpful if we added the topic and nick for the person here
+18:22 <zcorpan> @briankardell_twitter Introduction to Digital Nonvisual Maps
+18:22 <rahola_gitlab> "Introduction to Digital Nonvisual Maps"
+18:23 <briankardell_twitter> thanks
+18:23 <AmeliaBR> Brandon's slides as PowerPoint: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx
+18:23 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx Brandon Biggs' slides
+18:23 <tguild> s/"Introduction to Digital Nonvisual Maps"/Topic: Introduction to Digital Nonvisual Maps/
+18:26 <thehabes> 3D sound is such an interesting topic, and I struggle to understand it.
+18:34 <thehabes> I want to know if you have every been approached by people who study poetry or music.  Being able to know what things sound like from different points in a given space is a topic in the humanities
+18:34 <AmeliaBR> https://xrnavigation.io/audiom-getting-started/
+18:35 <fredesch> I use safari on a MacBook and stuff on the site did not work for me.
+18:36 <thehabes> +1 for GeoJSON
+18:49 <baditaflorin> https://github.com/Leaflet/Leaflet.Editable
+18:51 <prushforth> http://www.cs.umd.edu/hcil/audiomap/
+18:51 <prushforth> 
+18:51 <baditaflorin> @bdon_gitlab and I would strip the lat/long to 6-7 decimals https://en.wikipedia.org/wiki/Decimal_degrees
+18:51 <prushforth> http://www.cs.umd.edu/hcil/audiomap/
+18:51 <prushforth> 
+18:52 <prushforth> http://www.cs.umd.edu/hcil/audiomap/
+18:52 <prushforth> 
+18:52 <prushforth> https://github.com/Leaflet/Leaflet.Editable
+18:52 <prushforth> 
+18:57 <baditaflorin> Tool for finding the most used OSM tags in the world https://taginfo.openstreetmap.org/
+19:02 <thehabes> I have a question on granularity...do you see this being granular enough to help someone get around their favorite baseball/soccer (football) (futbol) stadium?
+19:03 <thehabes> Like could it help you get to the vendor you want, or the bathrooms nearby, etc.
+19:03 <baditaflorin> https://overpass-turbo.eu/ for dinamic query of OSM and can return GeoJson
+19:04 <thehabes> Nice, that's super cool.  I wasn't sure if Mapbox or your geo system in the background even got that granular.  
+19:07 <thehabes> A Audio 3D preview of the venue you want to go to, to get your bearings ahead of time.  Great question @AmeliaBR 
+19:08 <thehabes> Will it be able to support 3D "sound packs"?  Not sure if that is a whole new filetype or something
+19:09 <rahola_gitlab> In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+19:09 <AmeliaBR> > Not sure if that is a whole new filetype or something
+19:09 <AmeliaBR> Interesting question. I wonder if surround-sound audio formats for movies & games could be adapted?
+19:11 <thehabes> oh man the bushes.  What a fringe case.
+19:11 <baditaflorin> https://wheelmap.org/ showing  locations in osm that are accessible/partial accessible or not accesible
+19:12 <thehabes> I see, that makes sense.  Again, the magic of 3D sound eludes me.
+19:12 <AmeliaBR> [edit] > Not sure if that is a whole new filetype or something
+19:12 <AmeliaBR> [edit] Interesting question.
+19:12 <AmeliaBR> [edit] 
+19:12 <AmeliaBR> [edit] I wonder if surround-sound audio formats for movies & games could be adapted?
+19:12 <tguild> people behind wheelmap.org started a W3C Community Group, Linked Data for Accessibility https://www.w3.org/community/lda/
+19:14 <thehabes> No, it is not there yet.  Much to the chagrin of the poet and music studies.
+19:15 <thehabes> Like Waze tells you about road hazards...that's definitely it's own layer of complexity
+19:18 <NicolasRafaelPalomino> 
+19:18 <NicolasRafaelPalomino> > In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+19:18 <NicolasRafaelPalomino> 
+19:18 <NicolasRafaelPalomino> 
+19:19 <NicolasRafaelPalomino> > In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+19:19 <NicolasRafaelPalomino> 
+19:19 <NicolasRafaelPalomino> Sensor data would have to interact with physical material information to give in-context and in-real time data throug audio. That extension could also help mapping
+19:19 <NicolasRafaelPalomino> digital mapping*
+19:24 <tguild> [intermission]
+19:24 <tguild> scribenick: ted
+19:26 <tguild> Topic: The <map> and <layer> speculative polyfill (MapML) 
+19:27 <tguild> Breakout led by Peter Rushforth
+19:32 <tguild> Peter: Part 2 of MapML proposal about why we believe maps needed for browser
+19:32 <tguild> … explain tile coordinate reference system, effort to coordinate spatial reference systems to be implemented by browser
+19:32 <tguild> … will cover details of the mapml proposal, seeking help to better define and improve how they are implementable
+19:33 <tguild> … location in mapml is a general term by anything that can be represented by coordinates and zoom value
+19:33 <fredesch> Why do you use an input element? There are enough input roles already.
+19:35 <tguild> [discussion of position element. input types height and width to represent rectangle] 
+19:36 <tguild> [input type location, serializes parts. regular location and geometry]
+19:36 <tguild> [anticipate possibility to rotate map]
+19:37 <tguild> [location should always have a zoom level and accompanying scale]
+19:39 <tguild> [example on tile events]
+19:39 <IvanSanchez_gitlab> One of my wild ideas is to get rid of "zoom level", and specify the scale as the number of CRS units *on a diagonal*, to cover the use case of dynamic container sizes (i.e. when the map uses `vh` and/or `vw`)
+19:40 <fredesch> I forget what happens with Mercator at the equator? Does't nothing shift by 10,000 or something?
+19:40 <tguild> [meta element]
+19:41 <thehabes> Comment on H and W : This is best to require with image "primitive" sources.  You never know where that image might be used, and devs will need that H and W to have a ratio for the "like rectangle" math to draw things that specifically target the image, instead of the map.  It is a granularity thing, it depends how much granular control you expect to give devs over the image specifically.
+19:41 <tguild> [datalist, shard keyword]
+19:41 <tguild> [select input]
+19:42 <satakagi> @IvanSanchez_gitlab 
+19:42 <satakagi> The SVGMap.js I'm implementing doesn't have a concept of zoom levels either, because it's based on svg's viewBox.
+19:42 <thehabes> Being a "all I have is that which I can target with a Web Annotation" guy, it is extremely important I get that ratio for things like media fragment syntax (https://www.w3.org/TR/media-frags/)
+19:42 <tguild> [html uses opaque urls for js, css etc with link. href a hyperlink, glue for federated nature of web]
+19:43 <IvanSanchez_gitlab> @fredesch The equator is the magical place where the CRS units of EPSG:3857 ("web mercator") in the longitude axis (the horizontal/x axis) equal meters. Anywhere else there's distortion.
+19:43 <tguild> [advantage of sharing information via http. browsers synthesis and render]
+19:44 <IvanSanchez_gitlab> re: `<layer>`, I refer to the part of my essay where I ask to stop calling things "layers"
+19:44 <fredesch> I believe in Mercator projection Norhting shifts at the equator as the  projection wants to avoid negative coordinates
+19:44 <thehabes> @IvanSanchez_gitlab +1
+19:44 <tguild> [layers, rel=legend]
+19:45 <IvanSanchez_gitlab> @fredesch You might be referring to traverse mercator (UTM), which defines distinct north/south hemisphere CRSs to avoid negative northings
+19:45 <tguild> Peter: part of the proposal for implementing alternate styles. additional rel value of self style, can similate eg satellite or hybrid view
+19:45 <IvanSanchez_gitlab> not that there's anything wrong with a negative northing, though.
+19:46 <satakagi> From the point of view of compatibility with CSS and SVG concepts, I believe that concepts such as zoom level and tile coordinate system, which are strongly dependent on the equally-divided tile pyramid of maps, have a large conceptual gap.
+19:46 <tguild> … a key value is to separate content
+19:46 <tguild> … small set of projections supported by proposal currently
+19:47 <tguild> … if someone adds a projection layer that doesn't match the map, use alternate instead
+19:47 <fredesch> @IvanSanchez_gitlab ahh, I think you are right about TM vs M
+19:47 <tguild> … tiles images and features are synonymous, should be factored out into media types
+19:48 <tguild> … we implemented a kind of link that allows you to set zoom in/out relation
+19:48 <tguild> … we have query support for features
+19:48 <tguild> … link rel=query
+19:48 <fredesch> It seems this spec is pretty tile oriented
+19:49 <satakagi> :+1:
+19:49 <tguild> [link rel=query slide]
+19:50 <tguild> [OGC features]
+19:50 <tguild> [GeoJSON and HTML - combined strenghts]
+19:50 <AmeliaBR> Fred… just when you thought it was all about tiles, here we get `<feature>`!
+19:51 <satakagi> Tile is just one of the adaptive methods for delivering a portion of a huge map resource with reasonable performance.
+19:51 <fredesch> Why won't SVG work?
+19:51 <IvanSanchez_gitlab> I'm having a waking nightmare with the axis order (lat-lng lng-lat) right now
+19:51 <IvanSanchez_gitlab> and flashbacks about WKT-in-GML
+19:52 <IvanSanchez_gitlab> (also, GML already exists)
+19:52 <satakagi> By the way, it's also a nightmare when the y direction is reversed.
+19:52 <satakagi> [edit] By the way, it's also a nightmare that the y direction is reversed.
+19:53 <tguild> [links slide, future usage for federation of services]
+19:53 <fredesch> @satakagi very true
+19:53 <tguild> [links stylable, can be activated]
+19:53 <IvanSanchez_gitlab> This sounds reminiscent of XSLT over GML to get SVG
+19:54 <tguild> [tile element slide]
+19:54 <tguild> [img and other html tags]
+19:55 <tguild> [useful for embedding meta data]
+19:55 <fredesch> At SPSS we added the ability to make chloropeth maps by sucking in shp files.  This looks worse for a developer.
+19:56 <tguild> [OGC web services and APIs, mapml document element]
+19:57 <tguild> [mapml abandoned xml namespace but can be corrected, using html5]
+19:57 <nchan0154> (belated thank you for the kind words everyone! happy to answer any more specific accessibility related questions or test fixes if you are a library author wanting to improve!)
+19:57 <tguild> Peter: what does it mean for a map to be accessible? Robert and Nic lent to that earlier
+19:58 <tguild> … allowing websites to represent physical world in a standard way will enable necessary accessibility innovation
+19:59 <tguild> … animation isn't something that has been considered yet, can be factored in future discussions
+19:59 <tguild> … we need ability to create spatial content
+20:00 <fredesch> What I don't like is reusing element names that exist in HTML.  Validation tools already have a problem with false failures when SVG is in a web page. Reusing element names in MapML will make that problem worse.
+20:00 <tguild> … more needed for DOM api of elements and attributes?
+20:00 <tguild> … could DOM be leveraged for OpenLayers?
+20:02 <tguild> … CORS considerations to reduce risk
+20:02 <tguild> … not including JS potentially a saving grace
+20:02 <tguild> … html parser should be used as mapml document requires it. when svg is parsed into an image, is a similar scenario
+20:03 <tguild> … happy to do a demo or answer questions
+20:03 <tguild> Amelia: I think we had some questions coming in on the chat, hope to go through a few of those but also see your polyfill demo
+20:03 <thehabes> I have a couple questions.  I will use the unmute method and ask when the moment feels right.
+20:04 <tguild> … concern on complication and reusing html elements
+20:04 <tguild> … do you want to explain the thinking that led to this proposal?
+20:04 <tguild> Peter: we are not reusing but pushing extensions to existing elements
+20:05 <tguild> … every new element and attribute an extension to html and comes with effort and expense
+20:05 <tguild> … I believe html design principles encourages use for given semantic
+20:06 <tguild> … reusing input element for instance seemed reasonable as this is another form of input
+20:06 <tguild> Fred: using form elements for a different purpose will cause problems for validation and other tools
+20:07 <tguild> Peter: I created parser and validator for mapml
+20:07 <tguild> Fred: W3C has problems with embedded svg for example
+20:07 <tguild> Doug: I don't think we should predicate particular enhancements on flaws of existing tools
+20:08 <tguild> … understand issue of svg validation but that should not impose advances
+20:08 <tguild> Peter: my understanding of html design principles you should build upon existing
+20:08 <tguild> Fred: but input a form element
+20:09 <tguild> Peter: it is bound to extent element and children
+20:09 <tguild> … it provides scope for inputs and links in it
+20:09 <tguild> … as well as action attribute
+20:09 <tguild> … there is an overlap in the idea
+20:10 <tguild> … form is bound to action value
+20:10 <shepazu> I think the <feature> element might better be defined as custom roles (or attributes) to be applied to existing geometry-rendering syntax like the SVG path. I've made a simple GeoJSON-to-SVG converter, and it's pretty trivial. I don't think browsers will have much appetite for adding new syntax there
+20:10 <tguild> Amelia: there is a core similarity, form and form inputs are used to access possibly infinite set of urls based on user action
+20:10 <satakagi> The map element was originally a function called imagemap, which makes images clickable. It's relatively understandable since geographic maps include that function as well. However, I think it needs to continue to be a feature that encompasses uses other than map. On the other hand, I don't like the idea of changing a concept that's so heavily reliant on the geo-industry, and I don't think it's desirable in many ways.
+20:10 <tguild> … extent inputs build up possibly infinite urls on user's panning and zooming on map, clear similarity
+20:11 <tguild> … similar to parameters of a query to database server
+20:11 <tguild> … I see the logic but understand Fred's concern on overloading an element
+20:11 <tguild> Doug: we cannot even get new input elements of html5 consistent in browsers
+20:12 <tguild> … which is to Fred's point
+20:12 <tguild> … overloading input at this point asking alot of browsers. there is an elegance to it but less so when already overloaded
+20:13 <tguild> Peter: I would point people back to html design principles. is something provides a variable value, should you invent a new mechanism or use existing?
+20:13 <tguild> … inputs are what are used today
+20:13 <tguild> … html isn't frozen
+20:13 <tguild> Doug: theoretically you are correct but also need to look at recent history of how extending markup is viewed in html group
+20:13 <tguild> … there is strong resistance to change
+20:14 <satakagi> As for the input element, before that, there is a discussion about what to do with the template for the tiles. I commented on it on discourse.
+20:14 <tguild> … long term it might be the better solution but extent you are changing inputs may make implementation more complicated
+20:14 <tguild> Peter: if another mechanism would fly better, I say sure
+20:14 <tguild> … we can redo that part of the proposal. I am saying they are like inputs in forms and want to start the debate at that point
+20:15 <satakagi> [edit] As for the input element, before that, there is a discussion about what to do with the template for the tiles. I commented on it on discourse.
+20:15 <satakagi> [edit] https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811
+20:15 <tguild> Fred: Google maps uses a zoom level and centerpoint and it is pretty simple, using raster tiles
+20:15 <tguild> Peter: that was in part 1 presentation. long/lat as starting positions for map
+20:15 <tguild> Fred: I saw that but today you were talking about corners and all sorts of stuff
+20:17 <IvanSanchez_gitlab> The use case for *not* specifying map view as center/zoom is that a lot of people want to specify maximum map bounds
+20:17 <IvanSanchez_gitlab> e.g. "display at most 180 degrees of longitude" as mapkit does
+20:17 <tguild> Bryan: essentially what we have is forms and use them to avoid using js, using primitives...
+20:17 <IvanSanchez_gitlab> and the casuistic of a bbox with different screen sizes is *hell*
+20:17 <tguild> … want to be able to provide context. I am wondering if you are considering a rdf style or json-ld schema
+20:18 <tguild> Peter: outside my expertise
+20:18 <tguild> Bryan: you have to implement syntax to ensure proper parsing, so curious how you are going to express hierarchy in coordinates
+20:18 <tguild> Peter: @@
+20:18 <tguild> Bryan: ah you are going to use the coordinates themselves
+20:18 <tguild> Peter: hyperlink anchors around coordinates or parts of coordinates
+20:19 <tguild> … coordinates are lowest level element
+20:19 <tguild> Bryan: can you nest them?
+20:19 <tguild> Peter: no based on GeoJSON
+20:19 <tguild> Bryan: good answer
+20:20 <tguild> … when you did doc type mapml, was that like your schema?
+20:20 <tguild> Peter: purpose is like a media type, next level processing
+20:20 <tguild> … similar to accept headers
+20:20 <tguild> … similar to a source attribute request, it gets drawn by renderer in coordinate space
+20:21 <tguild> … fits within html parser
+20:21 <tguild> s/doc type/doctype/
+20:22 <tguild> … we haven't closed loop with Simon but pushing for that as a second tier media type indication
+20:22 <tguild> Bryan: I have never asked why I need to do doctype html all these years, probably for the parser
+20:23 <tguild> Peter: adding modes or changing expectations of parser makes them (browser vendors) nervous
+20:23 <tguild> Bryan: where can I find more about features elenent
+20:23 <tguild> Peter searching for link on current draft
+20:23 <tguild> Peter: in our mapml repository
+20:23 <tguild> @@uri
+20:24 <tguild> … I could do a quick demo
+20:24 <AmeliaBR> https://maps4html.org/ for more links
+20:24 <tguild> Fred: do you have support for gazateer, geographic names
+20:26 <tguild> [refering back to Ivan's typed question/comment]
+20:26 <tguild> Amelia: bounding box can be more flexible than vector graph, you can have continuous zoom
+20:26 <IvanSanchez_gitlab> Yeah, bounding boxes might be good, but then you got users with cellphones, they rotate the cellphone, and the bug reports start coming in
+20:26 <tguild> Peter: you can set extent for visible behavior. use bbox to zoom to extent, is that good enough?
+20:27 <tguild> [Peter shares screen]
+20:27 <IvanSanchez_gitlab> I still think something like scale of CRS units on a diagonal might be better in the long run, but I'm not 100% sure
+20:27 <tguild> Peter: this is polyfill based on leaflet
+20:28 <tguild> … showing tile grid, properties of map
+20:29 <satakagi> There was an action on introducing the concept of scale into CSS a few years ago.
+20:29 <satakagi> http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/
+20:30 <baditaflorin> https://umap.openstreetmap.fr/en/ is a great example of simple things for creating a map, and some of the settings that the have, like the limit of the extent and zoom for the specific map 
+20:30 <baditaflorin> https://umap.openstreetmap.fr/en/map/somes-delivery-somesul-din-cluj_499724#12/46.7754/23.6263
+20:30 <tguild> … each layer has extent property, corners of corners of event are stored 
+20:30 <AmeliaBR> Ivan, that's why (the rotating view/changing screen dimension issue) you need SVG-style viewBox, which sets either the maximum or minimum coordinates to fit in the view, but lets the aspect ratio be maintained.
+20:30 <tguild> … plan is to fit bbox at maximum possible zoom, save starting conditions as lat/long/zoom
+20:30 <satakagi> I've been working on this document for a use case for a scalable map.
+20:31 <tguild> Badita: you will zoom to an initial location but think question more about zooming to maximum extent eg beyond city of country level
+20:31 <tguild> … there are cases where you want to confine them to a maximum
+20:32 <tguild> Peter: no plan for that at present, could be an extension
+20:32 <IvanSanchez_gitlab> The hell use case for this is users who want mapkitjs behaviour: a maximum *longitude span* of either 180° or 360° , but *no* maximum bbox
+20:33 <tguild> [Peter continuing demo]
+20:33 <fredesch> that's cool
+20:33 <tguild> Peter: it works pretty well for WMS and styles
+20:33 <tguild> … what I was showing earlier is ability to query at particular locations
+20:34 <tguild> … geo server returning elements with map feature in it, properties shown in leaflet popup
+20:34 <tguild> … one of the challenges is in how to allow slideouts and capture event
+20:34 <tguild> … web designers will have their own ideas on 
+20:34 <tguild> s/representatino/representations/
+20:35 <tguild> … that is available in a custom element, we need to package it up but you should be able to download, unzip and use it
+20:35 <tguild> … remote document is a simple view source type document
+20:36 <tguild> … you can add layers willy nilly, there is a limit. a layer cannot contain other layers but as much template and content as you want
+20:36 <tguild> … you can change their zed index like you can any other part of html and svg
+20:37 <tguild> … this particular page breaks the back button but you can copy a location on page [but hey its a demo...]
+20:38 <thehabes> @prushforth Filter Features by Prop.x and Prop.y is not really supported in many of the map stuff.  I see you are filtering layers, is it robust neough to filter features by individual properties?
+20:38 <tguild> … what else is there to show? the mapml extension to geoserver, you can set it up to cache tiles
+20:38 <tguild> … captures things on first use
+20:39 <tguild> … geospatial content management systems can pump out html+mapml on day 1
+20:39 <tguild> … that's my pitch
+20:39 <tguild> Badita: can you build in buffering?
+20:40 <shepazu> One way of integrating CSS is to allow an outline on the tile grid elements 
+20:40 <tguild> Peter: it could be managed by api
+20:40 <tguild> … browser engine can't do everything. developer ecosystem will be facilitated by this proposal but rendering is a full time job
+20:40 <tguild> … I would encourage progressive enhancement, an api you can build
+20:41 <IvanSanchez_gitlab> *Ideally*, the DOM scripting interface would have the same functionalities as, say, Leaflet / OpenLayers / etc, so stuff like custom tile buffers could be in.
+20:41 <tguild> s/an api/a js api/
+20:41 <tguild> Bryan: something I have trouble with in leaflet, when I have a ton of points is limit them to just the desired ones. reading all the properties to filter them is costly
+20:42 <tguild> … do you think you can filter hide/show features by property?
+20:42 <IvanSanchez_gitlab> @thehabes Define geojson filters, one `L.GeoJSON` per property, then the usual `map.fitBounds(myDesiredFilteredGeoJsonGroup.getBounds())`
+20:42 <tguild> Peter: I can see that the kind of thing that can be in the api, that isn't something you can do with mapbox and leaflet
+20:42 <IvanSanchez_gitlab> the trick here is digesting the data in filtered groups
+20:42 <shepazu> That should be another CSS integraation, based on selectors
+20:42 <tguild> s/Peter: I can see /Bryan: I can see/
+20:43 <tguild> Peter: I have a number of WMS by layer id and I tie that on the server
+20:43 <shepazu> (clientside, I mean)
+20:43 <tguild> … user can query that file by clicking on control
+20:44 <AmeliaBR> @shepazu that sounds nice, but currently selectors only work if the properties are attributes, and not if the properties are child elements in the DOM… 
+20:44 <AmeliaBR> (I mean, I'd love for CSS selectors to be able to filter by child elements, but there's been a lot of push back about implementing that.)
+20:44 <tguild> Badita: could there be another layer showing eg trees, would that be rendered before, after or random?
+20:45 <tguild> Peter: at DOM level? image element is base layer, done by document order
+20:45 <tguild> … if you have layers stacked up, you can make/use your own controls via html
+20:46 <tguild> … you should be able to get the same events, providing boost in performance of browser engine
+20:46 <tguild> … this is an area we played with. input can be a useful thing to work with here instead of reinvent - even though everyone hates them...
+20:46 <satakagi> In SVGMap.js, I made this kind of custom form functionality free to design in the webApps, assigning it all to each layer.
+20:47 <thehabes> @IvanSanchez_gitlab oo that's tricky.  I like that, good tip.
+20:48 <tguild> Amelia: all of this is on github, join the Community Group and discussion
+20:49 <tguild> Peter: core of the extension model of leaflet is motivation here
+20:49 <fredesch> leaflet has a react wrapper - (you can get a leaflet react component)
+20:49 <karenmyers> See you tomorrow!
+20:49 <tguild> … thank you very much everyone
+20:49 <satakagi> :wave:
+20:50 <karenmyers> oops...next week
+20:50 <tguild> Amelia: see you next week, same times per day as this week
+20:50 <tguild> [adjourned]
+20:50 <thehabes> @karenmyers 2020-09-28 04:00UTC
+20:51 <thehabes> yeah, you got it

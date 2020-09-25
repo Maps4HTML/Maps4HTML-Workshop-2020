@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Captions from W3C/OGC Maps for the Web workshop -- 23 Sep 2020</title>
+</head>
+<body>
+<p>Amelia Bellamy-Royds: Okay.</p>
+
+<p>Welcome, all.</p>
+
+<p>We have a busy schedule today.</p>
+
+<p>So we're going to get started right away.</p>
+
+<p>Amelia Bellamy-Royds: If you're not sure we're at the WCC oh GC workshop on maps for the web.</p>
+
+<p>This is day three.</p>
+
+<p>Amelia Bellamy-Royds: If you missed.</p>
+
+<p>Day one or day two.</p>
+
+<p>I think they are both now up on YouTube and we will get the links integrated into the agenda soon.</p>
+
+<p>Amelia Bellamy-Royds: There is also the ongoing live chat on get her.</p>
+
+<p>And there are multiple links to it.</p>
+
+<p>Now, from the zoom chat and Amelia Bellamy-Royds: More long form discussion on discourse somebody can throw a link to that into the chat as well.</p>
+
+<p>Amelia Bellamy-Royds: I would like to remind you that we are operating under the W three C's code of conduct and respectful behavior is expected from everyone.</p>
+
+<p>Amelia Bellamy-Royds: Beyond that, I think we're gonna get started our theme for the first hour is a native map viewer for the web platform.</p>
+
+<p>Can we add something to the web that tells browsers, how to display maps.</p>
+
+<p>Amelia Bellamy-Royds: Are on that theme we have four different talks to start it off.</p>
+
+<p>We have Brian Cadel burn cartel works at a galleon as a Amelia Bellamy-Royds: Advocate networker extraordinary.</p>
+
+<p>But even before that he's been involved in web standards in various capacities, he's going to be talking to us about extending the web with new features and something about pie.</p>
+
+<p>So I hope you brought enough for everyone, Brian.</p>
+
+<p>Brian Kardell: Okay, I'm going to share my screen.</p>
+
+<p>Brian Kardell: Let me know if you can see that Amelia Bellamy-Royds: It's working.</p>
+
+<p>Brian Kardell: Okay and I'm going to also drop in a link And Brian Kardell: If you open that link in your chromium or your browser tab, it should advance as we go.</p>
+
+<p>And you'll get a smoother experience, probably, if you prefer that Brian Kardell: Okay.</p>
+
+<p>So yeah, I am Brian cartel.</p>
+
+<p>This is my website you recognize it as a website because you see it in a web browser with the URL.</p>
+
+<p>But in that same browser, you can do pretty much anything that you would want to do on the computer, which is amazing.</p>
+
+<p>Brian Kardell: But also, many of the desktop apps and mobile apps that you download and use as first class things on your devices are also under the covers using web engines.</p>
+
+<p>Brian Kardell: And so are lots of embedded devices.</p>
+
+<p>Now you're smart refrigerators, your TV's car an airplane infotainment systems digital signage point of sale systems.</p>
+
+<p>Brian Kardell: Basically, as long as there's a UI, you can bet that there's somebody working on trying to do that with web technology.</p>
+
+<p>In fact, even if there isn't a UI.</p>
+
+<p>We're using aspects of the web platform.</p>
+
+<p>Brian Kardell: Even if US went on out into the forest or on a remote beach somewhere and read a paper book, there's a pretty good chance that Brian Kardell: web technology and web standards were involved in the printing and creation of that book.</p>
+
+<p>So what I'm trying to say here is that the web platform is infrastructure.</p>
+
+<p>It's a huge Commons on which we've built basically all of society at this point.</p>
+
+<p>Brian Kardell: But if you're on the edges of that and you're trying to improve the platform and you don't work for a vendor.</p>
+
+<p>You're just a developer, you want to make things better.</p>
+
+<p>Brian Kardell: It can feel a little bit frustrating sometimes it can feel like you've been put on hold and even though they might say your call is important to us.</p>
+
+<p>It sure doesn't feel that way sometimes Brian Kardell: So part of my talk.</p>
+
+<p>I want to give a pep talk here.</p>
+
+<p>The yes I think we could do this, but I would also like to explain the reasons why it can feel this way and the practical challenges and kind of keep us grounded in reality.</p>
+
+<p>So the reason is pi.</p>
+
+<p>Brian Kardell: So that needs some explaining.</p>
+
+<p>So as an illustration.</p>
+
+<p>We're all here giving some amount of our finite time and energy pie to think about and discuss this topic.</p>
+
+<p>Brian Kardell: Now we all have different amounts of pie.</p>
+
+<p>Some of us are here because it's a labor of love, we just really believe in it.</p>
+
+<p>We think it's the right thing to do and lots of others of us work for companies and our companies have obviously different amounts of pie.</p>
+
+<p>Brian Kardell: We have very, very different budgets of pi, as we're coming into this discussion and some of us bring the most pie, we bring the most critical pie and the one to make a rendering engines are the most critical Brian Kardell: But it's important to recognize that their pie is still finite and also it's voluntary.</p>
+
+<p>Brian Kardell: It's not cheap.</p>
+
+<p>I want to point out that there are thousands of person years investment into each one of these rendering engines and that is just the code part that isn't the standards part which is really, really big.</p>
+
+<p>Brian Kardell: The wants from folks like us as the Commons girls are only accelerating and every want represents and ask for some slice of pie and Brian Kardell: The slice, how much we're asking for differs from engine to engine because Brian Kardell: These are different companies with different budgets and they have different constraints and priorities limited to staffing and talent.</p>
+
+<p>Brian Kardell: And they also have different architectures.</p>
+
+<p>So things cost different amounts so realistically, we have to prioritize.</p>
+
+<p>There is absolutely no choice but lots follows from this it has big domino effect.</p>
+
+<p>Brian Kardell: The first one is in order to be involved in any discussions, they just like we do have to make some value judgment.</p>
+
+<p>We're not doing other things that we could be doing right now we're doing this.</p>
+
+<p>Brian Kardell: And we're doing that, based on some judgment.</p>
+
+<p>But how do you estimate what it takes to be involved is very difficult.</p>
+
+<p>If you're a vendor because you know what it really takes Brian Kardell: And so lots and lots of stuff takes a really long time to get past to go or some things never do, or maybe some things just haven't yet like maybe maps.</p>
+
+<p>Brian Kardell: So the result of this is that in 30 years that the West spin around we have created about 130 elements for HTML.</p>
+
+<p>Brian Kardell: And over half of those are just spicy dibs is how a friend of mine, Dave, Rupert calls them.</p>
+
+<p>These are things like paragraph strong emphasis, they have very low implementation costs, but very, very high standardization costs while we discussed them.</p>
+
+<p>Brian Kardell: But even if you make it past those steps now you get to where we have to actually get it done and we have to get it done everywhere.</p>
+
+<p>We have to get it done inter honorably Brian Kardell: Which we frequently learn along the way.</p>
+
+<p>We have to get it accessible and scalable, which are things that we frequently still get wrong, especially in early implementations Brian Kardell: And costs go up very quickly with complexity.</p>
+
+<p>Like even a little bit of complexity.</p>
+
+<p>So to illustrate this in 30 years we have created one non form based interactive standard UI control element.</p>
+
+<p>Brian Kardell: Like the sort of thing that you would find in a standard UI toolkit that isn't about collecting information and that is summary details which looks like this.</p>
+
+<p>It is probably the simplest UI widget in existence.</p>
+
+<p>It has been around as long as there have been doing Brian Kardell: And this has been a work in progress for a long time.</p>
+
+<p>The last major browser added support in June or in January of this year and that was accomplished.</p>
+
+<p>Actually, the full parody was accomplished by one of the rendering engine disappearing when Brian Kardell: Chrome switch their internal rendering engine from there's two chromium.</p>
+
+<p>They just got it by default.</p>
+
+<p>Brian Kardell: And then finally, if you make it past all of those hurdles.</p>
+
+<p>It's finally real like it is actually literally everybody can use it.</p>
+
+<p>It works everywhere.</p>
+
+<p>It is by all definitions.</p>
+
+<p>The standard Brian Kardell: But that doesn't mean that everybody knows that we've reached that point yet so it takes some time for people to learn about it.</p>
+
+<p>Brian Kardell: And then it takes even more time for them to find a use case where they need to try it.</p>
+
+<p>And then finally, at that point, we get developers involved, way, way at the end.</p>
+
+<p>Brian Kardell: And we asked them, hey, how is that super expensive pie taste that took a decade and millions of dollars and the response is frequently Brian Kardell: It could be better, to be honest.</p>
+
+<p>Brian Kardell: So that sounds very, very depressing.</p>
+
+<p>But that is sort of like the historical challenge, and that is why several years ago.</p>
+
+<p>Brian Kardell: A group of us got together and discuss these problems and created this document called the extensible web manifesto and what it says basically is we can do better than this.</p>
+
+<p>Brian Kardell: One way we can do better than this.</p>
+
+<p>Is that the cow paths currently aren't very clear, we say that we pay the cow pass, but really it's a little bit like reading the rooms.</p>
+
+<p>Brian Kardell: We're looking at many other cow paths and trying to build a new road that meets all of the same criteria in a completely different way.</p>
+
+<p>Brian Kardell: So a better way to do this is to give developers mostly the same abilities that browsers have to create new elements.</p>
+
+<p>Brian Kardell: And let developers, bring the early pie.</p>
+
+<p>They're the ones with all the ideas and they're the ones that are actually capable of testing things Brian Kardell: They're the ones that are ultimately have to accept this solution as adequate and we can find out do developers actually like and use it or not, because very frequently we are wrong.</p>
+
+<p>Brian Kardell: Because a failure in this model is a feature, right, like we can float lots of ideas and people can say what about this, this seems great and people can say no.</p>
+
+<p>But we can do better than that.</p>
+
+<p>And very quickly adjust Brian Kardell: This also I think plays into the ability for us to explore a Jason possibles when we give people new tools they dream new dreams that we hadn't even thought of yet.</p>
+
+<p>Brian Kardell: I think this is important because so many things wind up being fantastically successful at something they weren't even designed for Brian Kardell: Including the web itself, actually.</p>
+
+<p>So this document suggests that we should get out of the way we should enable Brian Kardell: Developers to explore these spaces we should give them the tools and we should not spend those precious resources debating.</p>
+
+<p>Brian Kardell: How developers might use things or what they might like in give them the tools to show us and focus on science to know when they're discovered something so that we can write it down.</p>
+
+<p>And that can work more like dictionaries.</p>
+
+<p>Brian Kardell: There aren't committees for dictionaries that create words they they write down the words.</p>
+
+<p>So this is all high level stuff.</p>
+
+<p>Brian Kardell: But I think there are some important details at least they're important to me that I would like to discuss, which is that one of the goals here in my mind is for this to lay a nice bright unambiguous path.</p>
+
+<p>Brian Kardell: That we can then pave that has proof that is accessible, that is acceptable to developers that It ticks all the boxes and it is estimable and it explains how does this map very well to the web platform.</p>
+
+<p>Brian Kardell: So I think that what the extensive web manifesto is saying a lot of it is to break it down to reduce the magic required in anything expose the parts and aim for the middle Brian Kardell: So an example of this is dialogue dialogue is this element that is in almost every UI toolkit and it creates this layer on top that you Brian Kardell: Interact with, but it also does all these other subtle things and inside it is magic.</p>
+
+<p>Lots of magic.</p>
+
+<p>It does things like prevent you from selecting the text behind it prevent your tab focus for moving out of it.</p>
+
+<p>Give you controls for styling that and so on.</p>
+
+<p>Brian Kardell: Change the how things are exposed to accessibility.</p>
+
+<p>Brian Kardell: So the original proposal for dialogue is a big ask for a budget and if we succeed in delivering it will deliver that thing I showed on a few panels ago and will it be adequate.</p>
+
+<p>We don't know, but it will be helpful in solving only that problem.</p>
+
+<p>Brian Kardell: But if you look a crack open the magic.</p>
+
+<p>There is this concept of alertness, that is used to define dialogue, which is Brian Kardell: All that other stuff that I said it does about managing texts election and Aria and everything.</p>
+
+<p>And it's fundamentally necessary for dialogue, but it's also useful for lots of other UI.</p>
+
+<p>Brian Kardell: Patterns and components that we haven't even started talking about standardizing yet maybe some that we never will like yours.</p>
+
+<p>Brian Kardell: So we split that out and made an exposed to developers and we focused on doing that, first, so that is delivers a lot of value.</p>
+
+<p>Brian Kardell: For a lot of things that can explore the space and it reduces the overall amount of pie that is required for dialogue that changes the calculus of whether it's worth the investment.</p>
+
+<p>It's much more estimable and it is very much follows basic software development ideas.</p>
+
+<p>Brian Kardell: Then it allows developers to use enter to explore the space with other controls and the way to pay for those controls, then it's very clear because we know that is an art.</p>
+
+<p>We don't have to reinvent that Brian Kardell: So exposing these middle layers actually helps build resilience and adaptability and helps make sure we're not fighting too much off and as the web changes like we have the ability to adapt.</p>
+
+<p>Brian Kardell: So what's all this got to do with maps.</p>
+
+<p>I know it feels like I'm a little bit off topic, but should the web half maps is the question we're asking and yes Brian Kardell: It seems clear, sure.</p>
+
+<p>Brian Kardell: But we need so much.</p>
+
+<p>There's so many things that the web should have that the web doesn't have.</p>
+
+<p>And there's just not enough pie.</p>
+
+<p>Brian Kardell: So another thing you can do is you can bring more hi Brian Kardell: My company a gallery.</p>
+
+<p>That's what we do.</p>
+
+<p>The reason that the current model the historic model exists is simply because that's what we let happen but Brian Kardell: A gala and other companies like Boku who's presenting also today can help you.</p>
+
+<p>Brian Kardell: When you have prioritization problems where you can't get the attention that you need from somebody who has the expertise and the knowledge to help this move along.</p>
+
+<p>So we have done that for things like CSS grid.</p>
+
+<p>Brian Kardell: And lots of lots and lots of features.</p>
+
+<p>Brian Kardell: So for maps, though I think my advice, though, is that all of these things that I was just talking about apply, we have this problem of we have lots of maps sort of that have lots of commonalities and it feels like there's a path there.</p>
+
+<p>But how do you map it into HTML.</p>
+
+<p>And it's very difficult.</p>
+
+<p>Brian Kardell: And which features should include, and what is ultimately good enough, I think, despite the fact that we have lots of experts and we have libraries and things like that.</p>
+
+<p>I think we don't know what's good enough until Brian Kardell: We try some things and developers will tell us like they'll know it when they see it and it might be shocking.</p>
+
+<p>What is good enough HTML was certainly shockingly, you know, good enough, there were better solutions before HTML came along.</p>
+
+<p>Brian Kardell: But also at the end of that when we have an answer.</p>
+
+<p>It's important that it fits well into the platform and that it's aware self aware of the pie.</p>
+
+<p>It's asking for.</p>
+
+<p>So I think Brian Kardell: Break it down and aim for the middle and improve the cost benefit analysis find unlikely allies.</p>
+
+<p>Brian Kardell: Like find ways that we can deliver parts of it and share the pie that we're asking for.</p>
+
+<p>So one way to do this is to ask what are the things that are making it hard technically today and are those things only hard for you and I would suggest maybe squint at it a little bit.</p>
+
+<p>Brian Kardell: There are very similar course green needs for like video game maps or maps of fictional spaces.</p>
+
+<p>If you want to their maps of Mordor.</p>
+
+<p>For example, Brian Kardell: If you squint even a little bit harder things that aren't maps at all that also have very similar needs product images for e commerce is a really big one that people aren't interested in technical drawings Brian Kardell: So basically, the web is lacking lots of course green features that we can that we can do and low level things like pan and zoom is a great one.</p>
+
+<p>Brian Kardell: Lots of things need that Oscar in Canvas maybe hardware accelerated SVG.</p>
+
+<p>This is one of the challenges that we don't know what the necessary parts are yet.</p>
+
+<p>Brian Kardell: But I don't have the answers.</p>
+
+<p>I think there's probably a lot and I am here to hear your ideas and see how I can help.</p>
+
+<p>So thank you.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): I just want to say, Great presentation was very fun to watch good content.</p>
+
+<p>Thanks.</p>
+
+<p>Brian Kardell: Thank you.</p>
+
+<p>Amelia Bellamy-Royds: Indeed, thank you, Brian.</p>
+
+<p>was amazing.</p>
+
+<p>Amelia Bellamy-Royds: Good way to start the day Amelia Bellamy-Royds: We are going to continue now with something a little more map focused Peter rush forth is going to present in more detail what he hinted at the other day, the proposal he built for a map ML a specific way of Amelia Bellamy-Royds: Including map viewers in HTML using markup.</p>
+
+<p>Peter Rushforth: Thanks, Amelia.</p>
+
+<p>Peter Rushforth: I recorded my presentation.</p>
+
+<p>So it kind of auto plays, but that was great presentation.</p>
+
+<p>Brian and thank you very much for bringing your personal energy and effort to this and we definitely welcome your words of wisdom.</p>
+
+<p>Peter Rushforth: And we'll try to follow them.</p>
+
+<p>Peter Rushforth: So I'm going to go and share this and start my presentation.</p>
+
+<p>Peter Rushforth: Thank you.</p>
+
+<p>Good morning.</p>
+
+<p>In this presentation, I'll give an overview of the math ML proposal.</p>
+
+<p>Map Ml is a proposal to extend HTML in the HTML namespace to include elements into attributes that implement maps and layers.</p>
+
+<p>The objective of our proposal is to introduce a small set of HTML elements that will directly support maps and mapping applications with approximately the same author and complexity as video or audio or image.</p>
+
+<p>Why do we need a map element.</p>
+
+<p>Exactly.</p>
+
+<p>We need a map element to provide a declarative semantic entry point in web standards for a few reasons.</p>
+
+<p>Above all, we need to standardize Web Map client technology because we should.</p>
+
+<p>It is the ethical thing to do.</p>
+
+<p>We need to make standard web maps learned by children, not by binding such an important facet of human existence, not to mention survival to proprietary frameworks.</p>
+
+<p>Having made that decision.</p>
+
+<p>We need a map element to obtain more efficient rendering of spatial content.</p>
+
+<p>Next we need to define and standardize what accessibility means for web maps and especially Web Map content.</p>
+
+<p>Finally, we need to establish an organic, not based on metadata basis for spatially indexing web pages.</p>
+
+<p>So that search engines can return search results based Not only on ranking the text of documents against search terms, but also based on spatial indexing of map elements in the page.</p>
+
+<p>Like the PageRank algorithm.</p>
+
+<p>But instead of or as well as backlinks increasing hits relevance, the pages literally nearer to the search term would raise the result rank.</p>
+
+<p>We propose to extend the existing map element by adding attributes and new child layer elements.</p>
+
+<p>The map element is a reasonable candidate for extension, not only because of the element name.</p>
+
+<p>But mostly because of the elements processing model is already that of an interactive, albeit static map with layers represented by the image and area elements and the image map semantics potentially provide A path to script lists accessible graceful degradation.</p>
+
+<p>This is the basis upon which other proposals to modify HTML have been successfully made for example the image source set attribute, among others.</p>
+
+<p>This approach also seems to be encouraged by various HTML design principles.</p>
+
+<p>The design principles aren't a license to propose changes to HTML, but they are a framework to help guide decisions design discussions.</p>
+
+<p>So if you have a concern about any of the design you hear about today, please consider joining the group and contributing those ideas.</p>
+
+<p>If we consider a diversity of viewpoints and experience, we will achieve a stronger proposal.</p>
+
+<p>The result of the proposed extension, whether it results in a map element or something else should be a map widget or viewer that is designed for accessibility and is progressively enhanced double.</p>
+
+<p>In other words, scripted.</p>
+
+<p>It's not the intention of the proposal to accommodate by means of native browser implementation all use cases of web maps today.</p>
+
+<p>It is a key objective of the proposal to expose DOM API's events and other facilities such as styling that relate to loading rendering and using and creating map content.</p>
+
+<p>I've got more to talk about today than I have time for.</p>
+
+<p>So I'll cover some of the big ideas first to begin.</p>
+
+<p>I'll talk about the key elements of the proposal, the map layer and extent elements.</p>
+
+<p>Then I'll spend time talking about titled coordinate reference systems or T CRS because understanding those concepts is key to making sense of most of the proposal.</p>
+
+<p>map projections define the coordinate systems in effect.</p>
+
+<p>In the scope of the map.</p>
+
+<p>So that coordinates of places on Earth or potentially other planets to maybe drawn on a 2D plane.</p>
+
+<p>Every map has a coordinate system that is shared by its layers.</p>
+
+<p>So the proposed map element has a set of defined projection values.</p>
+
+<p>The default value if unspecified is OSM tile, which corresponds with web Mercator The set of projections is small yet extensible.</p>
+
+<p>In the same way that, for example, HTML REL values are extensible.</p>
+
+<p>In other words, by agreement.</p>
+
+<p>I'm using the attribute name projection here as a user friendly term to describe the concept that I call tiled coordinate reference systems or TC RS The term TC RS is defined in this proposal and represents a framework for naming and discussing the integrated concepts of tile caches geospatial coordinate reference systems and Web Map client concerns.</p>
+
+<p>Web maps all define their starting conditions, typically via a lat long coordinate pair representing the center of the map.</p>
+
+<p>So the map element has required lat long attributes describing it starting center point.</p>
+
+<p>On the web as in real life maps have scale.</p>
+
+<p>So the map element has a required to zoom attribute which define the starting scale.</p>
+
+<p>This is actually a very important point, and one that can go unrecognized web maps are in fact real life maps in which paper or mylar has been exchanged for pixels everything that is represented must be represented.</p>
+
+<p>According to an intended scale, including geographic features.</p>
+
+<p>The Boolean controls attribute turns controls on or off controls are created by default in a closed shadow route.</p>
+
+<p>Like the video element, the controls list attribute can prune the set of native native controls provided We need a layer element to be a child of the map element because map layer is a primitive abstraction that is shared by many, if not most maps, both on and off the web.</p>
+
+<p>Layer elements represent map content and each must share the coordinates systems defined by the parent map elements projection attribute Map Layers and their content or in the light DOM in the same way that SVG content is in the DOM.</p>
+
+<p>Layers are added.</p>
+
+<p>According to the painters model in document order their label attribute will appear in document order in the layer control.</p>
+
+<p>Layers are children of the map element only and do not nest content can be in line or located in a document at the source attribute URL.</p>
+
+<p>A layer has a text label attribute A check layer renders on the map.</p>
+
+<p>A hidden layer.</p>
+
+<p>It's not shown in the layer control that is rendered on the map.</p>
+
+<p>This can be useful for preventing the user from turning off important content and becoming confused.</p>
+
+<p>Layers can have inline content as shown here that is loaded and rendered by the browser.</p>
+
+<p>Web maps need a standard mechanism to load map data that does not involve knowing how to access server API's beyond the strict uniform interface of HTTP.</p>
+
+<p>Browsers standardized html forms as a means to flexibly request and transmit data to and from any server within the constraints of the HTTP uniform interface.</p>
+
+<p>Web Map Server data comes in a wide and growing variety of formats and interfaces.</p>
+
+<p>This poses severe challenges for interoperability.</p>
+
+<p>So we designed a mechanism for loading and accessing server information based on established patterns, for example, URL templates and standards like WNs W MTS and open street maps will be tiles and informed by the HTML form element.</p>
+
+<p>The extent element represents the part of the layers content that binds to the viewport of the map.</p>
+
+<p>The extent element is somewhat analogous to the forum element being the parent of various inputs and links the values of which are serialized during extent processing.</p>
+
+<p>Extent processing differs from form processing in that the user is not expected to fill in input values manually because the extent being bound to the map viewport triggers content requests automatically as the map requires new content to paint.</p>
+
+<p>New content is typically required as the user either manipulates the map by panning or zooming or the device.</p>
+
+<p>My rotating or moving it The rel equals tile value, shown here associated to tile based URL templates reflects a core abstraction in modern web maps that of map tiles.</p>
+
+<p>The real value tells the browser what the purpose is of the resource that it is loading.</p>
+
+<p>So as the rendering engine iterate over the tiles that it needs the browser fires events which are serialized two variables identified by name.</p>
+
+<p>Each input variable binds to one or more variable references in the URL template links within the extent elements scope.</p>
+
+<p>Once all the variable references are resolved the URL template becomes an actual resource URL that is fetched and rendered An extent can contain as many such URL template links as it needs to compose the map layer.</p>
+
+<p>In the example shown above the geometry and labels of the layer are referenced by separate links.</p>
+
+<p>Titled cordon reference system or TC RS is a term coined by me to standardize and describe a system of talking about spatial coordinate reference systems from the web clients and users point of view.</p>
+
+<p>When working with maps and spatial information we inevitably need to talk about coordinate reference systems and especially scale and T CRS is my attempt to unify the vocabulary for coordinate reference systems so that this core concept can be made interoperable and teachable.</p>
+
+<p>Historically geographic information systems have kept the concerns of map scale separate from those of the coordinate systems definition.</p>
+
+<p>By maintaining intimate and detailed metadata about the coordinate systems of the data they manage so that data can be interoperable combined or overlaid at runtime.</p>
+
+<p>Web architecture requires that resource metadata be encoded into media type specifications.</p>
+
+<p>So that runtime exchanges are not necessary or desirable.</p>
+
+<p>So we needed to develop the TC RS concept in order to encode it into the math ML or eventual HTML specification A ti CRS has a defined number of integers zoom levels.</p>
+
+<p>A zoom level is an integer proxy for expressing a real world distance units per pixel ratio.</p>
+
+<p>In other words, the pixel size at a defined location, depending on the projection typically the projection origin.</p>
+
+<p>The reason the set of zoom levels is defined and not infinite is because in some cases, there isn't a mathematical relation between zoom levels.</p>
+
+<p>In order other words they're not necessarily evenly spaced as shown.</p>
+
+<p>They may have been chosen for reasons, specific to the application.</p>
+
+<p>And the fact that beyond a certain distance per pixel.</p>
+
+<p>It doesn't make real world sense by agreement and specification, then the zoom levels are defined and known.</p>
+
+<p>For each zoom level in a TI CRS there exists a pair of 2D coordinate systems in which the units are pixels and tiles, respectively.</p>
+
+<p>These coordinate systems.</p>
+
+<p>Follow the conventions of coordinate systems in computer graphics having their origin at the top left of the screen.</p>
+
+<p>With the vertical axis being positive down and the Horizontal.</p>
+
+<p>Horizontal axis positive, the right of the screen.</p>
+
+<p>The pixel based coordinate system is called a TI CRS with axes named x and y, the tile based coordinate system is called a tile matrix.</p>
+
+<p>After the GC concept of that name at its axes are named column and row.</p>
+
+<p>Tiles are defined in 256 square aggregations of pixels and the pixels and tiles are geo referenced by a defined planar transformation to the cord and its face, defined by the projected coordinate reference system or PC RS The coordinates and units of the PCR s are defined by a mathematical transfer of coordinates to and from a defined geographic coordinate reference system or G CRS according to define parameters of the projection method.</p>
+
+<p>To additional coordinate reference systems are defined to correspond with the same concepts from the W and W MTS standards.</p>
+
+<p>The map coordinate system is defined by the maps dynamic viewport, and has its origin in the upper left corner of the map.</p>
+
+<p>The horizontal axis is named I while the vertical axis is named Jay this coordinate system corresponds to the image coordinate system in HTML client side image maps.</p>
+
+<p>It's also used by W.</p>
+
+<p>Ms. Get feature info requests to record to to query server server databases for features at a given pixel within a defined request.</p>
+
+<p>The Tile coordinate system is created relative to each tile and also has I NJ axes.</p>
+
+<p>It is created in math ML in order to support MTS get feature info requests.</p>
+
+<p>Thank you.</p>
+
+<p>Amelia Bellamy-Royds: Thank you, Peter.</p>
+
+<p>Amelia Bellamy-Royds: Lots of information there, but I hope it was enough to get people intrigued into looking more and the scope of the project.</p>
+
+<p>Amelia Bellamy-Royds: Um, Amelia Bellamy-Royds: Our next talk is going to Amelia Bellamy-Royds: Take another look at map mo specifically a more critical assessment from the web standard side.</p>
+
+<p>Amelia Bellamy-Royds: Simon Peters is been involved in web standards and browser development for many, many years.</p>
+
+<p>He currently works for Boku which is another sort of web browser development web standards development for hire companies with a specific focus on Amelia Bellamy-Royds: Testing and cross browser interoperability work and Simon was commissioned over the past few months to sort of assess the map ML proposal as it is and how it can be moved forward.</p>
+
+<p>So I'm in.</p>
+
+<p>What do you take it away.</p>
+
+<p>Simon Pieters: Thank you for that introduction.</p>
+
+<p>Simon Pieters: I'm going to try to share my screen.</p>
+
+<p>So let's see if that successful Simon Pieters: Can you see my screen.</p>
+
+<p>Amelia Bellamy-Royds: Yep.</p>
+
+<p>Yes.</p>
+
+<p>Simon Pieters: Excellent.</p>
+
+<p>Simon Pieters: So hi, everyone.</p>
+
+<p>I'm Simon Peters, I'll talk a bit about book Oops review of math ML that we did earlier this year.</p>
+
+<p>Simon Pieters: So again, a short introduction to Boku we're a web consultancy web platform consultancy firm we participate in a coma W three.</p>
+
+<p>See what we Simon Pieters: Work on improving the web platform through specifications and test suites, we have experienced standardizing both new and legacy features in HTML and CSS.</p>
+
+<p>Simon Pieters: Also JavaScript and writing corresponding conformance tests for browsers.</p>
+
+<p>Simon Pieters: So we can help with the standardizing new feature is for the web and collaborate with the browser info mentors.</p>
+
+<p>Simon Pieters: We participated in the OCC testbed 16 program to review the technical specifications for ethanol.</p>
+
+<p>So here are our findings and recommendations.</p>
+
+<p>Simon Pieters: We reported 21 issues for map ML from minor to more fundamental Simon Pieters: One of the fundamental issues is with her and how math ML should being be an extension to HTML.</p>
+
+<p>Simon Pieters: My understanding is that it's the intent, but it's not really define the such currently Simon Pieters: If it is to extend HTML than it should be done properly, and ideally involve the maintainer of the HTML standard in the process.</p>
+
+<p>Simon Pieters: Another aspect is integration with CSS analysis that it should be scalable with CSS, but it's not defined how Simon Pieters: I think CSS not does not yet have the necessary primitives to represent web maps without resorting to solutions that are working against the browser, which is not ideal for performance or accessibility as well as other aspects.</p>
+
+<p>Simon Pieters: We reported an issue for the CSS working group to consider adding a new panning and zooming primitive Simon Pieters: For use with web maps.</p>
+
+<p>This is one of the primitives or low level capabilities that Simon Pieters: Brian mentioned web maps have Simon Pieters: Many Simon Pieters: Possible capabilities stuffs are missing from the web platform, but this is Simon Pieters: One that we identified Simon Pieters: So the CSS working group discussed this.</p>
+
+<p>Simon Pieters: In July, and agreed that it would be interesting to investigate, but they need a concrete proposal.</p>
+
+<p>Simon Pieters: So David Baron is Simon Pieters: from Mozilla Simon Pieters: And Simon Pieters: Said that it was interesting, but need a concrete proposal and Tom Atkins is Simon Pieters: From Google, one of the editors of the many CSS specifications.</p>
+
+<p>Simon Pieters: Essentially agreeing that Simon Pieters: It's something that would make sense to solve but Simon Pieters: There's no no proposal yet.</p>
+
+<p>Simon Pieters: So again, going back to the extensible web manifesto that has been mentioned a couple of times.</p>
+
+<p>Simon Pieters: I think the approach that is more likely to have success in changes in browsers.</p>
+
+<p>At this time, is to start with specifying the primitives, or a low level capabilities that are needed to layer on top.</p>
+
+<p>Simon Pieters: Even if there is skepticism about adding maps to the web.</p>
+
+<p>People see Simon Pieters: Of adding new primitives that benefits web maps and this approach is in line with the extensible web manifesto, which says to focus on primitives first and then develop high level solutions in JavaScript using those primitives.</p>
+
+<p>Simon Pieters: Allowing web developers to iterate without breaking the web.</p>
+
+<p>Simon Pieters: Another thing we think would be good to better is to better demonstrate the need for web maps in terms of impact for web developers.</p>
+
+<p>Simon Pieters: One way to do this is to ask about web maps and the MDM developer needs assessment survey.</p>
+
+<p>Simon Pieters: Which is currently in the final stages of preparation.</p>
+
+<p>Simon Pieters: Last year, the survey had responses from 28,000 web developers and the results impacted the prioritization for browser vendors Simon Pieters: Our summary of work for this review is available at the URL at the top of this slide bit ly slash coo coo dash testbed 16 Simon Pieters: And that's all I have.</p>
+
+<p>Thank you.</p>
+
+<p>Amelia Bellamy-Royds: Thank you, Simon.</p>
+
+<p>Simon Pieters: Thank you.</p>
+
+<p>Amelia Bellamy-Royds: And I'm looking forward to creating the Amelia Bellamy-Royds: Discussion page and we can get all those links and easily clickable forum so people can go look at and comment on the issues.</p>
+
+<p>Amelia Bellamy-Royds: For our final talk on this theme we're going to switch over a little bit.</p>
+
+<p>So to really tackle he have Katie di has been building maps using web technology for Amelia Bellamy-Royds: Many years now using a base of SVG and Amelia Bellamy-Royds: Has developed proposals for what needs to get added to SVG, to make it more Web Map friendly.</p>
+
+<p>So he and Peter rush worth are going to be introducing some of the work they've done on that.</p>
+
+<p>Amelia Bellamy-Royds: Peter, if you're talking, we cannot hear you.</p>
+
+<p>Peter Rushforth: Yes, of course.</p>
+
+<p>Peter Rushforth: Ah sorry satori tech khaki son and a colleague from Katie di corporation have developed Peter Rushforth: Two papers for this workshop which are linked to their Peter Rushforth: To their agenda item and I promised Satoru Hassan to to present the introduction, introduce these two Peter Rushforth: Papers that are very, very interesting and expertly crafted and Peter Rushforth: I promised to introduce them at the workshop.</p>
+
+<p>And I think that there is, in particular, well worth reading because Satoru has been working for years within the many years within the the Peter Rushforth: SVG community in the W three see because for them to standardize web maps using web technology and Peter Rushforth: I strongly believe that we share a lot of, you know, fundamental primitive understandings of how the web works and Peter Rushforth: He has got some spicy commentary spicy yet flight commentary in his in his papers and the first of them is on decentralized web mapping and it's very important to read them in order.</p>
+
+<p>Because decentralized web mapping sort of sets up the second paper and Peter Rushforth: These in decentralized web mapping Peter Rushforth: Layers are conceived of as the primitive feature of web maps and are accessible at Bear undifferentiated URLs, just as in the map ML proposal, but in the in the SVG map proposal in the in the Peter Rushforth: In this framework, the, the target of those URLs is an SVG document that links to an HTML.</p>
+
+<p>Peter Rushforth: Logic bundle.</p>
+
+<p>And so each layer comes with its logic built into the actual document that is loaded.</p>
+
+<p>So what this means is that it can adapt.</p>
+
+<p>It's an adaptive framework to virtually any tiling system proprietary or otherwise.</p>
+
+<p>And I think that's there's a lot of genius in that in that Peter Rushforth: Package right there.</p>
+
+<p>Peter Rushforth: And the that leads to the discussion of quadri composite tiling and the standardization of tiling and which Satoru son has applied the techniques of SVG map to use adaptive quad tree tiling to vector.</p>
+
+<p>Vector information which is Peter Rushforth: Which is efficient very efficient and and so for for raster data standard file system seem to make more sense plus or minus the different API's that are are Peter Rushforth: Are used to access them.</p>
+
+<p>But for vector data because vector data is meant to be efficient.</p>
+
+<p>A an adaptive tiling system.</p>
+
+<p>Peter Rushforth: Has real performance benefits.</p>
+
+<p>So I urge everyone to read those two papers and provide feedback and commentary too subtle her son and his colleague Peter Rushforth: Who's Peter Rushforth: Links are here to their GitHub profiles, but there there are discourse entry for they're talking the agenda is in the agenda.</p>
+
+<p>So that's all.</p>
+
+<p>Thank you.</p>
+
+<p>Amelia Bellamy-Royds: Thank you Peter for the introduction.</p>
+
+<p>Do you have anything to add the tech examiner just that we should read the papers.</p>
+
+<p>Amelia Bellamy-Royds: Well, we've all got the papers and Amelia Bellamy-Royds: The links are in get her and in discourse, I think, then we will take 10 minutes to catch up on that and then start back up with our new theme and panel.</p>
+
+<p>Amelia Bellamy-Royds: cardigan.</p>
+
+<p>Take it away.</p>
+
+<p>Doug Schepers: Great.</p>
+
+<p>Hi everyone, welcome back.</p>
+
+<p>Thank you so much for joining.</p>
+
+<p>Doug Schepers: Next up is our internationalization and security.</p>
+
+<p>Doug Schepers: Presentation and following will have 30 minutes to talks in 30 minutes and following that we will have Doug Schepers: Our world, our panel, which is worldwide web maps challenges in the global context.</p>
+
+<p>So with no further ado, I'd like to welcome Brendan do Doug Schepers: Who is going to be talking to us today about multilingual text rendering and Brendan is the geospatial software engineer from.</p>
+
+<p>No, I'm sorry.</p>
+
+<p>He's a Doug Schepers: He's the creator of proto maps.</p>
+
+<p>It's just a new international internationalisation focused system for maps on the web.</p>
+
+<p>He's been working on map rendering and data tools where they did the Open Street Map project since 2013 Doug Schepers: He also created a Doug Schepers: Dot NYC a Web Map based viewer for historical street views and New York.</p>
+
+<p>Which sounds really cool ready to take it away.</p>
+
+<p>Click Brandon, take it away, please.</p>
+
+<p>Brandon Liu: Awesome.</p>
+
+<p>I'm going to try to share my screen right now.</p>
+
+<p>So please tell me if that's working.</p>
+
+<p>Brandon Liu: Oops.</p>
+
+<p>Brandon Liu: It's one window at a time.</p>
+
+<p>Brandon Liu: Are you able to see that.</p>
+
+<p>Doug Schepers: This weekend.</p>
+
+<p>Thank you.</p>
+
+<p>Brandon Liu: Well, telling you will text rendering.</p>
+
+<p>Awesome.</p>
+
+<p>I'll get started then.</p>
+
+<p>Brandon Liu: So hi, everyone.</p>
+
+<p>I'm Brandon, I'm going to talk about multi lingual text.</p>
+
+<p>That doesn't sound initially like it has a lot to do with maps, but I'm going to explain more about that in just a moment.</p>
+
+<p>Brandon Liu: So why text.</p>
+
+<p>Brandon Liu: I know this.</p>
+
+<p>Brandon Liu: Topic this conference is mostly about not that I'll Brandon Liu: I'm going to try to go a little bit outside of that scope for this short presentation and talk really about the essence of a map.</p>
+
+<p>So in my mind map has geometry.</p>
+
+<p>Brandon Liu: In some coordinate system, but it also has textural properties.</p>
+
+<p>This might be a data associated with that features.</p>
+
+<p>It might be a nap labels even Brandon Liu: So even if things like putting labels onto maps are outside the scope of not the mill text is so essential to what a map is that is worthy of forward thinking Brandon Liu: And you might think about this like if you have a vector data set and you want to render it in the browser, you have to show the texts in some way, whether that's canvas or SVG or some or some fashion.</p>
+
+<p>Brandon Liu: And then why do I care about this a little bit about me.</p>
+
+<p>Brandon Liu: I work mainly with LSTM Brandon Liu: Right now my projects are mainly focused on East Asia, which is going to be relevant to this talk.</p>
+
+<p>I'm building a new web API called proto maps.</p>
+
+<p>It uses the data set.</p>
+
+<p>Brandon Liu: One interesting thing about OSM.</p>
+
+<p>It has a wealth of multilingual content.</p>
+
+<p>So it started in the UK in the 2000s, but it's now a truly global project.</p>
+
+<p>Brandon Liu: And I also want to say for this short presentation, it's going to have a very narrow focus on one or Chinese script.</p>
+
+<p>Brandon Liu: Which is only one part of global text.</p>
+
+<p>So I'm not going to get into, you know, text that goes right to left or South Asian scripts, for example.</p>
+
+<p>Now that's a huge topic, but I'm only going to focus on one very narrow thing.</p>
+
+<p>Brandon Liu: So sort of following the map ML proposed markup for data sets.</p>
+
+<p>I wanted to use this as sort of the illustrating example.</p>
+
+<p>Brandon Liu: Which is a data set that has two features to point features.</p>
+
+<p>One of them is Hong Kong, and one of them is Mina, to which is especially especially municipality and Tokyo.</p>
+
+<p>Brandon Liu: These are just two point features and you can see they have like a lot longer long lat they have some properties, which is the name in the native script and the population as a number Brandon Liu: So this is like a pretty basic data set, you know, just as simple as it can get Brandon Liu: And how might have luck on a map.</p>
+
+<p>So I just made, you know, sort of these absolutely position does on an HTML page.</p>
+
+<p>Brandon Liu: That puts you know geez place names and data onto the map.</p>
+
+<p>And even if you don't read Chinese or Japanese.</p>
+
+<p>You might notice something interesting about this map, which is that these two characters are very similar.</p>
+
+<p>So the second character in Hong Kong and the first character here.</p>
+
+<p>Brandon Liu: And the interesting thing about this is that these are actually the same Unicode code point Brandon Liu: So the design of Unicode is such that Brandon Liu: There's a range of character is called the Cj K Chinese, Japanese, and Korean unified radiographs and these are glyphs or not really glyphs, but these are characters that were that were unified between the different languages.</p>
+
+<p>Brandon Liu: So there's no way in the data set actually know that one of them is Brandon Liu: It should be rather than the Chinese style and the other one should be under the like in the Japanese style.</p>
+
+<p>On the left here, you can see that there is a slight difference between these two characters.</p>
+
+<p>Brandon Liu: And these aren't really cherry picked like this.</p>
+
+<p>These variations are quite pervasive, especially in geographic data where certain components of characters.</p>
+
+<p>Brandon Liu: Have different conventions and how they're written and Unicode was designed to be legible to users where if you see a variant that is from a different region.</p>
+
+<p>Brandon Liu: It should make sense, but it is not really how it's written in that locale.</p>
+
+<p>And the other thing I want to say is that place names are proper nouns.</p>
+
+<p>And people might be more sensitive to how these are vendor that just body texts on the web.</p>
+
+<p>Brandon Liu: And my main central point in this presentation is to push this idea that maps are inherently multilingual, they're not edge cases like I'm I think of documents on the web as being multilingual in some cases like for Brandon Liu: No language education or for travel.</p>
+
+<p>But I think the special thing about maps is multilingual taxes inherent to any map that you know goes beyond just one national boundary of, for example, Brandon Liu: So web standards have a lot of things to say about multilingual content.</p>
+
+<p>Brandon Liu: There's a link in this article or there's a link in his presentation to this article.</p>
+
+<p>That's why use the language attribute.</p>
+
+<p>So in HTML text.</p>
+
+<p>Brandon Liu: You can add a lang attribute which has it BCP 47 language tag to, you know, the top of the DOM, or even to any element within the DOM.</p>
+
+<p>Brandon Liu: So you can have an individual span or div of text and that has a language attribute that will control how that Texas rendered Brandon Liu: So there's a very powerful solution that HTML already offers, which is to have the element level link attributes and this is this kind of localization for text is supported directly by markup.</p>
+
+<p>Brandon Liu: And also language attributes are needed for accessibility.</p>
+
+<p>If you wanted to have a screen reader, for example, that would pronounce text in a language.</p>
+
+<p>You need to know or have some tag about what spoken language.</p>
+
+<p>Brandon Liu: Is associated with that text.</p>
+
+<p>This is especially important for Chinese, Japanese, and Korean Brandon Liu: So overall, there is this sort of tension between the document view of the world like HTML where documents have a language time versus maps, which is sort of a wild west different standards are different libraries and you can see on the web, some Brandon Liu: Some map services they have only one version for the entire world.</p>
+
+<p>Brandon Liu: And if they're rendered on the client side they might still display the local name of a place.</p>
+
+<p>And I think that's sort of like a good on target.</p>
+
+<p>Brandon Liu: For globalization, like if you have a map service in Japan, for example that shows that says Tokyo Bay, like Google Maps here, you still have the native language on the map, even for English speakers or Brandon Liu: Or users of the website that are using English.</p>
+
+<p>And I think that's like sort of a good convention that we have Brandon Liu: So what's the state of these localization issues on web maps right now.</p>
+
+<p>Brandon Liu: Firstly, do graphics elements in HTML like SVG or Canvas support element level language tagging.</p>
+
+<p>Brandon Liu: How about web apps.</p>
+
+<p>In general, if I go to, you know, like a leaflet hard Web Map or a matte box GL or a veteran map are these language issues solves efficiently.</p>
+
+<p>And how does this relate to web standards.</p>
+
+<p>Brandon Liu: For SVG. Brandon Liu: I can sort of recreated that same HTML map with an SVG elements and you can see here that Safari, which I'm using right now does not actually handle this.</p>
+
+<p>Brandon Liu: So you can see that these two characters are rendered the exact same way for different languages.</p>
+
+<p>Brandon Liu: You can see the code on the top here.</p>
+
+<p>It's to text elements and actually the only major browser to support element level language rendering is Firefox and Safari, Chrome and edge on they just, you know, they default to Brandon Liu: One language or the other.</p>
+
+<p>Brandon Liu: Canvas, for example, doesn't really have any localization features.</p>
+
+<p>Brandon Liu: There's no way to specify a language when you are saying this, this run of text.</p>
+
+<p>Brandon Liu: In canvas is is global, you know, there's sort of this global thought property and you don't have any control over the language, there is some proposals on enhancements to the canvas standards to make this work.</p>
+
+<p>Brandon Liu: Have a server rendered maps like if you're using that that aisle and you wanted to bring in a raster tiles layer, sort of like you would use leaflet for right now.</p>
+
+<p>Brandon Liu: It's sort of someone else's problem on the server side.</p>
+
+<p>Brandon Liu: There.</p>
+
+<p>Brandon Liu: Most common is to use a library like map Nick to render maps and even map Nick right now does not have great support for these locale variants, this is something I'm actively working on, for example, Open Street Map.</p>
+
+<p>The main Brandon Liu: Like main tile set called us I'm carbo Brandon Liu: Sort of defaults to Japanese variants for Chinese place names, which is not ideal, something that can be improved.</p>
+
+<p>Brandon Liu: But how about client vendor maps so client, like most state of the art.</p>
+
+<p>Brandon Liu: Map vendors that are done in Web GL day sort of skip this problem completely by shipping their own stack.</p>
+
+<p>Brandon Liu: They sign distance fields which are really good for performance that can be scaled infinitely rotated.</p>
+
+<p>Brandon Liu: But this approach has very little in common with web standards and it doesn't really reach parity for some scripts such a South Asian scripts.</p>
+
+<p>Brandon Liu: These that render is don't really do a great job.</p>
+
+<p>The visual fidelity has some trade offs.</p>
+
+<p>If you're rendering complex character is like Chinese characters.</p>
+
+<p>Brandon Liu: So I think that web standards have a lot of potential to improve the state of the art.</p>
+
+<p>Brandon Liu: And you can see this in some hybrid app libraries.</p>
+
+<p>The one I'm focused mainly on right now is called 10 grams, as it was a map sent project and now is by Linux Foundation, but it uses web standard text it renders text to Canvas first move that to the GPU and shows them on the map.</p>
+
+<p>Brandon Liu: There's some performance trade offs here.</p>
+
+<p>You can resize text, and I know open layers.</p>
+
+<p>It's a similar design.</p>
+
+<p>I'm working on a new library got put them up yesterday, which is better rendering for leaflet.</p>
+
+<p>Brandon Liu: In all these cases off screen campus would be important to make these faster.</p>
+
+<p>Brandon Liu: As an aside, HTML is video which we've talked about as sort of analog for making maps work well on the web.</p>
+
+<p>Brandon Liu: Has an accompanying standard called Web EDT for subtitles.</p>
+
+<p>Brandon Liu: Subtitles are exactly this, this problem, which is how to present texts on the web.</p>
+
+<p>And you can see here, I just have a video in this presentation.</p>
+
+<p>Brandon Liu: And I put in these characters one veteran attempted to be better than Chinese one in Japanese style and it doesn't really handle that.</p>
+
+<p>Brandon Liu: This does, however, working Firefox.</p>
+
+<p>So web VTT has explicit element called Q language spans to mark up different languages inside of the subtitles and that is implemented and consistently across browsers, but it is part of that markup standard Brandon Liu: I'm running out of time.</p>
+
+<p>Brandon Liu: In conclusion, my main point is that multi language or multi strip maps should not be treated as edge cases, we should think about multilingual out of the box for for for all not standards on the web.</p>
+
+<p>Brandon Liu: text documents on the web with HTML.</p>
+
+<p>Have a good solution right now element level languages.</p>
+
+<p>This has potential to improve the state of the art for web apps.</p>
+
+<p>Brandon Liu: ethical standards or anything that is responsible for a presentation to the user, whether that's SVG, Canvas video or a bad element should have those capabilities as well.</p>
+
+<p>Brandon Liu: So you can find me via email or Twitter Brandon output of apps com or beat on on Twitter, that's all I have.</p>
+
+<p>Thank you.</p>
+
+<p>Doug Schepers: Fantastic.</p>
+
+<p>Doug Schepers: Thank you so much, Brandon, I'm Doug Schepers: Really a complex issue dealing with languages, especially when when Unicode sir folded them all into one block.</p>
+
+<p>Doug Schepers: Maybe that was a mistake.</p>
+
+<p>Doug Schepers: We do have a quick question.</p>
+
+<p>How, how can we support the same label but multiple languages and offer the choice.</p>
+
+<p>I assume that the question is to offer the choice to the user to to to pick one of the labels.</p>
+
+<p>Brandon Liu: I think that would require mapping libraries to have some notion of user language or it would need to be inferred from the user agent, but then that gets into very tricky issues, like for example.</p>
+
+<p>Brandon Liu: One common feature is for map labels to be sort of Roman eyes are transliterated into line characters for non line scripts and those would be common among different Brandon Liu: Sort of light and using languages.</p>
+
+<p>So you might need to have some kind of tree or fallback language that says if I'm browsing a map.</p>
+
+<p>Brandon Liu: In France at a has an English alternative label set.</p>
+
+<p>Should I show the English one instead of French one.</p>
+
+<p>If I don't have French, for example, and I think he gets into a very tricky subset of questions that maybe web standards is not prepared to have a complete solution.</p>
+
+<p>Doug Schepers: Excellent.</p>
+
+<p>Thank you so much.</p>
+
+<p>That's very thoughtful answer.</p>
+
+<p>Doug Schepers: And with that, it is time now to move on to our next presentation.</p>
+
+<p>Doug Schepers: Thank you once again, Brandon.</p>
+
+<p>Excellent.</p>
+
+<p>Well done.</p>
+
+<p>So next we have a tie sprint Jen's Doug Schepers: He is a geospatial Software Engineer He's from the Netherlands is specialized in open standards from the geospatial domain.</p>
+
+<p>Doug Schepers: Develops applications based on those standards for Genova he has been active for several years and developing national profiles international standards has been contributing to the development of the inspire, which is a European infrastructure for spatial information.</p>
+
+<p>Doug Schepers: In the Netherlands and internationally.</p>
+
+<p>He's also active in the field of web accessibility for the geospatial domain and for and usability and his presentation today is entitled Doug Schepers: Excuse me, fuzzy geolocation Tice.</p>
+
+<p>Do you want to take it away.</p>
+
+<p>Yeah.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Thank you, Doc.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): thanks all for this opportunity.</p>
+
+<p>I'll Thijs Brentjens (Geonovum, NL): Try to share my screen now.</p>
+
+<p>Let me see where my mouse is Thijs Brentjens (Geonovum, NL): Please let me know if you're not able to see this.</p>
+
+<p>Doug Schepers: Looks great.</p>
+
+<p>Doug Schepers: looks right.</p>
+
+<p>Okay.</p>
+
+<p>Doug Schepers: Oh my zoom meeting itself is not That Thijs Brentjens (Geonovum, NL): Okay.</p>
+
+<p>Just one moment please.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): I have a list of participants participants in my screen just in front of my slides so sorry for that.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Need to close this down.</p>
+
+<p>Okay, there we are.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Yes, thanks.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Thanks for this opportunity.</p>
+
+<p>I'm going to talk about fussy geolocation and Thijs Brentjens (Geonovum, NL): I hope this concept will be clear through my sheets.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): But first, before.</p>
+
+<p>I'm going to talk about this how we are going to do this in the digital age.</p>
+
+<p>I'd like to Thijs Brentjens (Geonovum, NL): Give you a thought.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): In the age of analog maps.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): We were a user of a map was let's say he was alone, he or she was alone in looking at the map.</p>
+
+<p>And who else then this user knew exactly what the user was looking for on a map.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): And I think you can imagine now in this new digital age for maps and online resources, a lot of logging are tracking tracing can be done.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Via user or what the user is doing so.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): The context for it for for this concept of fuzzy geolocation, is that we have found out that the digital applications use geolocation more and more.</p>
+
+<p>It's very valuable.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Especially with with mobile applications, your location is one of the main let's say correct your six sometimes for your personal environment.</p>
+
+<p>If you're looking at some website or applications and Thijs Brentjens (Geonovum, NL): But there.</p>
+
+<p>There may be there are many use cases where your geolocation your personal location.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): May also be Thijs Brentjens (Geonovum, NL): It may not be that you wish that it is shared.</p>
+
+<p>For example, you want to use a Web Map and navigate to a doctor, you don't want to use your navigation system because you don't want some Technic company to trace you Thijs Brentjens (Geonovum, NL): Or another one.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): A police officers investigation is investigating some area.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): You don't want to that, that this let's say extra attention is somehow unlocked somewhere.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Because it might be a security risk at some point or might may compromise privacy and it may sound a bit far fetched, but but in the Netherlands, we have this we have had a very big debate on on Thijs Brentjens (Geonovum, NL): Tracing apps and also that the geolocation was not allowed to be part of it because of fear of people that their personal geolocation would be stored somewhere on servers owned by the government.</p>
+
+<p>So even this this let's say this privacy awareness that that many users have nowadays.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): It puts us at for an extra that's an assignment.</p>
+
+<p>We have to do better in communicating our geolocation.</p>
+
+<p>So yes, I think we can do better.</p>
+
+<p>We should just not send Thijs Brentjens (Geonovum, NL): An exact your location or area of interest to all kinds of online services, just like we have, for example, a privacy mode for for Thijs Brentjens (Geonovum, NL): browser tabs or do not track me kind of things.</p>
+
+<p>And now it's very a binary you either provide your geolocation or you don't and but still if you are using online data services, your, your, the area you are interested in is still communicated over Thijs Brentjens (Geonovum, NL): To service so Thijs Brentjens (Geonovum, NL): I think, and this is an idea we have in within June Oldman Thijs Brentjens (Geonovum, NL): Originating from the scope with 90 discussion as well.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): We should do better.</p>
+
+<p>And the thing is, how can we do it and I'm now going to present a sample.</p>
+
+<p>An example of an interaction veteran how we could maybe improve this, but I have a very either.</p>
+
+<p>I'd like to challenge you in sharing other ideas as well.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): So this is the most of the first geolocation.</p>
+
+<p>We have been talking now in July in Juneau from Thijs Brentjens (Geonovum, NL): For example, as a user, I'd like to have a map around this specific location you see here.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Very low mind at my house I Thijs Brentjens (Geonovum, NL): Currently, that this location is directly sent to some Thijs Brentjens (Geonovum, NL): To some online service.</p>
+
+<p>I'm getting a notice here that my internet connection is unstable is am I still It's still Badita Florin: It's Doug Schepers: Fine look five k Amelia Bellamy-Royds: The audio is breaking up a little so if you have any other apps in the background that Thijs Brentjens (Geonovum, NL): closing them.</p>
+
+<p>So there's no there shouldn't be anything Brian Kardell: Stopping your Thijs Brentjens (Geonovum, NL): Job is that my children are looking a movie now but Thijs Brentjens (Geonovum, NL): Sorry for that.</p>
+
+<p>Brian Kardell: Maybe, maybe.</p>
+
+<p>Doug Schepers: Twice.</p>
+
+<p>Maybe you can stop your video.</p>
+
+<p>Yeah.</p>
+
+<p>But otherwise, just go ahead.</p>
+
+<p>Ah.</p>
+
+<p>OK. Thijs Brentjens (Geonovum, NL): I hope my slides are skewed are cleared and okay, what we can do, instead of sending the the area.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Of interest directly, we cannot also Thijs Brentjens (Geonovum, NL): Change.</p>
+
+<p>Maybe the center of the map or enlarge the area or at random.</p>
+
+<p>Other areas.</p>
+
+<p>Before we engage other online services and use this kind of this kind of pattern to retrieve information from from API's and then with some post processing, go back to the end user and Thijs Brentjens (Geonovum, NL): filter out only the relevant part for the end user.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): It puts a burden, a bit more on some API's are on our services.</p>
+
+<p>So we realized that, but as a thought that this might help in let's say we're putting more privacy, security or Thijs Brentjens (Geonovum, NL): Or at least not compromise privacy that much and Thijs Brentjens (Geonovum, NL): So this, this fuzzy this further fuzziness, it can be added by we think now into a two points, for example by a third party a broker, that adds all kinds of Thijs Brentjens (Geonovum, NL): Smart algorithms or smart ways to add fuzziness and do all communication with all my services and it can also a broker can also provide additional services, for example, cash or other resources as when requests or maybe fake users.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): To to not make clear where you are at that point.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Another approach might be that the mapping clients or maybe user agents or maybe in browsers themselves.</p>
+
+<p>There may be smarter ways of preparing quests before you engage online services.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): So these are some ideas we have now.</p>
+
+<p>And I'd like to conclude this with with an invitation to collaborate on this ID.</p>
+
+<p>I know this this community.</p>
+
+<p>I'm presenting for now is quite diverse Thijs Brentjens (Geonovum, NL): And I hope that that many of you have ideas how we can Thijs Brentjens (Geonovum, NL): Help or improve privacy and security for for these kind of geospatial applications.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Our organization will will create a proof of concept and we will share all the resources, I will put them on this course as well put pointers to them.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Will we will provide some juicy API's.</p>
+
+<p>If you're need them and you want to try some things for ourselves but but the main thing is I'd like to ask you to share your ideas, your criticism as well and and help us in improving this ID.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): I'll provide you my contact details later, we are also available to help.</p>
+
+<p>As I said, we will provide some urgency API is that you can use for testing or to demo the, the concept Thijs Brentjens (Geonovum, NL): But if you need any other help, please contact us because we think that this community might be a very nice and powerful community and we'd like to Thijs Brentjens (Geonovum, NL): Get the bring this further together so Thijs Brentjens (Geonovum, NL): That's about what I'd like to talk to you about first geolocation privacy.</p>
+
+<p>I hope my message came across Thijs Brentjens (Geonovum, NL): And that it was not disturb too much.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): And I hope to hear from you.</p>
+
+<p>Doug Schepers: Thank you.</p>
+
+<p>Nice.</p>
+
+<p>Nice.</p>
+
+<p>That was a really interesting presentation that I, I didn't have.</p>
+
+<p>I was able to see everything.</p>
+
+<p>Fine.</p>
+
+<p>I don't think you need to worry.</p>
+
+<p>I Doug Schepers: This I have this reminds me of things like Tor and other sort of obfuscation techniques that have been used in non map tech a map domains.</p>
+
+<p>So it seems sensible to me.</p>
+
+<p>Uh, let's see if there are any questions, um, Doug Schepers: Let's see.</p>
+
+<p>Doug Schepers: What is the path that you recommend to see this done, should there be an OTC geolocation prize privacy slice fuzzy API should maybe maybe be something in W three.</p>
+
+<p>See, I know the WCC tackled this Doug Schepers: Or tackled some of the controversy here when they, when they added the Geolocation API to the browser.</p>
+
+<p>So how do you, what do you think that the path forward is do you think this is something goes in the browser.</p>
+
+<p>Do you think this is a protocol thing.</p>
+
+<p>What do you think, good question.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): In fact, I don't know yet.</p>
+
+<p>I think one of the things that we need to find out what's the appropriate place or the way to tackle this.</p>
+
+<p>But it might not be discussion whether we should do it either in browser or using some kind of other protocol.</p>
+
+<p>It might be an end as well.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): I think for the, let's say, the maximum reach out.</p>
+
+<p>I think it would be best if browsers would support some kind of some some kind of pattern to to Thijs Brentjens (Geonovum, NL): Do at this fuzziness geolocation, but I can imagine that for some organizations they are looking for other security measures and they will have their own Thijs Brentjens (Geonovum, NL): Let's say their own brokers themselves.</p>
+
+<p>Doug Schepers: Hmm.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Be sure that they are in control of what is sent to other services.</p>
+
+<p>So let's find out together.</p>
+
+<p>I'd say, but Doug Schepers: Some someone else notes that asked a question.</p>
+
+<p>Could it be could user agent provide this in a privacy in a private map mode.</p>
+
+<p>In other words, in an incognito mode, could they, they could communicate that.</p>
+
+<p>So maybe it doesn't.</p>
+
+<p>Doug Schepers: It isn't an always on things.</p>
+
+<p>So it doesn't always do the but if you're doing a something like tour, for example.</p>
+
+<p>Doug Schepers: If there are enough queries.</p>
+
+<p>Could you actually aggregate them through a third party and sort of allocates allocate who gets what information based on this aggregation, sort of like the multiple users doing that.</p>
+
+<p>Doug Schepers: On Doug Schepers: I didn't friend that as a question.</p>
+
+<p>Do you want to Thijs Brentjens (Geonovum, NL): The said, I think.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Very powerful options will be in Thijs Brentjens (Geonovum, NL): If we use Thijs Brentjens (Geonovum, NL): Let's say broker somehow Thijs Brentjens (Geonovum, NL): Yeah, because then we can add some all kinds of additional services, we can, you can, if you do it in a user agent.</p>
+
+<p>There's always the trigger event coming from a user agent and if you do it using some kind of a broker.</p>
+
+<p>You can even add Thijs Brentjens (Geonovum, NL): That's what I meant with fake users.</p>
+
+<p>Doug Schepers: Yeah.</p>
+
+<p>Doug Schepers: Yeah yeah Thijs Brentjens (Geonovum, NL): If you are not using it, you can still interact a service or you can do caching or, you know, with all these more modern API's and vector tiles, it's, it, it may be easier to build such a system.</p>
+
+<p>Doug Schepers: That's great.</p>
+
+<p>That's really, really.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): What's your fault.</p>
+
+<p>It's not Doug Schepers: Well, again, everyone, uh, Doug Schepers: Both Tyson and Brandon ask you to reach out to them so Doug Schepers: If this is a topic that interests you, please make sure to talk about it in our various channels for the workshop, but also reach out to them directly.</p>
+
+<p>And we'll Doug Schepers: Hopefully some good things will happen from from the presentations both really great presentations.</p>
+
+<p>Thank you so much.</p>
+
+<p>And I'm going to have the pleasure of joining you Doug Schepers: Having you join me again.</p>
+
+<p>We're going to start the panel now.</p>
+
+<p>Doug Schepers: So the panel today is called Doug Schepers: World Wide Web maps challenges in the global context.</p>
+
+<p>And I'm going to reintroduce Doug Schepers: Brandon and Tice.</p>
+
+<p>And there's two other participants as well SIVA and Nicholas and so Doug Schepers: Let's get started right now if that's all right.</p>
+
+<p>Doug Schepers: So, Doug Schepers: Let's start with ties ties, you're already here.</p>
+
+<p>Again, Tyson geospatial software engineer from the Netherlands, he specialized in open standards and the geospatial domain.</p>
+
+<p>Doug Schepers: And developing applications based on the standards for genome.</p>
+
+<p>He's been active for several years in developing Doug Schepers: National profiles of international standards and he's been contributing to the development of inspire, which is the European infrastructure for spatial information in the Netherlands and internationally.</p>
+
+<p>Doug Schepers: Is also active in the fields of web accessibility and usability in the geospatial domain.</p>
+
+<p>So taste you want to give us Doug Schepers: Any additional words you seem to be frozen.</p>
+
+<p>Doug Schepers: Or help us now.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Nope.</p>
+
+<p>Doug Schepers: You're frozen Frozen.</p>
+
+<p>Now go ahead Thijs Brentjens (Geonovum, NL): Oh, okay.</p>
+
+<p>Oh, additional words.</p>
+
+<p>That's my video minutes better Doug Schepers: That's better.</p>
+
+<p>Doug Schepers: Choice.</p>
+
+<p>Do you have any other anything else to say about what you're doing.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Oh, no.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): No, I'm not saying nothing else to add, for now.</p>
+
+<p>No.</p>
+
+<p>Doug Schepers: Okay.</p>
+
+<p>Great.</p>
+
+<p>Thanks.</p>
+
+<p>Okay.</p>
+
+<p>Doug Schepers: So to reintroduce Brandon Doug Schepers: Brandon is the creator of proto maps, which is an internationalization focus system for maps on the web.</p>
+
+<p>Doug Schepers: He's been working on a map rendering and Data Tools related to the Open Street Map projects, since 2013.</p>
+
+<p>He also created Doug Schepers: That's eight zero s dot NYC a Web Map.</p>
+
+<p>The viewer for historical street views of New York and granted you want to say anything more about what you're working on right now.</p>
+
+<p>Brandon Liu: I'm going to have anything, Dad.</p>
+
+<p>Thanks.</p>
+
+<p>Doug Schepers: Okay.</p>
+
+<p>Wonderful.</p>
+
+<p>Okay, next we have SIVA pet aponte SIVA is a software developer working with a focus on mapping visualization building desktop applications and and make mapping services on the server.</p>
+
+<p>Doug Schepers: He works with design and development OTC related mapping services in desktop clients REST based services and clients and web maps stored as documents online tools by various platforms.</p>
+
+<p>Doug Schepers: See both.</p>
+
+<p>Can you say hi.</p>
+
+<p>Siva: Hey, Siva: Hi everybody.</p>
+
+<p>Can you hear me.</p>
+
+<p>Doug Schepers: Yep, we can hear me fine.</p>
+
+<p>Good.</p>
+
+<p>Doug Schepers: Thanks.</p>
+
+<p>I was just told that my internet connection is unstable if I drop off.</p>
+
+<p>Y'all know the questions so Doug Schepers: And Brent and I also sent them to Doug Schepers: Peter rush forth and Doug Schepers: Hopefully if if something happens to my connection.</p>
+
+<p>Peter can can step up.</p>
+
+<p>Doug Schepers: And finally, we have Nicholas Palomino Nicholas is relatively new to mapping Doug Schepers: Is more focused on the subsystems underlying the development of web maps and the utility for the industrial and for industrial uses like Doug Schepers: Big data manipulation and observation advanced analytics and AI integration and other upcoming telecommunications technologies for planetary observation and beyond.</p>
+
+<p>Doug Schepers: Nicholas.</p>
+
+<p>Do you want to say hi.</p>
+
+<p>Doug Schepers: Yeah.</p>
+
+<p>Hello.</p>
+
+<p>Okay.</p>
+
+<p>Doug Schepers: All right.</p>
+
+<p>Wonderful.</p>
+
+<p>Um, hey y'all.</p>
+
+<p>Doug Schepers: Excellent.</p>
+
+<p>Let's go ahead and get started.</p>
+
+<p>Doug Schepers: The first question we have is, Doug Schepers: Oh, GC and WPC have spatial data on the web, best practices, you know, DC is very actively working on new API specifications.</p>
+
+<p>It could facilitate better publication and easier.</p>
+
+<p>Use of geospatial data.</p>
+
+<p>Doug Schepers: But that's the theory.</p>
+
+<p>How do you think we put this in practice on active projects and y'all can just jump in everybody's free to answer the question.</p>
+
+<p>Doug Schepers: Do we want to start with maybe a Doug Schepers: Tice.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Yeah, well, Thijs Brentjens (Geonovum, NL): I think this is an interesting one because on the one end you say these API's are quite new and Thijs Brentjens (Geonovum, NL): There might be large interest, but what we see currently in at least in Ireland says that there's not that much interest in really implementing them because of legacy constraints.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): One driver could have been that on the European level, we have a law prescribing, what kind of technology to use to exchange information between countries, and I don't know if this is solutions, but this might be Thijs Brentjens (Geonovum, NL): I think one of the aspects, is that too, especially for governmental organizations, we might need stronger policy on using API's.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Knowledge that I think there are many challenges there but that's one of the things I'd like to propose and of course doing experiments in life environments.</p>
+
+<p>But that requires organizations.</p>
+
+<p>Okay, of course, are set up.</p>
+
+<p>Doug Schepers: SIVA Nicholas Brandon, any thoughts.</p>
+
+<p>Siva: I'd like to pass.</p>
+
+<p>Doug Schepers: Okay, Nicholas Nicolas: I just want to Doug Schepers: Okay, great.</p>
+
+<p>Brandon, you have any thoughts on this.</p>
+
+<p>Yeah.</p>
+
+<p>Brandon Liu: I think one interesting thing about sort of spatial especially for open source spatial is that that I know landscape.</p>
+
+<p>Really, it's not that large like a lot of sort of developers are working with post jus Brandon Liu: And to have or fun sort of a reference implementation or a driver for some of these majors special projects, things like purchase that encourages or yeah um and also doodle.</p>
+
+<p>Brandon Liu: I think is having a good implementation that makes it into, you know, like a release has a big impact.</p>
+
+<p>Brandon Liu: So I think like, it's sort of an advantage that it's not like JavaScript frameworks, where you know there's 101 you know there's a new JavaScript hammer coming out every day.</p>
+
+<p>Brandon Liu: I think a lot of this sort of open source spatial world is quite stable.</p>
+
+<p>So having a reference implementation in those is a pretty reasonable target.</p>
+
+<p>Okay, great.</p>
+
+<p>Yeah.</p>
+
+<p>Doug Schepers: That makes a lot of sense.</p>
+
+<p>Oops.</p>
+
+<p>Stop.</p>
+
+<p>Doug Schepers: Okay.</p>
+
+<p>Doug Schepers: Apologies.</p>
+
+<p>I'm just timing, you Doug Schepers: And my clock window and you had a perfect timing.</p>
+
+<p>Doug Schepers: Okay.</p>
+
+<p>So the second question I have is, there are many localization features of maps that would benefit from browser support.</p>
+
+<p>Doug Schepers: Some examples are the ability to produce place names and the writing system that the user can use as we saw earlier and Brandon's presentation design me or authoring a multilingual map based on the locale.</p>
+
+<p>Doug Schepers: Handling dynamic formatting of numeric or time related data and other interesting cartographic practices from around the world that aren't yet widespread in digital mapmaking like vertical text.</p>
+
+<p>Doug Schepers: Which is supported in some aspects in in the web.</p>
+
+<p>But how often is it using web mapping.</p>
+
+<p>So what should web browsers and web standards do to provide solutions.</p>
+
+<p>I'd like to start with Seba here.</p>
+
+<p>Doug Schepers: See if any thoughts.</p>
+
+<p>Siva: Can you hear, can you hear me.</p>
+
+<p>Yeah.</p>
+
+<p>Siva: Yeah, sorry.</p>
+
+<p>Yeah, I like the Brandon's presentation on this topic.</p>
+
+<p>Siva: The only additional thing I wanted to talk about in that respect is if I as an author want to support multiple languages within the same map.</p>
+
+<p>Siva: Then I should be able to advertise or like, you know, provide the metadata of what the languages are that this particular map supports that way.</p>
+
+<p>Siva: The browsers will allow the users to pick which language to use.</p>
+
+<p>For example, instead of just locking to one specific language that the browser is pointing to.</p>
+
+<p>Siva: So yeah, that those were some of the thoughts.</p>
+
+<p>I have.</p>
+
+<p>I always deal with the dynamic dynamic rendering or like the server side rendering aspect of it.</p>
+
+<p>But I think for w MTS.</p>
+
+<p>For example, you could potentially use this trial, for example, for the language.</p>
+
+<p>Siva: But do you will have to come up with some kind of a formalization of this language feature which in the metadata for the W MTS, for example.</p>
+
+<p>Siva: Then you'll be able to use style or other template parameters for language.</p>
+
+<p>For example, where you could make a given map multilingual Huh.</p>
+
+<p>Doug Schepers: Yeah, that makes a lot of sense.</p>
+
+<p>Nicholas, do you have anything to say on this one.</p>
+
+<p>Doug Schepers: If you do, you're muted.</p>
+
+<p>I'm not.</p>
+
+<p>Let's move on to Doug Schepers: Brandon Brandon Liu: Are you able to hear me.</p>
+
+<p>Brandon Liu: Yes.</p>
+
+<p>Okay, cool.</p>
+
+<p>Um, some thoughts on maps and languages.</p>
+
+<p>Brandon Liu: I think one thing you see comment on the on web maps is I think I mentioned this earlier but transliteration of place names.</p>
+
+<p>For example, if a place name isn't an online script, then the backend might provide Brandon Liu: Yeah, I'm the backend might provide a Latin transliteration which should be able to be served to all users that use land scripts.</p>
+
+<p>Brandon Liu: Now, like, in that case, that's kind of open ended.</p>
+
+<p>If you look at how BCP for disabled language tags are structured.</p>
+
+<p>You wouldn't want to specify every single, you know, German, French Brandon Liu: English all those but there might need to be some intermediate sort of like scripts tag that defines sort of languages as a lot like as using sort of running systems now.</p>
+
+<p>Brandon Liu: Like I haven't thought about this a lot.</p>
+
+<p>And there might be some fatal flaws to this approach, but I think that would get you part of the way there.</p>
+
+<p>Brandon Liu: You know, in terms of being able to show maps to users in different locales.</p>
+
+<p>Now how much that that interacts with web standards, I think, is Brandon Liu: Is a tricky question because I think for something that's for something to become a web standard, it's not good to give like a half baked internationalisation solution like it's not good if Brandon Liu: If the internationalization solution is just minimum viable product that only works for languages like that.</p>
+
+<p>That only works for left to right, languages, for example.</p>
+
+<p>Brandon Liu: Right, so I think like Brandon Liu: There needs to be a lot of care in pushing something as a standard versus having a low level set of tools that can be used to accomplish something Brandon Liu: And I think that's like one of the overall tensions between talking about you know map ML versus here's a bunch of JavaScript do something with it.</p>
+
+<p>Sure.</p>
+
+<p>Brandon Liu: So I think that is Brandon Liu: I don't really have Brandon Liu: I guess the knowledge and know what the right approaches here.</p>
+
+<p>Brandon Liu: The second thing I want to talk about that I mentioned is Brandon Liu: Things like vertical text that's something I added to the question list.</p>
+
+<p>Brandon Liu: It's something that I really like.</p>
+
+<p>Or it's a topic I'm interested in, and I think the browsers.</p>
+
+<p>Brandon Liu: Have a lot of good progress in making that work well on the web, even though it's not used.</p>
+
+<p>Brandon Liu: Like for example for CJ K, it's common for for print type settings to use the vertical text on the web, sort of the status quo is for text to always be horizontal, it would be nice to have that as something that's well supported and web maps.</p>
+
+<p>Brandon Liu: For example, if you look at print maps that are published in Chinese for first features that are mostly a vertical from the perspective of, you know, the viewer.</p>
+
+<p>Brandon Liu: They will label those vertically and that's like a very common practice in print maps, but on the web, there's only a couple of rendering libraries that support that.</p>
+
+<p>Brandon Liu: So I'm curious if there's some way that Brandon Liu: The things that have been built for Brandon Liu: Web browsers already get influence board cartographic possibility.</p>
+
+<p>Brandon Liu: For web apps.</p>
+
+<p>Doug Schepers: That's, that's a definite definite that's definitely a Doug Schepers: An area where we need to look at what the standards are already doing and what browsers already doing and have that inform what we're doing.</p>
+
+<p>Doug Schepers: And Brandon Liu: It's such a deep rabbit hole because a lot of web apps also need text on career paths, and that's something that's Brandon Liu: That's something that people want for SVG, for example, I'm not sure what the current status curve text her Doug Schepers: Yeah, I can tell you that curve text does work for SVG.</p>
+
+<p>So bringing that into Doug Schepers: An egg works across browsers.</p>
+
+<p>So bringing that into it should Doug Schepers: Show be possible.</p>
+
+<p>I'm going to ask Doug Schepers: Tice.</p>
+
+<p>If he has anything to jump in here.</p>
+
+<p>No.</p>
+
+<p>Doug Schepers: No.</p>
+
+<p>Okay.</p>
+
+<p>Um, Doug Schepers: I'd love to go in in further, but we also have more questions, um, is that fertile topic for conversation.</p>
+
+<p>Doug Schepers: So the, the next question.</p>
+
+<p>Thank you all for for those thoughtful answers.</p>
+
+<p>What are the challenges for security and privacy for personal geospatial data in international context entice I can you start with this one.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Yeah.</p>
+
+<p>Well, for those who heard my presentation before I think we, the main challenge in the end is that we need to Thijs Brentjens (Geonovum, NL): Get in between the years in our heads that that privacy and security may may become you know all the benefits we have to geospatial data.</p>
+
+<p>They may also have a we have to pay a price for it with privacy and security.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): So that, that's maybe the main challenge and then it comes down to, how can we Thijs Brentjens (Geonovum, NL): act upon it.</p>
+
+<p>So I'd say propose experiments, but also share ideas and maybe like you have if you do a security tests in for web applications, you have this list of O W ASP. Thijs Brentjens (Geonovum, NL): I was.</p>
+
+<p>I'm not sure if I pronounced correctly, but there's just checklists, you need to check whether you are you comply to them or not.</p>
+
+<p>It gives them new ideas, what you can do for security and privacy.</p>
+
+<p>We don't have that as far as I know, for geospatial applications.</p>
+
+<p>Doug Schepers: And Thijs Brentjens (Geonovum, NL): I think that that's one of the things that in an international context, we might try to Thijs Brentjens (Geonovum, NL): Work on create such a list.</p>
+
+<p>Doug Schepers: Right.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): And then of course we have the technology implementation, etc.</p>
+
+<p>But it should also start with creating all those kinds of risks and identifying them and share them and help each other out with that.</p>
+
+<p>Get in the awareness, let's say, Doug Schepers: Absolutely.</p>
+
+<p>A SIVA, do you have anything to add here.</p>
+
+<p>Siva: No, I don't have nothing much.</p>
+
+<p>Nicholas Doug Schepers: Okay, Nicholas, we're not hearing you.</p>
+
+<p>Doug Schepers: If you Doug Schepers: Okay and Brandon, do you have anything to add here.</p>
+
+<p>Doug Schepers: Hopefully slide Nicholas online.</p>
+
+<p>Brandon Liu: Nope.</p>
+
+<p>Doug Schepers: Okay, great.</p>
+
+<p>Brandon Liu: Um, Doug Schepers: Yeah, this is definitely a topic with internationalization touches on law and Doug Schepers: Ethics privacy, security, all of these things are multifaceted international issues, um, Doug Schepers: So, Thijs Brentjens (Geonovum, NL): Next question.</p>
+
+<p>Doug Schepers: We have here is web Mercator Doug Schepers: Is a defacto standard for the web.</p>
+
+<p>But as well and flaws, for example, like Pacific centered mapmaking.</p>
+
+<p>What's the right balance for web standards and making these choices for users and developers who wants to start off here.</p>
+
+<p>Doug Schepers: SIVA Tice Brandon Nicholas Brandon Liu: I'll start.</p>
+
+<p>Doug Schepers: There.</p>
+
+<p>Thank you.</p>
+
+<p>Brandon Liu: Um, yeah, I think maybe it's a little bit of a gut reaction, but I think to sort of Brandon Liu: Sort of.</p>
+
+<p>Sort of privilege web Mercator as Brandon Liu: You know, the first class frame of reference for web apps.</p>
+
+<p>I think that might get some pushback from parts of the world.</p>
+
+<p>Brandon Liu: Especially like, you know, just like because I think the truth is, for a lot of like my presentation layer is they will say, Brandon Liu: If you have features that cross the integrity and you need to pre process them so that you know like the those features they only go to, you know, from whatever it to 180 and from negative 182 whatever Brandon Liu: And I think that it's it's a little bit tough because I feel like the number of applications that are affected by this issue is large.</p>
+
+<p>Brandon Liu: And the solutions are really non trivial because the solutions is essentially like you might author your geo JSON to have coordinates that cross the entire meridian.</p>
+
+<p>Brandon Liu: But then in order to make it work correctly, you need to bring it alive right like turf JS that you know slices up your future is, for example, and that's already like approaching the level of developer sophistication that is that is not as simple as just putting some markup on a map.</p>
+
+<p>Brandon Liu: So I think the entire issue of like of map coordinates it it does demand and inherent sophistication like mathematical sophistication.</p>
+
+<p>Brandon Liu: That is might be a hard sell for this.</p>
+
+<p>Imagine the audience of, you know, every web developer in the world can offer you know spatial content.</p>
+
+<p>Brandon Liu: I don't have a good answer.</p>
+
+<p>It might just mean that we need to Brandon Liu: Like Brandon Liu: You know, suggest a set of libraries to do special operations in the browser.</p>
+
+<p>Brandon Liu: I'm not sure if anyone else has suggestions.</p>
+
+<p>Brandon Liu: On this issue of map projections and you know different centers of projections.</p>
+
+<p>Like if you wanted to have a Pacific center applicator maybe just adding that that other option might be a possible solution.</p>
+
+<p>I'm curious what other people have to say.</p>
+
+<p>Doug Schepers: I think mapping Mel tries to address this by actually having some projections built in.</p>
+
+<p>So that's, that's some ground for thought.</p>
+
+<p>A SIVA Tice anybody else.</p>
+
+<p>By the way, folks, I'm, I apologize.</p>
+
+<p>Nicholas is Doug Schepers: Apparently, having some sound, sound issues, unfortunately.</p>
+
+<p>So if he has an answer.</p>
+
+<p>He's just going to type it to me and and I'll read it out.</p>
+
+<p>But, I apologize.</p>
+
+<p>Nicholas that this isn't working for you.</p>
+
+<p>Doug Schepers: So I'm a tyce SIVA, do you have any thoughts about the the web.</p>
+
+<p>Web Mercator Thijs Brentjens (Geonovum, NL): Face here.</p>
+
+<p>I think I really like this topic as as a discussion topic because it's very hard one to crack this nut.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): And Thijs Brentjens (Geonovum, NL): What we see now is that that many people and Thijs Brentjens (Geonovum, NL): children growing up with web Mercator they think that dream that is Thijs Brentjens (Geonovum, NL): Maybe as large as Africa is is all content know so it might make the story if distort even the image we have of Thijs Brentjens (Geonovum, NL): Countries, or whatever.</p>
+
+<p>So it's, it's, I think it's a very important topic, and at the same point Justice Brendan pointed out, it's very hard to explain to others, not in the geospatial not working in as a geospatial with geospatial not knowledge projects into our heart and and Thijs Brentjens (Geonovum, NL): Especially if all kinds of libraries support mainly a web marketer, if that's the Go To projection Thijs Brentjens (Geonovum, NL): And you need to finish off a project, very quickly.</p>
+
+<p>That's what you do all kinds of resources are available in that projection only Thijs Brentjens (Geonovum, NL): So I think there's a major challenge and can we find a reasonable alternative for some use cases somehow and and are we able to get all kind of software working.</p>
+
+<p>That easy, that we can use these Thijs Brentjens (Geonovum, NL): Alternatives as easy as we cannot Thijs Brentjens (Geonovum, NL): I don't have a real answer to that, but I think it's a very important topic with more impact than just let's say a mathematical discussion.</p>
+
+<p>Doug Schepers: Yeah, absolutely.</p>
+
+<p>Definitely goes, I mean there's there's definitely goes to a social justice and international Doug Schepers: And inclusiveness issue so and if anything, hopefully what maps, our maps will do is bring people together around the world.</p>
+
+<p>Doug Schepers: So we have one more question.</p>
+
+<p>We prepared.</p>
+
+<p>Doug Schepers: I don't see anything from Nicholas here is SIVA, did you, you did you have something to say Seaver Siva: Nothing much.</p>
+
+<p>The only thing I would say about that is, like, like, you know, when we are looking at new standards, like, you know, we should also be thinking about other coordinate different systems, not just Siva: Like you know web Mercator like WGS at four or whatever, right, like, you know, which are good for the global data, but for local they are not very good.</p>
+
+<p>So I think it is just a mindful kind of a thing.</p>
+
+<p>Siva: Where you know we should just take care of Siva: Additional core network and systems into the account.</p>
+
+<p>Yeah.</p>
+
+<p>Doug Schepers: Yeah, I really liked the idea of Doug Schepers: Perhaps promoting some other non Mercator projection that that could maybe catching the public imagination.</p>
+
+<p>So it could be easy for people to not just easy for them to do but easy for it to be top of mind for them.</p>
+
+<p>Siva: Exactly that.</p>
+
+<p>That could be Doug Schepers: Finally, a the last of the prepared questions WPC is a leader and accessibility.</p>
+
+<p>Like, for example, you know, the Web Content Accessibility Guidelines and accessibility is now demanded by law in several countries, but is difficult and often not taken seriously.</p>
+
+<p>Doug Schepers: To apply these guidelines for mapping and geospatial data.</p>
+
+<p>Doug Schepers: I'll note that we have two upcoming panels later in this workshop on accessibility, but in an international context, what do you have any thoughts on how we can make this easier.</p>
+
+<p>Doug Schepers: See, we'll start with you.</p>
+
+<p>Siva: Um, I come from a desktop world you know where the standards are pretty like, you know, standard, I would say, in that sense, and we comply to a lot of Siva: The standards and we pay attention to it.</p>
+
+<p>We make sure every bit of UX.</p>
+
+<p>We have works well.</p>
+
+<p>But I can understand how this can be complicated for a browser or browser applications which has to deal with lots of generic you know controls and implementations are elements, basically.</p>
+
+<p>Yeah.</p>
+
+<p>Siva: That's all I have to say I don't have much expertise on the website.</p>
+
+<p>Doug Schepers: Okay.</p>
+
+<p>Nice.</p>
+
+<p>Siva: Well, Thijs Brentjens (Geonovum, NL): Me personally, I think this is a very important topic in you see the on WPC conferences that that the attention for accessibility is is they're always there and it's not in the geospatial work and then simply this, this idea that maps are visual and it's the only food you're Thijs Brentjens (Geonovum, NL): Just what we do.</p>
+
+<p>You can't make that accessible.</p>
+
+<p>So we just don't do it.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): And I think they're there are again we maybe we should share a more ideas of what we can do to make things accessible to make maps and the information on maps accessible and it requires is also to step or maybe it will step back and think of what maps are just as a representation Thijs Brentjens (Geonovum, NL): Right, some data.</p>
+
+<p>And there are other ways for that they may not be the ones you prefer as a geospatial developer or they may not be as user friendly as you might think.</p>
+
+<p>But I think we need to Thijs Brentjens (Geonovum, NL): discuss that more and also try to have a common libraries spend them pointed out in an earlier question common use libraries, we, we should try to improve accessibility in these libraries.</p>
+
+<p>Doug Schepers: Right and Thijs Brentjens (Geonovum, NL): That those are things I'm thinking of.</p>
+
+<p>But I'm for sure other experts in this in this workshop.</p>
+
+<p>Are they are there a lot of interesting things to say.</p>
+
+<p>Yeah.</p>
+
+<p>On this, I think, Thijs Brentjens (Geonovum, NL): But, but it also start with the ID breaking down the idea that we wish that maps are not easy to make accessible because I think there are options and Doug Schepers: Okay well we're going to explore some of those options.</p>
+
+<p>Later on in the Thijs Brentjens (Geonovum, NL): Worship of Doug Schepers: Brandon.</p>
+
+<p>Do you have any thoughts or Nicholas Doug Schepers: If not, we have another question.</p>
+
+<p>Oh, branded, did you have something to say.</p>
+
+<p>Doug Schepers: No.</p>
+
+<p>Okay.</p>
+
+<p>Brandon Liu: Thanks.</p>
+
+<p>Doug Schepers: Yeah, uh, Doug Schepers: So we have a couple of where we have actually several questions, we only have four minutes left.</p>
+
+<p>How our context menus handled internationally.</p>
+
+<p>And I think this came in, Brandon, while you were talking, so maybe do you want to handle that first Brandon Liu: context menus.</p>
+
+<p>It's a specific HTML.</p>
+
+<p>Doug Schepers: I'm already i don't i don't know i think i think it's really thinking about Doug Schepers: A. I'm not sure exactly Peter Rushforth: What I was thinking about the maps or, you know, we have a layer control and there's some, you know, you have to have internationalization considerations in providing a widget.</p>
+
+<p>So there's going to be, you know, like challenges involved there.</p>
+
+<p>So I just wanted to see what Doug Schepers: You mean like vertical versus horizontal Peter Doug Schepers: Yeah, okay.</p>
+
+<p>Brandon Liu: Right.</p>
+
+<p>I think the good solution is just to say anything.</p>
+
+<p>That Brandon Liu: Like, that's just an HTML sub DOM within that thing that's rendered Brandon Liu: I mean, that's the approach that I think leaflet takes is you can just put whatever you want inside of an element that's rendered on the DOM.</p>
+
+<p>And if that's if that's a spec.</p>
+
+<p>You know, I have no idea how hard that is to implement Brandon Liu: Because that seems like you could get into a lot of pathological cases.</p>
+
+<p>Brandon Liu: But it seems like that is the best internationalize that that that's the best internationalization solution because anything that's that is capable with regular HTML can just apply within that context menu.</p>
+
+<p>I mean that's ideal for my perspective.</p>
+
+<p>Doug Schepers: We actually have Nicholas said Doug Schepers: I'm going to read his require Doug Schepers: For question three about privacy.</p>
+
+<p>He says, Privacy is one of the is one of the most important component components of the system.</p>
+
+<p>Doug Schepers: He doesn't know what challenges exactly what it could bring as as as we apply as we actively apply such applications because laws differ from country to country.</p>
+
+<p>Another important thing, I think, is that this could be possible.</p>
+
+<p>Doug Schepers: Could possibly generate a large amount of data as it turns out, this data could be a matter of national security as well.</p>
+
+<p>And that actually leads into another question that we had Doug Schepers: Which was Doug Schepers: From Fred ash, if we have the time and a global challenge it if we're in a global challenge.</p>
+
+<p>How do data costs and performance get factored in SIVA, have you Doug Schepers: Looked into this.</p>
+
+<p>Have you thought about this.</p>
+
+<p>Siva: Um, yeah, I'm not that much on the content side of the things so I might not be able to answer this year.</p>
+
+<p>Doug Schepers: Okay, any of the other any of the rest of you have thoughts about that.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Thank you.</p>
+
+<p>So I don't understand fully understand the Thijs Brentjens (Geonovum, NL): Question or the Doug Schepers: Taste.</p>
+
+<p>I think it is.</p>
+
+<p>I think you kind of touched on in your presentation.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Data okay the data we Thijs Brentjens (Geonovum, NL): We may or burden.</p>
+
+<p>Doug Schepers: We only have we only have one minute left.</p>
+
+<p>So if you can just keep it very brief.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Okay.</p>
+
+<p>I think it's a challenge, but if you use, for example, smart cashing systems, you might be Thijs Brentjens (Geonovum, NL): Able to reduce load.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): Maybe on some other services as well.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): But in the end, adding all those kind of extra things will add Thijs Brentjens (Geonovum, NL): Asks something extra somewhere.</p>
+
+<p>Doug Schepers: Right.</p>
+
+<p>Thijs Brentjens (Geonovum, NL): I'd reprocessing vector tiles, either in, you know, it will it will Thijs Brentjens (Geonovum, NL): It will be at some cost.</p>
+
+<p>Doug Schepers: Y'all thank Doug Schepers: You so much.</p>
+
+<p>This has been great.</p>
+
+<p>Doug Schepers: Thank you all so much for participating in this panel.</p>
+
+<p>Sorry for the technical snafu is especially Nicholas.</p>
+
+<p>Thank you everybody for Doug Schepers: For attending or for washing afterwards, and I hope that all these conversations, come back around, please contact the individuals who participated in this if if you have thoughts, either in the workshop or afterwards.</p>
+
+<p>And thank you so much and have a wonderful day.</p>
+
+<p>Brian Kardell: Thank you.</p>
+
+<p>Brian Kardell: You too.</p>
+
+<p>Doug Schepers: Bye.</p>
+
+<p>Oh.</p>
+
+<p>Thanks, everybody.</p>
+
+<p>Amelia Bellamy-Royds: Thanks.</p>
+
+<p>Amelia Bellamy-Royds: Buddy.</p>
+
+<p>Okay, we're sliding into one of our breakout sessions.</p>
+
+<p>I'm Peter and get them.</p>
+
+<p>Do you want us set that up.</p>
+
+<p>I think we're just going to continue using the same Amelia Bellamy-Royds: Chat.</p>
+
+<p>So if you're interested in extending geo JSON for web applications.</p>
+
+<p>Please stay on.</p>
+
+<p>We've got a couple talks on that topic.</p>
+
+<p>Peter Rushforth: Over to you.</p>
+
+<p>Gethin Rees: Okay, thanks very much.</p>
+
+<p>Peter on.</p>
+
+<p>So welcome to the first breakout Peter Rushforth: Group.</p>
+
+<p>Gethin Rees: Group, I believe, of the Gethin Rees: Workshop.</p>
+
+<p>Gethin Rees: I'm a curator for digital mapping at the British Library and Gethin Rees: We've got a couple of presentations from people that work with cultural heritage detail now.</p>
+
+<p>Um, I believe that this is a valuable perspective for the workshop in a couple of ways.</p>
+
+<p>Um, first, um, it was really interesting to hear about Gethin Rees: people's thoughts about Mercator projection earlier, you know, I'm being a curator interest in history of cartography.</p>
+
+<p>Gethin Rees: You know, I believe the the is really interesting.</p>
+
+<p>How big could test that when Mercator projection is and and i think working with cartography can help us understand Gethin Rees: Projections going forward, but also second Gethin Rees: Is the East we encode your heritage, we use web maps a lot to present collections for discovery and interpretation now.</p>
+
+<p>Gethin Rees: Here we have developed to open standards and within a relatively small community.</p>
+
+<p>That's why it's a good data.</p>
+
+<p>Amen.</p>
+
+<p>And so we're going to just talk about a couple of the Gethin Rees: Couple of on the extensions to Geo JSON that we've been working within that community.</p>
+
+<p>And we're not suggesting that these should be added to the map ML spank Gethin Rees: But we are interested to see here by views from a broader community here related to these developments and see what the reaction of a wider audience will be on Gethin Rees: Investment is a breakout group.</p>
+
+<p>So these are going to be quite short presentations and afterwards and we're hoping to always set it, just in general about the relationship between a map ML and geo JSON and we'll be taking suppose if the organizers can Gethin Rees: Run this by think in the initial instance will be taking questions and the guitar channel.</p>
+
+<p>Um, I think there's Gethin Rees: You know the number of participants is quite manageable.</p>
+
+<p>So if artists is meant to be a breakout group.</p>
+
+<p>So if it's okay with the organizers of participants did want to Gethin Rees: Mention the guitar channel that they had something to see perhaps you could unmute themselves and speak as well.</p>
+
+<p>Is that is that is that okay Amelia Bellamy-Royds: That makes sense.</p>
+
+<p>I mean, we've got 16 people on the line right now so we can probably just open this up as a chat.</p>
+
+<p>Amelia Bellamy-Royds: Though okay good patients, of course, to start it off.</p>
+
+<p>Gethin Rees: Yeah, that Gethin Rees: Says, um, yeah.</p>
+
+<p>So this is Gethin Rees: A couple of short presentations on first.</p>
+
+<p>I'm in cultural heritage.</p>
+
+<p>We deal with cultural information and certainly wants uncertainty and really the humanity.</p>
+
+<p>Gethin Rees: Of these data not peripheral concerns represented representations of place can be at odds with positive positive is systems Y coordinates.</p>
+
+<p>And so that's what a lot of work to focus on data modeling easy if Gethin Rees: The semantic structure here offers flexibility and complexity and the ability to monitor model flexibility and complexity on this isn't without drawbacks either so know Brian on Gethin Rees: harberger who's a full stack software developer at the Walter J on S G Center for Digital Humanities.</p>
+
+<p>It simply these University on it's going to talk about this topic on and his work on expressing geo Jason is as Gethin Rees: Detail 1.1.</p>
+
+<p>Thanks, Brian.</p>
+
+<p>Bryan Haberberger: Thanks, Catherine thanks for the Intro Hi everybody, I'm going to stop sharing my video and share my screen and hope that kind of helps keep things smooth.</p>
+
+<p>So let's get going here.</p>
+
+<p>Bryan Haberberger: Can you all see my screen.</p>
+
+<p>Doug Schepers: Yes.</p>
+
+<p>Great.</p>
+
+<p>Bryan Haberberger: So again, my name is Brian Haber burger, along with being a full stack developer at the Walter jr SJ Center for Digital Humanities, I am also the triple if maps technical specification group chair or one of multiple and what that group is doing is sort of working within Bryan Haberberger: The framework, they have set up, which is very based on JSON and JSON LD and allowing away for standardized coordinate assertions to sort of enter the fray.</p>
+
+<p>Bryan Haberberger: So why link data.</p>
+
+<p>I think getting gave a good intro about it.</p>
+
+<p>But essentially, the semantics allow for interrelated data sets on the web.</p>
+
+<p>So if I have a data set that describes people, places and things and you do too.</p>
+
+<p>Bryan Haberberger: I would like to be able to pull some of your vocabulary and direct meeting and use it to express that and my data set and in that way we can sort of enhance each other's data sets and encourage each other for the the welcome coded data for the future in cycle.</p>
+
+<p>Bryan Haberberger: And so there's linked data link open data linked open usable data.</p>
+
+<p>It's all essentially the same.</p>
+
+<p>But in settings where the sources are open sources, that's when we say linked open data and usable is always just a hopeful.</p>
+
+<p>Bryan Haberberger: But we like to use that word.</p>
+
+<p>Bryan Haberberger: So how does this kak with geo JSON LD. We're not going to talk about the geo JSON LD spec directly Bryan Haberberger: Instead, what I'm going to talk about is the link data vocabulary and context that have been created for it.</p>
+
+<p>Bryan Haberberger: JSON LD is a W three specification and like we just said it recently had an update as you can figure out geo JSON is JSON and so there has been work to make a geo JSON LD context that's compatible with the JSON LD one point O version.</p>
+
+<p>Bryan Haberberger: That's sort of what allowed geo JSON data notes to be a part of the link data system going on and all the things we use Bryan Haberberger: So, one important thing to note about geo JSON LD is that nested geo JSON coordinate arrays are incompatible.</p>
+
+<p>The model.</p>
+
+<p>I'll show you exactly what that means and what that means for functionality here in a second.</p>
+
+<p>Bryan Haberberger: But sort of at a top level concept.</p>
+
+<p>What this means is geo JSON LD is unable to express political shapes.</p>
+
+<p>Bryan Haberberger: Not that it can't but rather that when it does that.</p>
+
+<p>It's not able to process it as an LD.</p>
+
+<p>And so applications that are Bryan Haberberger: Specifically, trying to be LD ignore what they can't process.</p>
+
+<p>So that would mean all of your polygons would be ignored, which is a massive problem for geography.</p>
+
+<p>Yeah, I'd assume you all like to be able to use polygons.</p>
+
+<p>Bryan Haberberger: So the LD 1.1 release.</p>
+
+<p>The most important thing that came about, about it was that it allowed for list of lists structures so that things can actually be rendered.</p>
+
+<p>So I'll just give you a real small demo here real quick.</p>
+
+<p>Hopefully if the Internet.</p>
+
+<p>Bryan Haberberger: Will allow it.</p>
+
+<p>Bryan Haberberger: So here's the JSON LD playground and if I come in with that data, you'll see right away.</p>
+
+<p>It tells me Bryan Haberberger: This is not a valid syntax.</p>
+
+<p>I can't do lists of lists.</p>
+
+<p>What that means, sort of exactly is laid out a little better.</p>
+
+<p>Bryan Haberberger: In the spec to tell you why they chose not to do that.</p>
+
+<p>Bryan Haberberger: But as people started specifically to work with geo JSON and geo JSON LD, it became clear that the list of lists structure was going to be necessary for data.</p>
+
+<p>Bryan Haberberger: And so that's when the LD 1.1 spec came out and just to show you that I'm not kidding.</p>
+
+<p>Bryan Haberberger: It now specifically states that what's of lists are fully supported.</p>
+
+<p>So what that means is we would hope if I came into the LD 1.1 playground, that if I put that data in Bryan Haberberger: It was successfully process, which it does so just a super fast overview of what link data does.</p>
+
+<p>You can see in the geo JSON use terms like properties geometry type and coordinates.</p>
+
+<p>Bryan Haberberger: And those are all directly mapped to a vocabulary or specific definition that that allows the keys to understand exactly what they are.</p>
+
+<p>So you can see by geometry.</p>
+
+<p>I mean, would you Jason says about geometry.</p>
+
+<p>Bryan Haberberger: And so on and so forth.</p>
+
+<p>And you can see here how successfully can do.</p>
+
+<p>I'm a list I contain a list that has a list and that can go on forever, but it's obvious that that that that is is allowed.</p>
+
+<p>Now, Bryan Haberberger: So that's mainly what I wanted to show you here.</p>
+
+<p>And then of course I'm sure.</p>
+
+<p>You want to see it for all Bryan Haberberger: So if we go to the geo JSON validator with that object.</p>
+
+<p>We just had and paste it in and test it, you'll see that it draws my shape and it's my very crude a bounding area for the Eiffel Tower.</p>
+
+<p>Bryan Haberberger: So we know it's geo JSON compatible and now we know it's only 1.1 compatible.</p>
+
+<p>So we sort of have a way to properly describe these data sets, using link data.</p>
+
+<p>Bryan Haberberger: So now I'm going to talk about another Bryan Haberberger: Another W three specification called Web annotation and specifically how that connects with web entities.</p>
+
+<p>So as I talked about earlier.</p>
+
+<p>I work in a Digital Humanities Center, and we are more of a dev shop in the content shop.</p>
+
+<p>We actually don't hold a lot of content.</p>
+
+<p>Bryan Haberberger: So what my use cases is I need to be able to add descriptive information to content that's own somewhere else and still Bryan Haberberger: Be able to use the data connected with that data, know that I'm targeting Bryan Haberberger: Trying not to go too much into it.</p>
+
+<p>I think it's a lot easier if I just show sort of a pipeline for for that looks like.</p>
+
+<p>Bryan Haberberger: And sorry for clicking.</p>
+
+<p>So let's say I know a repository, a portal as we've talked about earlier.</p>
+
+<p>Bryan Haberberger: That I can go to to look for resources Stanford has one of those.</p>
+
+<p>And it says that its resources are triple if so we'll go to something recent they hadn't Black.</p>
+
+<p>Black Lives Matter memorial.</p>
+
+<p>And if I go into it.</p>
+
+<p>Bryan Haberberger: Internet will load with me.</p>
+
+<p>Bryan Haberberger: You'll see that loads up here and it has its the images that go along with it and probably other information about it.</p>
+
+<p>Bryan Haberberger: I can specifically just asked for the data object that's in the background of this Bryan Haberberger: Do Bryan Haberberger: And I just happened to know to use this because I work with these guys.</p>
+
+<p>So I know how their portal works.</p>
+
+<p>Bryan Haberberger: You can see the object in the background.</p>
+
+<p>This is very triple if I'm not going to go into it too much, but they have context and everything to sort of describe their keys in terms as well.</p>
+
+<p>Bryan Haberberger: So if I bring this manifest and I say, I would like to say I know where that manifest is at Bryan Haberberger: Could bring it in here and say that's the URL I want he is.</p>
+
+<p>There's the object me know that it is.</p>
+
+<p>And I know it's somewhere over in California.</p>
+
+<p>So I'm just gonna kinda Yes, sure.</p>
+
+<p>Probably not there.</p>
+
+<p>But let's go for it.</p>
+
+<p>Bryan Haberberger: So what that does is generate a web annotation that connects that resource to the coordinate properties.</p>
+
+<p>And you can see here the body of the web annotation is geo JSON.</p>
+
+<p>And so these contexts combined mean this works as a 1.1 web annotation and in particular because of some dumb luck.</p>
+
+<p>Bryan Haberberger: This context actually has at version 1.1 which means process this as LD 1.1 and so the geo JSON.</p>
+
+<p>Bryan Haberberger: Context, which does not contain that sort of gets it for free.</p>
+
+<p>Just by properties of how combining contexts work stuff I go ahead and create that annotation.</p>
+
+<p>Bryan Haberberger: Great.</p>
+
+<p>It says go see it and leaflet.</p>
+
+<p>Bryan Haberberger: So I'll get to what that is in a second.</p>
+
+<p>So you can see there how it just provided a target made JSON body for it and made them relate to each other.</p>
+
+<p>Bryan Haberberger: So now what I can do is ask data sets that I know we're doing this to just supply me with all of those coordinate assertions they've made.</p>
+
+<p>Bryan Haberberger: And when I do, they'll show them here on a map for me.</p>
+
+<p>Bryan Haberberger: So these are just those web annotations that I pulled out.</p>
+
+<p>And here you can see I never supplied a label.</p>
+
+<p>I never supplied a description, but the target data had it.</p>
+
+<p>And so I can just resolve that target lifetime.</p>
+
+<p>Bryan Haberberger: And show data about that target lifetime without ever manipulating that data directly.</p>
+
+<p>So if anybody changes the label.</p>
+
+<p>If I refresh this page.</p>
+
+<p>We're going to see that label.</p>
+
+<p>Bryan Haberberger: And that's sort of how we realize our pipeline.</p>
+
+<p>We don't have the content, but other people don't have the developers or the annotation systems to describe their content.</p>
+
+<p>How can we all still, you know, work in that in that process.</p>
+
+<p>Bryan Haberberger: And so here's what I just showed you this is this is what what it looks like.</p>
+
+<p>And you can see here instead of using the Bryan Haberberger: Triple if presentation context.</p>
+
+<p>I use the web annotation context, the triple if context contains the web annotation context so that I don't have to include it as a third one.</p>
+
+<p>Bryan Haberberger: I'll show you just super fast in the in a link data context how you might go about doing that.</p>
+
+<p>Bryan Haberberger: Oh, that is the wrong one.</p>
+
+<p>I'm sorry, my fault.</p>
+
+<p>Bryan Haberberger: To see here they pulled in description for an annotation collection annotation page in an annotation and say I use their context.</p>
+
+<p>But as we just described about when the new internationalization problem triple if really deals with international Bryan Haberberger: International labels and so they needed to define a way to say I can provide multiple labels have a certain language.</p>
+
+<p>Bryan Haberberger: More just more descriptive then just the label that that web the annotation wants to use.</p>
+
+<p>And so how that gets realized Bryan Haberberger: One of the things triple if maps community group is working on is providing recipes Bryan Haberberger: For making these kinds of assertions and so you'll see here how we actually have to make the label.</p>
+
+<p>It's not just label colon string.</p>
+
+<p>It's actually an object containing arrays of information attached to language.</p>
+
+<p>Bryan Haberberger: Which is what that led contexts will need to do so that I know as the developer now to make my labels like this so that the viewers know to grab them and show them based on the language of their in Bryan Haberberger: It's just sort of an example of how linked data tries to connect that entire pipeline and then down here.</p>
+
+<p>Further, like we've shown you before.</p>
+
+<p>Here's what it looks like.</p>
+
+<p>Bryan Haberberger: The Triple F. Bryan Haberberger: API uses annotations and inside those annotations are web annotations.</p>
+
+<p>So what this is right here is an actual web annotation, with its own coordinates.</p>
+
+<p>Bryan Haberberger: That are outlining city to sort of fuzzy locate what resources being described here.</p>
+
+<p>And that was sort of how we realized that pipeline.</p>
+
+<p>So these recipes are up and and something you can go look at I've got notes included links included in my notes and with the slides, when we get there.</p>
+
+<p>Right.</p>
+
+<p>Gethin Rees: No quarter past so could Bryan Haberberger: Wrap up.</p>
+
+<p>Yes.</p>
+
+<p>So that was actually the end of it.</p>
+
+<p>So now the I do I try.</p>
+
+<p>I'm trying to get them.</p>
+
+<p>So now the future of geo JSON.</p>
+
+<p>Bryan Haberberger: Triple F community group is working to take that specification and get it somewhere where it can be maintained and we can add things like that version 1.1 property to the context to make this 1.1 Bryan Haberberger: Because we think God, Son will continue to be using disorders like standards being promoted in this workshop and it should continue to have definition for it on the web.</p>
+
+<p>Bryan Haberberger: And that's sort of our charge right now.</p>
+
+<p>And I think the next piece is what Carl.</p>
+
+<p>The next speaker is going to talk about is extending it even further to maybe include other dimensions.</p>
+
+<p>Bryan Haberberger: And then hopefully, being able to take the sort of format here is JSON and realize it as a markup language in ways to connect with like webinar.</p>
+
+<p>Bryan Haberberger: So that's it.</p>
+
+<p>Thank you.</p>
+
+<p>Gethin Rees: Okay.</p>
+
+<p>Gethin Rees: Thanks.</p>
+
+<p>Thanks, Brian.</p>
+
+<p>Um, that's Gethin Rees: A great explanation of how on we can use these web annotations to make assertions about Gethin Rees: About documents on the web on and those can take to use the predicate, those can take a variety of forms.</p>
+
+<p>So for example, if we're talking about a place Gethin Rees: We can say this is either this is within on the edge of outside that place and attached to your JSON LD. In order to do that.</p>
+
+<p>So the next speaker call grew sooner.</p>
+
+<p>Gethin Rees: Is going to talk about bringing Gethin Rees: Time into Gog so on.</p>
+
+<p>Gethin Rees: Gog some see adding time to do Jason his technical director of the world historical gathered here and he's based in the University of Pittsburgh and Gethin Rees: we encode in culture heritage.</p>
+
+<p>We've had a lot of success with sharing data using standards and this our God, some tea standard is certainly something we're on on using it, the British Library and I'm trying to push it, the British Library.</p>
+
+<p>So Karl Grossner: Okay.</p>
+
+<p>Can y'all hear me.</p>
+
+<p>Bryan Haberberger: Yeah, I can hear you.</p>
+
+<p>Good.</p>
+
+<p>Karl Grossner: Thanks.</p>
+
+<p>Karl Grossner: Make a comment first before I share my screen and slides.</p>
+
+<p>Karl Grossner: I wasn't until this session.</p>
+
+<p>Karl Grossner: I haven't been aware of the map markup language and the extent as an extension HTML effort, and I'm not really sure how how the new technology would handle vector data and my where I'm coming from is entirely a Karl Grossner: HTML and JavaScript world of making with maps which I've been doing for 15 years in the context of Karl Grossner: Historical research and so on.</p>
+
+<p>So let me just race through these slides are so nice.</p>
+
+<p>Karl Grossner: And Karl Grossner: So I'm assuming that everyone here is familiar with geo JSON.</p>
+
+<p>It's really quite a standard and the universe of in the admittedly messy universe of JavaScript mapping libraries that render maps to web screens.</p>
+
+<p>Karl Grossner: It's in very common use, it's more or less a de facto standard.</p>
+
+<p>In fact, from my perspective, for making web maps for the data that Karl Grossner: Web maps render Karl Grossner: Geo JSON looks something like this.</p>
+
+<p>At its core, it's quite simple.</p>
+
+<p>You have feature collections consists of features and features can have properties which can be anything at all.</p>
+
+<p>Say, and and they can have geometry.</p>
+
+<p>Karl Grossner: Some conditions that I encounter routinely and people in the world of cultural heritage and historical research.</p>
+
+<p>Karl Grossner: Much more generally that spans many disciplines.</p>
+
+<p>Karl Grossner: And even modern applications, admittedly, I'm much more focused on historical application.</p>
+
+<p>Karl Grossner: That has some features for some features time is absolutely an essential aspect of them that it's not the answer to wear or is not some location, but it's a location that time.</p>
+
+<p>And this is an example in a in a little Karl Grossner: Pilot demo thing I built a while back, indicating Poland.</p>
+
+<p>Karl Grossner: As a very, very dynamic place even disappeared for Karl Grossner: Other cases that I encounter would include things like this.</p>
+
+<p>This is a Karl Grossner: Map of the commodity flows between Venice and many Forks over a period of several hundred years rendered Karl Grossner: In a map the geometry of it rendered in the map and the temporal attributes rendered.</p>
+
+<p>And then in this case in the histogram.</p>
+
+<p>Karl Grossner: Some other sorts of cases that Karl Grossner: Me and I and people like me encounter routinely would be something like this, a trajectory of is this is a particular journey taken sometime during the fourth century.</p>
+
+<p>Karl Grossner: And Karl Grossner: And in this case, and the temperature booths are Karl Grossner: A great interest both overall for the fact that occurred within some hundred years span.</p>
+
+<p>Karl Grossner: But also each of those points follows each other in a sequence all of these cases are not handled at all by geo JSON in any standard way people make, do they use the properties element to Karl Grossner: To put in attributes that they want to render dynamically, and then they have JavaScript that interprets those properties and those things in the browser.</p>
+
+<p>Karl Grossner: My proposal this.</p>
+
+<p>Now, a few years old this to include a standardized when in geo JSON, they could appear in a couple of different locations.</p>
+
+<p>It can be used to temporarily scope, a single feature.</p>
+
+<p>The way you see it here, which, for example, might apply to a single feature for Karl Grossner: For well for anything really.</p>
+
+<p>Karl Grossner: A more complex case.</p>
+
+<p>In the case of Poland, for example, as you might have a single feature and this geometry is a geometry collection.</p>
+
+<p>Karl Grossner: Each geometry of which has its own when its own temporal scoping.</p>
+
+<p>This is a relatively simple thing to do and and it allows for doing some odd ball is sorts of things.</p>
+
+<p>I think like journeys and flows and so forth.</p>
+
+<p>Karl Grossner: And the question then becomes, what should be the structure of when the idea is that there be some standard structure for a win element wherever it appears in the geo JSON feature.</p>
+
+<p>Karl Grossner: That software that supports geo JSON T would know about with know where to look for it and know and I have some idea what to do with it.</p>
+
+<p>Karl Grossner: At this point I'm going to point you to some links that appear in the last slide of Karl Grossner: Of this and are available to you and display them also here.</p>
+
+<p>Karl Grossner: A when object can include any number of time spans.</p>
+
+<p>So that might be interrupted time spans that are relevant to a particular feature could be.</p>
+
+<p>It can include named periods.</p>
+
+<p>There are Karl Grossner: Time period gadgeteers in the world at least a couple in broad us within the domain.</p>
+
+<p>Amen.</p>
+
+<p>Karl Grossner: And sometimes that's all we can say Karl Grossner: About time and these other elements duration follows, which is intended to handle sequences and so Karl Grossner: This is a bonus line.</p>
+
+<p>It doesn't appear in the slide deck that's been uploaded I'm adding it because Karl Grossner: The reason for my presentation is that Geffen's group at the British Library is and get them, particularly as instigated an effort called Web maps t Karl Grossner: That attempts that is attempting to develop collaboratively.</p>
+
+<p>Karl Grossner: Software modules as a open software modules for maps and timelines, taken together.</p>
+
+<p>Because for us.</p>
+
+<p>And as Kevin mentioned in his library contexts and collections.</p>
+
+<p>This is a very common use case.</p>
+
+<p>Karl Grossner: Geographic data is dynamic and this needs to be rendered in various ways it could be histograms and click the stepped Karl Grossner: points along the timeline that sort of thing.</p>
+
+<p>And there are many other things that really people will undertake that so web maps t is intended to work towards a set of Karl Grossner: modules that developers have web maps in this realm can just plug in and customize to suit their particular situation.</p>
+
+<p>Karl Grossner: The goal of my talk is simply to raise the question of time.</p>
+
+<p>As I said at the beginning, I don't really understand how Karl Grossner: Vector data would be handled with the map element in HTML.</p>
+
+<p>Karl Grossner: And this is very much about data models.</p>
+
+<p>So this is all happening before it arrives at the browser.</p>
+
+<p>I think I don't know.</p>
+
+<p>I'm here to learn what Karl Grossner: What is intended by this group.</p>
+
+<p>And just to raise the point that time matters an awful lot, and not only in historical cases.</p>
+
+<p>Karl Grossner: But in modern cases as well as all sorts of trajectory data, all sorts of modern know relatively modern data about crime mentality, etc.</p>
+
+<p>Karl Grossner: All of those features can have very important temple attributes and standardizing a representation in the most common format currently in use geo JSON seems to make sense to me.</p>
+
+<p>Karl Grossner: That's all I've got.</p>
+
+<p>Okay.</p>
+
+<p>Amelia Bellamy-Royds: Oh, thank you very much.</p>
+
+<p>Curl.</p>
+
+<p>I'm going to jump in.</p>
+
+<p>Amelia Bellamy-Royds: Just on the point sort of your question about math ML math and Mel's vector model currently is almost directly compatible with geo JSON is just converted into a market form.</p>
+
+<p>Amelia Bellamy-Royds: Peter can jump in with more specific questions, but it's designed to be as directly compatible as possible.</p>
+
+<p>Karl Grossner: Well, I look forward to investigating that Peter Rushforth: Yeah.</p>
+
+<p>Karl Grossner: And then, and then any link directly to a spec or graphs or not one that Bryan Haberberger: Did a demo for me.</p>
+
+<p>Peter Rushforth: Okay, great.</p>
+
+<p>Well, I'm gonna give part two of the presentation that I didn't have time for today, tomorrow as part of my breakout Peter Rushforth: Following your guys example I'm I'm I'm Peter Rushforth: Using the time most judiciously to communicate as as efficiently as I can.</p>
+
+<p>So I'll do Peter Rushforth: I'll give that presentation and then we can do it like a demo or whatever.</p>
+
+<p>Once I've done that presentation demos almost not necessary, but always nice to click on stuff and but thank you very much time is it time is a challenge and Peter Rushforth: You know we are collecting Amelia has been leading the charge on collecting use cases for maps on the web.</p>
+
+<p>Peter Rushforth: That, you know, we're going to reconcile the maps for HTML specifications with that use cases.</p>
+
+<p>Peter Rushforth: And in an iterative fashion.</p>
+
+<p>So, I mean, part of the challenges to what's in what's out and what should be handled by the browser in theory you know i know Brian and Simon or, or, you know, like, whoa, keep the Peter Rushforth: Keep the request down to the bare minimum, but Peter Rushforth: What you know and we we live in that spirit as well.</p>
+
+<p>So, you know, what is the minimum viable product that we can ask that serves you know the most number of people.</p>
+
+<p>Peter Rushforth: And I hate to call it the least common denominator, but that's effectively what it is right and that's not a bad thing when you're thinking about math when you're learning, learning math when you're a kid, right when you Peter Rushforth: When you bring things to the least lowest common denominator, you're able to integrate them them right you're able to add them up.</p>
+
+<p>So hopefully the analogy works that way.</p>
+
+<p>So no great presentation.</p>
+
+<p>I don't want to steal your time so cool.</p>
+
+<p>Bryan Haberberger: going good.</p>
+
+<p>I just, it's most interesting to me because it's all I have is the features.</p>
+
+<p>How do I Bryan Haberberger: reconcile that with I just had the features I want to give to you a map and that's that's literally it.</p>
+
+<p>How do I just retain those features and make it so that it works within that markup language.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Well, there is a feature element that we're proposing that basically is based on geo JSON, you know, I mean, the thing is that geo JSON is strictly tied to W Gs.</p>
+
+<p>A for it doesn't have any notion of scale and there are no other Peter Rushforth: There's no styling of that stuff.</p>
+
+<p>It's all up to the browser.</p>
+
+<p>So this is like JavaScript and CSS or CSS and JavaScript on a debate.</p>
+
+<p>Peter Rushforth: Right.</p>
+
+<p>Yeah.</p>
+
+<p>So I mean, what we would like to do for feature is give it a home in HTML somehow right so that one con geometry context is the map and the and the textual content is the Peter Rushforth: Is a 2D browsing contest or like a regular browsing context, I guess.</p>
+
+<p>So somehow work on work that out but anyhow.</p>
+
+<p>Peter Rushforth: I will talk more about that tomorrow.</p>
+
+<p>Karl Grossner: Oh of course libraries like leaflet take a data stream like some geo JSON data and generate a ton of stuff elements in the DOM that are entirely proprietary Karl Grossner: For each one Karl Grossner: So ultimately, they live as elements and Karl Grossner: All of these data out there.</p>
+
+<p>Peter Rushforth: But yeah, and the link data idea like so you know link data in the DOM is possible by, I suppose, like data crawlers in the sense.</p>
+
+<p>So giving features a home in the DOM could be part and parcel of making Peter Rushforth: You know the geo web probable Peter Rushforth: And more importantly index level.</p>
+
+<p>So, yeah.</p>
+
+<p>Bryan Haberberger: Yeah, and like it's the only difference between the geo JSON and geo JSON LD is that context.</p>
+
+<p>So sort of at a really simple level, all I have to be able to do supply context.</p>
+
+<p>Bryan Haberberger: You could do with a simple attribute Karl Grossner: One thing, as I mentioned, real quick, is that geo JSON t Karl Grossner: Is not LD compatible, such as it is this graph spec that's we're playing with the British Library and elsewhere.</p>
+
+<p>There's not LD compatible it Karl Grossner: Predates really an effort to do that, but it has formed the basis for another format link for which was going a lot.</p>
+
+<p>And my last slide, which is linked places format.</p>
+
+<p>Karl Grossner: Which is being used and world historical gadgets here which is LB compatible and is valid geo JSON, it's valid JSON LD 1.1 and Karl Grossner: But as much more elaborate.</p>
+
+<p>It's designed specifically as a Karl Grossner: Integration or contribution format for a couple of guys are two platforms.</p>
+
+<p>Karl Grossner: So God is it very much should become Judaism LGBT Bryan Haberberger: Yes.</p>
+
+<p>And just to give you a really easy idea of what that means the context for everything else already exists, all it has to do is add Bryan Haberberger: Some vocabulary and some constraints around when to say, when is a JSON object, not an array and I expected it to contain this or that and by when I mean K geographer.org slash when Bryan Haberberger: You know, and that's it.</p>
+
+<p>It would just be literally connecting up that new element that he's trying to introduce and of course some work with the geo JSON standard people period because at some point it would have to be sort of a, an approved extension kind of thing.</p>
+
+<p>Karl Grossner: Yeah, I Karl Grossner: Will see that is way out.</p>
+
+<p>Karl Grossner: It is Bryan Haberberger: It is Karl Grossner: For a long time, and proposing having time to do this one for a very long time and I just Karl Grossner: That group is not especially been responsive to the ideas or just throwing something out there and if I'm using it in some real applications and demonstrating and talking about it and Karl Grossner: And inviting others to collaborate and making it an actual spec and Gavin is very much in that category.</p>
+
+<p>He saw it and that it suits.</p>
+
+<p>What he has in mind that would serve Karl Grossner: The Library and Museum communities and cultural heritage and so we're just moving forward and inviting people to help make it a true spec from what it is.</p>
+
+<p>Bryan Haberberger: And so people like me.</p>
+
+<p>The chair of a trip life community group, I take that as a call and to know now I should take this to the group when I when we have our next meeting to say hey guys, I know we're a year out from thinking about time.</p>
+
+<p>But look, there's already Bryan Haberberger: A good JSON implementation for it.</p>
+
+<p>Is there anything we can use.</p>
+
+<p>Should we just use this and asked, Carl, if we can move it, like, what, what do we do Karl Grossner: I'll take Peters point very seriously the minimum viable product least common denominator.</p>
+
+<p>This is in my encounters with the world of standards development.</p>
+
+<p>This is always front and center.</p>
+
+<p>Karl Grossner: And it's a frustration for people in my position because I'm encountering just all sorts of use cases.</p>
+
+<p>And I want to honor all of them.</p>
+
+<p>Karl Grossner: But, but there is.</p>
+
+<p>I think there's a simple least common denominator for saying something about time in geo JSON and one of the authors of geo JSON has has said very explicitly yes there's such a thing as an event like feature.</p>
+
+<p>Karl Grossner: But the the task.</p>
+
+<p>It just seems overwhelming and coming as I think from the world of geography academic geography NGOs is the task of merging or Karl Grossner: Space and time in models and then computation has been an enormous challenge.</p>
+
+<p>And by and large is just simply ignored or in terms of standardization so Karl Grossner: Yeah, it's not an easy thing at all to do or to think about that.</p>
+
+<p>Karl Grossner: Maybe we can make some progress.</p>
+
+<p>Gethin Rees: I have a key.</p>
+
+<p>I Doug Schepers: I. Oh, sorry.</p>
+
+<p>Gethin Rees: Go ahead.</p>
+
+<p>No, exactly.</p>
+
+<p>I was going to just say, does anyone else have questions and one on the mute themselves so perfect.</p>
+
+<p>Doug Schepers: I have a couple of thoughts.</p>
+
+<p>Doug Schepers: The first is that the minimum viable product.</p>
+
+<p>The viable part is the important bit in there.</p>
+
+<p>Doug Schepers: It's only viable if it allows for extensions.</p>
+
+<p>If it allows to be it to be grown into its natural set of use cases.</p>
+
+<p>Doug Schepers: Apartments, even if not everything support at first there needs to be a really good use case and requirements discovery phase in which things are not excluded from being future enhancements of the thing.</p>
+
+<p>Doug Schepers: So that's one thing that the MVP needs to be viable.</p>
+
+<p>It can't just be a a bolted on solution.</p>
+
+<p>Peter Rushforth: Yes, I think you need to have a story.</p>
+
+<p>You need to have a coherent story for for extension right so Peter Rushforth: In my world that I think of that as progressive enhancement.</p>
+
+<p>So what is the what is the core Peter Rushforth: behavior that you want to have, and how can you move forward from there.</p>
+
+<p>How can you put those times sliders that that make the animate the map and so on.</p>
+
+<p>And and and that's what i think that's that's how I think of it anyway, is through progressive enhancement and Doug Schepers: You actually Doug Schepers: Had.</p>
+
+<p>We didn't rehearse this folks, that's a natural segue into my next point, which is animation.</p>
+
+<p>Doug Schepers: There are two ways that time is dealt with in the web right now.</p>
+
+<p>Doug Schepers: Well, two main ways I'm thinking like an eight, the HTML context.</p>
+
+<p>The first is timed media things like video and the second is animation, as in CSS animation SVG animation or JavaScript animation in general and Doug Schepers: You know, Doug Schepers: Carl if if you were to take the data from that Poland right and timestamp, the different states right i mean by states.</p>
+
+<p>I mean, the different Doug Schepers: Geometric bounds.</p>
+
+<p>Doug Schepers: You could animate.</p>
+
+<p>You could use CSS, for example, to tweak or SVG to to tween between different states different expansions and I think Doug Schepers: I think that animation in that sense, really needs to be considered.</p>
+
+<p>What are the native animation capabilities of the web.</p>
+
+<p>And how is that going to feed into Doug Schepers: The the the geometric expressions.</p>
+
+<p>So I'd love to see for example like Poland go from small to larger and larger and think again to nothing and then bounce back into existence.</p>
+
+<p>Over time, lots of other animations of like movements of language groups through through Europe use of Doug Schepers: You know, changes in borders in general political movements animations of Doug Schepers: trade routes, etc.</p>
+
+<p>Doug Schepers: animations of slave routes.</p>
+
+<p>I saw a really compelling one recently of, you know, where the slave started and where they ended up in you know way they started in Africa and where they ended up in the Americas and it was Doug Schepers: In this in the in the pace at which it increased until it started slowing down and died off.</p>
+
+<p>Doug Schepers: You know, that was emotionally culturally relevant a Doug Schepers: Piece of thing and that's you can't do that if you don't consider time as a natural part of geometry.</p>
+
+<p>I mean, for, for that matter, the world spins.</p>
+
+<p>Right.</p>
+
+<p>Like what, like when, when is something open as well, like a Doug Schepers: Win is a business open Doug Schepers: Okay, I know where the business is when is the business right Doug Schepers: When did it close down this also ties into the time aspect that Brandon talked about earlier.</p>
+
+<p>He has way he didn't mention it much, but he has this project of, you know, at dot NYC which looks at historical Doug Schepers: Things about the Doug Schepers: New York City again temporal right when did any given event occur in a timeline at a particular location.</p>
+
+<p>I don't see how we can really think that we're representing geospatial information if we're not if it's not also temporal so Carl.</p>
+
+<p>Thank you.</p>
+
+<p>That's Karl Grossner: The money line.</p>
+
+<p>Thank you.</p>
+
+<p>Doug Schepers: You're welcome at Karl Grossner: All costs or Doug Schepers: You can pay pal me the the the agreed upon them out later.</p>
+
+<p>Karl Grossner: That the grid.</p>
+
+<p>All of the historical cases, you mentioned are quite routine cases that are being done right now routinely in academic research applications and so forth.</p>
+
+<p>But they're being done with Karl Grossner: unique ways of expressing time within properties in geo JSON and JavaScript.</p>
+
+<p>So way they're being done so.</p>
+
+<p>Karl Grossner: We're because we're interested in the link beta world and being able to share things.</p>
+
+<p>Yeah.</p>
+
+<p>And we have the sort of standard way of dealing with space.</p>
+
+<p>Karl Grossner: The real impetus to include time in that standardization to facilitate integration via data so so Karl Grossner: I know that there are myriad modern examples that you mentioned summer stores opening and so forth.</p>
+
+<p>That's not my universe so I you know I be bringing these historical cases to the table, but Karl Grossner: I know, and I've seen other discussions about time time modeling and so forth, W through see time modeling and all that, but there are very many modern cases and and there is a WPC time that has produced documents and standards and social Karl Grossner: Yeah.</p>
+
+<p>Doug Schepers: But Karl Grossner: I just wonder and delivering that to the web is a Karl Grossner: Is a kind of a separate but very connected Doug Schepers: Yeah, I wanted to, I wanted to say I wanted to reiterate something I just glossed over which is that we should be looking at how Doug Schepers: Mainstream things like CSS deal with time as well.</p>
+
+<p>Right.</p>
+
+<p>And make sure that there's a concordance between Doug Schepers: How we represent it in geo JSON and how it could actually possibly at be animated.</p>
+
+<p>Just a thought.</p>
+
+<p>Doug Schepers: Where we're animation is relevant.</p>
+
+<p>Right.</p>
+
+<p>It's not always going to be relevant, but Doug Schepers: But sometimes it will be Gethin Rees: Thing.</p>
+
+<p>Gethin Rees: Also the edge case issue is one booth presentations on time deal with well in that when you get a group of curators or academics together, you Gethin Rees: I'm like this, there was this particular building and it moved here and then it moved there.</p>
+
+<p>Gethin Rees: And then it moved here and where do we actually put the building, you know, when it changed name and then change back to its original name, for example, and I'm so Brian's Gethin Rees: Presentation, you know, web annotations allows us to actually make assertions that can take advantage of those on what they will they can communicate the complexity of those edge cases.</p>
+
+<p>Gethin Rees: And I knew that call on in working through quite a few different iterations of temporal, spatial moderate modeling has also really consider those very well.</p>
+
+<p>And so I think that's something in in in understanding those edge cases that something this community can bring to a broader Gethin Rees: Audience or a broader set of use cases.</p>
+
+<p>Bryan Haberberger: More stories, please.</p>
+
+<p>Gethin Rees: On those.</p>
+
+<p>I don't know what the time limit actually is on this.</p>
+
+<p>Amelia Bellamy-Royds: Will cap it at the end of the hour.</p>
+
+<p>Amelia Bellamy-Royds: I guess one question is sort of what what comes next.</p>
+
+<p>What are you hoping I mean I think it sounds like you're going to have lots of collaborations between the geo JSON LD and the geo JSON T projects.</p>
+
+<p>What else from the web community or the rest of the geospatial community.</p>
+
+<p>Bryan Haberberger: So I know with triple F maps that community group, for example.</p>
+
+<p>Bryan Haberberger: As I showed you the geo JSON all the context as it is right now is a no go.</p>
+
+<p>So we are trying to just support the migration of that specifications that I can add that at version tag and perhaps maybe supply some more bounds.</p>
+
+<p>The properties, having some things so Bryan Haberberger: Open is actually sort of against some of the things like data once with permanence.</p>
+
+<p>We don't really want it to be anything we want it to be flexible on these terms.</p>
+
+<p>And so we need to Bryan Haberberger: Do a little bit of work around that.</p>
+
+<p>So I'm working with community groups and I chatted in the gutter sort of the links to the stories that we've collected in Triple F. Bryan Haberberger: And I'm bringing in those use cases and bringing them to thinking on, you know, how are we doing this with resources.</p>
+
+<p>I mean, what I showed you was a simple geolocation.</p>
+
+<p>Bryan Haberberger: Example, but imagine in in a map is an image of a map when there are no coordinates involved a map is just an image.</p>
+
+<p>Bryan Haberberger: What gives map.</p>
+
+<p>It's mapping is and correct me if I'm getting my vocabulary wrong geo rectification.</p>
+
+<p>So I showed you simple geo locations that assumed a geo rectification, but what if my entity was just that image.</p>
+
+<p>Bryan Haberberger: And I want to apply the jewel rectification to it in my own data set as an annotation, you know, is that even possible.</p>
+
+<p>Bryan Haberberger: So how the spreads.</p>
+
+<p>You know, it's not it.</p>
+
+<p>There's so many things you can do with geo Bryan Haberberger: And so many things that are just image specific that aren't Matt specific.</p>
+
+<p>So I think a lot of the work we're trying to do for the future is what are those maps specific things that go beyond this being an image.</p>
+
+<p>Bryan Haberberger: That we need to account for.</p>
+
+<p>And of course, this takes stories and use cases and trial and error and and people like Carl come in and going.</p>
+
+<p>You guys didn't even consider the time dimension.</p>
+
+<p>What are you thinking like, it's all of that.</p>
+
+<p>Doug Schepers: Well, actually, the annotation working group did consider the time dimension annotations can be time stamped Bryan Haberberger: Yes, they can.</p>
+
+<p>And especially with triple FA v. We have worked in those temporal assertions for things like a video and audio files, but not for images which again is important for Bryan Haberberger: An image of a map, you have to realize at its base that's that's a lot of times just what a what a person takes a map is if you just give me the image with no G rectification, I can only treat it like an image.</p>
+
+<p>Um, Peter Rushforth: Well, I guess what to pitch my product a bit more like I'm not already doing that enough, but the Peter Rushforth: Map element would be to rectify.</p>
+
+<p>So if you wanted to, to rectify and image, you would have a geo rectified target into which to Peter Rushforth: To do that process.</p>
+
+<p>So I can imagine that would be a hefty you was them or JavaScript process.</p>
+
+<p>But I mean, I've seen I've seen know like, yeah, I think the New York library had Peter Rushforth: A site that you could do to rectify images to Peter Rushforth: Historical basement.</p>
+
+<p>Bryan Haberberger: So yeah, lots of little demos out there.</p>
+
+<p>We've, we've looked at them.</p>
+
+<p>Yeah.</p>
+
+<p>Peter Rushforth: So anyhow, Gethin Rees: Okay.</p>
+
+<p>Well, I mean, if people don't have further questions.</p>
+
+<p>Peter Rushforth: Um, web of layers to it.</p>
+
+<p>You know, I think layers are an important fundamental thing of of maps sort of stretch things out for people, but I just wanted to get some of the you know the primitive Peter Rushforth: I want to, you know, basically, see what you guys think about Peter Rushforth: You know, what is a primitive feature of maps and in my world layers that are are are everywhere.</p>
+
+<p>Peter Rushforth: I'm seeing Yvonne Sanchez was saying everything's all there in his blog post.</p>
+
+<p>Everything's a layer.</p>
+
+<p>Forget the idea of layers.</p>
+
+<p>Bryan Haberberger: You know, Bryan Haberberger: You know, Peter Rushforth: Yeah, sort of makes it a good target to actually implement Bryan Haberberger: Yeah, I mean, in our, in our use cases, things like that, go completely outside of maps, but like a layer that is transcription and layer that is translation.</p>
+
+<p>How do we supply that for for for our objects.</p>
+
+<p>Bryan Haberberger: We don't have a specific layer we use the combination of annotation collections and annotation pages and a structure called a range to sort of Bryan Haberberger: Organize whole or pieces of Bryan Haberberger: Of like entities and then supply the different Bryan Haberberger: Layers.</p>
+
+<p>If you would collections or pages of information.</p>
+
+<p>And that's sort of how triple if deals with that primitive in their case.</p>
+
+<p>Bryan Haberberger: I don't have a direct answer for you.</p>
+
+<p>I just have the one you know that's around my community.</p>
+
+<p>Peter Rushforth: And you provide a link for both on that topic.</p>
+
+<p>Bryan Haberberger: Sure you go grab it.</p>
+
+<p>Peter Rushforth: Well, not now, but whenever Peter Rushforth: That would be interesting.</p>
+
+<p>Bryan Haberberger: Yeah, I can absolutely I can actually grab you a link on that topic.</p>
+
+<p>Bryan Haberberger: We did talk about it.</p>
+
+<p>Amelia Bellamy-Royds: I will say, I've been Amelia Bellamy-Royds: Keeping notes in the chat.</p>
+
+<p>So kind of droning the chat in the notes, but I'll copy them over into a discourse and we can add all sorts of links and whatever there.</p>
+
+<p>And of course, we are still recording, so this will go up with the YouTube video of the main talks.</p>
+
+<p>Peter Rushforth: Thanks for doing that.</p>
+
+<p>Amelia Bellamy-Royds: So this definitely doesn't have to be the end of the conversation.</p>
+
+<p>Gethin Rees: Thanks.</p>
+
+<p>Gethin Rees: Something fantastic I'm sharing because it's been dropping in and out for me.</p>
+
+<p>I Gethin Rees: Really appreciate that.</p>
+
+<p>Karl Grossner: Thank you know you mentioned Amelia next steps and it occurs to me you were talking about extending geo JSON, so no natural thing to think about is Karl Grossner: How to put these ideas about extensions before the geo JSON.</p>
+
+<p>Karl Grossner: maintainer.</p>
+
+<p>Karl Grossner: Community developers and so forth and Karl Grossner: There's no Karl Grossner: There's no immediate uptake, as has been mentioned in the talk about MVP geo JSON has a term that specified called the Karl Grossner: Forum member for members are allowed.</p>
+
+<p>They'll just simply be ignored by all software that doesn't specifically look for them.</p>
+
+<p>Karl Grossner: And that's what, when, when in geo JSON a mouse to a farm member.</p>
+
+<p>And at some level, the DOJ some maintainer could care less what form members anybody ads and what they might want to do with them.</p>
+
+<p>So the idea, you know, my initial inclination was well timed part of the part of core Karl Grossner: You know, following Karl Grossner: What some I've been saying, you know, I mean, it's really elemental I think that a very long list of use cases can be put forward but Karl Grossner: It's not clear how that's going to proceed.</p>
+
+<p>I mean, that JSON LV a geo JSON LD is does not really non existent.</p>
+
+<p>I mean, it's not Karl Grossner: It's not really truly respect at all.</p>
+
+<p>It has a has an alias file that just points to some stuff that Karl Grossner: I don't think makes it really useful RDF Karl Grossner: So I don't know.</p>
+
+<p>That's a big open.</p>
+
+<p>That's my open question, for what next, and in the meantime, I'm just going to keep proceeding working with Kevin to and others who may Karl Grossner: To create a format that sort of software modules, he's imagining map plus timeline can work with and then put it out there and say, Isn't this cool Karl Grossner: Is this cool enough to standardize are there enough use cases to support even thinking of it as a standard so Bryan Haberberger: Now, and if he's working with communities like us, even in that prototype stage, we could probably produce and I'll the context for it, just to bring you into that game.</p>
+
+<p>Bryan Haberberger: And then you're there.</p>
+
+<p>Bryan Haberberger: And it's, it's in a place where we can start to test it and tell people to use it and give us feedback.</p>
+
+<p>Karl Grossner: It's definitely getting some traction.</p>
+
+<p>So in the work at different is doing.</p>
+
+<p>And then the AAA of community.</p>
+
+<p>The idea of adding time has Karl Grossner: caught people's attention and there's attention to it.</p>
+
+<p>So that's great and Karl Grossner: In the meantime, I'm reading software.</p>
+
+<p>Doug Schepers: writing software is the best thing you can do.</p>
+
+<p>That way we can pave the cow paths, right.</p>
+
+<p>Fine.</p>
+
+<p>Doug Schepers: I and actually with the Doug Schepers: With the hard parts are fixed the hard parts in code erratic and then standards can follow after Karl Grossner: That's that's been that's been our game for number of years.</p>
+
+<p>Karl Grossner: Where you can say some time and in inaction and some of the links that are on my last slide building world historical deserts here, which was intended to be Karl Grossner: Intended to add time intrinsically to place names to places their names their geometries or tights and their relationship to other places.</p>
+
+<p>So when appears all over the place.</p>
+
+<p>Understanding that We Peter Rushforth: Do for scale does like your Jason doesn't have notion of zoom built into it.</p>
+
+<p>So what do you do for for that.</p>
+
+<p>Karl Grossner: Everything is in JavaScript.</p>
+
+<p>So, I mean, you know what, I, I work with a leaflet almost exclusively I've done other things D3 and Karl Grossner: Open layers, way back when, but mostly for JavaScript or just make the spaghetti but all people who talk about standards.</p>
+
+<p>Karl Grossner: But they love to draw attention to.</p>
+
+<p>I make spaghetti and you know it's it works and it's you know it's a lot of the things I've built a pretty robust, you know, still working on after years and so Karl Grossner: There's a better way forward.</p>
+
+<p>And the whole idea of sharing which link data and the LV universe proposes is really Karl Grossner: My focus.</p>
+
+<p>And I think in Karl Grossner: Gotham and Brian and also the Karl Grossner: That introduces Karl Grossner: It almost compels standard models and apologies behind those Peter Rushforth: Great.</p>
+
+<p>Peter Rushforth: Very interesting.</p>
+
+<p>Bryan Haberberger: I was gonna say the very next thing I would like to see happen is a webpage goes up that just says geospatial not equal to spatial temporal because so many people just assume that because I've done something geospatial for them.</p>
+
+<p>Bryan Haberberger: It's like they can do it you know that timeline and and I say without time.</p>
+
+<p>You cannot have a timeline.</p>
+
+<p>Don't you understand geospatial it's not spatial temporal.</p>
+
+<p>It's so funny because these things are so connected that people just assume Karl Grossner: Well, there's just a ton of geospatial data for which time is an assumption because you're making snapshots at a given time.</p>
+
+<p>So you have this temporal frame.</p>
+
+<p>And that's what you're looking at the stuff that tries to get dynamic Karl Grossner: Is different.</p>
+
+<p>Our Bryan Haberberger: Mission machines don't like abstraction that needs to be like, you know, officially said in the data and like you're saying it's not a lot of times Karl Grossner: As far Karl Grossner: As Peter Rushforth: Yeah, but it's hard.</p>
+
+<p>I mean, it's so hard for two dimensions and you add the time dimension in there and you disappear.</p>
+
+<p>Karl Grossner: I haven't even mentioned fuzzy time on certainty and so on and so forth.</p>
+
+<p>Karl Grossner: Yeah, all of which are great interest with people who do history.</p>
+
+<p>Karl Grossner: And they're very difficult to form along Bryan Haberberger: I've heard a lot of the hour saw a lot of talking to get her about the static pages and just.</p>
+
+<p>Could you imagine representing someone's location over a day using time you'd have to have a layer or feature for each second of the day like that would be john mean.</p>
+
+<p>Wow.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Karl Grossner: Thank you all for Karl Grossner: Very useful and Bryan Haberberger: Yes, thank you, everybody.</p>
+
+<p>Peter Rushforth: Thank you for Peter Rushforth: Joining us.</p>
+
+<p>It's been great to Peter Rushforth: Have you guys join the join the conversation.</p>
+
+<p>Doug Schepers: I want to point out so much Doug Schepers: Sorry, I want to point out one thing have somebody come into the Doug Schepers: Like there.</p>
+
+<p>They didn't know what this word meant and caught in the context of map ML and Peter, correct me if I'm wrong, but I want to emphasize that this is not a map.</p>
+
+<p>Doug Schepers: Ml workshop.</p>
+
+<p>This is maps on the web.</p>
+
+<p>So it's all this stuff is welcome all this stuff in forms.</p>
+
+<p>Doug Schepers: And it doesn't even have to be W three car or juicy.</p>
+
+<p>Right.</p>
+
+<p>It's this is ultimately this is about what are all the moving parts.</p>
+
+<p>And what do we need to do to to connect them and to get them all meshing Doug Schepers: And there are lots of moving parts.</p>
+
+<p>So I want to make sure that people feel like their contributions are welcome in this workshop, because otherwise we're just going to have a partial solution that doesn't solve everything.</p>
+
+<p>Peter Rushforth: Yeah well said.</p>
+
+<p>I think the point of this workshop which we should have had years ago.</p>
+
+<p>Peter Rushforth: But which was only suggested to me by Mike Smith last year.</p>
+
+<p>So I blame Mike Peter Rushforth: Was Peter Rushforth: Is to just to highlight exactly how valuable and important maps and vocation are to humanity and to try and put that into the context of the the information system that is the web into, you know, raise the profile of how we are dealing with maps where we're Peter Rushforth: In my opinion, we're not we're not, we don't recognize it, everything, like you said, everything has a location every second of every day.</p>
+
+<p>Peter Rushforth: And that is just as important as in some ways as human thought right giving the web to having the web to allow the expression of that information in a in an easy way like a way that the web, you know, has paved over for us is Peter Rushforth: Is valuable i think i think it's like an estimate.</p>
+
+<p>Hopefully valuable, actually.</p>
+
+<p>So that's why the workshop is is here.</p>
+
+<p>It's not about i mean i we've been working on math ML as a community group for Peter Rushforth: A few years now since 2014 we started the community group at the when the spatial data on the web community, our interest group was created it at a workshop by, you know, Peter Rushforth: I had my own say and we started the community group and, you know, over time, I've just become you know more convinced that spatial information is Peter Rushforth: It's a primitive.</p>
+
+<p>It's a primitive in society and Peter Rushforth: We'll see where it goes.</p>
+
+<p>Badita Florin: Can I add something.</p>
+
+<p>Yeah, because it will like for me like I'm also very glad that this workshop is happening because I'm working with maps like 10 years and Badita Florin: Most of the times, like I needed to use like CUJO of other things like that.</p>
+
+<p>And when I started to going to Web Map.</p>
+
+<p>So if that is kind of that found Badita Florin: But yeah I envision the future when we will not need to have like leaflet know that things like that and also to be like really simple, like when you learn Hashem.</p>
+
+<p>Badita Florin: Hashem, and five to be able to.</p>
+
+<p>Yeah, happy to be able to implement the map, very simply, and Badita Florin: Simple things that maybe we will be able to implement yet in the standard like maybe also because Badita Florin: I'm working with like bigger dataset, like I need to show 50,000 points on the map.</p>
+
+<p>And usually when the dome doesn't handle these so it will need to be see how we could do that at scale, and like clustering, like when you have 50,000 points.</p>
+
+<p>Definitely clustering, and that currently using.</p>
+
+<p>Badita Florin: Like lift it and the clustering god, my boss, but I think it would be much more better to to be able to kind of get rid of all of these Badita Florin: libraries that some will become unsupported like we've seen leaflet.</p>
+
+<p>But most of the people have said they are not what they are now working Badita Florin: At matte box so they will probably not continue to evolve or leaflet in the same way.</p>
+
+<p>So I think is really good to have something more of a standard than different libraries.</p>
+
+<p>Bryan Haberberger: Yeah, that's really good way to put it.</p>
+
+<p>Peter Rushforth: Yeah, absolutely.</p>
+
+<p>That's great.</p>
+
+<p>And I just come back to progressive enhancement, you know, the objective of Peter Rushforth: Maps in HTML is not to get rid of libraries, but it's to is to make them faster, better, easier and and to, like, you know, the whole human Peter Rushforth: World of thought and ingenuity can be applied to maps and, you know, we could take the lowest common denominator and build that into the engine that everybody uses the browser.</p>
+
+<p>Peter Rushforth: That would be that would be a big step forward in my opinion.</p>
+
+<p>And you know, I don't think there's any magic solution to 50,000 points in the browser, right, like like there.</p>
+
+<p>That's a lot of data and you have to have strategies.</p>
+
+<p>Peter Rushforth: But anyhow, Bryan Haberberger: Just sit there and let it lazy load for a week.</p>
+
+<p>Peter Rushforth: Yeah yeah Peter Rushforth: Well, right, we're kind of out of time.</p>
+
+<p>Right.</p>
+
+<p>Doug Schepers: Yeah.</p>
+
+<p>Peter Rushforth: I'll let you shut us down duck or Amelia, take it.</p>
+
+<p>Peter Rushforth: Thank you very much everyone for participating anyway.</p>
+
+<p>Firing Doug Schepers: Really enjoyed participating in this conversation.</p>
+
+<p>Thanks for organizing it.</p>
+
+<p>Doug Schepers: And thanks, get in.</p>
+
+<p>Thanks.</p>
+
+<p>Doug Schepers: Brian and Carl really Doug Schepers: seeding the conversation with some excellent material.</p>
+
+<p>And with that, I think we will convene for the day, Amelia.</p>
+
+<p>Do you have any final housekeeping.</p>
+
+<p>Amelia Bellamy-Royds: I didn't know.</p>
+
+<p>I think everybody knows the deal.</p>
+
+<p>For now, so I hope to see most of you again tomorrow.</p>
+
+<p>And I'd like to thank you all for this session, since we didn't really know how it was going to work out.</p>
+
+<p>But this was a really great conversation.</p>
+
+<p>Gethin Rees: Yeah.</p>
+
+<p>Thanks very much, everyone really Gethin Rees: Enjoyed the whole week so far, you know, it's been great.</p>
+
+<p>I've really learned a lot.</p>
+
+<p>Bryan Haberberger: Yeah, very refreshing to see how much work is going into this Peter Rushforth: Awesome.</p>
+
+<p>Thanks.</p>
+
+<p>Okay, bye for now, then Bryan Haberberger: All right, bye everybody.</p>
+
+<p>It's one Badita Florin: Thanks.</p>
+
+<p>Bye.</p>
+</body>
+</html>

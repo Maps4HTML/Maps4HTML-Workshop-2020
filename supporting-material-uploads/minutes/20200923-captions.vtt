@@ -1,0 +1,4850 @@
+WEBVTT
+
+1
+00:00:03.810 --> 00:00:10.410
+Amelia Bellamy-Royds: Okay. Welcome, all. We have a busy schedule today. So we're going to get started right away.
+
+2
+00:00:12.120 --> 00:00:22.020
+Amelia Bellamy-Royds: If you're not sure we're at the WCC oh GC workshop on maps for the web. This is day three.
+
+3
+00:00:24.510 --> 00:00:33.690
+Amelia Bellamy-Royds: If you missed. Day one or day two. I think they are both now up on YouTube and we will get the links integrated into the agenda soon.
+
+4
+00:00:36.180 --> 00:00:46.980
+Amelia Bellamy-Royds: There is also the ongoing live chat on get her. And there are multiple links to it. Now, from the zoom chat and
+
+5
+00:00:48.030 --> 00:00:54.930
+Amelia Bellamy-Royds: More long form discussion on discourse somebody can throw a link to that into the chat as well.
+
+6
+00:00:56.250 --> 00:01:08.490
+Amelia Bellamy-Royds: I would like to remind you that we are operating under the W three C's code of conduct and respectful behavior is expected from everyone.
+
+7
+00:01:12.750 --> 00:01:28.170
+Amelia Bellamy-Royds: Beyond that, I think we're gonna get started our theme for the first hour is a native map viewer for the web platform. Can we add something to the web that tells browsers, how to display maps.
+
+8
+00:01:29.550 --> 00:01:41.730
+Amelia Bellamy-Royds: Are on that theme we have four different talks to start it off. We have Brian Cadel burn cartel works at a galleon as a
+
+9
+00:01:43.080 --> 00:02:02.760
+Amelia Bellamy-Royds: Advocate networker extraordinary. But even before that he's been involved in web standards in various capacities, he's going to be talking to us about extending the web with new features and something about pie. So I hope you brought enough for everyone, Brian.
+
+10
+00:02:05.880 --> 00:02:09.090
+Brian Kardell: Okay, I'm going to share my screen.
+
+11
+00:02:14.850 --> 00:02:16.950
+Brian Kardell: Let me know if you can see that
+
+12
+00:02:17.070 --> 00:02:17.670
+Amelia Bellamy-Royds: It's working.
+
+13
+00:02:18.450 --> 00:02:21.180
+Brian Kardell: Okay and I'm going to also drop in a link
+
+14
+00:02:21.270 --> 00:02:21.660
+And
+
+15
+00:02:22.800 --> 00:02:31.590
+Brian Kardell: If you open that link in your chromium or your browser tab, it should advance as we go. And you'll get a smoother experience, probably, if you prefer that
+
+16
+00:02:32.730 --> 00:02:49.770
+Brian Kardell: Okay. So yeah, I am Brian cartel. This is my website you recognize it as a website because you see it in a web browser with the URL. But in that same browser, you can do pretty much anything that you would want to do on the computer, which is amazing.
+
+17
+00:02:51.030 --> 00:02:59.760
+Brian Kardell: But also, many of the desktop apps and mobile apps that you download and use as first class things on your devices are also under the covers using web engines.
+
+18
+00:03:00.150 --> 00:03:12.540
+Brian Kardell: And so are lots of embedded devices. Now you're smart refrigerators, your TV's car an airplane infotainment systems digital signage point of sale systems.
+
+19
+00:03:13.410 --> 00:03:24.840
+Brian Kardell: Basically, as long as there's a UI, you can bet that there's somebody working on trying to do that with web technology. In fact, even if there isn't a UI. We're using aspects of the web platform.
+
+20
+00:03:26.940 --> 00:03:34.320
+Brian Kardell: Even if US went on out into the forest or on a remote beach somewhere and read a paper book, there's a pretty good chance that
+
+21
+00:03:35.100 --> 00:03:50.310
+Brian Kardell: web technology and web standards were involved in the printing and creation of that book. So what I'm trying to say here is that the web platform is infrastructure. It's a huge Commons on which we've built basically all of society at this point.
+
+22
+00:03:51.960 --> 00:04:01.440
+Brian Kardell: But if you're on the edges of that and you're trying to improve the platform and you don't work for a vendor. You're just a developer, you want to make things better.
+
+23
+00:04:02.340 --> 00:04:12.930
+Brian Kardell: It can feel a little bit frustrating sometimes it can feel like you've been put on hold and even though they might say your call is important to us. It sure doesn't feel that way sometimes
+
+24
+00:04:14.790 --> 00:04:31.590
+Brian Kardell: So part of my talk. I want to give a pep talk here. The yes I think we could do this, but I would also like to explain the reasons why it can feel this way and the practical challenges and kind of keep us grounded in reality. So the reason is pi.
+
+25
+00:04:33.120 --> 00:04:47.280
+Brian Kardell: So that needs some explaining. So as an illustration. We're all here giving some amount of our finite time and energy pie to think about and discuss this topic.
+
+26
+00:04:48.030 --> 00:05:02.280
+Brian Kardell: Now we all have different amounts of pie. Some of us are here because it's a labor of love, we just really believe in it. We think it's the right thing to do and lots of others of us work for companies and our companies have obviously different amounts of pie.
+
+27
+00:05:03.780 --> 00:05:16.530
+Brian Kardell: We have very, very different budgets of pi, as we're coming into this discussion and some of us bring the most pie, we bring the most critical pie and the one to make a rendering engines are the most critical
+
+28
+00:05:18.270 --> 00:05:25.110
+Brian Kardell: But it's important to recognize that their pie is still finite and also it's voluntary.
+
+29
+00:05:25.950 --> 00:05:38.280
+Brian Kardell: It's not cheap. I want to point out that there are thousands of person years investment into each one of these rendering engines and that is just the code part that isn't the standards part which is really, really big.
+
+30
+00:05:39.540 --> 00:05:51.450
+Brian Kardell: The wants from folks like us as the Commons girls are only accelerating and every want represents and ask for some slice of pie and
+
+31
+00:05:51.840 --> 00:05:56.250
+Brian Kardell: The slice, how much we're asking for differs from engine to engine because
+
+32
+00:05:56.850 --> 00:06:02.910
+Brian Kardell: These are different companies with different budgets and they have different constraints and priorities limited to staffing and talent.
+
+33
+00:06:03.330 --> 00:06:16.620
+Brian Kardell: And they also have different architectures. So things cost different amounts so realistically, we have to prioritize. There is absolutely no choice but lots follows from this it has big domino effect.
+
+34
+00:06:18.390 --> 00:06:29.640
+Brian Kardell: The first one is in order to be involved in any discussions, they just like we do have to make some value judgment. We're not doing other things that we could be doing right now we're doing this.
+
+35
+00:06:29.940 --> 00:06:39.240
+Brian Kardell: And we're doing that, based on some judgment. But how do you estimate what it takes to be involved is very difficult. If you're a vendor because you know what it really takes
+
+36
+00:06:41.130 --> 00:06:50.880
+Brian Kardell: And so lots and lots of stuff takes a really long time to get past to go or some things never do, or maybe some things just haven't yet like maybe maps.
+
+37
+00:06:51.990 --> 00:06:59.820
+Brian Kardell: So the result of this is that in 30 years that the West spin around we have created about 130 elements for HTML.
+
+38
+00:07:00.600 --> 00:07:16.050
+Brian Kardell: And over half of those are just spicy dibs is how a friend of mine, Dave, Rupert calls them. These are things like paragraph strong emphasis, they have very low implementation costs, but very, very high standardization costs while we discussed them.
+
+39
+00:07:17.430 --> 00:07:26.670
+Brian Kardell: But even if you make it past those steps now you get to where we have to actually get it done and we have to get it done everywhere. We have to get it done inter honorably
+
+40
+00:07:27.390 --> 00:07:37.320
+Brian Kardell: Which we frequently learn along the way. We have to get it accessible and scalable, which are things that we frequently still get wrong, especially in early implementations
+
+41
+00:07:38.730 --> 00:07:51.720
+Brian Kardell: And costs go up very quickly with complexity. Like even a little bit of complexity. So to illustrate this in 30 years we have created one non form based interactive standard UI control element.
+
+42
+00:07:52.320 --> 00:08:06.570
+Brian Kardell: Like the sort of thing that you would find in a standard UI toolkit that isn't about collecting information and that is summary details which looks like this. It is probably the simplest UI widget in existence. It has been around as long as there have been doing
+
+43
+00:08:08.100 --> 00:08:24.150
+Brian Kardell: And this has been a work in progress for a long time. The last major browser added support in June or in January of this year and that was accomplished. Actually, the full parody was accomplished by one of the rendering engine disappearing when
+
+44
+00:08:25.230 --> 00:08:30.990
+Brian Kardell: Chrome switch their internal rendering engine from there's two chromium. They just got it by default.
+
+45
+00:08:33.780 --> 00:08:44.850
+Brian Kardell: And then finally, if you make it past all of those hurdles. It's finally real like it is actually literally everybody can use it. It works everywhere. It is by all definitions. The standard
+
+46
+00:08:45.600 --> 00:08:52.410
+Brian Kardell: But that doesn't mean that everybody knows that we've reached that point yet so it takes some time for people to learn about it.
+
+47
+00:08:52.800 --> 00:09:04.110
+Brian Kardell: And then it takes even more time for them to find a use case where they need to try it. And then finally, at that point, we get developers involved, way, way at the end.
+
+48
+00:09:05.400 --> 00:09:13.980
+Brian Kardell: And we asked them, hey, how is that super expensive pie taste that took a decade and millions of dollars and the response is frequently
+
+49
+00:09:15.840 --> 00:09:17.340
+Brian Kardell: It could be better, to be honest.
+
+50
+00:09:18.420 --> 00:09:24.900
+Brian Kardell: So that sounds very, very depressing. But that is sort of like the historical challenge, and that is why several years ago.
+
+51
+00:09:25.230 --> 00:09:36.120
+Brian Kardell: A group of us got together and discuss these problems and created this document called the extensible web manifesto and what it says basically is we can do better than this.
+
+52
+00:09:38.220 --> 00:09:47.610
+Brian Kardell: One way we can do better than this. Is that the cow paths currently aren't very clear, we say that we pay the cow pass, but really it's a little bit like reading the rooms.
+
+53
+00:09:48.090 --> 00:09:55.470
+Brian Kardell: We're looking at many other cow paths and trying to build a new road that meets all of the same criteria in a completely different way.
+
+54
+00:09:56.820 --> 00:10:03.450
+Brian Kardell: So a better way to do this is to give developers mostly the same abilities that browsers have to create new elements.
+
+55
+00:10:04.080 --> 00:10:11.490
+Brian Kardell: And let developers, bring the early pie. They're the ones with all the ideas and they're the ones that are actually capable of testing things
+
+56
+00:10:12.240 --> 00:10:23.520
+Brian Kardell: They're the ones that are ultimately have to accept this solution as adequate and we can find out do developers actually like and use it or not, because very frequently we are wrong.
+
+57
+00:10:24.840 --> 00:10:40.170
+Brian Kardell: Because a failure in this model is a feature, right, like we can float lots of ideas and people can say what about this, this seems great and people can say no. But we can do better than that. And very quickly adjust
+
+58
+00:10:42.060 --> 00:10:54.780
+Brian Kardell: This also I think plays into the ability for us to explore a Jason possibles when we give people new tools they dream new dreams that we hadn't even thought of yet.
+
+59
+00:10:56.250 --> 00:11:03.450
+Brian Kardell: I think this is important because so many things wind up being fantastically successful at something they weren't even designed for
+
+60
+00:11:04.020 --> 00:11:12.660
+Brian Kardell: Including the web itself, actually. So this document suggests that we should get out of the way we should enable
+
+61
+00:11:13.620 --> 00:11:20.700
+Brian Kardell: Developers to explore these spaces we should give them the tools and we should not spend those precious resources debating.
+
+62
+00:11:21.090 --> 00:11:35.580
+Brian Kardell: How developers might use things or what they might like in give them the tools to show us and focus on science to know when they're discovered something so that we can write it down. And that can work more like dictionaries.
+
+63
+00:11:36.750 --> 00:11:45.390
+Brian Kardell: There aren't committees for dictionaries that create words they they write down the words. So this is all high level stuff.
+
+64
+00:11:46.050 --> 00:11:57.570
+Brian Kardell: But I think there are some important details at least they're important to me that I would like to discuss, which is that one of the goals here in my mind is for this to lay a nice bright unambiguous path.
+
+65
+00:11:59.250 --> 00:12:15.060
+Brian Kardell: That we can then pave that has proof that is accessible, that is acceptable to developers that It ticks all the boxes and it is estimable and it explains how does this map very well to the web platform.
+
+66
+00:12:16.500 --> 00:12:27.750
+Brian Kardell: So I think that what the extensive web manifesto is saying a lot of it is to break it down to reduce the magic required in anything expose the parts and aim for the middle
+
+67
+00:12:29.370 --> 00:12:42.510
+Brian Kardell: So an example of this is dialogue dialogue is this element that is in almost every UI toolkit and it creates this layer on top that you
+
+68
+00:12:43.560 --> 00:13:00.990
+Brian Kardell: Interact with, but it also does all these other subtle things and inside it is magic. Lots of magic. It does things like prevent you from selecting the text behind it prevent your tab focus for moving out of it. Give you controls for styling that and so on.
+
+69
+00:13:02.130 --> 00:13:04.950
+Brian Kardell: Change the how things are exposed to accessibility.
+
+70
+00:13:05.550 --> 00:13:21.510
+Brian Kardell: So the original proposal for dialogue is a big ask for a budget and if we succeed in delivering it will deliver that thing I showed on a few panels ago and will it be adequate. We don't know, but it will be helpful in solving only that problem.
+
+71
+00:13:23.340 --> 00:13:29.820
+Brian Kardell: But if you look a crack open the magic. There is this concept of alertness, that is used to define dialogue, which is
+
+72
+00:13:30.150 --> 00:13:41.160
+Brian Kardell: All that other stuff that I said it does about managing texts election and Aria and everything. And it's fundamentally necessary for dialogue, but it's also useful for lots of other UI.
+
+73
+00:13:41.760 --> 00:13:49.530
+Brian Kardell: Patterns and components that we haven't even started talking about standardizing yet maybe some that we never will like yours.
+
+74
+00:13:50.760 --> 00:14:01.230
+Brian Kardell: So we split that out and made an exposed to developers and we focused on doing that, first, so that is delivers a lot of value.
+
+75
+00:14:01.800 --> 00:14:20.760
+Brian Kardell: For a lot of things that can explore the space and it reduces the overall amount of pie that is required for dialogue that changes the calculus of whether it's worth the investment. It's much more estimable and it is very much follows basic software development ideas.
+
+76
+00:14:22.050 --> 00:14:34.500
+Brian Kardell: Then it allows developers to use enter to explore the space with other controls and the way to pay for those controls, then it's very clear because we know that is an art. We don't have to reinvent that
+
+77
+00:14:35.400 --> 00:14:47.640
+Brian Kardell: So exposing these middle layers actually helps build resilience and adaptability and helps make sure we're not fighting too much off and as the web changes like we have the ability to adapt.
+
+78
+00:14:49.530 --> 00:15:00.300
+Brian Kardell: So what's all this got to do with maps. I know it feels like I'm a little bit off topic, but should the web half maps is the question we're asking and yes
+
+79
+00:15:01.350 --> 00:15:03.330
+Brian Kardell: It seems clear, sure.
+
+80
+00:15:04.650 --> 00:15:11.790
+Brian Kardell: But we need so much. There's so many things that the web should have that the web doesn't have. And there's just not enough pie.
+
+81
+00:15:12.900 --> 00:15:16.500
+Brian Kardell: So another thing you can do is you can bring more hi
+
+82
+00:15:17.580 --> 00:15:26.820
+Brian Kardell: My company a gallery. That's what we do. The reason that the current model the historic model exists is simply because that's what we let happen but
+
+83
+00:15:27.930 --> 00:15:33.510
+Brian Kardell: A gala and other companies like Boku who's presenting also today can help you.
+
+84
+00:15:34.650 --> 00:15:44.610
+Brian Kardell: When you have prioritization problems where you can't get the attention that you need from somebody who has the expertise and the knowledge to help this move along. So we have done that for things like CSS grid.
+
+85
+00:15:46.590 --> 00:15:48.690
+Brian Kardell: And lots of lots and lots of features.
+
+86
+00:15:50.190 --> 00:16:09.210
+Brian Kardell: So for maps, though I think my advice, though, is that all of these things that I was just talking about apply, we have this problem of we have lots of maps sort of that have lots of commonalities and it feels like there's a path there. But how do you map it into HTML. And it's very difficult.
+
+87
+00:16:10.320 --> 00:16:22.110
+Brian Kardell: And which features should include, and what is ultimately good enough, I think, despite the fact that we have lots of experts and we have libraries and things like that. I think we don't know what's good enough until
+
+88
+00:16:22.860 --> 00:16:37.560
+Brian Kardell: We try some things and developers will tell us like they'll know it when they see it and it might be shocking. What is good enough HTML was certainly shockingly, you know, good enough, there were better solutions before HTML came along.
+
+89
+00:16:39.210 --> 00:16:50.070
+Brian Kardell: But also at the end of that when we have an answer. It's important that it fits well into the platform and that it's aware self aware of the pie. It's asking for. So I think
+
+90
+00:16:50.730 --> 00:16:56.640
+Brian Kardell: Break it down and aim for the middle and improve the cost benefit analysis find unlikely allies.
+
+91
+00:16:57.630 --> 00:17:13.860
+Brian Kardell: Like find ways that we can deliver parts of it and share the pie that we're asking for. So one way to do this is to ask what are the things that are making it hard technically today and are those things only hard for you and I would suggest maybe squint at it a little bit.
+
+92
+00:17:15.990 --> 00:17:26.310
+Brian Kardell: There are very similar course green needs for like video game maps or maps of fictional spaces. If you want to their maps of Mordor. For example,
+
+93
+00:17:26.640 --> 00:17:37.170
+Brian Kardell: If you squint even a little bit harder things that aren't maps at all that also have very similar needs product images for e commerce is a really big one that people aren't interested in technical drawings
+
+94
+00:17:38.310 --> 00:17:47.250
+Brian Kardell: So basically, the web is lacking lots of course green features that we can that we can do and low level things like pan and zoom is a great one.
+
+95
+00:17:48.060 --> 00:17:56.790
+Brian Kardell: Lots of things need that Oscar in Canvas maybe hardware accelerated SVG. This is one of the challenges that we don't know what the necessary parts are yet.
+
+96
+00:17:58.050 --> 00:18:07.800
+Brian Kardell: But I don't have the answers. I think there's probably a lot and I am here to hear your ideas and see how I can help. So thank you.
+
+97
+00:18:13.860 --> 00:18:19.080
+Sébastien Durand (Canada - NRCAN - CGP): I just want to say, Great presentation was very fun to watch good content. Thanks.
+
+98
+00:18:19.140 --> 00:18:19.620
+Brian Kardell: Thank you.
+
+99
+00:18:20.070 --> 00:18:21.630
+Amelia Bellamy-Royds: Indeed, thank you, Brian.
+
+100
+00:18:22.200 --> 00:18:22.800
+was amazing.
+
+101
+00:18:24.750 --> 00:18:26.070
+Amelia Bellamy-Royds: Good way to start the day
+
+102
+00:18:27.210 --> 00:18:45.990
+Amelia Bellamy-Royds: We are going to continue now with something a little more map focused Peter rush forth is going to present in more detail what he hinted at the other day, the proposal he built for a map ML a specific way of
+
+103
+00:18:47.400 --> 00:18:51.120
+Amelia Bellamy-Royds: Including map viewers in HTML using markup.
+
+104
+00:19:00.240 --> 00:19:01.110
+Peter Rushforth: Thanks, Amelia.
+
+105
+00:19:03.840 --> 00:19:17.940
+Peter Rushforth: I recorded my presentation. So it kind of auto plays, but that was great presentation. Brian and thank you very much for bringing your personal energy and effort to this and we definitely welcome your words of wisdom.
+
+106
+00:19:20.400 --> 00:19:22.140
+Peter Rushforth: And we'll try to follow them.
+
+107
+00:19:23.160 --> 00:19:28.080
+Peter Rushforth: So I'm going to go and share this and start my presentation.
+
+108
+00:19:29.490 --> 00:19:29.880
+Peter Rushforth: Thank you.
+
+109
+00:19:36.120 --> 00:19:40.980
+Good morning. In this presentation, I'll give an overview of the math ML proposal.
+
+110
+00:19:44.040 --> 00:19:53.670
+Map Ml is a proposal to extend HTML in the HTML namespace to include elements into attributes that implement maps and layers.
+
+111
+00:19:54.330 --> 00:20:08.220
+The objective of our proposal is to introduce a small set of HTML elements that will directly support maps and mapping applications with approximately the same author and complexity as video or audio or image.
+
+112
+00:20:09.480 --> 00:20:27.750
+Why do we need a map element. Exactly. We need a map element to provide a declarative semantic entry point in web standards for a few reasons. Above all, we need to standardize Web Map client technology because we should. It is the ethical thing to do.
+
+113
+00:20:28.830 --> 00:20:40.860
+We need to make standard web maps learned by children, not by binding such an important facet of human existence, not to mention survival to proprietary frameworks.
+
+114
+00:20:41.880 --> 00:20:47.820
+Having made that decision. We need a map element to obtain more efficient rendering of spatial content.
+
+115
+00:20:49.020 --> 00:20:56.250
+Next we need to define and standardize what accessibility means for web maps and especially Web Map content.
+
+116
+00:20:57.450 --> 00:21:08.640
+Finally, we need to establish an organic, not based on metadata basis for spatially indexing web pages. So that search engines can return search results based
+
+117
+00:21:08.940 --> 00:21:16.980
+Not only on ranking the text of documents against search terms, but also based on spatial indexing of map elements in the page.
+
+118
+00:21:17.790 --> 00:21:29.400
+Like the PageRank algorithm. But instead of or as well as backlinks increasing hits relevance, the pages literally nearer to the search term would raise the result rank.
+
+119
+00:21:30.990 --> 00:21:37.230
+We propose to extend the existing map element by adding attributes and new child layer elements.
+
+120
+00:21:38.010 --> 00:21:43.380
+The map element is a reasonable candidate for extension, not only because of the element name.
+
+121
+00:21:43.800 --> 00:21:57.750
+But mostly because of the elements processing model is already that of an interactive, albeit static map with layers represented by the image and area elements and the image map semantics potentially provide
+
+122
+00:21:58.320 --> 00:22:18.780
+A path to script lists accessible graceful degradation. This is the basis upon which other proposals to modify HTML have been successfully made for example the image source set attribute, among others. This approach also seems to be encouraged by various HTML design principles.
+
+123
+00:22:20.130 --> 00:22:29.550
+The design principles aren't a license to propose changes to HTML, but they are a framework to help guide decisions design discussions.
+
+124
+00:22:30.120 --> 00:22:37.620
+So if you have a concern about any of the design you hear about today, please consider joining the group and contributing those ideas.
+
+125
+00:22:38.250 --> 00:22:44.040
+If we consider a diversity of viewpoints and experience, we will achieve a stronger proposal.
+
+126
+00:22:45.030 --> 00:22:58.560
+The result of the proposed extension, whether it results in a map element or something else should be a map widget or viewer that is designed for accessibility and is progressively enhanced double. In other words, scripted.
+
+127
+00:22:59.400 --> 00:23:07.350
+It's not the intention of the proposal to accommodate by means of native browser implementation all use cases of web maps today.
+
+128
+00:23:08.010 --> 00:23:19.440
+It is a key objective of the proposal to expose DOM API's events and other facilities such as styling that relate to loading rendering and using and creating map content.
+
+129
+00:23:22.110 --> 00:23:35.220
+I've got more to talk about today than I have time for. So I'll cover some of the big ideas first to begin. I'll talk about the key elements of the proposal, the map layer and extent elements.
+
+130
+00:23:36.420 --> 00:23:46.710
+Then I'll spend time talking about titled coordinate reference systems or T CRS because understanding those concepts is key to making sense of most of the proposal.
+
+131
+00:23:49.170 --> 00:23:52.530
+map projections define the coordinate systems in effect.
+
+132
+00:23:53.640 --> 00:24:02.010
+In the scope of the map. So that coordinates of places on Earth or potentially other planets to maybe drawn on a 2D plane.
+
+133
+00:24:02.790 --> 00:24:18.660
+Every map has a coordinate system that is shared by its layers. So the proposed map element has a set of defined projection values. The default value if unspecified is OSM tile, which corresponds with web Mercator
+
+134
+00:24:20.100 --> 00:24:30.840
+The set of projections is small yet extensible. In the same way that, for example, HTML REL values are extensible. In other words, by agreement.
+
+135
+00:24:32.040 --> 00:24:42.150
+I'm using the attribute name projection here as a user friendly term to describe the concept that I call tiled coordinate reference systems or TC RS
+
+136
+00:24:43.680 --> 00:24:57.510
+The term TC RS is defined in this proposal and represents a framework for naming and discussing the integrated concepts of tile caches geospatial coordinate reference systems and Web Map client concerns.
+
+137
+00:24:59.070 --> 00:25:13.260
+Web maps all define their starting conditions, typically via a lat long coordinate pair representing the center of the map. So the map element has required lat long attributes describing it starting center point.
+
+138
+00:25:14.490 --> 00:25:23.940
+On the web as in real life maps have scale. So the map element has a required to zoom attribute which define the starting scale.
+
+139
+00:25:24.900 --> 00:25:44.220
+This is actually a very important point, and one that can go unrecognized web maps are in fact real life maps in which paper or mylar has been exchanged for pixels everything that is represented must be represented. According to an intended scale, including geographic features.
+
+140
+00:25:46.140 --> 00:26:00.960
+The Boolean controls attribute turns controls on or off controls are created by default in a closed shadow route. Like the video element, the controls list attribute can prune the set of native native controls provided
+
+141
+00:26:02.460 --> 00:26:11.880
+We need a layer element to be a child of the map element because map layer is a primitive abstraction that is shared by many, if not most maps, both on and off the web.
+
+142
+00:26:12.660 --> 00:26:20.190
+Layer elements represent map content and each must share the coordinates systems defined by the parent map elements projection attribute
+
+143
+00:26:21.330 --> 00:26:27.450
+Map Layers and their content or in the light DOM in the same way that SVG content is in the DOM.
+
+144
+00:26:28.500 --> 00:26:37.020
+Layers are added. According to the painters model in document order their label attribute will appear in document order in the layer control.
+
+145
+00:26:38.640 --> 00:26:49.440
+Layers are children of the map element only and do not nest content can be in line or located in a document at the source attribute URL.
+
+146
+00:26:50.580 --> 00:26:52.800
+A layer has a text label attribute
+
+147
+00:26:53.850 --> 00:26:55.980
+A check layer renders on the map.
+
+148
+00:26:58.170 --> 00:27:08.640
+A hidden layer. It's not shown in the layer control that is rendered on the map. This can be useful for preventing the user from turning off important content and becoming confused.
+
+149
+00:27:13.200 --> 00:27:18.990
+Layers can have inline content as shown here that is loaded and rendered by the browser.
+
+150
+00:27:20.100 --> 00:27:31.440
+Web maps need a standard mechanism to load map data that does not involve knowing how to access server API's beyond the strict uniform interface of HTTP.
+
+151
+00:27:32.640 --> 00:27:45.270
+Browsers standardized html forms as a means to flexibly request and transmit data to and from any server within the constraints of the HTTP uniform interface.
+
+152
+00:27:46.230 --> 00:27:55.860
+Web Map Server data comes in a wide and growing variety of formats and interfaces. This poses severe challenges for interoperability.
+
+153
+00:27:56.640 --> 00:28:16.170
+So we designed a mechanism for loading and accessing server information based on established patterns, for example, URL templates and standards like WNs W MTS and open street maps will be tiles and informed by the HTML form element.
+
+154
+00:28:20.850 --> 00:28:27.060
+The extent element represents the part of the layers content that binds to the viewport of the map.
+
+155
+00:28:27.930 --> 00:28:38.580
+The extent element is somewhat analogous to the forum element being the parent of various inputs and links the values of which are serialized during extent processing.
+
+156
+00:28:39.360 --> 00:28:56.250
+Extent processing differs from form processing in that the user is not expected to fill in input values manually because the extent being bound to the map viewport triggers content requests automatically as the map requires new content to paint.
+
+157
+00:28:57.300 --> 00:29:06.750
+New content is typically required as the user either manipulates the map by panning or zooming or the device. My rotating or moving it
+
+158
+00:29:10.050 --> 00:29:20.460
+The rel equals tile value, shown here associated to tile based URL templates reflects a core abstraction in modern web maps that of map tiles.
+
+159
+00:29:21.390 --> 00:29:38.160
+The real value tells the browser what the purpose is of the resource that it is loading. So as the rendering engine iterate over the tiles that it needs the browser fires events which are serialized two variables identified by name.
+
+160
+00:29:39.600 --> 00:29:47.820
+Each input variable binds to one or more variable references in the URL template links within the extent elements scope.
+
+161
+00:29:48.900 --> 00:29:57.780
+Once all the variable references are resolved the URL template becomes an actual resource URL that is fetched and rendered
+
+162
+00:29:59.040 --> 00:30:04.890
+An extent can contain as many such URL template links as it needs to compose the map layer.
+
+163
+00:30:05.910 --> 00:30:11.550
+In the example shown above the geometry and labels of the layer are referenced by separate links.
+
+164
+00:30:17.010 --> 00:30:29.910
+Titled cordon reference system or TC RS is a term coined by me to standardize and describe a system of talking about spatial coordinate reference systems from the web clients and users point of view.
+
+165
+00:30:31.050 --> 00:30:48.450
+When working with maps and spatial information we inevitably need to talk about coordinate reference systems and especially scale and T CRS is my attempt to unify the vocabulary for coordinate reference systems so that this core concept can be made interoperable and teachable.
+
+166
+00:30:49.560 --> 00:30:57.510
+Historically geographic information systems have kept the concerns of map scale separate from those of the coordinate systems definition.
+
+167
+00:30:58.140 --> 00:31:08.130
+By maintaining intimate and detailed metadata about the coordinate systems of the data they manage so that data can be interoperable combined or overlaid at runtime.
+
+168
+00:31:09.030 --> 00:31:29.790
+Web architecture requires that resource metadata be encoded into media type specifications. So that runtime exchanges are not necessary or desirable. So we needed to develop the TC RS concept in order to encode it into the math ML or eventual HTML specification
+
+169
+00:31:31.230 --> 00:31:34.740
+A ti CRS has a defined number of integers zoom levels.
+
+170
+00:31:35.760 --> 00:31:50.130
+A zoom level is an integer proxy for expressing a real world distance units per pixel ratio. In other words, the pixel size at a defined location, depending on the projection typically the projection origin.
+
+171
+00:31:51.360 --> 00:31:59.370
+The reason the set of zoom levels is defined and not infinite is because in some cases, there isn't a mathematical relation between zoom levels.
+
+172
+00:31:59.730 --> 00:32:08.280
+In order other words they're not necessarily evenly spaced as shown. They may have been chosen for reasons, specific to the application.
+
+173
+00:32:08.640 --> 00:32:19.770
+And the fact that beyond a certain distance per pixel. It doesn't make real world sense by agreement and specification, then the zoom levels are defined and known.
+
+174
+00:32:22.770 --> 00:32:32.130
+For each zoom level in a TI CRS there exists a pair of 2D coordinate systems in which the units are pixels and tiles, respectively.
+
+175
+00:32:32.940 --> 00:32:41.160
+These coordinate systems. Follow the conventions of coordinate systems in computer graphics having their origin at the top left of the screen.
+
+176
+00:32:41.550 --> 00:32:48.600
+With the vertical axis being positive down and the Horizontal. Horizontal axis positive, the right of the screen.
+
+177
+00:32:49.560 --> 00:33:04.710
+The pixel based coordinate system is called a TI CRS with axes named x and y, the tile based coordinate system is called a tile matrix. After the GC concept of that name at its axes are named column and row.
+
+178
+00:33:05.850 --> 00:33:23.640
+Tiles are defined in 256 square aggregations of pixels and the pixels and tiles are geo referenced by a defined planar transformation to the cord and its face, defined by the projected coordinate reference system or PC RS
+
+179
+00:33:24.780 --> 00:33:40.890
+The coordinates and units of the PCR s are defined by a mathematical transfer of coordinates to and from a defined geographic coordinate reference system or G CRS according to define parameters of the projection method.
+
+180
+00:33:42.570 --> 00:33:51.660
+To additional coordinate reference systems are defined to correspond with the same concepts from the W and W MTS standards.
+
+181
+00:33:52.560 --> 00:34:00.030
+The map coordinate system is defined by the maps dynamic viewport, and has its origin in the upper left corner of the map.
+
+182
+00:34:00.720 --> 00:34:12.840
+The horizontal axis is named I while the vertical axis is named Jay this coordinate system corresponds to the image coordinate system in HTML client side image maps.
+
+183
+00:34:13.320 --> 00:34:26.490
+It's also used by W. Ms. Get feature info requests to record to to query server server databases for features at a given pixel within a defined request.
+
+184
+00:34:27.870 --> 00:34:34.920
+The Tile coordinate system is created relative to each tile and also has I NJ axes.
+
+185
+00:34:36.150 --> 00:34:42.660
+It is created in math ML in order to support MTS get feature info requests.
+
+186
+00:34:45.180 --> 00:34:45.630
+Thank you.
+
+187
+00:34:52.260 --> 00:34:53.160
+Amelia Bellamy-Royds: Thank you, Peter.
+
+188
+00:34:55.590 --> 00:35:05.310
+Amelia Bellamy-Royds: Lots of information there, but I hope it was enough to get people intrigued into looking more and the scope of the project.
+
+189
+00:35:06.810 --> 00:35:07.470
+Amelia Bellamy-Royds: Um,
+
+190
+00:35:08.760 --> 00:35:11.370
+Amelia Bellamy-Royds: Our next talk is going to
+
+191
+00:35:13.530 --> 00:35:22.860
+Amelia Bellamy-Royds: Take another look at map mo specifically a more critical assessment from the web standard side.
+
+192
+00:35:23.670 --> 00:35:46.830
+Amelia Bellamy-Royds: Simon Peters is been involved in web standards and browser development for many, many years. He currently works for Boku which is another sort of web browser development web standards development for hire companies with a specific focus on
+
+193
+00:35:48.000 --> 00:36:09.120
+Amelia Bellamy-Royds: Testing and cross browser interoperability work and Simon was commissioned over the past few months to sort of assess the map ML proposal as it is and how it can be moved forward. So I'm in. What do you take it away.
+
+194
+00:36:10.860 --> 00:36:12.750
+Simon Pieters: Thank you for that introduction.
+
+195
+00:36:14.880 --> 00:36:18.540
+Simon Pieters: I'm going to try to share my screen. So let's see if that successful
+
+196
+00:36:25.950 --> 00:36:26.880
+Simon Pieters: Can you see my screen.
+
+197
+00:36:28.860 --> 00:36:29.160
+Amelia Bellamy-Royds: Yep.
+
+198
+00:36:29.550 --> 00:36:29.970
+Yes.
+
+199
+00:36:30.990 --> 00:36:31.500
+Simon Pieters: Excellent.
+
+200
+00:36:34.890 --> 00:36:44.430
+Simon Pieters: So hi, everyone. I'm Simon Peters, I'll talk a bit about book Oops review of math ML that we did earlier this year.
+
+201
+00:36:47.820 --> 00:36:59.730
+Simon Pieters: So again, a short introduction to Boku we're a web consultancy web platform consultancy firm we participate in a coma W three. See what we
+
+202
+00:37:01.020 --> 00:37:13.500
+Simon Pieters: Work on improving the web platform through specifications and test suites, we have experienced standardizing both new and legacy features in HTML and CSS.
+
+203
+00:37:14.580 --> 00:37:20.280
+Simon Pieters: Also JavaScript and writing corresponding conformance tests for browsers.
+
+204
+00:37:21.660 --> 00:37:28.050
+Simon Pieters: So we can help with the standardizing new feature is for the web and collaborate with the browser info mentors.
+
+205
+00:37:32.430 --> 00:37:44.670
+Simon Pieters: We participated in the OCC testbed 16 program to review the technical specifications for ethanol. So here are our findings and recommendations.
+
+206
+00:37:45.720 --> 00:37:52.380
+Simon Pieters: We reported 21 issues for map ML from minor to more fundamental
+
+207
+00:37:56.190 --> 00:38:03.420
+Simon Pieters: One of the fundamental issues is with her and how math ML should being be an extension to HTML.
+
+208
+00:38:05.400 --> 00:38:11.010
+Simon Pieters: My understanding is that it's the intent, but it's not really define the such currently
+
+209
+00:38:12.450 --> 00:38:21.720
+Simon Pieters: If it is to extend HTML than it should be done properly, and ideally involve the maintainer of the HTML standard in the process.
+
+210
+00:38:25.410 --> 00:38:34.320
+Simon Pieters: Another aspect is integration with CSS analysis that it should be scalable with CSS, but it's not defined how
+
+211
+00:38:35.040 --> 00:38:53.580
+Simon Pieters: I think CSS not does not yet have the necessary primitives to represent web maps without resorting to solutions that are working against the browser, which is not ideal for performance or accessibility as well as other aspects.
+
+212
+00:39:01.290 --> 00:39:07.560
+Simon Pieters: We reported an issue for the CSS working group to consider adding a new panning and zooming primitive
+
+213
+00:39:08.910 --> 00:39:15.690
+Simon Pieters: For use with web maps. This is one of the primitives or low level capabilities that
+
+214
+00:39:16.920 --> 00:39:18.900
+Simon Pieters: Brian mentioned web maps have
+
+215
+00:39:20.220 --> 00:39:21.030
+Simon Pieters: Many
+
+216
+00:39:23.340 --> 00:39:27.960
+Simon Pieters: Possible capabilities stuffs are missing from the web platform, but this is
+
+217
+00:39:29.040 --> 00:39:31.140
+Simon Pieters: One that we identified
+
+218
+00:39:34.110 --> 00:39:37.140
+Simon Pieters: So the CSS working group discussed this.
+
+219
+00:39:38.670 --> 00:39:44.250
+Simon Pieters: In July, and agreed that it would be interesting to investigate, but they need a concrete proposal.
+
+220
+00:39:46.710 --> 00:39:48.120
+Simon Pieters: So David Baron is
+
+221
+00:39:49.890 --> 00:39:50.940
+Simon Pieters: from Mozilla
+
+222
+00:39:53.160 --> 00:39:53.670
+Simon Pieters: And
+
+223
+00:39:54.990 --> 00:40:00.390
+Simon Pieters: Said that it was interesting, but need a concrete proposal and Tom Atkins is
+
+224
+00:40:02.160 --> 00:40:06.870
+Simon Pieters: From Google, one of the editors of the many CSS specifications.
+
+225
+00:40:11.310 --> 00:40:12.870
+Simon Pieters: Essentially agreeing that
+
+226
+00:40:15.570 --> 00:40:18.420
+Simon Pieters: It's something that would make sense to solve but
+
+227
+00:40:19.500 --> 00:40:21.960
+Simon Pieters: There's no no proposal yet.
+
+228
+00:40:26.730 --> 00:40:33.900
+Simon Pieters: So again, going back to the extensible web manifesto that has been mentioned a couple of times.
+
+229
+00:40:34.680 --> 00:40:48.450
+Simon Pieters: I think the approach that is more likely to have success in changes in browsers. At this time, is to start with specifying the primitives, or a low level capabilities that are needed to layer on top.
+
+230
+00:40:49.650 --> 00:40:55.170
+Simon Pieters: Even if there is skepticism about adding maps to the web. People see
+
+231
+00:40:57.870 --> 00:41:13.380
+Simon Pieters: Of adding new primitives that benefits web maps and this approach is in line with the extensible web manifesto, which says to focus on primitives first and then develop high level solutions in JavaScript using those primitives.
+
+232
+00:41:14.880 --> 00:41:18.630
+Simon Pieters: Allowing web developers to iterate without breaking the web.
+
+233
+00:41:23.490 --> 00:41:32.610
+Simon Pieters: Another thing we think would be good to better is to better demonstrate the need for web maps in terms of impact for web developers.
+
+234
+00:41:33.900 --> 00:41:41.070
+Simon Pieters: One way to do this is to ask about web maps and the MDM developer needs assessment survey.
+
+235
+00:41:42.420 --> 00:41:45.600
+Simon Pieters: Which is currently in the final stages of preparation.
+
+236
+00:41:46.920 --> 00:41:56.190
+Simon Pieters: Last year, the survey had responses from 28,000 web developers and the results impacted the prioritization for browser vendors
+
+237
+00:42:01.080 --> 00:42:14.430
+Simon Pieters: Our summary of work for this review is available at the URL at the top of this slide bit ly slash coo coo dash testbed 16
+
+238
+00:42:18.570 --> 00:42:22.110
+Simon Pieters: And that's all I have. Thank you.
+
+239
+00:42:32.700 --> 00:42:33.780
+Amelia Bellamy-Royds: Thank you, Simon.
+
+240
+00:42:35.730 --> 00:42:36.240
+Simon Pieters: Thank you.
+
+241
+00:42:36.810 --> 00:42:41.370
+Amelia Bellamy-Royds: And I'm looking forward to creating the
+
+242
+00:42:42.540 --> 00:42:50.520
+Amelia Bellamy-Royds: Discussion page and we can get all those links and easily clickable forum so people can go look at and comment on the issues.
+
+243
+00:42:54.180 --> 00:43:08.490
+Amelia Bellamy-Royds: For our final talk on this theme we're going to switch over a little bit. So to really tackle he have Katie di has been building maps using web technology for
+
+244
+00:43:09.540 --> 00:43:13.860
+Amelia Bellamy-Royds: Many years now using a base of SVG and
+
+245
+00:43:15.060 --> 00:43:28.920
+Amelia Bellamy-Royds: Has developed proposals for what needs to get added to SVG, to make it more Web Map friendly. So he and Peter rush worth are going to be introducing some of the work they've done on that.
+
+246
+00:43:48.060 --> 00:43:50.040
+Amelia Bellamy-Royds: Peter, if you're talking, we cannot hear you.
+
+247
+00:43:51.480 --> 00:43:52.620
+Peter Rushforth: Yes, of course.
+
+248
+00:43:54.240 --> 00:44:01.440
+Peter Rushforth: Ah sorry satori tech khaki son and a colleague from Katie di corporation have developed
+
+249
+00:44:02.640 --> 00:44:07.590
+Peter Rushforth: Two papers for this workshop which are linked to their
+
+250
+00:44:08.640 --> 00:44:18.090
+Peter Rushforth: To their agenda item and I promised Satoru Hassan to to present the introduction, introduce these two
+
+251
+00:44:19.530 --> 00:44:24.660
+Peter Rushforth: Papers that are very, very interesting and expertly crafted and
+
+252
+00:44:27.000 --> 00:44:38.730
+Peter Rushforth: I promised to introduce them at the workshop. And I think that there is, in particular, well worth reading because Satoru has been working for years within the many years within the the
+
+253
+00:44:41.550 --> 00:44:50.370
+Peter Rushforth: SVG community in the W three see because for them to standardize web maps using web technology and
+
+254
+00:44:53.040 --> 00:45:02.220
+Peter Rushforth: I strongly believe that we share a lot of, you know, fundamental primitive understandings of how the web works and
+
+255
+00:45:03.150 --> 00:45:23.100
+Peter Rushforth: He has got some spicy commentary spicy yet flight commentary in his in his papers and the first of them is on decentralized web mapping and it's very important to read them in order. Because decentralized web mapping sort of sets up the second paper and
+
+256
+00:45:24.750 --> 00:45:27.270
+Peter Rushforth: These in decentralized web mapping
+
+257
+00:45:30.330 --> 00:45:48.330
+Peter Rushforth: Layers are conceived of as the primitive feature of web maps and are accessible at Bear undifferentiated URLs, just as in the map ML proposal, but in the in the SVG map proposal in the in the
+
+258
+00:45:50.370 --> 00:46:00.630
+Peter Rushforth: In this framework, the, the target of those URLs is an SVG document that links to an HTML.
+
+259
+00:46:02.430 --> 00:46:22.290
+Peter Rushforth: Logic bundle. And so each layer comes with its logic built into the actual document that is loaded. So what this means is that it can adapt. It's an adaptive framework to virtually any tiling system proprietary or otherwise. And I think that's there's a lot of genius in that in that
+
+260
+00:46:23.700 --> 00:46:24.690
+Peter Rushforth: Package right there.
+
+261
+00:46:26.220 --> 00:46:47.730
+Peter Rushforth: And the that leads to the discussion of quadri composite tiling and the standardization of tiling and which Satoru son has applied the techniques of SVG map to use adaptive quad tree tiling to vector. Vector information which is
+
+262
+00:46:49.980 --> 00:47:04.140
+Peter Rushforth: Which is efficient very efficient and and so for for raster data standard file system seem to make more sense plus or minus the different API's that are are
+
+263
+00:47:06.270 --> 00:47:14.310
+Peter Rushforth: Are used to access them. But for vector data because vector data is meant to be efficient. A an adaptive tiling system.
+
+264
+00:47:15.690 --> 00:47:25.800
+Peter Rushforth: Has real performance benefits. So I urge everyone to read those two papers and provide feedback and commentary too subtle her son and his colleague
+
+265
+00:47:27.360 --> 00:47:27.780
+Peter Rushforth: Who's
+
+266
+00:47:29.430 --> 00:47:39.780
+Peter Rushforth: Links are here to their GitHub profiles, but there there are discourse entry for they're talking the agenda is in the agenda. So that's all. Thank you.
+
+267
+00:47:46.440 --> 00:47:54.270
+Amelia Bellamy-Royds: Thank you Peter for the introduction. Do you have anything to add the tech examiner just that we should read the papers.
+
+268
+00:47:59.040 --> 00:48:01.200
+Amelia Bellamy-Royds: Well, we've all got the papers and
+
+269
+00:48:02.490 --> 00:48:15.450
+Amelia Bellamy-Royds: The links are in get her and in discourse, I think, then we will take 10 minutes to catch up on that and then start back up with our new theme and panel.
+
+270
+00:48:23.250 --> 00:48:25.320
+Amelia Bellamy-Royds: cardigan. Take it away.
+
+271
+00:48:27.030 --> 00:48:32.820
+Doug Schepers: Great. Hi everyone, welcome back. Thank you so much for joining.
+
+272
+00:48:34.140 --> 00:48:36.630
+Doug Schepers: Next up is our internationalization and security.
+
+273
+00:48:37.740 --> 00:48:44.820
+Doug Schepers: Presentation and following will have 30 minutes to talks in 30 minutes and following that we will have
+
+274
+00:48:45.540 --> 00:48:54.690
+Doug Schepers: Our world, our panel, which is worldwide web maps challenges in the global context. So with no further ado, I'd like to welcome Brendan do
+
+275
+00:48:55.320 --> 00:49:06.810
+Doug Schepers: Who is going to be talking to us today about multilingual text rendering and Brendan is the geospatial software engineer from. No, I'm sorry. He's a
+
+276
+00:49:07.380 --> 00:49:18.930
+Doug Schepers: He's the creator of proto maps. It's just a new international internationalisation focused system for maps on the web. He's been working on map rendering and data tools where they did the Open Street Map project since 2013
+
+277
+00:49:20.040 --> 00:49:21.330
+Doug Schepers: He also created a
+
+278
+00:49:22.500 --> 00:49:31.710
+Doug Schepers: Dot NYC a Web Map based viewer for historical street views and New York. Which sounds really cool ready to take it away. Click Brandon, take it away, please.
+
+279
+00:49:32.910 --> 00:49:38.100
+Brandon Liu: Awesome. I'm going to try to share my screen right now. So please tell me if that's working.
+
+280
+00:49:42.570 --> 00:49:43.050
+Brandon Liu: Oops.
+
+281
+00:49:46.530 --> 00:49:47.730
+Brandon Liu: It's one window at a time.
+
+282
+00:49:49.770 --> 00:49:50.550
+Brandon Liu: Are you able to see that.
+
+283
+00:49:50.790 --> 00:49:51.720
+Doug Schepers: This weekend. Thank you.
+
+284
+00:49:51.810 --> 00:49:55.410
+Brandon Liu: Well, telling you will text rendering. Awesome. I'll get started then.
+
+285
+00:49:56.460 --> 00:50:06.060
+Brandon Liu: So hi, everyone. I'm Brandon, I'm going to talk about multi lingual text. That doesn't sound initially like it has a lot to do with maps, but I'm going to explain more about that in just a moment.
+
+286
+00:50:07.980 --> 00:50:09.000
+Brandon Liu: So why text.
+
+287
+00:50:10.110 --> 00:50:10.860
+Brandon Liu: I know this.
+
+288
+00:50:12.000 --> 00:50:15.450
+Brandon Liu: Topic this conference is mostly about not that I'll
+
+289
+00:50:16.800 --> 00:50:27.180
+Brandon Liu: I'm going to try to go a little bit outside of that scope for this short presentation and talk really about the essence of a map. So in my mind map has geometry.
+
+290
+00:50:27.990 --> 00:50:35.640
+Brandon Liu: In some coordinate system, but it also has textural properties. This might be a data associated with that features. It might be a nap labels even
+
+291
+00:50:36.960 --> 00:50:45.600
+Brandon Liu: So even if things like putting labels onto maps are outside the scope of not the mill text is so essential to what a map is that is worthy of forward thinking
+
+292
+00:50:46.320 --> 00:50:56.670
+Brandon Liu: And you might think about this like if you have a vector data set and you want to render it in the browser, you have to show the texts in some way, whether that's canvas or SVG or some or some fashion.
+
+293
+00:50:57.960 --> 00:50:59.880
+Brandon Liu: And then why do I care about this a little bit about me.
+
+294
+00:51:01.140 --> 00:51:02.850
+Brandon Liu: I work mainly with LSTM
+
+295
+00:51:03.960 --> 00:51:12.720
+Brandon Liu: Right now my projects are mainly focused on East Asia, which is going to be relevant to this talk. I'm building a new web API called proto maps. It uses the data set.
+
+296
+00:51:13.650 --> 00:51:23.250
+Brandon Liu: One interesting thing about OSM. It has a wealth of multilingual content. So it started in the UK in the 2000s, but it's now a truly global project.
+
+297
+00:51:24.630 --> 00:51:30.450
+Brandon Liu: And I also want to say for this short presentation, it's going to have a very narrow focus on one or Chinese script.
+
+298
+00:51:31.110 --> 00:51:44.460
+Brandon Liu: Which is only one part of global text. So I'm not going to get into, you know, text that goes right to left or South Asian scripts, for example. Now that's a huge topic, but I'm only going to focus on one very narrow thing.
+
+299
+00:51:46.290 --> 00:51:55.380
+Brandon Liu: So sort of following the map ML proposed markup for data sets. I wanted to use this as sort of the illustrating example.
+
+300
+00:51:56.490 --> 00:52:06.030
+Brandon Liu: Which is a data set that has two features to point features. One of them is Hong Kong, and one of them is Mina, to which is especially especially municipality and Tokyo.
+
+301
+00:52:06.720 --> 00:52:19.710
+Brandon Liu: These are just two point features and you can see they have like a lot longer long lat they have some properties, which is the name in the native script and the population as a number
+
+302
+00:52:21.090 --> 00:52:26.130
+Brandon Liu: So this is like a pretty basic data set, you know, just as simple as it can get
+
+303
+00:52:27.570 --> 00:52:35.610
+Brandon Liu: And how might have luck on a map. So I just made, you know, sort of these absolutely position does on an HTML page.
+
+304
+00:52:36.840 --> 00:52:53.340
+Brandon Liu: That puts you know geez place names and data onto the map. And even if you don't read Chinese or Japanese. You might notice something interesting about this map, which is that these two characters are very similar. So the second character in Hong Kong and the first character here.
+
+305
+00:52:55.050 --> 00:52:59.520
+Brandon Liu: And the interesting thing about this is that these are actually the same Unicode code point
+
+306
+00:53:01.470 --> 00:53:04.680
+Brandon Liu: So the design of Unicode is such that
+
+307
+00:53:05.700 --> 00:53:19.200
+Brandon Liu: There's a range of character is called the Cj K Chinese, Japanese, and Korean unified radiographs and these are glyphs or not really glyphs, but these are characters that were that were unified between the different languages.
+
+308
+00:53:20.880 --> 00:53:25.170
+Brandon Liu: So there's no way in the data set actually know that one of them is
+
+309
+00:53:28.380 --> 00:53:35.310
+Brandon Liu: It should be rather than the Chinese style and the other one should be under the like in the Japanese style. On the left here, you can see that there is a slight difference between these two characters.
+
+310
+00:53:37.080 --> 00:53:46.290
+Brandon Liu: And these aren't really cherry picked like this. These variations are quite pervasive, especially in geographic data where certain components of characters.
+
+311
+00:53:46.770 --> 00:53:56.880
+Brandon Liu: Have different conventions and how they're written and Unicode was designed to be legible to users where if you see a variant that is from a different region.
+
+312
+00:53:57.780 --> 00:54:11.010
+Brandon Liu: It should make sense, but it is not really how it's written in that locale. And the other thing I want to say is that place names are proper nouns. And people might be more sensitive to how these are vendor that just body texts on the web.
+
+313
+00:54:12.570 --> 00:54:26.040
+Brandon Liu: And my main central point in this presentation is to push this idea that maps are inherently multilingual, they're not edge cases like I'm I think of documents on the web as being multilingual in some cases like for
+
+314
+00:54:27.210 --> 00:54:40.890
+Brandon Liu: No language education or for travel. But I think the special thing about maps is multilingual taxes inherent to any map that you know goes beyond just one national boundary of, for example,
+
+315
+00:54:42.960 --> 00:54:46.740
+Brandon Liu: So web standards have a lot of things to say about multilingual content.
+
+316
+00:54:47.940 --> 00:54:58.050
+Brandon Liu: There's a link in this article or there's a link in his presentation to this article. That's why use the language attribute. So in HTML text.
+
+317
+00:54:59.280 --> 00:55:09.390
+Brandon Liu: You can add a lang attribute which has it BCP 47 language tag to, you know, the top of the DOM, or even to any element within the DOM.
+
+318
+00:55:09.960 --> 00:55:16.020
+Brandon Liu: So you can have an individual span or div of text and that has a language attribute that will control how that Texas rendered
+
+319
+00:55:16.890 --> 00:55:29.130
+Brandon Liu: So there's a very powerful solution that HTML already offers, which is to have the element level link attributes and this is this kind of localization for text is supported directly by markup.
+
+320
+00:55:30.330 --> 00:55:41.040
+Brandon Liu: And also language attributes are needed for accessibility. If you wanted to have a screen reader, for example, that would pronounce text in a language. You need to know or have some tag about what spoken language.
+
+321
+00:55:41.460 --> 00:55:46.470
+Brandon Liu: Is associated with that text. This is especially important for Chinese, Japanese, and Korean
+
+322
+00:55:49.290 --> 00:56:06.420
+Brandon Liu: So overall, there is this sort of tension between the document view of the world like HTML where documents have a language time versus maps, which is sort of a wild west different standards are different libraries and you can see on the web, some
+
+323
+00:56:07.770 --> 00:56:10.860
+Brandon Liu: Some map services they have only one version for the entire world.
+
+324
+00:56:12.270 --> 00:56:20.460
+Brandon Liu: And if they're rendered on the client side they might still display the local name of a place. And I think that's sort of like a good on target.
+
+325
+00:56:20.910 --> 00:56:33.780
+Brandon Liu: For globalization, like if you have a map service in Japan, for example that shows that says Tokyo Bay, like Google Maps here, you still have the native language on the map, even for English speakers or
+
+326
+00:56:34.890 --> 00:56:40.140
+Brandon Liu: Or users of the website that are using English. And I think that's like sort of a good convention that we have
+
+327
+00:56:41.520 --> 00:56:46.050
+Brandon Liu: So what's the state of these localization issues on web maps right now.
+
+328
+00:56:47.940 --> 00:56:53.460
+Brandon Liu: Firstly, do graphics elements in HTML like SVG or Canvas support element level language tagging.
+
+329
+00:56:54.600 --> 00:57:08.790
+Brandon Liu: How about web apps. In general, if I go to, you know, like a leaflet hard Web Map or a matte box GL or a veteran map are these language issues solves efficiently. And how does this relate to web standards.
+
+330
+00:57:11.820 --> 00:57:12.780
+Brandon Liu: For SVG.
+
+331
+00:57:13.860 --> 00:57:22.320
+Brandon Liu: I can sort of recreated that same HTML map with an SVG elements and you can see here that Safari, which I'm using right now does not actually handle this.
+
+332
+00:57:24.330 --> 00:57:28.200
+Brandon Liu: So you can see that these two characters are rendered the exact same way for different languages.
+
+333
+00:57:29.520 --> 00:57:43.890
+Brandon Liu: You can see the code on the top here. It's to text elements and actually the only major browser to support element level language rendering is Firefox and Safari, Chrome and edge on they just, you know, they default to
+
+334
+00:57:45.360 --> 00:57:46.380
+Brandon Liu: One language or the other.
+
+335
+00:57:48.150 --> 00:57:51.780
+Brandon Liu: Canvas, for example, doesn't really have any localization features.
+
+336
+00:57:52.920 --> 00:57:58.590
+Brandon Liu: There's no way to specify a language when you are saying this, this run of text.
+
+337
+00:58:00.270 --> 00:58:12.030
+Brandon Liu: In canvas is is global, you know, there's sort of this global thought property and you don't have any control over the language, there is some proposals on enhancements to the canvas standards to make this work.
+
+338
+00:58:14.790 --> 00:58:24.060
+Brandon Liu: Have a server rendered maps like if you're using that that aisle and you wanted to bring in a raster tiles layer, sort of like you would use leaflet for right now.
+
+339
+00:58:25.200 --> 00:58:27.900
+Brandon Liu: It's sort of someone else's problem on the server side.
+
+340
+00:58:29.460 --> 00:58:30.000
+Brandon Liu: There.
+
+341
+00:58:31.320 --> 00:58:44.250
+Brandon Liu: Most common is to use a library like map Nick to render maps and even map Nick right now does not have great support for these locale variants, this is something I'm actively working on, for example, Open Street Map. The main
+
+342
+00:58:45.570 --> 00:58:47.670
+Brandon Liu: Like main tile set called us I'm carbo
+
+343
+00:58:49.050 --> 00:58:54.690
+Brandon Liu: Sort of defaults to Japanese variants for Chinese place names, which is not ideal, something that can be improved.
+
+344
+00:58:56.640 --> 00:59:00.540
+Brandon Liu: But how about client vendor maps so client, like most state of the art.
+
+345
+00:59:01.710 --> 00:59:07.260
+Brandon Liu: Map vendors that are done in Web GL day sort of skip this problem completely by shipping their own stack.
+
+346
+00:59:08.250 --> 00:59:12.690
+Brandon Liu: They sign distance fields which are really good for performance that can be scaled infinitely rotated.
+
+347
+00:59:13.620 --> 00:59:22.860
+Brandon Liu: But this approach has very little in common with web standards and it doesn't really reach parity for some scripts such a South Asian scripts.
+
+348
+00:59:23.340 --> 00:59:31.410
+Brandon Liu: These that render is don't really do a great job. The visual fidelity has some trade offs. If you're rendering complex character is like Chinese characters.
+
+349
+00:59:32.640 --> 00:59:36.630
+Brandon Liu: So I think that web standards have a lot of potential to improve the state of the art.
+
+350
+00:59:37.440 --> 00:59:53.280
+Brandon Liu: And you can see this in some hybrid app libraries. The one I'm focused mainly on right now is called 10 grams, as it was a map sent project and now is by Linux Foundation, but it uses web standard text it renders text to Canvas first move that to the GPU and shows them on the map.
+
+351
+00:59:54.510 --> 01:00:04.980
+Brandon Liu: There's some performance trade offs here. You can resize text, and I know open layers. It's a similar design. I'm working on a new library got put them up yesterday, which is better rendering for leaflet.
+
+352
+01:00:06.780 --> 01:00:11.010
+Brandon Liu: In all these cases off screen campus would be important to make these faster.
+
+353
+01:00:14.400 --> 01:00:21.060
+Brandon Liu: As an aside, HTML is video which we've talked about as sort of analog for making maps work well on the web.
+
+354
+01:00:22.080 --> 01:00:25.290
+Brandon Liu: Has an accompanying standard called Web EDT for subtitles.
+
+355
+01:00:26.310 --> 01:00:35.040
+Brandon Liu: Subtitles are exactly this, this problem, which is how to present texts on the web. And you can see here, I just have a video in this presentation.
+
+356
+01:00:35.670 --> 01:00:42.300
+Brandon Liu: And I put in these characters one veteran attempted to be better than Chinese one in Japanese style and it doesn't really handle that.
+
+357
+01:00:43.200 --> 01:01:00.150
+Brandon Liu: This does, however, working Firefox. So web VTT has explicit element called Q language spans to mark up different languages inside of the subtitles and that is implemented and consistently across browsers, but it is part of that markup standard
+
+358
+01:01:01.710 --> 01:01:02.790
+Brandon Liu: I'm running out of time.
+
+359
+01:01:04.200 --> 01:01:15.360
+Brandon Liu: In conclusion, my main point is that multi language or multi strip maps should not be treated as edge cases, we should think about multilingual out of the box for for for all not standards on the web.
+
+360
+01:01:17.340 --> 01:01:26.400
+Brandon Liu: text documents on the web with HTML. Have a good solution right now element level languages. This has potential to improve the state of the art for web apps.
+
+361
+01:01:27.750 --> 01:01:36.780
+Brandon Liu: ethical standards or anything that is responsible for a presentation to the user, whether that's SVG, Canvas video or a bad element should have those capabilities as well.
+
+362
+01:01:38.550 --> 01:01:45.330
+Brandon Liu: So you can find me via email or Twitter Brandon output of apps com or beat on on Twitter, that's all I have. Thank you.
+
+363
+01:01:49.980 --> 01:01:50.670
+Doug Schepers: Fantastic.
+
+364
+01:01:54.360 --> 01:01:56.850
+Doug Schepers: Thank you so much, Brandon, I'm
+
+365
+01:01:59.370 --> 01:02:08.730
+Doug Schepers: Really a complex issue dealing with languages, especially when when Unicode sir folded them all into one block.
+
+366
+01:02:09.840 --> 01:02:11.250
+Doug Schepers: Maybe that was a mistake.
+
+367
+01:02:12.600 --> 01:02:26.640
+Doug Schepers: We do have a quick question. How, how can we support the same label but multiple languages and offer the choice. I assume that the question is to offer the choice to the user to to to pick one of the labels.
+
+368
+01:02:28.320 --> 01:02:38.970
+Brandon Liu: I think that would require mapping libraries to have some notion of user language or it would need to be inferred from the user agent, but then that gets into very tricky issues, like for example.
+
+369
+01:02:42.180 --> 01:02:52.320
+Brandon Liu: One common feature is for map labels to be sort of Roman eyes are transliterated into line characters for non line scripts and those would be common among different
+
+370
+01:02:53.520 --> 01:03:01.050
+Brandon Liu: Sort of light and using languages. So you might need to have some kind of tree or fallback language that says if I'm browsing a map.
+
+371
+01:03:01.860 --> 01:03:20.010
+Brandon Liu: In France at a has an English alternative label set. Should I show the English one instead of French one. If I don't have French, for example, and I think he gets into a very tricky subset of questions that maybe web standards is not prepared to have a complete solution.
+
+372
+01:03:21.720 --> 01:03:24.570
+Doug Schepers: Excellent. Thank you so much. That's very thoughtful answer.
+
+373
+01:03:26.100 --> 01:03:29.310
+Doug Schepers: And with that, it is time now to move on to our next presentation.
+
+374
+01:03:30.330 --> 01:03:36.750
+Doug Schepers: Thank you once again, Brandon. Excellent. Well done. So next we have a tie sprint Jen's
+
+375
+01:03:38.460 --> 01:03:44.490
+Doug Schepers: He is a geospatial Software Engineer He's from the Netherlands is specialized in open standards from the geospatial domain.
+
+376
+01:03:44.880 --> 01:03:57.750
+Doug Schepers: Develops applications based on those standards for Genova he has been active for several years and developing national profiles international standards has been contributing to the development of the inspire, which is a European infrastructure for spatial information.
+
+377
+01:03:58.770 --> 01:04:10.110
+Doug Schepers: In the Netherlands and internationally. He's also active in the field of web accessibility for the geospatial domain and for and usability and his presentation today is entitled
+
+378
+01:04:11.880 --> 01:04:16.890
+Doug Schepers: Excuse me, fuzzy geolocation Tice. Do you want to take it away. Yeah.
+
+379
+01:04:16.920 --> 01:04:17.640
+Thijs Brentjens (Geonovum, NL): Thank you, Doc.
+
+380
+01:04:19.050 --> 01:04:20.940
+Thijs Brentjens (Geonovum, NL): thanks all for this opportunity. I'll
+
+381
+01:04:21.000 --> 01:04:22.650
+Thijs Brentjens (Geonovum, NL): Try to share my screen now.
+
+382
+01:04:24.330 --> 01:04:27.060
+Let me see where my mouse is
+
+383
+01:04:29.310 --> 01:04:32.940
+Thijs Brentjens (Geonovum, NL): Please let me know if you're not able to see this.
+
+384
+01:04:33.870 --> 01:04:34.560
+Doug Schepers: Looks great.
+
+385
+01:04:35.040 --> 01:04:36.090
+Doug Schepers: looks right. Okay.
+
+386
+01:04:37.200 --> 01:04:39.420
+Doug Schepers: Oh my zoom meeting itself is not
+
+387
+01:04:40.500 --> 01:04:40.860
+That
+
+388
+01:04:42.240 --> 01:04:44.340
+Thijs Brentjens (Geonovum, NL): Okay. Just one moment please.
+
+389
+01:04:48.060 --> 01:04:53.730
+Thijs Brentjens (Geonovum, NL): I have a list of participants participants in my screen just in front of my slides so sorry for that.
+
+390
+01:04:55.290 --> 01:04:57.420
+Thijs Brentjens (Geonovum, NL): Need to close this down. Okay, there we are.
+
+391
+01:05:03.450 --> 01:05:04.050
+Thijs Brentjens (Geonovum, NL): Yes, thanks.
+
+392
+01:05:05.700 --> 01:05:09.810
+Thijs Brentjens (Geonovum, NL): Thanks for this opportunity. I'm going to talk about fussy geolocation and
+
+393
+01:05:10.890 --> 01:05:15.540
+Thijs Brentjens (Geonovum, NL): I hope this concept will be clear through my sheets.
+
+394
+01:05:17.880 --> 01:05:22.860
+Thijs Brentjens (Geonovum, NL): But first, before. I'm going to talk about this how we are going to do this in the digital age. I'd like to
+
+395
+01:05:24.060 --> 01:05:24.930
+Thijs Brentjens (Geonovum, NL): Give you a thought.
+
+396
+01:05:26.280 --> 01:05:27.900
+Thijs Brentjens (Geonovum, NL): In the age of analog maps.
+
+397
+01:05:29.940 --> 01:05:39.240
+Thijs Brentjens (Geonovum, NL): We were a user of a map was let's say he was alone, he or she was alone in looking at the map. And who else then this user knew exactly what the user was looking for on a map.
+
+398
+01:05:40.320 --> 01:05:50.550
+Thijs Brentjens (Geonovum, NL): And I think you can imagine now in this new digital age for maps and online resources, a lot of logging are tracking tracing can be done.
+
+399
+01:05:51.630 --> 01:05:55.020
+Thijs Brentjens (Geonovum, NL): Via user or what the user is doing so.
+
+400
+01:05:57.900 --> 01:06:08.730
+Thijs Brentjens (Geonovum, NL): The context for it for for this concept of fuzzy geolocation, is that we have found out that the digital applications use geolocation more and more. It's very valuable.
+
+401
+01:06:09.540 --> 01:06:21.330
+Thijs Brentjens (Geonovum, NL): Especially with with mobile applications, your location is one of the main let's say correct your six sometimes for your personal environment. If you're looking at some website or applications and
+
+402
+01:06:22.800 --> 01:06:28.380
+Thijs Brentjens (Geonovum, NL): But there. There may be there are many use cases where your geolocation your personal location.
+
+403
+01:06:29.670 --> 01:06:30.450
+Thijs Brentjens (Geonovum, NL): May also be
+
+404
+01:06:31.830 --> 01:06:45.810
+Thijs Brentjens (Geonovum, NL): It may not be that you wish that it is shared. For example, you want to use a Web Map and navigate to a doctor, you don't want to use your navigation system because you don't want some Technic company to trace you
+
+405
+01:06:46.950 --> 01:06:47.760
+Thijs Brentjens (Geonovum, NL): Or another one.
+
+406
+01:06:49.050 --> 01:06:53.730
+Thijs Brentjens (Geonovum, NL): A police officers investigation is investigating some area.
+
+407
+01:06:55.470 --> 01:07:00.840
+Thijs Brentjens (Geonovum, NL): You don't want to that, that this let's say extra attention is somehow unlocked somewhere.
+
+408
+01:07:02.160 --> 01:07:15.270
+Thijs Brentjens (Geonovum, NL): Because it might be a security risk at some point or might may compromise privacy and it may sound a bit far fetched, but but in the Netherlands, we have this we have had a very big debate on on
+
+409
+01:07:16.740 --> 01:07:36.420
+Thijs Brentjens (Geonovum, NL): Tracing apps and also that the geolocation was not allowed to be part of it because of fear of people that their personal geolocation would be stored somewhere on servers owned by the government. So even this this let's say this privacy awareness that that many users have nowadays.
+
+410
+01:07:38.370 --> 01:07:49.080
+Thijs Brentjens (Geonovum, NL): It puts us at for an extra that's an assignment. We have to do better in communicating our geolocation. So yes, I think we can do better. We should just not send
+
+411
+01:07:49.470 --> 01:07:58.920
+Thijs Brentjens (Geonovum, NL): An exact your location or area of interest to all kinds of online services, just like we have, for example, a privacy mode for for
+
+412
+01:07:59.970 --> 01:08:15.960
+Thijs Brentjens (Geonovum, NL): browser tabs or do not track me kind of things. And now it's very a binary you either provide your geolocation or you don't and but still if you are using online data services, your, your, the area you are interested in is still communicated over
+
+413
+01:08:17.010 --> 01:08:18.120
+Thijs Brentjens (Geonovum, NL): To service so
+
+414
+01:08:19.380 --> 01:08:22.620
+Thijs Brentjens (Geonovum, NL): I think, and this is an idea we have in within June Oldman
+
+415
+01:08:24.090 --> 01:08:26.490
+Thijs Brentjens (Geonovum, NL): Originating from the scope with 90 discussion as well.
+
+416
+01:08:28.050 --> 01:08:44.970
+Thijs Brentjens (Geonovum, NL): We should do better. And the thing is, how can we do it and I'm now going to present a sample. An example of an interaction veteran how we could maybe improve this, but I have a very either. I'd like to challenge you in sharing other ideas as well.
+
+417
+01:08:47.250 --> 01:08:53.550
+Thijs Brentjens (Geonovum, NL): So this is the most of the first geolocation. We have been talking now in July in Juneau from
+
+418
+01:08:55.110 --> 01:09:00.060
+Thijs Brentjens (Geonovum, NL): For example, as a user, I'd like to have a map around this specific location you see here.
+
+419
+01:09:03.150 --> 01:09:06.210
+Thijs Brentjens (Geonovum, NL): Very low mind at my house I
+
+420
+01:09:08.370 --> 01:09:13.170
+Thijs Brentjens (Geonovum, NL): Currently, that this location is directly sent to some
+
+421
+01:09:14.790 --> 01:09:20.670
+Thijs Brentjens (Geonovum, NL): To some online service. I'm getting a notice here that my internet connection is unstable is am I still
+
+422
+01:09:21.330 --> 01:09:21.660
+It's still
+
+423
+01:09:23.070 --> 01:09:23.220
+Badita Florin: It's
+
+424
+01:09:23.370 --> 01:09:25.440
+Doug Schepers: Fine look five k
+
+425
+01:09:25.830 --> 01:09:31.800
+Amelia Bellamy-Royds: The audio is breaking up a little so if you have any other apps in the background that
+
+426
+01:09:31.860 --> 01:09:34.890
+Thijs Brentjens (Geonovum, NL): closing them. So there's no there shouldn't be anything
+
+427
+01:09:35.550 --> 01:09:36.180
+Brian Kardell: Stopping your
+
+428
+01:09:36.630 --> 01:09:38.910
+Thijs Brentjens (Geonovum, NL): Job is that my children are looking a movie now but
+
+429
+01:09:40.080 --> 01:09:40.770
+Thijs Brentjens (Geonovum, NL): Sorry for that.
+
+430
+01:09:41.190 --> 01:09:41.760
+Brian Kardell: Maybe, maybe.
+
+431
+01:09:43.200 --> 01:09:45.570
+Doug Schepers: Twice. Maybe you can stop your video.
+
+432
+01:09:45.600 --> 01:09:45.870
+Yeah.
+
+433
+01:09:49.290 --> 01:09:51.870
+But otherwise, just go ahead. Ah.
+
+434
+01:09:53.430 --> 01:09:53.820
+OK.
+
+435
+01:09:56.400 --> 01:10:00.900
+Thijs Brentjens (Geonovum, NL): I hope my slides are skewed are cleared and okay, what we can do, instead of sending the the area.
+
+436
+01:10:01.260 --> 01:10:03.330
+Thijs Brentjens (Geonovum, NL): Of interest directly, we cannot also
+
+437
+01:10:03.360 --> 01:10:21.060
+Thijs Brentjens (Geonovum, NL): Change. Maybe the center of the map or enlarge the area or at random. Other areas. Before we engage other online services and use this kind of this kind of pattern to retrieve information from from API's and then with some post processing, go back to the end user and
+
+438
+01:10:22.890 --> 01:10:26.100
+Thijs Brentjens (Geonovum, NL): filter out only the relevant part for the end user.
+
+439
+01:10:28.320 --> 01:10:39.690
+Thijs Brentjens (Geonovum, NL): It puts a burden, a bit more on some API's are on our services. So we realized that, but as a thought that this might help in let's say we're putting more privacy, security or
+
+440
+01:10:41.220 --> 01:10:44.670
+Thijs Brentjens (Geonovum, NL): Or at least not compromise privacy that much and
+
+441
+01:10:46.500 --> 01:10:59.430
+Thijs Brentjens (Geonovum, NL): So this, this fuzzy this further fuzziness, it can be added by we think now into a two points, for example by a third party a broker, that adds all kinds of
+
+442
+01:11:00.120 --> 01:11:17.100
+Thijs Brentjens (Geonovum, NL): Smart algorithms or smart ways to add fuzziness and do all communication with all my services and it can also a broker can also provide additional services, for example, cash or other resources as when requests or maybe fake users.
+
+443
+01:11:18.270 --> 01:11:22.080
+Thijs Brentjens (Geonovum, NL): To to not make clear where you are at that point.
+
+444
+01:11:24.120 --> 01:11:35.820
+Thijs Brentjens (Geonovum, NL): Another approach might be that the mapping clients or maybe user agents or maybe in browsers themselves. There may be smarter ways of preparing quests before you engage online services.
+
+445
+01:11:37.110 --> 01:11:50.610
+Thijs Brentjens (Geonovum, NL): So these are some ideas we have now. And I'd like to conclude this with with an invitation to collaborate on this ID. I know this this community. I'm presenting for now is quite diverse
+
+446
+01:11:52.170 --> 01:11:56.340
+Thijs Brentjens (Geonovum, NL): And I hope that that many of you have ideas how we can
+
+447
+01:11:58.230 --> 01:12:04.980
+Thijs Brentjens (Geonovum, NL): Help or improve privacy and security for for these kind of geospatial applications.
+
+448
+01:12:06.810 --> 01:12:14.940
+Thijs Brentjens (Geonovum, NL): Our organization will will create a proof of concept and we will share all the resources, I will put them on this course as well put pointers to them.
+
+449
+01:12:15.900 --> 01:12:32.040
+Thijs Brentjens (Geonovum, NL): Will we will provide some juicy API's. If you're need them and you want to try some things for ourselves but but the main thing is I'd like to ask you to share your ideas, your criticism as well and and help us in improving this ID.
+
+450
+01:12:34.740 --> 01:12:45.390
+Thijs Brentjens (Geonovum, NL): I'll provide you my contact details later, we are also available to help. As I said, we will provide some urgency API is that you can use for testing or to demo the, the concept
+
+451
+01:12:46.590 --> 01:12:55.410
+Thijs Brentjens (Geonovum, NL): But if you need any other help, please contact us because we think that this community might be a very nice and powerful community and we'd like to
+
+452
+01:12:56.670 --> 01:13:00.840
+Thijs Brentjens (Geonovum, NL): Get the bring this further together so
+
+453
+01:13:02.430 --> 01:13:08.760
+Thijs Brentjens (Geonovum, NL): That's about what I'd like to talk to you about first geolocation privacy. I hope my message came across
+
+454
+01:13:10.440 --> 01:13:12.240
+Thijs Brentjens (Geonovum, NL): And that it was not disturb too much.
+
+455
+01:13:13.500 --> 01:13:15.150
+Thijs Brentjens (Geonovum, NL): And I hope to hear from you.
+
+456
+01:13:17.970 --> 01:13:29.640
+Doug Schepers: Thank you. Nice. Nice. That was a really interesting presentation that I, I didn't have. I was able to see everything. Fine. I don't think you need to worry. I
+
+457
+01:13:30.900 --> 01:13:50.190
+Doug Schepers: This I have this reminds me of things like Tor and other sort of obfuscation techniques that have been used in non map tech a map domains. So it seems sensible to me. Uh, let's see if there are any questions, um,
+
+458
+01:13:51.930 --> 01:13:52.920
+Doug Schepers: Let's see.
+
+459
+01:13:54.030 --> 01:14:07.740
+Doug Schepers: What is the path that you recommend to see this done, should there be an OTC geolocation prize privacy slice fuzzy API should maybe maybe be something in W three. See, I know the WCC tackled this
+
+460
+01:14:08.340 --> 01:14:21.720
+Doug Schepers: Or tackled some of the controversy here when they, when they added the Geolocation API to the browser. So how do you, what do you think that the path forward is do you think this is something goes in the browser. Do you think this is a protocol thing.
+
+461
+01:14:21.750 --> 01:14:23.100
+What do you think, good question.
+
+462
+01:14:24.480 --> 01:14:40.860
+Thijs Brentjens (Geonovum, NL): In fact, I don't know yet. I think one of the things that we need to find out what's the appropriate place or the way to tackle this. But it might not be discussion whether we should do it either in browser or using some kind of other protocol. It might be an end as well.
+
+463
+01:14:44.430 --> 01:14:56.430
+Thijs Brentjens (Geonovum, NL): I think for the, let's say, the maximum reach out. I think it would be best if browsers would support some kind of some some kind of pattern to to
+
+464
+01:14:57.330 --> 01:15:07.380
+Thijs Brentjens (Geonovum, NL): Do at this fuzziness geolocation, but I can imagine that for some organizations they are looking for other security measures and they will have their own
+
+465
+01:15:09.180 --> 01:15:11.130
+Thijs Brentjens (Geonovum, NL): Let's say their own brokers themselves.
+
+466
+01:15:11.490 --> 01:15:11.820
+Doug Schepers: Hmm.
+
+467
+01:15:11.910 --> 01:15:18.000
+Thijs Brentjens (Geonovum, NL): Be sure that they are in control of what is sent to other services. So let's find out together. I'd say, but
+
+468
+01:15:19.380 --> 01:15:33.630
+Doug Schepers: Some someone else notes that asked a question. Could it be could user agent provide this in a privacy in a private map mode. In other words, in an incognito mode, could they, they could communicate that. So maybe it doesn't.
+
+469
+01:15:36.060 --> 01:15:43.050
+Doug Schepers: It isn't an always on things. So it doesn't always do the but if you're doing a something like tour, for example.
+
+470
+01:15:43.650 --> 01:15:57.180
+Doug Schepers: If there are enough queries. Could you actually aggregate them through a third party and sort of allocates allocate who gets what information based on this aggregation, sort of like the multiple users doing that.
+
+471
+01:15:58.260 --> 01:15:58.830
+Doug Schepers: On
+
+472
+01:16:00.390 --> 01:16:02.130
+Doug Schepers: I didn't friend that as a question. Do you want to
+
+473
+01:16:03.210 --> 01:16:05.400
+Thijs Brentjens (Geonovum, NL): The said, I think.
+
+474
+01:16:05.490 --> 01:16:07.440
+Thijs Brentjens (Geonovum, NL): Very powerful options will be in
+
+475
+01:16:07.470 --> 01:16:08.400
+Thijs Brentjens (Geonovum, NL): If we use
+
+476
+01:16:10.050 --> 01:16:11.250
+Thijs Brentjens (Geonovum, NL): Let's say broker somehow
+
+477
+01:16:11.730 --> 01:16:24.060
+Thijs Brentjens (Geonovum, NL): Yeah, because then we can add some all kinds of additional services, we can, you can, if you do it in a user agent. There's always the trigger event coming from a user agent and if you do it using some kind of a broker. You can even add
+
+478
+01:16:25.140 --> 01:16:26.640
+Thijs Brentjens (Geonovum, NL): That's what I meant with fake users.
+
+479
+01:16:27.120 --> 01:16:27.480
+Doug Schepers: Yeah.
+
+480
+01:16:27.540 --> 01:16:27.930
+Doug Schepers: Yeah yeah
+
+481
+01:16:27.960 --> 01:16:39.780
+Thijs Brentjens (Geonovum, NL): If you are not using it, you can still interact a service or you can do caching or, you know, with all these more modern API's and vector tiles, it's, it, it may be easier to build such a system.
+
+482
+01:16:41.280 --> 01:16:43.260
+Doug Schepers: That's great. That's really, really.
+
+483
+01:16:43.290 --> 01:16:44.820
+Thijs Brentjens (Geonovum, NL): What's your fault. It's not
+
+484
+01:16:47.100 --> 01:16:49.080
+Doug Schepers: Well, again, everyone, uh,
+
+485
+01:16:51.030 --> 01:16:55.650
+Doug Schepers: Both Tyson and Brandon ask you to reach out to them so
+
+486
+01:16:55.650 --> 01:17:06.990
+Doug Schepers: If this is a topic that interests you, please make sure to talk about it in our various channels for the workshop, but also reach out to them directly. And we'll
+
+487
+01:17:07.860 --> 01:17:18.330
+Doug Schepers: Hopefully some good things will happen from from the presentations both really great presentations. Thank you so much. And I'm going to have the pleasure of joining you
+
+488
+01:17:19.500 --> 01:17:23.040
+Doug Schepers: Having you join me again. We're going to start the panel now.
+
+489
+01:17:24.690 --> 01:17:27.330
+Doug Schepers: So the panel today is called
+
+490
+01:17:29.070 --> 01:17:34.950
+Doug Schepers: World Wide Web maps challenges in the global context. And I'm going to reintroduce
+
+491
+01:17:36.120 --> 01:17:43.860
+Doug Schepers: Brandon and Tice. And there's two other participants as well SIVA and Nicholas and so
+
+492
+01:17:45.240 --> 01:17:47.490
+Doug Schepers: Let's get started right now if that's all right.
+
+493
+01:17:49.290 --> 01:17:49.950
+Doug Schepers: So,
+
+494
+01:17:51.390 --> 01:18:00.690
+Doug Schepers: Let's start with ties ties, you're already here. Again, Tyson geospatial software engineer from the Netherlands, he specialized in open standards and the geospatial domain.
+
+495
+01:18:01.110 --> 01:18:05.580
+Doug Schepers: And developing applications based on the standards for genome. He's been active for several years in developing
+
+496
+01:18:05.820 --> 01:18:15.120
+Doug Schepers: National profiles of international standards and he's been contributing to the development of inspire, which is the European infrastructure for spatial information in the Netherlands and internationally.
+
+497
+01:18:15.600 --> 01:18:23.190
+Doug Schepers: Is also active in the fields of web accessibility and usability in the geospatial domain. So taste you want to give us
+
+498
+01:18:24.270 --> 01:18:27.510
+Doug Schepers: Any additional words you seem to be frozen.
+
+499
+01:18:29.220 --> 01:18:30.750
+Doug Schepers: Or help us now.
+
+500
+01:18:31.200 --> 01:18:31.440
+Thijs Brentjens (Geonovum, NL): Nope.
+
+501
+01:18:31.470 --> 01:18:32.970
+Doug Schepers: You're frozen Frozen. Now go ahead
+
+502
+01:18:34.920 --> 01:18:37.530
+Thijs Brentjens (Geonovum, NL): Oh, okay. Oh, additional words.
+
+503
+01:18:44.160 --> 01:18:45.240
+That's my video minutes better
+
+504
+01:18:46.770 --> 01:18:47.340
+Doug Schepers: That's better.
+
+505
+01:18:52.650 --> 01:18:55.380
+Doug Schepers: Choice. Do you have any other anything else to say about what you're doing.
+
+506
+01:18:58.230 --> 01:18:58.650
+Thijs Brentjens (Geonovum, NL): Oh, no.
+
+507
+01:18:59.670 --> 01:19:02.190
+Thijs Brentjens (Geonovum, NL): No, I'm not saying nothing else to add, for now. No.
+
+508
+01:19:02.610 --> 01:19:04.140
+Doug Schepers: Okay. Great. Thanks. Okay.
+
+509
+01:19:05.670 --> 01:19:07.620
+Doug Schepers: So to reintroduce Brandon
+
+510
+01:19:08.850 --> 01:19:13.290
+Doug Schepers: Brandon is the creator of proto maps, which is an internationalization focus system for maps on the web.
+
+511
+01:19:13.680 --> 01:19:20.370
+Doug Schepers: He's been working on a map rendering and Data Tools related to the Open Street Map projects, since 2013. He also created
+
+512
+01:19:21.180 --> 01:19:32.370
+Doug Schepers: That's eight zero s dot NYC a Web Map. The viewer for historical street views of New York and granted you want to say anything more about what you're working on right now.
+
+513
+01:19:34.680 --> 01:19:35.970
+Brandon Liu: I'm going to have anything, Dad. Thanks.
+
+514
+01:19:36.750 --> 01:19:53.790
+Doug Schepers: Okay. Wonderful. Okay, next we have SIVA pet aponte SIVA is a software developer working with a focus on mapping visualization building desktop applications and and make mapping services on the server.
+
+515
+01:19:55.140 --> 01:20:07.860
+Doug Schepers: He works with design and development OTC related mapping services in desktop clients REST based services and clients and web maps stored as documents online tools by various platforms.
+
+516
+01:20:09.300 --> 01:20:10.590
+Doug Schepers: See both. Can you say hi.
+
+517
+01:20:11.760 --> 01:20:12.150
+Siva: Hey,
+
+518
+01:20:13.680 --> 01:20:15.120
+Siva: Hi everybody. Can you hear me.
+
+519
+01:20:16.050 --> 01:20:17.760
+Doug Schepers: Yep, we can hear me fine. Good.
+
+520
+01:20:18.000 --> 01:20:26.460
+Doug Schepers: Thanks. I was just told that my internet connection is unstable if I drop off. Y'all know the questions so
+
+521
+01:20:28.440 --> 01:20:30.930
+Doug Schepers: And Brent and I also sent them to
+
+522
+01:20:31.890 --> 01:20:33.150
+Doug Schepers: Peter rush forth and
+
+523
+01:20:33.150 --> 01:20:36.720
+Doug Schepers: Hopefully if if something happens to my connection. Peter can can step up.
+
+524
+01:20:38.700 --> 01:20:42.630
+Doug Schepers: And finally, we have Nicholas Palomino Nicholas is relatively new to mapping
+
+525
+01:20:43.410 --> 01:20:50.820
+Doug Schepers: Is more focused on the subsystems underlying the development of web maps and the utility for the industrial and for industrial uses like
+
+526
+01:20:51.150 --> 01:21:00.870
+Doug Schepers: Big data manipulation and observation advanced analytics and AI integration and other upcoming telecommunications technologies for planetary observation and beyond.
+
+527
+01:21:02.040 --> 01:21:03.390
+Doug Schepers: Nicholas. Do you want to say hi.
+
+528
+01:21:05.340 --> 01:21:05.610
+Doug Schepers: Yeah.
+
+529
+01:21:06.030 --> 01:21:06.390
+Hello.
+
+530
+01:21:07.590 --> 01:21:07.890
+Okay.
+
+531
+01:21:08.970 --> 01:21:11.760
+Doug Schepers: All right. Wonderful. Um, hey y'all.
+
+532
+01:21:12.870 --> 01:21:15.300
+Doug Schepers: Excellent. Let's go ahead and get started.
+
+533
+01:21:17.070 --> 01:21:19.080
+Doug Schepers: The first question we have is,
+
+534
+01:21:20.490 --> 01:21:33.690
+Doug Schepers: Oh, GC and WPC have spatial data on the web, best practices, you know, DC is very actively working on new API specifications. It could facilitate better publication and easier. Use of geospatial data.
+
+535
+01:21:34.560 --> 01:21:45.480
+Doug Schepers: But that's the theory. How do you think we put this in practice on active projects and y'all can just jump in everybody's free to answer the question.
+
+536
+01:21:47.280 --> 01:21:49.530
+Doug Schepers: Do we want to start with maybe a
+
+537
+01:21:51.120 --> 01:21:51.810
+Doug Schepers: Tice.
+
+538
+01:21:52.770 --> 01:21:53.760
+Thijs Brentjens (Geonovum, NL): Yeah, well,
+
+539
+01:21:55.530 --> 01:22:00.810
+Thijs Brentjens (Geonovum, NL): I think this is an interesting one because on the one end you say these API's are quite new and
+
+540
+01:22:03.000 --> 01:22:11.790
+Thijs Brentjens (Geonovum, NL): There might be large interest, but what we see currently in at least in Ireland says that there's not that much interest in really implementing them because of legacy constraints.
+
+541
+01:22:12.390 --> 01:22:27.210
+Thijs Brentjens (Geonovum, NL): One driver could have been that on the European level, we have a law prescribing, what kind of technology to use to exchange information between countries, and I don't know if this is solutions, but this might be
+
+542
+01:22:28.950 --> 01:22:36.870
+Thijs Brentjens (Geonovum, NL): I think one of the aspects, is that too, especially for governmental organizations, we might need stronger policy on using API's.
+
+543
+01:22:38.130 --> 01:22:51.420
+Thijs Brentjens (Geonovum, NL): Knowledge that I think there are many challenges there but that's one of the things I'd like to propose and of course doing experiments in life environments. But that requires organizations. Okay, of course, are set up.
+
+544
+01:22:53.550 --> 01:22:56.280
+Doug Schepers: SIVA Nicholas Brandon, any thoughts.
+
+545
+01:22:59.280 --> 01:23:00.120
+Siva: I'd like to pass.
+
+546
+01:23:00.780 --> 01:23:02.490
+Doug Schepers: Okay, Nicholas
+
+547
+01:23:04.350 --> 01:23:05.370
+Nicolas: I just want to
+
+548
+01:23:05.790 --> 01:23:08.280
+Doug Schepers: Okay, great. Brandon, you have any thoughts on this.
+
+549
+01:23:08.940 --> 01:23:09.360
+Yeah.
+
+550
+01:23:11.130 --> 01:23:24.360
+Brandon Liu: I think one interesting thing about sort of spatial especially for open source spatial is that that I know landscape. Really, it's not that large like a lot of sort of developers are working with post jus
+
+551
+01:23:26.100 --> 01:23:38.460
+Brandon Liu: And to have or fun sort of a reference implementation or a driver for some of these majors special projects, things like purchase that encourages or yeah um and also doodle.
+
+552
+01:23:39.930 --> 01:23:50.250
+Brandon Liu: I think is having a good implementation that makes it into, you know, like a release has a big impact.
+
+553
+01:23:51.240 --> 01:24:00.450
+Brandon Liu: So I think like, it's sort of an advantage that it's not like JavaScript frameworks, where you know there's 101 you know there's a new JavaScript hammer coming out every day.
+
+554
+01:24:01.050 --> 01:24:13.110
+Brandon Liu: I think a lot of this sort of open source spatial world is quite stable. So having a reference implementation in those is a pretty reasonable target. Okay, great. Yeah.
+
+555
+01:24:13.140 --> 01:24:15.510
+Doug Schepers: That makes a lot of sense. Oops. Stop.
+
+556
+01:24:19.050 --> 01:24:19.530
+Doug Schepers: Okay.
+
+557
+01:24:22.560 --> 01:24:24.660
+Doug Schepers: Apologies. I'm just timing, you
+
+558
+01:24:25.980 --> 01:24:29.880
+Doug Schepers: And my clock window and you had a perfect timing.
+
+559
+01:24:32.190 --> 01:24:39.990
+Doug Schepers: Okay. So the second question I have is, there are many localization features of maps that would benefit from browser support.
+
+560
+01:24:40.380 --> 01:24:53.370
+Doug Schepers: Some examples are the ability to produce place names and the writing system that the user can use as we saw earlier and Brandon's presentation design me or authoring a multilingual map based on the locale.
+
+561
+01:24:54.450 --> 01:25:05.550
+Doug Schepers: Handling dynamic formatting of numeric or time related data and other interesting cartographic practices from around the world that aren't yet widespread in digital mapmaking like vertical text.
+
+562
+01:25:06.330 --> 01:25:19.230
+Doug Schepers: Which is supported in some aspects in in the web. But how often is it using web mapping. So what should web browsers and web standards do to provide solutions. I'd like to start with Seba here.
+
+563
+01:25:24.900 --> 01:25:25.890
+Doug Schepers: See if any thoughts.
+
+564
+01:25:27.750 --> 01:25:29.130
+Siva: Can you hear, can you hear me. Yeah.
+
+565
+01:25:30.510 --> 01:25:34.710
+Siva: Yeah, sorry. Yeah, I like the Brandon's presentation on this topic.
+
+566
+01:25:35.280 --> 01:25:43.110
+Siva: The only additional thing I wanted to talk about in that respect is if I as an author want to support multiple languages within the same map.
+
+567
+01:25:43.560 --> 01:25:51.300
+Siva: Then I should be able to advertise or like, you know, provide the metadata of what the languages are that this particular map supports that way.
+
+568
+01:25:52.200 --> 01:26:02.970
+Siva: The browsers will allow the users to pick which language to use. For example, instead of just locking to one specific language that the browser is pointing to.
+
+569
+01:26:04.410 --> 01:26:19.740
+Siva: So yeah, that those were some of the thoughts. I have. I always deal with the dynamic dynamic rendering or like the server side rendering aspect of it. But I think for w MTS. For example, you could potentially use this trial, for example, for the language.
+
+570
+01:26:20.070 --> 01:26:27.900
+Siva: But do you will have to come up with some kind of a formalization of this language feature which in the metadata for the W MTS, for example.
+
+571
+01:26:28.230 --> 01:26:36.750
+Siva: Then you'll be able to use style or other template parameters for language. For example, where you could make a given map multilingual
+
+572
+01:26:37.530 --> 01:26:37.950
+Huh.
+
+573
+01:26:39.090 --> 01:26:42.660
+Doug Schepers: Yeah, that makes a lot of sense. Nicholas, do you have anything to say on this one.
+
+574
+01:26:49.530 --> 01:26:54.780
+Doug Schepers: If you do, you're muted. I'm not. Let's move on to
+
+575
+01:26:55.830 --> 01:26:56.400
+Doug Schepers: Brandon
+
+576
+01:26:59.610 --> 01:27:00.300
+Brandon Liu: Are you able to hear me.
+
+577
+01:27:01.110 --> 01:27:06.900
+Brandon Liu: Yes. Okay, cool. Um, some thoughts on maps and languages.
+
+578
+01:27:08.400 --> 01:27:23.010
+Brandon Liu: I think one thing you see comment on the on web maps is I think I mentioned this earlier but transliteration of place names. For example, if a place name isn't an online script, then the backend might provide
+
+579
+01:27:24.270 --> 01:27:33.510
+Brandon Liu: Yeah, I'm the backend might provide a Latin transliteration which should be able to be served to all users that use land scripts.
+
+580
+01:27:35.700 --> 01:27:44.010
+Brandon Liu: Now, like, in that case, that's kind of open ended. If you look at how BCP for disabled language tags are structured. You wouldn't want to specify every single, you know, German, French
+
+581
+01:27:44.310 --> 01:27:57.690
+Brandon Liu: English all those but there might need to be some intermediate sort of like scripts tag that defines sort of languages as a lot like as using sort of running systems now.
+
+582
+01:27:58.140 --> 01:28:06.000
+Brandon Liu: Like I haven't thought about this a lot. And there might be some fatal flaws to this approach, but I think that would get you part of the way there.
+
+583
+01:28:08.010 --> 01:28:21.150
+Brandon Liu: You know, in terms of being able to show maps to users in different locales. Now how much that that interacts with web standards, I think, is
+
+584
+01:28:21.600 --> 01:28:31.740
+Brandon Liu: Is a tricky question because I think for something that's for something to become a web standard, it's not good to give like a half baked internationalisation solution like it's not good if
+
+585
+01:28:32.760 --> 01:28:41.790
+Brandon Liu: If the internationalization solution is just minimum viable product that only works for languages like that. That only works for left to right, languages, for example.
+
+586
+01:28:41.970 --> 01:28:43.800
+Brandon Liu: Right, so I think like
+
+587
+01:28:44.970 --> 01:28:54.690
+Brandon Liu: There needs to be a lot of care in pushing something as a standard versus having a low level set of tools that can be used to accomplish something
+
+588
+01:28:55.200 --> 01:29:04.410
+Brandon Liu: And I think that's like one of the overall tensions between talking about you know map ML versus here's a bunch of JavaScript do something with it.
+
+589
+01:29:04.800 --> 01:29:05.190
+Sure.
+
+590
+01:29:06.300 --> 01:29:07.680
+Brandon Liu: So I think that is
+
+591
+01:29:09.270 --> 01:29:10.500
+Brandon Liu: I don't really have
+
+592
+01:29:11.640 --> 01:29:14.280
+Brandon Liu: I guess the knowledge and know what the right approaches here.
+
+593
+01:29:15.720 --> 01:29:18.120
+Brandon Liu: The second thing I want to talk about that I mentioned is
+
+594
+01:29:19.350 --> 01:29:23.370
+Brandon Liu: Things like vertical text that's something I added to the question list.
+
+595
+01:29:23.670 --> 01:29:27.840
+Brandon Liu: It's something that I really like. Or it's a topic I'm interested in, and I think the browsers.
+
+596
+01:29:28.230 --> 01:29:33.120
+Brandon Liu: Have a lot of good progress in making that work well on the web, even though it's not used.
+
+597
+01:29:34.230 --> 01:29:51.480
+Brandon Liu: Like for example for CJ K, it's common for for print type settings to use the vertical text on the web, sort of the status quo is for text to always be horizontal, it would be nice to have that as something that's well supported and web maps.
+
+598
+01:29:52.080 --> 01:30:01.890
+Brandon Liu: For example, if you look at print maps that are published in Chinese for first features that are mostly a vertical from the perspective of, you know, the viewer.
+
+599
+01:30:02.430 --> 01:30:12.600
+Brandon Liu: They will label those vertically and that's like a very common practice in print maps, but on the web, there's only a couple of rendering libraries that support that.
+
+600
+01:30:13.170 --> 01:30:15.270
+Brandon Liu: So I'm curious if there's some way that
+
+601
+01:30:15.840 --> 01:30:17.550
+Brandon Liu: The things that have been built for
+
+602
+01:30:17.670 --> 01:30:22.020
+Brandon Liu: Web browsers already get influence board cartographic possibility.
+
+603
+01:30:23.040 --> 01:30:23.910
+Brandon Liu: For web apps.
+
+604
+01:30:24.960 --> 01:30:28.500
+Doug Schepers: That's, that's a definite definite that's definitely a
+
+605
+01:30:29.580 --> 01:30:37.110
+Doug Schepers: An area where we need to look at what the standards are already doing and what browsers already doing and have that inform what we're doing.
+
+606
+01:30:39.030 --> 01:30:39.240
+Doug Schepers: And
+
+607
+01:30:39.270 --> 01:30:45.780
+Brandon Liu: It's such a deep rabbit hole because a lot of web apps also need text on career paths, and that's something that's
+
+608
+01:30:46.230 --> 01:30:51.600
+Brandon Liu: That's something that people want for SVG, for example, I'm not sure what the current status curve text her
+
+609
+01:30:51.630 --> 01:30:57.390
+Doug Schepers: Yeah, I can tell you that curve text does work for SVG. So bringing that into
+
+610
+01:30:59.070 --> 01:31:02.430
+Doug Schepers: An egg works across browsers. So bringing that into it should
+
+611
+01:31:03.810 --> 01:31:06.810
+Doug Schepers: Show be possible. I'm going to ask
+
+612
+01:31:07.920 --> 01:31:10.410
+Doug Schepers: Tice. If he has anything to jump in here.
+
+613
+01:31:11.070 --> 01:31:11.250
+No.
+
+614
+01:31:13.170 --> 01:31:14.760
+Doug Schepers: No. Okay. Um,
+
+615
+01:31:16.380 --> 01:31:25.470
+Doug Schepers: I'd love to go in in further, but we also have more questions, um, is that fertile topic for conversation.
+
+616
+01:31:26.160 --> 01:31:41.580
+Doug Schepers: So the, the next question. Thank you all for for those thoughtful answers. What are the challenges for security and privacy for personal geospatial data in international context entice I can you start with this one.
+
+617
+01:31:42.780 --> 01:31:50.520
+Thijs Brentjens (Geonovum, NL): Yeah. Well, for those who heard my presentation before I think we, the main challenge in the end is that we need to
+
+618
+01:31:51.750 --> 01:32:04.890
+Thijs Brentjens (Geonovum, NL): Get in between the years in our heads that that privacy and security may may become you know all the benefits we have to geospatial data. They may also have a we have to pay a price for it with privacy and security.
+
+619
+01:32:06.960 --> 01:32:11.880
+Thijs Brentjens (Geonovum, NL): So that, that's maybe the main challenge and then it comes down to, how can we
+
+620
+01:32:13.620 --> 01:32:27.930
+Thijs Brentjens (Geonovum, NL): act upon it. So I'd say propose experiments, but also share ideas and maybe like you have if you do a security tests in for web applications, you have this list of O W ASP.
+
+621
+01:32:28.500 --> 01:32:43.740
+Thijs Brentjens (Geonovum, NL): I was. I'm not sure if I pronounced correctly, but there's just checklists, you need to check whether you are you comply to them or not. It gives them new ideas, what you can do for security and privacy. We don't have that as far as I know, for geospatial applications.
+
+622
+01:32:45.000 --> 01:32:45.420
+Doug Schepers: And
+
+623
+01:32:45.540 --> 01:32:50.850
+Thijs Brentjens (Geonovum, NL): I think that that's one of the things that in an international context, we might try to
+
+624
+01:32:52.860 --> 01:32:55.350
+Thijs Brentjens (Geonovum, NL): Work on create such a list.
+
+625
+01:32:56.250 --> 01:32:56.730
+Doug Schepers: Right.
+
+626
+01:32:57.510 --> 01:33:10.590
+Thijs Brentjens (Geonovum, NL): And then of course we have the technology implementation, etc. But it should also start with creating all those kinds of risks and identifying them and share them and help each other out with that. Get in the awareness, let's say,
+
+627
+01:33:10.650 --> 01:33:14.880
+Doug Schepers: Absolutely. A SIVA, do you have anything to add here.
+
+628
+01:33:17.010 --> 01:33:18.840
+Siva: No, I don't have nothing much.
+
+629
+01:33:19.800 --> 01:33:20.520
+Nicholas
+
+630
+01:33:25.320 --> 01:33:26.820
+Doug Schepers: Okay, Nicholas, we're not hearing you.
+
+631
+01:33:27.930 --> 01:33:28.290
+Doug Schepers: If you
+
+632
+01:33:29.730 --> 01:33:32.160
+Doug Schepers: Okay and Brandon, do you have anything to add here.
+
+633
+01:33:33.270 --> 01:33:34.500
+Doug Schepers: Hopefully slide Nicholas online.
+
+634
+01:33:36.480 --> 01:33:36.810
+Brandon Liu: Nope.
+
+635
+01:33:37.440 --> 01:33:38.460
+Doug Schepers: Okay, great.
+
+636
+01:33:39.270 --> 01:33:39.870
+Brandon Liu: Um,
+
+637
+01:33:40.440 --> 01:33:46.950
+Doug Schepers: Yeah, this is definitely a topic with internationalization touches on law and
+
+638
+01:33:48.960 --> 01:33:58.740
+Doug Schepers: Ethics privacy, security, all of these things are multifaceted international issues, um,
+
+639
+01:33:59.970 --> 01:34:00.690
+Doug Schepers: So,
+
+640
+01:34:01.260 --> 01:34:02.550
+Thijs Brentjens (Geonovum, NL): Next question.
+
+641
+01:34:03.090 --> 01:34:05.850
+Doug Schepers: We have here is web Mercator
+
+642
+01:34:05.880 --> 01:34:22.800
+Doug Schepers: Is a defacto standard for the web. But as well and flaws, for example, like Pacific centered mapmaking. What's the right balance for web standards and making these choices for users and developers who wants to start off here.
+
+643
+01:34:26.970 --> 01:34:29.430
+Doug Schepers: SIVA Tice Brandon Nicholas
+
+644
+01:34:31.260 --> 01:34:31.800
+Brandon Liu: I'll start.
+
+645
+01:34:32.520 --> 01:34:33.240
+Doug Schepers: There. Thank you.
+
+646
+01:34:33.780 --> 01:34:40.650
+Brandon Liu: Um, yeah, I think maybe it's a little bit of a gut reaction, but I think to sort of
+
+647
+01:34:42.000 --> 01:34:45.690
+Brandon Liu: Sort of. Sort of privilege web Mercator as
+
+648
+01:34:45.840 --> 01:34:52.020
+Brandon Liu: You know, the first class frame of reference for web apps. I think that might get some pushback from parts of the world.
+
+649
+01:34:54.270 --> 01:35:02.370
+Brandon Liu: Especially like, you know, just like because I think the truth is, for a lot of like my presentation layer is they will say,
+
+650
+01:35:03.000 --> 01:35:15.060
+Brandon Liu: If you have features that cross the integrity and you need to pre process them so that you know like the those features they only go to, you know, from whatever it to 180 and from negative 182 whatever
+
+651
+01:35:16.230 --> 01:35:25.980
+Brandon Liu: And I think that it's it's a little bit tough because I feel like the number of applications that are affected by this issue is large.
+
+652
+01:35:26.460 --> 01:35:35.820
+Brandon Liu: And the solutions are really non trivial because the solutions is essentially like you might author your geo JSON to have coordinates that cross the entire meridian.
+
+653
+01:35:36.480 --> 01:35:52.560
+Brandon Liu: But then in order to make it work correctly, you need to bring it alive right like turf JS that you know slices up your future is, for example, and that's already like approaching the level of developer sophistication that is that is not as simple as just putting some markup on a map.
+
+654
+01:35:53.670 --> 01:36:05.280
+Brandon Liu: So I think the entire issue of like of map coordinates it it does demand and inherent sophistication like mathematical sophistication.
+
+655
+01:36:06.750 --> 01:36:15.960
+Brandon Liu: That is might be a hard sell for this. Imagine the audience of, you know, every web developer in the world can offer you know spatial content.
+
+656
+01:36:17.040 --> 01:36:20.520
+Brandon Liu: I don't have a good answer. It might just mean that we need to
+
+657
+01:36:21.870 --> 01:36:22.380
+Brandon Liu: Like
+
+658
+01:36:23.430 --> 01:36:27.600
+Brandon Liu: You know, suggest a set of libraries to do special operations in the browser.
+
+659
+01:36:30.600 --> 01:36:32.640
+Brandon Liu: I'm not sure if anyone else has suggestions.
+
+660
+01:36:33.930 --> 01:36:48.450
+Brandon Liu: On this issue of map projections and you know different centers of projections. Like if you wanted to have a Pacific center applicator maybe just adding that that other option might be a possible solution. I'm curious what other people have to say.
+
+661
+01:36:49.080 --> 01:37:04.440
+Doug Schepers: I think mapping Mel tries to address this by actually having some projections built in. So that's, that's some ground for thought. A SIVA Tice anybody else. By the way, folks, I'm, I apologize. Nicholas is
+
+662
+01:37:05.670 --> 01:37:20.160
+Doug Schepers: Apparently, having some sound, sound issues, unfortunately. So if he has an answer. He's just going to type it to me and and I'll read it out. But, I apologize. Nicholas that this isn't working for you.
+
+663
+01:37:22.860 --> 01:37:33.570
+Doug Schepers: So I'm a tyce SIVA, do you have any thoughts about the the web. Web Mercator
+
+664
+01:37:34.830 --> 01:37:41.850
+Thijs Brentjens (Geonovum, NL): Face here. I think I really like this topic as as a discussion topic because it's very hard one to crack this nut.
+
+665
+01:37:43.080 --> 01:37:43.530
+Thijs Brentjens (Geonovum, NL): And
+
+666
+01:37:44.130 --> 01:37:47.820
+Thijs Brentjens (Geonovum, NL): What we see now is that that many people and
+
+667
+01:37:48.000 --> 01:37:51.090
+Thijs Brentjens (Geonovum, NL): children growing up with web Mercator they think that dream that is
+
+668
+01:37:51.120 --> 01:37:59.220
+Thijs Brentjens (Geonovum, NL): Maybe as large as Africa is is all content know so it might make the story if distort even the image we have of
+
+669
+01:37:59.790 --> 01:38:18.360
+Thijs Brentjens (Geonovum, NL): Countries, or whatever. So it's, it's, I think it's a very important topic, and at the same point Justice Brendan pointed out, it's very hard to explain to others, not in the geospatial not working in as a geospatial with geospatial not knowledge projects into our heart and and
+
+670
+01:38:20.670 --> 01:38:27.780
+Thijs Brentjens (Geonovum, NL): Especially if all kinds of libraries support mainly a web marketer, if that's the Go To projection
+
+671
+01:38:29.070 --> 01:38:35.400
+Thijs Brentjens (Geonovum, NL): And you need to finish off a project, very quickly. That's what you do all kinds of resources are available in that projection only
+
+672
+01:38:35.880 --> 01:38:50.610
+Thijs Brentjens (Geonovum, NL): So I think there's a major challenge and can we find a reasonable alternative for some use cases somehow and and are we able to get all kind of software working. That easy, that we can use these
+
+673
+01:38:52.110 --> 01:38:54.510
+Thijs Brentjens (Geonovum, NL): Alternatives as easy as we cannot
+
+674
+01:38:55.110 --> 01:39:05.520
+Thijs Brentjens (Geonovum, NL): I don't have a real answer to that, but I think it's a very important topic with more impact than just let's say a mathematical discussion.
+
+675
+01:39:06.120 --> 01:39:13.950
+Doug Schepers: Yeah, absolutely. Definitely goes, I mean there's there's definitely goes to a social justice and international
+
+676
+01:39:15.030 --> 01:39:24.720
+Doug Schepers: And inclusiveness issue so and if anything, hopefully what maps, our maps will do is bring people together around the world.
+
+677
+01:39:26.160 --> 01:39:30.870
+Doug Schepers: So we have one more question. We prepared.
+
+678
+01:39:32.970 --> 01:39:39.660
+Doug Schepers: I don't see anything from Nicholas here is SIVA, did you, you did you have something to say Seaver
+
+679
+01:39:40.710 --> 01:39:50.910
+Siva: Nothing much. The only thing I would say about that is, like, like, you know, when we are looking at new standards, like, you know, we should also be thinking about other coordinate different systems, not just
+
+680
+01:39:51.720 --> 01:40:02.610
+Siva: Like you know web Mercator like WGS at four or whatever, right, like, you know, which are good for the global data, but for local they are not very good. So I think it is just a mindful kind of a thing.
+
+681
+01:40:02.970 --> 01:40:04.650
+Siva: Where you know we should just take care of
+
+682
+01:40:05.760 --> 01:40:08.580
+Siva: Additional core network and systems into the account. Yeah.
+
+683
+01:40:09.960 --> 01:40:12.300
+Doug Schepers: Yeah, I really liked the idea of
+
+684
+01:40:13.590 --> 01:40:31.230
+Doug Schepers: Perhaps promoting some other non Mercator projection that that could maybe catching the public imagination. So it could be easy for people to not just easy for them to do but easy for it to be top of mind for them.
+
+685
+01:40:31.620 --> 01:40:32.970
+Siva: Exactly that. That could be
+
+686
+01:40:34.800 --> 01:40:53.160
+Doug Schepers: Finally, a the last of the prepared questions WPC is a leader and accessibility. Like, for example, you know, the Web Content Accessibility Guidelines and accessibility is now demanded by law in several countries, but is difficult and often not taken seriously.
+
+687
+01:40:54.270 --> 01:40:58.410
+Doug Schepers: To apply these guidelines for mapping and geospatial data.
+
+688
+01:41:00.360 --> 01:41:12.390
+Doug Schepers: I'll note that we have two upcoming panels later in this workshop on accessibility, but in an international context, what do you have any thoughts on how we can make this easier.
+
+689
+01:41:13.830 --> 01:41:14.970
+Doug Schepers: See, we'll start with you.
+
+690
+01:41:16.800 --> 01:41:25.350
+Siva: Um, I come from a desktop world you know where the standards are pretty like, you know, standard, I would say, in that sense, and we comply to a lot of
+
+691
+01:41:26.280 --> 01:41:44.280
+Siva: The standards and we pay attention to it. We make sure every bit of UX. We have works well. But I can understand how this can be complicated for a browser or browser applications which has to deal with lots of generic you know controls and implementations are elements, basically. Yeah.
+
+692
+01:41:46.200 --> 01:41:50.130
+Siva: That's all I have to say I don't have much expertise on the website.
+
+693
+01:41:51.180 --> 01:41:51.750
+Doug Schepers: Okay.
+
+694
+01:41:52.410 --> 01:41:53.010
+Nice.
+
+695
+01:41:54.060 --> 01:41:54.390
+Siva: Well,
+
+696
+01:41:55.380 --> 01:42:13.740
+Thijs Brentjens (Geonovum, NL): Me personally, I think this is a very important topic in you see the on WPC conferences that that the attention for accessibility is is they're always there and it's not in the geospatial work and then simply this, this idea that maps are visual and it's the only food you're
+
+697
+01:42:15.270 --> 01:42:18.510
+Thijs Brentjens (Geonovum, NL): Just what we do. You can't make that accessible. So we just don't do it.
+
+698
+01:42:19.080 --> 01:42:37.320
+Thijs Brentjens (Geonovum, NL): And I think they're there are again we maybe we should share a more ideas of what we can do to make things accessible to make maps and the information on maps accessible and it requires is also to step or maybe it will step back and think of what maps are just as a representation
+
+699
+01:42:38.190 --> 01:42:49.530
+Thijs Brentjens (Geonovum, NL): Right, some data. And there are other ways for that they may not be the ones you prefer as a geospatial developer or they may not be as user friendly as you might think. But I think we need to
+
+700
+01:42:51.360 --> 01:43:06.090
+Thijs Brentjens (Geonovum, NL): discuss that more and also try to have a common libraries spend them pointed out in an earlier question common use libraries, we, we should try to improve accessibility in these libraries.
+
+701
+01:43:06.510 --> 01:43:07.290
+Doug Schepers: Right and
+
+702
+01:43:08.430 --> 01:43:18.870
+Thijs Brentjens (Geonovum, NL): That those are things I'm thinking of. But I'm for sure other experts in this in this workshop. Are they are there a lot of interesting things to say. Yeah. On this, I think,
+
+703
+01:43:19.650 --> 01:43:30.450
+Thijs Brentjens (Geonovum, NL): But, but it also start with the ID breaking down the idea that we wish that maps are not easy to make accessible because I think there are options and
+
+704
+01:43:30.780 --> 01:43:33.180
+Doug Schepers: Okay well we're going to explore some of those options. Later on in the
+
+705
+01:43:33.180 --> 01:43:34.380
+Thijs Brentjens (Geonovum, NL): Worship of
+
+706
+01:43:34.500 --> 01:43:37.380
+Doug Schepers: Brandon. Do you have any thoughts or Nicholas
+
+707
+01:43:39.660 --> 01:43:43.260
+Doug Schepers: If not, we have another question. Oh, branded, did you have something to say.
+
+708
+01:43:46.020 --> 01:43:46.680
+Doug Schepers: No. Okay.
+
+709
+01:43:48.240 --> 01:43:48.570
+Brandon Liu: Thanks.
+
+710
+01:43:49.230 --> 01:43:50.790
+Doug Schepers: Yeah, uh,
+
+711
+01:43:50.880 --> 01:44:04.890
+Doug Schepers: So we have a couple of where we have actually several questions, we only have four minutes left. How our context menus handled internationally. And I think this came in, Brandon, while you were talking, so maybe do you want to handle that first
+
+712
+01:44:08.430 --> 01:44:11.670
+Brandon Liu: context menus. It's a specific HTML.
+
+713
+01:44:12.810 --> 01:44:17.520
+Doug Schepers: I'm already i don't i don't know i think i think it's really thinking about
+
+714
+01:44:18.540 --> 01:44:21.180
+Doug Schepers: A. I'm not sure exactly
+
+715
+01:44:21.750 --> 01:44:36.390
+Peter Rushforth: What I was thinking about the maps or, you know, we have a layer control and there's some, you know, you have to have internationalization considerations in providing a widget. So there's going to be, you know, like challenges involved there. So I just wanted to see what
+
+716
+01:44:36.420 --> 01:44:38.760
+Doug Schepers: You mean like vertical versus horizontal Peter
+
+717
+01:44:38.790 --> 01:44:40.140
+Doug Schepers: Yeah, okay.
+
+718
+01:44:41.610 --> 01:44:45.270
+Brandon Liu: Right. I think the good solution is just to say anything.
+
+719
+01:44:45.360 --> 01:44:45.900
+That
+
+720
+01:44:47.220 --> 01:44:51.960
+Brandon Liu: Like, that's just an HTML sub DOM within that thing that's rendered
+
+721
+01:44:53.040 --> 01:45:04.980
+Brandon Liu: I mean, that's the approach that I think leaflet takes is you can just put whatever you want inside of an element that's rendered on the DOM. And if that's if that's a spec. You know, I have no idea how hard that is to implement
+
+722
+01:45:06.240 --> 01:45:09.420
+Brandon Liu: Because that seems like you could get into a lot of pathological cases.
+
+723
+01:45:10.680 --> 01:45:23.820
+Brandon Liu: But it seems like that is the best internationalize that that that's the best internationalization solution because anything that's that is capable with regular HTML can just apply within that context menu. I mean that's ideal for my perspective.
+
+724
+01:45:24.690 --> 01:45:27.060
+Doug Schepers: We actually have Nicholas said
+
+725
+01:45:32.970 --> 01:45:34.500
+Doug Schepers: I'm going to read his require
+
+726
+01:45:35.340 --> 01:45:44.580
+Doug Schepers: For question three about privacy. He says, Privacy is one of the is one of the most important component components of the system.
+
+727
+01:45:44.970 --> 01:45:56.250
+Doug Schepers: He doesn't know what challenges exactly what it could bring as as as we apply as we actively apply such applications because laws differ from country to country. Another important thing, I think, is that this could be possible.
+
+728
+01:45:57.390 --> 01:46:06.330
+Doug Schepers: Could possibly generate a large amount of data as it turns out, this data could be a matter of national security as well. And that actually leads into another question that we had
+
+729
+01:46:08.220 --> 01:46:09.060
+Doug Schepers: Which was
+
+730
+01:46:10.620 --> 01:46:22.260
+Doug Schepers: From Fred ash, if we have the time and a global challenge it if we're in a global challenge. How do data costs and performance get factored in SIVA, have you
+
+731
+01:46:24.270 --> 01:46:25.830
+Doug Schepers: Looked into this. Have you thought about this.
+
+732
+01:46:27.960 --> 01:46:33.720
+Siva: Um, yeah, I'm not that much on the content side of the things so I might not be able to answer this year.
+
+733
+01:46:34.020 --> 01:46:38.250
+Doug Schepers: Okay, any of the other any of the rest of you have thoughts about that.
+
+734
+01:46:42.750 --> 01:46:44.640
+Thijs Brentjens (Geonovum, NL): Thank you. So I don't understand fully understand the
+
+735
+01:46:44.640 --> 01:46:45.900
+Thijs Brentjens (Geonovum, NL): Question or the
+
+736
+01:46:46.260 --> 01:46:49.260
+Doug Schepers: Taste. I think it is. I think you kind of touched on in your presentation.
+
+737
+01:46:50.370 --> 01:46:52.560
+Thijs Brentjens (Geonovum, NL): Data okay the data we
+
+738
+01:46:52.710 --> 01:46:55.140
+Thijs Brentjens (Geonovum, NL): We may or burden.
+
+739
+01:46:55.230 --> 01:46:59.310
+Doug Schepers: We only have we only have one minute left. So if you can just keep it very brief.
+
+740
+01:47:00.870 --> 01:47:07.140
+Thijs Brentjens (Geonovum, NL): Okay. I think it's a challenge, but if you use, for example, smart cashing systems, you might be
+
+741
+01:47:07.170 --> 01:47:08.460
+Thijs Brentjens (Geonovum, NL): Able to reduce load.
+
+742
+01:47:08.520 --> 01:47:10.830
+Thijs Brentjens (Geonovum, NL): Maybe on some other services as well.
+
+743
+01:47:11.100 --> 01:47:14.340
+Thijs Brentjens (Geonovum, NL): But in the end, adding all those kind of extra things will add
+
+744
+01:47:15.480 --> 01:47:18.570
+Thijs Brentjens (Geonovum, NL): Asks something extra somewhere.
+
+745
+01:47:19.080 --> 01:47:19.500
+Doug Schepers: Right.
+
+746
+01:47:19.680 --> 01:47:23.190
+Thijs Brentjens (Geonovum, NL): I'd reprocessing vector tiles, either in, you know, it will it will
+
+747
+01:47:24.240 --> 01:47:25.530
+Thijs Brentjens (Geonovum, NL): It will be at some cost.
+
+748
+01:47:28.560 --> 01:47:29.280
+Doug Schepers: Y'all thank
+
+749
+01:47:29.490 --> 01:47:31.620
+Doug Schepers: You so much. This has been great.
+
+750
+01:47:32.370 --> 01:47:39.270
+Doug Schepers: Thank you all so much for participating in this panel. Sorry for the technical snafu is especially Nicholas. Thank you everybody for
+
+751
+01:47:39.750 --> 01:47:59.400
+Doug Schepers: For attending or for washing afterwards, and I hope that all these conversations, come back around, please contact the individuals who participated in this if if you have thoughts, either in the workshop or afterwards. And thank you so much and have a wonderful day.
+
+752
+01:48:01.650 --> 01:48:02.220
+Brian Kardell: Thank you.
+
+753
+01:48:03.480 --> 01:48:03.900
+Brian Kardell: You too.
+
+754
+01:48:05.880 --> 01:48:06.180
+Doug Schepers: Bye. Oh.
+
+755
+01:48:06.780 --> 01:48:07.500
+Thanks, everybody.
+
+756
+01:48:09.060 --> 01:48:09.450
+Amelia Bellamy-Royds: Thanks.
+
+757
+01:48:09.600 --> 01:48:24.330
+Amelia Bellamy-Royds: Buddy. Okay, we're sliding into one of our breakout sessions. I'm Peter and get them. Do you want us set that up. I think we're just going to continue using the same
+
+758
+01:48:25.200 --> 01:48:36.810
+Amelia Bellamy-Royds: Chat. So if you're interested in extending geo JSON for web applications. Please stay on. We've got a couple talks on that topic.
+
+759
+01:48:43.230 --> 01:48:43.650
+Peter Rushforth: Over to you.
+
+760
+01:48:45.990 --> 01:48:50.820
+Gethin Rees: Okay, thanks very much. Peter on. So welcome to the first breakout
+
+761
+01:48:50.820 --> 01:48:51.210
+Peter Rushforth: Group.
+
+762
+01:48:51.420 --> 01:48:53.760
+Gethin Rees: Group, I believe, of the
+
+763
+01:48:55.560 --> 01:48:56.280
+Gethin Rees: Workshop.
+
+764
+01:48:57.600 --> 01:49:02.490
+Gethin Rees: I'm a curator for digital mapping at the British Library and
+
+765
+01:49:03.600 --> 01:49:19.350
+Gethin Rees: We've got a couple of presentations from people that work with cultural heritage detail now. Um, I believe that this is a valuable perspective for the workshop in a couple of ways. Um, first, um, it was really interesting to hear about
+
+766
+01:49:20.100 --> 01:49:27.180
+Gethin Rees: people's thoughts about Mercator projection earlier, you know, I'm being a curator interest in history of cartography.
+
+767
+01:49:28.890 --> 01:49:42.000
+Gethin Rees: You know, I believe the the is really interesting. How big could test that when Mercator projection is and and i think working with cartography can help us understand
+
+768
+01:49:43.290 --> 01:49:46.740
+Gethin Rees: Projections going forward, but also second
+
+769
+01:49:48.270 --> 01:49:57.630
+Gethin Rees: Is the East we encode your heritage, we use web maps a lot to present collections for discovery and interpretation now.
+
+770
+01:50:00.300 --> 01:50:12.900
+Gethin Rees: Here we have developed to open standards and within a relatively small community. That's why it's a good data. Amen. And so we're going to just talk about a couple of the
+
+771
+01:50:13.440 --> 01:50:24.720
+Gethin Rees: Couple of on the extensions to Geo JSON that we've been working within that community. And we're not suggesting that these should be added to the map ML spank
+
+772
+01:50:25.350 --> 01:50:37.680
+Gethin Rees: But we are interested to see here by views from a broader community here related to these developments and see what the reaction of a wider audience will be on
+
+773
+01:50:38.520 --> 01:50:58.500
+Gethin Rees: Investment is a breakout group. So these are going to be quite short presentations and afterwards and we're hoping to always set it, just in general about the relationship between a map ML and geo JSON and we'll be taking suppose if the organizers can
+
+774
+01:50:59.520 --> 01:51:06.300
+Gethin Rees: Run this by think in the initial instance will be taking questions and the guitar channel. Um, I think there's
+
+775
+01:51:06.720 --> 01:51:16.350
+Gethin Rees: You know the number of participants is quite manageable. So if artists is meant to be a breakout group. So if it's okay with the organizers of participants did want to
+
+776
+01:51:16.620 --> 01:51:23.580
+Gethin Rees: Mention the guitar channel that they had something to see perhaps you could unmute themselves and speak as well. Is that is that is that okay
+
+777
+01:51:23.850 --> 01:51:29.880
+Amelia Bellamy-Royds: That makes sense. I mean, we've got 16 people on the line right now so we can probably just open this up as a chat.
+
+778
+01:51:31.440 --> 01:51:34.290
+Amelia Bellamy-Royds: Though okay good patients, of course, to start it off.
+
+779
+01:51:34.890 --> 01:51:35.760
+Gethin Rees: Yeah, that
+
+780
+01:51:36.060 --> 01:51:38.100
+Gethin Rees: Says, um, yeah. So this is
+
+781
+01:51:38.190 --> 01:51:48.480
+Gethin Rees: A couple of short presentations on first. I'm in cultural heritage. We deal with cultural information and certainly wants uncertainty and really the humanity.
+
+782
+01:51:49.320 --> 01:52:06.270
+Gethin Rees: Of these data not peripheral concerns represented representations of place can be at odds with positive positive is systems Y coordinates. And so that's what a lot of work to focus on data modeling easy if
+
+783
+01:52:07.350 --> 01:52:19.260
+Gethin Rees: The semantic structure here offers flexibility and complexity and the ability to monitor model flexibility and complexity on this isn't without drawbacks either so know Brian on
+
+784
+01:52:19.890 --> 01:52:37.290
+Gethin Rees: harberger who's a full stack software developer at the Walter J on S G Center for Digital Humanities. It simply these University on it's going to talk about this topic on and his work on expressing geo Jason is as
+
+785
+01:52:37.620 --> 01:52:39.780
+Gethin Rees: Detail 1.1. Thanks, Brian.
+
+786
+01:52:42.540 --> 01:52:51.480
+Bryan Haberberger: Thanks, Catherine thanks for the Intro Hi everybody, I'm going to stop sharing my video and share my screen and hope that kind of helps keep things smooth. So let's get going here.
+
+787
+01:52:59.250 --> 01:53:01.770
+Bryan Haberberger: Can you all see my screen.
+
+788
+01:53:03.450 --> 01:53:03.990
+Doug Schepers: Yes.
+
+789
+01:53:04.980 --> 01:53:05.550
+Great.
+
+790
+01:53:08.340 --> 01:53:23.910
+Bryan Haberberger: So again, my name is Brian Haber burger, along with being a full stack developer at the Walter jr SJ Center for Digital Humanities, I am also the triple if maps technical specification group chair or one of multiple and what that group is doing is sort of working within
+
+791
+01:53:25.200 --> 01:53:34.920
+Bryan Haberberger: The framework, they have set up, which is very based on JSON and JSON LD and allowing away for standardized coordinate assertions to sort of enter the fray.
+
+792
+01:53:37.230 --> 01:53:48.720
+Bryan Haberberger: So why link data. I think getting gave a good intro about it. But essentially, the semantics allow for interrelated data sets on the web. So if I have a data set that describes people, places and things and you do too.
+
+793
+01:53:49.530 --> 01:54:04.740
+Bryan Haberberger: I would like to be able to pull some of your vocabulary and direct meeting and use it to express that and my data set and in that way we can sort of enhance each other's data sets and encourage each other for the the welcome coded data for the future in cycle.
+
+794
+01:54:05.790 --> 01:54:19.680
+Bryan Haberberger: And so there's linked data link open data linked open usable data. It's all essentially the same. But in settings where the sources are open sources, that's when we say linked open data and usable is always just a hopeful.
+
+795
+01:54:20.730 --> 01:54:21.810
+Bryan Haberberger: But we like to use that word.
+
+796
+01:54:24.030 --> 01:54:29.520
+Bryan Haberberger: So how does this kak with geo JSON LD. We're not going to talk about the geo JSON LD spec directly
+
+797
+01:54:30.630 --> 01:54:35.400
+Bryan Haberberger: Instead, what I'm going to talk about is the link data vocabulary and context that have been created for it.
+
+798
+01:54:36.300 --> 01:54:54.600
+Bryan Haberberger: JSON LD is a W three specification and like we just said it recently had an update as you can figure out geo JSON is JSON and so there has been work to make a geo JSON LD context that's compatible with the JSON LD one point O version.
+
+799
+01:54:56.310 --> 01:55:02.670
+Bryan Haberberger: That's sort of what allowed geo JSON data notes to be a part of the link data system going on and all the things we use
+
+800
+01:55:04.860 --> 01:55:15.810
+Bryan Haberberger: So, one important thing to note about geo JSON LD is that nested geo JSON coordinate arrays are incompatible. The model. I'll show you exactly what that means and what that means for functionality here in a second.
+
+801
+01:55:16.710 --> 01:55:24.030
+Bryan Haberberger: But sort of at a top level concept. What this means is geo JSON LD is unable to express political shapes.
+
+802
+01:55:24.780 --> 01:55:31.710
+Bryan Haberberger: Not that it can't but rather that when it does that. It's not able to process it as an LD. And so applications that are
+
+803
+01:55:31.980 --> 01:55:46.830
+Bryan Haberberger: Specifically, trying to be LD ignore what they can't process. So that would mean all of your polygons would be ignored, which is a massive problem for geography. Yeah, I'd assume you all like to be able to use polygons.
+
+804
+01:55:48.180 --> 01:56:03.030
+Bryan Haberberger: So the LD 1.1 release. The most important thing that came about, about it was that it allowed for list of lists structures so that things can actually be rendered. So I'll just give you a real small demo here real quick. Hopefully if the Internet.
+
+805
+01:56:04.260 --> 01:56:04.830
+Bryan Haberberger: Will allow it.
+
+806
+01:56:07.560 --> 01:56:14.760
+Bryan Haberberger: So here's the JSON LD playground and if I come in with that data, you'll see right away. It tells me
+
+807
+01:56:15.990 --> 01:56:23.130
+Bryan Haberberger: This is not a valid syntax. I can't do lists of lists. What that means, sort of exactly is laid out a little better.
+
+808
+01:56:25.170 --> 01:56:27.810
+Bryan Haberberger: In the spec to tell you why they chose not to do that.
+
+809
+01:56:28.860 --> 01:56:37.470
+Bryan Haberberger: But as people started specifically to work with geo JSON and geo JSON LD, it became clear that the list of lists structure was going to be necessary for data.
+
+810
+01:56:38.610 --> 01:56:43.110
+Bryan Haberberger: And so that's when the LD 1.1 spec came out and just to show you that I'm not kidding.
+
+811
+01:56:44.580 --> 01:56:57.000
+Bryan Haberberger: It now specifically states that what's of lists are fully supported. So what that means is we would hope if I came into the LD 1.1 playground, that if I put that data in
+
+812
+01:56:57.390 --> 01:57:08.250
+Bryan Haberberger: It was successfully process, which it does so just a super fast overview of what link data does. You can see in the geo JSON use terms like properties geometry type and coordinates.
+
+813
+01:57:09.000 --> 01:57:20.910
+Bryan Haberberger: And those are all directly mapped to a vocabulary or specific definition that that allows the keys to understand exactly what they are. So you can see by geometry. I mean, would you Jason says about geometry.
+
+814
+01:57:24.060 --> 01:57:34.860
+Bryan Haberberger: And so on and so forth. And you can see here how successfully can do. I'm a list I contain a list that has a list and that can go on forever, but it's obvious that that that that is is allowed. Now,
+
+815
+01:57:40.320 --> 01:57:45.540
+Bryan Haberberger: So that's mainly what I wanted to show you here. And then of course I'm sure. You want to see it for all
+
+816
+01:57:49.290 --> 01:58:03.510
+Bryan Haberberger: So if we go to the geo JSON validator with that object. We just had and paste it in and test it, you'll see that it draws my shape and it's my very crude a bounding area for the Eiffel Tower.
+
+817
+01:58:04.950 --> 01:58:13.170
+Bryan Haberberger: So we know it's geo JSON compatible and now we know it's only 1.1 compatible. So we sort of have a way to properly describe these data sets, using link data.
+
+818
+01:58:18.210 --> 01:58:19.380
+Bryan Haberberger: So now I'm going to talk about another
+
+819
+01:58:19.620 --> 01:58:33.270
+Bryan Haberberger: Another W three specification called Web annotation and specifically how that connects with web entities. So as I talked about earlier. I work in a Digital Humanities Center, and we are more of a dev shop in the content shop. We actually don't hold a lot of content.
+
+820
+01:58:35.310 --> 01:58:44.130
+Bryan Haberberger: So what my use cases is I need to be able to add descriptive information to content that's own somewhere else and still
+
+821
+01:58:46.170 --> 01:58:50.640
+Bryan Haberberger: Be able to use the data connected with that data, know that I'm targeting
+
+822
+01:58:52.410 --> 01:58:57.960
+Bryan Haberberger: Trying not to go too much into it. I think it's a lot easier if I just show sort of a pipeline for for that looks like.
+
+823
+01:59:00.210 --> 01:59:06.270
+Bryan Haberberger: And sorry for clicking. So let's say I know a repository, a portal as we've talked about earlier.
+
+824
+01:59:07.590 --> 01:59:19.920
+Bryan Haberberger: That I can go to to look for resources Stanford has one of those. And it says that its resources are triple if so we'll go to something recent they hadn't Black. Black Lives Matter memorial. And if I go into it.
+
+825
+01:59:23.700 --> 01:59:25.350
+Bryan Haberberger: Internet will load with me.
+
+826
+01:59:28.230 --> 01:59:34.740
+Bryan Haberberger: You'll see that loads up here and it has its the images that go along with it and probably other information about it.
+
+827
+01:59:35.910 --> 01:59:41.010
+Bryan Haberberger: I can specifically just asked for the data object that's in the background of this
+
+828
+01:59:44.370 --> 01:59:44.790
+Bryan Haberberger: Do
+
+829
+01:59:48.000 --> 01:59:51.420
+Bryan Haberberger: And I just happened to know to use this because I work with these guys. So I know how their portal works.
+
+830
+01:59:51.630 --> 02:00:00.720
+Bryan Haberberger: You can see the object in the background. This is very triple if I'm not going to go into it too much, but they have context and everything to sort of describe their keys in terms as well.
+
+831
+02:00:02.010 --> 02:00:06.780
+Bryan Haberberger: So if I bring this manifest and I say, I would like to say I know where that manifest is at
+
+832
+02:00:08.400 --> 02:00:21.120
+Bryan Haberberger: Could bring it in here and say that's the URL I want he is. There's the object me know that it is. And I know it's somewhere over in California. So I'm just gonna kinda Yes, sure. Probably not there. But let's go for it.
+
+833
+02:00:23.070 --> 02:00:43.170
+Bryan Haberberger: So what that does is generate a web annotation that connects that resource to the coordinate properties. And you can see here the body of the web annotation is geo JSON. And so these contexts combined mean this works as a 1.1 web annotation and in particular because of some dumb luck.
+
+834
+02:00:45.180 --> 02:00:53.130
+Bryan Haberberger: This context actually has at version 1.1 which means process this as LD 1.1 and so the geo JSON.
+
+835
+02:00:54.180 --> 02:01:03.750
+Bryan Haberberger: Context, which does not contain that sort of gets it for free. Just by properties of how combining contexts work stuff I go ahead and create that annotation.
+
+836
+02:01:05.250 --> 02:01:06.930
+Bryan Haberberger: Great. It says go see it and leaflet.
+
+837
+02:01:09.180 --> 02:01:16.710
+Bryan Haberberger: So I'll get to what that is in a second. So you can see there how it just provided a target made JSON body for it and made them relate to each other.
+
+838
+02:01:17.760 --> 02:01:24.150
+Bryan Haberberger: So now what I can do is ask data sets that I know we're doing this to just supply me with all of those coordinate assertions they've made.
+
+839
+02:01:24.900 --> 02:01:27.300
+Bryan Haberberger: And when I do, they'll show them here on a map for me.
+
+840
+02:01:28.050 --> 02:01:38.580
+Bryan Haberberger: So these are just those web annotations that I pulled out. And here you can see I never supplied a label. I never supplied a description, but the target data had it. And so I can just resolve that target lifetime.
+
+841
+02:01:38.850 --> 02:01:47.850
+Bryan Haberberger: And show data about that target lifetime without ever manipulating that data directly. So if anybody changes the label. If I refresh this page. We're going to see that label.
+
+842
+02:01:49.020 --> 02:02:01.530
+Bryan Haberberger: And that's sort of how we realize our pipeline. We don't have the content, but other people don't have the developers or the annotation systems to describe their content. How can we all still, you know, work in that in that process.
+
+843
+02:02:06.240 --> 02:02:11.250
+Bryan Haberberger: And so here's what I just showed you this is this is what what it looks like. And you can see here instead of using the
+
+844
+02:02:11.610 --> 02:02:23.250
+Bryan Haberberger: Triple if presentation context. I use the web annotation context, the triple if context contains the web annotation context so that I don't have to include it as a third one.
+
+845
+02:02:26.820 --> 02:02:31.890
+Bryan Haberberger: I'll show you just super fast in the in a link data context how you might go about doing that.
+
+846
+02:02:37.620 --> 02:02:41.040
+Bryan Haberberger: Oh, that is the wrong one. I'm sorry, my fault.
+
+847
+02:02:45.600 --> 02:02:59.850
+Bryan Haberberger: To see here they pulled in description for an annotation collection annotation page in an annotation and say I use their context. But as we just described about when the new internationalization problem triple if really deals with international
+
+848
+02:03:00.930 --> 02:03:06.750
+Bryan Haberberger: International labels and so they needed to define a way to say I can provide multiple labels have a certain language.
+
+849
+02:03:07.500 --> 02:03:13.920
+Bryan Haberberger: More just more descriptive then just the label that that web the annotation wants to use. And so how that gets realized
+
+850
+02:03:14.700 --> 02:03:19.110
+Bryan Haberberger: One of the things triple if maps community group is working on is providing recipes
+
+851
+02:03:19.650 --> 02:03:29.790
+Bryan Haberberger: For making these kinds of assertions and so you'll see here how we actually have to make the label. It's not just label colon string. It's actually an object containing arrays of information attached to language.
+
+852
+02:03:30.060 --> 02:03:39.480
+Bryan Haberberger: Which is what that led contexts will need to do so that I know as the developer now to make my labels like this so that the viewers know to grab them and show them based on the language of their in
+
+853
+02:03:40.320 --> 02:03:47.250
+Bryan Haberberger: It's just sort of an example of how linked data tries to connect that entire pipeline and then down here. Further, like we've shown you before. Here's what it looks like.
+
+854
+02:03:48.960 --> 02:03:50.100
+Bryan Haberberger: The Triple F.
+
+855
+02:03:51.210 --> 02:03:59.580
+Bryan Haberberger: API uses annotations and inside those annotations are web annotations. So what this is right here is an actual web annotation, with its own coordinates.
+
+856
+02:04:00.270 --> 02:04:17.070
+Bryan Haberberger: That are outlining city to sort of fuzzy locate what resources being described here. And that was sort of how we realized that pipeline. So these recipes are up and and something you can go look at I've got notes included links included in my notes and with the slides, when we get there.
+
+857
+02:04:18.000 --> 02:04:18.300
+Right.
+
+858
+02:04:20.280 --> 02:04:22.140
+Gethin Rees: No quarter past so could
+
+859
+02:04:22.950 --> 02:04:32.160
+Bryan Haberberger: Wrap up. Yes. So that was actually the end of it. So now the I do I try. I'm trying to get them. So now the future of geo JSON.
+
+860
+02:04:32.550 --> 02:04:43.110
+Bryan Haberberger: Triple F community group is working to take that specification and get it somewhere where it can be maintained and we can add things like that version 1.1 property to the context to make this 1.1
+
+861
+02:04:43.500 --> 02:04:52.050
+Bryan Haberberger: Because we think God, Son will continue to be using disorders like standards being promoted in this workshop and it should continue to have definition for it on the web.
+
+862
+02:04:52.680 --> 02:05:03.090
+Bryan Haberberger: And that's sort of our charge right now. And I think the next piece is what Carl. The next speaker is going to talk about is extending it even further to maybe include other dimensions.
+
+863
+02:05:03.930 --> 02:05:12.330
+Bryan Haberberger: And then hopefully, being able to take the sort of format here is JSON and realize it as a markup language in ways to connect with like webinar.
+
+864
+02:05:13.620 --> 02:05:15.420
+Bryan Haberberger: So that's it. Thank you.
+
+865
+02:05:18.000 --> 02:05:18.570
+Gethin Rees: Okay.
+
+866
+02:05:20.010 --> 02:05:22.980
+Gethin Rees: Thanks. Thanks, Brian. Um, that's
+
+867
+02:05:24.090 --> 02:05:30.390
+Gethin Rees: A great explanation of how on we can use these web annotations to make assertions about
+
+868
+02:05:32.460 --> 02:05:43.950
+Gethin Rees: About documents on the web on and those can take to use the predicate, those can take a variety of forms. So for example, if we're talking about a place
+
+869
+02:05:44.700 --> 02:05:57.360
+Gethin Rees: We can say this is either this is within on the edge of outside that place and attached to your JSON LD. In order to do that. So the next speaker call grew sooner.
+
+870
+02:05:58.380 --> 02:06:01.680
+Gethin Rees: Is going to talk about bringing
+
+871
+02:06:02.730 --> 02:06:04.200
+Gethin Rees: Time into Gog so on.
+
+872
+02:06:05.580 --> 02:06:14.790
+Gethin Rees: Gog some see adding time to do Jason his technical director of the world historical gathered here and he's based in the University of Pittsburgh and
+
+873
+02:06:16.920 --> 02:06:32.700
+Gethin Rees: we encode in culture heritage. We've had a lot of success with sharing data using standards and this our God, some tea standard is certainly something we're on on using it, the British Library and I'm trying to push it, the British Library. So
+
+874
+02:06:44.040 --> 02:06:45.450
+Karl Grossner: Okay. Can y'all hear me.
+
+875
+02:06:46.800 --> 02:06:47.430
+Bryan Haberberger: Yeah, I can hear you.
+
+876
+02:06:47.790 --> 02:06:48.030
+Good.
+
+877
+02:06:50.040 --> 02:06:50.490
+Karl Grossner: Thanks.
+
+878
+02:06:52.320 --> 02:06:57.450
+Karl Grossner: Make a comment first before I share my screen and slides.
+
+879
+02:06:59.040 --> 02:07:02.610
+Karl Grossner: I wasn't until this session.
+
+880
+02:07:03.870 --> 02:07:24.720
+Karl Grossner: I haven't been aware of the map markup language and the extent as an extension HTML effort, and I'm not really sure how how the new technology would handle vector data and my where I'm coming from is entirely a
+
+881
+02:07:27.270 --> 02:07:32.790
+Karl Grossner: HTML and JavaScript world of making with maps which I've been doing for 15 years in the context of
+
+882
+02:07:34.230 --> 02:07:40.890
+Karl Grossner: Historical research and so on. So let me just race through these slides are so nice.
+
+883
+02:07:43.350 --> 02:07:44.220
+Karl Grossner: And
+
+884
+02:07:58.140 --> 02:08:14.460
+Karl Grossner: So I'm assuming that everyone here is familiar with geo JSON. It's really quite a standard and the universe of in the admittedly messy universe of JavaScript mapping libraries that render maps to web screens.
+
+885
+02:08:16.170 --> 02:08:25.800
+Karl Grossner: It's in very common use, it's more or less a de facto standard. In fact, from my perspective, for making web maps for the data that
+
+886
+02:08:26.940 --> 02:08:27.870
+Karl Grossner: Web maps render
+
+887
+02:08:31.140 --> 02:08:45.690
+Karl Grossner: Geo JSON looks something like this. At its core, it's quite simple. You have feature collections consists of features and features can have properties which can be anything at all. Say, and and they can have geometry.
+
+888
+02:08:47.850 --> 02:08:54.330
+Karl Grossner: Some conditions that I encounter routinely and people in the world of cultural heritage and historical research.
+
+889
+02:08:56.130 --> 02:08:59.580
+Karl Grossner: Much more generally that spans many disciplines.
+
+890
+02:09:00.720 --> 02:09:06.120
+Karl Grossner: And even modern applications, admittedly, I'm much more focused on historical application.
+
+891
+02:09:06.840 --> 02:09:22.620
+Karl Grossner: That has some features for some features time is absolutely an essential aspect of them that it's not the answer to wear or is not some location, but it's a location that time. And this is an example in a in a little
+
+892
+02:09:24.090 --> 02:09:29.280
+Karl Grossner: Pilot demo thing I built a while back, indicating Poland.
+
+893
+02:09:30.360 --> 02:09:34.800
+Karl Grossner: As a very, very dynamic place even disappeared for
+
+894
+02:09:36.240 --> 02:09:40.500
+Karl Grossner: Other cases that I encounter would include things like this. This is a
+
+895
+02:09:42.840 --> 02:09:51.690
+Karl Grossner: Map of the commodity flows between Venice and many Forks over a period of several hundred years rendered
+
+896
+02:09:53.130 --> 02:10:00.210
+Karl Grossner: In a map the geometry of it rendered in the map and the temporal attributes rendered. And then in this case in the histogram.
+
+897
+02:10:01.770 --> 02:10:04.260
+Karl Grossner: Some other sorts of cases that
+
+898
+02:10:06.000 --> 02:10:20.040
+Karl Grossner: Me and I and people like me encounter routinely would be something like this, a trajectory of is this is a particular journey taken sometime during the fourth century.
+
+899
+02:10:22.920 --> 02:10:23.670
+Karl Grossner: And
+
+900
+02:10:24.750 --> 02:10:28.530
+Karl Grossner: And in this case, and the temperature booths are
+
+901
+02:10:29.700 --> 02:10:35.820
+Karl Grossner: A great interest both overall for the fact that occurred within some hundred years span.
+
+902
+02:10:37.350 --> 02:10:53.280
+Karl Grossner: But also each of those points follows each other in a sequence all of these cases are not handled at all by geo JSON in any standard way people make, do they use the properties element to
+
+903
+02:10:55.500 --> 02:11:06.060
+Karl Grossner: To put in attributes that they want to render dynamically, and then they have JavaScript that interprets those properties and those things in the browser.
+
+904
+02:11:07.740 --> 02:11:29.910
+Karl Grossner: My proposal this. Now, a few years old this to include a standardized when in geo JSON, they could appear in a couple of different locations. It can be used to temporarily scope, a single feature. The way you see it here, which, for example, might apply to a single feature for
+
+905
+02:11:33.030 --> 02:11:36.030
+Karl Grossner: For well for anything really.
+
+906
+02:11:37.440 --> 02:11:45.690
+Karl Grossner: A more complex case. In the case of Poland, for example, as you might have a single feature and this geometry is a geometry collection.
+
+907
+02:11:47.520 --> 02:12:08.490
+Karl Grossner: Each geometry of which has its own when its own temporal scoping. This is a relatively simple thing to do and and it allows for doing some odd ball is sorts of things. I think like journeys and flows and so forth.
+
+908
+02:12:10.350 --> 02:12:21.480
+Karl Grossner: And the question then becomes, what should be the structure of when the idea is that there be some standard structure for a win element wherever it appears in the geo JSON feature.
+
+909
+02:12:22.740 --> 02:12:33.810
+Karl Grossner: That software that supports geo JSON T would know about with know where to look for it and know and I have some idea what to do with it.
+
+910
+02:12:35.340 --> 02:12:39.780
+Karl Grossner: At this point I'm going to point you to some links that appear in the last slide of
+
+911
+02:12:41.610 --> 02:12:47.280
+Karl Grossner: Of this and are available to you and display them also here.
+
+912
+02:12:51.660 --> 02:13:06.390
+Karl Grossner: A when object can include any number of time spans. So that might be interrupted time spans that are relevant to a particular feature could be. It can include named periods. There are
+
+913
+02:13:07.620 --> 02:13:14.130
+Karl Grossner: Time period gadgeteers in the world at least a couple in broad us within the domain. Amen.
+
+914
+02:13:15.150 --> 02:13:17.280
+Karl Grossner: And sometimes that's all we can say
+
+915
+02:13:18.450 --> 02:13:25.620
+Karl Grossner: About time and these other elements duration follows, which is intended to handle sequences and so
+
+916
+02:13:29.160 --> 02:13:34.620
+Karl Grossner: This is a bonus line. It doesn't appear in the slide deck that's been uploaded I'm adding it because
+
+917
+02:13:35.880 --> 02:13:46.770
+Karl Grossner: The reason for my presentation is that Geffen's group at the British Library is and get them, particularly as instigated an effort called Web maps t
+
+918
+02:13:47.910 --> 02:13:52.710
+Karl Grossner: That attempts that is attempting to develop collaboratively.
+
+919
+02:13:55.740 --> 02:14:11.820
+Karl Grossner: Software modules as a open software modules for maps and timelines, taken together. Because for us. And as Kevin mentioned in his library contexts and collections. This is a very common use case.
+
+920
+02:14:13.260 --> 02:14:23.070
+Karl Grossner: Geographic data is dynamic and this needs to be rendered in various ways it could be histograms and click the stepped
+
+921
+02:14:25.050 --> 02:14:37.470
+Karl Grossner: points along the timeline that sort of thing. And there are many other things that really people will undertake that so web maps t is intended to work towards a set of
+
+922
+02:14:39.390 --> 02:14:48.630
+Karl Grossner: modules that developers have web maps in this realm can just plug in and customize to suit their particular situation.
+
+923
+02:14:50.160 --> 02:14:59.010
+Karl Grossner: The goal of my talk is simply to raise the question of time. As I said at the beginning, I don't really understand how
+
+924
+02:15:00.120 --> 02:15:06.450
+Karl Grossner: Vector data would be handled with the map element in HTML.
+
+925
+02:15:08.430 --> 02:15:18.600
+Karl Grossner: And this is very much about data models. So this is all happening before it arrives at the browser. I think I don't know. I'm here to learn what
+
+926
+02:15:19.440 --> 02:15:27.540
+Karl Grossner: What is intended by this group. And just to raise the point that time matters an awful lot, and not only in historical cases.
+
+927
+02:15:27.960 --> 02:15:36.870
+Karl Grossner: But in modern cases as well as all sorts of trajectory data, all sorts of modern know relatively modern data about crime mentality, etc.
+
+928
+02:15:37.410 --> 02:15:49.110
+Karl Grossner: All of those features can have very important temple attributes and standardizing a representation in the most common format currently in use geo JSON seems to make sense to me.
+
+929
+02:15:50.400 --> 02:15:52.380
+Karl Grossner: That's all I've got. Okay.
+
+930
+02:15:59.880 --> 02:16:03.270
+Amelia Bellamy-Royds: Oh, thank you very much. Curl. I'm going to jump in.
+
+931
+02:16:04.410 --> 02:16:20.370
+Amelia Bellamy-Royds: Just on the point sort of your question about math ML math and Mel's vector model currently is almost directly compatible with geo JSON is just converted into a market form.
+
+932
+02:16:21.420 --> 02:16:28.530
+Amelia Bellamy-Royds: Peter can jump in with more specific questions, but it's designed to be as directly compatible as possible.
+
+933
+02:16:29.850 --> 02:16:31.530
+Karl Grossner: Well, I look forward to investigating that
+
+934
+02:16:32.940 --> 02:16:33.360
+Peter Rushforth: Yeah.
+
+935
+02:16:33.810 --> 02:16:40.590
+Karl Grossner: And then, and then any link directly to a spec or graphs or not one that
+
+936
+02:16:42.750 --> 02:16:44.100
+Bryan Haberberger: Did a demo for me.
+
+937
+02:16:44.670 --> 02:16:52.500
+Peter Rushforth: Okay, great. Well, I'm gonna give part two of the presentation that I didn't have time for today, tomorrow as part of my breakout
+
+938
+02:16:54.300 --> 02:16:57.660
+Peter Rushforth: Following your guys example I'm I'm I'm
+
+939
+02:16:58.770 --> 02:17:05.010
+Peter Rushforth: Using the time most judiciously to communicate as as efficiently as I can. So I'll do
+
+940
+02:17:05.520 --> 02:17:20.280
+Peter Rushforth: I'll give that presentation and then we can do it like a demo or whatever. Once I've done that presentation demos almost not necessary, but always nice to click on stuff and but thank you very much time is it time is a challenge and
+
+941
+02:17:21.300 --> 02:17:28.980
+Peter Rushforth: You know we are collecting Amelia has been leading the charge on collecting use cases for maps on the web.
+
+942
+02:17:30.180 --> 02:17:37.320
+Peter Rushforth: That, you know, we're going to reconcile the maps for HTML specifications with that use cases.
+
+943
+02:17:37.920 --> 02:17:52.500
+Peter Rushforth: And in an iterative fashion. So, I mean, part of the challenges to what's in what's out and what should be handled by the browser in theory you know i know Brian and Simon or, or, you know, like, whoa, keep the
+
+944
+02:17:53.100 --> 02:17:55.680
+Peter Rushforth: Keep the request down to the bare minimum, but
+
+945
+02:17:56.340 --> 02:18:06.720
+Peter Rushforth: What you know and we we live in that spirit as well. So, you know, what is the minimum viable product that we can ask that serves you know the most number of people.
+
+946
+02:18:06.990 --> 02:18:17.190
+Peter Rushforth: And I hate to call it the least common denominator, but that's effectively what it is right and that's not a bad thing when you're thinking about math when you're learning, learning math when you're a kid, right when you
+
+947
+02:18:18.000 --> 02:18:32.400
+Peter Rushforth: When you bring things to the least lowest common denominator, you're able to integrate them them right you're able to add them up. So hopefully the analogy works that way. So no great presentation. I don't want to steal your time so cool.
+
+948
+02:18:32.940 --> 02:18:38.790
+Bryan Haberberger: going good. I just, it's most interesting to me because it's all I have is the features. How do I
+
+949
+02:18:39.720 --> 02:18:50.040
+Bryan Haberberger: reconcile that with I just had the features I want to give to you a map and that's that's literally it. How do I just retain those features and make it so that it works within that markup language.
+
+950
+02:18:50.910 --> 02:19:07.200
+Peter Rushforth: Yeah. Well, there is a feature element that we're proposing that basically is based on geo JSON, you know, I mean, the thing is that geo JSON is strictly tied to W Gs. A for it doesn't have any notion of scale and there are no other
+
+951
+02:19:08.790 --> 02:19:17.400
+Peter Rushforth: There's no styling of that stuff. It's all up to the browser. So this is like JavaScript and CSS or CSS and JavaScript on a debate.
+
+952
+02:19:17.820 --> 02:19:29.760
+Peter Rushforth: Right. Yeah. So I mean, what we would like to do for feature is give it a home in HTML somehow right so that one con geometry context is the map and the and the textual content is the
+
+953
+02:19:30.330 --> 02:19:39.090
+Peter Rushforth: Is a 2D browsing contest or like a regular browsing context, I guess. So somehow work on work that out but anyhow.
+
+954
+02:19:40.170 --> 02:19:41.940
+Peter Rushforth: I will talk more about that tomorrow.
+
+955
+02:19:42.780 --> 02:19:55.170
+Karl Grossner: Oh of course libraries like leaflet take a data stream like some geo JSON data and generate a ton of stuff elements in the DOM that are entirely proprietary
+
+956
+02:19:56.640 --> 02:19:57.540
+Karl Grossner: For each one
+
+957
+02:19:58.650 --> 02:20:01.200
+Karl Grossner: So ultimately, they live as elements and
+
+958
+02:20:03.180 --> 02:20:04.500
+Karl Grossner: All of these data out there.
+
+959
+02:20:05.310 --> 02:20:21.930
+Peter Rushforth: But yeah, and the link data idea like so you know link data in the DOM is possible by, I suppose, like data crawlers in the sense. So giving features a home in the DOM could be part and parcel of making
+
+960
+02:20:22.950 --> 02:20:24.930
+Peter Rushforth: You know the geo web probable
+
+961
+02:20:28.500 --> 02:20:32.190
+Peter Rushforth: And more importantly index level. So, yeah.
+
+962
+02:20:33.510 --> 02:20:42.270
+Bryan Haberberger: Yeah, and like it's the only difference between the geo JSON and geo JSON LD is that context. So sort of at a really simple level, all I have to be able to do supply context.
+
+963
+02:20:43.200 --> 02:20:44.670
+Bryan Haberberger: You could do with a simple attribute
+
+964
+02:20:47.430 --> 02:20:51.870
+Karl Grossner: One thing, as I mentioned, real quick, is that geo JSON t
+
+965
+02:20:53.190 --> 02:21:03.450
+Karl Grossner: Is not LD compatible, such as it is this graph spec that's we're playing with the British Library and elsewhere. There's not LD compatible it
+
+966
+02:21:03.930 --> 02:21:14.250
+Karl Grossner: Predates really an effort to do that, but it has formed the basis for another format link for which was going a lot. And my last slide, which is linked places format.
+
+967
+02:21:14.790 --> 02:21:25.500
+Karl Grossner: Which is being used and world historical gadgets here which is LB compatible and is valid geo JSON, it's valid JSON LD 1.1 and
+
+968
+02:21:30.360 --> 02:21:34.470
+Karl Grossner: But as much more elaborate. It's designed specifically as a
+
+969
+02:21:36.480 --> 02:21:41.760
+Karl Grossner: Integration or contribution format for a couple of guys are two platforms.
+
+970
+02:21:44.640 --> 02:21:49.740
+Karl Grossner: So God is it very much should become Judaism LGBT
+
+971
+02:21:50.430 --> 02:21:57.300
+Bryan Haberberger: Yes. And just to give you a really easy idea of what that means the context for everything else already exists, all it has to do is add
+
+972
+02:21:57.630 --> 02:22:08.250
+Bryan Haberberger: Some vocabulary and some constraints around when to say, when is a JSON object, not an array and I expected it to contain this or that and by when I mean K geographer.org slash when
+
+973
+02:22:08.820 --> 02:22:23.190
+Bryan Haberberger: You know, and that's it. It would just be literally connecting up that new element that he's trying to introduce and of course some work with the geo JSON standard people period because at some point it would have to be sort of a, an approved extension kind of thing.
+
+974
+02:22:25.560 --> 02:22:26.640
+Karl Grossner: Yeah, I
+
+975
+02:22:28.380 --> 02:22:29.700
+Karl Grossner: Will see that is way out.
+
+976
+02:22:30.780 --> 02:22:31.260
+Karl Grossner: It is
+
+977
+02:22:31.320 --> 02:22:31.710
+Bryan Haberberger: It is
+
+978
+02:22:32.400 --> 02:22:37.230
+Karl Grossner: For a long time, and proposing having time to do this one for a very long time and I just
+
+979
+02:22:38.580 --> 02:22:50.940
+Karl Grossner: That group is not especially been responsive to the ideas or just throwing something out there and if I'm using it in some real applications and demonstrating and talking about it and
+
+980
+02:22:51.420 --> 02:23:03.960
+Karl Grossner: And inviting others to collaborate and making it an actual spec and Gavin is very much in that category. He saw it and that it suits. What he has in mind that would serve
+
+981
+02:23:04.800 --> 02:23:15.270
+Karl Grossner: The Library and Museum communities and cultural heritage and so we're just moving forward and inviting people to help make it a true spec from what it is.
+
+982
+02:23:16.650 --> 02:23:28.620
+Bryan Haberberger: And so people like me. The chair of a trip life community group, I take that as a call and to know now I should take this to the group when I when we have our next meeting to say hey guys, I know we're a year out from thinking about time. But look, there's already
+
+983
+02:23:29.190 --> 02:23:36.060
+Bryan Haberberger: A good JSON implementation for it. Is there anything we can use. Should we just use this and asked, Carl, if we can move it, like, what, what do we do
+
+984
+02:23:37.020 --> 02:23:50.280
+Karl Grossner: I'll take Peters point very seriously the minimum viable product least common denominator. This is in my encounters with the world of standards development. This is always front and center.
+
+985
+02:23:51.000 --> 02:23:59.760
+Karl Grossner: And it's a frustration for people in my position because I'm encountering just all sorts of use cases. And I want to honor all of them.
+
+986
+02:24:01.590 --> 02:24:21.330
+Karl Grossner: But, but there is. I think there's a simple least common denominator for saying something about time in geo JSON and one of the authors of geo JSON has has said very explicitly yes there's such a thing as an event like feature.
+
+987
+02:24:22.620 --> 02:24:33.570
+Karl Grossner: But the the task. It just seems overwhelming and coming as I think from the world of geography academic geography NGOs is the task of merging or
+
+988
+02:24:34.440 --> 02:24:45.510
+Karl Grossner: Space and time in models and then computation has been an enormous challenge. And by and large is just simply ignored or in terms of standardization so
+
+989
+02:24:46.920 --> 02:24:50.280
+Karl Grossner: Yeah, it's not an easy thing at all to do or to think about that.
+
+990
+02:24:52.440 --> 02:24:54.240
+Karl Grossner: Maybe we can make some progress.
+
+991
+02:24:54.930 --> 02:24:56.250
+Gethin Rees: I have a key. I
+
+992
+02:24:56.430 --> 02:24:57.540
+Doug Schepers: I. Oh, sorry.
+
+993
+02:24:57.870 --> 02:25:04.380
+Gethin Rees: Go ahead. No, exactly. I was going to just say, does anyone else have questions and one on the mute themselves so perfect.
+
+994
+02:25:05.970 --> 02:25:07.620
+Doug Schepers: I have a couple of thoughts.
+
+995
+02:25:08.790 --> 02:25:15.930
+Doug Schepers: The first is that the minimum viable product. The viable part is the important bit in there.
+
+996
+02:25:18.480 --> 02:25:25.740
+Doug Schepers: It's only viable if it allows for extensions. If it allows to be it to be grown into its natural set of use cases.
+
+997
+02:25:26.490 --> 02:25:41.130
+Doug Schepers: Apartments, even if not everything support at first there needs to be a really good use case and requirements discovery phase in which things are not excluded from being future enhancements of the thing.
+
+998
+02:25:42.150 --> 02:25:51.090
+Doug Schepers: So that's one thing that the MVP needs to be viable. It can't just be a a bolted on solution.
+
+999
+02:25:51.330 --> 02:25:58.020
+Peter Rushforth: Yes, I think you need to have a story. You need to have a coherent story for for extension right so
+
+1000
+02:25:58.920 --> 02:26:04.950
+Peter Rushforth: In my world that I think of that as progressive enhancement. So what is the what is the core
+
+1001
+02:26:05.700 --> 02:26:21.600
+Peter Rushforth: behavior that you want to have, and how can you move forward from there. How can you put those times sliders that that make the animate the map and so on. And and and that's what i think that's that's how I think of it anyway, is through progressive enhancement and
+
+1002
+02:26:21.630 --> 02:26:22.350
+Doug Schepers: You actually
+
+1003
+02:26:22.560 --> 02:26:31.890
+Doug Schepers: Had. We didn't rehearse this folks, that's a natural segue into my next point, which is animation.
+
+1004
+02:26:33.540 --> 02:26:38.280
+Doug Schepers: There are two ways that time is dealt with in the web right now.
+
+1005
+02:26:41.250 --> 02:27:00.420
+Doug Schepers: Well, two main ways I'm thinking like an eight, the HTML context. The first is timed media things like video and the second is animation, as in CSS animation SVG animation or JavaScript animation in general and
+
+1006
+02:27:01.860 --> 02:27:02.280
+Doug Schepers: You know,
+
+1007
+02:27:04.020 --> 02:27:17.310
+Doug Schepers: Carl if if you were to take the data from that Poland right and timestamp, the different states right i mean by states. I mean, the different
+
+1008
+02:27:19.980 --> 02:27:21.330
+Doug Schepers: Geometric bounds.
+
+1009
+02:27:22.590 --> 02:27:34.830
+Doug Schepers: You could animate. You could use CSS, for example, to tweak or SVG to to tween between different states different expansions and I think
+
+1010
+02:27:36.090 --> 02:27:47.700
+Doug Schepers: I think that animation in that sense, really needs to be considered. What are the native animation capabilities of the web. And how is that going to feed into
+
+1011
+02:27:49.260 --> 02:28:16.890
+Doug Schepers: The the the geometric expressions. So I'd love to see for example like Poland go from small to larger and larger and think again to nothing and then bounce back into existence. Over time, lots of other animations of like movements of language groups through through Europe use of
+
+1012
+02:28:18.120 --> 02:28:23.610
+Doug Schepers: You know, changes in borders in general political movements animations of
+
+1013
+02:28:24.660 --> 02:28:26.490
+Doug Schepers: trade routes, etc.
+
+1014
+02:28:28.080 --> 02:28:39.570
+Doug Schepers: animations of slave routes. I saw a really compelling one recently of, you know, where the slave started and where they ended up in you know way they started in Africa and where they ended up in the Americas and it was
+
+1015
+02:28:40.080 --> 02:28:46.860
+Doug Schepers: In this in the in the pace at which it increased until it started slowing down and died off.
+
+1016
+02:28:48.120 --> 02:28:51.510
+Doug Schepers: You know, that was emotionally culturally relevant a
+
+1017
+02:28:52.650 --> 02:29:11.310
+Doug Schepers: Piece of thing and that's you can't do that if you don't consider time as a natural part of geometry. I mean, for, for that matter, the world spins. Right. Like what, like when, when is something open as well, like a
+
+1018
+02:29:12.600 --> 02:29:14.880
+Doug Schepers: Win is a business open
+
+1019
+02:29:16.050 --> 02:29:19.800
+Doug Schepers: Okay, I know where the business is when is the business right
+
+1020
+02:29:20.940 --> 02:29:39.420
+Doug Schepers: When did it close down this also ties into the time aspect that Brandon talked about earlier. He has way he didn't mention it much, but he has this project of, you know, at dot NYC which looks at historical
+
+1021
+02:29:40.890 --> 02:29:42.210
+Doug Schepers: Things about the
+
+1022
+02:29:43.860 --> 02:30:05.040
+Doug Schepers: New York City again temporal right when did any given event occur in a timeline at a particular location. I don't see how we can really think that we're representing geospatial information if we're not if it's not also temporal so Carl. Thank you. That's
+
+1023
+02:30:05.490 --> 02:30:06.840
+Karl Grossner: The money line. Thank you.
+
+1024
+02:30:07.440 --> 02:30:08.310
+Doug Schepers: You're welcome at
+
+1025
+02:30:08.430 --> 02:30:09.840
+Karl Grossner: All costs or
+
+1026
+02:30:10.590 --> 02:30:14.220
+Doug Schepers: You can pay pal me the the the agreed upon them out later.
+
+1027
+02:30:16.020 --> 02:30:30.510
+Karl Grossner: That the grid. All of the historical cases, you mentioned are quite routine cases that are being done right now routinely in academic research applications and so forth. But they're being done with
+
+1028
+02:30:33.270 --> 02:30:41.490
+Karl Grossner: unique ways of expressing time within properties in geo JSON and JavaScript. So way they're being done so.
+
+1029
+02:30:42.840 --> 02:30:50.880
+Karl Grossner: We're because we're interested in the link beta world and being able to share things. Yeah. And we have the sort of standard way of dealing with space.
+
+1030
+02:30:51.480 --> 02:31:00.990
+Karl Grossner: The real impetus to include time in that standardization to facilitate integration via data so so
+
+1031
+02:31:01.440 --> 02:31:13.170
+Karl Grossner: I know that there are myriad modern examples that you mentioned summer stores opening and so forth. That's not my universe so I you know I be bringing these historical cases to the table, but
+
+1032
+02:31:13.980 --> 02:31:29.190
+Karl Grossner: I know, and I've seen other discussions about time time modeling and so forth, W through see time modeling and all that, but there are very many modern cases and and there is a WPC time that has produced documents and standards and social
+
+1033
+02:31:31.470 --> 02:31:31.830
+Karl Grossner: Yeah.
+
+1034
+02:31:31.950 --> 02:31:32.190
+Doug Schepers: But
+
+1035
+02:31:32.220 --> 02:31:34.650
+Karl Grossner: I just wonder and delivering that to the web is a
+
+1036
+02:31:34.710 --> 02:31:37.140
+Karl Grossner: Is a kind of a separate but very connected
+
+1037
+02:31:38.220 --> 02:31:48.210
+Doug Schepers: Yeah, I wanted to, I wanted to say I wanted to reiterate something I just glossed over which is that we should be looking at how
+
+1038
+02:31:50.850 --> 02:31:58.830
+Doug Schepers: Mainstream things like CSS deal with time as well. Right. And make sure that there's a concordance between
+
+1039
+02:32:01.260 --> 02:32:08.910
+Doug Schepers: How we represent it in geo JSON and how it could actually possibly at be animated. Just a thought.
+
+1040
+02:32:13.110 --> 02:32:17.040
+Doug Schepers: Where we're animation is relevant. Right. It's not always going to be relevant, but
+
+1041
+02:32:18.960 --> 02:32:21.000
+Doug Schepers: But sometimes it will be
+
+1042
+02:32:24.750 --> 02:32:25.050
+Gethin Rees: Thing.
+
+1043
+02:32:26.910 --> 02:32:40.590
+Gethin Rees: Also the edge case issue is one booth presentations on time deal with well in that when you get a group of curators or academics together, you
+
+1044
+02:32:44.940 --> 02:32:50.370
+Gethin Rees: I'm like this, there was this particular building and it moved here and then it moved there.
+
+1045
+02:32:51.570 --> 02:33:02.010
+Gethin Rees: And then it moved here and where do we actually put the building, you know, when it changed name and then change back to its original name, for example, and I'm so Brian's
+
+1046
+02:33:02.970 --> 02:33:13.050
+Gethin Rees: Presentation, you know, web annotations allows us to actually make assertions that can take advantage of those on what they will they can communicate the complexity of those edge cases.
+
+1047
+02:33:13.380 --> 02:33:35.760
+Gethin Rees: And I knew that call on in working through quite a few different iterations of temporal, spatial moderate modeling has also really consider those very well. And so I think that's something in in in understanding those edge cases that something this community can bring to a broader
+
+1048
+02:33:36.780 --> 02:33:39.900
+Gethin Rees: Audience or a broader set of use cases.
+
+1049
+02:33:44.250 --> 02:33:46.020
+Bryan Haberberger: More stories, please.
+
+1050
+02:33:57.720 --> 02:34:01.590
+Gethin Rees: On those. I don't know what the time limit actually is on this.
+
+1051
+02:34:04.710 --> 02:34:06.720
+Amelia Bellamy-Royds: Will cap it at the end of the hour.
+
+1052
+02:34:10.440 --> 02:34:35.070
+Amelia Bellamy-Royds: I guess one question is sort of what what comes next. What are you hoping I mean I think it sounds like you're going to have lots of collaborations between the geo JSON LD and the geo JSON T projects. What else from the web community or the rest of the geospatial community.
+
+1053
+02:34:38.880 --> 02:34:42.960
+Bryan Haberberger: So I know with triple F maps that community group, for example.
+
+1054
+02:34:44.040 --> 02:34:57.810
+Bryan Haberberger: As I showed you the geo JSON all the context as it is right now is a no go. So we are trying to just support the migration of that specifications that I can add that at version tag and perhaps maybe supply some more bounds. The properties, having some things so
+
+1055
+02:34:59.070 --> 02:35:09.450
+Bryan Haberberger: Open is actually sort of against some of the things like data once with permanence. We don't really want it to be anything we want it to be flexible on these terms. And so we need to
+
+1056
+02:35:10.110 --> 02:35:17.730
+Bryan Haberberger: Do a little bit of work around that. So I'm working with community groups and I chatted in the gutter sort of the links to the stories that we've collected in Triple F.
+
+1057
+02:35:18.150 --> 02:35:25.800
+Bryan Haberberger: And I'm bringing in those use cases and bringing them to thinking on, you know, how are we doing this with resources. I mean, what I showed you was a simple geolocation.
+
+1058
+02:35:28.230 --> 02:35:37.680
+Bryan Haberberger: Example, but imagine in in a map is an image of a map when there are no coordinates involved a map is just an image.
+
+1059
+02:35:38.430 --> 02:35:50.400
+Bryan Haberberger: What gives map. It's mapping is and correct me if I'm getting my vocabulary wrong geo rectification. So I showed you simple geo locations that assumed a geo rectification, but what if my entity was just that image.
+
+1060
+02:35:50.640 --> 02:35:58.170
+Bryan Haberberger: And I want to apply the jewel rectification to it in my own data set as an annotation, you know, is that even possible.
+
+1061
+02:35:58.980 --> 02:36:04.350
+Bryan Haberberger: So how the spreads. You know, it's not it. There's so many things you can do with geo
+
+1062
+02:36:04.800 --> 02:36:15.810
+Bryan Haberberger: And so many things that are just image specific that aren't Matt specific. So I think a lot of the work we're trying to do for the future is what are those maps specific things that go beyond this being an image.
+
+1063
+02:36:16.470 --> 02:36:28.650
+Bryan Haberberger: That we need to account for. And of course, this takes stories and use cases and trial and error and and people like Carl come in and going. You guys didn't even consider the time dimension. What are you thinking like, it's all of that.
+
+1064
+02:36:29.730 --> 02:36:36.120
+Doug Schepers: Well, actually, the annotation working group did consider the time dimension annotations can be time stamped
+
+1065
+02:36:36.510 --> 02:36:48.300
+Bryan Haberberger: Yes, they can. And especially with triple FA v. We have worked in those temporal assertions for things like a video and audio files, but not for images which again is important for
+
+1066
+02:36:48.390 --> 02:36:59.100
+Bryan Haberberger: An image of a map, you have to realize at its base that's that's a lot of times just what a what a person takes a map is if you just give me the image with no G rectification, I can only treat it like an image.
+
+1067
+02:36:59.460 --> 02:36:59.850
+Um,
+
+1068
+02:37:03.120 --> 02:37:10.470
+Peter Rushforth: Well, I guess what to pitch my product a bit more like I'm not already doing that enough, but the
+
+1069
+02:37:11.010 --> 02:37:19.230
+Peter Rushforth: Map element would be to rectify. So if you wanted to, to rectify and image, you would have a geo rectified target into which to
+
+1070
+02:37:19.710 --> 02:37:34.560
+Peter Rushforth: To do that process. So I can imagine that would be a hefty you was them or JavaScript process. But I mean, I've seen I've seen know like, yeah, I think the New York library had
+
+1071
+02:37:35.910 --> 02:37:39.150
+Peter Rushforth: A site that you could do to rectify images to
+
+1072
+02:37:41.040 --> 02:37:42.780
+Peter Rushforth: Historical basement.
+
+1073
+02:37:42.840 --> 02:37:46.050
+Bryan Haberberger: So yeah, lots of little demos out there. We've, we've looked at them.
+
+1074
+02:37:46.440 --> 02:37:46.800
+Yeah.
+
+1075
+02:37:48.000 --> 02:37:48.780
+Peter Rushforth: So anyhow,
+
+1076
+02:37:58.230 --> 02:38:01.650
+Gethin Rees: Okay. Well, I mean, if people don't have further questions.
+
+1077
+02:38:10.140 --> 02:38:22.980
+Peter Rushforth: Um, web of layers to it. You know, I think layers are an important fundamental thing of of maps sort of stretch things out for people, but I just wanted to get some of the you know the primitive
+
+1078
+02:38:24.000 --> 02:38:28.020
+Peter Rushforth: I want to, you know, basically, see what you guys think about
+
+1079
+02:38:29.610 --> 02:38:36.900
+Peter Rushforth: You know, what is a primitive feature of maps and in my world layers that are are are everywhere.
+
+1080
+02:38:37.380 --> 02:38:44.490
+Peter Rushforth: I'm seeing Yvonne Sanchez was saying everything's all there in his blog post. Everything's a layer. Forget the idea of layers.
+
+1081
+02:38:44.820 --> 02:38:45.120
+Bryan Haberberger: You know,
+
+1082
+02:38:45.900 --> 02:38:46.440
+Bryan Haberberger: You know,
+
+1083
+02:38:46.800 --> 02:38:49.500
+Peter Rushforth: Yeah, sort of makes it a good target to actually implement
+
+1084
+02:38:50.220 --> 02:39:00.780
+Bryan Haberberger: Yeah, I mean, in our, in our use cases, things like that, go completely outside of maps, but like a layer that is transcription and layer that is translation. How do we supply that for for for our objects.
+
+1085
+02:39:01.470 --> 02:39:12.090
+Bryan Haberberger: We don't have a specific layer we use the combination of annotation collections and annotation pages and a structure called a range to sort of
+
+1086
+02:39:13.620 --> 02:39:16.140
+Bryan Haberberger: Organize whole or pieces of
+
+1087
+02:39:17.970 --> 02:39:21.690
+Bryan Haberberger: Of like entities and then supply the different
+
+1088
+02:39:22.860 --> 02:39:31.650
+Bryan Haberberger: Layers. If you would collections or pages of information. And that's sort of how triple if deals with that primitive in their case.
+
+1089
+02:39:32.940 --> 02:39:38.640
+Bryan Haberberger: I don't have a direct answer for you. I just have the one you know that's around my community.
+
+1090
+02:39:39.180 --> 02:39:41.700
+Peter Rushforth: And you provide a link for both on that topic.
+
+1091
+02:39:42.000 --> 02:39:43.230
+Bryan Haberberger: Sure you go grab it.
+
+1092
+02:39:43.590 --> 02:39:45.420
+Peter Rushforth: Well, not now, but whenever
+
+1093
+02:39:46.530 --> 02:39:47.220
+Peter Rushforth: That would be interesting.
+
+1094
+02:39:47.250 --> 02:39:50.160
+Bryan Haberberger: Yeah, I can absolutely I can actually grab you a link on that topic.
+
+1095
+02:39:50.190 --> 02:39:51.570
+Bryan Haberberger: We did talk about it.
+
+1096
+02:39:55.590 --> 02:39:57.300
+Amelia Bellamy-Royds: I will say, I've been
+
+1097
+02:39:58.620 --> 02:40:17.550
+Amelia Bellamy-Royds: Keeping notes in the chat. So kind of droning the chat in the notes, but I'll copy them over into a discourse and we can add all sorts of links and whatever there. And of course, we are still recording, so this will go up with the YouTube video of the main talks.
+
+1098
+02:40:21.000 --> 02:40:22.230
+Peter Rushforth: Thanks for doing that.
+
+1099
+02:40:22.770 --> 02:40:26.820
+Amelia Bellamy-Royds: So this definitely doesn't have to be the end of the conversation.
+
+1100
+02:40:28.650 --> 02:40:28.980
+Gethin Rees: Thanks.
+
+1101
+02:40:30.000 --> 02:40:33.360
+Gethin Rees: Something fantastic I'm sharing because it's been dropping in and out for me. I
+
+1102
+02:40:36.630 --> 02:40:37.650
+Gethin Rees: Really appreciate that.
+
+1103
+02:40:48.900 --> 02:40:59.970
+Karl Grossner: Thank you know you mentioned Amelia next steps and it occurs to me you were talking about extending geo JSON, so no natural thing to think about is
+
+1104
+02:41:01.200 --> 02:41:06.690
+Karl Grossner: How to put these ideas about extensions before the geo JSON.
+
+1105
+02:41:07.980 --> 02:41:08.670
+Karl Grossner: maintainer.
+
+1106
+02:41:09.960 --> 02:41:12.870
+Karl Grossner: Community developers and so forth and
+
+1107
+02:41:13.890 --> 02:41:14.790
+Karl Grossner: There's no
+
+1108
+02:41:17.280 --> 02:41:26.580
+Karl Grossner: There's no immediate uptake, as has been mentioned in the talk about MVP geo JSON has a term that specified called the
+
+1109
+02:41:27.390 --> 02:41:36.300
+Karl Grossner: Forum member for members are allowed. They'll just simply be ignored by all software that doesn't specifically look for them.
+
+1110
+02:41:37.140 --> 02:42:00.120
+Karl Grossner: And that's what, when, when in geo JSON a mouse to a farm member. And at some level, the DOJ some maintainer could care less what form members anybody ads and what they might want to do with them. So the idea, you know, my initial inclination was well timed part of the part of core
+
+1111
+02:42:01.440 --> 02:42:02.880
+Karl Grossner: You know, following
+
+1112
+02:42:05.100 --> 02:42:14.070
+Karl Grossner: What some I've been saying, you know, I mean, it's really elemental I think that a very long list of use cases can be put forward but
+
+1113
+02:42:15.180 --> 02:42:24.570
+Karl Grossner: It's not clear how that's going to proceed. I mean, that JSON LV a geo JSON LD is does not really non existent. I mean, it's not
+
+1114
+02:42:25.590 --> 02:42:33.150
+Karl Grossner: It's not really truly respect at all. It has a has an alias file that just points to some stuff that
+
+1115
+02:42:35.640 --> 02:42:39.660
+Karl Grossner: I don't think makes it really useful RDF
+
+1116
+02:42:41.550 --> 02:42:51.810
+Karl Grossner: So I don't know. That's a big open. That's my open question, for what next, and in the meantime, I'm just going to keep proceeding working with Kevin to and others who may
+
+1117
+02:42:53.220 --> 02:43:05.580
+Karl Grossner: To create a format that sort of software modules, he's imagining map plus timeline can work with and then put it out there and say, Isn't this cool
+
+1118
+02:43:06.990 --> 02:43:14.580
+Karl Grossner: Is this cool enough to standardize are there enough use cases to support even thinking of it as a standard so
+
+1119
+02:43:15.660 --> 02:43:23.640
+Bryan Haberberger: Now, and if he's working with communities like us, even in that prototype stage, we could probably produce and I'll the context for it, just to bring you into that game.
+
+1120
+02:43:23.700 --> 02:43:24.630
+Bryan Haberberger: And then you're there.
+
+1121
+02:43:24.690 --> 02:43:28.770
+Bryan Haberberger: And it's, it's in a place where we can start to test it and tell people to use it and give us feedback.
+
+1122
+02:43:29.100 --> 02:43:35.790
+Karl Grossner: It's definitely getting some traction. So in the work at different is doing. And then the AAA of community. The idea of adding time has
+
+1123
+02:43:36.990 --> 02:43:41.220
+Karl Grossner: caught people's attention and there's attention to it. So that's great and
+
+1124
+02:43:46.350 --> 02:43:48.240
+Karl Grossner: In the meantime, I'm reading software.
+
+1125
+02:43:52.920 --> 02:43:57.420
+Doug Schepers: writing software is the best thing you can do. That way we can pave the cow paths, right. Fine.
+
+1126
+02:43:57.480 --> 02:43:58.710
+Doug Schepers: I and actually with the
+
+1127
+02:43:59.220 --> 02:44:05.490
+Doug Schepers: With the hard parts are fixed the hard parts in code erratic and then standards can follow after
+
+1128
+02:44:05.970 --> 02:44:10.320
+Karl Grossner: That's that's been that's been our game for number of years.
+
+1129
+02:44:17.700 --> 02:44:27.300
+Karl Grossner: Where you can say some time and in inaction and some of the links that are on my last slide building world historical deserts here, which was intended to be
+
+1130
+02:44:28.020 --> 02:44:44.310
+Karl Grossner: Intended to add time intrinsically to place names to places their names their geometries or tights and their relationship to other places. So when appears all over the place. Understanding that
+
+1131
+02:44:47.700 --> 02:44:47.880
+We
+
+1132
+02:44:53.550 --> 02:45:01.440
+Peter Rushforth: Do for scale does like your Jason doesn't have notion of zoom built into it. So what do you do for for that.
+
+1133
+02:45:03.840 --> 02:45:13.230
+Karl Grossner: Everything is in JavaScript. So, I mean, you know what, I, I work with a leaflet almost exclusively I've done other things D3 and
+
+1134
+02:45:14.220 --> 02:45:24.660
+Karl Grossner: Open layers, way back when, but mostly for JavaScript or just make the spaghetti but all people who talk about standards.
+
+1135
+02:45:25.560 --> 02:45:39.240
+Karl Grossner: But they love to draw attention to. I make spaghetti and you know it's it works and it's you know it's a lot of the things I've built a pretty robust, you know, still working on after years and so
+
+1136
+02:45:41.250 --> 02:45:51.480
+Karl Grossner: There's a better way forward. And the whole idea of sharing which link data and the LV universe proposes is really
+
+1137
+02:45:53.100 --> 02:45:54.990
+Karl Grossner: My focus. And I think in
+
+1138
+02:45:57.000 --> 02:45:59.550
+Karl Grossner: Gotham and Brian and also the
+
+1139
+02:46:01.170 --> 02:46:02.520
+Karl Grossner: That introduces
+
+1140
+02:46:03.990 --> 02:46:09.150
+Karl Grossner: It almost compels standard models and apologies behind those
+
+1141
+02:46:11.070 --> 02:46:11.460
+Peter Rushforth: Great.
+
+1142
+02:46:13.980 --> 02:46:14.970
+Peter Rushforth: Very interesting.
+
+1143
+02:46:15.930 --> 02:46:28.650
+Bryan Haberberger: I was gonna say the very next thing I would like to see happen is a webpage goes up that just says geospatial not equal to spatial temporal because so many people just assume that because I've done something geospatial for them.
+
+1144
+02:46:29.730 --> 02:46:42.180
+Bryan Haberberger: It's like they can do it you know that timeline and and I say without time. You cannot have a timeline. Don't you understand geospatial it's not spatial temporal. It's so funny because these things are so connected that people just assume
+
+1145
+02:46:44.250 --> 02:46:58.500
+Karl Grossner: Well, there's just a ton of geospatial data for which time is an assumption because you're making snapshots at a given time. So you have this temporal frame. And that's what you're looking at the stuff that tries to get dynamic
+
+1146
+02:46:59.850 --> 02:47:02.100
+Karl Grossner: Is different. Our
+
+1147
+02:47:02.130 --> 02:47:09.480
+Bryan Haberberger: Mission machines don't like abstraction that needs to be like, you know, officially said in the data and like you're saying it's not a lot of times
+
+1148
+02:47:11.010 --> 02:47:11.490
+Karl Grossner: As far
+
+1149
+02:47:13.350 --> 02:47:13.500
+Karl Grossner: As
+
+1150
+02:47:15.840 --> 02:47:23.580
+Peter Rushforth: Yeah, but it's hard. I mean, it's so hard for two dimensions and you add the time dimension in there and you disappear.
+
+1151
+02:47:25.080 --> 02:47:30.030
+Karl Grossner: I haven't even mentioned fuzzy time on certainty and so on and so forth.
+
+1152
+02:47:30.900 --> 02:47:36.390
+Karl Grossner: Yeah, all of which are great interest with people who do history.
+
+1153
+02:47:37.590 --> 02:47:39.540
+Karl Grossner: And they're very difficult to form along
+
+1154
+02:47:41.730 --> 02:47:56.640
+Bryan Haberberger: I've heard a lot of the hour saw a lot of talking to get her about the static pages and just. Could you imagine representing someone's location over a day using time you'd have to have a layer or feature for each second of the day like that would be john mean. Wow.
+
+1155
+02:47:58.260 --> 02:47:58.710
+Peter Rushforth: Yeah.
+
+1156
+02:48:02.430 --> 02:48:03.600
+Karl Grossner: Thank you all for
+
+1157
+02:48:06.390 --> 02:48:07.200
+Karl Grossner: Very useful and
+
+1158
+02:48:09.630 --> 02:48:10.650
+Bryan Haberberger: Yes, thank you, everybody.
+
+1159
+02:48:11.520 --> 02:48:12.000
+Peter Rushforth: Thank you for
+
+1160
+02:48:12.270 --> 02:48:13.560
+Peter Rushforth: Joining us. It's been great to
+
+1161
+02:48:13.560 --> 02:48:16.410
+Peter Rushforth: Have you guys join the join the conversation.
+
+1162
+02:48:17.610 --> 02:48:19.320
+Doug Schepers: I want to point out so much
+
+1163
+02:48:21.060 --> 02:48:25.620
+Doug Schepers: Sorry, I want to point out one thing have somebody come into the
+
+1164
+02:48:27.210 --> 02:48:40.080
+Doug Schepers: Like there. They didn't know what this word meant and caught in the context of map ML and Peter, correct me if I'm wrong, but I want to emphasize that this is not a map.
+
+1165
+02:48:40.080 --> 02:48:47.340
+Doug Schepers: Ml workshop. This is maps on the web. So it's all this stuff is welcome all this stuff in forms.
+
+1166
+02:48:47.460 --> 02:49:02.190
+Doug Schepers: And it doesn't even have to be W three car or juicy. Right. It's this is ultimately this is about what are all the moving parts. And what do we need to do to to connect them and to get them all meshing
+
+1167
+02:49:03.120 --> 02:49:15.660
+Doug Schepers: And there are lots of moving parts. So I want to make sure that people feel like their contributions are welcome in this workshop, because otherwise we're just going to have a partial solution that doesn't solve everything.
+
+1168
+02:49:16.170 --> 02:49:22.380
+Peter Rushforth: Yeah well said. I think the point of this workshop which we should have had years ago.
+
+1169
+02:49:23.670 --> 02:49:28.860
+Peter Rushforth: But which was only suggested to me by Mike Smith last year. So I blame Mike
+
+1170
+02:49:30.600 --> 02:49:30.990
+Peter Rushforth: Was
+
+1171
+02:49:33.600 --> 02:49:54.270
+Peter Rushforth: Is to just to highlight exactly how valuable and important maps and vocation are to humanity and to try and put that into the context of the the information system that is the web into, you know, raise the profile of how we are dealing with maps where we're
+
+1172
+02:49:55.770 --> 02:50:03.600
+Peter Rushforth: In my opinion, we're not we're not, we don't recognize it, everything, like you said, everything has a location every second of every day.
+
+1173
+02:50:04.080 --> 02:50:21.540
+Peter Rushforth: And that is just as important as in some ways as human thought right giving the web to having the web to allow the expression of that information in a in an easy way like a way that the web, you know, has paved over for us is
+
+1174
+02:50:22.800 --> 02:50:35.070
+Peter Rushforth: Is valuable i think i think it's like an estimate. Hopefully valuable, actually. So that's why the workshop is is here. It's not about i mean i we've been working on math ML as a community group for
+
+1175
+02:50:35.910 --> 02:50:48.090
+Peter Rushforth: A few years now since 2014 we started the community group at the when the spatial data on the web community, our interest group was created it at a workshop by, you know,
+
+1176
+02:50:48.540 --> 02:50:58.140
+Peter Rushforth: I had my own say and we started the community group and, you know, over time, I've just become you know more convinced that spatial information is
+
+1177
+02:50:59.220 --> 02:51:01.980
+Peter Rushforth: It's a primitive. It's a primitive in society and
+
+1178
+02:51:05.220 --> 02:51:06.090
+Peter Rushforth: We'll see where it goes.
+
+1179
+02:51:06.750 --> 02:51:18.660
+Badita Florin: Can I add something. Yeah, because it will like for me like I'm also very glad that this workshop is happening because I'm working with maps like 10 years and
+
+1180
+02:51:19.800 --> 02:51:29.100
+Badita Florin: Most of the times, like I needed to use like CUJO of other things like that. And when I started to going to Web Map. So if that is kind of that found
+
+1181
+02:51:29.580 --> 02:51:39.810
+Badita Florin: But yeah I envision the future when we will not need to have like leaflet know that things like that and also to be like really simple, like when you learn Hashem.
+
+1182
+02:51:40.320 --> 02:51:46.590
+Badita Florin: Hashem, and five to be able to. Yeah, happy to be able to implement the map, very simply, and
+
+1183
+02:51:47.400 --> 02:51:52.530
+Badita Florin: Simple things that maybe we will be able to implement yet in the standard like maybe also because
+
+1184
+02:51:53.040 --> 02:52:10.710
+Badita Florin: I'm working with like bigger dataset, like I need to show 50,000 points on the map. And usually when the dome doesn't handle these so it will need to be see how we could do that at scale, and like clustering, like when you have 50,000 points. Definitely clustering, and that currently using.
+
+1185
+02:52:12.090 --> 02:52:22.530
+Badita Florin: Like lift it and the clustering god, my boss, but I think it would be much more better to to be able to kind of get rid of all of these
+
+1186
+02:52:23.010 --> 02:52:29.970
+Badita Florin: libraries that some will become unsupported like we've seen leaflet. But most of the people have said they are not what they are now working
+
+1187
+02:52:30.360 --> 02:52:41.940
+Badita Florin: At matte box so they will probably not continue to evolve or leaflet in the same way. So I think is really good to have something more of a standard than different libraries.
+
+1188
+02:52:44.850 --> 02:52:46.050
+Bryan Haberberger: Yeah, that's really good way to put it.
+
+1189
+02:52:46.500 --> 02:52:52.890
+Peter Rushforth: Yeah, absolutely. That's great. And I just come back to progressive enhancement, you know, the objective of
+
+1190
+02:52:53.910 --> 02:53:05.130
+Peter Rushforth: Maps in HTML is not to get rid of libraries, but it's to is to make them faster, better, easier and and to, like, you know, the whole human
+
+1191
+02:53:05.640 --> 02:53:15.540
+Peter Rushforth: World of thought and ingenuity can be applied to maps and, you know, we could take the lowest common denominator and build that into the engine that everybody uses the browser.
+
+1192
+02:53:16.080 --> 02:53:29.460
+Peter Rushforth: That would be that would be a big step forward in my opinion. And you know, I don't think there's any magic solution to 50,000 points in the browser, right, like like there. That's a lot of data and you have to have strategies.
+
+1193
+02:53:31.410 --> 02:53:32.550
+Peter Rushforth: But anyhow,
+
+1194
+02:53:36.630 --> 02:53:38.610
+Bryan Haberberger: Just sit there and let it lazy load for a week.
+
+1195
+02:53:39.720 --> 02:53:40.980
+Peter Rushforth: Yeah yeah
+
+1196
+02:53:43.890 --> 02:53:46.830
+Peter Rushforth: Well, right, we're kind of out of time. Right.
+
+1197
+02:53:48.450 --> 02:53:48.750
+Doug Schepers: Yeah.
+
+1198
+02:53:52.950 --> 02:53:56.100
+Peter Rushforth: I'll let you shut us down duck or Amelia, take it.
+
+1199
+02:53:57.510 --> 02:53:59.970
+Peter Rushforth: Thank you very much everyone for participating anyway.
+
+1200
+02:54:00.960 --> 02:54:01.620
+Firing
+
+1201
+02:54:03.690 --> 02:54:07.710
+Doug Schepers: Really enjoyed participating in this conversation. Thanks for organizing it.
+
+1202
+02:54:09.180 --> 02:54:13.230
+Doug Schepers: And thanks, get in. Thanks.
+
+1203
+02:54:14.430 --> 02:54:16.350
+Doug Schepers: Brian and Carl really
+
+1204
+02:54:18.150 --> 02:54:29.100
+Doug Schepers: seeding the conversation with some excellent material. And with that, I think we will convene for the day, Amelia. Do you have any final housekeeping.
+
+1205
+02:54:31.080 --> 02:54:47.520
+Amelia Bellamy-Royds: I didn't know. I think everybody knows the deal. For now, so I hope to see most of you again tomorrow. And I'd like to thank you all for this session, since we didn't really know how it was going to work out. But this was a really great conversation.
+
+1206
+02:54:49.230 --> 02:54:50.730
+Gethin Rees: Yeah. Thanks very much, everyone really
+
+1207
+02:54:51.990 --> 02:54:57.360
+Gethin Rees: Enjoyed the whole week so far, you know, it's been great. I've really learned a lot.
+
+1208
+02:54:57.750 --> 02:55:01.440
+Bryan Haberberger: Yeah, very refreshing to see how much work is going into this
+
+1209
+02:55:01.710 --> 02:55:04.860
+Peter Rushforth: Awesome. Thanks. Okay, bye for now, then
+
+1210
+02:55:05.160 --> 02:55:06.930
+Bryan Haberberger: All right, bye everybody.
+
+1211
+02:55:07.110 --> 02:55:07.590
+It's one
+
+1212
+02:55:08.790 --> 02:55:09.390
+Badita Florin: Thanks. Bye.
+

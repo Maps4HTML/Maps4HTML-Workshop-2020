@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>W3C/OGC Maps for the Web workshop -- 24 Sep 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="W3C/OGC Maps for the Web workshop" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1>W3C/OGC Maps for the Web workshop</h1>
+<h2>24 Sep 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>ted</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">UI patterns in existing web map widgets, Nic Chan</a></li>
+<li><a href="#item02">Introduction to Digital Nonvisual Maps</a></li>
+<li><a href="#item03">The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<h3 id="item01">UI patterns in existing web map widgets, Nic Chan</h3>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; <a href="https://www.youtube.com/watch?v=V-Gx0e5Gkzg">Nic Chan's presentation video</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; @Malvoz's review &amp; discussion:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="https://github.com/Malvoz/web-maps-wcag-evaluation/blob/master/README.md">https://github.com/Malvoz/web-maps-wcag-evaluation/blob/master/README.md</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="https://github.com/Maps4HTML/chat/issues/10">https://github.com/Maps4HTML/chat/issues/10</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; note this is another place we might have a common lower level thing - tv and games also have spatial navigation needs
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I am guilty.  I like the `&lt;a&gt;` better than the `&lt;button&gt;` in Chota CSS.  I'll rethink my habits.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; there's an interesting conversation on a whatwg log in web components whatwg from like 09 on this example actually
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The label thing is fascinating.  I have never even thought about having to handle that in, like, Leaflet.  I am not sure I would even be able to change that kind of behavior without some hefty helper function to traverse layers and find those darn things.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; this was a good presentation, I'm not sure the nick but very interesting
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I do remember there was one issue in the Leaflet bug tracker regarding the i18n of the alt text for the default controls (i.e. being able to translate "zoom in")
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Very insightful, thanks @nchan0154 !
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; :+1:
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yes, thank you @nchan0154 .  It was tough to be called out, but these are the exact kind of oversights that happen with devs.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; what screen reader are you using?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I lost connection for a minute - what is the talk now? I missed the title
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Nic's slides: <a href="https://wcag-maps.nicchan.me/">https://wcag-maps.nicchan.me/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; (sorry we didn't have that link on the agenda)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; it might be helpful if we added the topic and nick for the person here
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; @briankardell_twitter Introduction to Digital Nonvisual Maps
+</p>
+
+<h3 id="item02">Introduction to Digital Nonvisual Maps</h3>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; thanks
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Brandon's slides as PowerPoint: <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx">Brandon Biggs' slides</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; 3D sound is such an interesting topic, and I struggle to understand it.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I want to know if you have every been approached by people who study poetry or music.  Being able to know what things sound like from different points in a given space is a topic in the humanities
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="https://xrnavigation.io/audiom-getting-started/">https://xrnavigation.io/audiom-getting-started/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I use safari on a MacBook and stuff on the site did not work for me.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; +1 for GeoJSON
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; <a href="https://github.com/Leaflet/Leaflet.Editable">https://github.com/Leaflet/Leaflet.Editable</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="http://www.cs.umd.edu/hcil/audiomap/">http://www.cs.umd.edu/hcil/audiomap/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; @bdon_gitlab and I would strip the lat/long to 6-7 decimals <a href="https://en.wikipedia.org/wiki/Decimal_degrees">https://en.wikipedia.org/wiki/Decimal_degrees</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="http://www.cs.umd.edu/hcil/audiomap/">http://www.cs.umd.edu/hcil/audiomap/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="http://www.cs.umd.edu/hcil/audiomap/">http://www.cs.umd.edu/hcil/audiomap/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="https://github.com/Leaflet/Leaflet.Editable">https://github.com/Leaflet/Leaflet.Editable</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; Tool for finding the most used OSM tags in the world <a href="https://taginfo.openstreetmap.org/">https://taginfo.openstreetmap.org/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I have a question on granularity...do you see this being granular enough to help someone get around their favorite baseball/soccer (football) (futbol) stadium?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Like could it help you get to the vendor you want, or the bathrooms nearby, etc.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> for dinamic query of OSM and can return GeoJson
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Nice, that's super cool.  I wasn't sure if Mapbox or your geo system in the background even got that granular.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; A Audio 3D preview of the venue you want to go to, to get your bearings ahead of time.  Great question @AmeliaBR
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Will it be able to support 3D "sound packs"?  Not sure if that is a whole new filetype or something
+</p>
+
+<p class='irc'>
+&lt;<cite>rahola_gitlab</cite>&gt; In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; &gt; Not sure if that is a whole new filetype or something
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Interesting question. I wonder if surround-sound audio formats for movies &amp; games could be adapted?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; oh man the bushes.  What a fringe case.
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; <a href="https://wheelmap.org/">https://wheelmap.org/</a> showing  locations in osm that are accessible/partial accessible or not accesible
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I see, that makes sense.  Again, the magic of 3D sound eludes me.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] &gt; Not sure if that is a whole new filetype or something
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Interesting question.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] I wonder if surround-sound audio formats for movies &amp; games could be adapted?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; people behind wheelmap.org started a W3C Community Group, Linked Data for Accessibility <a href="https://www.w3.org/community/lda/">https://www.w3.org/community/lda/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; No, it is not there yet.  Much to the chagrin of the poet and music studies.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Like Waze tells you about road hazards...that's definitely it's own layer of complexity
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; &gt; In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; &gt; In the future I wonder if this could link with sensor data to provide live navigation based on real conditions. E.g. if I'm walking and a sensor knows there is ice or a snowbank in front of me, I could be directed away from a hazard.
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; Sensor data would have to interact with physical material information to give in-context and in-real time data throug audio. That extension could also help mapping
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; digital mapping*
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [intermission]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; scribenick: ted
+</p>
+
+<h3 id="item03">The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)</h3>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Breakout led by Peter Rushforth
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: Part 2 of MapML proposal about why we believe maps needed for browser
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … explain tile coordinate reference system, effort to coordinate spatial reference systems to be implemented by browser
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … will cover details of the mapml proposal, seeking help to better define and improve how they are implementable
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … location in mapml is a general term by anything that can be represented by coordinates and zoom value
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Why do you use an input element? There are enough input roles already.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [discussion of position element. input types height and width to represent rectangle]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [input type location, serializes parts. regular location and geometry]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [anticipate possibility to rotate map]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [location should always have a zoom level and accompanying scale]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [example on tile events]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; One of my wild ideas is to get rid of "zoom level", and specify the scale as the number of CRS units *on a diagonal*, to cover the use case of dynamic container sizes (i.e. when the map uses `vh` and/or `vw`)
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I forget what happens with Mercator at the equator? Does't nothing shift by 10,000 or something?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [meta element]
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Comment on H and W : This is best to require with image "primitive" sources.  You never know where that image might be used, and devs will need that H and W to have a ratio for the "like rectangle" math to draw things that specifically target the image, instead of the map.  It is a granularity thing, it depends how much granular control you expect to give devs over the image specifically.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [datalist, shard keyword]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [select input]
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @IvanSanchez_gitlab
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The SVGMap.js I'm implementing doesn't have a concept of zoom levels either, because it's based on svg's viewBox.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Being a "all I have is that which I can target with a Web Annotation" guy, it is extremely important I get that ratio for things like media fragment syntax (<a href="https://www.w3.org/TR/media-frags/)">https://www.w3.org/TR/media-frags/)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [html uses opaque urls for js, css etc with link. href a hyperlink, glue for federated nature of web]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @fredesch The equator is the magical place where the CRS units of EPSG:3857 ("web mercator") in the longitude axis (the horizontal/x axis) equal meters. Anywhere else there's distortion.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [advantage of sharing information via http. browsers synthesis and render]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; re: `&lt;layer&gt;`, I refer to the part of my essay where I ask to stop calling things "layers"
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I believe in Mercator projection Norhting shifts at the equator as the  projection wants to avoid negative coordinates
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @IvanSanchez_gitlab +1
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [layers, rel=legend]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @fredesch You might be referring to traverse mercator (UTM), which defines distinct north/south hemisphere CRSs to avoid negative northings
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: part of the proposal for implementing alternate styles. additional rel value of self style, can similate eg satellite or hybrid view
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; not that there's anything wrong with a negative northing, though.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; From the point of view of compatibility with CSS and SVG concepts, I believe that concepts such as zoom level and tile coordinate system, which are strongly dependent on the equally-divided tile pyramid of maps, have a large conceptual gap.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … a key value is to separate content
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … small set of projections supported by proposal currently
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … if someone adds a projection layer that doesn't match the map, use alternate instead
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @IvanSanchez_gitlab ahh, I think you are right about TM vs M
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … tiles images and features are synonymous, should be factored out into media types
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we implemented a kind of link that allows you to set zoom in/out relation
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we have query support for features
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … link rel=query
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; It seems this spec is pretty tile oriented
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; :+1:
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [link rel=query slide]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [OGC features]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [GeoJSON and HTML - combined strenghts]
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Fred… just when you thought it was all about tiles, here we get `&lt;feature&gt;`!
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Tile is just one of the adaptive methods for delivering a portion of a huge map resource with reasonable performance.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Why won't SVG work?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I'm having a waking nightmare with the axis order (lat-lng lng-lat) right now
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; and flashbacks about WKT-in-GML
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; (also, GML already exists)
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; By the way, it's also a nightmare when the y direction is reversed.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] By the way, it's also a nightmare that the y direction is reversed.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [links slide, future usage for federation of services]
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @satakagi very true
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [links stylable, can be activated]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; This sounds reminiscent of XSLT over GML to get SVG
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [tile element slide]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [img and other html tags]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [useful for embedding meta data]
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; At SPSS we added the ability to make chloropeth maps by sucking in shp files.  This looks worse for a developer.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [OGC web services and APIs, mapml document element]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [mapml abandoned xml namespace but can be corrected, using html5]
+</p>
+
+<p class='irc'>
+&lt;<cite>nchan0154</cite>&gt; (belated thank you for the kind words everyone! happy to answer any more specific accessibility related questions or test fixes if you are a library author wanting to improve!)
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: what does it mean for a map to be accessible? Robert and Nic lent to that earlier
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … allowing websites to represent physical world in a standard way will enable necessary accessibility innovation
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … animation isn't something that has been considered yet, can be factored in future discussions
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we need ability to create spatial content
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; What I don't like is reusing element names that exist in HTML.  Validation tools already have a problem with false failures when SVG is in a web page. Reusing element names in MapML will make that problem worse.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … more needed for DOM api of elements and attributes?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … could DOM be leveraged for OpenLayers?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … CORS considerations to reduce risk
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … not including JS potentially a saving grace
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … html parser should be used as mapml document requires it. when svg is parsed into an image, is a similar scenario
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … happy to do a demo or answer questions
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: I think we had some questions coming in on the chat, hope to go through a few of those but also see your polyfill demo
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I have a couple questions.  I will use the unmute method and ask when the moment feels right.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … concern on complication and reusing html elements
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … do you want to explain the thinking that led to this proposal?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: we are not reusing but pushing extensions to existing elements
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … every new element and attribute an extension to html and comes with effort and expense
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I believe html design principles encourages use for given semantic
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … reusing input element for instance seemed reasonable as this is another form of input
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: using form elements for a different purpose will cause problems for validation and other tools
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: I created parser and validator for mapml
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: W3C has problems with embedded svg for example
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Doug: I don't think we should predicate particular enhancements on flaws of existing tools
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … understand issue of svg validation but that should not impose advances
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: my understanding of html design principles you should build upon existing
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: but input a form element
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: it is bound to extent element and children
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … it provides scope for inputs and links in it
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … as well as action attribute
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there is an overlap in the idea
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … form is bound to action value
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I think the &lt;feature&gt; element might better be defined as custom roles (or attributes) to be applied to existing geometry-rendering syntax like the SVG path. I've made a simple GeoJSON-to-SVG converter, and it's pretty trivial. I don't think browsers will have much appetite for adding new syntax there
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: there is a core similarity, form and form inputs are used to access possibly infinite set of urls based on user action
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The map element was originally a function called imagemap, which makes images clickable. It's relatively understandable since geographic maps include that function as well. However, I think it needs to continue to be a feature that encompasses uses other than map. On the other hand, I don't like the idea of changing a concept that's so heavily reliant on the geo-industry, and I don't think it's desirable in many ways.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … extent inputs build up possibly infinite urls on user's panning and zooming on map, clear similarity
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … similar to parameters of a query to database server
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I see the logic but understand Fred's concern on overloading an element
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Doug: we cannot even get new input elements of html5 consistent in browsers
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … which is to Fred's point
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … overloading input at this point asking alot of browsers. there is an elegance to it but less so when already overloaded
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: I would point people back to html design principles. is something provides a variable value, should you invent a new mechanism or use existing?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … inputs are what are used today
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … html isn't frozen
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Doug: theoretically you are correct but also need to look at recent history of how extending markup is viewed in html group
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there is strong resistance to change
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; As for the input element, before that, there is a discussion about what to do with the template for the tiles. I commented on it on discourse.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … long term it might be the better solution but extent you are changing inputs may make implementation more complicated
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: if another mechanism would fly better, I say sure
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we can redo that part of the proposal. I am saying they are like inputs in forms and want to start the debate at that point
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] As for the input element, before that, there is a discussion about what to do with the template for the tiles. I commented on it on discourse.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] <a href="https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811">https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: Google maps uses a zoom level and centerpoint and it is pretty simple, using raster tiles
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: that was in part 1 presentation. long/lat as starting positions for map
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: I saw that but today you were talking about corners and all sorts of stuff
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; The use case for *not* specifying map view as center/zoom is that a lot of people want to specify maximum map bounds
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; e.g. "display at most 180 degrees of longitude" as mapkit does
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: essentially what we have is forms and use them to avoid using js, using primitives...
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; and the casuistic of a bbox with different screen sizes is *hell*
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … want to be able to provide context. I am wondering if you are considering a rdf style or json-ld schema
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: outside my expertise
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: you have to implement syntax to ensure proper parsing, so curious how you are going to express hierarchy in coordinates
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: @@
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: ah you are going to use the coordinates themselves
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: hyperlink anchors around coordinates or parts of coordinates
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … coordinates are lowest level element
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: can you nest them?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: no based on GeoJSON
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: good answer
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … when you did doctype mapml, was that like your schema?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: purpose is like a media type, next level processing
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … similar to accept headers
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … similar to a source attribute request, it gets drawn by renderer in coordinate space
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … fits within html parser
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we haven't closed loop with Simon but pushing for that as a second tier media type indication
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: I have never asked why I need to do doctype html all these years, probably for the parser
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: adding modes or changing expectations of parser makes them (browser vendors) nervous
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: where can I find more about features elenent
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter searching for link on current draft
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: in our mapml repository
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; @@uri
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I could do a quick demo
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="https://maps4html.org/">https://maps4html.org/</a> for more links
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: do you have support for gazateer, geographic names
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [refering back to Ivan's typed question/comment]
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: bounding box can be more flexible than vector graph, you can have continuous zoom
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Yeah, bounding boxes might be good, but then you got users with cellphones, they rotate the cellphone, and the bug reports start coming in
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: you can set extent for visible behavior. use bbox to zoom to extent, is that good enough?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [Peter shares screen]
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I still think something like scale of CRS units on a diagonal might be better in the long run, but I'm not 100% sure
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: this is polyfill based on leaflet
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … showing tile grid, properties of map
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; There was an action on introducing the concept of scale into CSS a few years ago.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/">http://svgmap.org/devinfo/devstd/CSS_Transforms_Diff/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; <a href="https://umap.openstreetmap.fr/en/">https://umap.openstreetmap.fr/en/</a> is a great example of simple things for creating a map, and some of the settings that the have, like the limit of the extent and zoom for the specific map
+</p>
+
+<p class='irc'>
+&lt;<cite>baditaflorin</cite>&gt; <a href="https://umap.openstreetmap.fr/en/map/somes-delivery-somesul-din-cluj_499724#12/46.7754/23.6263">https://umap.openstreetmap.fr/en/map/somes-delivery-somesul-din-cluj_499724#12/46.7754/23.6263</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … each layer has extent property, corners of corners of event are stored
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Ivan, that's why (the rotating view/changing screen dimension issue) you need SVG-style viewBox, which sets either the maximum or minimum coordinates to fit in the view, but lets the aspect ratio be maintained.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … plan is to fit bbox at maximum possible zoom, save starting conditions as lat/long/zoom
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I've been working on this document for a use case for a scalable map.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Badita: you will zoom to an initial location but think question more about zooming to maximum extent eg beyond city of country level
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there are cases where you want to confine them to a maximum
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: no plan for that at present, could be an extension
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; The hell use case for this is users who want mapkitjs behaviour: a maximum *longitude span* of either 180° or 360° , but *no* maximum bbox
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [Peter continuing demo]
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; that's cool
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: it works pretty well for WMS and styles
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … what I was showing earlier is ability to query at particular locations
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … geo server returning elements with map feature in it, properties shown in leaflet popup
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … one of the challenges is in how to allow slideouts and capture event
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … web designers will have their own ideas on
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; s/representatino/representations/
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … that is available in a custom element, we need to package it up but you should be able to download, unzip and use it
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … remote document is a simple view source type document
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … you can add layers willy nilly, there is a limit. a layer cannot contain other layers but as much template and content as you want
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … you can change their zed index like you can any other part of html and svg
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … this particular page breaks the back button but you can copy a location on page [but hey its a demo...]
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @prushforth Filter Features by Prop.x and Prop.y is not really supported in many of the map stuff.  I see you are filtering layers, is it robust neough to filter features by individual properties?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … what else is there to show? the mapml extension to geoserver, you can set it up to cache tiles
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … captures things on first use
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … geospatial content management systems can pump out html+mapml on day 1
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … that's my pitch
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Badita: can you build in buffering?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; One way of integrating CSS is to allow an outline on the tile grid elements
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: it could be managed by api
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … browser engine can't do everything. developer ecosystem will be facilitated by this proposal but rendering is a full time job
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I would encourage progressive enhancement, a js api you can build
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; *Ideally*, the DOM scripting interface would have the same functionalities as, say, Leaflet / OpenLayers / etc, so stuff like custom tile buffers could be in.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: something I have trouble with in leaflet, when I have a ton of points is limit them to just the desired ones. reading all the properties to filter them is costly
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … do you think you can filter hide/show features by property?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @thehabes Define geojson filters, one `L.GeoJSON` per property, then the usual `map.fitBounds(myDesiredFilteredGeoJsonGroup.getBounds())`
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: I can seethat the kind of thing that can be in the api, that isn't something you can do with mapbox and leaflet
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; the trick here is digesting the data in filtered groups
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; That should be another CSS integraation, based on selectors
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: I have a number of WMS by layer id and I tie that on the server
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (clientside, I mean)
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … user can query that file by clicking on control
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; @shepazu that sounds nice, but currently selectors only work if the properties are attributes, and not if the properties are child elements in the DOM…
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; (I mean, I'd love for CSS selectors to be able to filter by child elements, but there's been a lot of push back about implementing that.)
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Badita: could there be another layer showing eg trees, would that be rendered before, after or random?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: at DOM level? image element is base layer, done by document order
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … if you have layers stacked up, you can make/use your own controls via html
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … you should be able to get the same events, providing boost in performance of browser engine
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … this is an area we played with. input can be a useful thing to work with here instead of reinvent - even though everyone hates them...
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; In SVGMap.js, I made this kind of custom form functionality free to design in the webApps, assigning it all to each layer.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @IvanSanchez_gitlab oo that's tricky.  I like that, good tip.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: all of this is on github, join the Community Group and discussion
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: core of the extension model of leaflet is motivation here
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; leaflet has a react wrapper - (you can get a leaflet react component)
+</p>
+
+<p class='irc'>
+&lt;<cite>karenmyers</cite>&gt; See you tomorrow!
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … thank you very much everyone
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; :wave:
+</p>
+
+<p class='irc'>
+&lt;<cite>karenmyers</cite>&gt; oops...next week
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: see you next week, same times per day as this week
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [adjourned]
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @karenmyers 2020-09-28 04:00UTC
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; yeah, you got it
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,4522 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.509
+Peter Rushforth: On day four of the joint W3C/OGC maps for the web workshop and
+
+2
+00:00:07.589 --> 00:00:10.650
+Peter Rushforth: We're going to be starting the the agenda tonight with
+
+3
+00:00:11.700 --> 00:00:30.090
+Peter Rushforth: On the topic of creating accessible web map widgets with two presentations for the first from Nick Chen, who will be presenting first her and Robert lenders work who are Robert and Nick are both members of the master HTML community group and they've done.
+
+4
+00:00:31.170 --> 00:00:51.840
+Peter Rushforth: A review of the end evaluation of various map what mapping libraries again and compared them with the Web Content Accessibility Guidelines and she'll be reporting on their work and then we're going to proceed to an introduction to non digital non visual maps.
+
+5
+00:00:53.100 --> 00:00:57.390
+Peter Rushforth: From Brandon Biggs of Smith kettlebell Institute.
+
+6
+00:00:58.860 --> 00:01:03.570
+Peter Rushforth: And after that, we'll have a breakout. 
+
+7
+00:01:06.690 --> 00:01:09.930
+Peter Rushforth: After that, we'll have a breakout presentation from Brandon
+
+8
+00:01:10.260 --> 00:01:13.410
+Peter Rushforth: About building cross sensory maps using audio done
+
+9
+00:01:14.460 --> 00:01:15.150
+Peter Rushforth: And
+
+10
+00:01:16.170 --> 00:01:30.540
+Peter Rushforth: At that point we'll cut over and I will finish my part two of the math ML proposal and maybe give a little demo of our, our custom elements suite that we've been developing in the master HTML community group.
+
+11
+00:01:31.590 --> 00:01:49.230
+Peter Rushforth: So I'd like to just remind everybody that we welcome lots of interaction on getter and discourse in particular, get lots of comments and feedback on people's presentations through those avenues.
+
+12
+00:01:50.610 --> 00:01:51.240
+Peter Rushforth: And
+
+13
+00:01:52.560 --> 00:02:03.150
+Peter Rushforth: I hope somebody will paste the links in there so that it's easily to get to and the comments can can come anytime. So we can do it 24 seven
+
+14
+00:02:04.740 --> 00:02:13.500
+Peter Rushforth: And I also just remind everybody that we have a code of conduct that we're following the W three C code of conduct and you're free to
+
+15
+00:02:14.910 --> 00:02:34.140
+Peter Rushforth: Express yourselves in a polite and respectful manner and all that. And if you feel that you have not been treated in a fair way please approach one of the committee, and we will do what we can to address your concerns. So with that, I'm going to play Nick chance
+
+16
+00:02:35.790 --> 00:02:37.500
+Peter Rushforth: Slide. So maybe I'll share
+
+17
+00:02:40.290 --> 00:02:42.690
+Peter Rushforth: share my screen and Nick has recorded
+
+18
+00:02:43.890 --> 00:02:45.300
+Peter Rushforth: Her presentation so
+
+19
+00:02:47.070 --> 00:02:48.660
+Peter Rushforth: I will switch over to that.
+
+20
+00:02:54.900 --> 00:02:55.530
+Peter Rushforth: Chair.
+
+21
+00:02:59.760 --> 00:03:00.360
+Peter Rushforth: Here we go.
+
+22
+00:03:02.850 --> 00:03:19.920
+Hello everyone, my name is Nick Chen and I have been contributing to the maps for HTML community group over the past year with a particular focus on the use cases and requirements Report. Today I will be presenting on the accessibility of existing map widgets and tools.
+
+23
+00:03:21.930 --> 00:03:28.080
+Before I get into the details of the analysis. I'd like to lay out some definitions that will frame this discussion.
+
+24
+00:03:29.220 --> 00:03:35.220
+The map tools discuss today fall into two general categories widgets and client side mapping APIs.
+
+25
+00:03:36.090 --> 00:03:42.840
+Widgets refer to an embeddable map, typically in an iframe or something similar that requires minimal code to implement
+
+26
+00:03:43.770 --> 00:03:48.930
+These include things like the Google Maps embed that small business owners may use to share their store location.
+
+27
+00:03:49.860 --> 00:03:56.280
+Client Side mapping APIs, our JavaScript libraries that allow website developers to create more customized map viewers.
+
+28
+00:03:56.790 --> 00:04:10.350
+They typically require the developer to do more configuration and instantiate and work with the benefit of offering more control over the end result, you would typically find these as a part of web apps like store finders or delivery services.
+
+29
+00:04:11.490 --> 00:04:18.180
+In this presentation, I'd like to frame accessibility as the degree to which these maps are usable by disabled people.
+
+30
+00:04:18.780 --> 00:04:33.990
+Some contexts may use the term accessibility to encompass other things like Costa and size of these tools and how that pertains to access, but in this case we will be focusing on the usability aspect and especially how these mapping tools measure up to our next term, what can
+
+31
+00:04:35.490 --> 00:04:51.780
+What can short for Web Content Accessibility Guidelines is the series of guidelines developed by the W three see in order to provide a shared standard for developing accessible web content. It is important to note that the webcam is not the be all and end all of accessibility.
+
+32
+00:04:52.920 --> 00:04:58.050
+When it comes to things like maps a tool could meet every single criterion, but still not be accessible.
+
+33
+00:04:58.800 --> 00:05:04.380
+There are many outstanding questions which will be discussed in greater detail by other presenters and panelists.
+
+34
+00:05:04.800 --> 00:05:10.530
+About what would constitute an equivalent experience to what a map can communicate for low vision and blind users.
+
+35
+00:05:11.100 --> 00:05:22.890
+However, it is still worthwhile to examine the existing tools with the wicked in mind so that we can account for other disabled users beyond low vision and blind users, such as people who have motor impairments.
+
+36
+00:05:23.310 --> 00:05:30.030
+By looking at these existing tools, we can determine any common patterns worth adopting for a native HTML map element.
+
+37
+00:05:31.200 --> 00:05:41.550
+Not all the cat criteria are relevant to web maps. So I've pulled out some of the most applicable and interesting ones where the map tools meet these criteria and with varying degrees of success.
+
+38
+00:05:42.810 --> 00:05:43.710
+Tools reviewed.
+
+39
+00:05:44.850 --> 00:05:55.140
+The tools today include both widgets and libraries from vendors like Google, Bing Apple matte box and Tom. Tom, as well as some open source solutions with Open Street Map tiles.
+
+40
+00:05:55.740 --> 00:06:06.900
+For a full breakdown of how each tool measures up and the details of each criterion, please visit Robert lenders full evaluation at tiny URL com slash what CAD hyphen maps.
+
+41
+00:06:07.530 --> 00:06:15.360
+Robert, is a member of the maps or HTML community group and his contributions have been invaluable. With that out of the way, let's begin.
+
+42
+00:06:16.620 --> 00:06:25.920
+Non text content five out of 11 tools failed this criterion states that all non text content has an equivalent text alternative
+
+43
+00:06:26.910 --> 00:06:36.930
+None of the map tools offer any meaningful texts alternative to the map content by default. So on that front. All of the maps would fail, unless context is provided by the site developer
+
+44
+00:06:37.770 --> 00:06:46.980
+As mentioned earlier, what this alternative content could look like is a very complicated question, that depends on the content of the map and also warrants larger discussion.
+
+45
+00:06:48.390 --> 00:06:58.200
+Because developers and authors may choose to provide additional context when evaluating this criteria we are focused on text alternative to controls, other than the map itself.
+
+46
+00:06:59.760 --> 00:07:09.930
+In this case, this criterion also applies to things like alternative text for logo images and making sure all icon buttons are labeled descriptive Lee for a screen reader users.
+
+47
+00:07:11.220 --> 00:07:16.770
+As an example, maps, often use the plus and minus symbol to indicate and zooming in and out.
+
+48
+00:07:17.400 --> 00:07:24.900
+As a sighted user, I can see the visual context. These buttons are in, and I can also see the combat zooms in and out. When I press the buttons.
+
+49
+00:07:25.410 --> 00:07:34.860
+However, if you just hear plus button. The context is a little more unclear. It could be adding a pin to the map or changing the quantity of another control.
+
+50
+00:07:35.760 --> 00:07:49.560
+We can include context without changing the visual appearance of the control by adding things like alt text, images or an aria label to the control a possible solution to resolve this example might be to add an aria label to the button.
+
+51
+00:07:52.950 --> 00:08:07.110
+Info and relationships 11 out of 11 tools failed this criteria requires that all information, including a controls state or structure can be determined programmatically or is otherwise available through text.
+
+52
+00:08:09.030 --> 00:08:14.220
+Tools often failed to label the map structure as a distinct piece of content and as a control.
+
+53
+00:08:14.940 --> 00:08:20.040
+A map generated by these tools is not just a static image, it is a control in and of itself.
+
+54
+00:08:20.610 --> 00:08:27.780
+When the map has focus most tools will allow you to do things like pan and rotate the map using keyboard shortcuts, or your mouse pointer.
+
+55
+00:08:28.290 --> 00:08:33.930
+Does that map needs to be labeled so that is identifiable as a control, not just an image.
+
+56
+00:08:34.800 --> 00:08:46.260
+And tool authors defense. There isn't a set standard or consensus for how to approach this yet as map is not yet a valid component role. So there may be uncertainty on how to appropriately label this map container.
+
+57
+00:08:47.760 --> 00:08:57.420
+The other most common reason for failure is the lack of attention paid to control state. For example, all of these web maps allow users to zoom in and out to an extent.
+
+58
+00:08:58.050 --> 00:09:07.380
+Once you've hit the zoom limit the appropriate control should be disabled but very few examples communicate this programmatically and most only adjust the styles.
+
+59
+00:09:08.010 --> 00:09:23.430
+Furthermore, screen reader users will often have no idea of the current zoom level thing stands out amongst the examples as it announces the current zoom level. In addition to the buttons state so user of an audio interface will always know what the current state is
+
+60
+00:09:24.600 --> 00:09:34.860
+Contrast nine out of 11 tools failed to pass this criterion all text should pass a minimum contrast ratio of 4.5 for regular sized text.
+
+61
+00:09:35.430 --> 00:09:39.720
+The contrast ratio refers to the contrast between the text color and the background color.
+
+62
+00:09:40.530 --> 00:09:54.270
+Because many widgets. Do not allow for color customization having accessible defaults would go a very long way in terms of ensuring that accessibility this contrast criteria and can apply to both the map controls and the actual map content.
+
+63
+00:09:55.680 --> 00:10:02.910
+Somewhere some apps have text buttons that did not meet the contrast ratio fixing this is as simple as changing the text color on the buttons.
+
+64
+00:10:04.320 --> 00:10:13.500
+Most maps had contrast issues within the map content, particularly with labels for bodies of water and minor roads, such as in this example here.
+
+65
+00:10:14.490 --> 00:10:26.310
+This screenshot shows the ocean filled in with a light blue color, but the text on top of it that says North Atlantic Ocean is a medium blue and it never gets any darker or larger. No matter how much you zoom in.
+
+66
+00:10:27.180 --> 00:10:36.960
+Maps are in a tricky position as color hierarchy is very important for establishing focal points and there is a need to D prioritize certain map features to avoid making the map too noisy.
+
+67
+00:10:38.250 --> 00:10:45.300
+When a map zoomed out is understandable is some minor labels are below the average font size or have lacking color contrast
+
+68
+00:10:46.620 --> 00:10:55.680
+However, when a map zoomed into an area. A good map may have these minor labels take visual priority and be displayed larger and with more contrast
+
+69
+00:10:56.520 --> 00:11:08.250
+Some apps included a thin white outline around each label to increase the text contrast, a technique that is commonly used and closed captions for TV keyboard seven out of 11 tools failed.
+
+70
+00:11:09.300 --> 00:11:22.950
+Every functionality that is available to mouse or touch users must also be available for keyboard only users. This includes all interactive controls as well as functions activated by pointer gestures, which most maps do have
+
+71
+00:11:24.450 --> 00:11:36.720
+Most failures in this instance, are due to the use of non native controls. When a semantic element like an HTML button is used all the behaviors that are expected of the control are handled automatically by the browser.
+
+72
+00:11:37.800 --> 00:11:43.260
+It is very common for developers to add a click handler to a div element and ignore the other required behavior.
+
+73
+00:11:44.190 --> 00:11:55.950
+Some custom buttons are not able to be accessed by hitting the tab key and cannot be activated because they cannot be accessed at all, whereas others can be focused, but do not have any means of activation through the keyboard.
+
+74
+00:11:57.750 --> 00:12:10.320
+A user with the pointer device can pan across the map by dragging the map interface some apps like a way to do this with the keyboard, either because the map container is not focused or because they lack the keyboard shortcuts necessary.
+
+75
+00:12:12.660 --> 00:12:23.910
+Character key shortcuts, one out of 11 tools failed this criteria in states that if a keyboard shortcut is implemented using character keys that at least one of the following is true.
+
+76
+00:12:24.780 --> 00:12:39.360
+Mechanism is available to turn the shortcut off or a mechanism is available to remap the shortcut to use modifier keys such a shift control or Alt or the keyboard shortcut is only active when that component has focus
+
+77
+00:12:40.410 --> 00:12:53.700
+This criteria exist to prevent conflicts with assistive technology shortcuts and web interface shortcuts. The NBA screen reader uses arrow keys to navigate text and it may conflict with the use of arrow keys to pen and scroll the map.
+
+78
+00:12:54.720 --> 00:13:07.320
+None of the web maps analyzed use techniques, one or two, the websites that have shortcuts and pass this criterion have opted for a technique three only allowing the keyboard shortcuts. When the map container has focus
+
+79
+00:13:09.180 --> 00:13:18.300
+Focus order to out of 11 tools failed to pass this criterion elements must receive focus and an order that matches the content reading order.
+
+80
+00:13:19.110 --> 00:13:28.200
+In English and other left to right, languages, we have an expectation that elements will be interoperable from left to right, top to bottom in the same order. We read text.
+
+81
+00:13:29.100 --> 00:13:37.110
+Here's a diagram which displays the focus order of the Google Maps embed the numbers indicate which element receipts. Okay, and what order.
+
+82
+00:13:38.100 --> 00:13:44.220
+The first focus single element is the map container which makes sense as a focus order should go from outward to inwards.
+
+83
+00:13:44.970 --> 00:13:53.730
+Next is the terms of use button which is in the bottom right hand corner. After that comes the view larger map button which is in the opposite corner in the top left.
+
+84
+00:13:54.480 --> 00:14:01.860
+We returned to both zoom control buttons in the bottom right. And finally, the unlabeled toggle satellite imagery button in the bottom left corner.
+
+85
+00:14:02.790 --> 00:14:16.260
+In this case, the developers use styles to position the controls arbitrarily without proper focus order the experience of tapping through the Map component is quite jarring and unnecessarily disorienting to bounce from corner to corner.
+
+86
+00:14:19.350 --> 00:14:22.890
+Focus visible seven out of 11 tools failed.
+
+87
+00:14:24.720 --> 00:14:34.830
+This criterion is related to the previous one. The focus really is an indicator, which shows which interactive element currently has focus, an example of which is shown here.
+
+88
+00:14:35.760 --> 00:14:40.740
+We can see the zoom out button currently has focused thick black rain that Chrome applies.
+
+89
+00:14:41.430 --> 00:14:48.570
+And its present by default and all browsers, but this is common for developers to remove this indicator without replacing it with their own styles.
+
+90
+00:14:49.350 --> 00:15:01.620
+In combination with the previous criterion this criteria is serious enough to render a Map component unusable for a sighted keyboard only users because there is no way for them to determine what element is currently selected.
+
+91
+00:15:03.240 --> 00:15:11.070
+In some cases, and focus isn't persistently visible, which is due to the addition of scripts that remove the outline once element is focused
+
+92
+00:15:12.210 --> 00:15:21.960
+This criteria is an example of the default behavior being accessible and the developers have overwritten this default behavior to make an ultimately an accessible design choice.
+
+93
+00:15:24.540 --> 00:15:27.930
+Language of parts, nine out of 11 tools failed.
+
+94
+00:15:29.280 --> 00:15:36.180
+The requirement passes criteria is fairly simple. All it requires is that the contents language is included in the market.
+
+95
+00:15:37.590 --> 00:15:44.070
+This is important for many accessibility reasons such as making sure screen readers read words with the correct intonation.
+
+96
+00:15:44.580 --> 00:15:54.120
+And can be useful for features like on the fly language translation, despite the fact this criterion is simple to achieve many vendors fail to implement this.
+
+97
+00:15:54.570 --> 00:16:02.520
+Passing this criteria is as simple as adding a single line attribute to the containing element and lying attributes to texts in other languages.
+
+98
+00:16:04.290 --> 00:16:12.330
+The next slide has a jiff which demonstrates an unexpected scrolling appearance viewers with vestibular issues may wish to look away for a second.
+
+99
+00:16:14.790 --> 00:16:17.670
+On input to out of 11 tools failed.
+
+100
+00:16:18.750 --> 00:16:27.510
+This criteria states at teaching any setting and a user interface component should not trigger any changes of context, unless a user has been warned about it.
+
+101
+00:16:28.500 --> 00:16:35.040
+In layman's terms, if a control is used there shouldn't be any unexpected side effects like changing the viewport size.
+
+102
+00:16:36.000 --> 00:16:49.200
+Here we have a jiff where the up and down arrow keys are being used to pan the map, but unfortunately the viewport schools, up and down as well. And this can be quite disorienting. So it's important to test for side effects like this.
+
+103
+00:16:50.610 --> 00:17:02.850
+Peter Rushforth: Building accessible web maps is no easy task, the base level of accessibility for existing Web Map solutions is quite poor. Overall, and no one widget or library stands out as being far superior to the rest
+
+104
+00:17:03.690 --> 00:17:14.010
+Peter Rushforth: Criteria where almost every tool fails are often due to the lack of standardization and this is where having a native HTML Matt element can really set the bar for what Matt widget should strive to be
+
+105
+00:17:14.850 --> 00:17:23.640
+Peter Rushforth: Regardless, there are a few quick and easy wins to be had, I hope, any developers who work with these math libraries can consider implementing some of the low hanging fruit are brought up here.
+
+106
+00:17:24.540 --> 00:17:43.980
+Peter Rushforth: Thank you. If you have any questions about the material covered, feel free to reach out to me at Nick at Nick ten.me
+
+107
+00:17:55.980 --> 00:17:56.400
+Amelia Bellamy-Royds: Spirit.
+
+108
+00:18:02.490 --> 00:18:04.860
+Peter Rushforth: Yay. Yeah, we're back.
+
+109
+00:18:07.170 --> 00:18:15.330
+Peter Rushforth: That was very interesting. Thank you very much. Neck really excellent presentation and with all kinds of little
+
+110
+00:18:16.380 --> 00:18:20.940
+Peter Rushforth: Short lessons short and digestible lessons that we can go back to
+
+111
+00:18:21.690 --> 00:18:23.400
+Peter Rushforth: as need be.
+
+112
+00:18:24.420 --> 00:18:27.000
+Peter Rushforth: So with that, I guess.
+
+113
+00:18:28.290 --> 00:18:32.580
+Peter Rushforth: I'd like to hand it over to Brandon. Are you ready for the stage.
+
+114
+00:18:32.640 --> 00:18:33.660
+Brandon Biggs: Yeah. Can you hear me.
+
+115
+00:18:33.960 --> 00:18:34.860
+Peter Rushforth: We can, yeah.
+
+116
+00:18:36.420 --> 00:18:37.530
+Brandon Biggs: Let me share my screen here.
+
+117
+00:18:46.890 --> 00:18:47.490
+Brandon Biggs: All right.
+
+118
+00:18:53.220 --> 00:18:55.170
+Brandon Biggs: My, my screen meter here for a sec.
+
+119
+00:18:57.600 --> 00:18:58.080
+Brandon Biggs: Okay.
+
+120
+00:18:59.400 --> 00:19:00.840
+Brandon Biggs: Are you guys able to see my screen.
+
+121
+00:19:05.820 --> 00:19:06.810
+Amelia Bellamy-Royds: No, not right now.
+
+122
+00:19:17.280 --> 00:19:17.670
+Brandon Biggs: Alright.
+
+123
+00:19:20.040 --> 00:19:21.360
+Brandon Biggs: Perfect. Awesome.
+
+124
+00:19:22.920 --> 00:19:38.550
+Brandon Biggs: Cool. So yeah, this basically is going to be a an extremely rapid introduction to non visual maps, it's, it's going to be really, really brief because there's a lot more to cover in
+
+125
+00:19:39.690 --> 00:19:52.500
+Brandon Biggs: Two modalities and there is typically and like officials an introduction to visual maps alone because audio and tactile are kind of big money will go through this, the real briefly here.
+
+126
+00:19:54.180 --> 00:20:00.780
+Brandon Biggs: This is what most web maps are today. Basically, it's what we saw in the last presentation, basically.
+
+127
+00:20:02.250 --> 00:20:17.610
+Brandon Biggs: I'm looking at particular widgets. So, the ones that are like embedded into a website and can show like a camp, there's typically a canvas that it used to pan around and see the vectors are the raster data.
+
+128
+00:20:19.200 --> 00:20:20.310
+Brandon Biggs: Presented in the campus.
+
+129
+00:20:21.570 --> 00:20:32.760
+Brandon Biggs: So there's some problems with these, not least of which are that 285 million people in the world can't utilize those maps.
+
+130
+00:20:33.720 --> 00:20:49.140
+Brandon Biggs: And they're not non visual and currently the work hag guidelines say that you can use the text description, but there's a huge problem with text descriptions in that the
+
+131
+00:20:50.310 --> 00:21:12.180
+Brandon Biggs: The whole fields of cartography and data visualization arose because text descriptions were not adequate enough. And so if we think that that text descriptions are adequate, then we don't really need data visualization or photographers. So that's, that's just, you know,
+
+132
+00:21:13.200 --> 00:21:22.560
+Brandon Biggs: I don't, I don't think that takes descriptions can convey the spatial information, a lot of studies that show that text descriptions are not
+
+133
+00:21:23.640 --> 00:21:27.660
+Brandon Biggs: Do not provide the same information as an actual map.
+
+134
+00:21:29.910 --> 00:21:34.950
+Brandon Biggs: So I'm going to look at three different sorry two different types of
+
+135
+00:21:36.450 --> 00:21:41.400
+Brandon Biggs: Maps tactile maps and auditory maps and each one of these has very similar
+
+136
+00:21:42.660 --> 00:21:48.660
+Brandon Biggs: Requirements. So one of them is that each Map needs to have a name attribute. So
+
+137
+00:21:49.710 --> 00:22:00.390
+Brandon Biggs: When you're in one of these other modalities, they're more egocentric. So basically you're moving like your finger through the map or you're
+
+138
+00:22:00.720 --> 00:22:11.400
+Brandon Biggs: Moving your head through the map like as a listener and you're not necessarily viewing the map in totality that you would an Alice centric point of view, like you would using
+
+139
+00:22:12.090 --> 00:22:28.020
+Brandon Biggs: Like the map that we saw at the beginning of the presentation. So if you have an unmarked polygon point or line that's basically not extremely useful because it doesn't provide any kind of context of why that exists. There's also
+
+140
+00:22:31.590 --> 00:22:35.460
+Brandon Biggs: You. Yeah, so that's that's basically. Those are the commonalities between these different types
+
+141
+00:22:37.140 --> 00:22:43.140
+Brandon Biggs: Of the first type of non visual map will look at our visual, auditory maps and these
+
+142
+00:22:44.010 --> 00:22:58.560
+Brandon Biggs: Are presented on a tablet and you move your finger around the screen. And when you reach a line or a polygon or point it'll vibrate and when there's intersections, like say for example,
+
+143
+00:22:59.250 --> 00:23:04.080
+Brandon Biggs: It has to do lines intersect. There'll be like a pulse and then it will tell you.
+
+144
+00:23:04.410 --> 00:23:17.250
+Brandon Biggs: What the name of that intersection is with it. But the two lines are the names that two lines are that intersect and then you can go move your finger along the the intersecting, you know, what if you want to keep going or along the intersecting line.
+
+145
+00:23:18.810 --> 00:23:34.140
+Brandon Biggs: And and this uses the the the audio vibration API. So the web vibration API. I don't think it's actually been incorporated in the web, but the web version API, I think, is probably adequate enough to do this.
+
+146
+00:23:35.670 --> 00:23:38.520
+Brandon Biggs: Here's some citations for the
+
+147
+00:23:39.780 --> 00:23:47.130
+Brandon Biggs: The bro audio maps and you can read more about them and watch them videos and try them out.
+
+148
+00:23:49.110 --> 00:24:05.880
+Brandon Biggs: So the next section is on digital auditory maps. And this is actually my specialty. So I'm probably going to talk a little bit more about these than I am on the video, audio maps. So the digital auditory maps basically
+
+149
+00:24:08.130 --> 00:24:10.740
+Brandon Biggs: They use
+
+150
+00:24:11.940 --> 00:24:18.870
+Brandon Biggs: A, as I said before, and Alice egocentric point of view. So basically, use your arrow keys or some sort of
+
+151
+00:24:20.460 --> 00:24:31.860
+Brandon Biggs: control mechanism to move your listener through the space and they use something called by normal audio and by normal audio is where the sounds.
+
+152
+00:24:32.280 --> 00:24:47.970
+Brandon Biggs: That the features in the map have different sounds. And you can hear those sounds around you in spatial audio and a lot of features also will have their own sound. So when you're moving over a a feature that will make a sound.
+
+153
+00:24:49.950 --> 00:24:54.540
+Brandon Biggs: Here's an example of a city map using that that's in
+
+154
+00:24:55.710 --> 00:24:59.670
+Brandon Biggs: Taking Open Street Map data and it's it's a
+
+155
+00:25:01.440 --> 00:25:04.380
+Brandon Biggs: Call the team system. And basically this is
+
+156
+00:25:05.730 --> 00:25:06.060
+Like
+
+157
+00:25:10.020 --> 00:25:15.660
+This is the team audio system and we are currently in London on Gabriel's wharf.
+
+158
+00:25:16.830 --> 00:25:25.530
+facing south, and I'm going to do a scan to see what's around us. So our dialogue press to have to navigate for landmark
+
+159
+00:25:26.670 --> 00:25:46.920
+Restaurant 32 meters, two o'clock. Bernie Spain gardens 14 meters, eight o'clock Bernie Spain gardens 54 meters 10 O'clock restaurants studio 616 meters 12 o'clock. So we saw that there's a a garden which we can hear at eight o'clock and on that fear.
+
+160
+00:25:47.970 --> 00:25:50.430
+And there's a restaurant in front of us.
+
+161
+00:25:52.260 --> 00:25:52.470
+Here.
+
+162
+00:25:54.810 --> 00:25:56.010
+I'm going to walk towards the restaurant.
+
+163
+00:25:59.130 --> 00:26:01.500
+Restaurant studio 600 Gabriel's more
+
+164
+00:26:05.880 --> 00:26:09.180
+Brandon Biggs: So this basically does takes the type that's in
+
+165
+00:26:09.660 --> 00:26:23.880
+Brandon Biggs: Open Street Map like restaurant or Park and assigns a looping sound to it that you can hear in spatial audio and then it also uses the Name attribute, as you saw to label, what exactly you're in when you reach the polygon that like the restaurant.
+
+166
+00:26:28.980 --> 00:26:41.010
+Brandon Biggs: Here is the the references for the city map that we just saw. And you can go and view those papers, if you want, or try the, the team system yourself, it's pretty interesting.
+
+167
+00:26:42.570 --> 00:27:02.400
+Brandon Biggs: So the next type of map. We're going to look at our heat maps and you probably pretty familiar with these. They're basically they show different points data points throughout the map and and and how they change through the Jeep to do the geography of the
+
+168
+00:27:07.590 --> 00:27:22.920
+Intro song is an interactive sanitation tool that allows the vision users to explore map data such as population densities, we are looking at a US base map of population. The population for each state is presented by a violin sound.
+
+169
+00:27:29.490 --> 00:27:33.300
+A high pitch means high value. So California has more people than Alaska.
+
+170
+00:27:36.000 --> 00:27:39.540
+The Saudis exterior. So the sound for Alaska comes from the left.
+
+171
+00:27:41.070 --> 00:27:42.810
+And the sound for me from the right
+
+172
+00:27:44.670 --> 00:27:47.490
+Pressing the Space key with all the details about a state.
+
+173
+00:27:49.230 --> 00:27:55.470
+Brandon Biggs: Basically that's that's kind of a really brief overview and the heat maps and you can go test these out.
+
+174
+00:27:58.500 --> 00:28:06.510
+Brandon Biggs: There we go. He meant references. There you go. You can go try this out as well. It's called Sonic. And it's very interesting, and also the
+
+175
+00:28:07.530 --> 00:28:11.640
+Brandon Biggs: Didn't mention this year, but the SS graphics accelerator also has a
+
+176
+00:28:13.230 --> 00:28:25.830
+Brandon Biggs: Is an audio heat map as an audio heat map as well. And so, yeah, that's basically it's a pretty, I would say it's probably one of the more standard types of auditory maps nowadays.
+
+177
+00:28:28.200 --> 00:28:45.090
+Brandon Biggs: Is an enclosed space map. It's very similar to the first map where you have a yourself as a listener in the space. And there's different sounds throughout around you. But this one has a
+
+178
+00:28:46.980 --> 00:28:47.700
+Brandon Biggs: Little more.
+
+179
+00:28:50.250 --> 00:28:52.890
+Brandon Biggs: You can hear a little more sounds in this
+
+180
+00:28:56.580 --> 00:28:57.630
+first person view.
+
+181
+00:29:02.400 --> 00:29:04.560
+Ram Eva's bridge.
+
+182
+00:29:05.760 --> 00:29:07.170
+Ground carousel.
+
+183
+00:29:08.820 --> 00:29:09.930
+2518
+
+184
+00:29:11.070 --> 00:29:11.610
+spinner.
+
+185
+00:29:13.680 --> 00:29:14.610
+Playground. Walk me
+
+186
+00:29:16.140 --> 00:29:25.980
+spinner Lazar heart is very far off ahead and to the right. The nearest President 2846
+
+187
+00:29:29.310 --> 00:29:30.270
+Laser our
+
+188
+00:29:31.380 --> 00:29:38.280
+grid view playground want main 20 to 49 Lazar heart 2014 Les Brown.
+
+189
+00:29:42.090 --> 00:29:43.110
+20 to 30
+
+190
+00:29:45.300 --> 00:29:46.470
+Brandon Biggs: So that's basically
+
+191
+00:29:50.280 --> 00:29:53.580
+Brandon Biggs: So that's basically a another version of an
+
+192
+00:29:54.630 --> 00:30:03.720
+Brandon Biggs: enclosed space maps. That'd be like a building or playground. This is a playground and or something like Disneyland, which is a little bit different than a city map or a heat map.
+
+193
+00:30:04.800 --> 00:30:18.030
+Brandon Biggs: And these are some references for using this map and watch you try this after this presentation because I'm actually the one who made that and see, hear my voice in there. So basically,
+
+194
+00:30:19.380 --> 00:30:32.520
+Brandon Biggs: I'm, um, these are the maps that that non visual users have created for themselves or have had a lot of research done on them.
+
+195
+00:30:33.060 --> 00:30:56.520
+Brandon Biggs: And if you have any questions about non visual maps any type, please get in contact with me. My email is Brandon dot Biggs at XR navigation i o b r a n d o n dot big G s at x are in a vI GH T IO and
+
+196
+00:30:58.050 --> 00:31:03.210
+Brandon Biggs: I would like to acknowledge the funding funding sources of NIH and neither
+
+197
+00:31:05.010 --> 00:31:09.540
+Brandon Biggs: Thank you and hope you stick around for the workshop
+
+198
+00:31:10.890 --> 00:31:14.880
+Peter Rushforth: I assure you, Brandon, we will. It's a pretty interesting talk.
+
+199
+00:31:16.170 --> 00:31:20.190
+Peter Rushforth: And so I think, I think you're up. Next up again.
+
+200
+00:31:21.360 --> 00:31:22.020
+Brandon Biggs: All right.
+
+201
+00:31:24.540 --> 00:31:24.870
+Brandon Biggs: Let me
+
+202
+00:31:30.720 --> 00:31:32.910
+Brandon Biggs: Let me share my screen.
+
+203
+00:31:34.500 --> 00:31:34.830
+Brandon Biggs: No.
+
+204
+00:31:43.800 --> 00:31:45.660
+Brandon Biggs: Can you guys see my screen. Yeah.
+
+205
+00:31:47.190 --> 00:31:48.000
+Brandon Biggs: Okay, one sec.
+
+206
+00:31:54.690 --> 00:31:55.770
+Brandon Biggs: Last zoom
+
+207
+00:31:56.880 --> 00:31:57.870
+Brandon Biggs: Oh, to me, intense
+
+208
+00:32:13.620 --> 00:32:16.110
+Brandon Biggs: If you go to the website.
+
+209
+00:32:19.680 --> 00:32:22.800
+Brandon Biggs: XR navigation iOS.
+
+210
+00:32:24.180 --> 00:32:25.620
+Brandon Biggs: A UTI. Oh.
+
+211
+00:32:29.670 --> 00:32:34.170
+Brandon Biggs: Yeah you di o m dash d etc i n g dash Sta.
+
+212
+00:32:37.110 --> 00:32:43.260
+Brandon Biggs: There you go. Audio extra navigation to Iowa slash audience dash getting started.
+
+213
+00:32:44.460 --> 00:32:45.330
+Brandon Biggs: You can
+
+214
+00:32:46.560 --> 00:33:04.680
+Brandon Biggs: Go through this kind of at your own pace. Basically, we need to do is login to the audio website and I must preface this by this is kind of a new system. So there's not a lot of polish on it yet. So
+
+215
+00:33:05.760 --> 00:33:19.830
+Brandon Biggs: We're in the midst of building it out and you should, if, if you want to keep exploring this after today, there'll be a lot of updates in the next couple of weeks because they're really starting to work on it now. So anyways, basically.
+
+216
+00:33:20.190 --> 00:33:21.360
+Brandon Biggs: The event is. Yeah.
+
+217
+00:33:21.720 --> 00:33:30.750
+Doug Schepers: Oh. Hey Brandon sorry this is Doug, I just want to make sure that people that that we're setting the context. So that was the end of the presentations.
+
+218
+00:33:31.440 --> 00:33:42.840
+Doug Schepers: The pre read the earlier presentations. We're now entering into a the the breakout which is building cross sensory maps using audio in audio.
+
+219
+00:33:44.610 --> 00:33:54.660
+Doug Schepers: And so, and Brandon is also is the facilitator for this. So I just want to make sure people understood that the presentations have ended, and now we're actually in a in a breakout session.
+
+220
+00:33:55.590 --> 00:33:56.910
+Peter Rushforth: Yeah, good point. Thank you.
+
+221
+00:33:57.840 --> 00:33:58.350
+Doug Schepers: No problem.
+
+222
+00:33:58.560 --> 00:33:58.950
+Peter Rushforth: Just
+
+223
+00:33:59.040 --> 00:34:01.320
+Doug Schepers: Making sure people understood
+
+224
+00:34:02.250 --> 00:34:05.610
+Brandon Biggs: Awesome. But you should definitely stick around. So
+
+225
+00:34:07.110 --> 00:34:21.060
+Brandon Biggs: So audio is a tool that allows you to make maps that have an audio component and a visual component with the same data set. And currently, they run off of geo JSON.
+
+226
+00:34:22.830 --> 00:34:36.330
+Brandon Biggs: And but I'm but I'm adding other feature. Sorry. Other types as as I get to it. But let me know if you want me to add a particular map type and i can i can data type, and I can add that
+
+227
+00:34:38.310 --> 00:34:47.430
+Brandon Biggs: So I guess one major Khan of this is that restroom apps are accessible by default, just because they're a bunch of pictures and
+
+228
+00:34:48.840 --> 00:34:59.940
+Brandon Biggs: They don't have any information that can tell the computer. What exactly is happening and and just can't tell the user what's happening. Who's using the computer.
+
+229
+00:35:00.690 --> 00:35:11.430
+Brandon Biggs: And so, so it can it can just tell you kind of what colors are at a particular location. So anyways vector maps are really the only way to make accessible maps. I'm using this method.
+
+230
+00:35:13.110 --> 00:35:19.680
+Brandon Biggs: So first, you go to audio dot x on navigation.io and sign up
+
+231
+00:35:20.790 --> 00:35:24.390
+Brandon Biggs: And then you will enter into
+
+232
+00:35:30.450 --> 00:35:35.370
+Brandon Biggs: And you're here and you can read a lot about audience.
+
+233
+00:35:36.780 --> 00:35:41.430
+Brandon Biggs: Here, sure. I got the latest version. Anyways, so basically
+
+234
+00:35:44.370 --> 00:35:46.320
+Brandon Biggs: The first step is to go to
+
+235
+00:35:48.240 --> 00:35:49.140
+Brandon Biggs: Data sources.
+
+236
+00:35:50.160 --> 00:35:54.210
+Brandon Biggs: And here, click the Add the Create New button.
+
+237
+00:35:55.560 --> 00:35:57.540
+Brandon Biggs: And that's going to bring you to a
+
+238
+00:36:02.580 --> 00:36:06.810
+Brandon Biggs: A form here so you can enter a name. So I'm just going to call this
+
+239
+00:36:09.630 --> 00:36:10.200
+Box.
+
+240
+00:36:13.140 --> 00:36:23.430
+Brandon Biggs: Here's where you can write your do Jason. So I like to use. I have people use a geo json.io and I linked to it in the guide.
+
+241
+00:36:24.090 --> 00:36:38.430
+Brandon Biggs: I'm it's actually not accessible for blind people and I'm in the midst of also building a map editor using the same technology for blind people, but it's not quite ready yet. So I actually wrote out some geo JSON by hand.
+
+242
+00:36:43.950 --> 00:36:45.210
+Brandon Biggs: You want to feature collection.
+
+243
+00:36:48.210 --> 00:36:49.740
+Brandon Biggs: So I'm gonna go ahead and paste that here.
+
+244
+00:36:54.030 --> 00:36:56.640
+Brandon Biggs: And then, and click the Create button.
+
+245
+00:37:03.510 --> 00:37:06.060
+Brandon Biggs: That created the data source. Now I'm going to go
+
+246
+00:37:08.160 --> 00:37:09.090
+Brandon Biggs: Click on maps.
+
+247
+00:37:11.820 --> 00:37:14.700
+Brandon Biggs: And there's some existing maps here on the playground map.
+
+248
+00:37:15.870 --> 00:37:16.800
+Brandon Biggs: You want to try
+
+249
+00:37:19.080 --> 00:37:19.740
+Brandon Biggs: Playground.
+
+250
+00:37:24.150 --> 00:37:25.980
+Brandon Biggs: We can go create a new map.
+
+251
+00:37:30.570 --> 00:37:34.440
+Brandon Biggs: And this is box one one app.
+
+252
+00:37:36.060 --> 00:37:38.580
+Brandon Biggs: And then I'm going to leave these other fields blank.
+
+253
+00:37:41.610 --> 00:37:42.780
+Brandon Biggs: Will do a
+
+254
+00:37:45.870 --> 00:37:46.260
+Brandon Biggs: Box.
+
+255
+00:37:47.340 --> 00:37:48.660
+Brandon Biggs: As our data source.
+
+256
+00:37:49.980 --> 00:37:51.060
+Brandon Biggs: And create
+
+257
+00:37:53.940 --> 00:37:54.870
+Brandon Biggs: And
+
+258
+00:37:56.040 --> 00:38:08.700
+Brandon Biggs: Blank Space, one, two. Now we can go explore this. And so what this did scurry scurry building three story building for two. So I'm looking here that
+
+259
+00:38:09.300 --> 00:38:23.100
+Brandon Biggs: The box in there was called scary building and I'm going to switch to using a screen reader, because I really don't like that but that voice. But basically, now you can go through and explore the map that was there.
+
+260
+00:38:30.720 --> 00:38:36.660
+Brandon Biggs: You can see that there's, you know, all the different information about the geometries there, which is really cool.
+
+261
+00:38:37.830 --> 00:38:39.330
+Brandon Biggs: And there's the visual
+
+262
+00:38:45.780 --> 00:38:51.210
+Brandon Biggs: Don't know if you guys can see it. I can't see it, but I know it's there. And I think there should be
+
+263
+00:38:51.750 --> 00:39:10.980
+Brandon Biggs: Some sort of thing that like a green dot that that shows your characters at your, your listeners that on the, on the, the audio map. So anyways, that's, that's basically how you you create the audio maps in an audience. And you can add sounds to your different
+
+264
+00:39:12.330 --> 00:39:12.960
+Brandon Biggs: Objects.
+
+265
+00:39:14.010 --> 00:39:26.940
+Brandon Biggs: By adding different attributes like short underscore sound or it's all in the guides. If you want to learn how to make these or you can contact me and we talked about making some of your data sources.
+
+266
+00:39:28.650 --> 00:39:40.860
+Brandon Biggs: Accessible and audio. So another cool thing here is you can copy and paste this embed URL into your own website and and audio will be there right now there's kind of a limited
+
+267
+00:39:41.880 --> 00:39:45.210
+Brandon Biggs: Number of shares. I think it's like 1000 or something like that. So, um, if you want.
+
+268
+00:39:48.750 --> 00:39:58.290
+Badita Florin: Because they see that you can embed an iframe. Does it have a possibility of like showing the location. Like, imagine that I want to create for a park.
+
+269
+00:39:58.710 --> 00:40:08.820
+Badita Florin: And they use, I will need to to ask for the geolocation, so we can pinpoint him that's possible. Currently, or it will be or can be done or not.
+
+270
+00:40:09.150 --> 00:40:15.540
+Brandon Biggs: So let me let me understand your question. So basically you say you're saying that you want to have your apart.
+
+271
+00:40:17.310 --> 00:40:19.500
+Brandon Biggs: Directions from your current location to a park.
+
+272
+00:40:20.190 --> 00:40:40.110
+Badita Florin: Or have you. Yeah, let's say that I will take a group of 10 people that have problem with site and I would bring them to that power. They will each have an app that will be loaded and the to track their location with where they are now. So kind of the point to update based on the location.
+
+273
+00:40:40.590 --> 00:40:48.720
+Brandon Biggs: Yeah, so that's not currently available, but that's definitely something that that we're going to be adding pretty soon, because I believe
+
+274
+00:40:49.740 --> 00:40:51.450
+Brandon Biggs: I've never actually done it yet, but
+
+275
+00:40:51.840 --> 00:41:10.860
+Brandon Biggs: I'm pretty sure the do the Web API. There's a web API to get your current location. So yeah, that's definitely, I got some funding to build the app. So it's definitely in the short the short list of features that we're going to be making
+
+276
+00:41:13.590 --> 00:41:14.040
+Badita Florin: Yeah.
+
+277
+00:41:17.070 --> 00:41:24.480
+Brandon Biggs: Awesome. So yeah, let me know if you have any questions, and please feel free to make as many maps. Do you want and share them with your friends and
+
+278
+00:41:26.070 --> 00:41:28.320
+Brandon Biggs: Yes, that's, that's basically audience.
+
+279
+00:41:31.650 --> 00:41:40.530
+Peter Rushforth: Thank you very much, your brand. And that's pretty cool. Very story tinkering with it. I'll be sure and get touch. So you want us to play with it now and
+
+280
+00:41:41.370 --> 00:41:43.020
+Peter Rushforth: Yeah, give you some questions.
+
+281
+00:41:43.740 --> 00:41:44.790
+Brandon Biggs: Sure, absolutely.
+
+282
+00:41:49.230 --> 00:41:49.650
+Brandon Biggs: Yeah.
+
+283
+00:41:50.670 --> 00:41:52.920
+Brandon Biggs: I'm trying to find zoom. One sec. Let me find zoom
+
+284
+00:41:55.530 --> 00:41:56.160
+Brandon Biggs: See my zoom
+
+285
+00:42:13.200 --> 00:42:13.470
+Brandon Biggs: Okay.
+
+286
+00:42:17.310 --> 00:42:21.960
+Brandon Biggs: All right now. Now, you should be able to see you mean my screen.
+
+287
+00:42:23.160 --> 00:42:23.610
+Actually
+
+288
+00:42:27.660 --> 00:42:32.190
+Badita Florin: Has a code when I'm trying to access the ID for public map.
+
+289
+00:42:32.820 --> 00:42:37.080
+Brandon Biggs: Yeah, sorry that's that's a, that's a bug. Don't just those four
+
+290
+00:42:38.700 --> 00:42:43.140
+Brandon Biggs: Were Yeah, those, those two maps are to have an error. Sorry.
+
+291
+00:42:44.100 --> 00:42:49.500
+Badita Florin: Oh, I see. They have like the playground. Also, I know the plugin works. The, the demo also
+
+292
+00:42:50.820 --> 00:42:51.840
+Badita Florin: The eight ID.
+
+293
+00:42:52.800 --> 00:42:53.340
+Yes.
+
+294
+00:42:54.510 --> 00:42:54.810
+Badita Florin: Okay.
+
+295
+00:42:57.390 --> 00:42:59.070
+Brandon Biggs: The ad is is the one
+
+296
+00:43:00.870 --> 00:43:01.320
+Brandon Biggs: Me.
+
+297
+00:43:02.640 --> 00:43:03.000
+Know,
+
+298
+00:43:21.000 --> 00:43:22.710
+Brandon Biggs: I think, I think we're seeing
+
+299
+00:43:26.940 --> 00:43:35.100
+Brandon Biggs: We're seeing everybody's maps that everybody's been making. So those are those are being shared here, so everybody can see them at the moment.
+
+300
+00:43:37.260 --> 00:43:38.790
+Brandon Biggs: During this presentation.
+
+301
+00:43:40.680 --> 00:43:50.340
+Brandon Biggs: So that's that. Yeah. So somebody, somebody created that. And if it's giving an error. That means that the data isn't formatted correctly.
+
+302
+00:43:50.880 --> 00:43:52.260
+Doug Schepers: Branded. Yep.
+
+303
+00:43:52.530 --> 00:43:56.190
+Doug Schepers: FYI. I just want to make sure you know you are still sharing your screen.
+
+304
+00:43:56.490 --> 00:43:57.180
+Brandon Biggs: Yeah, that's
+
+305
+00:43:58.680 --> 00:43:59.820
+Brandon Biggs: Zoom to stop.
+
+306
+00:44:00.390 --> 00:44:00.780
+Okay.
+
+307
+00:44:07.080 --> 00:44:11.790
+Amelia Bellamy-Royds: Would you prefer to stop cuz coast can cut you out.
+
+308
+00:44:12.840 --> 00:44:15.330
+Brandon Biggs: Okay, it's up to you guys. I'm not
+
+309
+00:44:17.760 --> 00:44:24.930
+Brandon Biggs: Yeah so data sources search data sources is where you look for the name of the source that you are
+
+310
+00:44:25.860 --> 00:44:38.940
+Brandon Biggs: You want to add to your math. So basically if you added a data source, then you've typed in the name, and it should auto populate and then you click Create map and that's that's that's that's
+
+311
+00:44:42.300 --> 00:44:44.880
+Badita Florin: And another suggestion would be because
+
+312
+00:44:45.960 --> 00:44:54.090
+Badita Florin: Probably most of the use of the people that we create the maps will be people that they will be able to see so
+
+313
+00:44:54.750 --> 00:45:06.030
+Badita Florin: Maybe to have the ability to add like a slip to have like a tie left behind. So for me, my use case, I would want to like see okay the points are really where they should be based on
+
+314
+00:45:08.100 --> 00:45:12.360
+Badita Florin: The roadmap for like oil same or like being images or something.
+
+315
+00:45:13.380 --> 00:45:17.700
+Brandon Biggs: Yeah, I guess the, the issue with that. I want to see if there's
+
+316
+00:45:19.320 --> 00:45:25.620
+Brandon Biggs: Some sort of detailed vector layer that we can hook into because the tile maps. I mean,
+
+317
+00:45:27.660 --> 00:45:33.630
+Brandon Biggs: Like it completely defeats the purpose of the map. If you, if you start using raster data.
+
+318
+00:45:34.320 --> 00:45:37.860
+Badita Florin: Because I'm thinking just when designing like when you will
+
+319
+00:45:37.920 --> 00:45:44.370
+Badita Florin: Get website. Maybe not all in the sense we are, but at least two for designing part
+
+320
+00:45:44.880 --> 00:45:57.300
+Brandon Biggs: Yeah, that's definitely a good, a good point. Um, yeah, I can definitely look into that right now if you created on Jay Jason I know I oh I know they definitely have a raster background.
+
+321
+00:46:00.750 --> 00:46:03.300
+Brandon Biggs: We don't have a map editor yet so
+
+322
+00:46:04.500 --> 00:46:14.490
+Brandon Biggs: Yeah, that's, yeah, definitely, definitely look into that and hopefully there's a good a better solution than just like not using rester data because I would like to
+
+323
+00:46:15.990 --> 00:46:19.650
+Brandon Biggs: Figure out, you know, a good alternative to restroom data.
+
+324
+00:46:28.860 --> 00:46:29.940
+Brandon Biggs: You're a little bit quiet.
+
+325
+00:46:30.360 --> 00:46:47.340
+Bryan Haberberger: There. Sorry. Sorry, I had the microphone away from my face. I got it. Um, where do you like do I assume you have to save some of that data somehow, whether you're doing it in cash or an actual file somewhere. So I'm just kind of curious how you save that that map data and that geo JSON data.
+
+326
+00:46:47.790 --> 00:46:52.170
+Brandon Biggs: Yes apparently it's just a blog. I'm in SQL database.
+
+327
+00:46:53.430 --> 00:46:54.360
+Brandon Biggs: Enter your question.
+
+328
+00:46:57.480 --> 00:47:01.170
+Brandon Biggs: Each each each data sources its own blog in SQL.
+
+329
+00:47:01.860 --> 00:47:09.960
+Bryan Haberberger: I choose. So you're doing like you do your SQL query. And then on its way out you just to sort of like, I'm just forcing you know right in between the shim to make sure
+
+330
+00:47:10.650 --> 00:47:15.780
+Brandon Biggs: So when you when you load a map. It's parsing the geo JSON data in real time.
+
+331
+00:47:16.440 --> 00:47:16.740
+Gotcha.
+
+332
+00:47:17.880 --> 00:47:19.260
+Bryan Haberberger: Thank you. That doesn't answer my question.
+
+333
+00:47:20.430 --> 00:47:21.150
+Brandon Biggs: I'm sorry.
+
+334
+00:47:22.380 --> 00:47:28.950
+Bryan Haberberger: I'm sorry, I'm sorry. I'm gonna hit you with the next one that my pillow more pressure. Have you thought about a non SQL solution in the background.
+
+335
+00:47:29.910 --> 00:47:36.210
+Brandon Biggs: Yeah, I've thought about it. If you have any good suggestions. Let me know, because one. One of the issues that
+
+336
+00:47:38.250 --> 00:47:53.130
+Brandon Biggs: That we kept running into was, you know, being able to separate out different data sources so like a lot of different people wanted to have, you know, different data sources is there like an easy way to do that without making like a ton of different tables in the database.
+
+337
+00:47:54.270 --> 00:47:56.910
+Brandon Biggs: And or how to do that scale globally.
+
+338
+00:47:58.110 --> 00:48:08.730
+Brandon Biggs: So this is definitely not. I'm not a big expert in NGO databases. So yeah, any, any suggestions will definitely help
+
+339
+00:48:09.900 --> 00:48:17.010
+Bryan Haberberger: Yeah, I mean, I think it's a whole maybe another conversation. We don't have to have right here. But yeah, I think I would definitely have a couple ideas.
+
+340
+00:48:17.430 --> 00:48:19.110
+Brandon Biggs: Awesome. Yeah, please get in contact with me.
+
+341
+00:48:19.530 --> 00:48:21.870
+Brandon Biggs: I'd love to talk to you more about that because it's a big issue.
+
+342
+00:48:35.670 --> 00:48:44.640
+Amelia Bellamy-Royds: Brandon, can I ask you a more higher level question. I'm not specifically about audio, but about audio maps.
+
+343
+00:48:45.840 --> 00:48:46.410
+Amelia Bellamy-Royds: Um,
+
+344
+00:48:47.970 --> 00:48:51.210
+Amelia Bellamy-Royds: What is like a reasonable amount of detail.
+
+345
+00:48:53.010 --> 00:48:53.790
+Amelia Bellamy-Royds: Because
+
+346
+00:48:55.770 --> 00:49:06.240
+Amelia Bellamy-Royds: With a visual map you can fill in lots of space and use other cues to emphasize what's important or not. But with these
+
+347
+00:49:07.500 --> 00:49:16.350
+Amelia Bellamy-Royds: exportable audio maps are you able to really filter through extra detail, or is it best to keep it stripped down
+
+348
+00:49:16.860 --> 00:49:22.590
+Brandon Biggs: Know, you can definitely filter through a lot of detail. Um, now I haven't a
+
+349
+00:49:23.670 --> 00:49:38.010
+Brandon Biggs: Tip typically you'd look at it like the viewport. And so you do filter out the data in this particular chunk and explore that particular chunk. And so, say for example you're looking for.
+
+350
+00:49:41.070 --> 00:49:48.510
+Brandon Biggs: One particular point you would use probably a list view rather than then then like this this particular grid view so
+
+351
+00:49:50.970 --> 00:50:01.230
+Brandon Biggs: There's three different modes that you can navigate this map, and there's a grid view where, basically, that's the default and it says you moving through you can hear the coordinates and you can hear the
+
+352
+00:50:02.490 --> 00:50:15.120
+Brandon Biggs: Like the polygons that you're over and then there's another one on that's more first person and you can you can navigate around like you're in a real environment, and then another one where you basically can view menu of all the different options and so
+
+353
+00:50:16.620 --> 00:50:25.230
+Brandon Biggs: You can definitely do a lot of detail you can view view as much detail as you want. Just like you can zoom in and out as much, you know, as you want.
+
+354
+00:50:26.580 --> 00:50:40.740
+Brandon Biggs: And you can you can view view it granularity very, very granular Lee, or you can go zoom out and see it in a more overview, you might miss some small features like say for example, there's
+
+355
+00:50:41.760 --> 00:50:49.980
+Brandon Biggs: You want to view things that are kilometer level. And there's some meter stuff you won't be able to notice those your stuff. Unless you turn on some sort of setting.
+
+356
+00:50:50.430 --> 00:51:00.480
+Brandon Biggs: But you can go into a menu and see all the different items there. And if you know what you're looking for. You want to really quickly move to that list you can like, press the down arrow and
+
+357
+00:51:01.950 --> 00:51:06.600
+Brandon Biggs: Here the different objects in the list. Very, very quickly, but this is definitely
+
+358
+00:51:07.950 --> 00:51:13.050
+Brandon Biggs: Some big, big maps or not or something. I need to continue exploring
+
+359
+00:51:18.180 --> 00:51:24.270
+Amelia Bellamy-Royds: So an audience. Does that sort of level of detail scaling out automatically or
+
+360
+00:51:25.170 --> 00:51:25.530
+Amelia Bellamy-Royds: Yeah.
+
+361
+00:51:26.400 --> 00:51:28.230
+Brandon Biggs: I mean, so basically
+
+362
+00:51:30.210 --> 00:51:32.550
+Brandon Biggs: You can zoom in and out. Yes, with audio.
+
+363
+00:51:33.720 --> 00:51:42.810
+Brandon Biggs: And I wouldn't right now it's built, it's, it's this particular this particular time it's it's particular particular the
+
+364
+00:51:44.040 --> 00:51:51.510
+Brandon Biggs: Put four meters. And so when you put in a geo JSON object.
+
+365
+00:51:53.070 --> 00:51:57.030
+Brandon Biggs: You're moving by meters in the map and so
+
+366
+00:51:58.830 --> 00:52:12.900
+Brandon Biggs: There's some parsing of the coordinates that that's done, and you're put into a sensible plane because you don't want to be hearing coordinates spoken out every time you move to a different square because that's just a little bit nuts.
+
+367
+00:52:14.310 --> 00:52:21.420
+Brandon Biggs: And so, so it does turn it into meters and but definitely it's not hard to to turn it into kilometers.
+
+368
+00:52:22.500 --> 00:52:25.230
+Brandon Biggs: And just trying to figure out a good user friendly way of doing that.
+
+369
+00:52:26.730 --> 00:52:28.050
+Brandon Biggs: For for the map readers.
+
+370
+00:52:31.110 --> 00:52:31.590
+Doug Schepers: Um,
+
+371
+00:52:33.150 --> 00:52:35.910
+Doug Schepers: Brandon, Doug, I
+
+372
+00:52:37.320 --> 00:52:42.540
+Doug Schepers: Are, are you expecting people to upload their own
+
+373
+00:52:44.070 --> 00:52:51.810
+Doug Schepers: soundscapes, what do you, what do you call a particular sound icon for like the looping audio that you're running for say a playground.
+
+374
+00:52:51.840 --> 00:52:55.470
+Brandon Biggs: Or yes, Sam Pat's so that's that's basically what I call them I'm
+
+375
+00:52:55.590 --> 00:52:57.480
+Doug Schepers: Sorry, I didn't understand what you said.
+
+376
+00:52:57.930 --> 00:52:59.190
+Brandon Biggs: Sounded packs.
+
+377
+00:52:59.490 --> 00:53:09.930
+Doug Schepers: Sound packs. Yep. Okay. Are you expecting people to upload their own sound packs are you going to make sound packs available by default.
+
+378
+00:53:10.350 --> 00:53:11.730
+Doug Schepers: Both okay
+
+379
+00:53:11.760 --> 00:53:18.720
+Brandon Biggs: There's already one in there by default. Unfortunately, the current update on production bill doesn't show it um
+
+380
+00:53:19.980 --> 00:53:30.360
+Brandon Biggs: But yeah, so there there definitely is a default, it should be there tomorrow, but you should be able to just go, you know, click and listen to the different sounds.
+
+381
+00:53:31.170 --> 00:53:43.320
+Brandon Biggs: So there is going to be one by default. And I'm going to continue building on it as time goes on, and hopefully I should have different sound packs that you can you can use by default, or you can
+
+382
+00:53:44.280 --> 00:53:55.350
+Brandon Biggs: Eventually, you should be able to upload your own and and and use those in your maps so like the playground for example uses a custom sound pack and
+
+383
+00:53:57.060 --> 00:54:02.640
+Brandon Biggs: If I wanted to use the sound pack for the map that I just made, I could do that.
+
+384
+00:54:03.210 --> 00:54:09.390
+Doug Schepers: So it seems to me, have you done it seems to me that having familiar
+
+385
+00:54:12.330 --> 00:54:21.270
+Doug Schepers: Sound packs or having a familiar sound icon. I'll use or or soundscape icon for
+
+386
+00:54:22.590 --> 00:54:23.820
+Doug Schepers: Similar or
+
+387
+00:54:25.470 --> 00:54:27.810
+Doug Schepers: Like for restaurants, having the same
+
+388
+00:54:27.840 --> 00:54:31.590
+Doug Schepers: Thing. Seems like a useful orientation tool.
+
+389
+00:54:32.370 --> 00:54:34.230
+Brandon Biggs: Yeah yeah absolutely would be
+
+390
+00:54:35.010 --> 00:54:40.800
+Doug Schepers: Have you, have you done any studies to see the extent to which
+
+391
+00:54:42.930 --> 00:54:50.310
+Doug Schepers: I mean obviously when you're walking around in the real world, right, you're hearing. It's not every restaurant. Sounds like right but you can identify them as restaurant.
+
+392
+00:54:50.400 --> 00:54:53.790
+Doug Schepers: Right, yeah. But it seems that in a constraint.
+
+393
+00:54:55.500 --> 00:54:56.910
+Doug Schepers: Industry strictly constrained
+
+394
+00:54:58.020 --> 00:55:04.860
+Doug Schepers: Environment like like this that it might be useful to have
+
+395
+00:55:06.330 --> 00:55:08.400
+Doug Schepers: The same sound icon being used.
+
+396
+00:55:09.630 --> 00:55:10.500
+Doug Schepers: And I
+
+397
+00:55:12.090 --> 00:55:14.670
+Doug Schepers: Wonder if you've done any studies that show
+
+398
+00:55:16.020 --> 00:55:19.620
+Doug Schepers: One way or the other, whether that's whether that's the case.
+
+399
+00:55:20.910 --> 00:55:45.480
+Brandon Biggs: Not really the best thing I can think of is that the team system that you saw earlier in my presentation was did did have a specific sound set of sounds for different types of locations. So like a bar was particular sound in a restaurant was a particular sound that looped
+
+400
+00:55:46.650 --> 00:55:53.880
+Brandon Biggs: But as for like a standardized sound. Uh, no, there's no standard auditory icons for
+
+401
+00:55:55.590 --> 00:55:59.790
+Brandon Biggs: For for these and I don't think there's been any studies to to determine
+
+402
+00:56:01.170 --> 00:56:03.180
+Brandon Biggs: What people would would recognize
+
+403
+00:56:04.920 --> 00:56:20.730
+Brandon Biggs: Most naturally as like a restaurant or street, for example, but one thing that you can depend on probably is, is that and there's been some studies on this particular fact is that
+
+404
+00:56:21.750 --> 00:56:29.700
+Brandon Biggs: There, you do have an ecological connection to the world. So if you hear like a sound of would
+
+405
+00:56:30.960 --> 00:56:43.050
+Brandon Biggs: Would would sound like that. That's a sound of wood and there's no other sound that that could be. It's like, you know, when you see a draft that has a draft there's there's no other thing you could really be
+
+406
+00:56:44.070 --> 00:56:45.570
+Brandon Biggs: Or you know if
+
+407
+00:56:47.130 --> 00:56:52.650
+Brandon Biggs: There's there's connections to the real world, that, that, that you can kind of depend on and so
+
+408
+00:56:54.000 --> 00:57:03.630
+Brandon Biggs: That that definitely helps with with creating these these maps so you can use these is real world sounds in your maps and that makes it
+
+409
+00:57:04.800 --> 00:57:05.550
+Brandon Biggs: Much more
+
+410
+00:57:06.870 --> 00:57:13.230
+Brandon Biggs: Relatable so that people don't necessarily need to use a lot of cognitive processing to understand what you're trying to convey
+
+411
+00:57:14.460 --> 00:57:21.390
+Doug Schepers: I think that's, I understand what you're saying. I think that sounds right to me. But I also know that fully artists.
+
+412
+00:57:22.680 --> 00:57:34.320
+Doug Schepers: Create sounds that are nothing like real world sound, but for some reason they strike people as being the right sound, for example.
+
+413
+00:57:37.020 --> 00:57:41.970
+Doug Schepers: You know hawks don't sound like you hear hawks in the movies, right.
+
+414
+00:57:42.000 --> 00:57:54.210
+Doug Schepers: Yeah, they sound very different, but that that is the standard sound for hawk so fully artists in sound, sound effects people use the sound for hawk for hawks, but that's not what a lot sound like
+
+415
+00:57:54.540 --> 00:58:02.640
+Doug Schepers: Yeah, they exaggerate sounds in order to emphasize key characteristics like the Clock. Clock of the horse.
+
+416
+00:58:02.670 --> 00:58:04.530
+Brandon Biggs: Right. Yep. Yeah.
+
+417
+00:58:05.040 --> 00:58:06.060
+I
+
+418
+00:58:07.290 --> 00:58:09.210
+Doug Schepers: I see actually that
+
+419
+00:58:11.190 --> 00:58:13.230
+Doug Schepers: Amelia is pointy on a zoom issue.
+
+420
+00:58:14.700 --> 00:58:18.390
+Doug Schepers: We can talk about this offline. It's just, I'd like to
+
+421
+00:58:19.740 --> 00:58:22.830
+Doug Schepers: Better how how what that relation with the ship with the sound icon says
+
+422
+00:58:22.980 --> 00:58:24.180
+Brandon Biggs: Yeah. Yeah, absolutely.
+
+423
+00:58:24.600 --> 00:58:25.890
+Doug Schepers: Amelia has a question.
+
+424
+00:58:27.300 --> 00:58:32.130
+Doug Schepers: How do I get the gallery view zoom issue. How do I get back to gallery views the OH.
+
+425
+00:58:32.940 --> 00:58:38.460
+Amelia Bellamy-Royds: Brandon, that's for anybody knows zoom better than I do. Sorry for interrupting.
+
+426
+00:58:38.550 --> 00:58:43.260
+Doug Schepers: I apologize. No, you're not interrupting. I was dominating the conversation with with Brendan
+
+427
+00:58:43.710 --> 00:58:51.390
+Badita Florin: I think in the top left the top right corner, you have the view and against select between galleries Pico full screen.
+
+428
+00:58:51.810 --> 00:59:01.590
+Amelia Bellamy-Royds: Yes, it's come back on that Peter has this video I guess if nobody has video on it doesn't even bother showing the speaker names. Anyways,
+
+429
+00:59:01.890 --> 00:59:03.390
+Sorry for the distraction.
+
+430
+00:59:06.870 --> 00:59:07.560
+Doug Schepers: So,
+
+431
+00:59:07.680 --> 00:59:13.890
+Amelia Bellamy-Royds: You have any other questions for Brandon, people who are maybe playing around with the examples.
+
+432
+00:59:14.730 --> 00:59:35.490
+Badita Florin: I wanted to ask him, and I put the link in the chat to with if he knows the game for which is a website that shows most all of the most used the key value pairs, no essential, you can find like top 10 or top five 500 if you want the most use like amenities or the location. So you
+
+433
+00:59:36.660 --> 00:59:42.300
+Badita Florin: Would be an identified because this will be the most that you will find noise. Same so it would be useful to create for them.
+
+434
+00:59:43.050 --> 00:59:50.100
+Brandon Biggs: Yeah, that's, that's good, that's good to know. So one thing we're going to be doing really, really soon is actually hook up
+
+435
+00:59:50.550 --> 00:59:59.340
+Brandon Biggs: Very similar to our team did. We're going to hook up the whole entire audience system to open street maps. So all the data and Open Street Map should be available if it's
+
+436
+01:00:00.180 --> 01:00:11.130
+Brandon Biggs: Got the correct labels in it and I'll be trying to parse those out into it and see exactly what it is. But that's something in our short list, we have a project that we're doing that right now so
+
+437
+01:00:11.850 --> 01:00:24.570
+Badita Florin: If you have a problem with like loading the planet and things like that. Tell me, I have somebody that they already loading the planet and processing good for vector tiles investor tiles and I can, I could connect you
+
+438
+01:00:25.110 --> 01:00:35.040
+Brandon Biggs: Oh, that'd be great. Yeah, it's not not something I've investigated to too heavily going in and doing queries on open street maps, not, not
+
+439
+01:00:35.250 --> 01:00:35.670
+Badita Florin: In all
+
+440
+01:00:36.210 --> 01:00:38.820
+Badita Florin: The planet is huge is like the extract
+
+441
+01:00:39.000 --> 01:00:41.460
+Badita Florin: The ladies like 600 gigabytes or more
+
+442
+01:00:42.030 --> 01:00:49.980
+Brandon Biggs: Yeah. Yeah, so there's there's a good way to go and and and grab little chunks of that.
+
+443
+01:00:51.780 --> 01:00:55.140
+Brandon Biggs: Yeah, let me know, because that's definitely something I'm gonna have to deal with.
+
+444
+01:00:55.530 --> 01:01:06.300
+Badita Florin: Yeah, and probably will need like a point where self. If you don't have to store the data because podcast is kind of the best because you also have, like, oh geez with like the extension.
+
+445
+01:01:06.990 --> 01:01:07.410
+Brandon Biggs: Yeah, and
+
+446
+01:01:08.100 --> 01:01:12.810
+Badita Florin: It's really good. And there are some tools for automatically logged into podcasts and other things like that.
+
+447
+01:01:13.710 --> 01:01:21.690
+Brandon Biggs: But, yeah, yeah. Yeah, that's definitely something I need to. I need to investigate palm and I'll probably end up creating my own
+
+448
+01:01:22.860 --> 01:01:30.360
+Brandon Biggs: I know another company that uses Open Street Map and they made their own server for Open Street Map and and definitely coming in after do that.
+
+449
+01:01:30.810 --> 01:01:31.110
+Yeah.
+
+450
+01:01:34.560 --> 01:01:37.380
+Peter Rushforth: Brian hamburger has a question.
+
+451
+01:01:37.470 --> 01:01:38.250
+Brandon Biggs: On the
+
+452
+01:01:38.340 --> 01:01:55.380
+Peter Rushforth: On get her. I'll read it out. I have a question on granularity. If you see this being granular enough to help someone get around their favorite baseball soccer, football. Football Stadium, Stadium. But yes, it could it help you get to the vendor you want or the bathrooms nearby.
+
+453
+01:01:55.440 --> 01:01:56.880
+Brandon Biggs: Absolutely, yeah.
+
+454
+01:01:56.910 --> 01:02:06.360
+Brandon Biggs: Absolutely. I've done it for a lot of conferences made these maps for several different conferences and an indoor spaces so that playground map that you saw you saw
+
+455
+01:02:07.710 --> 01:02:17.580
+Brandon Biggs: It, it can definitely help you get from from, you know, the bridge to the the slide man to the bridge to the stepping sounds. It's not not hard to do.
+
+456
+01:02:18.090 --> 01:02:28.170
+Brandon Biggs: So yeah, absolutely. And especially if you get more detail in there like, you know, putting walls and stuff like that. And you can tell people where to walk in and we're not walk and
+
+457
+01:02:29.400 --> 01:02:30.300
+Brandon Biggs: Yeah, absolutely.
+
+458
+01:02:31.440 --> 01:02:35.160
+Badita Florin: And also, I don't know. Do you know overpass Tubal
+
+459
+01:02:38.280 --> 01:02:42.450
+Brandon Biggs: Not a big expert on Open Street Map. But not really, no.
+
+460
+01:02:42.480 --> 01:02:51.990
+Badita Florin: Okay overpass Tupac is a service where you can do like queries you can I acquire a filter and you can select like okay, give me the US dissent dissent is so
+
+461
+01:02:52.590 --> 01:03:00.540
+Badita Florin: And so what you could do is like the user, you get the location of the user. And you will have like the bounding box of an area. It could be like
+
+462
+01:03:00.750 --> 01:03:01.530
+Brandon Biggs: Oh, yes. Yeah.
+
+463
+01:03:01.980 --> 01:03:11.970
+Badita Florin: And he's gonna it can download any can export directly to you can have it like geo JSON exported. So this could kind of help you to not create the whole planet to end.
+
+464
+01:03:12.360 --> 01:03:22.830
+Badita Florin: Of each each you client to do it in the most of the daunting and then you just have some JavaScript that will process and yeah
+
+465
+01:03:22.890 --> 01:03:25.290
+Brandon Biggs: I think that's probably we're going to do initially
+
+466
+01:03:26.340 --> 01:03:28.110
+Brandon Biggs: Is use use that
+
+467
+01:03:29.130 --> 01:03:38.010
+Brandon Biggs: Use overpass turbo. Yes, I do. I do. I knew no overpass i didn't i didn't i don't i didn't know there was one turbo but
+
+468
+01:03:38.820 --> 01:03:39.690
+Badita Florin: This is for
+
+469
+01:03:39.750 --> 01:03:47.430
+Badita Florin: Like visual. So instead of doing everything like this. This will kind of show you on the map and you can also style it and other things like that is more user friendly.
+
+470
+01:03:47.880 --> 01:03:48.960
+Brandon Biggs: I see. Okay.
+
+471
+01:03:49.530 --> 01:03:50.100
+Doug Schepers: Did you yeah
+
+472
+01:03:50.130 --> 01:03:51.030
+Doug Schepers: Right, what is
+
+473
+01:03:51.060 --> 01:03:52.680
+Doug Schepers: overpass and overpass turbo
+
+474
+01:03:53.520 --> 01:03:54.450
+Brandon Biggs: For Open Street Map.
+
+475
+01:03:56.070 --> 01:04:02.910
+Badita Florin: Is the API that you can use to access and download parts of, you know, for him data overpass two boys kind of
+
+476
+01:04:03.870 --> 01:04:21.690
+Badita Florin: Report over bus that allows you to create more friendly queries to to to query the database and instead of showing the data like the JSON response you you see like visually in a leaflet map. I think you see visually the points that it is returning
+
+477
+01:04:22.530 --> 01:04:23.250
+Doug Schepers: Okay, thank you.
+
+478
+01:04:28.920 --> 01:04:30.990
+Brandon Biggs: Me until it gets into an audio map but
+
+479
+01:04:33.480 --> 01:04:34.920
+Brandon Biggs: Yeah, listen, look into that.
+
+480
+01:04:39.390 --> 01:04:44.130
+Amelia Bellamy-Royds: So to go back to the question of, Is this useful for
+
+481
+01:04:46.530 --> 01:04:48.750
+Amelia Bellamy-Royds: Navigating in places.
+
+482
+01:04:49.950 --> 01:04:54.210
+Amelia Bellamy-Royds: At this point are you working only on
+
+483
+01:04:55.260 --> 01:05:06.000
+Amelia Bellamy-Royds: Something that people can explore ahead of time, or are you connecting this up to something that could be live
+
+484
+01:05:07.710 --> 01:05:11.760
+Amelia Bellamy-Royds: On their mobile device as they're actually in a place
+
+485
+01:05:12.390 --> 01:05:28.200
+Brandon Biggs: Yeah, so, um, there's a couple issues there. First is, we need to build a mobile interface for this right now, if you have a keyboard, you can use a keyboard on your mobile device, but a lot of people don't usually bring that with them so
+
+486
+01:05:29.280 --> 01:05:35.670
+Brandon Biggs: We have to build a touchscreen interface for this and that's on our list of stuff to do. And then
+
+487
+01:05:36.690 --> 01:05:41.610
+Brandon Biggs: Once that's built, then yes, we're looking into, you know, getting positioning
+
+488
+01:05:43.140 --> 01:05:53.730
+Brandon Biggs: But typically, this is a pre pre trip planning for the next, you know, several months. This will be just primarily used as a pre trip planning tool.
+
+489
+01:05:54.180 --> 01:05:55.110
+Brandon Biggs: And or
+
+490
+01:05:56.520 --> 01:05:56.910
+Badita Florin: Indeed,
+
+491
+01:05:57.600 --> 01:06:09.750
+Brandon Biggs: Or any other thing where you were using map for that that's not necessarily that you are here.on on the Google Maps or whatever, as you're walking so that's that's the only I'm
+
+492
+01:06:10.260 --> 01:06:20.820
+Brandon Biggs: Pretty much the only major feature at the moment that you shouldn't you can't really do with this yet. And so, um, but, yeah, it's definitely on our list of things to do. Yeah.
+
+493
+01:06:21.540 --> 01:06:35.850
+Amelia Bellamy-Royds: Definitely. I mean, we have a couple talks of this the next session. So Sunday night Monday morning, we are talks on one specifically on maps of indoor spaces and the others.
+
+494
+01:06:36.960 --> 01:06:47.580
+Amelia Bellamy-Royds: Ones are also talking about way finding and maps for in person accessibility. So it definitely all flows together.
+
+495
+01:06:48.000 --> 01:06:48.420
+Yeah.
+
+496
+01:06:50.370 --> 01:06:54.720
+Badita Florin: I wanted to add that to Illinois, Sam. You have close to 1 million
+
+497
+01:06:55.800 --> 01:07:04.590
+Badita Florin: Locations that also contain information if that place is accessible for persons with with whichever and thinking that some of the, of the users that
+
+498
+01:07:04.980 --> 01:07:16.410
+Badita Florin: Will use these maybe they are being also in wheelchair so that would be useful for them to kind of maybe they could know like okay this is accessible or not and
+
+499
+01:07:16.500 --> 01:07:21.030
+Badita Florin: Also the like opening up for around. I think half a million also points.
+
+500
+01:07:22.050 --> 01:07:22.350
+Badita Florin: But
+
+501
+01:07:22.410 --> 01:07:25.770
+Brandon Biggs: Yeah, absolutely. I think, I think one of the things I'm going to
+
+502
+01:07:26.970 --> 01:07:29.190
+Brandon Biggs: Try and do eventually is when you
+
+503
+01:07:29.340 --> 01:07:32.130
+Brandon Biggs: You know, hover over the box or whatever with your mouse.
+
+504
+01:07:32.220 --> 01:07:38.520
+Brandon Biggs: On the visual view, it'll give you, you can explore the properties and you can, you know, see.
+
+505
+01:07:40.230 --> 01:07:44.520
+Brandon Biggs: If it has, if it's accessible or not. And then same with the
+
+506
+01:07:46.290 --> 01:07:56.490
+Brandon Biggs: The audio view, you should be able to see these different properties and see, you know, if it's accessible and you should be able to filter by items that are accessible or not.
+
+507
+01:07:57.540 --> 01:08:02.970
+Brandon Biggs: But unfortunately, it's not all the items but you know one millions of really good number. And typically
+
+508
+01:08:05.520 --> 01:08:12.180
+Brandon Biggs: They, you're probably not going to get a lot of really terrible sidewalks. If it's accessible to wheelchair users, which is nice for
+
+509
+01:08:13.260 --> 01:08:14.280
+Brandon Biggs: Almost everybody so
+
+510
+01:08:14.790 --> 01:08:28.830
+Badita Florin: And in voice and also for the votes. I think you can. There is tags to to say that if there is like a sidewalk on the left on the light, not many use it in Germany, they usually use it. But yeah, this is something to consider.
+
+511
+01:08:28.980 --> 01:08:30.990
+Brandon Biggs: Yeah, that's really important. Yeah.
+
+512
+01:08:32.280 --> 01:08:37.320
+Brandon Biggs: Always. Am I don't even think gives a level of detail a blind person would really like to have
+
+513
+01:08:39.210 --> 01:08:54.720
+Brandon Biggs: A lot of people when when I've done studies they say that the most the features they want most are parked cars, the planters the doors like where exactly the door is in the building.
+
+514
+01:08:55.740 --> 01:09:05.610
+Brandon Biggs: And poles ambushes which are typically used in also the side of the side of the street that you're on and
+
+515
+01:09:06.390 --> 01:09:06.780
+Badita Florin: Probably
+
+516
+01:09:07.320 --> 01:09:08.550
+Brandon Biggs: Yeah, trees, yeah.
+
+517
+01:09:09.690 --> 01:09:26.850
+Brandon Biggs: So anyways, yeah that's that's like you were asking about detail before like that's kind of the level of detail that that bump up the bidding want in a map. And so, yeah, you can get down to that level and that that's really the level that I'm at people. People like
+
+518
+01:09:28.470 --> 01:09:37.920
+Peter Rushforth: Couple more questions in the chat and maybe I'll read it first thinking about audio 3D printer an audio 3D preview of the venue. Want to go
+
+519
+01:09:40.260 --> 01:09:42.660
+Peter Rushforth: To to get your bearings ahead of time.
+
+520
+01:09:43.890 --> 01:09:49.650
+Peter Rushforth: Will it be able to support 3D sound Cox, not sure if that is a whole new file type or something.
+
+521
+01:09:50.400 --> 01:09:52.920
+Brandon Biggs: No. So how it works is
+
+522
+01:09:55.080 --> 01:10:00.420
+Brandon Biggs: We use the Web Audio API and in the Web Audio API you use
+
+523
+01:10:01.950 --> 01:10:04.470
+Brandon Biggs: The, the sounds are put into
+
+524
+01:10:05.880 --> 01:10:19.440
+Brandon Biggs: The coordinate in space and then you're the listener and you move around those coordinates. And as you move the sound changes. It's on position relative to you. And so like you here in the playground map on and so
+
+525
+01:10:20.670 --> 01:10:25.770
+Brandon Biggs: Are you really need is the looping sound and that gives you the 3D audio.
+
+526
+01:10:28.080 --> 01:10:30.510
+Brandon Biggs: That you need for
+
+527
+01:10:31.740 --> 01:10:37.860
+Brandon Biggs: I guess for any type of map. So I'm, I'm not sure that's exactly what you were asking, but
+
+528
+01:10:39.300 --> 01:10:45.960
+Brandon Biggs: It's really just any type of any type of sound that you can put into this map so
+
+529
+01:10:46.890 --> 01:10:51.750
+Doug Schepers: Just to clarify, you that your system takes care of the positioning
+
+530
+01:10:52.020 --> 01:11:00.420
+Doug Schepers: Yes, they just have to sell it. It's already doing 3D positioning. Yes. And they just put in the sound that is going to be positioned
+
+531
+01:11:01.260 --> 01:11:01.980
+Brandon Biggs: Exactly.
+
+532
+01:11:02.040 --> 01:11:04.140
+Brandon Biggs: You can just attach it to your feature. Uh huh.
+
+533
+01:11:04.410 --> 01:11:19.410
+Doug Schepers: Right there may be a follow up question, which is, can you design. Is there any other way of designing your own 3D features or is this taking care of, like, I don't know what that would be. I'm just speculating that for some reason somebody might want to
+
+534
+01:11:20.760 --> 01:11:23.880
+Doug Schepers: For example, have level of detail. So it's not just the
+
+535
+01:11:26.010 --> 01:11:29.730
+Doug Schepers: It's not just the positioning, but it could be
+
+536
+01:11:30.120 --> 01:11:46.650
+Doug Schepers: How loud or faint, something is or how much detail you hear from a particular restaurant, like if you go to if you if you start off, you might hear chatter, just like voices and as you get closer, you might hear, for example, the clinking of silverware and glasses and plates.
+
+537
+01:11:47.340 --> 01:11:49.290
+Brandon Biggs: Yeah, so I'm
+
+538
+01:11:52.500 --> 01:12:02.130
+Brandon Biggs: At the moment, those that type of event is not there yet, but that's definitely something I want to add and probably won't be for a while.
+
+539
+01:12:02.430 --> 01:12:10.200
+Brandon Biggs: Because I want to try and get Open Street Map and all that kind of other stuff added him first. But definitely that level of detail is something I'm want to add
+
+540
+01:12:11.370 --> 01:12:24.480
+Brandon Biggs: Eventually, and so you could basically build your own virtual reality spaces. I'm using this map and do all kinds of granular support. It's definitely has the capability but
+
+541
+01:12:26.130 --> 01:12:27.990
+Brandon Biggs: It's not, it's not there yet.
+
+542
+01:12:28.470 --> 01:12:32.250
+Brandon Biggs: Okay, yeah, we just use the automatic positioning now.
+
+543
+01:12:33.060 --> 01:12:33.870
+Doug Schepers: Okay, cool. Thank you.
+
+544
+01:12:38.700 --> 01:12:54.840
+Peter Rushforth: And there's another comment says, I wonder if in the future if this could link with sensor data to provide live navigation based on real conditions. For example, if I'm walking in a sensor knows there's ice or snow bank is something in front of me I could be a directed away from my house.
+
+545
+01:12:56.940 --> 01:12:59.310
+Brandon Biggs: Yeah. Um, so
+
+546
+01:13:01.260 --> 01:13:05.610
+Brandon Biggs: Sensors, um, I don't know, very many that actually work.
+
+547
+01:13:07.110 --> 01:13:11.130
+Brandon Biggs: For for that kind of level of detail what what we are looking at is
+
+548
+01:13:12.300 --> 01:13:13.710
+Brandon Biggs: There's a
+
+549
+01:13:15.510 --> 01:13:26.280
+Brandon Biggs: Smith Kettlewell and several other companies are building indoor way finding apps that are basically use computer vision and inertial dormitory to to
+
+550
+01:13:26.880 --> 01:13:37.140
+Brandon Biggs: Position yourself in the in the indoor space. And so we're going to be hooking up audience to that and and that should be able to kind of act as your, your
+
+551
+01:13:37.620 --> 01:13:50.700
+Brandon Biggs: green.as you're moving through the building and you should be able to use both the audience features and the features of that way finding out to tell what's around you. But for sensor data. Yeah, that's not
+
+552
+01:13:51.900 --> 01:13:58.770
+Brandon Biggs: A guess the closest could be maybe like real time information through satellites or something like that that that
+
+553
+01:13:59.820 --> 01:14:01.350
+Brandon Biggs: That you can get through an API.
+
+554
+01:14:02.370 --> 01:14:10.620
+Brandon Biggs: But yeah, I don't know. I don't know. Very many sensors are reliable enough to give you enough information other than the cane.
+
+555
+01:14:32.100 --> 01:14:35.340
+Amelia Bellamy-Royds: So one other question since you have a lot of
+
+556
+01:14:37.560 --> 01:14:39.810
+Amelia Bellamy-Royds: Web Map developers on the line.
+
+557
+01:14:41.100 --> 01:14:45.300
+Amelia Bellamy-Royds: Is there like his audio some open source are you
+
+558
+01:14:47.250 --> 01:14:49.260
+Amelia Bellamy-Royds: The listener and contributions.
+
+559
+01:14:50.100 --> 01:14:53.730
+Brandon Biggs: Yeah. So currently it's not open source. Um, it's a
+
+560
+01:14:55.770 --> 01:14:59.190
+Brandon Biggs: Kind of a prototype commercial product at the moment. And so
+
+561
+01:15:01.050 --> 01:15:09.420
+Brandon Biggs: If you want to continue developing or, you know, CC continuous development on it or use it in your project, just contact me and we can talk about it.
+
+562
+01:15:21.600 --> 01:15:36.630
+Bryan Haberberger: So I have one more sort of peripheral kind of comment here yesterday there was a presentation on geo JSON T, which was taking geo JSON and adding time to it. If you ever thought about an actual geo JSON extension to attach audio.
+
+563
+01:15:38.460 --> 01:15:39.120
+Brandon Biggs: So,
+
+564
+01:15:40.710 --> 01:15:49.260
+Brandon Biggs: I kind of have built my own God Jason format. If you look through the the guide on attaching audio.
+
+565
+01:15:51.030 --> 01:15:54.330
+Brandon Biggs: I've kind of built in my own property set
+
+566
+01:15:55.980 --> 01:15:58.950
+Brandon Biggs: And that is, that's what I use for
+
+567
+01:16:00.330 --> 01:16:04.770
+Brandon Biggs: For for determining the sounds so
+
+568
+01:16:06.150 --> 01:16:13.050
+Brandon Biggs: Once, once it gets a little more standard, then maybe we can, you know, think about adding an official, you know, quote, unquote.
+
+569
+01:16:14.520 --> 01:16:16.140
+Brandon Biggs: Audio or cross sensory
+
+570
+01:16:18.150 --> 01:16:19.830
+Brandon Biggs: Feature set and
+
+571
+01:16:21.030 --> 01:16:27.720
+Brandon Biggs: It's a property said, I don't know. I don't know exactly. I didn't see that presentation yesterday, what exactly they did.
+
+572
+01:16:28.410 --> 01:16:33.840
+Bryan Haberberger: Good sir, I mean it's it's simple instead of running into properties. He just proposed a new property this thing called
+
+573
+01:16:33.870 --> 01:16:36.150
+Bryan Haberberger: When and then the data goes in there, you know,
+
+574
+01:16:36.690 --> 01:16:39.420
+Bryan Haberberger: Okay. Stay yeah style thing. Yeah.
+
+575
+01:16:39.750 --> 01:16:49.740
+Brandon Biggs: Okay, yeah, that makes sense. Um, I guess, the closest thing I did was I i for for custom if you have a custom
+
+576
+01:16:50.760 --> 01:16:56.130
+Brandon Biggs: You're not using the the geography. So for example, the, the playground doesn't use coordinates.
+
+577
+01:16:57.000 --> 01:17:05.490
+Brandon Biggs: Like the lat long coordinates. I have a custom thing that you put in that you use a custom coordinate system, and that's
+
+578
+01:17:06.450 --> 01:17:17.760
+Brandon Biggs: That then it just uses your coordinate system. So that's the closest thing I've got to it, but hopefully once more maps are created, probably in a couple years, we should have enough
+
+579
+01:17:18.810 --> 01:17:23.040
+Brandon Biggs: Standardization for creating an official set of Jason
+
+580
+01:17:24.180 --> 01:17:40.110
+Bryan Haberberger: Yeah, cuz I know again just in my biases humanities, because that's what I work in, there's just a lot of interest around attaching sound in space. It's just, you know, it's really for the mike. I keep saying like poetry in the music studies kinds of people that are looking for that and
+
+581
+01:17:40.440 --> 01:17:40.740
+Brandon Biggs: Yeah.
+
+582
+01:17:40.770 --> 01:17:49.860
+Bryan Haberberger: I hadn't ever really seen a real extension that connected sound and he says one kind of, you know, wrapped up standard. Yeah.
+
+583
+01:17:50.370 --> 01:17:51.420
+Brandon Biggs: Yeah, that's going to be very
+
+584
+01:17:51.420 --> 01:17:57.060
+Bryan Haberberger: Interesting. I think you're working on something pretty unique and it's just, it's interesting. I said wondered if we thought about that yet.
+
+585
+01:17:57.720 --> 01:18:10.770
+Brandon Biggs: Ya know, I've definitely thought about like how we represent buildings in geo JSON and and you know how we represent campuses and other spaces and, you know, multiple layers and how you
+
+586
+01:18:12.060 --> 01:18:19.440
+Brandon Biggs: You show relationships, but I just kind of added in properties audio. I didn't really think too much about it.
+
+587
+01:18:21.060 --> 01:18:25.320
+Bryan Haberberger: Before. That's what everybody else is doing. That's why we have these kinds of workshops
+
+588
+01:18:25.590 --> 01:18:27.900
+Yeah. Yeah, absolutely.
+
+589
+01:18:29.520 --> 01:18:34.530
+Brandon Biggs: But I hope, I hope, like the Name attribute like that. That's one thing that's really important.
+
+590
+01:18:35.520 --> 01:18:46.560
+Brandon Biggs: Because as you can tell, like when you're moving to the grid. It tells you a name every single time you move through the space. And if you don't have a name. It's just going to say, you know, blink polygon like polygon.
+
+591
+01:18:46.920 --> 01:18:47.550
+And boy,
+
+592
+01:18:48.630 --> 01:18:58.500
+Bryan Haberberger: Yeah. And if you only have the English name then you make the rest of the world, man. You know, so the internal internationalization will become a part of that and all the sudden, your ability to just use a string disappears.
+
+593
+01:18:59.070 --> 01:19:02.370
+Brandon Biggs: Yeah, if you have a good method for
+
+594
+01:19:03.750 --> 01:19:09.420
+Brandon Biggs: Doing internationalization with your Jason and names, let me know. But typically names are actually
+
+595
+01:19:10.710 --> 01:19:12.750
+Brandon Biggs: Pretty, pretty darn universal
+
+596
+01:19:13.770 --> 01:19:18.660
+Brandon Biggs: Country names. So, um, so I don't think it's that big of an issue but
+
+597
+01:19:20.760 --> 01:19:22.530
+Brandon Biggs: But yeah, it's definitely something to think about.
+
+598
+01:19:23.970 --> 01:19:26.820
+Brandon Biggs: Especially for countries and states.
+
+599
+01:19:28.530 --> 01:19:31.080
+Doug Schepers: If there are other questions.
+
+600
+01:19:32.580 --> 01:19:38.670
+Doug Schepers: Please feel free to ask them, but I think we're officially taking a 10 minute break before the start of the next session.
+
+601
+01:19:39.960 --> 01:19:40.350
+Doug Schepers: But
+
+602
+01:19:41.550 --> 01:19:44.190
+Doug Schepers: Everyone should in 10 minutes will be starting
+
+603
+01:19:45.780 --> 01:19:47.550
+Doug Schepers: The next session, which is
+
+604
+01:19:50.700 --> 01:19:59.670
+Doug Schepers: Which is the map and to layer speculative Polly Phil and that's being facilitated by for map ML and that's being facilitated by Peter rush for
+
+605
+01:20:01.680 --> 01:20:02.700
+Brandon Biggs: Awesome. Thank you, everybody.
+
+606
+01:20:03.240 --> 01:20:06.720
+Peter Rushforth: Thanks, Brandon, very, very interesting and
+
+607
+01:20:07.200 --> 01:20:11.610
+Peter Rushforth: fascinating subject and looks like it's gonna be an awesome product.
+
+608
+01:20:12.540 --> 01:20:15.090
+Brandon Biggs: Awesome. Yeah, and get in contact with me. There's the
+
+609
+01:20:16.740 --> 01:20:17.940
+Brandon Biggs: Contact Form of here.
+
+610
+01:20:19.230 --> 01:20:22.290
+Brandon Biggs: And the feedback button, you can contact me.
+
+611
+01:20:24.030 --> 01:20:26.640
+Doug Schepers: I look forward to talking to more offline about this. Yep.
+
+612
+01:20:26.670 --> 01:20:30.030
+Brandon Biggs: Absolutely AMERICA CAN YOU WERE stop my screen share now.
+
+613
+01:20:30.390 --> 01:20:31.290
+Doug Schepers: How your screen has
+
+614
+01:20:31.440 --> 01:20:32.580
+Doug Schepers: Been stopped shared
+
+615
+01:20:32.730 --> 01:20:34.920
+Brandon Biggs: Sorrow. Perfect. Awesome.
+
+616
+01:20:35.970 --> 01:20:39.270
+Brandon Biggs: Isn't a hearing my screen reader. Awesome. Thank you. Great.
+
+617
+01:20:41.460 --> 01:20:47.250
+Peter Rushforth: Okay, we'll reconvene with the channel open for eight minutes and then we'll reconvene
+
+618
+01:20:56.850 --> 01:20:58.770
+Peter Rushforth: Well, actually I couldn't be a bit more ready but
+
+619
+01:21:00.270 --> 01:21:11.790
+Peter Rushforth: I apologize if it's got some rough edges but I'm trying to explain part two for the map ML proposal that I introduced last night or yesterday.
+
+620
+01:21:13.110 --> 01:21:16.920
+Peter Rushforth: And so here we go. I will share my screen.
+
+621
+01:21:47.010 --> 01:21:53.460
+Good evening, and good morning in this presentation, I'll give part two of an overview of the map ML proposal.
+
+622
+01:21:54.270 --> 01:22:10.230
+In part one, I explained why it is that I and others in our community believe we need maps to be understood natively by the browser. This is not uncontroversial and the presentations that proceeded and follow my own outline some of the challenges that lie ahead.
+
+623
+01:22:11.700 --> 01:22:21.840
+I then described the function of the proposed map layer and extent elements I concluded by explaining the concept of tiled coordinate reference system.
+
+624
+01:22:22.440 --> 01:22:31.500
+Which is our attempt to consolidate the terms and concepts behind spatial coordinate reference systems in order to make them implementable by the browser.
+
+625
+01:22:36.390 --> 01:22:52.230
+In part two. I'll talk about the details of many important parts of the map and the proposal, as defined as far as I understand them. Your help is solicited to clarify or better define these things so that they can become implementable if they aren't already
+
+626
+01:23:05.070 --> 01:23:05.790
+A location in
+
+627
+01:23:14.310 --> 01:23:24.510
+Location in math Ml is a general term for anything that can be characterized by coordinates and zoom value this concept could include simple feature geometries eventually
+
+628
+01:23:25.470 --> 01:23:38.880
+Extent processing is conceived so far location is an event associated to the extent that is fired as the browser requires new content to paint this can be a single tile, with its four
+
+629
+01:23:40.350 --> 01:23:55.410
+Sides and corners repeated such events will eventually cover the extent or it can be a rectangle, the size and position of which is calculated at runtime by the rendering engine such that the rectangle covers the entire extent.
+
+630
+01:23:57.810 --> 01:24:15.600
+That's described yesterday during extent processing location inputs are used to refer to end declarative Lee access location event properties, specifically the individual access values of the events location as well as positions that are relative to the shape of the event.
+
+631
+01:24:17.640 --> 01:24:27.540
+Also, as described yesterday, the extent itself is bound to the viewport of the map and the whole extent can be treated as a location event for some purposes.
+
+632
+01:24:27.930 --> 01:24:40.140
+Specifically when requesting content from services like WNs the link rail to which the input is bound by template variable reference dictates the nature of the event that is generated
+
+633
+01:24:41.100 --> 01:25:01.350
+For example, the link rel equals image will generate a location event for a rectangle that covers the extent which is useful for WNs while a link rel equals tile will generate enough repeated tile coordinate events as tiles are required to cover the extent
+
+634
+01:25:02.610 --> 01:25:10.950
+Tile and image location events have sides and corners, which can be referred to by the enumerated position attribute
+
+635
+01:25:13.290 --> 01:25:24.600
+associated to the link rel equals image element in the above example we suit to two additional inputs with type equals width and type equals height, respectively.
+
+636
+01:25:25.500 --> 01:25:31.320
+These new input types are required by the current proposal because I could not think of another reasonable way.
+
+637
+01:25:31.860 --> 01:25:43.350
+To declarative Lee request the result of a calculation in the location input, such as for might be expressed as with equals top right minus top left.
+
+638
+01:25:43.920 --> 01:25:58.470
+For example, which would obviously yield the width of the required image. So we propose to create the width and height inputs in order to declarative Lee access these properties of the image event rectangle that encloses the extent
+
+639
+01:25:59.580 --> 01:26:01.320
+Your advice is requested.
+
+640
+01:26:03.090 --> 01:26:12.060
+In the above examples. We're using input type equals location to see realize the parts that is the scale or property values.
+
+641
+01:26:12.570 --> 01:26:29.370
+Not the whole composite object of tile event coordinates which have a regular location and geometry as well as corners of mapping stance which are dynamic but known at runtime, which are pixel based but have variable width and height.
+
+642
+01:26:30.810 --> 01:26:48.150
+In the future we anticipate that it may be possible to rotate the map, in which case the calculation of the image or the set of tiles that covers the extent will be slightly more complicated for the browser engine, but not for the author. The above should still work, we believe
+
+643
+01:26:50.190 --> 01:27:06.540
+The coordinates of a location may be expressed in any of the coordinate systems associated with a given T CRS although sometimes such expressions, don't make sense. For example, trying to describe a mapping step with tile rows and columns, maybe slightly inaccurate.
+
+644
+01:27:08.250 --> 01:27:15.360
+We think locations should always have a zoom level associated to them, which is to say coordinates on a map should always have a scale.
+
+645
+01:27:16.320 --> 01:27:32.940
+It might be possible to eliminate the input type equals zoom proposal if we find zoom as a an axis of the coordinate systems. Then we we would be able to serialized the zoom axis of a location event with an input type equals location.
+
+646
+01:27:34.290 --> 01:27:52.020
+The location units attribute identifies by acronym the coordinate system that the location event will take place in, for example, units equals tile matrix identifies that a location event at a tile and a tile matrix is being serialized
+
+647
+01:27:53.250 --> 01:27:58.740
+The location access attribute is used to identify the scale or access value that should be returned
+
+648
+01:27:59.790 --> 01:28:17.070
+The location access attribute can refer to any access of any associated coordinate system for the event. This doesn't seem to useful for a tile event where what you want to receive is the row or call them access. So why would you want to ask for eating of a tile event.
+
+649
+01:28:18.150 --> 01:28:29.790
+The value of being able to request the serialization of the location event of any access becomes clearer when you need to use the projected or geographic coordinates of a corner of the event.
+
+650
+01:28:30.720 --> 01:28:39.990
+You can do so by specifying the corner location you want using the position attribute with a value such as top left, bottom right, etc.
+
+651
+01:28:48.780 --> 01:29:02.310
+In this example, I'm showing the use of tile events to access an actual WNs which is very useful for WNs layers that don't have labels or polygon lines that can be visually disrupted by tile boundaries.
+
+652
+01:29:03.150 --> 01:29:13.500
+Note that while location units attribute refers to the tile matrix coordinate system and the link rel equals tile will generate a tile event.
+
+653
+01:29:14.100 --> 01:29:33.180
+The corners of the tile are being serialized in web Mercator projected coordinate reference system units or PC RS meters, because we have requested the relative position with the position attribute and the PCs coordinate for that position with the access equals Eastern value.
+
+654
+01:29:41.340 --> 01:29:55.620
+So far we've not described how the browser can avoid asking for titles or content that don't exist. The first means is by specifying the min and max attributes on individual info inputs associated to a link template.
+
+655
+01:29:57.510 --> 01:30:11.820
+The extent within which I'll link URL template should request content from the server is determined by the min and max attributes associated input type equals location and zoom variable References
+
+656
+01:30:12.840 --> 01:30:25.320
+If such limits are not provided or not understood on a PR template basis, the client will look for extent scope values as provided as meta elements that I'll talk about in a minute.
+
+657
+01:30:26.310 --> 01:30:32.610
+If such values aren't provided or understood the client will use the limits to find for the T CRS as a whole.
+
+658
+01:30:34.050 --> 01:30:52.590
+I mentioned that we can provide semi custom extends from alpha male documents by specifying the extent in a meta element, according to the proposed syntax shown like bias. We can specify default document properties of mapping. They'll content such as projection zoom and coordinate system.
+
+659
+01:31:02.640 --> 01:31:14.910
+Domain charting is a technique that tile caches, such as Open Street Map used to work around per domain connection limits established by browsers, in order to improve rendering performance.
+
+660
+01:31:15.810 --> 01:31:33.360
+In this instance, we've set up a hidden type input with the map specific shard keyword indicating that the browser should distribute the requests made against the linked cash in round robin fashion using the values from the associated data list.
+
+661
+01:31:35.460 --> 01:31:47.100
+Select inputs in the extent scope may be used to solicit input variables from the user. These selects could be displayed in a standard location. For example, in the layer control.
+
+662
+01:31:47.640 --> 01:31:59.400
+The value of the select made by the user. For example, the date parameter shown here could be used to allow the map to query and display dimensional data such as Web Map Service dimensions.
+
+663
+01:32:09.600 --> 01:32:11.520
+HTML uses undifferentiated
+
+664
+01:32:13.830 --> 01:32:21.030
+HTML uses undifferentiated opaque URLs in various ways for different reasons which are reflected
+
+665
+01:32:22.230 --> 01:32:28.440
+In a few elements. The link a trap element, the image source attribute and the A ATRA
+
+666
+01:32:29.610 --> 01:32:38.340
+Form all represent different markup and reasons for associating document first to help keep separate concerns separate. There's the link element.
+
+667
+01:32:38.790 --> 01:32:45.180
+Which is used to associate one file with another in various relationships, such as style sheet or JavaScript inclusion.
+
+668
+01:32:45.960 --> 01:33:00.510
+Next, the source attribute is used to imply a composition relation between the source document and the link resource. Finally, a truth markup is defined to be a hyperlink and serves as the glue for the Federated nature of the web itself.
+
+669
+01:33:01.800 --> 01:33:08.340
+The use of links that we've already seen a little bit earlier, is as a layer reference in the layer source attribute
+
+670
+01:33:09.120 --> 01:33:21.750
+This usage of plain undifferentiated opaque URLs is vital to gain the advantages of simple sharing of information over the web. No API, apart from that HTTP with it standard
+
+671
+01:33:22.380 --> 01:33:34.800
+Standardized media types should be needed to access map content. We hope that it will be possible for browsers to treat such URLs in a way similar to how they manage a URL to an image or video file.
+
+672
+01:33:35.490 --> 01:33:42.870
+In those cases, the browser browser synthesizes a simple HTML document around the resource and renders it
+
+673
+01:33:43.500 --> 01:33:58.380
+Is hard to summarize in a few sentences about how important this feature is so I won't try. I did a lightning talk about this idea. A few years back, and that tries to explain some of the reasoning which I'll paste into the chat window now.
+
+674
+01:34:00.030 --> 01:34:06.360
+Next in layers may refer to externally defined legends using the link rel equals legend link relation
+
+675
+01:34:07.110 --> 01:34:15.180
+This is an extension of the supported link relations in HTML and reflects the use of legend links in WNs
+
+676
+01:34:16.050 --> 01:34:25.080
+It might work similarly to the rel equals icon link in relation link relation in HTML, but it might also need more specifying in this proposal.
+
+677
+01:34:25.890 --> 01:34:40.950
+If map widgets supported a legend control this link could be could work good work by that be used by that control, if not the URL of the legend is available through the DOM, or possibly through another high level API.
+
+678
+01:34:43.020 --> 01:34:52.320
+Next, the link rel equals license link relation with associated title attribute indicates the licensing and attribution associated to the map content.
+
+679
+01:35:01.710 --> 01:35:15.150
+Peter Rushforth: So part of the part of the proposal is also for to implement alternate styles as sort of defined by name styles in the WNs specification and
+
+680
+01:35:15.900 --> 01:35:32.730
+Peter Rushforth: This would be done by a series of essentially alternate alternate links that would be characterized by the style REL and the style that is the currently the current. The that identifies the current style of base map would have the additional
+
+681
+01:35:35.250 --> 01:35:50.040
+Peter Rushforth: real value of self style as shown here. So this allows you to simulate you know like in Google Maps, for example, satellite or or Matthew or hybrid view kind of thing.
+
+682
+01:35:52.770 --> 01:35:59.190
+Peter Rushforth: So a key value of links in HTML is to refer to as a separate
+
+683
+01:36:00.420 --> 01:36:13.680
+Peter Rushforth: Content from presentation rules in style sheets and that is supported by the proposal for map for map content and style sheets relating to map content.
+
+684
+01:36:16.110 --> 01:36:21.780
+Peter Rushforth: And so there are small set of projections that are supported by
+
+685
+01:36:23.280 --> 01:36:32.430
+Peter Rushforth: The proposal currently and rather than asking browsers to fully support projection transformations
+
+686
+01:36:34.410 --> 01:36:48.510
+Peter Rushforth: We propose an alternate mechanism for negotiating projection through a link relation of alternate with a projection and an added projection attribute. So as a as a map.
+
+687
+01:36:49.770 --> 01:36:56.220
+Peter Rushforth: Defined by the browser would have a defined projection. If someone tried to add a
+
+688
+01:36:57.750 --> 01:37:08.250
+Peter Rushforth: Layer that didn't match that projection. It could say, well, well, if the projection didn't match the map, it wouldn't allow it to be drawn would just be inert.
+
+689
+01:37:09.000 --> 01:37:24.000
+Peter Rushforth: But if, if the the incoming URL supported or content supported alternate projections, it would simply follow the appropriate alternate and and use that instead
+
+690
+01:37:27.390 --> 01:37:40.410
+Peter Rushforth: So the there are so link relations for meta, meta references so tiles images and features feature and imager essentially synonymous, but they they
+
+691
+01:37:41.730 --> 01:38:00.870
+Peter Rushforth: Are it probably should be factored out into media types so so consolidate the tile and extent or some other Thailand map link relation and and distinguish between images and
+
+692
+01:38:02.760 --> 01:38:04.170
+Peter Rushforth: Features by media type
+
+693
+01:38:05.820 --> 01:38:09.240
+Peter Rushforth: And then we've implemented a kind of
+
+694
+01:38:10.590 --> 01:38:17.040
+Peter Rushforth: Link that allows you to set up like a zoom in relation or zoom out relations. So you can transfer
+
+695
+01:38:17.940 --> 01:38:34.440
+Peter Rushforth: The source of the layer from from one data source to another, depending on whether the user scrolls zooms in or out. And that, I think that needs to be has more work done on user interface and so on, but it seems to be pretty functional
+
+696
+01:38:35.940 --> 01:38:42.060
+Peter Rushforth: And then we have the query support for feature query and
+
+697
+01:38:43.170 --> 01:38:48.300
+Peter Rushforth: That way that it's set up by a link relation of query and it's fed by that by
+
+698
+01:38:49.320 --> 01:38:56.940
+Peter Rushforth: Inputs and so on for the location inputs and zoom inputs and so on, as per the content.
+
+699
+01:38:57.990 --> 01:39:01.350
+Peter Rushforth: Thing content requests and I'll describe
+
+700
+01:39:02.670 --> 01:39:16.320
+Peter Rushforth: That a little bit. Now one of the fundamental use cases of maps is to identify the properties of a feature of interest. This is supported in many standard geospatial API's both on the server and client.
+
+701
+01:39:17.070 --> 01:39:30.120
+Peter Rushforth: One of the key challenges of this use case is to make it accessible what's shown in this short clip is a keyboard user manipulating the map extent and using the keyboard to interrogate the top layer at the center point of the map.
+
+702
+01:39:31.170 --> 01:39:40.230
+In the example a single feature element with a polygon geometry is returned by the server and drawn on top of the map highlighted in yellow.
+
+703
+01:39:40.830 --> 01:39:51.300
+With no fill the properties of the feature in the response from the server is loaded into a browsing context, in this case the context is confined to a pop up balloon.
+
+704
+01:39:52.980 --> 01:40:07.470
+The OTC simple features model is the most successful standard no GC history and is the backbone of the spatial data processing industry and on the web geo JSON is the most appropriate current standard for encoding it as text.
+
+705
+01:40:08.580 --> 01:40:18.300
+HTML is arguably the most successful standard in history. While it's not the intent of the proposals to suggest that all features in Maps.
+
+706
+01:40:19.080 --> 01:40:37.230
+Should be represented as HTML elements. It's a natural step if we're going to create maps in HTML to create a browser render evolved version of the simple features model in HTML that supports markup of the earth and objects in real and hyperspace.
+
+707
+01:40:38.700 --> 01:40:48.750
+With the same technology and for the same reasons that human text is rendered as markup in HTML style double accessible hypertext
+
+708
+01:40:50.430 --> 01:41:02.280
+The proposed feature element would be a natural DOM representation of geo JSON content in that its properties element could contain arbitrary standard HTML.
+
+709
+01:41:03.390 --> 01:41:17.700
+The geometry property of the geo JSON feature object would be represented a semantic markup with sequences of coordinates elements representing corresponding coordinate pair arrays in the geo JSON property.
+
+710
+01:41:19.620 --> 01:41:25.830
+The native zoom or intended scale of the feature and its properties is represented by the feature zoom attribute
+
+711
+01:41:27.120 --> 01:41:35.310
+The coordinates are in horizontal axis space vertical axis order that is commonly referred to as x y order.
+
+712
+01:41:36.630 --> 01:41:54.060
+I don't refer to it as such because there are several associated coordinate systems in a TC RS and it should be legal to represent geometries in any of them and the coordinate system used for a geometry should be identified by the geometry CS attribute
+
+713
+01:41:56.220 --> 01:42:05.220
+The geometry content model is based on the standard or GC simple features model. And so it's not unlike K ML geo JSON shape files and many others.
+
+714
+01:42:05.760 --> 01:42:13.290
+It's intended to be fully selectable and scalable with CSS and linkable in a way similar to human readable text.
+
+715
+01:42:13.890 --> 01:42:28.020
+This demands a mixed content model for geometry coordinates sharing the simple features geometry model of so many formats means that there are many existing libraries that can be used or easily adopted to serialized it
+
+716
+01:42:28.920 --> 01:42:43.140
+Moreover, since there is a negligible impedance mismatch between this and geo JSON geometry model styling and rendering is simplified and will work with any JavaScript process that already uses to JSON.
+
+717
+01:42:44.490 --> 01:42:55.800
+Having a CSS selectors compatible component model means that CSS can be used to render. For example, tiled vector content in an efficient and standards compliant way.
+
+718
+01:42:57.960 --> 01:43:15.540
+Links embedded in content or the feature that sets the web, apart from all previous and future platforms web maps should use this facet of the web to enable Federation of services in the same way that HTML pages are federated you link to the thing you want people to go see
+
+719
+01:43:16.710 --> 01:43:26.310
+The same should be true of web maps a web cartographer should be able to link to the thing that should replace the layer or map the user is looking at when they activate the link
+
+720
+01:43:27.570 --> 01:43:42.870
+Links while style level should hit the geo web with a predefined canonical style and accessibility behavior so that users recognize them as something they are expected to activate activating a link should replace the current browsing context.
+
+721
+01:43:44.190 --> 01:43:54.870
+Or with the link to layer or if the responses text HTML, it should open to a new top level browsing context or something like that.
+
+722
+01:43:56.730 --> 01:44:03.030
+The proposal started off with actual tile elements and they still respond to requirements for static map documents.
+
+723
+01:44:03.720 --> 01:44:13.020
+This might be a way in which custom renders could be managed the developer could set up an event cycle for tiles, which they want to be responsible for the content.
+
+724
+01:44:13.980 --> 01:44:21.690
+Via the Canvas image or other thing, the browser could generate the tile for the developer handing them the painting surface when appropriate.
+
+725
+01:44:22.680 --> 01:44:32.040
+The browser would still be responsible for tile lifecycle management and could even create a local tile cash. So that was painted it could be reused.
+
+726
+01:44:33.450 --> 01:44:40.620
+When the link rel equals image construct is used a request for an image to cover the extent ensues.
+
+727
+01:44:41.370 --> 01:44:49.350
+This image is currently rendered at 00 of the map coordinate system. Because currently, we can't rotate our maps so the
+
+728
+01:44:50.190 --> 01:44:58.740
+Image fills the entire viewport in both dimensions. Generally, the implication of this is that a virtual image element is created.
+
+729
+01:44:59.220 --> 01:45:08.400
+And rendered at an absolute position in the TC RS and the image covers the entire viewpoint, possibly with hidden overlaps outside the box.
+
+730
+01:45:09.360 --> 01:45:20.700
+This could lead to a useful concept arbitrary HTML, including SVG, of course, should be render a bowl on a map layer just as map tiles and features and images are
+
+731
+01:45:22.080 --> 01:45:31.470
+This would be a great help with cartographic communication as maps often have embedded metadata and this could be a natural and accessible way to include that.
+
+732
+01:45:33.240 --> 01:45:40.740
+A key feature of spatial data infrastructure is the ability to use in place without copying authoritative data.
+
+733
+01:45:41.370 --> 01:45:57.180
+This was what gave rise to a GC web services which will eventually give away to OTC API's. I know that this aspect of the proposal is similar or related to that of Takagi songs SVG map JS layer concept.
+
+734
+01:45:58.500 --> 01:46:09.180
+It key feature of the web is the ability to share stuff using plain undifferentiated opaque URLs that are inter mediated mostly by web browsers.
+
+735
+01:46:10.590 --> 01:46:26.220
+The idea of sharing here is broadly defined to include, among other things, links between documents links to media resource resources bookmarks separation of style from content inclusion of script to extend behavior, etc.
+
+736
+01:46:28.050 --> 01:46:40.110
+The proposal began by specifying map them out as a vocabulary in micro XML based on the authors in evolving understanding of how to propose stuff for compatibility with HTML.
+
+737
+01:46:40.950 --> 01:46:52.350
+I now realize that I went a little too far in banishing all names faces and XML syntax, we should have started with the XML namespace and syntax of HTML5.
+
+738
+01:46:53.100 --> 01:47:04.350
+I believe we can easily fix this by adding the HTML namespace to our XML serialization and the plan is to add an HTML parse are compatible version when appropriate.
+
+739
+01:47:05.160 --> 01:47:19.950
+Just to be clear, the dock type mapping now and the map ML elements, shown here is not HTML parts are compatible today and we need to close the issue on that conversation before moving forward with the HTML syntax idea.
+
+740
+01:47:21.060 --> 01:47:34.170
+In any case, the core idea here is that, including map content should be about as easy as including a video, audio or image by using the layer source attribute, as shown to point to math ML content.
+
+741
+01:47:38.250 --> 01:47:38.760
+Peter Rushforth: So,
+
+742
+01:47:39.900 --> 01:47:46.020
+Peter Rushforth: What does it mean for a map to be accessible Robert Linder and Nick Chen contributed to
+
+743
+01:47:47.490 --> 01:47:55.290
+Peter Rushforth: That discussion tonight and Robert has been helping to make the Web Map custom element more accessible. But there's more that needs to be done.
+
+744
+01:47:55.860 --> 01:48:09.960
+Peter Rushforth: And we welcome new contributions and contributors. My hope is that by allowing websites to represent the physical world in a standard way it will be a first step in enabling augmented reality for users.
+
+745
+01:48:10.500 --> 01:48:26.850
+Peter Rushforth: Much like what we saw with a dream come true it earlier in Brandon's presentations that is by defining standard geospatial markup that is understood by browsers you enable browsers to read the world which is appropriate support for users.
+
+746
+01:48:28.650 --> 01:48:35.040
+Peter Rushforth: While the declarative form is less powerful ie not Turing complete it isn't necessarily simple as we've seen,
+
+747
+01:48:35.610 --> 01:48:40.770
+Peter Rushforth: Simplicity, however, is a goal, and one that is intention with sufficient function.
+
+748
+01:48:41.400 --> 01:48:53.520
+Peter Rushforth: The ambition of the proposal is to define enough to be a solid and performant foundation or progressive enhancement, while not trying to replace the ecosystem of Geospatial web developers who create and use maps.
+
+749
+01:48:57.000 --> 01:48:57.930
+Peter Rushforth: So,
+
+750
+01:49:01.020 --> 01:49:09.420
+Peter Rushforth: Animation is obviously something that hasn't really been considered yet in the proposal, and that's something that we should
+
+751
+01:49:10.710 --> 01:49:19.410
+Peter Rushforth: Factor into future discussions, you know, as a thought process, as mentioned by Doug earlier or yesterday.
+
+752
+01:49:21.570 --> 01:49:32.820
+Peter Rushforth: That the thought occurs to me that we need to have the ability to create geospatial content using web browsers. And so that would lead perhaps naturally to
+
+753
+01:49:33.780 --> 01:49:48.000
+Peter Rushforth: Using reusing repurposing the input type, location to serialized the different simple features geometries in in forms that were associated to Map Layers.
+
+754
+01:49:50.160 --> 01:49:51.150
+Peter Rushforth: I think
+
+755
+01:49:52.440 --> 01:50:04.800
+Peter Rushforth: The DOM API is of elements and attributes is already you know there's already pretty elaborate one specified here. But, um, is there is there more that we need to specify um
+
+756
+01:50:05.640 --> 01:50:17.460
+Peter Rushforth: That's an open question. I think what we need to do is to build a web app web mapping applications using the fall, I feel, to examine exactly what what what
+
+757
+01:50:18.960 --> 01:50:22.140
+Peter Rushforth: Web developers will need to progressively enhanced that
+
+758
+01:50:24.480 --> 01:50:29.220
+Peter Rushforth: And so could the DOM API as as sort of envisaged.
+
+759
+01:50:30.360 --> 01:50:43.830
+Peter Rushforth: Be a foundation for you know version. What I don't know what version of open layers is that, but the next generation of open layers could be more readily and performant Lee and compact Lee built upon
+
+760
+01:50:45.750 --> 01:50:56.850
+Peter Rushforth: Upon a Web Map element and layer element. And what would that look like in the objective would be to make that easier and more maintainable.
+
+761
+01:50:58.380 --> 01:50:59.310
+Peter Rushforth: And how can we
+
+762
+01:51:00.570 --> 01:51:07.110
+Peter Rushforth: Build Car. Car graphic requirements into CSS, that's a conversation is very much
+
+763
+01:51:08.460 --> 01:51:29.100
+Peter Rushforth: Interested, we're very much interested in having and three, could we add 3D rendering through something like a map with projection equals globe attribute. So that with geo pose like started condition. So we're going to hear a bit quite a bit from the augmented reality community and
+
+764
+01:51:30.360 --> 01:51:33.330
+Peter Rushforth: The geo post community in particular could help.
+
+765
+01:51:34.500 --> 01:51:35.850
+Peter Rushforth: flesh out this concept.
+
+766
+01:51:38.580 --> 01:51:46.260
+Peter Rushforth: So cores security. I don't, I'm not a security expert, but there's obviously lots of security implications and
+
+767
+01:51:46.980 --> 01:52:00.000
+Peter Rushforth: Layering content vertically in the browser from different domains and a lot of risks. So that needs to be thought about and designed and maybe you know we need to find out if there are showstoppers in there.
+
+768
+01:52:03.810 --> 01:52:17.850
+Peter Rushforth: So queries queries could be met, like what, when we see the browser interrogating polygons on the on the map that could that's a chorus situation as well because you're receiving content from over the web.
+
+769
+01:52:18.300 --> 01:52:27.870
+Peter Rushforth: As currently envisaged a map document would not have executable JavaScript in it. So I mean that's maybe one saving grace, but
+
+770
+01:52:30.810 --> 01:52:31.800
+Peter Rushforth: To be determined.
+
+771
+01:52:35.400 --> 01:52:35.940
+Peter Rushforth: And
+
+772
+01:52:38.430 --> 01:52:45.750
+Peter Rushforth: The HTML parse or should be used because of the math mail document requirements. This seems to be a challenge.
+
+773
+01:52:47.730 --> 01:53:05.160
+Peter Rushforth: So when SVG is parsed and referred to by an image source attribute seems to be a similar scenario. So, as described. And so that's all I have for my presentation. I'd be happy to do a demo or or answer questions as we go along.
+
+774
+01:53:13.350 --> 01:53:27.210
+Amelia Bellamy-Royds: So I think we've had some questions coming in on the chat so might be worth going through a few of those. Although I was also hoping you'd have turned to play around with your poly filled him. Oh.
+
+775
+01:53:27.870 --> 01:53:29.250
+Amelia Bellamy-Royds: Yeah, I'm
+
+776
+01:53:29.340 --> 01:53:31.890
+Peter Rushforth: Up for that. So maybe talk a few
+
+777
+01:53:31.950 --> 01:53:33.510
+Amelia Bellamy-Royds: We've only got a small group so
+
+778
+01:53:33.510 --> 01:53:40.440
+Amelia Bellamy-Royds: People can probably jump in and unmute themselves when they like. But to start it off.
+
+779
+01:53:41.640 --> 01:53:42.690
+Amelia Bellamy-Royds: Fred ash.
+
+780
+01:53:44.130 --> 01:54:07.950
+Amelia Bellamy-Royds: commented earlier on, why are you reusing input element isn't HTML input already complicated enough and later a problem with reusing element names that exists in HTML is it confuses validation tools that already have problems with
+
+781
+01:54:09.150 --> 01:54:20.310
+Amelia Bellamy-Royds: SVG and map mo will make that worse. So Peter. You and I have had many conversations on this so you know my opinions on it, but
+
+782
+01:54:21.930 --> 01:54:33.720
+Amelia Bellamy-Royds: Do you want to kind of explain the thinking that led to the current proposal and what what can maybe be done to change things.
+
+783
+01:54:34.650 --> 01:54:42.390
+Peter Rushforth: If no so input. We're not reusing where we are using those we're proposing extensions to existing elements so
+
+784
+01:54:43.890 --> 01:55:03.630
+Peter Rushforth: The, the notion is that this is part of HTML. So every, every new attribute and every new element is a proposed new attribute or an element in HTML. So yes, that's, that's a challenge because of the expense and effort of doing this.
+
+785
+01:55:05.310 --> 01:55:17.340
+Peter Rushforth: But I believe that the HTML design principles success suggest that you not create new market forms where you know there is already an existing market form.
+
+786
+01:55:18.810 --> 01:55:21.090
+Peter Rushforth: For a given semantic so
+
+787
+01:55:22.830 --> 01:55:27.840
+Peter Rushforth: There, you know, there are lots of ways to think about that, for example,
+
+788
+01:55:29.100 --> 01:55:29.580
+Peter Rushforth: The
+
+789
+01:55:31.170 --> 01:55:42.600
+Peter Rushforth: You know, they didn't invent a new image element when they went to provide responsive design for or for images they they looked at, well,
+
+790
+01:55:43.110 --> 01:55:50.880
+Peter Rushforth: Where do images come from on the web and where do we mark them up in in the web and can we provide a new interface for that. That is
+
+791
+01:55:51.390 --> 01:56:04.230
+Peter Rushforth: Understandable in the context of images. And so that is the reasoning behind using are targeting the input element. So yes, the proposal would probably benefit from
+
+792
+01:56:04.800 --> 01:56:25.740
+Peter Rushforth: A nested type of new type of input, like a button or something like that or like an application input that you could factor out axes into different elements and so on. But HTML already has inputs and so like anything, you know, some people hate them was Brian Cordell still on the line.
+
+793
+01:56:26.460 --> 01:56:27.630
+Peter Rushforth: Some people hate them.
+
+794
+01:56:28.560 --> 01:56:39.330
+Fred Esch: Alone puts our form elements and working as an accessibility person getting developers to do something totally different. And this other sense
+
+795
+01:56:39.720 --> 01:56:54.270
+Fred Esch: They would pick up attributes and it would be a nightmare keeping them from using wrong attributes and roll in the wrong place, and your validation tools are just going to go not
+
+796
+01:56:55.740 --> 01:56:57.900
+Fred Esch: So I really hate that idea myself but
+
+797
+01:56:59.730 --> 01:57:05.520
+Peter Rushforth: I did fork the HTML Parker and create a validator, you know, create the
+
+798
+01:57:06.240 --> 01:57:10.770
+Peter Rushforth: validator for the Malcolm know vocabulary and
+
+799
+01:57:12.120 --> 01:57:13.890
+Peter Rushforth: You know, it's possible.
+
+800
+01:57:14.940 --> 01:57:24.840
+Peter Rushforth: I said, Of course it's not the only validator on on the planet. But, you know, change when you do make changes to a language you want to make them.
+
+801
+01:57:26.760 --> 01:57:28.320
+Peter Rushforth: In the right places. So
+
+802
+01:57:28.800 --> 01:57:34.200
+Peter Rushforth: Maybe that maybe three see validation service has problems with embedded SVG.
+
+803
+01:57:34.830 --> 01:57:42.240
+Fred Esch: Coming giving you false negative failures and that battle. Just go not
+
+804
+01:57:44.190 --> 01:57:45.450
+Doug Schepers: I don't think that we should
+
+805
+01:57:46.470 --> 01:57:47.460
+Doug Schepers: I don't think that we should
+
+806
+01:57:49.080 --> 01:57:53.610
+Doug Schepers: Predicate any particular enhancements on
+
+807
+01:57:54.900 --> 01:58:07.500
+Doug Schepers: What existing tools with on the, on the, on the flaws of existing tools. I know the SVG parse or the SVG feature or the SVG validation and WCS validator is not very good. That's
+
+808
+01:58:08.130 --> 01:58:24.210
+Doug Schepers: That's a flaw in the validator not in the proposal now I it's not that I disagree with you. I'm just saying, Let's not say that just because one tool does something poorly that we need that we can't do something else. Right. We shouldn't be predicated only on tools.
+
+809
+01:58:26.640 --> 01:58:38.880
+Peter Rushforth: Yeah. So anyhow, my understanding of the HTML design principles is that you should look for a semantic entry point for for making proposals for changes for, you know, for
+
+810
+01:58:38.970 --> 01:58:41.310
+Fred Esch: Yeah, but an input is a form element.
+
+811
+01:58:41.610 --> 01:58:46.200
+Peter Rushforth: Yeah. So as I described the extent is a new type of form element so
+
+812
+01:58:46.230 --> 01:58:47.820
+Fred Esch: Extended user input.
+
+813
+01:58:48.540 --> 01:59:07.800
+Peter Rushforth: Know like a form. So a form is not a visible kind of construct so Nora's extent extent is a is the the conceptual rectangle of the of the years viewport and and for the map and that rectangle
+
+814
+01:59:09.390 --> 01:59:22.140
+Peter Rushforth: Is bound to the extent element and the inputs and and links that are children of that extent omen. So the extent element provides our
+
+815
+01:59:23.940 --> 01:59:46.260
+Peter Rushforth: Scope. Let's say for for the the inputs and links that are in it in the same ways that way that the form element provides a scope for inputs and the action attribute the single action attribute to which it is directed you know the difference between an extent and a form, you know,
+
+816
+01:59:48.600 --> 01:59:59.520
+Peter Rushforth: I mean, there's an overlap in in in the idea, at least, but the differences are that the extent could have more than one URL to which it
+
+817
+02:00:00.840 --> 02:00:06.270
+Peter Rushforth: It makes requests, whereas a form is down to the action now you
+
+818
+02:00:07.440 --> 02:00:19.530
+Amelia Bellamy-Royds: Yeah, I mean, there is a course similarity in that form and form inputs are used to access a
+
+819
+02:00:20.670 --> 02:00:37.350
+Amelia Bellamy-Royds: Possibly infinite set of possible URLs by building up a URL from parts, based on the user's action and in that way they extend to the inputs that in Peters proposal.
+
+820
+02:00:37.860 --> 02:00:50.010
+Amelia Bellamy-Royds: They are used to build up the possibly infinite combinations of URLs, based on the users panning and zooming up the map.
+
+821
+02:00:50.490 --> 02:01:11.040
+Amelia Bellamy-Royds: And so there is a logical similar guarantee there that you know the form inputs define the sort of parameters that a database query accepts and the extent inputs define the parameters that Map Server accepts
+
+822
+02:01:12.960 --> 02:01:19.080
+Amelia Bellamy-Royds: Yeah. Not just that, said I, I see the logic of it, but I also very much agree with friends.
+
+823
+02:01:19.080 --> 02:01:23.160
+Amelia Bellamy-Royds: Concerned about just reusing a very overloaded element.
+
+824
+02:01:23.640 --> 02:01:35.520
+Doug Schepers: Yeah, I, I, even though I don't think we should predicate things on existing tools that we can't even get the input new input elements implemented for
+
+825
+02:01:36.780 --> 02:01:44.160
+Doug Schepers: For common things like, I don't know, work the calendar is but there are several inputs that do not that are not interoperable. A implemented.
+
+826
+02:01:44.550 --> 02:01:59.850
+Doug Schepers: So several the new HTML5 input types are not interoperable implemented in browsers in that goes to that speaks to how willing browsers are to fiddle with these new existing
+
+827
+02:02:01.080 --> 02:02:05.010
+Doug Schepers: Tools. So I agree with Fred, in essence, although I i
+
+828
+02:02:06.570 --> 02:02:06.900
+Doug Schepers: Yeah.
+
+829
+02:02:08.430 --> 02:02:13.500
+Doug Schepers: I think that overloading input at this point is probably asking
+
+830
+02:02:14.430 --> 02:02:23.070
+Doug Schepers: For a lot from browsers, even though I understand, logically, like there's a certain elegance to it, but it's, it becomes less elegant when you consider
+
+831
+02:02:24.600 --> 02:02:25.800
+Doug Schepers: How overloaded.
+
+832
+02:02:27.450 --> 02:02:37.920
+Doug Schepers: The different input types are already. And again, what that does mean for not just parsing, but actually adding behavior to them.
+
+833
+02:02:39.120 --> 02:02:53.130
+Peter Rushforth: I mean, I, I'm sympathetic, but also would hurt. Hurt everybody's attention back to the HTML design principles and like if there's a, you know, something that does what an input does which is
+
+834
+02:02:54.330 --> 02:02:55.740
+Peter Rushforth: Provide a variable value.
+
+835
+02:02:57.240 --> 02:02:59.190
+Peter Rushforth: To the, to a a server.
+
+836
+02:03:00.270 --> 02:03:19.740
+Peter Rushforth: Should you go around inventing a new mechanism for that in HTML, like I didn't feel like it was my place to say this is the new style of input that that HTML expects. I said, you know, we said inputs are what they use today.
+
+837
+02:03:20.190 --> 02:03:21.000
+Peter Rushforth: So, you know,
+
+838
+02:03:21.030 --> 02:03:24.000
+Peter Rushforth: Like unless you're freezing HTML forever.
+
+839
+02:03:25.440 --> 02:03:25.890
+Peter Rushforth: You know,
+
+840
+02:03:28.140 --> 02:03:36.600
+Doug Schepers: I think that I totally get where you're coming from. And theoretically, you're correct. But I really think you need to look at
+
+841
+02:03:37.980 --> 02:03:39.900
+Doug Schepers: The recent history of
+
+842
+02:03:43.500 --> 02:03:51.210
+Doug Schepers: Of how of the of extending markup within the HTML group and it's it there's a
+
+843
+02:03:53.730 --> 02:04:01.050
+Doug Schepers: There's definitely strong resistance to changing things about inputs at this point. So even though you're theoretically correct
+
+844
+02:04:02.430 --> 02:04:05.010
+Doug Schepers: And even though long term, it might be the better solution.
+
+845
+02:04:06.030 --> 02:04:11.730
+Doug Schepers: I the extent to which you're changing the inputs makes them.
+
+846
+02:04:13.380 --> 02:04:18.450
+Doug Schepers: Much more complicated to implement it might just be easier to try to find out the mechanism.
+
+847
+02:04:19.440 --> 02:04:20.550
+Peter Rushforth: Yeah, um,
+
+848
+02:04:21.900 --> 02:04:26.550
+Peter Rushforth: Well, if I if another mechanism would fly better, I'd say, sure.
+
+849
+02:04:28.140 --> 02:04:34.920
+Peter Rushforth: No problem. We can redo that proposal part of the proposal, but I you know I
+
+850
+02:04:37.500 --> 02:04:44.100
+Peter Rushforth: Anyhow, I'm saying they're like inputs in forms and we need to maybe start the debate at that point.
+
+851
+02:04:45.120 --> 02:04:49.590
+Peter Rushforth: Not what you can't do inputs, because we hate them. Well, so inputs are dead.
+
+852
+02:04:52.860 --> 02:04:54.690
+Fred Esch: To change gears, um,
+
+853
+02:04:56.040 --> 02:05:11.190
+Fred Esch: Google Maps uses a zoom level and a center point. And it's pretty simple. What, why do you have a different way of doing you're defining where your map is because they're they're using raster tiles.
+
+854
+02:05:12.210 --> 02:05:26.790
+Peter Rushforth: Okay, well that was in part one, Fred. So yeah, we, we, we have the same simplicity we have map zoom equals whatever lot equals whatever long equals whatever and and that's your starting conditions for the map.
+
+855
+02:05:27.300 --> 02:05:32.700
+Fred Esch: Okay, I thought I saw that. But I thought today, you were talking about corners and all sorts of stuff.
+
+856
+02:05:33.090 --> 02:05:50.940
+Peter Rushforth: Well, I mean, I'm talking about how the logic for getting content into the math works. And that's a pretty important when you know these maps are, you know, hundreds or thousands, thousands of gigabytes Ivan, you've got a question.
+
+857
+02:06:00.870 --> 02:06:02.370
+Doug Schepers: Do you are you muted.
+
+858
+02:06:06.180 --> 02:06:12.720
+Peter Rushforth: Maybe you have to acknowledge the end in this this thing I can do a demo. If anybody wants to see that.
+
+859
+02:06:13.170 --> 02:06:15.720
+Doug Schepers: He doesn't seem to be muted, but we can't hear you them.
+
+860
+02:06:18.270 --> 02:06:18.720
+Peter Rushforth: Yeah.
+
+861
+02:06:18.900 --> 02:06:21.960
+Doug Schepers: Oh no, he's gone. Oh no, he's not there he is.
+
+862
+02:06:25.680 --> 02:06:27.420
+Peter Rushforth: Your microphone is not working.
+
+863
+02:06:31.230 --> 02:06:31.560
+Doug Schepers: Oh,
+
+864
+02:06:35.580 --> 02:06:38.730
+Peter Rushforth: You want to type it in the in the chat type your question.
+
+865
+02:06:43.770 --> 02:06:45.180
+Amelia Bellamy-Royds: No. Still nothing.
+
+866
+02:06:49.260 --> 02:06:54.660
+Amelia Bellamy-Royds: Okay, we'll switch around Brian, you mentioned you had some questions.
+
+867
+02:06:57.180 --> 02:07:04.740
+Bryan Haberberger: And I yes I do have a couple. So, stop me if you feel like I'm taking up too much time. Um, is it okay if I share my screen just super fast.
+
+868
+02:07:04.860 --> 02:07:05.340
+Mm hmm.
+
+869
+02:07:09.030 --> 02:07:15.300
+Bryan Haberberger: So you're probably predicated to this question. You probably know it's coming. So a lot like what you just said.
+
+870
+02:07:16.170 --> 02:07:23.310
+Bryan Haberberger: Essentially what we have is forms and we use HTML form to build into an API and a database so that you didn't have to write JavaScript to do it.
+
+871
+02:07:24.030 --> 02:07:26.820
+Bryan Haberberger: Um, so we came across a lot of the things you know what a
+
+872
+02:07:26.850 --> 02:07:35.940
+Bryan Haberberger: Primitive what is something that needs to be known. You know what type of things being saved by the form. Who's the person creating the form. What's the motivation for it. That's a very web annotation thing. Don't worry about it.
+
+873
+02:07:36.810 --> 02:07:46.680
+Bryan Haberberger: Um, but really specifically was being able to provide context. So I saw that you had a lot of link sort of primitive things and one of those very early slides you showed
+
+874
+02:07:47.040 --> 02:07:58.260
+Bryan Haberberger: And I was wondering if you have considered one of those for supplying schema, sort of like an already FS XML style schema or or even like a JSON LD context like this.
+
+875
+02:08:00.330 --> 02:08:01.980
+Bryan Haberberger: That's. That's my first question.
+
+876
+02:08:02.670 --> 02:08:05.370
+Peter Rushforth: Out of my scope of extra expertise, frankly, Brian.
+
+877
+02:08:05.700 --> 02:08:14.820
+Bryan Haberberger: That's okay. I was just curious because all it is is just, you know, here I have an array of them, which is a whole nother thing to charge to talk about arrays as attributes and you can see here
+
+878
+02:08:15.180 --> 02:08:22.710
+Bryan Haberberger: Like you're proposing your, you have to implement some kind of syntax and take away some kind of eliminated from the user to make sure we can parse these things correctly.
+
+879
+02:08:23.130 --> 02:08:29.640
+Bryan Haberberger: And that just turns into a nightmare. So I'm really curious how you're going to express hierarchy in those coordinates which is my second question.
+
+880
+02:08:30.120 --> 02:08:35.250
+Peter Rushforth: Well, there are arrays of coordinate element coordinates elements you know so. Oh.
+
+881
+02:08:35.250 --> 02:08:37.470
+Bryan Haberberger: I see. So you're going to use the element itself.
+
+882
+02:08:37.740 --> 02:08:47.610
+Peter Rushforth: Yeah, so the coordinates element is the the the deepest child. Well, I mean, I guess in my proposal you would be able to wrap spans around coordinates and
+
+883
+02:08:48.870 --> 02:08:49.320
+Peter Rushforth: A
+
+884
+02:08:50.670 --> 02:08:51.150
+Peter Rushforth: A
+
+885
+02:08:52.290 --> 02:08:59.460
+Peter Rushforth: High hyperlink anchors around coordinates or around, you know, parts of coordinates.
+
+886
+02:09:01.050 --> 02:09:01.410
+Bryan Haberberger: Gotcha.
+
+887
+02:09:02.700 --> 02:09:03.720
+Peter Rushforth: So,
+
+888
+02:09:05.850 --> 02:09:06.480
+Peter Rushforth: So, yeah.
+
+889
+02:09:07.770 --> 02:09:11.070
+Peter Rushforth: The coordinates are basically
+
+890
+02:09:13.050 --> 02:09:21.060
+Peter Rushforth: The lowest level element and you could so you could style different rings differently or multiple times, I guess.
+
+891
+02:09:22.410 --> 02:09:28.200
+Bryan Haberberger: I see, I see. So it's not. Can you like nest a coordinate element in another coordinate
+
+892
+02:09:28.290 --> 02:09:29.250
+Peter Rushforth: No, no, no.
+
+893
+02:09:29.310 --> 02:09:29.670
+Bryan Haberberger: No.
+
+894
+02:09:29.730 --> 02:09:34.800
+Peter Rushforth: So no, it's based on based on geo JSON simple theaters, mon. OK, and now
+
+895
+02:09:35.250 --> 02:09:36.900
+Peter Rushforth: All of these, these
+
+896
+02:09:38.580 --> 02:09:40.560
+Peter Rushforth: Formats of this similarity that way.
+
+897
+02:09:42.180 --> 02:09:43.980
+Bryan Haberberger: Good. That's good answer. That's what I was looking for.
+
+898
+02:09:45.210 --> 02:09:49.380
+Bryan Haberberger: Good. So then, I guess what I'm no. Can you still hear me I push the button.
+
+899
+02:09:49.500 --> 02:09:50.880
+Bryan Haberberger: Yeah, yeah. Okay.
+
+900
+02:09:52.710 --> 02:10:08.100
+Bryan Haberberger: So when you when you did that.so. This is something I just have no knowledge about when you did that doc type map ML was that sort of your way of telling the browser developers. I'm using that markup language schema is that how at that level. You were like, hey,
+
+901
+02:10:09.000 --> 02:10:15.480
+Peter Rushforth: So the, the, the, the purpose of the doc type math ML and concept is
+
+902
+02:10:17.220 --> 02:10:30.300
+Peter Rushforth: To. It's like the media type. So it's a second second level of processing that beyond the media type. So when you have when you exchange messages on the web, you have the content type and the accept headers to
+
+903
+02:10:31.440 --> 02:10:48.540
+Peter Rushforth: Dictate you know media type metadata. So you could say text HTML is this text map analysis is this response to a source attribute required. Okay. And because that's, you know, layer element, it gets drawn
+
+904
+02:10:49.590 --> 02:10:56.670
+Peter Rushforth: Drawn by the by the render in the in the coordinate space that is set set up as a leg.
+
+905
+02:10:58.380 --> 02:10:59.610
+Peter Rushforth: But when you when you
+
+906
+02:11:00.930 --> 02:11:10.620
+Peter Rushforth: So just to fit into the HTML parts or, you know, the HTML elements of void syntax and some of them are, you know, there's an idiosyncrasy to HTML that
+
+907
+02:11:11.640 --> 02:11:12.150
+Peter Rushforth: That
+
+908
+02:11:13.230 --> 02:11:25.770
+Peter Rushforth: You would have to follow like the few us inputs. For example, if you extend inputs. They are void element. So you have to have a have a not no closing tag.
+
+909
+02:11:27.780 --> 02:11:29.040
+Peter Rushforth: For example, and
+
+910
+02:11:30.510 --> 02:11:51.480
+Peter Rushforth: So a doc type Matha would be like it mode so that when you when you loaded it when you load a an SVG off a off a SVG URL, you've got that SVG media type to guide you. But when you're loaded off a file system. There's no, there's not necessarily the right
+
+911
+02:11:52.740 --> 02:11:58.380
+Peter Rushforth: Media type and that's their map to different file types and and stuff like that. So the browser would
+
+912
+02:11:59.520 --> 02:12:15.390
+Peter Rushforth: Needs to have more clues like that are in the document. And so, I mean, we haven't close the close the loop on this conversation with Simon and the what way experts, but I'm still pushing for a doc type math ML as a as a sort of
+
+913
+02:12:16.710 --> 02:12:19.230
+Peter Rushforth: A second tier of media type indication
+
+914
+02:12:19.500 --> 02:12:19.860
+Bryan Haberberger: Yeah.
+
+915
+02:12:20.760 --> 02:12:28.920
+Bryan Haberberger: You know, yeah, that makes great sense. I just, you know, I've been developing for 10 years doing doc type HTML at the top and never asked anybody why I had to do that.
+
+916
+02:12:30.360 --> 02:12:39.960
+Peter Rushforth: Yeah, I think it's, it's like I'm processing mode for the partner Simon could definitely give you a couple of our discussion on that. But, um,
+
+917
+02:12:42.090 --> 02:12:44.820
+Peter Rushforth: You know they don't like to change the parts are at all.
+
+918
+02:12:46.170 --> 02:12:56.460
+Peter Rushforth: And you know even adding new elements, I guess, makes them nervous. So adding new modes is like a double nervous. So anyhow, we have to walk that line.
+
+919
+02:12:56.820 --> 02:13:01.710
+Bryan Haberberger: Yes. So my last question is a softball exciting to to point me to the right place.
+
+920
+02:13:02.010 --> 02:13:16.050
+Bryan Haberberger: At some point, you had to write and using you know feature tag. Here's the vocabulary for that feature tag or something, you know, some description about it somehow. Where is that so I can sort of kind of get a better idea about the exact definition of elements us
+
+921
+02:13:16.650 --> 02:13:22.020
+Peter Rushforth: Yeah, so that's the math and now specification which is evolving. Let's
+
+922
+02:13:23.070 --> 02:13:23.490
+Bryan Haberberger: Say,
+
+923
+02:13:23.580 --> 02:13:24.300
+Peter Rushforth: You know my
+
+924
+02:13:24.330 --> 02:13:28.860
+Bryan Haberberger: Standard all the good ones are. That's how we do it for things open open minds.
+
+925
+02:13:29.190 --> 02:13:35.220
+Peter Rushforth: So in the master race now community group on GitHub. I'll paste it into the chat here.
+
+926
+02:13:35.280 --> 02:13:36.180
+Bryan Haberberger: Yes, please.
+
+927
+02:13:37.410 --> 02:13:38.730
+Peter Rushforth: And I yeah
+
+928
+02:13:40.050 --> 02:13:54.840
+Peter Rushforth: There is the math ML repository, and you'll find a link to that to the spec for that. And in there like there are some things in there that are probably a bit confusing at this point because it's
+
+929
+02:13:56.010 --> 02:14:02.250
+Peter Rushforth: It's a you know a challenge for me to do everything. Now, keep it up to date. Our lender is keeping me like
+
+930
+02:14:03.780 --> 02:14:12.300
+Peter Rushforth: On track here because he's got he's got a very sharp eye for detail so it'll probably come up to speed, again soon. But
+
+931
+02:14:13.770 --> 02:14:23.130
+Peter Rushforth: You know, we're talking about the proposal in general here not specifying at the moment. So maybe I'll just do a quick demo. If there's any more time.
+
+932
+02:14:26.490 --> 02:14:31.710
+Amelia Bellamy-Royds: Yeah. What did you take the last five minutes, unless anybody has urgent questions.
+
+933
+02:14:34.680 --> 02:14:36.180
+Fred Esch: Do you have any support.
+
+934
+02:14:36.660 --> 02:14:37.500
+Fred Esch: For guests.
+
+935
+02:14:37.980 --> 02:14:38.970
+Ted Guild: From earlier. I'm sorry I
+
+936
+02:14:39.750 --> 02:14:40.950
+Fred Esch: Am XML.
+
+937
+02:14:42.780 --> 02:14:44.400
+Peter Rushforth: What was the question. Sorry, say again.
+
+938
+02:14:44.730 --> 02:14:49.080
+Fred Esch: You have support for guess it gets a tier Geographic Names.
+
+939
+02:14:49.830 --> 02:14:50.400
+I'm
+
+940
+02:14:51.900 --> 02:14:55.830
+Peter Rushforth: Like a. Is that a, it's a kind of a query interface right
+
+941
+02:14:56.370 --> 02:15:00.690
+Peter Rushforth: Oh no no no support yet. Oh, specifically anyway.
+
+942
+02:15:05.970 --> 02:15:06.390
+Peter Rushforth: So,
+
+943
+02:15:07.800 --> 02:15:09.180
+Ted Guild: Here, if I had a question.
+
+944
+02:15:10.350 --> 02:15:10.830
+Ted Guild: For the
+
+945
+02:15:11.310 --> 02:15:11.640
+Okay.
+
+946
+02:15:12.690 --> 02:15:13.050
+Peter Rushforth: Yeah.
+
+947
+02:15:13.560 --> 02:15:14.940
+Ted Guild: Let me scroll back and find it.
+
+948
+02:15:17.310 --> 02:15:29.370
+Ted Guild: The use case for not specifying map view as center, zoom, lot of people want to specify maximum Matt Baume you to display at most 180 degrees of love to
+
+949
+02:15:30.690 --> 02:15:31.290
+Ted Guild: Get those
+
+950
+02:15:36.690 --> 02:15:37.050
+Ted Guild: Sorry.
+
+951
+02:15:38.910 --> 02:15:39.360
+Ted Guild: And a
+
+952
+02:15:43.680 --> 02:15:44.970
+Ted Guild: Mystic again.
+
+953
+02:15:45.240 --> 02:15:55.170
+Peter Rushforth: A best case for not specifying Matthew as a center Zoom is a lot of people want to specify maximum math bounds. As a starting condition. You mean
+
+954
+02:15:57.090 --> 02:15:58.230
+Amelia Bellamy-Royds: So there was the option of
+
+955
+02:15:58.230 --> 02:16:05.160
+Amelia Bellamy-Royds: Setting be box bounding box dimensions, instead of just the center point. And actually,
+
+956
+02:16:08.010 --> 02:16:30.900
+Amelia Bellamy-Royds: Takaki sign also was commenting on how bounding box can be a lot more flexible than a zoom levels, which only have, you know, integer options, but with a vector graph, you don't need to restrict yourself to the tight levels, you can have continuous zoom
+
+957
+02:16:32.130 --> 02:16:51.360
+Peter Rushforth: Yeah, so, um, we have the concept of extent for for a layer so you can set the set the extent, for a given layer and then I think that you could simulate like zoom it like a big box starting conditioned by zooming to that.
+
+958
+02:16:52.650 --> 02:16:55.530
+Peter Rushforth: Extent like having a zoom to extent.
+
+959
+02:16:56.850 --> 02:17:01.110
+Peter Rushforth: Thing is that good enough that give me a thumbs up or not.
+
+960
+02:17:07.980 --> 02:17:12.870
+Peter Rushforth: So let me share. And I don't know if it where we're at in the
+
+961
+02:17:13.920 --> 02:17:18.150
+Peter Rushforth: In the evolution of the poly feel will help us.
+
+962
+02:17:20.820 --> 02:17:22.890
+Peter Rushforth: Share this guy.
+
+963
+02:17:29.010 --> 02:17:30.630
+Peter Rushforth: So this is the poly Phil
+
+964
+02:17:32.100 --> 02:17:45.420
+Peter Rushforth: And it's based on leaflet and get, you know, a modified leaflet. Well, not to modify it actually is pretty rapidly flip. But we extend our, our thing and it allows you to
+
+965
+02:17:50.400 --> 02:17:59.760
+Peter Rushforth: Yeah, so starting conditions are like currently based on lat long zoom. But, you know, the geo pose and so on. They have they've got some
+
+966
+02:18:00.570 --> 02:18:03.690
+Amelia Bellamy-Royds: Pet your video working, we're getting your audio.
+
+967
+02:18:05.370 --> 02:18:08.730
+Peter Rushforth: Cut my video something I do. Yeah. Can you hear me.
+
+968
+02:18:10.410 --> 02:18:12.390
+Doug Schepers: I was that better.
+
+969
+02:18:12.420 --> 02:18:13.020
+Amelia Bellamy-Royds: Much better.
+
+970
+02:18:13.470 --> 02:18:16.080
+Peter Rushforth: Okay, so, so
+
+971
+02:18:17.670 --> 02:18:23.760
+Peter Rushforth: If I just, we've got a little menu setup here. So the debug mode.
+
+972
+02:18:25.290 --> 02:18:26.010
+Peter Rushforth: debug mode.
+
+973
+02:18:27.330 --> 02:18:34.620
+Peter Rushforth: It shows you the extent of the layer in a outlined in red, and it shows you the tile the tile grid and
+
+974
+02:18:36.720 --> 02:18:46.020
+Peter Rushforth: And so we could we, we have we have the properties of the properties of the map and
+
+975
+02:18:47.730 --> 02:18:49.050
+Peter Rushforth: Our setup.
+
+976
+02:18:50.820 --> 02:18:51.360
+Peter Rushforth: Let's see.
+
+977
+02:18:54.000 --> 02:18:54.660
+Peter Rushforth: So the
+
+978
+02:18:55.800 --> 02:19:01.140
+Peter Rushforth: The properties of the map of each layer has an extent property. So you could have them.
+
+979
+02:19:02.160 --> 02:19:09.300
+Peter Rushforth: So that the the coordinates of the corners of the extent are stored in that in that
+
+980
+02:19:11.040 --> 02:19:12.990
+Peter Rushforth: Toggle debug mode just reload.
+
+981
+02:19:14.220 --> 02:19:20.340
+Peter Rushforth: There right f 12 and I select the elements, the
+
+982
+02:19:21.450 --> 02:19:23.760
+Peter Rushforth: Layer itself has
+
+983
+02:19:30.120 --> 02:19:31.440
+Peter Rushforth: An extent property.
+
+984
+02:19:32.640 --> 02:19:33.150
+Peter Rushforth: That
+
+985
+02:19:35.130 --> 02:19:40.110
+Peter Rushforth: That has the coordinates of the, of the, the layer.
+
+986
+02:19:41.550 --> 02:19:41.940
+Peter Rushforth: In
+
+987
+02:19:43.320 --> 02:19:49.770
+Peter Rushforth: Cop right and bottom left, and all the different coordinate systems associated to the TC RS and so
+
+988
+02:19:50.490 --> 02:20:08.220
+Peter Rushforth: Like, I think there's a zoom to function built into leaflet and we copied it into the the mouth element as an API type of thing. So you could calculate calculate the center point of that bounding box and zoom to that.
+
+989
+02:20:10.740 --> 02:20:20.430
+Peter Rushforth: We haven't got the zoom to layer thing, but the plan was to fit that bounding box at the at the, the maximum possible zoom
+
+990
+02:20:21.180 --> 02:20:36.690
+Peter Rushforth: Onto the map as as as possible and then zoom to that. So that was sort of like the bounding box starting conditions, but I mean, then you would have to save the Save the starting conditions as lat long zoom in the current, current
+
+991
+02:20:37.020 --> 02:20:42.900
+Peter Rushforth: Proposal so so that's sort of the best answer I can give you. Yvonne
+
+992
+02:20:44.580 --> 02:20:47.850
+Badita Florin: I'm not sure, can I intervene alto so
+
+993
+02:20:47.940 --> 02:20:48.270
+Peter Rushforth: Are we
+
+994
+02:20:48.360 --> 02:20:56.340
+Badita Florin: Failing because like this is in the beginning, you will zoom to a specific location, let's say, a CT or neighborhood.
+
+995
+02:20:56.940 --> 02:21:13.080
+Badita Florin: But I'm not sure if the question was more okay maybe indirectly, let's say New York use zoom in Brooklyn and the maximum extent that you can zoom out to be the surface of the city of New York, you cannot go to city or country level. Is this about or
+
+996
+02:21:14.040 --> 02:21:16.950
+Peter Rushforth: Oh, I see. So you couldn't zoom out past that.
+
+997
+02:21:17.910 --> 02:21:24.060
+Badita Florin: This like the least use cases for like CDs or other things like that where you don't want users, maybe to go
+
+998
+02:21:24.690 --> 02:21:25.260
+Peter Rushforth: Yeah.
+
+999
+02:21:25.530 --> 02:21:27.090
+Badita Florin: And I said I shared the link
+
+1000
+02:21:27.300 --> 02:21:41.640
+Badita Florin: In the chat for like an example. What I'm doing now for a city in Greece not polka forbidden event where you can you have a maximum zone because he would be useful for them to multiple because it's just what a CD.
+
+1001
+02:21:42.330 --> 02:21:52.050
+Peter Rushforth: I guess there's no declarative means for setting that up right now. I mean, we'd have to think about how you could do that using the DOM API for this thing. So like
+
+1002
+02:21:53.100 --> 02:22:02.730
+Peter Rushforth: Like check the properties of lat long zoom and compare them against compare them against your preferred thing and prevent that event from occurring.
+
+1003
+02:22:03.510 --> 02:22:15.420
+Peter Rushforth: I'm not sure if that's a, is that a progressive enhancement or is that something that should be built into the, the declarative function that's a, that's a question not a statement.
+
+1004
+02:22:15.870 --> 02:22:16.110
+Yeah.
+
+1005
+02:22:19.470 --> 02:22:33.240
+Peter Rushforth: So yeah, just quickly, I've got to server setup. So we've got, like, if you we've got a version of this built into geo server. So if you if you've got different
+
+1006
+02:22:34.530 --> 02:22:43.200
+Peter Rushforth: Data sets and geo server, you can serve them, it'll serve them in the in the math ML projections that you that you specify
+
+1007
+02:22:45.270 --> 02:22:58.590
+Peter Rushforth: So there's WGS at four and the projection negotiation deal was we take that WGS at four layer and we drag it onto the map, which just adds a layer element to the to the map DOM.
+
+1008
+02:22:58.980 --> 02:23:16.560
+Peter Rushforth: And but it's now it's got the curved curved shape of the Emperor conformal contract. So it's not doing any projection transformation while do geo servers, doing all of that stuff so that the server side content management systems are still still whatever they are, but
+
+1009
+02:23:17.700 --> 02:23:29.580
+Peter Rushforth: And so that's, um, that's the projection negotiation deal and it'll do you know like I mean it works pretty well for for
+
+1010
+02:23:31.020 --> 02:23:34.920
+Peter Rushforth: W MS and titles and stuff. I mean, it's a basic system.
+
+1011
+02:23:39.870 --> 02:23:40.440
+Peter Rushforth: And
+
+1012
+02:23:42.330 --> 02:23:50.130
+Peter Rushforth: So, so what I was showing you earlier was the ability to query it at that particular locations.
+
+1013
+02:23:51.330 --> 02:24:01.950
+Peter Rushforth: And that that is actually the geo server is returning a methanol document with the map feature in it for the shape of Texas and
+
+1014
+02:24:03.360 --> 02:24:07.890
+Peter Rushforth: And the properties are shown in the leaflet popped up.
+
+1015
+02:24:08.220 --> 02:24:17.640
+Peter Rushforth: And I guess in lots of modern web map frameworks, they've they've gone from pop ups to pull out or whatever. So one of the challenges is to think of
+
+1016
+02:24:17.880 --> 02:24:26.160
+Peter Rushforth: Okay, well, how can we allow a web developer to say, I don't like pop ups I wanna, I want to have a slider or a slider kind of thing or a slide up
+
+1017
+02:24:26.520 --> 02:24:37.800
+Peter Rushforth: That kind of thing and capture the event and and and do that for themselves, so that the web designer has their own ideas of how this should be handled or what should be pulled out of it.
+
+1018
+02:24:38.220 --> 02:24:47.700
+Peter Rushforth: And I think Emilio and Brian were both referring to how difficult a challenge that is um but I get there should be like a default
+
+1019
+02:24:48.420 --> 02:25:01.830
+Peter Rushforth: Like the user agent would provide a default way to do that. And if you want to capture the event and do it yourself you while you have the you have the the feature data to do it with and
+
+1020
+02:25:03.180 --> 02:25:11.160
+Peter Rushforth: So yeah, it's on there is that is available on GitHub as the Web Map custom element.
+
+1021
+02:25:12.300 --> 02:25:24.960
+Peter Rushforth: And in the end, there are there are releases of it and we should probably get a new release. So, but you can just, there's no it's not on MPM. You just have to download it and unzip it and
+
+1022
+02:25:27.360 --> 02:25:48.750
+Peter Rushforth: And it should work. You should be able to use it from a web directory. And so, yeah, you don't have to have a geometry associated to a query response. You can just get it an HTML file back like you do here and the the remote document is a you know simple view source type of document.
+
+1023
+02:25:49.860 --> 02:25:50.430
+Peter Rushforth: And
+
+1024
+02:25:51.900 --> 02:25:52.650
+Peter Rushforth: You can
+
+1025
+02:25:54.660 --> 02:26:01.440
+Peter Rushforth: You can add layers willy nilly to this thing. If you want if you so desire. I mean, there's a limit.
+
+1026
+02:26:01.920 --> 02:26:11.910
+Peter Rushforth: But so, so a layer is like five and said everything's layer. So a layer could contain templates so they're a layer can't contain other layers but a layer can contain
+
+1027
+02:26:12.240 --> 02:26:20.460
+Peter Rushforth: As many templates and as much content as you want to put into it and those and those those templates should be
+
+1028
+02:26:21.120 --> 02:26:36.060
+Peter Rushforth: While they are part of the DOM, I guess, and they should be, you should be able to change their said index, you know, by moving them around by changing the Zed index and so on. Same way that you do in any other part of HTML and SVG.
+
+1029
+02:26:37.170 --> 02:26:43.050
+Peter Rushforth: And this is apparently Robert lender was showing you that I broken the Back button on this.
+
+1030
+02:26:43.650 --> 02:26:51.450
+Peter Rushforth: On this web page and it needs to be updated. But I was trying to just sort of bookmark bookmark pages so that you could
+
+1031
+02:26:51.900 --> 02:27:06.960
+Peter Rushforth: You know when you copy the when you copy to a location on the page, you would go, you could go send that bookmark back to somebody and it would go to that point. And it's not doing it. So it's broken, and I wrote the back pocket button. But anyhow,
+
+1032
+02:27:08.460 --> 02:27:15.780
+Peter Rushforth: If that wouldn't be built into the math on it said itself. It's really a part of the part of the
+
+1033
+02:27:17.160 --> 02:27:37.740
+Peter Rushforth: HTML authors responsibility, right, because you could have five maps on one page and which one would get access to the URLs, an open question. Um, so what else is there to show a while. Again it the math ML extension to Geo server, you can you can set it up so that
+
+1034
+02:27:45.030 --> 02:27:46.350
+Peter Rushforth: You can set it up so that
+
+1035
+02:27:48.330 --> 02:27:51.810
+Peter Rushforth: You can serve it as tiles are a WNs. So, for example, for
+
+1036
+02:27:53.550 --> 02:28:02.460
+Peter Rushforth: The image the imagery layer here North American imagery that would be good to know. Hang on. There's
+
+1037
+02:28:05.220 --> 02:28:06.360
+Peter Rushforth: Edit this layer.
+
+1038
+02:28:07.740 --> 02:28:09.270
+Peter Rushforth: So publishing so
+
+1039
+02:28:10.380 --> 02:28:34.620
+Peter Rushforth: Publishing there some Nathanael panel and you can say use tiles and that will just use WNs requests over over the thing as tiles or you can actually set it up to cash the tiles. So if I I have particular like OSM tile and WGS at four.
+
+1040
+02:28:37.290 --> 02:28:44.220
+Peter Rushforth: And, and, you know, CBS tile. I can set them up and it'll, it'll it caches.
+
+1041
+02:28:45.720 --> 02:28:48.060
+Peter Rushforth: These things on the first use automatically
+
+1042
+02:28:49.230 --> 02:28:57.720
+Peter Rushforth: And then so when I go to Layer preview these tiles for the imagery, it should come in and time files.
+
+1043
+02:28:59.610 --> 02:29:09.150
+Peter Rushforth: Yeah, you can see the file showing up. Well that's being done by the geo server on the back end. So these are all this is like geospatial content management systems could be equipped
+
+1044
+02:29:09.870 --> 02:29:22.830
+Peter Rushforth: Really quickly to start pumping out HTML math ML and, you know, we would have like a content universe on day one of this thing, appearing in browsers.
+
+1045
+02:29:24.360 --> 02:29:25.470
+Peter Rushforth: So that's my pitch.
+
+1046
+02:29:26.220 --> 02:29:39.780
+Badita Florin: Can ask questions regarding mock mock and regarding like I don't know if you know tough GS that all go, which is you can do a lot of transformational, things like that. And they have things like buffer or or the
+
+1047
+02:29:41.040 --> 02:29:45.570
+Badita Florin: This would be something that maybe probably not now, but in the future could be
+
+1048
+02:29:46.740 --> 02:30:02.130
+Badita Florin: built in. So the idea is if you would have different points that they would have different values like population of cities or the things like that they could do scale based on that, like using a buffer or for selecting elements inside like 300 meters videos.
+
+1049
+02:30:03.090 --> 02:30:13.140
+Peter Rushforth: Um, I think that these could be like managed by the API. You know, like, so you could have like developers, the developer ecosystem still should
+
+1050
+02:30:14.430 --> 02:30:16.590
+Peter Rushforth: I mean, the browser engine can't do everything right.
+
+1051
+02:30:16.830 --> 02:30:20.790
+Peter Rushforth: So, so the developer ecosystem should be
+
+1052
+02:30:22.050 --> 02:30:37.080
+Peter Rushforth: Just facilitated by by the proposal not replaced. I mean, I guess there's a certain amount of rendering responsibility and so on, that could be replaced and it would probably be welcome. I don't know for sure. I've Yvonne and
+
+1053
+02:30:38.370 --> 02:30:39.360
+Peter Rushforth: Andreas, but
+
+1054
+02:30:40.530 --> 02:30:46.800
+Peter Rushforth: I, my sense is that that the rendering is is a full time job.
+
+1055
+02:30:47.970 --> 02:30:48.330
+Peter Rushforth: Um,
+
+1056
+02:30:49.560 --> 02:30:50.970
+Peter Rushforth: So yeah, I mean,
+
+1057
+02:30:52.080 --> 02:31:02.820
+Peter Rushforth: I would, I would encourage like progressive progressive enhancement is the way I described that I don't know if that's the right term, but having an API, upon which you can build is
+
+1058
+02:31:04.470 --> 02:31:06.630
+Peter Rushforth: Is is a core value.
+
+1059
+02:31:15.150 --> 02:31:25.500
+Peter Rushforth: So I guess that's that's about it, unless people have more comments. I'm happy to take questions. I'll try and go through the chat if there are questions in there and comments and respond
+
+1060
+02:31:28.590 --> 02:31:31.680
+Bryan Haberberger: I do have one last quick one. If you're alright with it.
+
+1061
+02:31:32.220 --> 02:31:32.850
+Yeah, please.
+
+1062
+02:31:33.960 --> 02:31:45.750
+Bryan Haberberger: So something that I have a ton of trouble within leaflet is like say I've got a bunch of points, um, there's no like way for me to say I only want to see those points that have this property.
+
+1063
+02:31:46.650 --> 02:31:56.460
+Bryan Haberberger: Like to do that and leaflet. You have to write a custom JavaScript function that goes over every layer and find the features and read the properties out, which is an extremely expensive function as you can imagine.
+
+1064
+02:31:57.960 --> 02:32:02.700
+Bryan Haberberger: So I saw you like doing some filtering with layers there because you were doing the checkboxes.
+
+1065
+02:32:03.600 --> 02:32:11.010
+Bryan Haberberger: Do you think you'd be able to sort of filter, you know, hide show features buy properties, kind of thing.
+
+1066
+02:32:11.370 --> 02:32:15.450
+Peter Rushforth: Well, so I think that that is like, Whoa, that was the
+
+1067
+02:32:19.740 --> 02:32:21.240
+Peter Rushforth: So that was
+
+1068
+02:32:22.530 --> 02:32:23.130
+Peter Rushforth: The
+
+1069
+02:32:24.960 --> 02:32:38.490
+Bryan Haberberger: You know, I could see that being a well when we have the API that's the kind of things we'd like you know to be able to stick into the API. I'm just curious because that's something that you just really cannot do right now with with like the matte box and leaflet stuff that's out there.
+
+1070
+02:32:39.060 --> 02:32:55.740
+Peter Rushforth: So, well, it's, I don't have a magic bullet. But let me share my screen. And so this this file here was the has a select element in it. And I think this is an app, an area that needs more research and and collaboration.
+
+1071
+02:32:57.300 --> 02:33:12.630
+Peter Rushforth: Um, yeah. So in this in this select the. It's called the year select and I've got a bunch of our GIS WNs layer IDs separated by commas, because that's their that's their way of parameters using their
+
+1072
+02:33:13.050 --> 02:33:23.640
+Peter Rushforth: Their web masters by layer IDs and then I tied that you know those layer IDs on the server. This was set up after someone are already set up this data service.
+
+1073
+02:33:24.030 --> 02:33:35.580
+Peter Rushforth: So, though they said, Okay, well, this is the less List of layer IDs that in, in, in that order that constitute 1867 and so on. And then as the
+
+1074
+02:33:36.750 --> 02:33:40.110
+Peter Rushforth: As the, you know, the user can query that
+
+1075
+02:33:42.930 --> 02:33:48.120
+Peter Rushforth: Can query that that file by clicking on the control
+
+1076
+02:33:49.380 --> 02:34:03.750
+Peter Rushforth: In the, in the, in the layer list and they get a different query against the server through, you know. So now whenever I'm panning and zooming I'm looking at 1874 right so it's it's it's looking at
+
+1077
+02:34:04.410 --> 02:34:12.750
+Peter Rushforth: At that, as defined by the server. So, I mean, I think there's there's probably a lot more to this but anyhow.
+
+1078
+02:34:13.290 --> 02:34:24.120
+Badita Florin: And the different venues represent to each to count each state or is the order like the day of being like, this is the middle
+
+1079
+02:34:24.540 --> 02:34:35.640
+Peter Rushforth: Yeah, so like layer 17 is the labels and layer 12 is the is, I don't know, Ontario, or the polygons and other things the lines that kind of thing.
+
+1080
+02:34:35.940 --> 02:34:52.590
+Badita Florin: But if they would be like on over and target that would be another layer of like showing the trees, it would be render the before and after volley. It could be this set or is like, how is the engine and then delete like random or we teach you
+
+1081
+02:34:52.860 --> 02:34:56.010
+Peter Rushforth: It was like in terms of the DOM order.
+
+1082
+02:34:56.700 --> 02:35:06.000
+Peter Rushforth: Yeah, so if you add another layer element on to the into the map element as a as a child, it just draws on top just like
+
+1083
+02:35:07.230 --> 02:35:11.700
+Peter Rushforth: So well, not like, Well, just like the image maps. Right. So, okay.
+
+1084
+02:35:11.970 --> 02:35:13.500
+Peter Rushforth: The image image map.
+
+1085
+02:35:14.670 --> 02:35:21.570
+Peter Rushforth: image element draws as the base, base layer in the areas draw on top of it. So there and Dom order, I guess.
+
+1086
+02:35:22.050 --> 02:35:28.560
+Peter Rushforth: Sort of like a layer elements in this. And so by default the layers in this thing are drawn in
+
+1087
+02:35:29.130 --> 02:35:38.640
+Peter Rushforth: Document order down the page. But let's say you want it to have like a GIS solution where you have the layer stacked up on on on the left or something like that.
+
+1088
+02:35:39.390 --> 02:35:46.230
+Peter Rushforth: You should be able to shut the controls off and do your own make your own controls using HTML, you know,
+
+1089
+02:35:46.740 --> 02:36:03.180
+Peter Rushforth: Just like you can do with the video element right you receive events to control and stop the video. Well, you should be able to get these events, I'm off the math on it and and do the same thing. So you just get a boost in performance and so on, off the rendering engine.
+
+1090
+02:36:04.410 --> 02:36:06.390
+Bryan Haberberger: Yeah, that was a good analogy. Thank you.
+
+1091
+02:36:08.010 --> 02:36:10.260
+Bryan Haberberger: My pleasure. I hope that helps.
+
+1092
+02:36:10.440 --> 02:36:17.220
+Peter Rushforth: I mean i i think this is a this is just an area we we played with a little bit. I think there's, you know, that's why inputs.
+
+1093
+02:36:18.360 --> 02:36:26.790
+Peter Rushforth: Fred's probably not on anymore. But this white inputs could be like a useful thing to work with here rather than reinvent
+
+1094
+02:36:30.480 --> 02:36:31.590
+Peter Rushforth: Even though everybody hates them.
+
+1095
+02:36:39.570 --> 02:36:40.110
+Peter Rushforth: Let's see.
+
+1096
+02:36:53.580 --> 02:36:54.060
+Peter Rushforth: Yeah.
+
+1097
+02:37:04.320 --> 02:37:24.900
+Peter Rushforth: In to talk with the satori sciences in SVG map digests and made this kind of custom form functionality free to free to design in the web apps assigning it all to each layer. Yeah, so that's sort of the same approach, but we haven't played around with it too much here.
+
+1098
+02:37:26.490 --> 02:37:46.170
+Peter Rushforth: Other than to say that controls, you know, from the controls that are oriented to to the user interface or directed towards the layer control and controls that are location specific and zoom specific and with specific are getting essentially they're
+
+1099
+02:37:47.490 --> 02:37:48.150
+Peter Rushforth: Invisible
+
+1100
+02:37:54.120 --> 02:38:05.400
+Peter Rushforth: And yeah, so we would we would really love you to play around with this and give us comments apologize for bugs and stuff. It is my fault. So
+
+1101
+02:38:07.560 --> 02:38:09.840
+Peter Rushforth: We will will will iterate, though.
+
+1102
+02:38:12.450 --> 02:38:15.030
+Bryan Haberberger: The most important thing to take away is your direct contact, then
+
+1103
+02:38:15.600 --> 02:38:16.290
+Yeah.
+
+1104
+02:38:18.270 --> 02:38:29.340
+Amelia Bellamy-Royds: Yeah, and all the math ML stuff, both the spec and the poly fills are on GitHub. And there's open discussion in the community group.
+
+1105
+02:38:32.520 --> 02:38:33.270
+Peter Rushforth: So, Yvonne
+
+1106
+02:38:34.320 --> 02:38:42.900
+Peter Rushforth: Yvonne said ideally the dome scripting interface would have the same functionalities and sadly flip open layers. So stuff like custom tile buffers.
+
+1107
+02:38:44.670 --> 02:38:54.660
+Peter Rushforth: Could be in. Yeah, absolutely. So we would like to. Yeah, for sure. Let Die for the sophisticated stuff that you know cutting edge.
+
+1108
+02:38:55.170 --> 02:39:06.540
+Peter Rushforth: Let's just leave it to the ingenuity of web developers to fill in. So yeah leaflet the core model of leaflet like the core and extension model of leaflet is what
+
+1109
+02:39:07.560 --> 02:39:10.020
+Peter Rushforth: Is sort of inspiring in terms of
+
+1110
+02:39:11.190 --> 02:39:27.330
+Peter Rushforth: In terms of what should be in versus out. I mean, there's stuff that you even in leaflet as as as cut down as it is as as core as the core is there still stuff that you know the HTML guys are not going on like
+
+1111
+02:39:28.860 --> 02:39:36.210
+Peter Rushforth: So we gotta, we gotta think think hard about what what is in and what is possible.
+
+1112
+02:39:41.760 --> 02:39:44.280
+Amelia Bellamy-Royds: Okay, we're about ready to wrap it up. Then Peter
+
+1113
+02:39:45.030 --> 02:39:46.530
+Amelia Bellamy-Royds: already gone over time.
+
+1114
+02:39:46.710 --> 02:39:47.400
+Yeah, sorry.
+
+1115
+02:39:48.630 --> 02:39:50.370
+Amelia Bellamy-Royds: Go, there's lots to talk about
+
+1116
+02:39:50.850 --> 02:39:51.060
+Yeah.
+
+1117
+02:39:53.580 --> 02:39:55.350
+Peter Rushforth: Okay. Well, thank you very much everyone
+
+1118
+02:39:56.820 --> 02:40:00.210
+Peter Rushforth: Thanks a lot for going through this with us.
+
+1119
+02:40:04.380 --> 02:40:05.280
+Bryan Haberberger: Thank you, Peter.
+
+1120
+02:40:06.090 --> 02:40:06.960
+Badita Florin: Thanks for organizing
+
+1121
+02:40:07.590 --> 02:40:07.980
+Peter Rushforth: Great.
+
+1122
+02:40:08.610 --> 02:40:10.350
+Amelia Bellamy-Royds: And we'll see you all next week.
+
+1123
+02:40:11.490 --> 02:40:12.210
+Amelia Bellamy-Royds: Same
+
+1124
+02:40:13.350 --> 02:40:15.810
+Amelia Bellamy-Royds: Time didn't days as it was this week.
+
+1125
+02:40:17.280 --> 02:40:18.510
+Amelia Bellamy-Royds: You will have the agenda.
+
+1126
+02:40:21.120 --> 02:40:21.510
+Peter Rushforth: Great.
+
+1127
+02:40:22.530 --> 02:40:23.580
+Peter Rushforth: Thank you and goodnight.
+
+1128
+02:40:24.870 --> 02:40:25.530
+Amelia Bellamy-Royds: Or. Good morning.
+
+1129
+02:40:28.860 --> 02:40:29.670
+Bryan Haberberger: See, everybody.
+
+1130
+02:40:30.360 --> 02:40:30.780
+Know,
+

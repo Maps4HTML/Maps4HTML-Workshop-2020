@@ -1,0 +1,203 @@
+07:44 <francbartoli> Hi everybody, very exciting to be here for these interesting topics. And thanks @prushforth for inviting me, @tomkralidis and @kalxas
+08:01 <IvanSanchez_gitlab> I kinda agree with @AmeliaBR re> subpaths/superpaths, but my brain kinda grinds a bit on it. 
+08:01 <IvanSanchez_gitlab> A GeoJSON `Feature`(or any other representation of a [ISO/OGC Simple Feature](https://en.wikipedia.org/wiki/Simple_Features), for that matter) is an *abstract* entity, which might have zero, one or more visual symbols attached to it, whereas subpaths/superpaths are already visual representations. So I don't think it's about how to define a hierarchy of visual symbols, but rather how to represent the
+08:01 <IvanSanchez_gitlab> mapping between data and visualization.
+08:01 <IvanSanchez_gitlab> [edit] I kinda agree with @AmeliaBR re: subpaths/superpaths, but my brain kinda grinds a bit on it. 
+08:01 <IvanSanchez_gitlab> [edit] A GeoJSON `Feature`(or any other representation of a [ISO/OGC Simple Feature](https://en.wikipedia.org/wiki/Simple_Features), for that matter) is an *abstract* entity, which might have zero, one or more visual symbols attached to it, whereas subpaths/superpaths are already visual representations. So I don't think it's about how to define a hierarchy of visual symbols, but rather how to represent
+08:01 <IvanSanchez_gitlab> the mapping between data and visualization.
+08:03 <IvanSanchez_gitlab> The way I think about this makes me tell apart polygon fill and polygon outlines - those are *two* different symbols but somehow are so tightly integrated that most people usually don't manage them apart from each other
+08:03 <tguild> https://www.w3.org/Consortium/cepc/
+08:04 <karenmyers> Day Two, 22 September 2020: OGC/W3C Maps for the Web Workshop
+08:05 <tguild> https://www.w3.org/2020/maps/agenda#day-2
+08:06 <tguild> OGC APIs for web use, Gobe Hobona
+08:07 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx Gobe Hobona's slides
+08:09 <rahola_gitlab> More info about OGC APIs: https://ogcapi.ogc.org/ 
+08:11 <tguild> [light minuting here, deferring to video+caption for more complete meeting record]
+08:15 <satakagi> Is there a place in the OGC for people outside of the membership to submit issues about their specifications and discuss them?　The W3C does that with gitHub Issues.
+08:18 <tguild> satakagi, I believe they similarly accept issues on their public github
+08:18 <tguild> ghobona, can elaborate or provide links on contributing
+08:19 <tguild> (now that he is done with his presentation)
+08:20 <tguild> https://github.com/opengeospatial
+08:22 <satakagi> I'd like to discuss the OGC's work on Vector Tile, but I don't see that document on github.
+08:23 <satakagi> [edit] @tguild
+08:23 <satakagi> [edit]  I'd like to discuss the OGC's work on Vector Tile, but I don't see that document on github.
+08:24 <tguild> https://github.com/search?q=org%3Aopengeospatial+tile
+08:25 <tguild> https://github.com/opengeospatial/OGC-API-Tiles or one of the other repos in the above link
+08:25 <satakagi> 
+08:25 <satakagi> Gutaitekini wa kono bunshodesu. Http: / / Docs. Opengeospatial. Orugu/ per/ 17 - 041. Html
+08:25 <satakagi> 59/5000
+08:25 <satakagi> Specifically, this document.
+08:25 <satakagi> http://docs.opengeospatial.org/per/17-041.html
+08:25 <tguild> (depending on what you want to comment on)
+08:25 <satakagi> [edit] Specifically, this document.
+08:25 <satakagi> [edit] http://docs.opengeospatial.org/per/17-041.html
+08:25 <thehabes> Yay!  +1 for schema and LD
+08:27 <satakagi> @tguild It's probably out of scope in the repository above, as it's an architectural and design policy issue above OGC-API-Tils.
+08:27 <tguild> satakagi, I am not certain but do not believe their engineering reports are in public github
+08:28 <rahola_gitlab> All published OGC engineering reports are available at https://www.ogc.org/docs/er
+08:29 <thehabes> @tomkralidis that's cool, I had not yet seen a mapping implementation around meteorology.  Lots of dynamic data going on there.
+08:29 <karenmyers> Does OGC have data on global adoption of the standard, particularly around meteorology? 
+08:32 <satakagi> @rahola_gitlab 
+08:32 <satakagi> The Vector Tiles Engineering Report seems to be under this directory, isn't it an official OGC document?
+08:32 <satakagi> http://docs.opengeospatial.org/per/
+08:33 <satakagi> I would like to discuss the content of that engineering report.
+08:33 <rahola_gitlab> @satakagi, yes it is there and it is an official OGC document. There are a couple of ways to access OGC ERs.
+08:34 <satakagi> I sent an email to the email address given in the document, but in the end it looked like it was ignored...
+08:35 <satakagi> I think that often happens unless there is a public discussion, such as a guthub issue.
+08:38 <rahola_gitlab> @satakagi, it depends on the nature of the comment and the document. The one you are referencing is an ER for an OGC Testbed. Testbed ERs do not go through public commenting before being released as they aren't formal standards documents (they reflect Testbed research outcomes).
+08:39 <thehabes> Man we need an impromptu demo day
+08:40 <tguild> that would be fun
+08:41 <tguild> longer term discussion encouraged on discourse. we can start a thread and get people to record and post demos there
+08:41 <tguild> and grow it over time
+08:41 <thehabes> @tguild I need to learn how to use that
+08:41 <satakagi> @rahola_gitlab 
+08:41 <satakagi> Thanks. Perhaps the discussion at the architectural level is long before it becomes a specification. I suppose that means that those discussions are not open at OGC.
+08:41 <tguild> discourse just basic forum software
+08:42 <tguild> also would be up for a day of demos on eg zoom, record there and piece up
+08:43 <thehabes> oh, sure enough!  Is the idea just to reply to those topics?
+08:44 <tguild> yeah and let people prepare demos and post online, link from there
+08:44 <rahola_gitlab> @satakagi, it depends. Testbeds aren't open because of their nature. The specific standards work is more open, but only at certain stages of the process (e.g. public commenting processes). OGC is always thinking of how to best balance openness with benefits of membership.
+08:44 <thehabes> @tguild got it, ty
+08:45 <tguild> https://discourse.wicg.io/
+08:45 <tguild> actually be sure to have under https://discourse.wicg.io/c/web-mapping/22
+08:45 <thehabes> Clever Joan, good realization
+08:45 <satakagi> @rahola_gitlab 
+08:45 <satakagi> I'm a member of the W3C, so I guess I'm aware of the cultural differences between the OGC and the W3C.
+08:45 <satakagi> Incidentally, I'm sure such architecture-level discussions are also widely held in the W3C, for example, in the WICG.
+08:46 <thehabes> @tguid yes, I did find myself lost a bit, not great at navigating yet.  I have that link bookmarked as my "reset" button.
+08:47 <tguild> @thehabes idea would be to start a demos topic under web-mapping
+08:47 <tguild> i'll discuss with the program committee as they may have some we can preseed including as we get video recordings from this workshop
+08:48 <thehabes> +1
+08:49 <tguild> pygeoapi Tom Kralidis, Angelos Tzotsos, Francesco Bartoli (earlier) 
+08:49 <zcorpan> Is there a topic in https://discourse.wicg.io/c/web-mapping/22 for Joan's presentation?
+08:49 <tguild> -> https://pygeoapi.io/presentations/default/#/frontpage Tom Kralidis's slides 
+08:49 <tguild> @zcorpan not yet, ok to start one
+08:50 <tguild> Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS, Joan Masó (earlier)
+08:50 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx Joan Masó's slides
+08:50 <tguild> Limitations to use of OGC services, Jonathan Moules 
+08:51 <thehabes> Sounds like the Web needs an awesome-geo-discovery repo to list these things!
+08:51 <tguild> -> https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.odp Jonathan Moules' slides 
+08:53 <rahola_gitlab> FYI if anyone wants to be informed of OGC activities, you can see press releases at https://www.ogc.org/pressroom/pressreleases. All public comment requests are posted here (see recent ones for OGC API-Processes and EDR.
+08:54 <rahola_gitlab> [edit] FYI if anyone wants to be informed of OGC activities, you can see press releases at https://www.ogc.org/pressroom/pressreleases. All requests for public comment are posted here (see recent ones for OGC API-Processes and EDR).
+09:00 <thehabes> Great question.  "How many portals are built for sharing"
+09:01 <tguild> Zoom on Linux is a pain. I avoid proprietary binaries wherever possible and instead use an iPad for many of these conferencing systems
+09:01 <thehabes> The portal - metadata problem exists in all kinds of expertise, not just maps.  It is interesting to hear you call it out, and for me to realize just how many times developers go through that struggle
+09:02 <tguild> Zoom did recently join W3C and hopefully will be improving their WebRTC (browser only without proprietary plugin) support
+09:02 <IvanSanchez_gitlab> > Zoom on Linux is a pain. I avoid proprietary binaries wherever possible and instead use an iPad for many of these conferencing systems
+09:02 <IvanSanchez_gitlab> 
+09:02 <IvanSanchez_gitlab> That reminds me I should do a test run of screen-sharing using the web client
+09:02 <tguild> @prushforth probably also ok if we go a few minutes over, some may drop for other meetings
+09:03 <prushforth> OK, cool
+09:03 <SebastienDurand> On of the biggest issue we find in the Canadian Geospatial Platform, is not just the discover issue, but to find the "right" information, whether you call it authoritative or most current or best available data.
+09:03 <SebastienDurand> [edit] One of the biggest issue we find in the Canadian Geospatial Platform, is not just the discover issue, but to find the "right" information, whether you call it authoritative or most current or best available data.
+09:04 <tguild> @IvanSanchez_gitlab you can stay on after and test if you want, I have time before my next meeting (Linked Building Data)
+09:04 <IvanSanchez_gitlab> > @IvanSanchez_gitlab you can stay on after and test if you want, I have time before my next meeting (Linked Building Data)
+09:04 <IvanSanchez_gitlab> 
+09:04 <IvanSanchez_gitlab> Yeah, I'd appreciate that, @tguild 
+09:05 <tguild> Chromium was my preferred webrtc client for quite awhile, then it ran into issues with MIT WebEx instance and switched to Firefox 
+09:05 <satakagi> @SebastienDurand 
+09:05 <satakagi> In the end, I've experienced that I look on the web for the data I find most reliable, content for ordinary people who can see it, and I can hardly rely on machine-readable metadata.
+09:05 <tguild> I think issue is with WebEx and MIT's funky instance, appreciate how they're a bit more bleeding edge
+09:06 <tguild> (with earlier/beta upgrades but still not my favorite webrtc platform)
+09:07 <tguild> @shepazu hope we don't crunch your panel too much, probably should have conferred with you when Peter prompted me
+09:08 <thehabes> @francbartoli  what context is the JSON-LD output using?
+09:09 <tomkralidis> great job on the demo @francbartoli !
+09:09 <SebastienDurand> @satakagi Exactly and this also resonnates with Jonathan comments is the publishing effort of data is worth it and not passing beside the real objective which to make information on the web usable and operational. Too much data is like not enough, and this goes also for maps or portals.
+09:10 <shepazu> You almost gave me a heart attack, @tguild!
+09:11 <satakagi> @SebastienDurand 
+09:11 <satakagi> I'm asking the question of whether that disclosure is to machines or computers, or to humans.
+09:12 <satakagi> Openness to machines isn't widely useful because most of the time, only smart people and organizations that can control those machines can use it.
+09:12 <francbartoli> > @francbartoli  what context is the JSON-LD output using?
+09:12 <francbartoli> 
+09:12 <francbartoli> @thehabes https://geojson.org/geojson-ld/geojson-context.jsonld
+09:12 <tguild> @shepazu while I enjoy harassing you, that was unintended :)
+09:13 <thehabes> @francbartoli  wonderful.  I was curious if there was an internal one or if you were using the GeoJSON-LD one.  We are working on migrating and maintinging it to be up to speed with JSON-LD 1.1 and enhance the vocab
+09:18 <francbartoli> @thehabes if you want to take a look at an online instance there is a covid-19 one https://demo.pygeoapi.io/covid-19 with data republished on-the-fly from JHU ArcGIS, Dutch goverment and the Italian one (via CSV fetched from a GitHub repository)
+09:19 <joanma747> If you want to comment on my presentation proposal for fully connecting OGC API tiles and MapML, you can go here:  https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811
+09:19 <joanma747> 
+09:21 <thehabes> @francbartoli  great, thank you.  I have a technical curiosity about some of the techniques used in that system, especially for LDing
+09:22 <thehabes> From Zoom chat (not supposed to chat there, sorry.  Bad habit developed from Zoom stand-ups)
+09:22 <thehabes> Well said Sebastien.  "Is it really open, accessible, and easily usable?" - The rolling questions
+09:22 <thehabes> "Not only mandatory, but crucial".  We all feel it Emilio
+09:22 <thehabes> 
+09:24 <francbartoli> @thehabes sorry I cannot say much more because I did not touch that piece of code
+09:25 <thehabes> @francesco All good, the demo is plenty.
+09:25 <briankardell_twitter> Does anyone know if don has written about this early 90's experience somewhere? I would love to read this history
+09:26 <briankardell_twitter> ^ can we ask this question or is it not good enough?
+09:27 <zcorpan> I'd like to know too, @briankardell_twitter 
+09:29 <fredesch> zilliow, realtor.com
+09:30 <karenmyers> I like Cameron Wilson's real estate use case and multiple tabs open in browser; I can identify with this.
+09:31 <thehabes> Don't forget about politics.  In the U.S., gerrymandering maps are a great use case.  
+09:32 <thehabes> This question may be for the GeoSeer people.  Is there a published discovery API?
+09:34 <fredesch> At my work we use the Google Maps API to show everything we need (locations, directions, ...) does the existence of Google Maps make it harder for  open standards adoption and getting data in open standards?
+09:35 <thehabes> @fredesch having to flip flop coords from Google to get them to draw correctly in Leaflet is infuriating. 
+09:35 <AmeliaBR> Oh, that's a good question Fred (and hello, it's been a while!)
+09:36 <francbartoli> You can comment the pygeoapi presentation here: https://discourse.wicg.io/t/pygeoapi-an-ogc-api-to-geospatial-data/4814
+09:36 <zcorpan> Question for Don: are there special needs/requirements for maps for NASA? Like a timeline dimension or other
+09:37 <tguild> Question for Cameron: shouldn't governments require private research funded with tax dollars to make their data available for public good?
+09:37 <zcorpan> https://earthobservatory.nasa.gov/global-maps/MYDAL2_M_SKY_WV has a timeline scrubber, for context :)
+09:38 <briankardell_twitter> @zcorpan I believe the previous speaker was  saying something about that earlier? everything has a space and time ?
+09:38 <tguild> (also note the other NRC Canada has a public/private data lake initiative where private entities voluntarily open data)
+09:38 <zcorpan> Thanks Don
+09:38 <fredesch> @AmeliaBR   (hi, I knew you and @shepazu would be here!
+09:40 <thehabes> In the wednesday break-out, we will be talking about GeoJSON-T (https://github.com/kgeographer/geojson-t)
+09:42 <joanma747> We have to thing on how we can express a time slider in MapML. I suppose, it is part of the "controls".But we need the time in the URL template of tiles so it need to go as an "input" describing the time dimension of the tiles
+09:43 <IvanSanchez_gitlab> @joanma747 That's a fourth dimension to the map (lat, lng, zoom, time), and first we should separate the data visualization from the UI (buttons, sliders)
+09:44 <IvanSanchez_gitlab> Also, one individual tile can hold several time periods (in the same vein that a RGBA image holds *4* samples)
+09:46 <briankardell_twitter> ugh my chromium crashed just as I was hearing something very interesting about wanting a map tag O_o
+09:47 <AmeliaBR> brian, you should be able to get the transcript of what you missed from the cc button on zoom. Or wait for the video post…
+09:47 <tguild> @briankardell_twitter video should be available and linked from agenda tonight or tomorrow depending on how much editing i need to do and an otherwise fairly full day of calls
+09:48 <tguild> @AmeliaBR btw I welcome your UX expertise for how I linked and labeled yesterday's. I'll follow your example should you change it
+09:49 <thehabes> Would the map HTML element be able to facilitate the argument of conflicting georeferences?  One task I see float around is comparing georectifications of the same map, especially when differentiating systems lie underneath.
+09:49 <tguild> I was thinking I'll also link these gitter chat notes with our minutes tool and also turn webvtt to html
+09:50 <AmeliaBR> @tguild I was meaning to get in touch & suggest adding time points for each presentation/panel to the video description, like I did here: https://twitter.com/AmeliasBrain/status/1308215500648800257
+09:50 <AmeliaBR> And also links to the discourse pages for each
+09:51 <joanma747> Related to "think about how users consume maps". Do users have enough with orthophotos and streets? (google maps) or they require more content?. If they require more content, we should focus on provide that content
+09:51 <joanma747> > Related to "think about how users consume maps". Do users have enough with orthophotos and streets? (google maps) or they require more content?. If they require more content, we should focus on provide that content and what content is that
+09:51 <joanma747> 
+09:51 <joanma747> 
+09:53 <joanma747> Open data about covid-19 made me crazy!. 
+09:53 <shepazu> What types of maps are not currently supported by advertising-driven map services? (i.e. beyond navigation)
+09:53 <joanma747> Most info is only indirectly referenced by code and in one format of each provider
+09:54 <fredesch> In Florida where I live, surveys can converted to PDF and the PDF is as legal of document as a drawn survey with a raised seal. (They can use a checksum to verify the PDF).
+09:54 <joanma747> I end up building python to "reconfigure" it. A interoperability disaster.
+09:54 <francbartoli> > Open data about covid-19 made me crazy!. 
+09:54 <francbartoli> 
+09:54 <francbartoli> https://demo.pygeoapi.io/covid-19
+09:55 <IvanSanchez_gitlab> I disagree with the position of some of the speakers re: "a standard will make it easier to web authors". In my experience, the typical web author copy-pastes code from stackoverflow and doesn't care if that's HTML or a Leaflet snippet or a piece of made-in-hell React bloat.
+09:55 <briankardell_twitter> ...what about maps for things that aren't... on the earth?
+09:56 <joanma747> @ivan, You have your point. The problem is when combining data together.
+09:57 <briankardell_twitter> is someone like, say... nasa, interested in mapping mars or the moon or something? do these services deal with that?
+09:57 <karenmyers> 22 Sept 2020 session is adjourned
+09:58 <IvanSanchez_gitlab> > is someone like, say... nasa, interested in mapping mars or the moon or something? do these services deal with that?
+09:58 <IvanSanchez_gitlab> 
+09:58 <IvanSanchez_gitlab> @briankardell_twitter Yes. You just change the CRS ("the EPSG Code") and things *should* work
+09:58 <briankardell_twitter> thanks @IvanSanchez_gitlab 
+09:59 <joanma747> For the moment, what I saw is that we use the same technologies with other CRS. But what to do if your object is not round? https://en.wikipedia.org/wiki/101955_Bennu :-)
+10:01 <shepazu> > I disagree with the position of some of the speakers re: "a standard will make it easier to web authors". In my experience, the typical web author copy-pastes code from stackoverflow and doesn't care if that's HTML or a Leaflet snippet or a piece of made-in-hell React bloat.
+10:01 <shepazu> 
+10:01 <shepazu> @IvanSanchez_gitlab I think there's a distinction to be made between "simple to copy" and "simple to build a mental model". A higher-level abstraction would let the copy-pasters start to understand over time what they're doing… otherwise, we build a cargo-cult priesthood
+10:04 <zcorpan> @joanma747 Bennu seems spherical enough that a sphere-based CRS probably works well enough. Might be harder with something like ʻOumuamua (if there were pictures of it) :)
+10:05 <satakagi> When putting information on top of a basemap, most web developers usually start with static data, rather than going to a dynamic API.
+10:05 <satakagi> csv would be the first entry point.
+10:07 <satakagi> Developers who have heard of GeoJSON may introduce it from the start, but even if it is JSON, it is often JSON data with its own structure.
+10:09 <satakagi> In fact, a CSV placed on github would be useful. It's static.
+10:14 <thehabes> @satakagi That was my experience, and I am (still) doing my best to avoid any proprietary structure. 
+10:14 <francbartoli>  @satakagi with pygeoapi you can easily bind a static csv (even remotely via GDAL/OGR) and expose (standardized) OGC API Features endpoints
+10:36 <satakagi> The question is, when the average web developer puts up his web page, does he always put up a dynamic site for location information?
+10:38 <satakagi> For example, someone who used githubpages to set up a free web page won't be able to make a dynamic site easily.
+10:39 <satakagi> Web browsers need to have that kind of information in scope as well.
+10:43 <satakagi> That's why I want to have an architectural level discussion with the OGC. If you say that only dynamic server-based APIs should be standardized, that's just part of the web.
+10:48 <francbartoli> @satakagi it’s not totally clear to me what you want to standardize then
+10:51 <satakagi> Map information will be exchanged between a standards-compliant web browser and any type of website that can be accessed by URL.
+10:52 <satakagi> [edit] That is map information will be exchanged between a standards-compliant web browser and any type of website that can be accessed by URL.
+10:52 <satakagi> [edit] That is map information which will be exchanged between a standards-compliant web browser and any type of website that can be accessed by URL.
+10:53 <prushforth> > That's why I want to have an architectural level discussion with the OGC. If you say that only dynamic server-based APIs should be standardized, that's just part of the web. -- @satakagi 
+10:55 <prushforth> Yes, this is the very conversation we would like to encourage. Connect the big initiative from OGC (APIs)  with a potentially big initiative from the W3C/WHATWG (maps in HTML).  In other words, work together, and learn from each other.
+10:55 <satakagi> :+1:
+10:59 <satakagi> I agree. I think this workshop is the first cross-cultural communication. Mutual understanding is not easy, but I believe it's possible. Because as Peter says, this event was created with that kind of momentum.
+11:05 <prushforth> @francbartoli 
+11:05 <prushforth> > it’s not totally clear to me what you want to standardize then
+11:05 <prushforth> 
+11:05 <prushforth> I gave a [5 minute talk](https://www.youtube.com/watch?v=mbyGfXO72mo&feature=youtu.be&list=PLA07raojXKMvK7plRxgROfDIXiTkcBtWf) about why plain old URLs to map content, and not only APIs are important on the Web.   Spoiler: URLs are for users,  APIs are for developers.
+11:20 <francbartoli> I like MapML @prushforth, I don’t think the actual design of the new OGC APIs is far away from that. But certainly making it part of the specs would help a lot implementers like us. It would be great if you can  open a ticket  on pygeoapi to support MapML

@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Captions from W3C/OGC Maps for the Web workshop -- 22 Sep 2020</title>
+</head>
+<body>
+<p>Peter Rushforth: Well, welcome everyone to the day two of the maps for the web workshop that joint WPC oh GC map for the web workshop and Peter rush FORTH AND VERY PLEASED TO Peter Rushforth: That if all joined us today.</p>
+
+<p>Peter Rushforth: We have a very tight schedule.</p>
+
+<p>Peter Rushforth: So will be will be pretty strict about the times for for talks.</p>
+
+<p>But before we get there.</p>
+
+<p>Peter Rushforth: I would just like to mention that there are Peter Rushforth: The few web links that we have to share.</p>
+
+<p>We try to make the sessions as interactive as possible without running Peter Rushforth: over each other.</p>
+
+<p>So we have a gator chat room that there, everybody should hang out in and Ted will paste that link into the chat has pasted it here into the chat and Peter Rushforth: Each day, I will, I will post the the slides and and materials for the presentations, shortly before the presentation so as to not give the give the whole story away before the for the story is told.</p>
+
+<p>And then as that.</p>
+
+<p>Peter Rushforth: After the after the presentation, I'll create a Peter Rushforth: Discourse.</p>
+
+<p>Peter Rushforth: topic for discussion in the web incubator community group web mapping category.</p>
+
+<p>And if you have comments that could help.</p>
+
+<p>Peter Rushforth: You know, identify things that that or any comments about a participants presentation that's a good place to talk about them because browser developers hang out there and are sort of listening sometimes and anyhow it's a it's a good good place to chat about people's presentations.</p>
+
+<p>Peter Rushforth: And I just like to remind everybody that we're Peter Rushforth: operating under the WCC code of conduct and their title paste a link to that as well.</p>
+
+<p>So if you have Peter Rushforth: Basically, it's all about professional conduct and interaction.</p>
+
+<p>So Peter Rushforth: If you have concerns, please approach to any, any one of the conference committee who are online.</p>
+
+<p>Peter Rushforth: And with that, I would like to introduce the agenda or speaker agenda for the day.</p>
+
+<p>We're going to start off with Dr. Go by hub, owner of the Open Geospatial Consortium, who will speak about the Peter Rushforth: The global OTC API's effort that is underway.</p>
+
+<p>And with that, I'll let go by share his screen and I will put myself on mute, as I hope everybody else will.</p>
+
+<p>Gobe Hobona (OGC): share my screen.</p>
+
+<p>Gobe Hobona (OGC): Can you see my current slide.</p>
+
+<p>Gobe Hobona (OGC): Okay, thank you.</p>
+
+<p>Okay, good.</p>
+
+<p>Good day everyone.</p>
+
+<p>So my name is Coco wanna I work for the Open Geospatial Consortium, also known as the OTC and want to talk to you today about OTC API standards for the web.</p>
+
+<p>Gobe Hobona (OGC): Or.</p>
+
+<p>First of all, introduce the OTC and then provide some background about OTC API standards, the development of those standards.</p>
+
+<p>Gobe Hobona (OGC): also explain some of the motivation behind the development of the standards and provide an overview of the orgy CPS lenders.</p>
+
+<p>Gobe Hobona (OGC): Also describe the innovation initiatives that we're using to support the development of the standards and explain how anyone any member of the general public can get involved in the development of those standards.</p>
+
+<p>Gobe Hobona (OGC): Or she see is a global consortium, with more than 500 member organizations those organizations include in this commercial organizations government Gobe Hobona (OGC): Departments research and academic institutions or he see provides a neutral and trusted forum for tackling interoperability issues and Odyssey is a hub for leadership and innovation for all things related to location.</p>
+
+<p>Gobe Hobona (OGC): Now, more than 500 organizations that are part of the old GC and those organizations come from the commercial government research and academic sectors.</p>
+
+<p>Gobe Hobona (OGC): commercial organizations come to the GC to improve our business development to enhance our competitive technical advantage to glow that global brands and also to increase the likelihood of receiving innovation funding in the future from all the networking and knowledge.</p>
+
+<p>Gobe Hobona (OGC): Transfer that takes place within those GC many departments come to DC to improve the innovation and Mike at support.</p>
+
+<p>Gobe Hobona (OGC): To gain trust that advice to expand our international partnerships and to improve our corporate policy support and certification.</p>
+
+<p>Gobe Hobona (OGC): research and academic organizations come to DC to expand our applied research partnerships to improve the chances of receiving innovation funding in the future based on all the Gobe Hobona (OGC): Interactions with commercial and other organizations are also expand by international collaborations and increase citations as well.</p>
+
+<p>Gobe Hobona (OGC): So over the past couple of decades or GC has developed a suite of standards.</p>
+
+<p>Some of those standards deal with all GC web services.</p>
+
+<p>Gobe Hobona (OGC): Some of the more popular or GC web service standards include the Web Map Service standard, also known as I BMS the Web Map tile service, also known as W MTS Gobe Hobona (OGC): The web feature service, also known as the bfs.</p>
+
+<p>And the word coverage service, also known as WCS these standards have been used in areas such as geology transportation Gobe Hobona (OGC): City management environmental data manage management hydrology and other areas that currently more than 200,000 or GC web services deployed across the web.</p>
+
+<p>Gobe Hobona (OGC): So about five years ago or GC started looking into the relationship between representational state transfer or rest approaches.</p>
+
+<p>Gobe Hobona (OGC): In relation to or GC web services.</p>
+
+<p>And what you can see on the slide right now is an analysis conducted in 2015 which related characteristics of rest approaches, which is what you see on the far left column.</p>
+
+<p>Gobe Hobona (OGC): In relation to Odyssey web services, which is what you see on the right hand side of the slide.</p>
+
+<p>Gobe Hobona (OGC): So in 2015 or GC conducted research comparing rest to classical DC web services and then in 2016 the focus shifted from rest to web API is Gobe Hobona (OGC): In 2017 or DC publisher white people on Open Geospatial API's and in 2018 work on version three of the word feature service started Gobe Hobona (OGC): In 2019 the DFS three or the version three of the word feature service that was renamed and called the CPI features and that was in recognition that the approach that was being adopted by the way, Office three was offering a new paradigm within the Gobe Hobona (OGC): C suite of standards for the OTC standards baseline, then by the end of 2019 or the CPI features part one, was published as an official or GC standard Gobe Hobona (OGC): So why are we concerned with all this API is why we developed an easy or GC API as well.</p>
+
+<p>Web API, very popular and effective method for rapid software development.</p>
+
+<p>Gobe Hobona (OGC): And what we have found is that with the proliferation of web API's the variations and those a web API S has to an extent to create it Intel pro interoperability.</p>
+
+<p>Gobe Hobona (OGC): So open standards.</p>
+
+<p>I've been developed to enable interoperability between independent implementations and all GC API's being developed, with a view of improving geospatial interoperability between web API's.</p>
+
+<p>Gobe Hobona (OGC): And then number of principles that the old GC is using to develop these or GC API standards, some of the principles are shown on this slide.</p>
+
+<p>Gobe Hobona (OGC): First and foremost, the OTC API standards.</p>
+
+<p>I've been developed to offer modular API building blocks those building blocks will specially an evil with web API is in a consistent way.</p>
+
+<p>Gobe Hobona (OGC): And why using a number of principles and approaches identified in the special date on the web, best practices which have been developed jointly between OTC and the W three see Gobe Hobona (OGC): What you see API standards leverage the openapi specification specifically to help describe the API's themselves as well as implementations of those of the CP is Gobe Hobona (OGC): Another key principle is that the OTC API's are being developed to be as developer friendly as possible.</p>
+
+<p>So there's a specific focus on developing experience and usability.</p>
+
+<p>Gobe Hobona (OGC): And we do all of this development work publicly on GitHub on a public repository, while using any implementations of the CPS thunder.</p>
+
+<p>Gobe Hobona (OGC): To involve the general public at using initiatives such as sprints and why using that to Gobe Hobona (OGC): To solicit feedback from the public and to use that field feedback to help us validate and improve those standards.</p>
+
+<p>Gobe Hobona (OGC): Another key principle is that of API first.</p>
+
+<p>So we're using an API first approach to develop other APIs using Open API openapi Gobe Hobona (OGC): Specification to describe those API's and this enables us to describe in a machine readable way the resources offered by the API, the behavior of the API as well as other aspects, supported by the openapi specification Gobe Hobona (OGC): So what are those API standards.</p>
+
+<p>Gobe Hobona (OGC): So we have the ODI CPI features standard.</p>
+
+<p>So this is a fully fledged OTC standards, part one, although the CPS standards standard was published.</p>
+
+<p>Towards the end of 2019 and work is ongoing on developing additional parts and extensions to orgy CPI.</p>
+
+<p>Gobe Hobona (OGC): For the sake of features and they also a number of other or the CPS standards that are currently under development for instance OTC common Gobe Hobona (OGC): Which provides a series of requirements that are applicable across all orgy CPI standards.</p>
+
+<p>Gobe Hobona (OGC): We've got only CPR coverages which deals with access to coverage data such as roster imagery or TCP records which deals with access to meta data.</p>
+
+<p>Gobe Hobona (OGC): Or do CPR processes which deals with access to geospatial processes such as buffering routing hydro logic models and so on.</p>
+
+<p>Gobe Hobona (OGC): Are you CPI towels, which deals with access to talent resources such as vector tiles Todd rust coverages tiled maps and so on.</p>
+
+<p>Gobe Hobona (OGC): Or do you see API maps which deals with access to electronic friended maps or the CPI environmental data retrieval, which deals with access to environmental data such as metallurgical and weather data.</p>
+
+<p>Gobe Hobona (OGC): And then we also have already seen cast Dallas, which deals with access to petroleum information such as thousand symbologist ology and also working on a number of future concepts, for instance, an API for discrete global grid systems as well as another for routing.</p>
+
+<p>Gobe Hobona (OGC): Now, what can you expect from each approved or GC standard, you can expect a standard document and an open API definition document.</p>
+
+<p>Gobe Hobona (OGC): You can expect an executable test suite to how implemented validate whether or not the implementations comply with those standards.</p>
+
+<p>You can also expect tutorials.</p>
+
+<p>And guys, what you can see on the screen on Gobe Hobona (OGC): Examples specifically focusing on our GC features which provides access to vector feature data.</p>
+
+<p>Gobe Hobona (OGC): We've set out a roadmap, as shown on the slide.</p>
+
+<p>Gobe Hobona (OGC): With a number of the standards.</p>
+
+<p>Gobe Hobona (OGC): planned to be published by the end of this year, as well as others that will be published in 2021 Gobe Hobona (OGC): Another thing you can.</p>
+
+<p>You'll notice from this slide is that many of the standards are being developed as multi part standards.</p>
+
+<p>What this means is that they are.</p>
+
+<p>There's one core specification, as well as a number of extensions, all within the same standard standard Gobe Hobona (OGC): And we're using a number of innovation initiatives to develop these standards.</p>
+
+<p>Examples include Sprint's hackathons pilots Testaments, as well as others.</p>
+
+<p>But you can see on the slide, are some of the innovation initiatives, we've held since Gobe Hobona (OGC): We hold a hackathon in London in June 2019 and we had about 70 participants literally participating from across the globe.</p>
+
+<p>Gobe Hobona (OGC): We've held several sprints since then.</p>
+
+<p>Gobe Hobona (OGC): And next on the calendar is virtual coach sprint.</p>
+
+<p>On September 29 to the 30th, we will focus on the OTC API common and ODI CPI features standards in order to participate in the sprint.</p>
+
+<p>You'll have to register this URL shown on the slide.</p>
+
+<p>Gobe Hobona (OGC): And and that's it.</p>
+
+<p>If you have any questions please feel free to send an email message to the address shown on this.</p>
+
+<p>Gobe Hobona (OGC): Side and you can also visit the ODI CPI otc.org website where you'll find information about OTC API's as well as initiatives that we're planning to develop those standards and that's it.</p>
+
+<p>Thank you.</p>
+
+<p>Peter Rushforth: Great, thank you very much.</p>
+
+<p>Kobe.</p>
+
+<p>Peter Rushforth: It's a monumental initiative with lots of moving parts, and it's a it's pretty interesting to see it move along.</p>
+
+<p>Peter Rushforth: Well, I'd like to introduce our next speakers and then keep things moving here so Peter Rushforth: The next topic will be about piaggio API, which I believe is a no GC API implementation by Tom curliness Angelo Santos and Francesco Bartoli who are all present today so Peter Rushforth: With that, I'll let Peter Rushforth: Tom, take the take the lead and Please.</p>
+
+<p>Welcome them.</p>
+
+<p>Peter Rushforth: Tom, I think you're on mute.</p>
+
+<p>Tom Kralidis: No thanks.</p>
+
+<p>Sorry.</p>
+
+<p>Can you hear me.</p>
+
+<p>Tom Kralidis: Yeah, can I can folks see my screen.</p>
+
+<p>Gobe Hobona (OGC): Yeah.</p>
+
+<p>Tom Kralidis: Excellent.</p>
+
+<p>Okay, so thanks for thanks for the introduction.</p>
+
+<p>Tom Kralidis: We will give a small presentation today on the pie Joe API project.</p>
+
+<p>So the piaggio API project is a OS to community project.</p>
+
+<p>Tom Kralidis: And it currently implements.</p>
+
+<p>Many of the OTC of the evolving Odissi API standards.</p>
+
+<p>It is a reference implementation for already for the OTC API feature standard so Tom Kralidis: Whoops.</p>
+
+<p>So I'm just going to give an overview, following on from gobies presentation around.</p>
+
+<p>I won't get into all of these Tom Kralidis: As they sort of echo what what Colby is saying, but I'll talk a little bit about the the project itself, some of the core capabilities as well as example of production instances and where we're hoping to go Tom Kralidis: Moving moving forward.</p>
+
+<p>Tom Kralidis: So the project was created.</p>
+
+<p>Tom Kralidis: In Tom Kralidis: So, as we mentioned, there was a some initial work on on code sprints and hackathons around WF S3, which was called at the time so we Tom Kralidis: We participated in in that sprint and have been participated in the visibility in the subsequent sprint for more juicy on OTC API. So project has been around for for a couple of years.</p>
+
+<p>Tom Kralidis: We designed it sort of as a geospatial data.</p>
+
+<p>Data API framework where Tom Kralidis: It where it can be very extensible and is available through numerous web front end technology approaches, at least for at least for Python.</p>
+
+<p>Tom Kralidis: And we really wanted it to be extensible on the back end to be able to integrate many different formats or or other services, there's a growing international team.</p>
+
+<p>Tom Kralidis: There really should be a map here, I guess.</p>
+
+<p>But there's a growing international team from from from many countries and time zones.</p>
+
+<p>So meetings are always interesting to schedule but gives you an idea of Tom Kralidis: The participation and the widespread interest in these evolving approaches and and we're happy to have everybody contributing that Tom Kralidis: That already is.</p>
+
+<p>Tom Kralidis: So again, it's an OTC API server implementation in in Python.</p>
+
+<p>It chooses to it publishes data.</p>
+
+<p>So we don't really get into massaging data too much, but it's basically a data publishing tool.</p>
+
+<p>Tom Kralidis: And it leverages the powerful ecosystem of Python packages.</p>
+
+<p>So for those who are familiar with, with Python.</p>
+
+<p>There's a huge ecosystem of geospatial tooling underneath and piaggio API is a is basically a shim on top of all of that to be able to provide this functionality.</p>
+
+<p>Tom Kralidis: So you can run hide your API from the, from the command line or you can run it from from a web application.</p>
+
+<p>Tom Kralidis: I'll just give you an idea of the of the overall architecture of the implementation.</p>
+
+<p>So we have a core, which is our course from the Python API. Tom Kralidis: And then we have a series of web front end.</p>
+
+<p>So if you're familiar with Python web frameworks.</p>
+
+<p>They're available in flask and starlet and other other frameworks.</p>
+
+<p>Tom Kralidis: If you have your, your own downstream implementation, you can use pipe do API as a library and deploy it alongside your own mem your own your own implementation.</p>
+
+<p>Tom Kralidis: So again, we have a very small but robust and flexible core and which has made made available through these through these web API's and that core itself takes takes a number of different back ends or format or databases or search index through Tom Kralidis: Through these data provider plugin.</p>
+
+<p>So we have a a plugin mechanism for the entire project where you're able to Tom Kralidis: You know, plug your data into the piaggio API framework, no matter where it sits or how it's sorted out.</p>
+
+<p>As long as you implement the API accordingly.</p>
+
+<p>Then, then you'll be able to, you know, publish ideas who PIES YOU API there by Tom Kralidis: satisfying the OTC API standards.</p>
+
+<p>Tom Kralidis: There's a number of different back ends already out of the box or some of you may be familiar with some of these, but we do also support the GL Tom Kralidis: Underlying underlying software which reads, hundreds of different format.</p>
+
+<p>So if you're geospatial data is compatible with genealogy are it's automatically compile compatible with piaggio API.</p>
+
+<p>And you can put it out to the CP is quite easily.</p>
+
+<p>Tom Kralidis: We recently implemented the support for covered data providers.</p>
+
+<p>So those of you who are into grids are roster data or multi dimensional data.</p>
+
+<p>Tom Kralidis: Earth observation data that this is now possible through pi to API and the evolving or DC API coverages specification.</p>
+
+<p>So really exciting stuff here.</p>
+
+<p>Tom Kralidis: We've recently implemented in terms of tiles.</p>
+
+<p>So we have the, the ability to connect to a directory structure for for tiles or object storage.</p>
+
+<p>Tom Kralidis: local or remote.</p>
+
+<p>We'll talk a little bit about that later.</p>
+
+<p>Tom Kralidis: And we also implement the schema.org sort of linked data approaches to make to make resources available through pie to API search engine friendly and and discoverable through through mass market approaches.</p>
+
+<p>Tom Kralidis: So I'll walk you through some screenshots in terms of in terms of capabilities.</p>
+
+<p>So here's a default view of when you stand up a piaggio API instance you get Tom Kralidis: A web presence and it's go we may have mentioned the you know HTML or web page web page capabilities in ODI CPI is a Tom Kralidis: Is a is a diet desirable thing for mass market integration.</p>
+
+<p>So here's an HTML view of the landing page for a pipe Padre Tom Kralidis: Pio API implementation.</p>
+
+<p>Here we can see, you can browse the, you know what, what kind of collections are configured what processes are available, how the how a developer can interact with the API through the API definition as well as a conformance page to find out what standards are implemented.</p>
+
+<p>Tom Kralidis: Here, here's our open API page so API first approach, you can walk through all the different endpoints and find out more about what parameters are accepted what their data types are what a response looks like and so on.</p>
+
+<p>Tom Kralidis: Here's a screenshot around or do you see API features.</p>
+
+<p>So this is showing some, some, like some late data.</p>
+
+<p>Tom Kralidis: We've recently implemented in the last month or so, or do you see API coverages so that was a provided by USGS Tom Kralidis: Into into the into the project.</p>
+
+<p>So we're appreciative of that.</p>
+
+<p>So there you can see an example of some global temperature, temperature data, which is a which is provided through OTC API coverage to in the coverage JSON format.</p>
+
+<p>And then we can see Tom Kralidis: A map there of the data.</p>
+
+<p>Tom Kralidis: Fresh off the press.</p>
+
+<p>We just implemented, which the API tiles.</p>
+
+<p>So for Jessica who's on this.</p>
+
+<p>Tom Kralidis: Presentation recently implemented that.</p>
+
+<p>So that's a valued edition.</p>
+
+<p>And, you know, thank you very much for that.</p>
+
+<p>But here's, here's what we were talking about Tom Kralidis: Around publishing tiles to PIES YOU API, whether they're local tiles or whether they're available remotely through through object storage.</p>
+
+<p>Tom Kralidis: As well as OTC API processes.</p>
+
+<p>So you can configure any kind of process that you want, whether it's synchronous or a synchronous using the pie to API framework and making that available through through all the proc Tom Kralidis: Finally we've we have implementation, we have support for the spatial temporal asset catalog or the stack implementation, which allows for a browser catalog of Tom Kralidis: Of geospatial temporal assets.</p>
+
+<p>So you can drill down directory trees of geospatial data and then get to the actual files peruse and see what they look like, and then download them if you wish.</p>
+
+<p>Tom Kralidis: So that's a little bit of an overview about what the project is all about how how it sort of setup and what its core capabilities are a walk you through some examples of production instances.</p>
+
+<p>Tom Kralidis: So we here at the Meteorological Service of Canada and deployed piaggio API as part of our National Geospatial API weather climate water API platform, which is called geo med Tom Kralidis: So we provide real time whether data from numerical weather prediction, as well as hydro.</p>
+
+<p>Hydro metric and climate archive data.</p>
+
+<p>Tom Kralidis: So we initially use Python API to provide our climate or hydro metric and our climate data through the the OTC API feature standard and that's made available through Tom Kralidis: Through God, whether it should see as you can see there.</p>
+
+<p>So you can go to that link and and and look at, you know, hundreds of years of climate.</p>
+
+<p>Climate archive data in the in the in the AWS S3 format.</p>
+
+<p>We also implemented a Tom Kralidis: data extraction capabilities through OTC API processes, which basically looks through Tom Kralidis: simulations of climate data forecast data and extracting time series out of those in providing basically providing time series extraction from a Tom Kralidis: Coverage into into a CSV or a geo JSON, we are looking at increasing we are looking at providing more support more piaggio API capability through our platform.</p>
+
+<p>So we're looking into doing things with coverages as well as the evolving OTC API records standard Tom Kralidis: There's also an implementation from the global soil information system by by UN FL. So they they've provided a lot of work and examples on doing JSON LD in in in page API.</p>
+
+<p>So you can click and visit that website.</p>
+
+<p>Tom Kralidis: When you have a chance Tom Kralidis: And finally, finally roadmap, so Tom Kralidis: I think the project for just over two years is is a is implemented quite a bit.</p>
+
+<p>And there's been a lot of rapid development and I think Tom Kralidis: I think this is very telling of the the the OTC API efforts and the goals of lowering the barrier for developer implementation.</p>
+
+<p>SO THIS VERY QUICK UPDATE. UPDATE to this project by Tom Kralidis: By increasing number of developers.</p>
+
+<p>And that's, I think that's a core reason why having said that, there's still more work to do.</p>
+
+<p>Tom Kralidis: We're looking to, you know, given the OTC API standards development efforts are our public we are you know sort of moving along with the evolution of those standards.</p>
+
+<p>So we're looking to implement the maps tiles and Tom Kralidis: And records as part of as part of a future future implementation and we're looking to we're always improving the API support.</p>
+
+<p>Tom Kralidis: And the next one will be improving is the processes a support with some of the updates that have been going on in the processing standards.</p>
+
+<p>Working Group.</p>
+
+<p>Tom Kralidis: More data providers.</p>
+
+<p>So we want to provide them as flexible a capability for people to hook up their data as possible.</p>
+
+<p>We recently had Google Summer of Code contributions from two students to provide capability on supporting the common query language or sequel.</p>
+
+<p>Tom Kralidis: Standard as well as doing doing transaction.</p>
+
+<p>So create update, update, delete, we're looking into better content negotiation, as well as spreading the project through through through through more approaches.</p>
+
+<p>So OSU live is a live dvd Tom Kralidis: Or live implementation that you can download and run all of the ways to sort of software free and open source geospatial software.</p>
+
+<p>So as a very popular.</p>
+
+<p>Tom Kralidis: Implementation and we're looking to get our software on to that to be able to to spread the news about the project and make it more easily available to as much people as possible.</p>
+
+<p>Tom Kralidis: And there's a variety of support mechanisms that Tom Kralidis: If you're looking for support through these various organizations, we have a we have a gator channel that that folks can come in and ask questions.</p>
+
+<p>There's a mailing list.</p>
+
+<p>There's documentation you can peruse all the links as you wish there and Tom Kralidis: That's, that's, that's pretty much it.</p>
+
+<p>So thank you for listening and unless Angeles or friend Francesco has any comments or things to add that I may have missed.</p>
+
+<p>I'd like to thank everybody for listening.</p>
+
+<p>Peter Rushforth: Thank you very much, Tom.</p>
+
+<p>Peter Rushforth: If we have time at the end.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: Francesco asked if we could do see a demo.</p>
+
+<p>And we'll just keep a close eye on the clock and see if that's possible.</p>
+
+<p>Peter Rushforth: But thank you very much.</p>
+
+<p>It looks like a very interesting project and something that pretty much anybody's in geospatial could use Peter Rushforth: So with that, we're going to move on to the next.</p>
+
+<p>Peter Rushforth: Next talk in our agenda and with thanks to Heather or closed caption or for her great efforts so far because we're, we're really making them work hard today.</p>
+
+<p>Peter Rushforth: So I'll pass the control over to join my soul will talk to us about the connection of the math ML initiative with a GIC standards such as the new would you see API tiles.</p>
+
+<p>Peter Rushforth: Talk and the Would You see why mouse.</p>
+
+<p>So to on are you on unmuted.</p>
+
+<p>Peter Rushforth: I'm not hearing to on Joan Masó (CREAF): I believe now I Joan Masó (CREAF): Know you're gone live Thank you.</p>
+
+<p>Joan Masó (CREAF): Okay, thank you for for presenting me and working at graph here in Barcelona close Joan Masó (CREAF): Always close working with the with the OTC with different standards evolving.</p>
+
+<p>Joan Masó (CREAF): Let me, let me just start by saying that Joan Masó (CREAF): There are several ways that you can send from the server to a client up and they have different levels of complexity, the most Joan Masó (CREAF): Low level thing that you could do is to serve pocket some kind of a description of the geospatial objects or maybe the pixels from the server bend some kind of a protocol and send it Joan Masó (CREAF): To the client, you would also think about creating some kind of a JavaScript code that will allow you to manipulate data and to present it into the screen or you could think that HTML.</p>
+
+<p>Joan Masó (CREAF): Good actually be able Joan Masó (CREAF): To do the mapping thing by itself.</p>
+
+<p>And we all know that my email is precisely that approach.</p>
+
+<p>But I wanted to present that in Joan Masó (CREAF): In perspective, because actually the first approach is what urgency web services has been doing for more than a decade.</p>
+
+<p>Joan Masó (CREAF): This idea of having these key value pair requests.</p>
+
+<p>And then this responds with a geospatial format into the client that will be able to present Joan Masó (CREAF): That we are now transitioning into the open API world.</p>
+
+<p>And this is going to make some of these things are a little bit more easy because, for instance, we are Joan Masó (CREAF): Changing from an XML to the JSON that worked more naturally into the into the web client.</p>
+
+<p>But essentially, we are we are kind of doing the same thing.</p>
+
+<p>Joan Masó (CREAF): In the JavaScript world.</p>
+
+<p>You can you can use leave late you can use Google Maps, you know, the experience of doing that.</p>
+
+<p>It's Joan Masó (CREAF): Easier, and in the low level awesome in this Joan Masó (CREAF): You know down level.</p>
+
+<p>Here we have the map a male and female is just some elements into HTML page.</p>
+
+<p>Joan Masó (CREAF): That you could use to actually communicate them up to the client actually the GC has a standard is called always context.</p>
+
+<p>I didn't make a set of resources that you can see together in a in a client that plays a similar but different role is not, of course, an extension of Joan Masó (CREAF): Of it of HTML is actually an atom in colleague Joan Masó (CREAF): So if we can discuss a little bit.</p>
+
+<p>These four levels.</p>
+
+<p>Let's say that in the first level it is kind of a good way of doing things for desktop solutions for Joan Masó (CREAF): Communicating services among them, but it's difficult to do that in in the browser, because you have to manually build JavaScript code that Joan Masó (CREAF): builds these get came up request interpret the response, maybe a GMO maybe maybe a, you know, the file, something like that and then create some HTML content.</p>
+
+<p>Joan Masó (CREAF): Using these doors to be in order for the user to actually see something maybe you could use Canvas instead.</p>
+
+<p>But the idea is the thing.</p>
+
+<p>Joan Masó (CREAF): With the with the approach of open API.</p>
+
+<p>This is number two here in my slide you can automatically create some content from code from the open API document.</p>
+
+<p>Joan Masó (CREAF): You'll have the ability to parse automatically JSON from JavaScript that's something but still you need to manually extract Joan Masó (CREAF): And show the information that it's actually great for maximum flexibility and for combining several services together.</p>
+
+<p>Why these complicated.</p>
+
+<p>We all know that that you know you can take leave late.</p>
+
+<p>If you know a little bit of JavaScript.</p>
+
+<p>Joan Masó (CREAF): You can simply program using some sentences here and there in USD ML page and it's reasonably easy to do at least the minimum mob equalization, but with with my mail you have simply tax.</p>
+
+<p>Joan Masó (CREAF): You you have elements that you add into your HTML describing what the map should have not how it should be presented.</p>
+
+<p>But what is it Joan Masó (CREAF): We have been exploring for more than four years now.</p>
+
+<p>The relation between the Odyssey standards on the on the map a male Joan Masó (CREAF): Standard and we Joan Masó (CREAF): Got I have collected these experiences of the different test beds and you can you can visit this URL there on the right, Hudson on the right hand side story and Joan Masó (CREAF): It's difficult to summarize, so I will say that in Joan Masó (CREAF): In in 17 Joan Masó (CREAF): What we lead was Joan Masó (CREAF): Our first experience and we compare my email with all the various contexts in a dean, what we did was Joan Masó (CREAF): To suggest that mother Mel should include your URL templates and actually these ended up into the into the mobile specification in desperate 15, what we did was, for instance, suggesting that or GC API features could never see a map ML content in the items part of the of the API.</p>
+
+<p>Joan Masó (CREAF): Implementation and in 16 in the diabetic thing that it's currently happening.</p>
+
+<p>We are more focused on on building clients that good show inputs of machine learning processes.</p>
+
+<p>Joan Masó (CREAF): From my point of view, and I'm biased, it's all about tiles.</p>
+
+<p>So what do you see a map or Melchior exactly the same title model.</p>
+
+<p>Joan Masó (CREAF): You know, this is called diamond exit in the mathematical tiles called in a different system, but each kind of the same mother model defines for Joan Masó (CREAF): Dial call the different systems.</p>
+
+<p>Well, in India GC, you could define that, how much you said that you like as far as you are able to describe it.</p>
+
+<p>Joan Masó (CREAF): Actually we make an effort Joan Masó (CREAF): To allow for three of the four TCS as in math ML to be also in the OTC a standard called two dimensional automatic set next D.</p>
+
+<p>And those are the equivalence between the math ML names in the left hand side on the Joan Masó (CREAF): Odyssey names in the right Joan Masó (CREAF): Tile sets.</p>
+
+<p>So we are talking about Dale said we are talking about collections of tiles that are going to be Joan Masó (CREAF): Partially presented to the to the user and will be kind of automatically replaced by others while user panel adult child sex are represented by URL templates, both in Odyssey API dolls and industrial TS as presented by government for and also in in my email.</p>
+
+<p>Joan Masó (CREAF): So the same URL template this useful there, you'll see the representation in the urgency openapi Joan Masó (CREAF): To do the presentation.</p>
+
+<p>And you see below in an email document I took the liberty to actually replace the x, y and Zed Barrios why the valuables that usually Joan Masó (CREAF): Usually using OTC I believe I'm not violating the the map umbrella standard by doing that.</p>
+
+<p>And these looks more similar.</p>
+
+<p>Joan Masó (CREAF): So, actually.</p>
+
+<p>Joan Masó (CREAF): Not the mail tiles are used, but my email doesn't specify how you will use them.</p>
+
+<p>Joan Masó (CREAF): In my email.</p>
+
+<p>There is no specification on how you will produce a mapping document.</p>
+
+<p>It's just telling you how I'm at the mill document should build like on the other hand, you do you see API tiles I collection can be distributed styles.</p>
+
+<p>Joan Masó (CREAF): So each style could be available as your as a URL responding to the URL template and India GC map tiles.</p>
+
+<p>There is a new thing that is called the title said meta data document.</p>
+
+<p>Joan Masó (CREAF): That it's going to be explaining after that and I will try to convince you that actually the map amount ease at I'll send middle they document.</p>
+
+<p>Joan Masó (CREAF): First let me say that didn't do this API guys will have several other sources that are listed here.</p>
+
+<p>And the last one allows us to connect or to transform our collection into tiles.</p>
+
+<p>Joan Masó (CREAF): But what I would like to present to you is the style said object.</p>
+
+<p>And this little set of Ziggy's in these particular path of the of the API representation you bet on a JSON document describing the title said Joan Masó (CREAF): A bit a bit of a de telematics a definition automatic set limits are your item plate and Joan Masó (CREAF): Maybe some description of the content of the tiles and this is I you ML diagram of how how it looks like.</p>
+
+<p>But actually, as I say, is Joan Masó (CREAF): Going to be a JSON file, but he tried to compare that another male is actually something that does a very similar thing.</p>
+
+<p>Joan Masó (CREAF): It provides some bit of metadata that I feel there, it points to the time it said definition or them dial in this case.</p>
+
+<p>Joan Masó (CREAF): It's a term limits.</p>
+
+<p>For instance, the maximum zoom will be 15 and it points to a URL template.</p>
+
+<p>As you can see there.</p>
+
+<p>So, I mean, the similarities is so clear that, actually, I Joan Masó (CREAF): You know I manipulated the OTC API allows example that I'm using it.</p>
+
+<p>Joan Masó (CREAF): In the, in the, you have not in the swagger hub.</p>
+
+<p>I'm just to fill that actually apart from the JSON representation do we could have a map a male representation.</p>
+
+<p>So maybe because I cannot use Joan Masó (CREAF): The actual media type format the mail, because then the swagger hub doesn't recognize that this is the XML but or or micro XML.</p>
+
+<p>Joan Masó (CREAF): But you, you see this is this is a new connection that we are seeing Joan Masó (CREAF): That really really Joan Masó (CREAF): Makes this relation between mapper mail and an odyssey API as possible.</p>
+
+<p>So in conclusion, mother mail is the simplest way for adding geospatial information in web browser that I know and mother mail makes us Joan Masó (CREAF): Of the oddity Joan Masó (CREAF): Or can make use of all the urgency API dials.</p>
+
+<p>Joan Masó (CREAF): To make it the urgency KPIs tiles you simpler in browser.</p>
+
+<p>So it provides a way to communicate to have the ABA resources.</p>
+
+<p>The title said on the URL template tiles to the browser itself.</p>
+
+<p>Joan Masó (CREAF): So the Odyssey API tiles provides a way to automatically generate mob ML documents, or at least that is our resumes that could have a representation in that Joan Masó (CREAF): Form.</p>
+
+<p>Joan Masó (CREAF): And do GC APA style could become the CGI of the mob ML form.</p>
+
+<p>So, actually.</p>
+
+<p>Joan Masó (CREAF): What I'm suggesting here in this presentation is that the urgency API is part one to consider to describe how to generate map ML documents as an alternate the format to the current JSON title set Joan Masó (CREAF): Meta data that needs on the urgency to the time magic set the standard and actually we are also considered on all of the out of the format for vector tiles for my box vector tiles of the skull tiles as Joan Masó (CREAF): So, thank you.</p>
+
+<p>Peter Rushforth: Thank you very much to one.</p>
+
+<p>So very interesting and would be great to connect the monumental effort of the OTC API work with the Peter Rushforth: Browser community through a media type.</p>
+
+<p>So with that little move on to Peter Rushforth: Jonathan rules of GLC Peter Rushforth: Which is a Geospatial web services search engine and he's got a Peter Rushforth: Few points to make about about his experience in developing that search engine.</p>
+
+<p>So Jonathan.</p>
+
+<p>Thank you very much and pass it over to you.</p>
+
+<p>Jonathan: Hello.</p>
+
+<p>Can you hear me.</p>
+
+<p>Jonathan: And see me on Jonathan: Screen anyway.</p>
+
+<p>Jonathan: So good.</p>
+
+<p>Excellent.</p>
+
+<p>Thank you.</p>
+
+<p>Ah, hello, everyone.</p>
+
+<p>Welcome to Edinburgh.</p>
+
+<p>Imagine your hair gray sky green buildings.</p>
+
+<p>Jonathan: That's Edinburgh.</p>
+
+<p>I've been very nice buildings to be Jonathan: So we've set the scene.</p>
+
+<p>I am here to talk to you about some of the limitations to the use of AGC spatial web services.</p>
+
+<p>Jonathan: Specifically, the discovery problem.</p>
+
+<p>How do you find the services, what's the point of having all these services.</p>
+
+<p>If you can't find them.</p>
+
+<p>Jonathan: To wit.</p>
+
+<p>I've created GSA, which is a search engine for services and then some thoughts and conclusions around such finding the services and what the problems currently are.</p>
+
+<p>Jonathan: So the discovery problem.</p>
+
+<p>That's just a second one.</p>
+
+<p>Jonathan: Yeah, so Jonathan: We've lost the page.</p>
+
+<p>So specifically, we're talking about the services w w w MTS WCS go be has already talked about them.</p>
+
+<p>They're all OTC services.</p>
+
+<p>They're all lots and lots of them on the Internet Question is how do you find them.</p>
+
+<p>Jonathan: You can try Googling but it's difficult.</p>
+
+<p>There are lots of portals.</p>
+
+<p>So the primary way to really find these things is with photos.</p>
+
+<p>Probably the portals is there are a lot of them.</p>
+
+<p>Jonathan: So I am aware of about 200 see can portals and 150 CSW portals.</p>
+
+<p>There is some overlap between them.</p>
+
+<p>But the short version is there are literally hundreds of these Jonathan: On top of that, you've got inspire portal and then all the art GIS ones as well.</p>
+
+<p>There are a lot of them.</p>
+
+<p>And the interesting thing about these is they don't actually have many of the services on them, but we'll get to that in a bit.</p>
+
+<p>Jonathan: So that brings us on to juicy juicy is designed to help you try and find services.</p>
+
+<p>Great.</p>
+
+<p>This isn't actually talk about juicer, per se, but the data that I've discovered Jonathan: Or we just got from the creation of juicer and the juicer analysis to see from having this huge index on the services juicer is a search engine.</p>
+
+<p>Jonathan: For the services, the way it works behind the scenes, very short version.</p>
+
+<p>It goes out finds get capabilities documents which all of the services present at scrapes them to extract all the meta data have Jonathan: Some all the metadata lives there optimistic right there and present turns it into basically a plastic Search Database behind it.</p>
+
+<p>Jonathan: And make that searchable.</p>
+
+<p>Great.</p>
+
+<p>Jonathan: So, Jonathan: What the results of that well GSA has pined it Jonathan: has managed to find 5000 different hosts or data and our hostess basically domain name example.com G I stuck on two different domains, two different hosts.</p>
+
+<p>Jonathan: USGS is one host usda.gov is one host.</p>
+
+<p>I forgot the top of my head, where the subdomains counters have per host.</p>
+
+<p>But either way, there are many there are 5000 of them.</p>
+
+<p>As you can see here this is data from December.</p>
+
+<p>Jonathan: That she served as even well it's about the same number of hosts.</p>
+
+<p>Now, but more data sets.</p>
+
+<p>So you've got 5000 hosts.</p>
+
+<p>Peter Rushforth: John or your slides advancing Jonathan: They should be.</p>
+
+<p>Which one are you looking at Peter Rushforth: We're looking at the w w w MTS and WCS Jonathan: Yeah computer's broken.</p>
+
+<p>Yes, I've got a few slides.</p>
+
+<p>Let's just stop the screen sharing and restarted.</p>
+
+<p>Jonathan: Have I progressed.</p>
+
+<p>Jonathan: Hasn't changed.</p>
+
+<p>Peter Rushforth: Yeah yeah Peter Rushforth: Excellent.</p>
+
+<p>Yo portals.</p>
+
+<p>Jonathan: Excellent.</p>
+
+<p>So yes, this is what I was talking about when there are like 200 portals and so you've got your 200 see can portals and 150 CSW portals.</p>
+
+<p>Jonathan: This is just a screenshot GSA when I was talking about that Scott capabilities document was just XML.</p>
+
+<p>Peter Rushforth: Everyone loves that.</p>
+
+<p>Jonathan: So this was Jonathan: Just talking about Peter Rushforth: Maybe I think the when you go into Peter Rushforth: full screen mode, it's not advancing, maybe you should just do it in edit mode.</p>
+
+<p>Yeah.</p>
+
+<p>Yep.</p>
+
+<p>Jonathan: Better Yeah.</p>
+
+<p>Jonathan: Lieber office seems to be quite broken presenting stuff.</p>
+
+<p>My goodness.</p>
+
+<p>Open Source Big fan, but this is better.</p>
+
+<p>So this is hopefully showing you the number of hosts and number services and stuff.</p>
+
+<p>Yeah.</p>
+
+<p>Good stuff.</p>
+
+<p>Jonathan: So, Jonathan: Yeah, sorry.</p>
+
+<p>Well as like good thing.</p>
+
+<p>This is a lightning talks bad time for technical problems.</p>
+
+<p>Jonathan: The number of.</p>
+
+<p>You can see the weirdness going on there with open.</p>
+
+<p>I don't know.</p>
+
+<p>Anyway, Jonathan: Technology right that's what we all do the number of hosts.</p>
+
+<p>So we've got 5000 and Jesse, you can see that if you look at all of the see can portals minus the USA one because it's different because it is Jonathan: You've only got 5% of the total number of hosts, and about 3% of the total number of data sets are available via all of those 200 see can portals as compared to Jonathan: Being on set, you know, CSW 6% even if you to manually go through those 315 portals, you would only find a small fraction of the data that is actually out there.</p>
+
+<p>Now there's own.</p>
+
+<p>These are all of these numbers of services that actually out there and actually live and actually current Jonathan: So they should respond.</p>
+
+<p>They did respond to get capabilities request.</p>
+
+<p>So that actually that Jonathan: The stuff on the portal is portals, of course, don't necessarily always have current live data.</p>
+
+<p>So the actual number of claims hosts may be higher, but this is number, it's actually there so you can see the problem with portals is Jonathan: Well, they don't really have much on them.</p>
+
+<p>Jonathan: And of course there are so many, so there's a blog post about it.</p>
+
+<p>Jonathan: So let's move on to other problems metadata.</p>
+
+<p>Everyone loves talking about fact that everyone feels and metadata.</p>
+
+<p>This is the only slide on it.</p>
+
+<p>But the short version is they really don't.</p>
+
+<p>And if you actually look at, say, the blue bits are decent metadata that's Peter Rushforth: 50 characters.</p>
+
+<p>Peter Rushforth: 10 words.</p>
+
+<p>Sorry.</p>
+
+<p>JOHN the slide for mine is still on.</p>
+
+<p>Peter Rushforth: Number nine.</p>
+
+<p>Jonathan: Number nine is going on here.</p>
+
+<p>Gobe Hobona (OGC): You might, it might be best to export it as a PDF and then Gobe Hobona (OGC): And then Gobe Hobona (OGC): Show that PDF Jonathan: That Peter Rushforth: Well, actually, I know you're on 1010 according to my screen.</p>
+
+<p>Jonathan: Brilliant.</p>
+
+<p>Okay.</p>
+
+<p>Yep.</p>
+
+<p>So 10 is the data set meta data.</p>
+
+<p>Keep going on this, tell me if it doesn't update.</p>
+
+<p>I'll tell you when I do the next slide.</p>
+
+<p>So part of fun.</p>
+
+<p>Jonathan: Data Set meta data.</p>
+
+<p>So basically, no one fills in for WNs there's Jonathan: barely any meta data.</p>
+
+<p>Jonathan: filled in for the abstracts Jonathan: Less than half of the services have any Jonathan: Day filled in the abstract.</p>
+
+<p>So how are you going to find the services are out there, and it's just not that Jonathan: Next slide.</p>
+
+<p>Jonathan: Hopefully a map.</p>
+
+<p>Peter Rushforth: And Peter Rushforth: Nothing here.</p>
+
+<p>I'm going to Jonathan: Click around a bit and Peter Rushforth: There you go.</p>
+
+<p>Yeah.</p>
+
+<p>Jonathan: I have to click a lot apparently before zoom picks it up.</p>
+
+<p>Jonathan: Yeah, so this is global coverage of where all these data sets are mostly Europe, these, this is just the title of in map of interest, mostly Europe so be quite a few North America.</p>
+
+<p>There's a hotspot over the Belgium and France, Germany, try point Jonathan: And but there are more of those maps more details, without the Hotspots Jonathan: URL. Jonathan: Slide going to click a lot Jonathan: Here we go, so juicy usage.</p>
+
+<p>So despite you say having a huge number of index of being completely free to use doesn't even have adverts Jonathan: And there's actually very little uptake of it, which indicates there isn't much call for searching for the services in the first place.</p>
+
+<p>So we've got 2 million data sets and juicy as only gets around 1500 searches per month.</p>
+
+<p>Jonathan: So all of these data sets are out there.</p>
+
+<p>They're all published Jonathan: Huge amounts of money being spent to publish them, but just collect them publish them alone inspire, for example, the end result is that doesn't seem to be a huge amount of uptake in actually collect the in people finding these data sets or being interested in finding these data sets.</p>
+
+<p>Jonathan: Which brings us on to the conclusions.</p>
+
+<p>Jonathan: Around that Jonathan: We are hopefully thoughts and conclusions.</p>
+
+<p>Jonathan: The obvious one.</p>
+
+<p>People are terrible at filling metadata.</p>
+
+<p>Jonathan: Surprise.</p>
+
+<p>Jonathan: There doesn't seem to be much call for service and data discovery, it's a problem that's being solved on and off the last 15 years Jonathan: Most of services that have ever existed doing it now defunct Jonathan: Slide Advanced Jonathan: Now this is just thoughts.</p>
+
+<p>In conclusion, same effectively reading them out.</p>
+
+<p>So you're not missing a huge amount Jonathan: Yeah.</p>
+
+<p>Zoom Plus Lieber office is not a combination you want to use.</p>
+
+<p>Jonathan: Zoom on Firefox.</p>
+
+<p>So it's like the open source option.</p>
+
+<p>I don't know.</p>
+
+<p>Anyway, Jonathan: Federation of data portals is a great idea, but the end result is you just end up far far too many data portals which themselves don't necessarily have much data on Jonathan: And the question.</p>
+
+<p>Jonathan: That I suppose I want to ask or to put forward is how many of these services exist for the purposes of sharing data.</p>
+
+<p>Jonathan: Isn't just to share and how many exists, just to host data for their own data portals.</p>
+
+<p>So if you build a web app you happen to come with the web app happens to come with a WNs Jonathan: That bill that's just deployed for its own portal as compared to ones that are explicitly designed for is all our data habits about it.</p>
+
+<p>Jonathan: Doesn't even if there is much of that explicit sharing that doesn't seem too much explicit usage based on juices.</p>
+
+<p>Jonathan: Search usage uptake and that's me.</p>
+
+<p>One very exciting presentation filled with lots of entertaining bugs.</p>
+
+<p>The Peter Rushforth: Technical guide because Jonathan: Well, if you're not working.</p>
+
+<p>Jonathan: Struggling get bugs.</p>
+
+<p>Yes.</p>
+
+<p>Peter Rushforth: You very much.</p>
+
+<p>I mean a partner, aside from the technical bugs, which are always a bit confounding when you're live for the presenter, but not so much for us.</p>
+
+<p>I mean, I think we got the idea you presented some very interesting food for thought and thank you for that.</p>
+
+<p>Thank you.</p>
+
+<p>Peter Rushforth: So with that, I think what I'll do is Peter Rushforth: Since it's a Peter Rushforth: It's 9am Peter Rushforth: Ted, do you think we have time for a short demo from from Peter Rushforth: Francesco and Tom and before we move into our panel situation.</p>
+
+<p>Ted Guild: Let's give it a shot.</p>
+
+<p>Ted Guild: Okay, since the final Ted Guild: Few minutes if necessary.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Yeah, true.</p>
+
+<p>Probably the panel is not going to go too long.</p>
+
+<p>All right.</p>
+
+<p>So Tom and agile and agile, San Francisco, could you Peter Rushforth: I want one of you share your screen and give us a demo that you were proposing.</p>
+
+<p>Francesco Bartoli: Yes, sure.</p>
+
+<p>I'm going Francesco Bartoli: To share my screen.</p>
+
+<p>Francesco Bartoli: D. Francesco Bartoli: Hello.</p>
+
+<p>Bryan Haberberger: Are you seeing my screen.</p>
+
+<p>Not yet.</p>
+
+<p>Peter Rushforth: Hello, no.</p>
+
+<p>Francesco Bartoli: Do you see, do you see my screen.</p>
+
+<p>Francesco Bartoli: No, I'm sharing Peter Rushforth: Okay, no, I am Francesco Bartoli: Okay, cool.</p>
+
+<p>Now this is the landing page by geo API we this is a local obviously obviously this is a local instance JUST TO GIVE YOU THE MORE DETAIL, DETAIL about this permission from Tom.</p>
+
+<p>We have two resources.</p>
+
+<p>One, it's the now famous large lakes.</p>
+
+<p>Francesco Bartoli: The lake, sir, is rules the lakes layer as to kind of specification under the providers.</p>
+
+<p>One is the feature the GAC API feature.</p>
+
+<p>And the other one is the Odyssey API tiles.</p>
+
+<p>As you can see here the, the actual data for the Francesco Bartoli: Odyssey API tire and point comes from a local instance, a local object store provided by a menial server.</p>
+
+<p>So we have Francesco Bartoli: My books vector tiles loaded into an object store and provided Francesco Bartoli: Locally to configure it to the baiju API.</p>
+
+<p>So Francesco Bartoli: Essentially from the landing page, we can go through the collection, we can explore all the collection in the assistance and if you Francesco Bartoli: If you go Francesco Bartoli: Over the large lakes year there is the an introduction HTML.</p>
+
+<p>These is the HTML.</p>
+
+<p>HTML representation.</p>
+
+<p>But essentially, on the link in the upper right side, we have also the JSON representation and the JSON LD. So essentially if you want to Francesco Bartoli: To go to the actual vector tiles representation for larger large lakes.</p>
+
+<p>We can follow these links and we open up Francesco Bartoli: The HTML representation on the maps which dynamically load and proxy the di the vector tiles.</p>
+
+<p>So the my books back toward sites.</p>
+
+<p>Francesco Bartoli: Which are provided by the backend server.</p>
+
+<p>And for me, we have also the meta data presentation in the tile JSON format.</p>
+
+<p>So if you go to that link a new HTML page is Chauvet and obviously there is also it's JSON representation and Francesco Bartoli: Just to reinforce the concept that a john Francesco Bartoli: told you before, there is obviously year the JSON representation of the Francesco Bartoli: Vector of.</p>
+
+<p>Yeah, or the vector tiles and points.</p>
+
+<p>So you can have the actual you arrive and played Francesco Bartoli: With the different tile Metrix set ID and where that title magic set ID.</p>
+
+<p>Francesco Bartoli: resides in terms of actual JSON content and Francesco Bartoli: I think for what regarding what regards the maps.</p>
+
+<p>I think it can be all apart from that, obviously, we can go to the Francesco Bartoli: Also to the Francesco Bartoli: Actual Francesco Bartoli: Or GC API feature HTML representation here you have the an overview already in provided in HTML markup and essentially the Francesco Bartoli: Nice HTML. HTML representation of the records and all of these can be also Francesco Bartoli: Correlate as a JSON representation which provides the feature.</p>
+
+<p>So as a geo JSON.</p>
+
+<p>We, the official collection.</p>
+
+<p>Francesco Bartoli: bailouts.</p>
+
+<p>Francesco Bartoli: And I think it's Francesco Bartoli: That seat.</p>
+
+<p>I don't know if Francesco Bartoli: There is some question about Francesco Bartoli: By GOP I in general or the vector style implementation.</p>
+
+<p>I'm open to to answer.</p>
+
+<p>Francesco Bartoli: I don't tell you, Peter.</p>
+
+<p>I'm going to stop.</p>
+
+<p>Ted Guild: Hearing Peter Ted Guild: But next up we have Ted Guild: Shoppers in this panel on Ted Guild: One.</p>
+
+<p>Sorry.</p>
+
+<p>Ted Guild: Yeah, no.</p>
+
+<p>Stakeholders Gobe Hobona (OGC): The microphone selection thing.</p>
+
+<p>Ted Guild: Lost your audio again.</p>
+
+<p>Peter Rushforth: Yeah.</p>
+
+<p>Peter Rushforth: There we go.</p>
+
+<p>My okay Peter Rushforth: Okay, so Peter Rushforth: We're going to go over to our panel now of stakeholders for government geospatial data providers on the web.</p>
+
+<p>Peter Rushforth: And we have from the National Center of geographic information in Spain Emilio Lopez from arrow and from the Canadian geospatial data infrastructure.</p>
+
+<p>We have Cameron Wilson.</p>
+
+<p>I hope and Sebastian direct from the Canadian federal geospatial platform.</p>
+
+<p>Peter Rushforth: And Dan Sullivan from NASA Peter Rushforth: And so Peter Rushforth: What I'd like to do is to ask each of them starting with Sebastian.</p>
+
+<p>Peter Rushforth: To introduce themselves and tell us a little bit about Peter Rushforth: About the their background and the and their potential use of maps for the web maps in HTML and and help.</p>
+
+<p>I'll leave that up to you guys.</p>
+
+<p>So, Sebastian, over to you.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Well, thank you.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): First, I'd like to thank everybody on the phone on the line today.</p>
+
+<p>I'm really pleased to be part of that.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That workshop.</p>
+
+<p>I think it's a perfect setup for for the Canadian just visual platform.</p>
+
+<p>It's quite a context.</p>
+
+<p>So I just want to say a big thanks and I'm quite amazed with the pertinence of the conversation.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Has been happening so far.</p>
+
+<p>So kudos to all so myself.</p>
+
+<p>May, June, analytics team manager within the Canadian just visual platform.</p>
+
+<p>We are within the natural resource Canada obviously for the Government of Canada.</p>
+
+<p>No.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Bottle my general responsibilities are to provide products to the to the different clients.</p>
+
+<p>We have and it does provide over time, a lot of expertise and not expertise but a good sense of what are the requirements.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Of all the geo people, people who have interesting journey maps, for example.</p>
+
+<p>So just going back to the Canadian special platform itself.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): We are an organization that aims to enable the government and what we we did find is lately.</p>
+
+<p>I mean, while the platform has been actively importing data from diverse level of jurisdiction being Sébastien Durand (Canada - NRCAN - CGP): From federal, provincial to referral sources.</p>
+
+<p>The platform is also working at improving its web presence.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): The cadence platform didn't realize how crucial it is to facilitate search discovery and visualization through the web.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): I mean, nowadays, even in government situation where we realize that the web is gaining even more.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Proceedings, it's the primary means of communication.</p>
+
+<p>So it's, it is really at the front end and how we disseminate content so that's that's crucial, crucial.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): And the medical center.</p>
+
+<p>So now with the children's information from all fields definitely can be integrated to provide insight through both space and time.</p>
+
+<p>And I guess that's a everybody around the table is spirit that Sébastien Durand (Canada - NRCAN - CGP): But there's actually a magical feeling when we see information of interest and it's viewed and put into context on a map, not only because it's it provides a unique experience online, the user to understand the situation.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): But also because it provides a feel of a common operating picture to all users that is the true value of a geo product, it, it transcends all the different spheres of in which the information has been gathered from you can put it all together.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): So if effort is put it into any product you can officially provide a common operating picture that means provide Sébastien Durand (Canada - NRCAN - CGP): Tangible information and simple fashion so that people can consume it and and there's no real like there's no equivalent to substitute have the capacity Sébastien Durand (Canada - NRCAN - CGP): So, until now, I mean expert have been using scripts search engines optimization API's along with advanced software to make an publish maps.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): But I think we have to ask ourselves the following question is what are not.</p>
+
+<p>Does this make the job information through the available and accessible and consumable Sébastien Durand (Canada - NRCAN - CGP): Nowadays, I guess, the web is the primary means of expression, like I mentioned before, and an HTML is obviously edit score and it does act as a lowest common denominator.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Because we see that over 90% of the new not quite data now processes Joe references down to just images that you think with your phone.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): It makes logical sense to see that this community investigate and address how we can how can we act of mapping be made more accessible to all HTML users directly from their browsers as they actually called their page.</p>
+
+<p>So I think that is providing a bit of a Sébastien Durand (Canada - NRCAN - CGP): Perspective that is both mine and that of the GP or Keynesian special platform and I'll be happy to answer any other questions or give some further insights or maybe address some challenges that we may have if that's of interest to the panel.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Thank you very much.</p>
+
+<p>Peter Rushforth: Thank you very much.</p>
+
+<p>SEBASTIAN.</p>
+
+<p>So I'll pass it over to a miracle Lopez Romero from the inspire initiative in Spain.</p>
+
+<p>Peter Rushforth: Night.</p>
+
+<p>Thank you.</p>
+
+<p>You're welcome.</p>
+
+<p>Peter Rushforth: I'm muting you Emilio López (CNIG): Okay.</p>
+
+<p>Thank you, Peter.</p>
+
+<p>And thank you for the opportunity to participate in this panel.</p>
+
+<p>Emilio López (CNIG): My name is Emily Lopez, director of the National Center of geographic information.</p>
+
+<p>One of the main goals of my institution is the coordination of the national spatial data infrastructure office paying Emilio López (CNIG): There are Emilio López (CNIG): Several organizations involved different administrative levels, national, regional and local Emilio López (CNIG): And I think that it's important to notice that in Europe, the Member States has to fulfill the requirements of inspire Director of the European Commission, establishing SDI for Europe, consisting of national SBA and aim to facilitate the decision making process regarding environment.</p>
+
+<p>Emilio López (CNIG): Hence a standardization harmonization and common the specification have become Natale mandatory but crucial for us.</p>
+
+<p>Emilio López (CNIG): Since we are providing a with web services achieving at companies use our services has been an important challenge.</p>
+
+<p>Emilio López (CNIG): Even though they are free and open Emilio López (CNIG): Therefore, fill in the gap between our web services Web Map will feature work cattle services and web developers is beta an open API new disease specification map futures on the web at fundamental level will be part of the solution.</p>
+
+<p>I'm sure Emilio López (CNIG): I have Emilio López (CNIG): To say, I would like to say that Emilio López (CNIG): A one out of four maps that adult load using our top phones.</p>
+
+<p>Emilio López (CNIG): Are the loaded via web services.</p>
+
+<p>Emilio López (CNIG): And other important aspect because there are several administration using our web services like the canister Department of Emilio López (CNIG): Agriculture to ministry and have the most important Emilio López (CNIG): Clients, we have, but a our feeling is that the private sector is not using the our free.</p>
+
+<p>I'm hoping resources.</p>
+
+<p>Emilio López (CNIG): Enough.</p>
+
+<p>Emilio López (CNIG): Thank you.</p>
+
+<p>This is what I would like to say first time.</p>
+
+<p>Peter Rushforth: Thank you very much, Emilio is interesting it aligns with some of the things we talked about today.</p>
+
+<p>Peter Rushforth: So, Peter Rushforth: Now I'd like to introduce Cameron Wilson of the Canadian geospatial data infrastructure and let him speak for himself.</p>
+
+<p>Thanks, Cameron.</p>
+
+<p>cawilson: Welcome everyone.</p>
+
+<p>cawilson: My name is Cameron Wilson.</p>
+
+<p>cawilson: I may work with Natural Resources Canada and I've been working on spatial data infrastructures for going on 20 years now.</p>
+
+<p>cawilson: In a program called geo connections program.</p>
+
+<p>I'm the manager of the program.</p>
+
+<p>And we've been doing a lot of work on standards in the Arctic and Canada's geospatial data infrastructure and also trying to incorporate both marine and bland base infrastructures.</p>
+
+<p>cawilson: My formal training and as a geographer, and that as part of that training, everything has a location and everything is in time.</p>
+
+<p>cawilson: That's one bias.</p>
+
+<p>I sort of like to declare right off the bat.</p>
+
+<p>And so this lends itself well to where we're having these conversations but be more integrated into the general web environment of the world and having that value of location and time.</p>
+
+<p>cawilson: Also another bias like to declare and this is cawilson: It's about analytics and analytics have predictive capabilities.</p>
+
+<p>cawilson: Maps are effectively the PowerPoint of those analytics.</p>
+
+<p>They're the output of those analytics.</p>
+
+<p>So as we move forward.</p>
+
+<p>You know, how do we make those maps popular.</p>
+
+<p>How do we make those analytics, seen by more and more people cawilson: I have.</p>
+
+<p>I've been an open data champions since 1999 1998 with the formation of a website called geo gratis and the main value around that was out of data democratization.</p>
+
+<p>cawilson: What I didn't realize at that point in time 20 years ago is that we also need a democratization for access cawilson: Those early days, you know, the data access was strictly through an FTP server was very simple, very crude but also quite effective for a certain audience.</p>
+
+<p>cawilson: Today, while I would argue a veneer of gender geography, a very thin veneer geography is available through popular apps that we use on our phones on a regular basis.</p>
+
+<p>cawilson: These ads are to primarily designed to maximize advertising revenue.</p>
+
+<p>cawilson: For those people putting on the content and provides driving directions.</p>
+
+<p>So those will seem to the two main use cases for any for the apps you have on your phone.</p>
+
+<p>cawilson: They do not begin to address the social, economic or environmental needs of an analytical functions that come with GIS imagery and imagery analysis methodologies.</p>
+
+<p>cawilson: Conversely, are sort of what we are bread and butter that we're all kind of comfortable with his family survive.</p>
+
+<p>So the old term was GIS on the web, you effectively restored during cawilson: Data catalogs and other sort of portal implementations.</p>
+
+<p>They remain would argue that dish for the general public usage.</p>
+
+<p>You see my see my all my kids now old are in their 20s and 30s.</p>
+
+<p>cawilson: You know, they're looking for Matt and unless you're going hunting and even then, one of my subclinical Sunday's a horrible, horrible time trying to find all this stuff with GOP geographically table ports.</p>
+
+<p>cawilson: So that being said, I think that's a good introduction, but I think like the core of this discussion is how to make geography part of our day to day web usage or mass market implementation.</p>
+
+<p>Peter Rushforth: Thank you very much.</p>
+
+<p>Cameron well said.</p>
+
+<p>Peter Rushforth: So now I'd like to introduce Dan Sullivan from NASA to Peter Rushforth: round out our panel today.</p>
+
+<p>Peter Rushforth: Don's only on the phone today.</p>
+
+<p>So over you don't Peter Rushforth: If you're still there.</p>
+
+<p>don sullivan: Alrighty, thank you can hear me now.</p>
+
+<p>Yes.</p>
+
+<p>All right.</p>
+
+<p>Yeah, I gotta go to mute and unmute into play here.</p>
+
+<p>So good morning.</p>
+
+<p>Oh.</p>
+
+<p>don sullivan: I'm sorry about the unlike a video on my laptop and videos disabled.</p>
+
+<p>don sullivan: would also like to preface this with with all of what I'm going to be saying this morning is is my opinion.</p>
+
+<p>My personal opinion, and it's not necessarily the don sullivan: Policy of NASA or the US government.</p>
+
+<p>So, blah, blah, blah, blah, blah.</p>
+
+<p>In any case have been have been don sullivan: Thinking around the GIS World Forum for a long time.</p>
+
+<p>Um, well.</p>
+
+<p>Okay, before we do that.</p>
+
+<p>Technically I'm, I'm the system engineer.</p>
+
+<p>I work for the NASA airborne science program in the Ames Research Center in Silicon Valley of California.</p>
+
+<p>So background I first started don sullivan: Doing them doing JS on the web.</p>
+
+<p>When I worked on a program that displayed the USGS digital or the photo quarter quad.</p>
+
+<p>don sullivan: On telco base maps.</p>
+
+<p>don sullivan: This was, this was, um, I don't know 9495, something like that.</p>
+
+<p>don sullivan: The browser, we use was mosaic.</p>
+
+<p>For those of you who remember this, and we had a third web server in any case.</p>
+
+<p>don sullivan: That was, that was horrible.</p>
+
+<p>All the Jimmy relations on we're on the server.</p>
+
+<p>It was just, it was a nightmare.</p>
+
+<p>But we did it anyhow.</p>
+
+<p>I'm one of the authors of the first implementations of the web service for the OTC don sullivan: Illusion plus and Jeff t shirt da or the other ones.</p>
+
+<p>don sullivan: I'm the one that's representative to the Open Geospatial Consortium technical committee where I could share a few few don sullivan: working groups.</p>
+
+<p>They're merging disaster management systems aviation.</p>
+
+<p>don sullivan: I'm the, the Chair of the US delegation to ISO TC 211 G is here.</p>
+
+<p>And when I heard about this.</p>
+
+<p>don sullivan: Map something the web and and and maps as first class citizens.</p>
+
+<p>I went, oh my God, yeah.</p>
+
+<p>So, um, so I'm, I'm here, just as a don sullivan: Champion.</p>
+
+<p>I think this is just an amazing idea that that is that has been way too long in coming out the wind for this for over 20 years now so so good morning all and I'll go back to you.</p>
+
+<p>But I'll be glad to answer questions.</p>
+
+<p>Peter Rushforth: Okay.</p>
+
+<p>Peter Rushforth: Well, we haven't done a panel yet.</p>
+
+<p>So this is a first.</p>
+
+<p>So I guess we could probably entertain questions, but maybe if you want to type your questions.</p>
+
+<p>Well, I'll ask the first question, and then Peter Rushforth: If you have other questions you can type them into the the the chat panel and I'll repeat them or you can raise your hand, somehow, I'm not sure how that works on zoom Peter Rushforth: So yeah, I have a question.</p>
+
+<p>Cameron.</p>
+
+<p>Peter Rushforth: How, uh, you know, if you were looking for the non commercial Peter Rushforth: Information that the government's can provide.</p>
+
+<p>Like how would that how do you see that Peter Rushforth: You know, how do you see that being them.</p>
+
+<p>Peter Rushforth: Happening on the web and like non commercial government information that could be provided in a way to make it more useful.</p>
+
+<p>How do you see that being Peter Rushforth: What's the scenario in which you see that being useful.</p>
+
+<p>cawilson: Um, cawilson: Oh, cawilson: I like to think of it in terms of something that cawilson: A person might do in their house that has nothing to do with geography.</p>
+
+<p>cawilson: Know like there's that they have a task to do a household has a task to do so.</p>
+
+<p>cawilson: I noticed you know i don't know what it's like in every in every other city, but I know many cities in Canada, the real estate market has just gone nuts.</p>
+
+<p>cawilson: I don't know if it's your coven or whatever, but the the demand exceeds supply.</p>
+
+<p>So if I wanted to go buy a house or a cottage right now.</p>
+
+<p>How would I do that.</p>
+
+<p>cawilson: And I know how I would do it even as a geographer knowing you.</p>
+
+<p>But all this great stuff.</p>
+
+<p>I would just go to my favorite browser, and I would start searching for a house.</p>
+
+<p>cawilson: And let's say that hostess in a different city to make it a bit more interesting.</p>
+
+<p>So I know nothing about where I'm looking.</p>
+
+<p>I just know I want to be in a certain area for some reason.</p>
+
+<p>So I wouldn't let cawilson: My family laughs at me because once I get on a browser, I can have 20 3040 tabs going.</p>
+
+<p>I'm actually surprised the browser can still work.</p>
+
+<p>cawilson: And you get, you know, so you're what you're searching for.</p>
+
+<p>Well, you know, I have this area of interest to buy a house or a cottage.</p>
+
+<p>So I'm looking around that area but but know what are the values of those of those properties in that area.</p>
+
+<p>cawilson: What is around the houses are a factor behind.</p>
+
+<p>Is there a school behind or toxic dump behind it, or is it a beautiful park.</p>
+
+<p>cawilson: Is our education for myself and family to go to.</p>
+
+<p>What's the crime rate.</p>
+
+<p>What's the access to health facilities retail and public transit.</p>
+
+<p>cawilson: And before you know you've got, you know, all these very small tabs on your browser open and you still don't have a map.</p>
+
+<p>cawilson: You know, I'd have nothing to actually guide me as to all these options.</p>
+
+<p>No one, as I said earlier, the PowerPoint of the analysis, something I can show my family, you know, here it is.</p>
+
+<p>I can't go around showing with 20 or 30 tabs.</p>
+
+<p>cawilson: So imagine you know we're now I can just drag one tab on to another tab drag and drop.</p>
+
+<p>Basically, and it will build up a visual representation cawilson: Of my research and I can say, oh, look, I found this place.</p>
+
+<p>I found that place.</p>
+
+<p>This one's kind of beautiful park.</p>
+
+<p>This one's really nice, but there's no hospital nearby.</p>
+
+<p>cawilson: And this is what happens.</p>
+
+<p>So I see that as one scenario where, you know, the general public, just, you know, I think he up you know the fact I can just create this cawilson: Synthesis of my research in a map form rather to to be being driven by the browser engine is suddenly tapping into some sort of plugin.</p>
+
+<p>cawilson: We also see other examples, we'd have a law work in the Arctic.</p>
+
+<p>cawilson: And you know, it's very important because this is the polls are being devastated by climate.</p>
+
+<p>cawilson: So how, and the people that live in the Arctic in these remote communities.</p>
+
+<p>cawilson: Learning about geography and API is and all his stuff is the absolute last thing on their mind they're dealing with, you know, cawilson: serious health issues employment issues.</p>
+
+<p>cawilson: Clean water.</p>
+
+<p>cawilson: Very you know fundament on mental so life.</p>
+
+<p>Peter Rushforth: Somebody not community because Peter Rushforth: Somebody on the chat.</p>
+
+<p>Clear out that you know there's portals like Zillow and real estate com available for like host search.</p>
+
+<p>And I guess that's true.</p>
+
+<p>But I guess it doesn't apply to Peter Rushforth: You know, while it might not be as relevant for the Arctic, for example.</p>
+
+<p>Peter Rushforth: For things that you're you're looking for in the Arctic, because I'm not sure they're on Zillow for one thing.</p>
+
+<p>Peter Rushforth: No, no, there's cawilson: Really, but I'm just what I'm suggesting is even, even with we have real estate sites, of course, you can get to that real estate site.</p>
+
+<p>But then when you get you get a listing cawilson: It's not showing what the hospital, is it doesn't say there's a Children's Hospital.</p>
+
+<p>It doesn't say if you know you know i don't get mugged.</p>
+
+<p>When I walk out the door.</p>
+
+<p>You know you want all this is similar information is with questions, how to easily combine that in summary information.</p>
+
+<p>Peter Rushforth: Right.</p>
+
+<p>Okay.</p>
+
+<p>Well, another question that's come in is, what is the role and ultimate need of Peter Rushforth: Government in regards to mapping on the web.</p>
+
+<p>So maybe I'll hand that off to Sebastian from the Canadian geospatial platform.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That's a, that's a good question.</p>
+
+<p>Just to give some context.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): The platform does provide a stepping stone and answers they need from maybe half of the government departments and agencies.</p>
+
+<p>So that's the number of contributors, we have Sébastien Durand (Canada - NRCAN - CGP): We are in the process of onboarding almost all of the provinces and territories also just at least to gather information and then share it, but Sébastien Durand (Canada - NRCAN - CGP): After all that, you know, I think that to answer the question is Sébastien Durand (Canada - NRCAN - CGP): I wouldn't first want to go with what is the role of government in in all this.</p>
+
+<p>And how do we enroll government is is to administer certainly an easy and easy.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Now the question is, how does the government administer technically you actually define rights restrictions and responsibilities on futures through time and space.</p>
+
+<p>So again, you kind of set up the framework that way.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Now what's unique about government is that we can legally define information as law so that information becomes authoritative and really provides an ultimate framework that can, you know, shape, decision making and operations.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): The ultimate need of the government is to be able to leverage such ultimate framework.</p>
+
+<p>So now it's not for who's into the cloud.</p>
+
+<p>For example, we're trying to establish all that properly.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): But build the knowledge takes over that framework so that we can then render authoritative map products.</p>
+
+<p>And I think the best example for that is, is go visit Sébastien Durand (Canada - NRCAN - CGP): Having account of your local area on Google cases is very pertinent.</p>
+
+<p>But everybody wants to see Sébastien Durand (Canada - NRCAN - CGP): Whereas the hotspots.</p>
+
+<p>How does it go in time.</p>
+
+<p>What's the, what are the trends, so that you can actually represent properly.</p>
+
+<p>The, the theological situation associated with coded Sébastien Durand (Canada - NRCAN - CGP): So, so that perspective requires actually an integrated perspective, it requires a an effort from a coalition of groups that actually built on the third set of data to deliver something that is usable, the question about Sébastien Durand (Canada - NRCAN - CGP): Something that Jonathan mentioned before about about data being used, or sometimes not really used as much as I think it's not really the question.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): We want to make the data out there available, but what we're missing is Sébastien Durand (Canada - NRCAN - CGP): We as technical experts democrats or john or Joe special experts, we need to bring the products, up to a point where it, it becomes a viable entity.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That can be consumed by anyone.</p>
+
+<p>And that's what actually makes the system work and and we see the GC doing a fair amount of work from a backbone standpoint.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): But in the end, this whole environment ecosystem.</p>
+
+<p>I'm a biologist from background information.</p>
+
+<p>I know that if if you cannot duplicate yourself if you cannot grow and spread your genes.</p>
+
+<p>You're not living Sébastien Durand (Canada - NRCAN - CGP): Your just rock waiting for, you know, the cake so that that living capacity needs to be provided through the mapping experience from the back end up to the front and whole experience so Sébastien Durand (Canada - NRCAN - CGP): The need of government from a mapping standpoint is to be able to connect to what matters so that we can deliver the right information in the consumable way to the users.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That is, to me, the real challenge.</p>
+
+<p>Peter Rushforth: Okay.</p>
+
+<p>Peter Rushforth: Thank you for that.</p>
+
+<p>Um, I guess I would encourage the other panelists to chime in with editorials on other on there on the panel responses just cawilson: Like on a point to that Sebastian just mentioned, but the world government.</p>
+
+<p>cawilson: So if we consider you know you know what's popular on the web.</p>
+
+<p>You know, like I cannot be honest I use Google Maps a lot when I have to go find something.</p>
+
+<p>I'm looking for a supplier.</p>
+
+<p>cawilson: A restaurant and you driving directions.</p>
+
+<p>There's an accident on the road.</p>
+
+<p>It's great for that.</p>
+
+<p>And that's all.</p>
+
+<p>And you know law that's monetize through advertising revenue.</p>
+
+<p>cawilson: In that case, Google or whatever the platform is would receive cawilson: But government's responsibilities are very broad.</p>
+
+<p>As I mentioned, economic, social and environment and government is not monetizing through advertising government monetize this or taxes.</p>
+
+<p>cawilson: So in order to meet you know what the voters want us and simply.</p>
+
+<p>So how does the richness of all all that data around, especially the environment society and economy, make it into cawilson: mass market applications.</p>
+
+<p>I think that's a fundamental question for government Peter Rushforth: Okay.</p>
+
+<p>Peter Rushforth: I have a question for Dawn from the audience up through the, through the Peter Rushforth: Get her channel.</p>
+
+<p>Peter Rushforth: Are there special needs and requirements for maps for NASA like timeline dimension.</p>
+
+<p>don sullivan: Okay, I'm sorry I wasn't quite catching that timeline dimensions repeat don sullivan: It.</p>
+
+<p>Yeah.</p>
+
+<p>Peter Rushforth: Are there special needs or requirements for maps for NASA like timeline dimensions or other things.</p>
+
+<p>don sullivan: Um, boy.</p>
+
+<p>Okay, so that they can be answered so many different ways.</p>
+
+<p>There, there certainly are.</p>
+
+<p>don sullivan: Time sensitive dimensions to almost everything we do, we're primarily data providers, although in the airborne science program where I spend most of my time.</p>
+
+<p>don sullivan: We're, we're data consumers primarily of aviation, that was really, really quickly and accurately.</p>
+
+<p>So yes, there is a, there certainly as a temporal domain to it.</p>
+
+<p>I'm still not exactly sure what the questions, go on.</p>
+
+<p>But, but, yes, the and again I'll take note of airborne science programs specifically don sullivan: We we live with with data that is that is that is temporarily define and and and both producers and consumers.</p>
+
+<p>So if you could elaborate on the question a little bit.</p>
+
+<p>I'd be glad to go where where the questioner.</p>
+
+<p>don sullivan: Was heading.</p>
+
+<p>Peter Rushforth: Okay, well, Peter Rushforth: Let me see their information.</p>
+
+<p>cawilson: And Peter and john I can probably compliment about one a little bit cawilson: And talk about the article.</p>
+
+<p>Little bit earlier.</p>
+
+<p>cawilson: And one of the goals for socializing right now is the notion of a six dimensional art exhibition data infrastructure.</p>
+
+<p>So the six dimensions would be x, y and Zed, but based on any coordinate system, including to school global grid systems which can also like well into mapping, though.</p>
+
+<p>cawilson: And then can be anywhere from, you know, geology, right up to the atmosphere.</p>
+
+<p>The other, the other reference systems, of course, the other dimensions are time cawilson: Obviously for change detection.</p>
+
+<p>The next one is any scale or vectors.</p>
+
+<p>So anything with a direction and magnitude.</p>
+
+<p>So I'm thinking currents and migration.</p>
+
+<p>cawilson: Would be in that and the sixth one is what I would call grey literature.</p>
+
+<p>So the whole bibliographic community around the scientific literature and house.</p>
+
+<p>They all have a location as well and how that incorporated Peter Rushforth: Right.</p>
+
+<p>Peter Rushforth: Well, I guess in defense of the math ML specification.</p>
+
+<p>We try to Peter Rushforth: Pay attention to the W s and W MTS use of dimensions.</p>
+
+<p>So you can in theory query the query the map source at any at any value of discrete dimension that is provided as a select list and I'll go through that in my breakout Peter Rushforth: But Peter Rushforth: So there's a question about, is it the cost of cost effectiveness of Peter Rushforth: Of Peter Rushforth: Maps in HTML or versus API implementations of it.</p>
+
+<p>And I think that the question is more Peter Rushforth: And I'll put it out to the panel.</p>
+
+<p>Is it is it.</p>
+
+<p>I mean, I think the the idea of maps in HTML is to make it simple, like the simplest possible interface to get a basic map going and and the idea behind that is not to choose between API's and Peter Rushforth: And client technology, but to have both, you know, to make them work compatible and so would would simplifying with simplifying the developer experience.</p>
+
+<p>Let's say for at the low end Peter Rushforth: Or at the entry level with simplifying the entry level make a difference to the consumption of your services.</p>
+
+<p>Is that something that Peter Rushforth: Would be of interest and valuable for for your, for your business, your use cases.</p>
+
+<p>Peter Rushforth: And I'll maybe I'll put that to Emilio Emilio López (CNIG): Yes, thank you.</p>
+
+<p>Um, I was thinking that one product, at least for us when when your web services are free.</p>
+
+<p>I'm hoping is that sometimes a.</p>
+
+<p>We don't know.</p>
+
+<p>Emilio López (CNIG): Very much about our clients.</p>
+
+<p>Emilio López (CNIG): Because Emilio López (CNIG): Yes, we know, then the number of requests bus.</p>
+
+<p>A if you don't have information in the user agent or the fields of the HTTP protocol.</p>
+
+<p>It's impossible to know to know Emilio López (CNIG): Something very important information all of our clients and this is a Emilio López (CNIG): Difficulty that we suffer with a wire services.</p>
+
+<p>Emilio López (CNIG): And I would like to say something about alternative data because always a mapping agencies.</p>
+
+<p>Talk about that our data.</p>
+
+<p>Emilio López (CNIG): Alternative, but I think that it is not enough for instance if you use topographic map from our National Geographic Institute and finally a you are lost in the forest.</p>
+
+<p>Emilio López (CNIG): We don't have any Emilio López (CNIG): There are not any legal implication, so that our data are out there it is.</p>
+
+<p>It's not enough is important.</p>
+
+<p>The good quality and Emilio López (CNIG): Updating all of the data.</p>
+
+<p>Emilio López (CNIG): Or a Emilio López (CNIG): Or the thing is for coverage that data in this case in Spain, a cluster data.</p>
+
+<p>Emilio López (CNIG): Around our not only our authority, but a are Emilio López (CNIG): legally binding as well.</p>
+
+<p>So I think that this is an important aspect of a government data sets and services.</p>
+
+<p>don sullivan: Like this done, if I could type in for a second here.</p>
+
+<p>Peter Rushforth: Yes, please.</p>
+
+<p>I'm don sullivan: Just a thought.</p>
+
+<p>And, and, again, maybe I'm almost face the rest of the panelists and folks online would correct me right away if I couldn't.</p>
+
+<p>Please, or if you would please.</p>
+
+<p>Um, but don sullivan: But, but I'm looking at this as not being really issue of of authoritative or or more, who has it or month Sizing it.</p>
+
+<p>don sullivan: And again, maybe I'm being very simplistic, but I, as a consumer of geographic data visualization visualizing and browser.</p>
+
+<p>don sullivan: I'm really tired of having to deal with my going to use least that are Carter G D or or match up and you know I mean about and how am I going to do the rendering and, you know, and don sullivan: And so now we we already have a system or an herbal and science.</p>
+
+<p>We've got a visualization tool kit.</p>
+
+<p>A common operating picture.</p>
+
+<p>don sullivan: System that we ingest regular web services.</p>
+
+<p>Well, we really need, you know, we really need other services, we really need thread.</p>
+
+<p>So now we've got threads in there too and and don sullivan: And I would love to.</p>
+
+<p>I would love to be able to write something really simple an HTML with a map tag or something like that and and I thought, that's kind of what this don sullivan: This whole thing was, was going to, um, so, so, correct me if I'm wrong but but but if we could just take the obstruction up to the to the very highest level.</p>
+
+<p>don sullivan: And aren't we talking about making it simpler and getting rid of a lot of these these questions, moving them moving them into different different layers of the picture.</p>
+
+<p>What am I missing.</p>
+
+<p>Peter Rushforth: SEBASTIAN. I'll let you Sébastien Durand (Canada - NRCAN - CGP): Well, I'm actually would like just to resonate with this, I think, I think this is actually a crucial requirement.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That's what I was trying to do with the opening statement.</p>
+
+<p>If Sébastien Durand (Canada - NRCAN - CGP): 90% of the newly acquired data is geo referencing as as your reference.</p>
+
+<p>So we should by default.</p>
+
+<p>Try to facilitate the depiction of the depiction through a map capacity.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): On HTML. HTML make that barrier as simple as possible.</p>
+
+<p>The reason is from my standpoint as to why this is important.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): We have a limited amount of resource Joe resource and technical experts within our organization and trying to sustain the communication requirements associated with all of these data whether or not they are derivative Sébastien Durand (Canada - NRCAN - CGP): We can we can even making a knowledge to the domain.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): The.</p>
+
+<p>It's like saying that's trying to Sébastien Durand (Canada - NRCAN - CGP): It's a communication tool that communication to be as simple as possible.</p>
+
+<p>And because most of the information nowadays is to enable HTML should be directly to enable that means have the capacity to show that information.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): That bearable requirement in my, in my perspective.</p>
+
+<p>Peter Rushforth: I mean, I guess the only editorial I can comment, try, try and combine what Don was asking a With Peter Rushforth: My view is that Peter Rushforth: The user is the integrating Peter Rushforth: Person element in this architecture right like HTML is made for users.</p>
+
+<p>It's designed for accessibility elements bring Peter Rushforth: Feature set users need to interact with with the content.</p>
+
+<p>So, I mean, Peter Rushforth: It's not that you can't do these things in in script or in programming.</p>
+
+<p>It's that Peter Rushforth: It's that the the common facilities that users need can be built into the Peter Rushforth: Language of the web.</p>
+
+<p>And so, you know, maps are very much a user oriented thing.</p>
+
+<p>And I think that we need to think about.</p>
+
+<p>Exactly.</p>
+
+<p>I mean the difference between thinking about it, things like API's and services and thinking about Peter Rushforth: A facility in HTML is the difference is the user right in an API and a fan of service you're thinking about the user being a programmer.</p>
+
+<p>Peter Rushforth: Whereas when you're thinking about providing something in HTML, you're thinking about the user is the person sitting consuming the thing that you're producing Peter Rushforth: And so that's the difference.</p>
+
+<p>So I think it's a mindset thing.</p>
+
+<p>So web developers are thinking about that user when they produce.</p>
+
+<p>Ideally, they're thinking hard about that user when they produce their websites.</p>
+
+<p>Um, but we have the the HTML layer that we have, in theory, access to Peter Rushforth: From it at design time.</p>
+
+<p>And so I think that what what the master HTML initiative is trying to do is to get the geospatial community to think about how can we bring the factors that affect all users.</p>
+
+<p>Peter Rushforth: When using maps into that common framework and let Peter Rushforth: Web developers can should be able to enhance that.</p>
+
+<p>But there should be, we should think about how people consume mounts and spatial information at the standards level as well.</p>
+
+<p>cawilson: And just a comment a little bit more on Dan's point cawilson: So Don ugly these certain when you started your time.</p>
+
+<p>He said, You didn't think this was related to cawilson: The data reliability or the 4K dumbness of the data and to monetization.</p>
+
+<p>I agree with you.</p>
+
+<p>I think the authoritative data.</p>
+
+<p>This is just another channel.</p>
+
+<p>So the data is either authoritative renown authoritative with or without not the know cawilson: The monetization point though.</p>
+
+<p>I think the point around that.</p>
+
+<p>As you know, the very popular web interfaces, we see today are based on advertising.</p>
+
+<p>cawilson: And I think there's the but as I said, that's just a veneer of the data.</p>
+
+<p>So how do we get all the other data, you know the rest of the iceberg.</p>
+
+<p>cawilson: Available and easy to use format, just to save you said like, no, you can't expect the average user start playing if leaflet or whatever.</p>
+
+<p>So why isn't this just a simple browser query and integration within the browser should be that simple using you know simple languages like HTML.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): And I just want to add another thing there about the dominant about photography business of the data.</p>
+
+<p>I understand it's not the topic of that discussion, but Sébastien Durand (Canada - NRCAN - CGP): It is important when you put yourself in the in the shoes of anyone trying to make a map for whatever reason.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): If they can have confidence in the product that they will produce that is important and and at the DG level when I create something they all want to know where the information comes from Sébastien Durand (Canada - NRCAN - CGP): So that they can have confidence in the product so that that concept of authoritative nurse or legally binding data is actually quite critical.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): And should be conveyed throughout the application down to the end user.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): But in a nutshell.</p>
+
+<p>Even if you have the best infrastructure around with all that authoritative data legally binding.</p>
+
+<p>If you're not enabling the users to easily create those products on the, on the other page, it's Sébastien Durand (Canada - NRCAN - CGP): Again bottleneck and communication and Sébastien Durand (Canada - NRCAN - CGP): Again Coover hours pretty in engagement golden this year and trying to provide again a response to different departments, and I can tell you that making those maps were Sébastien Durand (Canada - NRCAN - CGP): extremely painful.</p>
+
+<p>It was a painful process and just try to find Sébastien Durand (Canada - NRCAN - CGP): The proper ways to do that communication, making sure that the map products, but also the dashboards and all those things were actually meeting requirements.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): We gag assessment, the Kenyan government with template and all those things, these are the type of of hurdles.</p>
+
+<p>We have to go through when we want to push any information out there to the public.</p>
+
+<p>We need to make sure it is.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): consumable and Nexon meets all the laws.</p>
+
+<p>What we have to do it relatively short like in a short time fashion when it's to address and answer a crisis such as called it Sébastien Durand (Canada - NRCAN - CGP): So that brings back even more the requirement to have a simple well vetted integrated solution that is ideally Sébastien Durand (Canada - NRCAN - CGP): Directly supported by the browser developers so that we can just lucky.</p>
+
+<p>Let's rely on that thing.</p>
+
+<p>It is really a standard.</p>
+
+<p>It's not a.</p>
+
+<p>It's not a schema or whatever it is a standard for all to depict Sébastien Durand (Canada - NRCAN - CGP): That it's the Go To way to make a map on the web.</p>
+
+<p>And that would be a big, big, big uplift our capacity to to connect interpret and make the information interoperable.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): And give the tools and ammunition for anybody who has to communicate something important to the web, give them the tools to do so.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): My perspective.</p>
+
+<p>don sullivan: You know, I like I completely.</p>
+
+<p>I completely agree.</p>
+
+<p>And also I wanted to make sure that that I'm not leaving a perception that don sullivan: That I'm saying accuracy is not important.</p>
+
+<p>Or, or, you know, some sort of quality metric is not important thumbs veteran and Cameron, please.</p>
+
+<p>I don sullivan: Didn't mean to say that at all.</p>
+
+<p>As a matter of fact, I would suggest that that don sullivan: We reconsider our traditional metrics for for accuracy.</p>
+
+<p>I mean, you know, we deal with some, you know, where's it on the words on the ground run or three spacer and six space and and don sullivan: And so we're going to use the the the geological surveys plus or minus 40 meters accuracy or we're going to use the don sullivan: The, the firefighters.</p>
+
+<p>I mean I deal with them with wildfires and imaging fires a lot and and they're don sullivan: The accuracy metric.</p>
+
+<p>I got from them is, don't put fire on the wrong side of the road.</p>
+
+<p>So now we're talking plus or minus a meter absolute accuracy.</p>
+
+<p>So, so, so I think we need to to rethink that.</p>
+
+<p>don sullivan: There's a, there's a group in in the in your organization called ISA your son's information partnerships that is looking at that whole that whole issue and they've come up with like don sullivan: I consider a really novel and valuable approach and its operational readiness level.</p>
+
+<p>So it sort of abstracts don sullivan: The idea of accuracy and and you know and data quality into usability, you know.</p>
+
+<p>Is it is it good for this, this group, or is it the good for this group.</p>
+
+<p>And that's, that's, that's an orthogonal don sullivan: Issue to maps on the web, but it's certainly important.</p>
+
+<p>So again, I wanted to make sure that I wasn't proceed denigrating accuracy or or or quality in any fashion.</p>
+
+<p>don sullivan: Other than saying that was that was orthogonal to putting it as a as putting in baptism first class citizen HTML.</p>
+
+<p>So, so one to get the end before the end of the panel.</p>
+
+<p>I wanted to make sure that wasn't leaving you on the pressure.</p>
+
+<p>My apologies.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Oh, that's good.</p>
+
+<p>Sébastien Durand (Canada - NRCAN - CGP): Obviously coming from those life accuracy.</p>
+
+<p>Doesn't matter which would have issues.</p>
+
+<p>Peter Rushforth: Okay, well, Peter Rushforth: I think the panel has a vote run its course.</p>
+
+<p>But I, but I would like to extend my thanks to Emilio and Dawn and Sebastian and Cameron for being willing participants and in the discussion and Peter Rushforth: I'm going to hang around on Twitter for a long time, another two weeks.</p>
+
+<p>So anyhow, I hope that they will tune in on Twitter as well and potentially interact with other members of the audience.</p>
+
+<p>Peter Rushforth: There so I'll be posting links to the the presentations and the discourse.</p>
+
+<p>Peter Rushforth: Discussions about about those things.</p>
+
+<p>So those are good places to comment make comments about about thing those presentations for the authors to get feedback about and to answer questions or whatever.</p>
+
+<p>Peter Rushforth: So, Peter Rushforth: If maybe I'll just pull the program committee if they have other words, but I think we're pretty much ready to close at this point.</p>
+
+<p>Peter Rushforth: Hearing none.</p>
+
+<p>Peter Rushforth: I will thank everyone for participating today and look forward to chatting with you online.</p>
+
+<p>Francesco Bartoli: Thank you.</p>
+
+<p>don sullivan: Thank you.</p>
+</body></html>
