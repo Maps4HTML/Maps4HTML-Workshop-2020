@@ -73,7 +73,7 @@
         - Talks:
             - title: "Extending the Web: Maps, The Commons, and Pie"
               author: Brian Kardell
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-commons.pdf
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-web-commons.pdf
             - title: The MapML Proposal - Part One
               author: Peter Rushforth
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pptx
@@ -129,8 +129,10 @@
         - Talks:
             - title: UI patterns in existing web map widgets
               author: Nic Chan
+              link: https://www.youtube.com/watch?v=V-Gx0e5Gkzg
             - title: Introduction to Digital Nonvisual Maps
               author: Brandon Biggs
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx
     - title: Building Cross-Sensory Maps Using Audiom
       type: breakout
       duration: "60 minutes"
