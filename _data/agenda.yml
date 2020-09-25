@@ -65,6 +65,7 @@
             - Peter Rushforth
 - title: "Week 1, Day 3"
   start: 2020-09-23T16:00Z
+  video: https://www.youtube.com/watch?v=zJkJcvmUA5o
   agenda:
     - title: "Native map viewer for the Web platform"
       type: presentations
@@ -121,6 +122,7 @@
 
 - title: "Week 1, Day 4"
   start: 2020-09-24T22:00Z
+  video: https://www.youtube.com/watch?v=aqXmbNAaLAU
   agenda:
     - title: "Creating accessible Web map widgets"
       type: presentations
