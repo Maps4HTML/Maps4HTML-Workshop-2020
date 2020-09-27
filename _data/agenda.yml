@@ -155,8 +155,10 @@
         - Talks:
             - title: Physical accessibility data in maps
               author: Sebastian Felix Zappe
-            - title: Indoor maps
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sebastian_Felix_Zappe_Holger_Dieteric.pdf
+              - title: Indoor maps
               author: Claudia Loitsch & Julian Striegl
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Claudia_Loitsch_Julian_Striegl.pptx
     - title: "Web Maps for Cognitive Accessibility"
       type: panel
       duration: "30 minutes"
@@ -177,10 +179,13 @@
         - Talks:
             - title: Advanced Analytics Software Project for Geospatial Data
               author: Nicolas Rafael Palomino
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx
             - title: Embedding rendering & behavior configuration in map data
               author: Danielle Dupuy
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx
             - title: The History of Meteorology and Cartography
               author: Chris Little
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf
             - title: Web GIS application for Indian Prime Minister's Rural Road Programme
               author: Sajeevan G
 - title: "Week 2, Day 2"
