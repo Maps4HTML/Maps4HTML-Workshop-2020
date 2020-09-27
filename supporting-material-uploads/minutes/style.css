@@ -1,0 +1,33 @@
+body {
+  background-color: #eaeaff;
+  max-width: 50em;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.irc {
+  background-color: #c2c2dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #d8e0ff;
+    background: #002020;
+  }
+
+  h1, h2, h3, h4, h5, h6, .irc {
+    background: hsla(0, 0%, 0%, 0.3);
+  }
+
+  a {
+    background: hsla(0,0%,0%,0.15);
+  }
+
+  a:link {
+      color: #68f;
+  }
+
+  a:visited {
+      color: #a5d;
+  }
+}
