@@ -40,6 +40,7 @@
         - Talks:
             - title: OGC APIs for web use
               author: Gobe Hobona
+              discourse: https://discourse.wicg.io/t/ogc-geospatial-standard-apis-for-web-use/4842/3
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx
             - title: pygeoapi
               author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli
@@ -47,10 +48,12 @@
               link: https://pygeoapi.io/presentations/default/#/frontpage
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
+              discourse: https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811/11
               discourse: https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx
             - title: Limitations to use of OGC services
               author: Jonathan Moules
+              discourse: https://discourse.wicg.io/t/the-difficulty-of-discovering-ogc-services/4844/4
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.odp
     - title: "Stakeholders: Government geospatial data providers & the web"
       type: panel
@@ -63,6 +66,8 @@
             - Sébastien Durand, Canadian Federal Geospatial Platform
         - Moderator:
             - Peter Rushforth
+        - Discussion:
+            - <a href="https://discourse.wicg.io/t/web-mapping-needs-for-government-geospatial-data-providers/4845/3">Web mapping needs for Government Geospatial data providers, on Discourse</a>
 - title: "Week 1, Day 3"
   start: 2020-09-23T16:00Z
   video: https://www.youtube.com/watch?v=zJkJcvmUA5o
@@ -74,12 +79,15 @@
         - Talks:
             - title: "Extending the Web: Maps, The Commons, and Pie"
               author: Brian Kardell
+              discourse: https://discourse.wicg.io/t/maps-and-the-extensible-web-model/4847/3
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-web-commons.pdf
             - title: The MapML Proposal - Part One
               author: Peter Rushforth
+              discourse: https://discourse.wicg.io/t/the-mapml-proposal-goals-and-details/4848/3
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pptx
             - title: Bocoup's Review of the MapML Proposal
               author: Simon Pieters
+              discourse: https://discourse.wicg.io/t/the-mapml-proposal-goals-and-details/4848/3
               link: https://slides.com/zcorpan/bocoup-review-mapml/
             - title: Quad Tree Composite Tiling and the standardization of tiling; Decentralized Web Mapping
               author: Satoru Takagi
@@ -93,9 +101,11 @@
         - Talks:
             - title: Multilingual text rendering
               author: Brandon Liu
+              discourse: https://discourse.wicg.io/t/multilingual-text-rendering-for-web-maps/4850/3
               link: http://bdon.org/maps-for-the-web/
             - title: Fuzzy Geolocation
               author: Thijs Brentjens
+              discourse: https://discourse.wicg.io/t/fuzzy-geolocation-improve-privacy-and-security/4822
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Thijs_Brentjens/fuzzy-geolocation/
     - title: "Worldwide Web Maps: Challenges in the global context"
       type: panel
@@ -114,11 +124,13 @@
         - Facilitator: Gethin Rees
         - Talks:
             - title: Expressing GeoJSON as JSON-LD 1.1
-              author: Bryan Haberberger, Walter J. Ong
+              author: Bryan Haberberger
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/bryan_haberberger-geojson-presentation.pptx
             - title: "GeoJSON-T: Adding time to the GeoJSON standard"
               author: Karl Grossner
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Grossner_geojson-t.pptx
+        - Discussion:
+            - <a href="https://discourse.wicg.io/t/extending-geojson-for-web-application/4851">Extending GeoJSON for Web Applications, on Discourse</a>
 
 - title: "Week 1, Day 4"
   start: 2020-09-24T22:00Z
