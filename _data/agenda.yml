@@ -212,6 +212,7 @@
         - Talks:
             - title: Introduction from the Research Questions Accessibility Task Force (RQTF) of the Accessible Platform Architecture working group
               author: Nicolò Carpignoli & Joshue O Connor
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolo_Carpignoli-Maps-for-the-Web.pptx
     - title: Creating accessible Web map widgets
       type: panel
       duration: "30 minutes"
