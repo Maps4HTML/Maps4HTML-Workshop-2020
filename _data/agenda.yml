@@ -233,6 +233,7 @@
               author: Jan-Erik Vinje
             - title: "How GeoPose aligns with use cases and requirements for Web map authors"
               author: Christine Perey and Josh Lieberman
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pptx
     - title: Maps and augmented reality
       type: panel
       duration: "30 minutes"
