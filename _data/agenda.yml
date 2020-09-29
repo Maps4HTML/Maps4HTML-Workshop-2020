@@ -231,6 +231,7 @@
         - Talks:
             - title: "GeoPose: From point-of-interest to maps-of-objects"
               author: Jan-Erik Vinje
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jan-Erik_Vinje-From Points-of-interest_to_maps_of_objects.pdf
             - title: "How GeoPose aligns with use cases and requirements for Web map authors"
               author: Christine Perey and Josh Lieberman
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pptx
