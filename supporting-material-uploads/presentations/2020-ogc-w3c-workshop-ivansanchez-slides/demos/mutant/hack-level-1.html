@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leaflet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+	<script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+	<style>
+body {
+	margin: 0; background: white;
+}
+html, body {
+	height: 100%
+}
+
+#background {width: 400px; height: 300px; position:absolute; background: #ccc; z-index:-10;}
+
+#leaflet, #gmap {
+	width: 400px; height: 300px;
+	display:inline-block;
+	background-color: transparent;
+}
+
+#gmap {
+/* 	left:-404px; */
+	z-index: -5;
+	pointer-events: none;
+}
+
+#gmap.overlap {
+	left: -405px;
+	animation-duration: 2s;
+	animation-name: slidein;
+}
+#gmap.separate {
+	left: 0;
+	animation-duration: 2s;
+	animation-name: slideout;
+}
+
+@keyframes slidein {
+	from { left:0; }
+	to { left:-405px; }
+}
+@keyframes slideout {
+	from { left:-404px; }
+	to { left:0; }
+}
+
+.grid-tile{
+	border: 1px solid black;
+}
+
+	</style>
+
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="leaflet"></div>
+		<div id="gmap"></div>
+		<br/><button id='overlap'>Overlap</button> <button id='separate'>Separate</button>
+		<script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>
+		<script>
+var map = new L.Map('leaflet', {
+	center: [0, 0],
+	zoom: 0
+});
+
+var grid = L.gridLayer();
+grid.createTile = function(){return L.DomUtil.create('div','grid-tile')}
+grid.addTo(map);
+
+var gmap = new google.maps.Map(document.getElementById('gmap'), {
+	center: {lat: 0, lng: 0},
+	zoom: 0,
+	tilt: 0,
+	mapTypeId: 'roadmap',
+	disableDefaultUI: true,
+	keyboardShortcuts: false,
+	draggable: false,
+	disableDoubleClickZoom: true,
+	scrollwheel: false,
+	streetViewControl: true,
+	//styles: this.options.styles || {},
+	backgroundColor: 'transparent'
+});
+
+map.on('move', function(){
+	gmap.setCenter(new google.maps.LatLng(map.getCenter()));
+});
+
+map.on('zoomend', function(){
+	gmap.setZoom(map.getZoom());
+});
+
+
+setTimeout(function(){
+	document.getElementById("gmap").children[1].remove();
+}, 1500);
+
+
+document.getElementById('overlap').addEventListener('click', function(){
+	document.getElementById('gmap').className = "overlap";
+});
+document.getElementById('separate').addEventListener('click', function(){
+	document.getElementById('gmap').className = "separate";
+});
+
+
+
+</script>
+	</body>
+</html>
