@@ -259,12 +259,16 @@
         - Talks:
             - title: Map adventures in weird web standards - gyroscopes, texture cubes, and mutants
               author: Iván Sánchez Ortega
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/2020-ogc-w3c-workshop-ivansanchez-slides/slides.html
             - title: Map Compositions format
               author: Karel Charvat
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Compositions-format-intro-presentation-by-Karel.pptx
             - title: MapML implementations in MapServer, GDAL and OGR
               author: Daniel Morrissette
+              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Daniel_Morissette-ogc-w3c-mapml-in-mapserver-gdal-ogr.pptx
             - title: OffScreenCanvas for rendering performance
               author: Andreas Hocevar
+              link: https://docs.google.com/presentation/d/1vIIbUgdHenfx2rA96-oJhf0aRcpC3QlhVl6kWFf69Bw/edit#slide=id.gd9c453428_0_16
             - title: Dynamic and Observational Spatial Data
               author: Thomas Usländer, Hylke van der Schaaf, Katharina Schleidt
     - title: "Stakeholders: Commercial mapping services & the web"
@@ -280,6 +284,7 @@
             - Ted Guild
     - title: "Map Whiteboard: Collaborative Map-Making"
       type: breakout
+      link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Whiteboard-Collaborative-Map-Making-breakout-session.pptx
       details:
         - Facilitator: Karel Charvat
 - title: "Week 2, Day 4"
