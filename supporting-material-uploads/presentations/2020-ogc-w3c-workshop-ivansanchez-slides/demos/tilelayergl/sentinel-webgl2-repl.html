@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset="utf-8">
+<head>
+	<title>Leaflet TileLayer.GL2 sentinel playground</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet-src.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/codemirror@5.25.2/lib/codemirror.css"/>
+	<script src="https://unpkg.com/codemirror@5.25.2/lib/codemirror.js"></script>
+	<script src="https://unpkg.com/proj4@2.6.2/dist/proj4-src.js"></script>
+	<script src="https://unpkg.com/proj4leaflet@1.0.2/src/proj4leaflet.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://unpkg.com/geotiff@1.0.0-beta.11/dist-browser/geotiff.js"></script>
+	<script src="Leaflet.TileLayer.GL2.js"></script>
+
+<!-- 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/> -->
+
+	<style>
+
+	body {
+		margin: 0;
+		font-family: 'OrkneyRegular';
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	#map {
+		position:absolute;
+		left: 50vw;
+		right:0;
+		top:0;
+		bottom: 0;
+/* width: 256px; */
+/* height: 256px; */
+	}
+
+	#not-the-map {
+		position:absolute;
+		right: 50vw;
+		left:0;
+		top:0;
+		bottom: 0;
+	}
+
+	#not-the-map textarea {
+		width: 100%;
+		resize: vertical;
+	}
+
+	.readonly-code-mirror {
+		background: #C0C0C0;
+	}
+
+	#error-modal {
+		z-index: 10;
+		border: 2px solid red;
+		background: white;
+		color: black;
+		font-family: monospace;
+		white-space: pre-wrap;
+
+		position: absolute;
+		top: 10vh;
+		bottom: 10vh;
+		left: 60vw;
+		right: 10vw;
+
+		display: none;
+	}
+
+	</style>
+
+
+</head>
+<body>
+
+	<div id="not-the-map">
+<div style='display:none'>
+<!-- 	<h1><a href='https://gitlab.com/IvanSanchez/Leaflet.TileLayer.GL'>Leaflet.TileLayer.GL</a> playground</h1> -->
+		<h4>L.TileLayer.GL2 sentinel playground</h1>
+
+<!-- 		<textarea id="tileServers">./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_TCI_cloudoptimized.tif</textarea> -->
+<!-- 		<textarea id="tileServers">./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_10m_cloudoptimized.tif</textarea> -->
+		<textarea id="tileServers">
+./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_TCI_cloudoptimized.tif
+./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_60m_cloudoptimized.tif
+./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_20m_cloudoptimized.tif
+./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_10m_cloudoptimized.tif
+</textarea>
+
+		<p>This is the fragment shader code. It runs once per pixel.</p>
+</div>
+<!-- 		<p><tt>L.TileLayer.GL</tt> predefines a set of <i>varyings</i> and one <i>texture uniform</i> per tile origin. You do not need to write that by yourself.</p> -->
+		<textarea id="fragmentShaderHeader" readonly wrap=off></textarea>
+		<textarea id="fragmentShaderCode">
+
+		</textarea>
+	</div>
+
+	<div id="map"></div>
+	<pre id="error-modal"></pre>
+
+	<script type="text/javascript">
+
+
+		// Set up the code editors
+		var tileServersMirror = CodeMirror.fromTextArea(document.getElementById('tileServers'), {
+			lineNumbers: true,
+			lineWrapping: true,
+			firstLineNumber: 0
+		});
+
+		tileServersMirror.setSize('100%', '8rem');
+
+		var fragmentHeaderMirror = CodeMirror.fromTextArea(document.getElementById('fragmentShaderHeader'), {
+// 			mode: "glsl",
+			mode: "javascript",
+			lineNumbers: true,
+			lineWrapping: true,
+			firstLineNumber: 1,
+			readOnly: true
+		});
+
+		fragmentHeaderMirror.getWrapperElement().className += ' readonly-code-mirror';
+		fragmentHeaderMirror.setSize('100%', '4rem');
+
+		var fragmentCodeMirror = CodeMirror.fromTextArea(document.getElementById('fragmentShaderCode'), {
+// 			mode: "glsl",
+			mode: "javascript",
+			lineNumbers: true,
+			lineWrapping: true,
+			firstLineNumber: 5
+		});
+
+		// Preset demos
+		var mapboxAccessToken = 'pk.eyJ1IjoienN0YWRsZXIiLCJhIjoiY2lvbDc5Zzl6MDAwc3Z2bTZ6NDNybDM3dSJ9.vxR1WVn26mEtpEk9MzdiUA';
+		var sentinelhubKey = '0f03c55a-804e-33bd-8589-da814f6575ae';
+		
+		var demos = {
+
+			"Empty": {
+				tiles: [],
+				shader: ""
+			},
+
+			"16-bit GeoTIFF NDVI": {
+				tiles: [
+'./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_TCI_cloudoptimized.tif',
+'./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_60m_cloudoptimized.tif',
+'./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_20m_cloudoptimized.tif',
+'./S2B_MSIL2A_20190819T105029_N0213_R051_T30SXH_20190819T135908_10m_cloudoptimized.tif',
+				],
+				bbox: [[37.7, -0.5],[38.9, -1.2]],
+				shader: `
+// This example calculates NDVI (Normalized Differential Vegetation Index)
+// from a false-color image with a near-infrared channel.
+
+void main(void) {
+	// uTexture0 refers to the True Colour Image file
+	highp float tcr = texture(uTexture0, vec3(vTextureCoords.st, 0)).x;
+	highp float tcg = texture(uTexture0, vec3(vTextureCoords.st, 1)).x;
+	highp float tcb = texture(uTexture0, vec3(vTextureCoords.st, 2)).x;
+
+	// uTexture1 refers to the file with bands at 60m: b1 aerosol, b9 vapour, b10 cirrus SWIR
+	highp float b1  = texture(uTexture1, vec3(vTextureCoords.st, 0)).x;
+	highp float b9  = texture(uTexture1, vec3(vTextureCoords.st, 1)).x;
+	highp float b10 = texture(uTexture1, vec3(vTextureCoords.st, 2)).x;
+
+	// uTexture2 refers to the file with bands at 20m: b5, b6, b7 veg edges, b8a NNIR, b11 b12 SWIR
+	highp float b5  = texture(uTexture2, vec3(vTextureCoords.st, 0)).x;
+	highp float b6  = texture(uTexture2, vec3(vTextureCoords.st, 1)).x;
+	highp float b7  = texture(uTexture2, vec3(vTextureCoords.st, 2)).x;
+	highp float b8a = texture(uTexture2, vec3(vTextureCoords.st, 3)).x;
+	highp float b11 = texture(uTexture2, vec3(vTextureCoords.st, 4)).x;
+	highp float b12 = texture(uTexture2, vec3(vTextureCoords.st, 5)).x;
+
+	// uTexture3 refers to the file with bands at 10m: b2 blue, b3 green, b4 red, b8 NIR
+	highp float b2  = texture(uTexture3, vec3(vTextureCoords.st, 0)).x;
+	highp float b3  = texture(uTexture3, vec3(vTextureCoords.st, 1)).x;
+	highp float b4  = texture(uTexture3, vec3(vTextureCoords.st, 2)).x;
+	highp float b8  = texture(uTexture3, vec3(vTextureCoords.st, 3)).x;
+
+	// Calculate NDVI here
+ 	highp float ndvi = ((b8 - b4) / (b8 + b4));
+
+	// Mix the green NVDI with the red and the (now blue) infrared
+	pixelColor = vec4(
+    	vec3(ndvi),
+
+		// opaque
+		1.0
+	);
+}`
+},
+
+
+// 	// Calculate NDVI
+// 	//highp float ndvi = ((b8 - b4) / (b8 + b4));
+//
+// 	// Mix the green NVDI with the red and the (now blue) infrared
+// 	pixelColor = vec4(
+// 		tcr,	// red
+// 		tcg,	// green
+// 		tcb,	// blue
+// 		1.0	// opaque
+// 	);
+
+		};
+
+		// Fill up the demo selector
+
+// 		var selector = document.getElementById('demo-selector');
+//
+		for (var i in demos) {
+// 			var option = document.createElement('option');
+// 			option.innerHTML = option.value = i;
+
+			if (i === "16-bit GeoTIFF NDVI") {
+// 				option.selected = true;
+				fragmentCodeMirror.setValue( demos[i].shader );
+			}
+
+// 			selector.appendChild(option);
+		}
+//
+// 		selector.addEventListener('change', function(ev){
+// 			tileServersMirror.setValue(  demos[ selector.value ].tiles.join('\n') );
+//
+// 			var code = demos[ selector.value ].shader;
+// 			var lines = code.split('\n');
+// 			lines = lines.map(function(str) { return str.trimRight(); });
+// 			fragmentCodeMirror.setValue( lines.join('\n') );
+//
+// 			var bbox = demos[ selector.value ].bbox;
+// 			if (bbox) {
+// // 				map.flyToBounds(bbox);
+// 				map.fitBounds(bbox);
+// 			} else {
+// // 				map.flyToBounds(L.latLngBounds( [[-90, -180], [90, 180]] ));
+// 				map.fitBounds(L.latLngBounds( [[-90, -180], [90, 180]] ));
+// 			}
+// 		});
+
+
+// var crs = new L.Proj.CRS('EPSG:32630',
+//   '+proj=utm +zone=30 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs',
+//   {
+//     resolutions: [
+//       8192, 4096, 2048, 1024, 512, 256, 128
+//     ],
+//     origin: [0, 0]
+//   })
+
+// 		var map = L.map('map', {crs: crs}).fitWorld();
+// 		var map = L.map('map', {crs: crs}).fitBounds([[37.7, 0.5],[38.9, 1.2]]);
+		var map = L.map('map').fitBounds([[37.7, -0.5],[38.9, -1.2]]).setZoom(11);
+		var tileGlLayer;
+
+		L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+
+
+		// Function that will (re-)trigger the TileLayer.GL creation whenever the shader or the tile list is modified
+		function redo() {
+			document.getElementById('error-modal').style.display = 'none';
+
+			var tileUrls = tileServersMirror.getValue().split('\n')
+                .filter(function(i){ return i.trim().length; });
+
+			// Replace the hackish JSON definitions for WMS layers into actual instances of `L.TileLayer`
+            var tileLayers = tileUrls.map(function(str){
+
+				if (str.endsWith('.tif') || str.endsWith('.tiff') || str.endsWith('.geotiff')) {
+					return GeoTIFF.fromUrl(str);
+				}
+
+                try {
+                    var wmsOptions = JSON.parse(str);
+                    if (wmsOptions && wmsOptions.wmsurl) {
+                        var url = wmsOptions.wmsurl;
+                        delete wmsOptions.wmsurl;
+                        wmsOptions.crs = map.options.crs;
+                        var layer = L.tileLayer.wms(url, wmsOptions);
+                        return layer;
+                    } else {
+                        return Promise.resolve(L.tileLayer(str));
+                    }
+                } catch(ex) {
+                        return Promise.resolve(L.tileLayer(str));
+                }
+            });
+
+			var tileUrlsLength = tileUrls.length;
+
+			// Copy-pasted from _loadGLProgram, plus comments
+			var fragmentShaderHeader =
+				"#version 300 es\n" +
+				"precision highp float;  // Use 24-bit floating point numbers for everything\n" +
+				"uniform float uNow;     // Microseconds since page load, as per performance.now()\n" +
+				"in vec2 vTextureCoords; // Pixel coordinates of this fragment, to fetch texture color\n" +
+				"in vec2 vCRSCoords;     // CRS coordinates of this fragment\n" +
+				"in vec2 vLatLngCoords;  // Lat-Lng coordinates of this fragment (linearly interpolated)\n" +
+				"out vec4 pixelColor;    // RGBA output color";
+
+			var length = 1;
+
+			for (var i=0; i<tileUrlsLength && i<8; i++) {
+				fragmentShaderHeader += "\nuniform sampler2D uTexture" + i + ";";
+			}
+
+			fragmentHeaderMirror.setValue( fragmentShaderHeader );
+			fragmentHeaderMirror.setSize('100%', (7 + tileUrlsLength) + 'rem');
+			fragmentCodeMirror.setOption('firstLineNumber', 8 + tileUrlsLength);
+
+			if (tileGlLayer) {
+				tileGlLayer.remove();
+			}
+
+			Promise.all(tileLayers).then(function(loadedLayers){
+
+				tileGlLayer = L.tileLayer.gl2({
+					tileSize: 1024,
+					fragmentShader: fragmentCodeMirror.getValue(),
+					// tileUrls: tileUrls, // Legacy. Could be used when no WMS tilelayers
+					tileLayers: loadedLayers
+				});
+
+				// Hack the re-renderability.
+				tileGlLayer._isReRenderable = true;
+				tileGlLayer._fetchedTextures = {};
+				tileGlLayer._2dContexts = {};
+				tileGlLayer._texArrays = {};
+
+				var glError = tileGlLayer.getGlError();
+				if (glError) {
+					document.getElementById('error-modal').innerHTML = glError;
+					document.getElementById('error-modal').style.display = 'block';
+				} else {
+					tileGlLayer.addTo(map);
+				}
+
+				tileGlLayer.on('tileerror', function(err){
+					console.error('Error when loading tile: ', err);
+				})
+
+				onResize();
+			});
+		}
+
+		redo();
+// 		fragmentCodeMirror.on('change', debounce(redo, 500));
+// 		tileServersMirror.on('change', debounce(redo, 500));
+// 		fragmentCodeMirror.on('change', redo);
+// 		tileServersMirror.on('change', redo);
+// 		fragmentCodeMirror.on('change', partialRedo);
+// 		tileServersMirror.on('change', partialRedo);
+		fragmentCodeMirror.on('change', debounce(partialRedo, 500));
+		tileServersMirror.on('change', debounce(partialRedo, 500));
+
+		function partialRedo() {
+			console.log("partial redo");
+			tileGlLayer.options.fragmentShader = fragmentCodeMirror.getValue();
+			tileGlLayer._loadGLProgram();
+			tileGlLayer._isReRenderable = true;
+
+			var glError = tileGlLayer.getGlError();
+			if (glError) {
+				console.error(glError);
+				document.getElementById('error-modal').innerHTML = glError;
+				document.getElementById('error-modal').style.display = 'block';
+				document.getElementById('map').style.display = 'none';
+			} else {
+				document.getElementById('error-modal').style.display = 'none';
+				document.getElementById('map').style.display = 'block';
+				tileGlLayer.reRender();
+			}
+		}
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+
+		// Whenever the browser window resizes (and the content reflows),
+		// or when the tile servers list changes (and the static fragment code
+		// potentially changes length), calculate the size of the fragment code
+		// editor to use up all available space
+		function onResize() {
+			var top = fragmentCodeMirror.getWrapperElement().offsetTop;
+			var bottom = window.innerHeight;
+			fragmentCodeMirror.setSize('100%', bottom - top);
+		}
+
+		window.addEventListener('resize', onResize);
+
+
+	</script>
+</body>
+</html>

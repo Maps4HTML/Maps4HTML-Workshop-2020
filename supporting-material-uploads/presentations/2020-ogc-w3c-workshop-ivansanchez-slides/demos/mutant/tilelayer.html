@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leaflet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+<!-- 	<script src="https://maps.googleapis.com/maps/api/js" async defer></script> -->
+
+<style>
+	body {
+	margin: 0;
+}
+html, body, #leaflet {
+	height: 100%
+}
+</style>
+	</head>
+	<body>
+		<div id="leaflet"></div>
+		<div id="gmap"></div>
+		<script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>
+		<script>
+var map = new L.Map('leaflet', {
+	layers: [
+		L.tileLayer("https://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga")
+	],
+	center: [0, 0],
+	zoom: 2
+});
+		</script>
+	</body>
+</html>
