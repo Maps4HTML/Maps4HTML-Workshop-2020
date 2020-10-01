@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Map adventures in weird web standards</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Iván Sánchez Ortega">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+<!-- 		<link rel="stylesheet" href="lib/css/zenburn.css"> -->
+
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hack" type="text/css"/>
+
+		<style>
+
+		.reveal section img.logo {
+			height: 1em;
+			width: 1em;
+			vertical-align: middle;
+			margin:0;
+			border: none;
+		}
+
+		.reveal section h1 img.logo {
+			height: 3em;
+			width: 3em;
+			vertical-align: middle;
+			border: none;
+		}
+
+
+		.reveal .slide-background {
+			background: hsl(0 0% 15%);
+/* 			background: linear-gradient(90deg, #4a9634, #4a9634 35%, #1F6B75 65%,#1F6B75); */
+/* 			background: linear-gradient(90deg, #28511c 35%, #154a51 65%); */
+/*			background: linear-gradient(115deg,
+				hsl(  0  0% 20%) 0%,
+				hsl(  0  0% 20%) 60%,
+				hsl(  0 40% 20%) 62%,
+				hsl( 60 40% 20%) 64%,
+				hsl(120 40% 20%) 66%,
+				hsl(180 40% 20%) 68%,
+				hsl(240 40% 20%) 70%,
+				hsl(300 40% 20%) 72%,
+				hsl(300  0% 20%) 74%,
+				hsl(300  0% 20%) 100%
+			);*/
+		}
+
+		.reveal h1, .reveal h2, .reveal h3 {
+			text-transform: none;
+		}
+
+		.reveal table.advisory th, .reveal table.advisory td {
+			text-align: center;
+		}
+
+		.reveal table.advisory th {
+			background: black; color: white;
+			padding: 0;
+			border: none;
+		}
+
+		.reveal table.advisory td {
+			background: white; color: black;
+		}
+
+		.reveal tt, .reveal code {
+			font-family: Hack;
+			background: #FFFFFF20;
+		}
+
+		code {
+			background: rgba(80, 80, 80, 0.5);
+		}
+
+		.reveal pre code {
+			background: rgba(63, 63, 63, 0.9);
+			font-size: 1.2em;
+			display:block;
+		}
+
+		.coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
+			opacity: 0.9;
+		}
+
+		ul ul {
+			font-size: 70%;
+		}
+
+		.reveal a {
+			text-decoration: underline;
+		}
+
+		</style>
+
+
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="linear-gradient(left, gray, gray 60%, red 62%, yellow 64%, green 66%, cyan 68%, violet 70%, gray 72%, gray)">
+					<section>
+						<h2>Map adventures in weird web standards</h2>
+						<h4><s>gyroscopes</s> joysticks, texture cubes, and mutants</h4>
+						<p>
+							<small><div>One of those ranty talks from</div></small> <br>
+							Iván Sánchez Ortega
+						</p>
+
+					</section>
+					<section>
+						<p>Brief bio</p>
+						<ul>
+							<li> Nerd
+							<li> Learned BASIC on a Spectrum
+							<li> CompSci dropout
+							<li> Bought a GPS in 2006
+							<li> Doing tiled vector maps since experimental <tt>canvas</tt>
+						</ul>
+					</section>
+					<section>
+						<p><s>Afilliation</s> Allegiances</p>
+						<ul>
+							<li> OpenStreetMap
+							<li> OSGeo
+							<li> Leaflet
+						</ul>
+						<p><small>(Opinions and thoughts are my own)</small></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>I'm <strong>EXTREMELY SKEPTICAL</strong> of the <tt>MapML</tt> proposal.</p>
+						<p><small>...and I wrote a lengty essay about that:<br/><a href='https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html'>https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html</a></small></p>
+					</section>
+
+					<section>
+						<p>15-minute talk means I gotta focus,</p>
+						<p class='fragment'>So let me focus on <em>this</em> part of the <a href='https://xkcd.com/927/'>XKCD joke</a><br/>
+						<img src='images/xkcd-standards.png'/>
+						</p>
+					</section>
+
+					<section>
+						<p>There are literally <strong>hundreds</strong> of Leaflet plugins,<br>
+						and each of them is a use case...</p>
+						<iframe src='https://leafletjs.com/plugins.html' style='width: 95%; height: 7em;'></iframe>
+					</section>
+
+					<section>
+						<p>Focus even more: Leaflet stuff which aligns with the workshop themes</p>
+						<img src='images/workshop-topics.png'/>
+					</section>
+
+					<section>
+						<p>Browser APIs you (probably) didn't even knew existed:</p>
+						<ul>
+							<li> <s>Sensors API</s> Gamepad API
+							<li> WebGL2's <tt>texStorage3D()</tt>
+							<li> DOM Mutation Observers
+						</ul>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h6>Part I:</h6>
+						<h1><s>Gyroscopes</s> Joysticks</h1>
+					</section>
+
+					<section>
+						<p>Hwo does the user interact with the map?</p>
+						<ul>
+							<li> Mouse &amp; touchscreen via <a href='https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent'><tt>PointerEvent</tt>s</a>
+							<li> Keyboard via <a href='https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent'><tt>KeyboardEvent</tt>s</a>
+							<li class='fragment'> Follow the user via the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Geolocation'>geolocation API</a>
+							<li class='fragment'> Rotate the map with compass orientation through <a href='https://developer.mozilla.org/en-US/docs/Web/API/RelativeOrientationSensor'><tt>RelativeOrientationSensor</tt></a>
+							<li class='fragment'> Tilting a phone/tablet and getting gyroscope data through <a href='https://developer.mozilla.org/en-US/docs/Web/API/AbsoluteOrientationSensor'><tt>AbsoluteOrientationSensor</tt></a>
+							<li class='fragment'> Joysticks via the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Gamepad'><tt>Gamepad</tt> API</a>
+						</ul>
+					</section>
+
+					<section>
+						<iframe src='demos/Leaflet.Gamepad/demo.html' style='width: 95%; height: 15em;'></iframe>
+					</section>
+
+					<section>
+						<p>Joystick control <em>feels</em> good<br>
+						This must be useful for something, but I don't know what yet<br>
+						Accesibility? Haptic peripherals? <tt>WebVR</tt>?</p>
+						<hr>
+						<p>Can I have joystick/gamepad control in <tt>MapML</tt>?<br>How are developers supposed to hack/extend user interaction in <tt>MapML</tt>?</p>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h6>Part II:</h6>
+						<h1>Texture cubes</h1>
+					</section>
+					<section>
+						<p><a href='https://vimeo.com/223109231'>Me in 2017</a>:</p>
+						<img src='images/siglibre-2017.png' style='max-height:7em;'/>
+<small>
+<ul><li> Replace tiled <tt>&lt;img&gt;</tt>s with tiled <tt>&lt;canvas&gt;</tt>es, each receiving a copied buffer from WebGL
+<li> GLSL fragment shaders applied to 2D textures from RGBA PNG map tiles
+<li><i>«This is useful for something. I don't know exactly what for, but it is.»</i></ul>
+</small>
+
+					</section>
+					<section>
+						WebGL/OpenGL is <strong>not</strong> 3D
+<ul><li>2d rasterization engine
+<li>4-dimensional vectors
+<li>buttloads* of linear algebra
+<li>Images as textures
+</ul>
+<div class='fragment'><small>*1 buttload = A barrel of alcoholic beverage, holding 475-480 liters</small></div>
+
+					</section>
+					<section>
+<ul><li>Layperson: Textures are images, 8-bit RGB(A)
+<li>Videogame devs: Textures are images plus bump plus specular map plus <i>etc</i>, as 5-5-6-bit or 16-bit or float32 format
+<li>GIS nerds: Raster holds temporal/multispectral/thematic data, several 16- or 32-bit samples per pixel
+</ul>
+<p class='fragment'>Breakthrough: realizing that GIS raster data fits <em>natively</em> in GL textures</p>
+					</section>
+					<section>
+					<p>Store data packed in WebGL1 RGBA textures</p>
+<pre><code>let data = geotiff.readRasters({
+	window: [x1, y1, x2, y2],
+	samples: [0],
+	width,
+	height
+});
+gl.texImage2D(data, 0, gl.RED, width, height, ...)</code></pre>
+<p>...and read the data from a GLSL shader</p>
+<pre><code>float texelColour = texture2D(
+	geoTiffTexture, texCoords.st).r;
+</code></pre>
+					</section>
+					<section>
+					<p>WebGL2 introduces:</p>
+					<ul><li>(IEEE574) float32 textures
+					<li>3d textures = datacubes</ul>
+<small><pre><code style='width:95%'>let data = geotiff.readRasters({
+	window: [x1, y1, x2, y2],
+	samples: [0,1,2,3,4,5,6],
+	width,
+	height
+});
+gl.texImage3D(gl.TEXTURE_2D_ARRAY, data, 0, gl.F32, width, height, ...)</code></pre></small>
+<small><pre><code style='width:95%'>// Fetch data from a sample, sample is the Z coordinate of the texture
+float data = texture(geoTiffTexture,
+	vec3(texCoords.st, sampleIdx));
+
+// Or do vertical slices of the datacube
+float data = texture(geoTiffTexture,
+	vec3(sampleIdx, texCoords.st));
+</code></pre></small>
+
+					</section>
+					<section>
+					<iframe src='demos/tilelayergl/sentinel-webgl2-repl.html' style='width: 95%; height: 10em; background: white;'></iframe>
+					</section>
+					<section>
+					<small><p>Mandatory buzzword-full slide</p></small>
+					<p>Real-time GPU-accelerated cloudless edge computing for cloudless imagery, not absent of monetization challenges.</p>
+					<div class='fragment'>
+					<hr>
+					<p>Prediction: by 2023, every GIS person working with raster data will say: «How did we ever work without this?»</p>
+					</div>
+					</section>
+					<section>
+						<p>Forget about SVG.</p>
+						<p>How can we squeeze visualization performance?</p>
+						<p>How do we make non-3D GL more accessible to developers?</p>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h6>Part III:</h6>
+						<h1>Mutants</h1>
+					</section>
+					<section>
+						<p>Let me present a <strong>fact</strong>:</p>
+						<p class='fragment'>Leaflet users want to display Google Basemaps.</p>
+					</section>
+					<section>
+						<p>And it's easy!</p>
+						<pre><code>L.tileLayer(
+  "https://mt0.google.com/vt/lyrs=s&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}&amp;s=Ga"
+).addTo(map);</code></pre>
+						<iframe src='demos/mutant/tilelayer.html' style='width: 95%; height: 7em;'></iframe>
+
+						<p class='fragment'>...but.</p>
+					</section>
+					<section>
+						<p>...but Google's Terms of Service (as of 2018) were explicit about <strong>not</strong> doing this:</p>
+						<blockquote style='text-align: left; font-size: 80%;'> 10.1 Administrative Restrictions.<br>
+No access to APIs or Content except through the Service. You will not access the Maps API(s) or the Content except through the Service. For example, you must not access map tiles or imagery through interfaces or channels (including undocumented Google interfaces) other than the Maps API(s).</blockquote>
+						<p class='fragment'><small>Wording of the current <abbr title="Terms of Service">ToS</abbr> is not clear; can I/we have a clarification, please? <br/><span class='fragment'>Pretty please with sugar on top?</span></small></p>
+					</section>
+					<section>
+						<p>Workaround: Use gmaps JS API and move it</p>
+						<iframe src='demos/mutant/hack-level-1.html' style='width: 95%; height: 10em;'></iframe>
+						<p class='fragment'>...but there're noticeable lags.</p>
+					</section>
+					<section>
+						<p>Workaround: Steal the tiles</p>
+						<iframe src='demos/mutant/hack-level-2.html' style='width: 95%; height: 10em;'></iframe>
+						<p class='fragment'>...but when do new tiles come in?</p>
+					</section>
+					<section>
+					<p>Enter <tt>MutationObserver</tt></p>
+					<pre><code style='font-size: 0.8em;'>var googleMutant = L.DomUtil.create('div', 'leaflet-google-mutant');
+var map = new google.maps.Map(googleMutant, /* map options */);
+
+observer = new MutationObserver(onMutationCallback);
+// Observe subtree additions in particular
+observer.observe(googleMutant, { childList: true, subtree: true });
+
+function onMutationCallback(mutations) {
+	// Iterate through mutations
+		// Iterate through DOM nodes in a mutation
+			// If mutated node is a tiled image:
+				// Steal the tile
+}</code></pre>
+					</section>
+					<section>
+					<a href='https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant/'>https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant/</a>
+					<iframe src='https://ivansanchez.gitlab.io/Leaflet.GridLayer.GoogleMutant/demo.html' style='width: 95%; height: 10em; background: white'></iframe>
+					</section>
+					<section>
+					<p>«Absolutely brilliant and terrible at the same time»</p>
+					<img src='images/googlemutant-brilliant-terrible.png'/>
+					<small><a href='https://twitter.com/mourner/status/1300719192627347456'>https://twitter.com/mourner/status/1300719192627347456</a></small>
+					</section>
+					<section>
+					<p>My (controversial?) hard point of view:</p>
+					<ul>
+					<li>Vendors should expose standard interfaces
+					<li>Authors should be able to cache map assets
+					<li>Clients should be able to P2P map assets
+					<li>DOM mutation observers shouldn't exist
+					<li>GoogleMutant shouldn't exist
+					</ul>
+					</section>
+					<section>
+					<p>I bet that <tt>MapML</tt> shall not:</p>
+					<ul>
+					<li>Make vendors expose standard interfaces
+					<li>Let authors cache map assets
+					<li>Let clients P2P-exchange map assets
+					<li>Deprecate browser APIs of dubious utility
+					<li>Stop people from doing ugly hacks
+					</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<div style='font-size: 20vmin; text-align: center;'>Fin.</div>
+						<p><small>...read the essay later!<br/><a href='https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html'>https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html</a></small></p>
+					</section>
+					<section>
+						<div style='font-size: 40vmin; text-align: center;'>¿?</div>
+						<p><small>...read the essay later!<br/><a href='https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html'>https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html</a></small></p>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+
+	</body>
+</html>
