@@ -217,6 +217,7 @@
               link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sajeevan_G-maps-for-the-web.pdf 
 - title: "Week 2, Day 2"
   start: 2020-09-29T12:00Z
+  video: https://www.youtube.com/watch?v=RPZlE5N-Nds
   agenda:
     - title: Creating accessible Web map widgets
       type: presentations
@@ -264,6 +265,7 @@
       type: breakout
 - title: "Week 2, Day 3"
   start: 2020-09-30T16:00Z
+  video: https://www.youtube.com/watch?v=ny7sIfddwJE
   agenda:
     - title: "Advanced web graphics for mapping"
       type: presentations
