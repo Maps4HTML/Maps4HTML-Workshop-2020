@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <title>Captions from W3C/OGC Maps for the Web workshop -- 22 Sep 2020</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>Ryan Ahola - Natural Resources Canada: Great, thanks.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So thank you everyone for joining us this morning or afternoon or evening, whatever time it is where you are.</p>
+
+<p>So this is are Ryan Ahola - Natural Resources Canada: We today to session for the maps for the work what maps for the web workshop.</p>
+
+<p>My name is Ryan a hold of.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: The number of Natural Resources Canada and I'm part of the program committee that's been helping with the with Organizing.</p>
+
+<p>Organizing this workshop Ryan Ahola - Natural Resources Canada: So today we have a few different sessions, starting with the first presentation about creating an accessible by map widgets and then we'll have a panel discussion.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: About the same topic, then we'll move into presentations on 3D maps 3D map display and also looking at followed up by panel session on maps and augmented reality and then we'll close with a breakout session on Ryan Ahola - Natural Resources Canada: To post with maps of objects.</p>
+
+<p>What to post for for web maps.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: I think Peter posted the link to the gator chat in the chat for zoom.</p>
+
+<p>So if you can access that.</p>
+
+<p>And if there's.</p>
+
+<p>If you have any questions or any discussion of course these are running get chat.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Online.</p>
+
+<p>And I think that's all the logistical information today, so I guess we'll start with the presentation from Niccolo Ryan Ahola - Natural Resources Canada: I'm going to mess up your last name.</p>
+
+<p>I'm sorry but car carpet Noli and Joshua.</p>
+
+<p>Joshua O'Connor.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: About accessible web map widgets specifically completed an introduction for research from the research questions accessibility Task Force, I'd be accessible platform architectural working group.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And I believe this is being done through a video which I've set up here so I'll make sure that I'll share my screen.</p>
+
+<p>And we'll make sure that we're looking at the right one.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Of course, that doesn't work when you want it to work.</p>
+
+<p>Hi everybody, my name is Nicola, and today I'm going to talk about accessible and it shows for an active member you were for the web platform.</p>
+
+<p>I'm going to show you user needs and requirements.</p>
+
+<p>And from the damage receive a PA I'm inviting experts and the first of all I'd like to thank Josh corner from the WBC that has helped me a lot with this presentation and all the other members of the RTS from the APA WCC So today we're going to talk about accessibility and maps as you know map so use every day to find the rules to navigate provide other information and all other Very important user needs maps can be either complex or simple objects and according to the user needs.</p>
+
+<p>They are configurable so user, most of the time is reach between differently years in order to see different data from for the same geographic area.</p>
+
+<p>So as you can imagine, in general, maps are complex object and from an accessibility perspective they represent a challenge, but We have to start from one aspect and maybe the most important is the need for annotations.</p>
+
+<p>We talk about annotations of geolocation data and maps beta different.</p>
+
+<p>Why are they so important for accessibility.</p>
+
+<p>Tony Stockman: Because once those invitations are specified and then delivered, they become available to be read from machines or from humans.</p>
+
+<p>Tony Stockman: For different options such as known Visual.</p>
+
+<p>Visual outlets like speech scientists or like samples and this is very important because text annotations is the most portable format and the only one that can be translated into other forms.</p>
+
+<p>So we start from the text annotations and then we can deliver the data and the information for different users.</p>
+
+<p>Nicholas Giudice: We have grouped all these use cases and requirements into four main fields regarding use cases for maps information retrieval navigation comparing and monitoring.</p>
+
+<p>Nicholas Giudice: And you're going to start from the first one.</p>
+
+<p>But first of all, we like to say that the following user needs are neither exhaustive nor definitely if Nicholas Giudice: They represent a starting point to begin to orientate towards user needs and potential requirements.</p>
+
+<p>So is a kind of a way to start to think about accessibility for a map object for So usually is for information retrieval.</p>
+
+<p>We are going to start from the first user is.</p>
+
+<p>And the first two requirements.</p>
+
+<p>Okay, so the first user needs a student wants to learn the boundaries of a certain geographical area.</p>
+
+<p>We have two requirements to solve these different regions must be labeled with text and other metadata and each place of interest.</p>
+
+<p>For example, like cities should be available with labels that should contain not only the place of interest, but also the region where it belongs.</p>
+
+<p>In this user name and all other presented in this presentation meta data, maybe area or other HTML attributes.</p>
+
+<p>So this is to give some kind of nomenclature for meta data.</p>
+
+<p>The second user needs a researcher wants to analyze the geographical area user using different room lever same measurements so Users should be able to configure their experience on reading the map.</p>
+
+<p>This is very important because different user might need the different scale unit and other meta data in order to read and to Understand the data that are on the map.</p>
+
+<p>And so scale unit and other meta data should be available as labels on the map context, of course, they also must be editable using available controls on an app.</p>
+
+<p>user needs one con three a user wants to study only the rivers and the lakes of an area without being distracted by other data.</p>
+
+<p>This is very important because As we said before, data are very complex object.</p>
+
+<p>And so most of the times user just want to read only certain data rather than all the data that are available on the maps and so As a requirement for this user need mess different data must be available as leaders that can be switched on and off by the users, according to their user needs and the active layers must be available as text labels so they are They can be found easily by users, while looking into the mouth.</p>
+
+<p>Now we're going to talk about user needs for navigation.</p>
+
+<p>We start with this user neither user with low vision wants to highlight dude between two places we have one requirement that might need to be solved with in order to To solve this particular user need the distance between places must be available as a text enable this is very important because when a user wants to navigate towards A specific destination.</p>
+
+<p>One of the most important information that he or her needs is the distance.</p>
+
+<p>And so if the user is using a real time litigation mode.</p>
+
+<p>That is very common.</p>
+
+<p>So think about, we are we are a user that wants to navigate towards the navigation and we are moving while looking into the map.</p>
+
+<p>So we are using Real time or near real time navigation mode.</p>
+
+<p>In this case, the distance should be updated because the position of the user is updating and they these updates should be presented to the user with text labels and should contain information about his new position.</p>
+
+<p>Another user needs about maps and navigation, a user who finds orientation difficult wants to navigate to the destination.</p>
+
+<p>This is a very common user need It for real time navigation mode is enabled, as we said on the user needs before The direction to follow must be available as text labels and every update or change must be presented to the user.</p>
+
+<p>But as we know, not every user find himself comfortable on using Navigation orientation while looking into the map.</p>
+
+<p>And while Walking, for example, on the real world.</p>
+
+<p>Sometimes these might be distracting or not easy to understand and so Most of the time, if we have time to creation mode is enable the user needs direction that should be available as visual hints like arrows.</p>
+
+<p>So not only like as text labels as tax information.</p>
+
+<p>Of course, is if the user is using these words, these warnings.</p>
+
+<p>Should be presented also proper alternative text so Alternative text with visual hints and also text labels for In order to navigate towards Enrique our destination is very important to be provided.</p>
+
+<p>In this case, if using visual, hence the alternative texts will need to be dynamically driven inaccurate and also updated in near real time is is very important because not every user find himself comfortable in using text.</p>
+
+<p>Text the navigation information.</p>
+
+<p>And other important user needs about navigation can be this one of wheelchair user wants to know the estimated time needed to move toward a certain destination, following the route on the map.</p>
+
+<p>The estimated travel time is, as we said for the distance and other important information while using maps for navigation and the important thing here is that estimated travel time is strictly bounded to the travel mode and so estimated travel time must be available as text labels.</p>
+
+<p>And also the estimated travel time must be available for different travel most.</p>
+
+<p>This is important as, for example, Google Maps that does To present the different travel nodes with different estimated travel times.</p>
+
+<p>And the important thing here is also to present to the user, only those travel modes that are concrete completely available really available on that path for that destination.</p>
+
+<p>So If the map presents estimated travel time according to travel modes that are really available for that path.</p>
+
+<p>The user has all the information that he needs and in order to know How to navigate to that destination using the map.</p>
+
+<p>This is a very common user needs.</p>
+
+<p>For maps.</p>
+
+<p>So now we are going to talk about user needs for comparing A JOURNALIST WANTS TO STUDY data about the spread of a virus on a larger geographic area.</p>
+
+<p>He wants to quickly understand the relevant data.</p>
+
+<p>And spot the differences between countries also.</p>
+
+<p>This one is very common.</p>
+
+<p>Because think about maps using for your magazines or newspapers.</p>
+
+<p>These maps should be easily understandable understandable for a very large number of users and so numeric data should be available as text labels placed over the map.</p>
+
+<p>And not only just with visual highlighting This is important because a very important rule for accessibility in general is not to rely on the caller's not to rely on only on the symbols on shapes and sizes.</p>
+
+<p>Because users most may not be able to spot differences on callers and on sizes easily.</p>
+
+<p>For example, and each label should contain the value the unit and related counter.</p>
+
+<p>So all the, the thought that the user needs.</p>
+
+<p>To understand in order to have to understand the big picture.</p>
+
+<p>And other requirement if numerically at are shown as we said before using color so sigh most a legend must be available as text annotation.</p>
+
+<p>On the map context or near the map context.</p>
+
+<p>And this is important because if we are using not text data so visual highlighting of some kind.</p>
+
+<p>We have to provide a legend in order to understand those assemblies windows coloring and etc.</p>
+
+<p>Another example strictly related to the prior one a blind student wants to know the demographic data of a certain area specifying on the map.</p>
+
+<p>In this case we have, we are also talking about to numerically at that but we are talking about of blind students blind user and Think about this blind user that wants to navigate all those data over the map that are yes our, our Shown with text labels, but they are a lot.</p>
+
+<p>They are very large number of information on the map and the map.</p>
+
+<p>And so the user should navigate One by one, and this is very difficult.</p>
+
+<p>It's it would become a very bad experience or very bad user experience.</p>
+
+<p>And so in this particular cases when we have a large number of information as numeric data on the map.</p>
+
+<p>It should be provided an alternative mode in order to read those data and With authority mode.</p>
+
+<p>Here we have an example numerical data maps are usually shown with different colors graduation ensembles, for example.</p>
+
+<p>For different sizes.</p>
+
+<p>Think about the city with one times and people.</p>
+
+<p>That is a lie highlighted with a big, red circle and instead think about another one with 10 people that is shown with a tiny dot Not every user may prefer or may be able to spot differences.</p>
+
+<p>So people who find difficult to different shade callers boundaries insightful can retrieve the same data using alternative mode example.</p>
+
+<p>For example, a table.</p>
+
+<p>So it's very important to provide both data view and let the user decide which one to use.</p>
+
+<p>According to his username.</p>
+
+<p>Last but not least, we are talking about monitoring on maps and we have here a user needed that.</p>
+
+<p>Summarize all the other requirements that we talked about before this a user wants to analyze how real time data are changing on a geographic area shown on the map.</p>
+
+<p>So this is a very complex example user need because it contains.</p>
+
+<p>A lot of numeric data real time updates and so the requirements are the following data must be available on the map as text labels for other metadata.</p>
+
+<p>That should be updated automatically if the feature is Richard on because not every user may like the automatic updates of information, but they rather wants maybe to update with a refresh or with a specific User action.</p>
+
+<p>Also data should be available with another talented mode because we are talking about a complex data, a lot of numeric and complex data and for example at table should be provided and should be very useful for A lot of users in order to read those data and be constantly updated about those informations So I thank you again for the attention.</p>
+
+<p>Thank you Josh.</p>
+
+<p>For corner and all the RTS theme and thanks everybody.</p>
+
+<p>I hope I give you a first overview about maps and accessibility and the need for applications that are you, it would be would be a start.</p>
+
+<p>Start in order to think about more about accessibility on maps on the context of the web platform.</p>
+
+<p>Thank you, everybody.</p>
+
+<p>Have a nice day.</p>
+
+<p>Great.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Okay.</p>
+
+<p>Excellent.</p>
+
+<p>Thank you.</p>
+
+<p>I got a call that was another great example of the, the importance of accessibility when we're talking about maps for the web.</p>
+
+<p>I just wanted to ask if if there's anything that you wanted to add Ryan Ahola - Natural Resources Canada: Now, just before we transition into into our panel discussion on the topic.</p>
+
+<p>Nicolò Carpignoli: Oh no, I thank you everybody for the attention.</p>
+
+<p>I am starting to see some comments some nice comments and very interesting topics on the gator chat so I'm ready to answer and to follow the discussion.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Great, thanks a lot.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So I guess I guess on that, um, Ryan Ahola - Natural Resources Canada: I think we can transition straight into our panel discussion because it's on the same topic.</p>
+
+<p>And maybe that will be an opportunity for us to to have more discussion, ask them questions.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So maybe with that, I'll transfer it over to Kobe homeowner from the Open Geospatial Consortium, who's going to be moderating this panel to introduce the panelists, so I'm Doug Schepers: Actually, I should, we should make sure that everyone's here.</p>
+
+<p>Gobe Hobona (OGC): Okay.</p>
+
+<p>Gobe Hobona (OGC): So yeah, Ryan.</p>
+
+<p>Thanks for that introduction.</p>
+
+<p>So let me just quickly show it.</p>
+
+<p>So we have Doug Gobe Hobona (OGC): Doug shoppers.</p>
+
+<p>Hi.</p>
+
+<p>Gobe Hobona (OGC): Brendan dicks 20 Stockman and might Nikolas Giudice Gobe Hobona (OGC): Are we on the call.</p>
+
+<p>Doug Schepers: Nicholas.</p>
+
+<p>Are you there.</p>
+
+<p>Nicholas Giudice: I'm here again.</p>
+
+<p>Doug Schepers: Okay, great.</p>
+
+<p>Gobe Hobona (OGC): Alright well Gobe Hobona (OGC): That's, that's great.</p>
+
+<p>Okay.</p>
+
+<p>Gobe Hobona (OGC): Good day everyone.</p>
+
+<p>So my name is Scott over one hour for the OTC the Open Geospatial Consortium and I'm going to be moderating the panel discussion over the next 30 minutes so Gobe Hobona (OGC): Well, wanted to have a panel of experts discussing with us today.</p>
+
+<p>We have Doug shoppers from this studio Gobe Hobona (OGC): We have Brendan big from audio odium and Brendan also works for this Smith Kettlewell I Research Institute, and we have Dr. Tony Stockman from Queen Mary University.</p>
+
+<p>Gobe Hobona (OGC): In London, and Dr. Nicholas GG from the University of Maine.</p>
+
+<p>Gobe Hobona (OGC): Welcome Gobe Hobona (OGC): So, Gobe Hobona (OGC): Let me first of all, just give you an overview of our panelists biographies, Dr. Purpose is the founder and director of fish studio and accessible data visualization startup in Chapel Hill.</p>
+
+<p>Doug Schepers: North Carolina.</p>
+
+<p>Gobe Hobona (OGC): USA because the dogs and sorry not North Carolina.</p>
+
+<p>All right.</p>
+
+<p>Gobe Hobona (OGC): Previously Doug spent a decade defining standards as a technical product manager at WCC will conduct like Gobe Hobona (OGC): Brendan bakes is currently an engineer at the Smith Kettlewell I research institute working on non visual Gobe Hobona (OGC): Representations he graduated with his semesters and inclusive design in May 2019 from Marquette University, where he has thesis was on designing accessible non visual maps.</p>
+
+<p>He said blind web developer who has had enough vision to see me, but not enough to use it.</p>
+
+<p>Gobe Hobona (OGC): The main focus of his research has been on digital audio maps in particular maps that have been developed through the natural log workflow, video games, he's the creator of audio multimodal map where we're sorry work component that can be embedded into our pages welcome Brendan Gobe Hobona (OGC): Also joining us is Dr. Tony Stockman Senior Lecturer in the cognitive science research group and center for this one music in the School of electronic engineering and computer science at Queen Marion, University of London.</p>
+
+<p>Gobe Hobona (OGC): Is commercial experience includes working as a systems programmer at Rolls Royce and as a Systems Analyst at ICI in Manchester.</p>
+
+<p>Gobe Hobona (OGC): He has over 100 peer reviewed publications on interaction design and or charity space and develop the tutor for editable audio maps with this research student as lonely.</p>
+
+<p>Gobe Hobona (OGC): 20 centimeters board member of the international community community for what a treat this display having served as president from 2011 to 2016 welcome Tony Gobe Hobona (OGC): Got Dr. Nicholas Junichi a professor specially informatics in the School of Computing and Information Science at the University of Maine.</p>
+
+<p>Gobe Hobona (OGC): Has worked for 20 years and they have multimodal special cognition and the design and evaluation not accessible special displays, including maps.</p>
+
+<p>Gobe Hobona (OGC): His primary focus on accessibility for blind and visually impaired people are cited folks and Gobe Hobona (OGC): Is free situations.</p>
+
+<p>He has published.</p>
+
+<p>Brilliant.</p>
+
+<p>The Syrian is on the proposal to access journals his recent years in recent years, he painted the development of Bible audio maps.</p>
+
+<p>Gobe Hobona (OGC): Then, which are multimodal maps that are rendered on the types of smart devices such as phones and tablets welcome Nicolas Gobe Hobona (OGC): So just before we get started with the questions are so Nick is an expert in by Pro Audio maps and Tony Tony and Brandon specialize in digital or the tree maps.</p>
+
+<p>Gobe Hobona (OGC): So I think it's a great opportunity for us to ask them about these concepts.</p>
+
+<p>What these types are so let's start off with, let's start off with Nick, Nick.</p>
+
+<p>Gobe Hobona (OGC): In one minute.</p>
+
+<p>Could you just give us an overview of what Viper audio map selfies.</p>
+
+<p>Nicholas Giudice: Sure.</p>
+
+<p>So Viper audio maps.</p>
+
+<p>Um, can you hear me.</p>
+
+<p>Doug Schepers: Yes, we're good.</p>
+
+<p>Nicholas Giudice: If I brought your maps maps that are rendered on the touchscreen of a smart device.</p>
+
+<p>So it's a visual map that uses combinations of vibration audio and kinesthetic movement.</p>
+
+<p>So you might say, well, there's no touch on a touchscreen.</p>
+
+<p>I mean, touchscreens flat.</p>
+
+<p>Nicholas Giudice: But it turns out if you if you read to the map and you're having someone move their hand around Nicholas Giudice: When they touch a visual element you synchronous synchronous they trigger the vibration motor Nicholas Giudice: At that x y location or auditory cues and the perception is one of feeling a line or a point or region and they can move their head around and explore that to learn the map.</p>
+
+<p>And it turns out it works really well for people to Nicholas Giudice: Yet to learn different types of graphics and just very quickly.</p>
+
+<p>You may say, Well, why use touch verse audio or language.</p>
+
+<p>Nicholas Giudice: And they all can work.</p>
+
+<p>But the beauty of touches that it's most similar to vision and is a non visual no of the non visual senses, it's closest division, especially for spatial information.</p>
+
+<p>Nicholas Giudice: Like map so brain processes visual and tackle spatial cues.</p>
+
+<p>Nicholas Giudice: Very similar.</p>
+
+<p>We use different areas, but the computation done by different by neurons in those areas is Nicholas Giudice: Very similar.</p>
+
+<p>So when you want to convey spatial information.</p>
+
+<p>It's way easier to do it using touch, then, for instance, to try to describe a map with language which can work but but takes more cognitive load.</p>
+
+<p>Nicholas Giudice: And so there's there's advantages, especially when we're doing thinking about this was a multimodal way they can work with other people's audio renderings but are adding touch.</p>
+
+<p>Nicholas Giudice: And it just kind of fits with how the brain processes.</p>
+
+<p>So it's a bio inspired interface and that brain is inherently multimodal and so more devices and more interfaces, especially non visual ones to convey that convey that same information need to also be multimodal Nicholas Giudice: And I could go on for a long time, but I will Because I think Gobe Hobona (OGC): Thanks, Nicholas for that.</p>
+
+<p>Overview Gobe Hobona (OGC): Okay 20 Gobe Hobona (OGC): Just give us a one minute overview of what digital what a tree maps are from your perspective.</p>
+
+<p>Tony Stockman: Or I mean, in a sense, you could say they are a subset of vibe or attacked on auditory maps.</p>
+
+<p>We tended to focus on audio.</p>
+
+<p>Tony Stockman: And, not least because Tony Stockman: Obviously sound cards come with most most PCs and we wanted something that was going to be sort of globally accessible.</p>
+
+<p>Tony Stockman: The.</p>
+
+<p>The trick with designing these is how you're going to use different types of sound.</p>
+
+<p>So our requirements investigations talking to visually impaired users.</p>
+
+<p>Tony Stockman: I've generally found that the really key information if you are restricting yourself to the audio mode of presentation.</p>
+
+<p>Tony Stockman: really needs to be delivered with speech.</p>
+
+<p>So things like distance and information about turn by turn directions really needs to be given using speech, but Tony Stockman: There is some real value to be had by leveraging our ability to hear other sounds at the same time as speech and make use of it and really those non speech sounds come into two categories one are one is auditory icons auditory icons are the audio equivalent of icons.</p>
+
+<p>Tony Stockman: They use representative sounds to present landmarks or points of interest along the way.</p>
+
+<p>So in systems we've built.</p>
+
+<p>We had sounds to represent things like schools parks swimming pools cafes, restaurants, and so on.</p>
+
+<p>Tony Stockman: And the trick there is to try to choose or to treat icons that are meaningful to most people wherever they happen to live and that can be quite tricky.</p>
+
+<p>Tony Stockman: And and we've had lots of sort of prototyping sessions where we've worked through these with different groups of people.</p>
+
+<p>Tony Stockman: And then the other type of non speech sounds are ear columns.</p>
+
+<p>These are more abstract sounds and the abstract because you particularly don't want them to be confused with auditory icons.</p>
+
+<p>You don't want people mistakenly to think that they represent a point of interest.</p>
+
+<p>So they are deliberately Tony Stockman: Not natural sounding particularly but they can be used to convey other bits of information about Tony Stockman: About the route.</p>
+
+<p>Tony Stockman: Typically, possibly, things like how many, how many degrees are associated with a particular turn.</p>
+
+<p>I don't mean literally down to two one degree, obviously, but maybe Tony Stockman: Breaking down as 360 into say chunks of 45 or 60 maybe Tony Stockman: So here comes our unimportant contributing source of sound in ordinary maps and overall Tony Stockman: The scale in developing a good orange tree map is how to choose the sounds that are going to be most effective and balancing these different types of sound so that they give an engaging and usable experience to people using the map.</p>
+
+<p>Doug Schepers: Gabi, would you mind 30 seconds.</p>
+
+<p>Those are both excellent explanations, but do you mind if I give 30 seconds to people who may not be familiar with accessibility in general how wine people, for example, we'll use screen screen reader.</p>
+
+<p>Doug Schepers: Very briefly, a Doug Schepers: The two techniques that they talked about our supplemental in some some ways.</p>
+
+<p>In contrast, so with what most people with the typical modality for browsing the web.</p>
+
+<p>Doug Schepers: That a blind person will use, which is by screen reader were in a screen reader is a piece of software.</p>
+
+<p>If you're not familiar with it, the screen here is a piece of software that Doug Schepers: It's a bit like an audio book but interactive.</p>
+
+<p>So you can move around, you can fight.</p>
+
+<p>You can search, you can find things you can find the table of contents of a page.</p>
+
+<p>Doug Schepers: It announces links at announcer announces alt text for images, things like this.</p>
+
+<p>But that is for textual content you can apply that to visual content, for example.</p>
+
+<p>Doug Schepers: Reading out the image, the alt text of an image, but we have complex images like maps things that or data visualizations charts, etc.</p>
+
+<p>Doug Schepers: That you're meant to Doug Schepers: That you're meant to actually visually explore.</p>
+
+<p>That's where the techniques that in addition to hearing the speech things that's where these Bible tackle and and auditory maps really shine.</p>
+
+<p>So a combination of these things all of these techniques is really Doug Schepers: What's sought here and I also, one thing I want to bring out is the techniques that they're talking about aren't necessarily going to be things that need to be Doug Schepers: enabled by the are specifically enabled by the authors of the map.</p>
+
+<p>They might be things that Doug Schepers: Are supplemental that are additional pieces of software.</p>
+
+<p>It says assistive technology.</p>
+
+<p>Doug Schepers: That goes on top of a map that is properly annotated as per the last presentation.</p>
+
+<p>Doug Schepers: And is properly marked up in such a way that it can be consumed and transformed into these modalities.</p>
+
+<p>Right.</p>
+
+<p>It can enhance these modalities, it can enable these modalities.</p>
+
+<p>Doug Schepers: So you don't necessarily need to make your maps audio tech you know vibratory or audio tackle, but you should make your maps amenable to you to to using those techniques.</p>
+
+<p>Gobe Hobona (OGC): Okay, thanks.</p>
+
+<p>Gobe Hobona (OGC): Brendan Gobe Hobona (OGC): Instance, you could give us just a one minute minute or so.</p>
+
+<p>Overview of digital with a tree maps from your Gobe Hobona (OGC): From your perspective, Brandon Biggs: Yeah, absolutely.</p>
+
+<p>So there are two different types and Tony gave a really good summary of digital auditory maps.</p>
+
+<p>But I think there are two two different Brandon Biggs: Like overview types.</p>
+
+<p>There's interactive auditory maps.</p>
+
+<p>So those are the ones where you are.</p>
+
+<p>Brandon Biggs: Having like an input device and you're moving around the map, very much like a game like World of Warcraft or something like that.</p>
+
+<p>Then there are Brandon Biggs: presentational maps.</p>
+
+<p>And so those are like recordings and Tony's been working on these specifically and basically listen to, like, an overview of a map.</p>
+
+<p>Brandon Biggs: And you can open different turn by turn information or you get you get information about the map has listened to it.</p>
+
+<p>And so the only interaction you have there is if you fast forward and rewind.</p>
+
+<p>Brandon Biggs: And so I think those are the two main types of maps and they each present different information, but in my research.</p>
+
+<p>Brandon Biggs: The interactive maps have been what you can present information such as shapes routes it getting route landmark in survey knowledge.</p>
+
+<p>Brandon Biggs: Very quickly, and I think surveys are what the presentational maps are really, really good at.</p>
+
+<p>So I think you need kind of a mixture of both.</p>
+
+<p>And so, but you can have both which is what's really nice about auditory maps.</p>
+
+<p>Gobe Hobona (OGC): Okay.</p>
+
+<p>Gobe Hobona (OGC): Thanks, Brandon.</p>
+
+<p>Okay, so Gobe Hobona (OGC): Let's move on to the next question.</p>
+
+<p>So we thought, East approaches to creating accessible.</p>
+
+<p>You know what a tree maps.</p>
+
+<p>Gobe Hobona (OGC): What is the biggest challenge that you see standards development organizations needing to face but not just our development organization, but also browser developers.</p>
+
+<p>What's the biggest challenge that these organizations will encounter when they attempt to Gobe Hobona (OGC): You know, develop standards around those types of maps.</p>
+
+<p>Gobe Hobona (OGC): Shall we start with, let's start with Doug Doug Schepers: Oh, um, I think I sort of summarize part of what Doug Schepers: My goal there, which is to say, I think it was excellent presentation with several excellent presentations on extending the web to do different things.</p>
+
+<p>Doug Schepers: around accessibility in terms of maps throughout this entire workshop I really liked the annotation when that was that immediately preceded this panel.</p>
+
+<p>I recommend people watch that.</p>
+
+<p>Doug Schepers: And Doug Schepers: I think that we have, we're fortunate.</p>
+
+<p>Now we've got a pretty rich platform.</p>
+
+<p>Doug Schepers: In order to in, for example, we can enable vibratory maps.</p>
+
+<p>I don't want to step on Tony's toes, but we can enable vibratory maps, because we have the web vibration API.</p>
+
+<p>Doug Schepers: We can enable the auditory maps, because we have the Web Audio API. So the some of the basic features that are needed to Doug Schepers: To to to enable the modalities that we're talking about already there.</p>
+
+<p>I think that Doug Schepers: One of the next steps is for us to have standard ways of representing a particular things, whether that's an ontology, or it just loosely based on text basically being able to say that something is a restaurant and from knowing that it's a restaurant and knowing Doug Schepers: The geometry, etc.</p>
+
+<p>Have an area you can actually work out client side.</p>
+
+<p>Doug Schepers: You can enable a lot of features client side.</p>
+
+<p>I think it's going to be a combination of web standards features that are already exist.</p>
+
+<p>Doug Schepers: Perhaps either ontology or vocabularies like ARIA specifically around maps.</p>
+
+<p>Doug Schepers: And and then probably a lot of of experimentation by pioneers like these guys who are Doug Schepers: Who are Doug Schepers: Really, making it work on the client side and then probably that you would need to be full folded back into standards going forward.</p>
+
+<p>I think it has to be a combination of of standards plus innovation in the in software.</p>
+
+<p>Gobe Hobona (OGC): Okay.</p>
+
+<p>All right.</p>
+
+<p>Thanks, Doc.</p>
+
+<p>Okay, Brandon.</p>
+
+<p>Gobe Hobona (OGC): Why don't you just share your thoughts on what the biggest challenges that standard government organizations and brother developers will encounter.</p>
+
+<p>Brandon Biggs: Yeah, I think the three things.</p>
+
+<p>One is the data is neat that needs to be a lot more work with data on the second is the API's.</p>
+
+<p>There's some future API's like with XR Brandon Biggs: That are coming out and we need to be thinking about those and how we can represent maps and that way.</p>
+
+<p>And the third is getting the users involved in whatever in whatever we make.</p>
+
+<p>So whether it's, you know, maps of these Brandon Biggs: Accessible maps, you know, getting people who build these accessible maps involved with, you know, how the data should be represented, or if we're actually building these interfaces.</p>
+
+<p>We need the users to be experiencing those for the data.</p>
+
+<p>Specifically, I think there should be like a neat.</p>
+
+<p>Brandon Biggs: Every single one of these interfaces that we've talked about requires a name attribute or a label actually very similar to what the guy in the last presentation was talking about.</p>
+
+<p>Brandon Biggs: And that's just super critical and then another big issue that we need to be considering is raster data.</p>
+
+<p>Brandon Biggs: Eraser data because it's extremely difficult right now for us to represent racer data in any liberal or audio maps, because it's just a picture and pictures are completely useless for computers and what we're doing essentially is translating Brandon Biggs: The data and using the computer into a different modality.</p>
+
+<p>So pictures are inherently Brandon Biggs: Visual.</p>
+
+<p>And so if we can get the underlying data from that picture into something more useful.</p>
+
+<p>That's going to be the Brandon Biggs: Digital auditory maps and they will have auditory maps more useful.</p>
+
+<p>Brandon Biggs: It'll actually be able to use that data.</p>
+
+<p>Brandon Biggs: It'd be like using recording and make a picture of the recording.</p>
+
+<p>So we need to figure out a way to do is make racer information into some sort of Brandon Biggs: Vector in getting some sort of vector geometries and then for the APIs.</p>
+
+<p>There's like Brandon Biggs: These tactic clothes tactile gloves that are coming out that should be in the next couple years.</p>
+
+<p>And those will allow for 3D model maps.</p>
+
+<p>Brandon Biggs: Which we don't have right now or raise line maps on like a piece of paper virtually and so we need to be thinking about having API's for these types of peripherals for XR Brandon Biggs: And it won't just be for maps.</p>
+
+<p>It'll be for a whole bunch of other things too, but a mouse will definitely be part of that and Brandon Biggs: Then we just, we just need to have lots of testing.</p>
+
+<p>So those are what I think are the three things that we need to be thinking about for going forward with these these interfaces.</p>
+
+<p>Okay.</p>
+
+<p>All right.</p>
+
+<p>Thank you.</p>
+
+<p>Gobe Hobona (OGC): Tony to just respond to that question, please.</p>
+
+<p>Tony Stockman: Yeah, and I think from my work and my point of view, what one of the real problems actually is the lack of standards for auditory displays in general.</p>
+
+<p>Tony Stockman: I have been involved with the international community for order to display for quite a while now and there simply are not standards for the way we represent things in audio, there's some things that are known to work relatively well Tony Stockman: Under a guidelines for some specific elements.</p>
+
+<p>For example, the air cons that I talked about.</p>
+
+<p>Towards the end of my Tony Stockman: Minute just now.</p>
+
+<p>Tony Stockman: But in general, there's a real shortage of standards.</p>
+
+<p>And I think that's really a challenge for the auditory display community to to try to address.</p>
+
+<p>Tony Stockman: And touching on the presentation we had on accessible maps which I agree was was excellent.</p>
+
+<p>I, I think as well.</p>
+
+<p>There is that and a little bit about what Brent Brandon said about Tony Stockman: overviews Tony Stockman: And we, one of the limitations of the work we did on interactive maps was the fact that you couldn't easily Tony Stockman: Flip views or interact with the map at different levels.</p>
+
+<p>The, the system we implemented and allow somebody to effectively virtually walk along a route.</p>
+
+<p>Tony Stockman: And encounter points of interest along the way and but you couldn't you couldn't kind of zoom out of that view.</p>
+
+<p>Tony Stockman: And traverse the map easily at a, at a higher level, at a more rapid rate and gain more of an overview of what we're saying.</p>
+
+<p>And that, to some extent, is what our current work is is looking at Tony Stockman: And then finally, I'd very much endorse what Brandon said about getting users involved.</p>
+
+<p>We've learned an awful lot about things to do and not to do concerning auditory icons.</p>
+
+<p>Tony Stockman: Through prototyping with users.</p>
+
+<p>And I think that's got to be a key part of the way forward.</p>
+
+<p>Gobe Hobona (OGC): Right, based on Gobe Hobona (OGC): Nicholas Gobe Hobona (OGC): Like to respond to the question.</p>
+
+<p>Nicholas Giudice: Sure.</p>
+
+<p>So Tony and Brandon, a Nicholas Giudice: Bunch of the points that I would make.</p>
+
+<p>But I guess what I would add here is that there needs to be especially for these non visual Nicholas Giudice: Variants of maps and most people haven't cryptographers and that produces and designers haven't thought about auditorium Viper tackle.</p>
+
+<p>Nicholas Giudice: And so we need to somehow bake into any type of standard more empirically derived visit guidelines for Nicholas Giudice: You know, for design that are that really maximize or ensure that these elements are both per sexually salient and cognitively meaningful.</p>
+
+<p>Nicholas Giudice: And so, you know, we have lots and lots of information out there about things in map elements in line thicknesses and do that.</p>
+
+<p>I mean, this is there's a huge array of Nicholas Giudice: Visual parameters that are just guidelines for design, but that make a big difference in how the map is perceived and learn and remembered Nicholas Giudice: None of that exists for these non visual maps and the parameters are different.</p>
+
+<p>You can't take a visual parameter and have it work for touches touch has Nicholas Giudice: 500 times less sensory bandwidth.</p>
+
+<p>So we have to figure out, you know, we have to do kind of the bit low level psycho physical work to figure out what are the Nicholas Giudice: You know what, what is a line that is most receivable.</p>
+
+<p>What are the threshold.</p>
+
+<p>When is it maximally readable, things like that.</p>
+
+<p>I think Nicholas Giudice: To do that work which has started and people including some of the folks here, we started doing this but for a standard to Nicholas Giudice: Be meaningful to actually work.</p>
+
+<p>We have to be able to have this really well clarified.</p>
+
+<p>Nicholas Giudice: And also, Tony and Brenda bolted on this at some point, we need to think more about what information, but I think it was the information modality mapping.</p>
+
+<p>So when we're developing a map or any Nicholas Giudice: Non visual multimodal graphic what part what properties.</p>
+
+<p>What attributes should be rendered by which modalities.</p>
+
+<p>So it makes sense to give labels and distance and as Tony talked about direction and things like that, through Nicholas Giudice: auditory cues.</p>
+
+<p>But perhaps the actual geometric layout information might be through space, but that mapping isn't clearly specified.</p>
+
+<p>I think that will be really important for success with these types of maps.</p>
+
+<p>Gobe Hobona (OGC): Okay, thank you.</p>
+
+<p>Nicholas.</p>
+
+<p>Okay, so, um, Gobe Hobona (OGC): I mean, I'm from a standards development organization.</p>
+
+<p>And one of the first things that we do within that community is we research particular area of interest and try to understand Gobe Hobona (OGC): You know what the issues requirements and needs around a particular topic.</p>
+
+<p>So my question.</p>
+
+<p>My next question to you is, you know, can you please suggest ideas for experimentation that could improve Gobe Hobona (OGC): On this issue surrounding you know or the treatment and accessibility of web maps in general.</p>
+
+<p>Help us to prioritize our thinking in terms of where we should focus our innovation work.</p>
+
+<p>So shall we start with Nicholas Nicholas Giudice: Sorry, I kind of already gave my answer.</p>
+
+<p>I guess in the last, the last Section Nicholas Giudice: But that yeah i mean the the experimentation that needs to be done and stuff that's been started.</p>
+
+<p>And it really hits on those points that that I'm doing, but it should be done with users as Brandon had said.</p>
+
+<p>Nicholas Giudice: And I think it also needs to be done with how do you, it's not just getting the data that I talked about.</p>
+
+<p>But how to get that information to other Nicholas Giudice: Map developers and people that are doing web based mapping Nicholas Giudice: To learn how this type of thing can be implemented.</p>
+
+<p>They're obviously not going to be experts in using vibration.</p>
+
+<p>But if we do this right, and get very clear parameters and guidelines.</p>
+
+<p>These are things that can be used in generic Nicholas Giudice: Application of maps.</p>
+
+<p>And I think that that's it's as much doing the experiments as getting the data and the results out to other people that can use it.</p>
+
+<p>That's important.</p>
+
+<p>And I think that that link is currently not always the case.</p>
+
+<p>I think that's, that's an important part going forward.</p>
+
+<p>Gobe Hobona (OGC): Okay.</p>
+
+<p>All right, thanks.</p>
+
+<p>Gobe Hobona (OGC): Tony didn't respond to your question.</p>
+
+<p>Tony Stockman: Yeah, sure.</p>
+
+<p>Um, I'm really comes back to what we were saying, I think about involving users and finding out what works.</p>
+
+<p>Tony Stockman: In, in our case in in audio.</p>
+
+<p>So I talked about presenting some information in speech and other information.</p>
+
+<p>Tony Stockman: being presented in non speech sound and quite often.</p>
+
+<p>This can be done simultaneously and somebody can understand both streams of information, but it needs to be more work done on this to know Tony Stockman: What kinds of combinations of sounds presented simultaneously or very close to one another.</p>
+
+<p>And I'm work well and what can people take in at any one time.</p>
+
+<p>Tony Stockman: And particularly, picking up the point I made about overviews or the ability to to switch between different levels of map navigation.</p>
+
+<p>Tony Stockman: As you as you zoom further out or get a higher level perspective on on the map, it may become necessary to present more information within a relatively short time period.</p>
+
+<p>So knowing what it is that that people actually want to know from a map.</p>
+
+<p>Overview Tony Stockman: How best to make that that overview configurable so that people can actually specify what what elements they want to give emphasis to and and the means by which emphasis should be given to Tony Stockman: Certain elements, so it's it's really effectively user investigations and exploring these these different options and what combinations work well.</p>
+
+<p>Gobe Hobona (OGC): Thanks, Tony, we're nearly out of time.</p>
+
+<p>So Brendan Gobe Hobona (OGC): Your next would respond to that question.</p>
+
+<p>Brandon Biggs: Yeah, sure.</p>
+
+<p>So I think really the biggest thing that needs to happen is we just need to make more maps in all different types of modalities, I think.</p>
+
+<p>Brandon Biggs: I think right now the biggest Brandon Biggs: Problem is that we've we haven't really tried doing bark maps or topological maps of the Grand Canyon, or, you know, different, different types of maps that are required for me being a professional, you know, a geographer, and Brandon Biggs: You know, doing all different types of maps that that that are out there.</p>
+
+<p>So I think that's really the next step, we just need to make a bunch of different maps.</p>
+
+<p>And I think that's what we're trying to do with the audience platform that Brandon Biggs: I'm working on.</p>
+
+<p>And I know you know all of us here, Tony.</p>
+
+<p>Nick and I are really trying to make different types of maps.</p>
+
+<p>So I think that's, that's, you know, we're kind of doing that, but it it it just it's taking a little bit of time so Brandon Biggs: Yeah, I think that's what needs to happen.</p>
+
+<p>Gobe Hobona (OGC): Okay, right.</p>
+
+<p>Gobe Hobona (OGC): OKAY, DOC would want to respond to that question.</p>
+
+<p>Doug Schepers: Really quickly, I want to reiterate what everybody else has said, which is we need user testing, for example.</p>
+
+<p>Doug Schepers: I know limitations of standards.</p>
+
+<p>Oftentimes there's not a lot of user research and real world data that goes into it.</p>
+
+<p>If Doug Schepers: They try everyone tries good faith.</p>
+
+<p>But, for example, the color contrast ratio and trying to look at Doug Schepers: Forever is a little bit arbitrary.</p>
+
+<p>It's not, it's not really hard data.</p>
+
+<p>And I know this has been improved and what CAD three Doug Schepers: But I really think that we, there needs to be considered user research like like these older folks have said, and I also to reinforce the brand and said, Doug Schepers: Different tasks, different kinds of maps have different tasks associated with them different goals, different things you want to do with them and we need different modalities to Doug Schepers: To deal with that.</p>
+
+<p>And so we need to identify those tasks.</p>
+
+<p>Doug Schepers: That each each type of math which tasks you can accomplish with each type of map and maybe work out how best to accomplish those things.</p>
+
+<p>But again, Doug Schepers: Experimentation as everyone said and user research and and incremental changes to some of the existing web standards that we have and also in pushing out making sure people understand that they need to make the data available so that these modalities can be enabled through their maps.</p>
+
+<p>Gobe Hobona (OGC): Okay.</p>
+
+<p>Thanks.</p>
+
+<p>Okay.</p>
+
+<p>Yeah.</p>
+
+<p>So that's all that we Gobe Hobona (OGC): have in store for the for the panel.</p>
+
+<p>So I'd like to thank our panelists for Gobe Hobona (OGC): For this session doc Sherpas from this video, Brendan Beck's from audio and Smith cattle.</p>
+
+<p>Well I research institute Dr 20 stock went from Queen Mary University and Dr. Nicholas judiciary from the University of Maine.</p>
+
+<p>Thank you for sharing your insight and Gobe Hobona (OGC): And discussing with us on this very important Thank you.</p>
+
+<p>Gobe Hobona (OGC): Right.</p>
+
+<p>Gobe Hobona (OGC): Think it's big to you.</p>
+
+<p>Thanks.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Great.</p>
+
+<p>Thanks, everyone.</p>
+
+<p>I think Cisco bay for for moderating that excellent question.</p>
+
+<p>Um, so next we're moving into a set of presentations on related to advances in 3D map display.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So first off we're going to have you on Eric village who is the Managing Director of the open Eric Heart Association.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And also a full stack developer at work hard, as he's also a co Chair of the OTC so God post standards.</p>
+
+<p>Working Group.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And he's going to be giving a presentation titled from points of interest to maps of objects and I have your next presentation here so I'll just share my screen.</p>
+
+<p>And we'll start running through it.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Should be able to see it now and Jan-Erik Vinje: There you go.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Okay.</p>
+
+<p>So take it away.</p>
+
+<p>Jan-Erik Vinje: Thank you so much for the opportunity to speak here and go to next slide actually Jan-Erik Vinje: Are we seeing, do you see all okay it's just cutting off a little bit in my zoom.</p>
+
+<p>That's fine.</p>
+
+<p>And yeah, I'm the managing director of opening our cloud and we we are Jan-Erik Vinje: Working on driving the development of open interoperable technology data standards to connect the physical and digital worlds for the benefit of all.</p>
+
+<p>And we've got a couple of amongst our members.</p>
+
+<p>We have a couple of Dustin's who are Jan-Erik Vinje: Contributing as volunteers on a fairly regular basis.</p>
+
+<p>And we have a semi growing number of partner organization for from the spatial computing industry.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: So straight to the topic we're now going to look at Jan-Erik Vinje: How we can go from points of interest in math to interesting objects in math.</p>
+
+<p>Jan-Erik Vinje: To look into that we might want to do a comparison of the two Jan-Erik Vinje: So next slide.</p>
+
+<p>Jan-Erik Vinje: Points of interest are very familiar to most people who have worked with maps to play refer to something by their position and that position.</p>
+
+<p>Jan-Erik Vinje: Most cases is a 2D geographical position would be latitude and longitude or some other geographical coordinates, they can represent very different things.</p>
+
+<p>So toupee could be like yeah It could be referring to a city, and then this one single point that refers to that city.</p>
+
+<p>So it could be a large area.</p>
+
+<p>Jan-Erik Vinje: But it could also be a stationary object like like a building or statue or something of that sort.</p>
+
+<p>And then you could also have dynamic points that where you have for instance vehicles or people who are moving around.</p>
+
+<p>Jan-Erik Vinje: Points tends to have a few common attributes you have categories you ID them you name them and very typically you find some generic symbols.</p>
+
+<p>So the Jan-Erik Vinje: The category tends to inform what kind of generic abstract symbol used to represent the points of interest and then there could be any sort of metadata electric vehicles.</p>
+
+<p>They are very interesting case of poi data.</p>
+
+<p>Jan-Erik Vinje: Could be very rich, you could have images of the charging station and you could have you, I'm talking about electric vehicle but electrical equal charges.</p>
+
+<p>You could have images, you could have the status of different charges if they are available or not.</p>
+
+<p>Jan-Erik Vinje: Any kind of things.</p>
+
+<p>So, so the the world of points are quite large and complex and interesting Jan-Erik Vinje: And objects in Maps share many of those features and but you you need to go to the third dimension.</p>
+
+<p>When you're talking about an object.</p>
+
+<p>And if you want to have them in the map, you need there.</p>
+
+<p>We were just spatial pose, or you need a 3D geospatial position and orientation.</p>
+
+<p>Jan-Erik Vinje: Which allows for a six degrees of freedom positioning of the object.</p>
+
+<p>Jan-Erik Vinje: Also something that is different from some some types of points objects, they have a limited 3D volume.</p>
+
+<p>They have bounced and most often, you would say that they have unique 3D geometry is for object.</p>
+
+<p>Not always, but that would be quite common.</p>
+
+<p>Jan-Erik Vinje: And Jan-Erik Vinje: You, you can then allow to visualize the concrete and specific that makes them more Jan-Erik Vinje: Direct and less abstract and generic Jan-Erik Vinje: You used to represent any real or virtual objects with a 3D volume and and a real world posts.</p>
+
+<p>Jan-Erik Vinje: So that way when they can represent the subset of points and but do that in a way that is more spatially accurate and also they enable new ways to use maps like immersive maps.</p>
+
+<p>Jan-Erik Vinje: And and a little note here that they as they share so many of the attributes of points of interest if there weren't a a standard four points and you could easily extend it to define objects in Maps.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: So yeah, this is a little bit of the lamenting because there are no standards obviously tried Jan-Erik Vinje: Brave effort.</p>
+
+<p>And what you see is that companies are here and Google Maps and mood cut my company we handle points in different ways.</p>
+
+<p>We try to assemble different sources of points from from a range of sources.</p>
+
+<p>Maybe you write rappers.</p>
+
+<p>Maybe we write our own idiosyncratic point services.</p>
+
+<p>Jan-Erik Vinje: Maybe the closest thing out there in the real world could be the points.</p>
+
+<p>Jan-Erik Vinje: Feature of geo Jason, it has coordinate hair.</p>
+
+<p>A in this slide is he does a 2D coordinate it even supports 3D coordinates.</p>
+
+<p>And then you have properties where you could Jan-Erik Vinje: As soon as we put in all the metadata of of the poison set up the categories or ideas that kind of thing.</p>
+
+<p>But that's not really it doesn't really cut it so Jan-Erik Vinje: Okay.</p>
+
+<p>So next slide.</p>
+
+<p>Jan-Erik Vinje: For talking about objects.</p>
+
+<p>I want to take you back to the time of paper maps.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: Next slide.</p>
+
+<p>Yeah, so this very beautiful map from Paris.</p>
+
+<p>Oh, previous Jan-Erik Vinje: One back very beautiful map from Paris.</p>
+
+<p>You see, actually.</p>
+
+<p>You see the buildings and trees and different things as three dimensional objects in the map as a very rich way to visualize place.</p>
+
+<p>Jan-Erik Vinje: And we see that if you go to the next slide.</p>
+
+<p>Jan-Erik Vinje: Here you see this, this kind of approach is still being used.</p>
+
+<p>Jan-Erik Vinje: Theme Park maps tend to have this way of representing.</p>
+
+<p>It's a very intuitive way to understand Jan-Erik Vinje: And navigate and find what you're looking for.</p>
+
+<p>Interestingly here there's a combination of objects that are specific and using Craddick and then you have the generic points you have those numbers and letters that are more abstract Jan-Erik Vinje: And the next slide.</p>
+
+<p>Jan-Erik Vinje: So now we want to return to digital maps and.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: And there's something going on right around now it's been going on for some time, but map data is becoming more 3D and Jan-Erik Vinje: By going in that direction, they can start to break out into the 3D world out from the 2D screens.</p>
+
+<p>Jan-Erik Vinje: So if you're looking at the starting point.</p>
+
+<p>We have points on 2D maps leaflet is a library for web maps that displays flat 2D raster tiles.</p>
+
+<p>You could put points on top of that, then they are Jan-Erik Vinje: In the realm of 2D coordinates.</p>
+
+<p>And then there's an evolution towards vector maps were Princeton map box they have metric tiles and you close so Jan-Erik Vinje: Tilt those maps that are essentially flat, but by tilting the map, you get this intuition of, of the three 3D aspects of distance of things further apart comes closer together.</p>
+
+<p>Jan-Erik Vinje: It's a, it's a great thing, but Jan-Erik Vinje: The three aspect is limited to a flat plane where you might do some extrusions and you Jan-Erik Vinje: Know it's so you have a ritual way to interact with the especially to the flat map.</p>
+
+<p>Jan-Erik Vinje: More interesting though are the globe maps where Jan-Erik Vinje: Where the real world is recreated three dimensionally on the screen.</p>
+
+<p>Jan-Erik Vinje: And where you can place objects in those maps with geospatial six degrees of freedom position and orientation.</p>
+
+<p>Jan-Erik Vinje: And what what we call geo post in our GC and also open air cloud.</p>
+
+<p>Jan-Erik Vinje: And that's all great.</p>
+
+<p>And there's this is real world spatial computing three dimensional, but in open air cloud and in the industry and especially computing industry.</p>
+
+<p>Jan-Erik Vinje: We want to bring those the map data out in the real world to create the immersive maps maps that we are in the middle of and we interact in in the way we interact with real world.</p>
+
+<p>Jan-Erik Vinje: So open air cloud is is engaging this technology of real world spatial computing, which is more or less an infrastructure that it will be based on real time updated 3D maps that are in the cloud.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: So I mentioned geo post geospatial position and orientation and working with Christine chute.</p>
+
+<p>He will be speaking after me.</p>
+
+<p>Jan-Erik Vinje: On on the OTC standards working group to define a universal standard for geospatial position and orientation.</p>
+
+<p>We've been working intensely since January 24 and hopefully we'll be able to publish a draft specification that can be reviewed by the Community.</p>
+
+<p>Jan-Erik Vinje: Next slide.</p>
+
+<p>Jan-Erik Vinje: Open Air clouds.</p>
+
+<p>Currently we are Jan-Erik Vinje: Hoping to use this standard in our big project.</p>
+
+<p>Now we are working on something we call the open spatial computing platform that Jan-Erik Vinje: We hope can enable what you call an open spatial web and also providing interoperability layer for real world spatial computing in general.</p>
+
+<p>Jan-Erik Vinje: And it's, it's the most fundamental piece of that platform would be geo posts, and then there's the machine readable world and and discovering all the types of content and services related to, to, to the space around you and.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: So when we're talking about the spatial Web.</p>
+
+<p>It is very much a map concepts, where you those who have worked with maps, all the time, they can Jan-Erik Vinje: Recognize the bottom part as base layers.</p>
+
+<p>The base layers in this concept are tied to the real physical world.</p>
+
+<p>It is the terrain.</p>
+
+<p>It is the building buildings.</p>
+
+<p>Jan-Erik Vinje: But in addition to what is typically the the base layer.</p>
+
+<p>There's another aspect of reality that becomes part of this base layer.</p>
+
+<p>And now that is the dynamic part of the stuff that is moving around.</p>
+
+<p>That is why Jan-Erik Vinje: This kind of math is not handmade.</p>
+
+<p>It is machine made it is based on machine perception and reality capture using sensors.</p>
+
+<p>Jan-Erik Vinje: doesn't exclude some manual intervention but but the real time layer would not work without reality capture and machine perception.</p>
+
+<p>Jan-Erik Vinje: On top of that, there are thematic layers that would be the kind of layers you didn't that might be transparent that contains extra information that you overlay on your base map.</p>
+
+<p>Jan-Erik Vinje: But now the base map is three dimensional.</p>
+
+<p>And you're inside of it.</p>
+
+<p>And the overlay is all around you so, so that is sort of the main difference you live inside this map.</p>
+
+<p>So next, next slide.</p>
+
+<p>Jan-Erik Vinje: This talk is about object or you jump to two slides.</p>
+
+<p>So the first.</p>
+
+<p>First I want to mention that on the bottom, bottom here.</p>
+
+<p>Jan-Erik Vinje: When you want to represent things in the real world.</p>
+
+<p>You want to represent objects and you can then combine set of 3D geometric data with the geo posts that can be used to to have your both static and dynamic reality layers.</p>
+
+<p>Jan-Erik Vinje: Those are the real things in the things that are made of atoms that you represent the base there but you have other types of objects that aren't always part of the real so you can go to next slide.</p>
+
+<p>Jan-Erik Vinje: Those can be anything that could be could be virtual or it could be something from the past, something from the future something or not work at your location.</p>
+
+<p>It can be something abstract that convey some information about the place and Jan-Erik Vinje: So you will be able to benefit from using objects in map throughout this all the layers of the spatial web.</p>
+
+<p>Next slide.</p>
+
+<p>Jan-Erik Vinje: So bringing this back to W three C and web standards.</p>
+
+<p>I already lamented on the lack of a standard for points of interest.</p>
+
+<p>So Jan-Erik Vinje: Somebody should pick up that so maybe W three C and OTC can get back together and figure that out.</p>
+
+<p>And if you go to next slide, I have my thoughts on objects in map.</p>
+
+<p>Jan-Erik Vinje: browser support for objects in map should use the Odyssey GOP standard and also support automatic transformed from geospatial took, etc.</p>
+
+<p>Jan-Erik Vinje: The currently the, the proposal where you're working on in our standard working Jan-Erik Vinje: Had has something called the based NGO posts which is in latitude, longitude and that doesn't really work too well in Jan-Erik Vinje: In screen coordinates or in in 3D in a 3D seen that is rendered using 3D graphics.</p>
+
+<p>So there is always this need to make the transform from the geo posts and over to kiss him.</p>
+
+<p>Jan-Erik Vinje: And so this kind of support to be part of Jan-Erik Vinje: Me kind of native Maps API and in the native map elements that is being discussed there, especially to modalities where where objects in map becomes especially useful so Jan-Erik Vinje: That would be if we could make sure that the map elements supported the globe modes life.</p>
+
+<p>You see would see zoom or Google Earth that kind of Jan-Erik Vinje: Engine Jan-Erik Vinje: But also, and maybe even more so when you go for the immersive mode where we can pull the map up to one to one scale and youth from virtual reality or augmented reality.</p>
+
+<p>Jan-Erik Vinje: And in particular, the that's where the last point here comes in when you're in.</p>
+
+<p>For instance, a web XR immersive mode and Jan-Erik Vinje: If you use just GPS and compass from your device you you might fall bit short on the accuracy.</p>
+
+<p>Jan-Erik Vinje: So a or cloud technology tends to leverage an AR clouds map representation of the world for positioning Jan-Erik Vinje: And opening our cloud is working on developing a universal protocol where clients can speak to any our cloud positioning services, what we call geo post services to obtain the device posts.</p>
+
+<p>Jan-Erik Vinje: And then you might end up with centimeter or a few centimeter accuracy at the current level of technology.</p>
+
+<p>Jan-Erik Vinje: And if you have your device posts, you should be able to display object in Maps at there.</p>
+
+<p>We were locations and that is really from maybe what some Jan-Erik Vinje: Some I've heard Jan-Erik Vinje: There's this expression in the air cloud about painting the world with data.</p>
+
+<p>Jan-Erik Vinje: And one of those data could be those objects.</p>
+
+<p>So that is A hope for the future.</p>
+
+<p>Jan-Erik Vinje: Thank you.</p>
+
+<p>I think now over to Christina and you will be able to learn a lot more about your posts.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Great.</p>
+
+<p>Thanks, sir.</p>
+
+<p>Thanks, Eric.</p>
+
+<p>For that, for that excellent presentation of.</p>
+
+<p>It's interesting to hear see some of the requirements and needs for this transition to Ryan Ahola - Natural Resources Canada: More 3D space and augmented reality for the Geospatial web community, so that's that's excellent.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Yes.</p>
+
+<p>And as, as Eric mentioned.</p>
+
+<p>So now we're moving on to a presentation on our next presentation in the session.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Which will be given by Christine Perry and also Josh Josh Lieberman.</p>
+
+<p>So Christine is Ryan Ahola - Natural Resources Canada: A consultant for Perry research and consulting com.</p>
+
+<p>She's also a member of the open air cloud Association and with you on Eric is co Chair of the Ryan Ahola - Natural Resources Canada: GC GC GC to post status.</p>
+
+<p>Working Group on Josh lever bit as a director of the innovation, one of the directors of the innovation program at the UGC so feel free to go ahead.</p>
+
+<p>I don't have your presentation.</p>
+
+<p>So I'm not sure if one of you wants to share your screen you Christine Perey: Don't oh we provide it to Peter and he Joshua Lieberman: Did it Christine Perey: Okay, Josh.</p>
+
+<p>Wow, what a beautiful Joshua Lieberman: Mountain like that.</p>
+
+<p>Christine Perey: Perfect actually while Josh is doing this, I want to thank you everybody.</p>
+
+<p>And, and thanks generic for setting the stage.</p>
+
+<p>Christine Perey: For this what Josh and I wanted to do is actually respond to a request that Peter made of US months ago, I think it was a request on behalf of the Committee running this Christine Perey: This workshop Christine Perey: That Christine Perey: We share with you how geo post supports the new Web Map, what use cases and requirements and Josh can go into full screen mode or is that Christine Perey: Is that what you see the Joshua Lieberman: Very large screen.</p>
+
+<p>Hopefully, it still works.</p>
+
+<p>Christine Perey: Yeah, it's just fine just fine.</p>
+
+<p>So what I did as a first step is I went into the document that was provided by Peter, which I'm sure many of you are familiar with describing the use cases and requirements and I kind of I pulled all of those Christine Perey: Those out the the use cases and requirements.</p>
+
+<p>The functional requirements and then made them into tables and that's going to guide us a little bit, or at least that's the Christine Perey: The origin of the structure of this this presentation.</p>
+
+<p>But before I do that, I think you could go to the next slide.</p>
+
+<p>Christine Perey: Will be focusing primarily on the alignment between geo pose and and Web Map, but before that give a few minutes on geo pose and then hopefully we'll have a little time and we're going to transition into a discussion after this for Christine Perey: more use cases and maybe showing talking about where things go next.</p>
+
+<p>One of the things I want to emphasize here is that Christine Perey: God pose and the concepts that we're going to be discussing our 3D at their core just like objects imply and and really have a three dimensions in generics presentation.</p>
+
+<p>Christine Perey: That's the case here, as well as the second big concept is the way we've broken these out as we're looking at three actors or audiences as they were defined, defined by the Web Map.</p>
+
+<p>Christine Perey: Activity.</p>
+
+<p>So we're looking at the content creators roles and their needs.</p>
+
+<p>The visitors to websites and maps and then the developers of applications that combine content and maps and deliver services to users and go on to the next slide.</p>
+
+<p>Christine Perey: So you've, you've heard quite a bit already but it's important for us to, to reiterate what is to pose.</p>
+
+<p>Christine Perey: It is in Cartesian coordinate Christine Perey: Or your coordinates with actually advanced this and going to provide that as an option.</p>
+
+<p>And it's anchored on the surface of the real world.</p>
+
+<p>There are a couple of different concepts that are allow us to extend from the simplest Christine Perey: Frame to nested or advanced frames, we include some concepts around time and sequences of frames and you'll it's a quite a rich Christine Perey: conceptual model.</p>
+
+<p>But again, as I come back to the core of this really is about placing objects, whether they're real or virtual or symbols into projections that are oriented at six degrees of freedom for for accuracy and richness.</p>
+
+<p>Next slide, please.</p>
+
+<p>I Joshua Lieberman: Just want a quick comment here because there's this thing about frames here that may be confusing.</p>
+
+<p>And of course, Joshua Lieberman: The basic part of this is orienting and object, but the way that's done is by fixing a frame of reference and as Christine said a Cartesian or possibly or Larian Joshua Lieberman: Frame of reference, but you're fixing this frame of reference to something for geo pose.</p>
+
+<p>One of the two frames that is providing that position and orientation is fixed to the earth.</p>
+
+<p>Joshua Lieberman: It can be fixed to another celestial body right for Selena no Joshua Lieberman: Pose or so on.</p>
+
+<p>But for now, we're talking about the Earth.</p>
+
+<p>But the other thing though is tho those frames can be fixed for different purposes so Joshua Lieberman: The base purposes.</p>
+
+<p>There's some object virtual or physical and the frame is attached to that object.</p>
+
+<p>So the objects.</p>
+
+<p>Joshua Lieberman: position and orientation can be determined by the geo pose, but the frame can also mean a couple of other things.</p>
+
+<p>And this is relevant to the map Web Map cases, it can be relative to an observers ability to see so it can essentially represent the user viewpoint.</p>
+
+<p>Joshua Lieberman: There where they're looking from what they're looking at in a 3D or six degrees of freedom perspective.</p>
+
+<p>Joshua Lieberman: Or it's on the Christine Perey: Next slide shows that has the figure of showing up.</p>
+
+<p>Joshua Lieberman: Yeah, yeah.</p>
+
+<p>So in order so it can be the viewpoint, looking at or the perspective, looking from so let's go on to that.</p>
+
+<p>Christine Perey: Exactly.</p>
+
+<p>Christine Perey: Perfect.</p>
+
+<p>Christine Perey: And so we're certainly happy to come back to this figure.</p>
+
+<p>Christine Perey: If needed to show that again.</p>
+
+<p>The user is in this case in this particular illustration Christine Perey: The beneficiary.</p>
+
+<p>But I also want to point out that there are a lot of machine to machine use cases for geo pose, which are not exactly in in scope for this particular workshop, but the use cases are diverse in time and space and and devices.</p>
+
+<p>So let's go to the next slide.</p>
+
+<p>Christine Perey: As I said, we very much followed the framework that was provided in terms of this three categories.</p>
+
+<p>And in our case, you know, the assets being published into some sort of a server where the website visitors can get them, but also the application developers can use those to enhance their Christine Perey: Runtime applications can go to the next slide.</p>
+
+<p>Christine Perey: I think Josh, you're Christine Perey: Our thought was perhaps we would you could explain a little bit more what we have on the right hand side of this table.</p>
+
+<p>Christine Perey: In general, you can see, though, that GMOs isn't necessarily relevant for all of the use cases that were outlined.</p>
+
+<p>Christine Perey: But some Joshua Lieberman: Yeah, I mean this.</p>
+
+<p>The idea here was to take the use cases that have been defined and presented for these different roles dealing with web maps.</p>
+
+<p>Joshua Lieberman: In this case of content, an author of content to be displayed in a Web Map and look at where geo pose might play a role.</p>
+
+<p>And so the here there is a kind of an idea for a role for specific use cases.</p>
+
+<p>For example, displaying a map centered on a point location.</p>
+
+<p>Joshua Lieberman: So that you can have a location, an orientation and a scale of that map.</p>
+
+<p>Joshua Lieberman: And you want that to be most appropriate to particular user.</p>
+
+<p>And that's generally the users viewpoint.</p>
+
+<p>And as we mentioned before, one of the Joshua Lieberman: Roles that you oppose can play is to express a user's viewpoint.</p>
+
+<p>In fact, a sequence of geo poses can indicate a user's progress.</p>
+
+<p>For example, a taking a tour or changing their position and being able to display a map that has content for that viewpoint.</p>
+
+<p>Joshua Lieberman: That you know can extend, for example, to displaying a route so not only saying okay you know we have some sort of assumption that indicators are aligned according to the route, but we can actually have objects relevant to the route that are aligned in the map as someone would see them.</p>
+
+<p>Joshua Lieberman: And as far as displaying custom web content that's the same thing.</p>
+
+<p>So being able to symbolize or Mark objects, you know, they may be Joshua Lieberman: Points of interest, but we can exactly use the geo pose to show this is the orientation in which you would see that building or that other feature.</p>
+
+<p>Joshua Lieberman: As you encountered it along the route or from a particular perspective on the roof and that extends then into creating layers by assembling those objects which may be coming from Joshua Lieberman: Many different places around the world, but using geo pose.</p>
+
+<p>They can be placed relative to each other and within the extent of a map layer.</p>
+
+<p>Joshua Lieberman: Extending that further in time, then the use cases of providing animated spatial data, the animation, for example, the position and orientation.</p>
+
+<p>Joshua Lieberman: Can come from a sequence or stream of geo pose objects that position that, you know, although within a 2D map layer the 3D position and orientation can be shown so Joshua Lieberman: There are particular use cases here where it seems there's a useful role for geo pose.</p>
+
+<p>And we sort of sum up that in call it the Joshua Lieberman: Content, you know, the geo pose assisted creator paradigm.</p>
+
+<p>So there's positioning content in a map using geo pose.</p>
+
+<p>There's positioning a map, according to a user viewpoint.</p>
+
+<p>Joshua Lieberman: Or assembling a map layer from diverse features, each of which has their own position and orientation and then being able to have that change over time by the injection of updated do poses for those objects.</p>
+
+<p>Joshua Lieberman: So the second Joshua Lieberman: Stakeholder actor is the visitor, the user the viewer of this sort of Web Map and we have again this ability to have one's viewpoint tracked Joshua Lieberman: You know whether that goes to a server or just remains in the browser, which then you know provides instructions.</p>
+
+<p>I want to see this map plane orientation.</p>
+
+<p>Joshua Lieberman: And the ability for example, for a user to say um there's here's a point with, you know, one of those little carrot on it.</p>
+
+<p>I wonder what it really Joshua Lieberman: Looks like a what's more information.</p>
+
+<p>So being able to pull more information, which includes, for example, a Joshua Lieberman: A batch model of the gas station and its orientation.</p>
+
+<p>You know how you would see it.</p>
+
+<p>Joshua Lieberman: As you came up to it, seeing that perspective and the map, but we yeah and so Joshua Lieberman: Another way that this provides information on a map is to provide to or 3D filtering, even within a Joshua Lieberman: 2D map layer to be able to say, for example, searching or sorting within a set of features in a map layer, you know, what's it ground level or what's higher up in the air or Joshua Lieberman: What things can I see what things can I not see because they're hidden somewhere else.</p>
+
+<p>And so even when a 2D map that do pose information.</p>
+
+<p>You know what signs are facing me versus.</p>
+
+<p>I'm not going to be able to see them.</p>
+
+<p>Joshua Lieberman: Can be derived from the geo pose information.</p>
+
+<p>Joshua Lieberman: So there's another bit about here.</p>
+
+<p>Joshua Lieberman: comes under the category of what really is a map.</p>
+
+<p>And so we think of a map and things like augmented and virtual reality as being very separate Joshua Lieberman: But there's another perspective, in which, you know, a map is really a Joshua Lieberman: Let's say a basic aid to visualization and so we don't really talk about this as imagination or creativity.</p>
+
+<p>We talked about this as well.</p>
+
+<p>Joshua Lieberman: To use a map, you need map skills but math skills are, how do you, in your mind, take symbols from this flat piece of paper and inserted into your picture of the landscape that's presented before you in order to find something to navigate something to Joshua Lieberman: Undertake some other tasks or learning with regard to that landscape.</p>
+
+<p>And so there really is a Joshua Lieberman: Continuum is my assertion between a flat map oriented north with a fixed extent and scale and something which becomes more Joshua Lieberman: Adaptable more responsive to that user's interests viewpoints perspective and progress, you know, so we're looking at the sort of other end of the spectrum of, you know, so far of augmented reality where you really are looking at Joshua Lieberman: What's around you and in front of you and having those map objects placed into that view.</p>
+
+<p>But having a Web Map that is portable and is able to Joshua Lieberman: Sort of transition from that.</p>
+
+<p>Joshua Lieberman: Augmented reality to mapped reality to mapped formalism of reality is a way that can really be put into this spectrum of use and do pose, so that 3D Joshua Lieberman: Position oriented patient information is an important part of establishing that continuum.</p>
+
+<p>Joshua Lieberman: Okay, yeah.</p>
+
+<p>So oriented skill a map to my viewpoint retrieving view detailed objects for points of interest filter content by the positioning and orientation and then Joshua Lieberman: As well, having this standard bit of data about where that object should be enables facilitates the offline storage of those objects.</p>
+
+<p>And in fact, enables for example them to be updated with small amounts of Joshua Lieberman: Positioning information to minimize the bandwidth for example of updating that content.</p>
+
+<p>Joshua Lieberman: So the third one is the application developer, you know what Joshua Lieberman: Capabilities can a developer Joshua Lieberman: Create using the assistance of the geo pose.</p>
+
+<p>Joshua Lieberman: Definition of position and orientation and the ability to exchange interchange and manipulate that.</p>
+
+<p>So here for example.</p>
+
+<p>Joshua Lieberman: Ability to provide feedback to users they manipulate the map so ability to show where that map plane and the map viewpoint is positioned for example in the user viewpoint, so that you know where am I looking at in the larger context, but in 3D.</p>
+
+<p>Joshua Lieberman: Moving the map to a new position resume level again going from the flat map which we've we've kind of reduced to to say, okay, that's a map, but Joshua Lieberman: What many people have shown us is that there has been for centuries.</p>
+
+<p>This desire to create maps that are on user perspective, you know, the map of Paris, and so on.</p>
+
+<p>It's just that.</p>
+
+<p>Joshua Lieberman: Up until fairly recently those maps have been quite difficult to compute.</p>
+
+<p>So we've we've taken the, you know, sort of GIS flat map as the.</p>
+
+<p>That's what a map is when there's been a much more flexible a broader perspective of what a map is Joshua Lieberman: Through time.</p>
+
+<p>It's just required Joshua Lieberman: Really clever capabilities to do that.</p>
+
+<p>Joshua Lieberman: And then looking at being able to Joshua Lieberman: generate new vector features so Joshua Lieberman: Having geo pose as an interchange format enables you to take data use that positioning from, you know, myriad sources and create new vector features.</p>
+
+<p>Joshua Lieberman: And in fact update those features, for example, by being able to drag and drop a geo pose object, you know, this is where it is now.</p>
+
+<p>And, you know, have the map update.</p>
+
+<p>According to input of these new geo poses are geo pose sequences.</p>
+
+<p>Joshua Lieberman: So leveraging the user geo pose using geo post sequences for animation generating new features from data, including geo poses or even geo poses.</p>
+
+<p>Joshua Lieberman: Linked to features already there.</p>
+
+<p>And, you know, here's an idea.</p>
+
+<p>You can drag and drop those geo poses to animate map features, say, you know, okay.</p>
+
+<p>Joshua Lieberman: Here's what it was.</p>
+
+<p>Then here's where it is now here's where it's going to be later.</p>
+
+<p>So there are.</p>
+
+<p>This is just the start of new ways that you could use to pose to extend the Web Map paradigm Joshua Lieberman: You know, in some ways that are new in some ways that are just recovering what cartography used to be able to do but required you know that cartographer to sit in your phone and do that.</p>
+
+<p>Joshua Lieberman: Okay, do you want to talk about the these functional requirements, Christine.</p>
+
+<p>Christine Perey: You know, I, in the interest of time, and we've got a panel coming up.</p>
+
+<p>Christine Perey: I think we should maybe move right to the third one, because that's where the greatest value lies.</p>
+
+<p>Christine Perey: So, Joshua Lieberman: These are our particular capabilities that we have been derived from those use cases.</p>
+
+<p>Joshua Lieberman: And similarly, we've gone through and said, well, there may be some interesting ways to use geo pose.</p>
+
+<p>And I'll just know.</p>
+
+<p>You know, being able to use images, not just as Joshua Lieberman: To rectify the images but actually show the swath or path of image acquisition is a possibility and then many of these are similar to the ones that we've Joshua Lieberman: inferred from the use cases themselves.</p>
+
+<p>Christine Perey: Exactly.</p>
+
+<p>Christine Perey: Yeah, I think, I think this is really brings it home.</p>
+
+<p>I mean, since the requirements were driven by the use cases.</p>
+
+<p>Christine Perey: They matched and you did a great job of explaining those use cases.</p>
+
+<p>So we think that there's a lot of potential for geo pose in the web maps and the implementations, not only the ones that the use cases requirements that were envisioned but that people will certainly be using this capability.</p>
+
+<p>Christine Perey: invent new ways of using maps and that with the geo pose, they'll be able to not only position orient objects, but specifically with respect to a user and also be able to see where and how Christine Perey: A user sees things from the user point of view, when you're designing applications and so forth.</p>
+
+<p>The Christine Perey: The remarks that we made were organized really to keep parallel with the use cases and requirements document.</p>
+
+<p>Christine Perey: And I think that's shown here.</p>
+
+<p>So content authors will be able to enrich what they have to offer using geo poses.</p>
+
+<p>Christine Perey: Visitors will not only have a different and additional experiences of their existing maps and augmented reality and maybe being able to walk in a map walk Christine Perey: Through space in a mapped way.</p>
+
+<p>And finally, there's a lot of applications and potential for developers to not only use simple geo post, but our sequences and animations and Christine Perey: really enrich the the use cases.</p>
+
+<p>So again, as Josh also mentioned the idea of dragging and dropping some G oppose data.</p>
+
+<p>Christine Perey: Into view and how is that going to enrich the experience and make it more more meaningful and perhaps give us new, new ways of thinking and looking at the world.</p>
+
+<p>I believe that's all we have.</p>
+
+<p>Joshua Lieberman: Thank you Josh.</p>
+
+<p>Thank you, Ryan.</p>
+
+<p>Great.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Excellent.</p>
+
+<p>Thank you.</p>
+
+<p>Thank you, Christina and Josh for that for that excellent presentation.</p>
+
+<p>Um, so as Christina mentioned, we're, we're about to start a panel discussion where we'll get into more of this 3D content and also a little bit on the authenticated reality.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So we can, I guess we can start that now.</p>
+
+<p>So I believe that all of the panel members are here.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So maybe I'm just going to introduce everyone, so maybe as I as I go through the introductions.</p>
+
+<p>You can just show your video and wave everyone or something.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So I guess just to get started.</p>
+
+<p>So first stop.</p>
+
+<p>So the panel consists of a few different individuals we have Christina and yon Eric who everyone's just just met through their Ryan Ahola - Natural Resources Canada: Current their presentations that we just had.</p>
+
+<p>We're also fortunate enough to have a diverse candidate who is the developer advocate and staff engineer at Samsung and is also a co Chair of the W three season versus web working group.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Patrick cozy, who is the CEO of cesium is here as, as Thomas Logan, who is the owner of equal entry.</p>
+
+<p>So I'd like to thank everyone, everyone who has made themselves available today to participate in this panel to grow their, their expertise on on augmented reality.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So maybe what I can start with, if I was interested if if any of the panelists.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Wanted to provide any any opening remarks before I get into get into questions if there's anything that you wanted to say about what you do and your expertise on augmented reality I would certainly be welcome.</p>
+
+<p>Or we can just transition into questions.</p>
+
+<p>It's really up to you.</p>
+
+<p>Thomas Logan (Equal Entry): I love to just say a quick thing about kind of my areas area of interest for augmented reality.</p>
+
+<p>Thomas Logan (Equal Entry): So I'm Thomas Logan coming to you from Tokyo, Japan tonight.</p>
+
+<p>It's why it's very dark here right now but I own a company focused on Thomas Logan (Equal Entry): Just improving technology for people disabilities.</p>
+
+<p>And I guess my Thomas Logan (Equal Entry): specific area of interest.</p>
+
+<p>I went pretty deep on.</p>
+
+<p>It's not that broad, but it's a big problem for people with disabilities is the accessibility of crossing Thomas Logan (Equal Entry): At busy traffic intersections out in the real world.</p>
+
+<p>So I wanted to bring into at least the discussion.</p>
+
+<p>Thomas Logan (Equal Entry): Even with augmented reality, a lot of times there's thoughts of the visualization only part but the sonic sound.</p>
+
+<p>Thomas Logan (Equal Entry): Components that can be put into augmented reality are very interesting for people who are blind and low vision when thinking about knowing whether or not it's safe to cross intersection.</p>
+
+<p>So I had done a project.</p>
+
+<p>Thomas Logan (Equal Entry): With New York City, where have 40,000 intersections.</p>
+
+<p>They have in New York, only about 550 of those have that beeping tone locator to tell you when it's safe to walk or not and Thomas Logan (Equal Entry): I just bring that in, is like something I think interesting to have as a user scenario we're talking about use cases in the previous one.</p>
+
+<p>But I think thinking also about the audio audio components of how this map data can be interpreted.</p>
+
+<p>It's very exciting.</p>
+
+<p>Thomas Logan (Equal Entry): Thanks to me.</p>
+
+<p>Christine Perey: Thanks, Thomas, I wanted to bounce on that I think we often overlook.</p>
+
+<p>Christine Perey: Audio augmented reality and it is a field, but we can come back to that.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Would anyone else like to mention that as an introduction or we can go into question for, for if everyone's ready Patrick Cozzi, Cesium: Yeah, right.</p>
+
+<p>If I could use China quickly.</p>
+
+<p>So one is just, yeah.</p>
+
+<p>Thank you for inviting me to the event and the others panel.</p>
+
+<p>So, quick, quick intro for myself.</p>
+
+<p>So Patrick loses the CEO and cesium Patrick Cozzi, Cesium: Kill a lot of work in the open standards world I chair her co chair this ad formats group at Kronos creators up to the GL TF Patrick Cozzi, Cesium: Format.</p>
+
+<p>I'm really excited for augmented reality.</p>
+
+<p>I think that it's going to be a huge paradigm shift to how we experience computing right thinking about Patrick Cozzi, Cesium: The screens on our phones and our laptops of today and what that means tomorrow and in 10 years from now.</p>
+
+<p>Patrick Cozzi, Cesium: And I'm really excited about the intersection of maps and AR as kind of some of the main the main killer use cases and bringing temporal 3D to this so looking forward to chatting with everyone today.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Great.</p>
+
+<p>Thanks, thanks, Patrick.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So maybe, maybe we can get into questions if if you and Eric and either don't don't want to say anything at this point but Ryan Ahola - Natural Resources Canada: And I would like to just encourage our audience who's listening to feel free to ask questions in the Ryan Ahola - Natural Resources Canada: Chat.</p>
+
+<p>I do have a few questions to pose to the panel.</p>
+
+<p>But if there's something specific.</p>
+
+<p>You want to bring up.</p>
+
+<p>Please.</p>
+
+<p>Please go ahead.</p>
+
+<p>It's you're the ones we're trying to speak to some of your questions are Ryan Ahola - Natural Resources Canada: Are certainly important.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So maybe the first question that I was thinking of asking and and I think part of this might have partially been answered by the previous presentation.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: But I think there might be opportunities for some other opinions on this.</p>
+
+<p>I was thinking that I guess 3D and augmented reality really represents Ryan Ahola - Natural Resources Canada: A fundamental shift in how the Geospatial web communities.</p>
+
+<p>Think about displaying information.</p>
+
+<p>I know, especially for for the geospatial community.</p>
+
+<p>I know myself it's Ryan Ahola - Natural Resources Canada: This community is still fairly focused on two dimensional representations of content and analysis.</p>
+
+<p>That's how that's how the community is Ryan Ahola - Natural Resources Canada: Traditionally a work.</p>
+
+<p>And that's where it's expertise this so I was kind of wondering what you think these communities need to consider when there's thinking about standards for developing Augmented Reality in 3D 3D maps.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And maybe we can start with with ADA.</p>
+
+<p>Ada Rose Cannon: So I think some stuff.</p>
+
+<p>Ada Rose Cannon: So like, speaking of someone who who does run one of these groups for putting standards together for, um, Ada Rose Cannon: For AR and VR on the web.</p>
+
+<p>I'm focusing on a half of this session.</p>
+
+<p>Ada Rose Cannon: The thing which I'd like to focus on is working out the things which Ada Rose Cannon: Were there is where there is some almost overlap with features that are required.</p>
+
+<p>Ada Rose Cannon: By finding the bits where we can extend the the the existing X WebEx or device API to give access to the information you need.</p>
+
+<p>Ada Rose Cannon: From the hardware to Ada Rose Cannon: To display the content because the WebEx advice API is very low level, it's, it's pretty much raw access to Ada Rose Cannon: To like the sensor data from the headset and access to display stuff on the headset itself.</p>
+
+<p>Ada Rose Cannon: So finding the bits were getting access to this sensor data to the displays would be really beneficial.</p>
+
+<p>Jan-Erik Vinje: Yes.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Oh, that's, yeah, that's an excellent point.</p>
+
+<p>I think it's getting that that's that's your contact to be able to be make it usable for these applications is certainly important.</p>
+
+<p>I'm just wondering if anyone else has a follow up to that or or to the original question.</p>
+
+<p>Jan-Erik Vinje: I think, yeah, that makes very much sense.</p>
+
+<p>So we're currently deep in the nitty gritty details of of what we want to develop in opening our cloud as a protocol for obtaining your geo post from a service and that method.</p>
+
+<p>Jan-Erik Vinje: Starts with the sensor data from the device and we need to find ways that we can negotiate with the server, how we can send that sensor data and what's sensor data, the server needs.</p>
+
+<p>Jan-Erik Vinje: So we want to leverage.</p>
+
+<p>What else is in the standards community around sensor data and then be able to communicate that and get access to that data and communicate that data to a Jan-Erik Vinje: Web server, and then be able to get back and treated, almost like a new type of sensor data that has been refined that is more more accurate than the original sensor data for the purposes of something like posts.</p>
+
+<p>Jan-Erik Vinje: So then you have a protocol for a GMO server.</p>
+
+<p>And that would be an awesome thing to to includes as a protocol for for use in the web context.</p>
+
+<p>Thomas Logan (Equal Entry): I just wanted to add in, like, I guess, echoing on Brian's point about the a lot of government agencies or governments that would be consuming potentially these protocols.</p>
+
+<p>Thomas Logan (Equal Entry): I think the data is a lot in 2D and my taking it back to my pedestrian signal example as a scenario.</p>
+
+<p>One of the things we encountered was Thomas Logan (Equal Entry): The button that you actually press at a physical intersection.</p>
+
+<p>It's not always even at a standard height like it.</p>
+
+<p>It can be sometimes put Thomas Logan (Equal Entry): Near the knee, it can sometimes we put me over the shoulder, and there was no data about that measured at all for the city.</p>
+
+<p>So when we were talking to them.</p>
+
+<p>It was first, like, Well, how do we measure that and then what's the system that you would even Thomas Logan (Equal Entry): store that in so that it could be used in like an HR application or or VR application so that it could synthesize exactly like where that button was located so Thomas Logan (Equal Entry): Just have that as a user scenario that I think if there was that standard and then there were software that you could type that into Thomas Logan (Equal Entry): I definitely encountered that as a barrier, which is trying to like brainstorm how to build a cool solution for people with disabilities in any are Ryan Ahola - Natural Resources Canada: Ya know, I was thinking that.</p>
+
+<p>So that's an interesting point because I think I've been at least in the geospatial community that's not like salad is something that's certainly not considered Ryan Ahola - Natural Resources Canada: Because it's just not something that people are familiar with, with working with.</p>
+
+<p>So I think broadening the Ryan Ahola - Natural Resources Canada: What our conceptions of what has to be included within geospatial to make things work for everyone and accessible way is certainly important for the community to consider.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So no, that's a very interesting point.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And maybe we can transition to a different question.</p>
+
+<p>And we had one in the panel or one of the Twitter chat with asking what the best way to deal with geographic precision is when combining map data with augmented reality.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Also, are there ways to anchor feature coordinates to the to the physical world.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Maybe you can ask Patrick if he has any comments on that.</p>
+
+<p>Patrick Cozzi, Cesium: Yeah, so in just in 3D, even before we have to AR, you know, precision is always been a challenge, right, and Patrick Cozzi, Cesium: In mapping when you can do anything from kind of gym and all the way out and seeing all the satellites orbiting the globe.</p>
+
+<p>Patrick Cozzi, Cesium: To zooming into a car engine, right.</p>
+
+<p>And a lot of the 32 bit based GPUs will have precision errors with with chattering or what was the funding.</p>
+
+<p>So, you know, a lot of the global scale engines will go to great lengths.</p>
+
+<p>Patrick Cozzi, Cesium: To emulate higher precision and and you pre computations for the coordinate system transforms Patrick Cozzi, Cesium: As for when you start bringing this into AR the precision becomes super important.</p>
+
+<p>Patrick Cozzi, Cesium: Just when you're overlaying that physical world, like say it's a infrastructure construction project and you want to put the H back in Patrick Cozzi, Cesium: But it's only just been only just been framed out and there's there's two components.</p>
+
+<p>One is getting and for other folks on the panel to discuss is getting really accurate geo post position and orientation.</p>
+
+<p>Patrick Cozzi, Cesium: And then the other is the rendering strategies to to overlay it overlay it slash also Patrick Cozzi, Cesium: The Fighter depth tested with the with the physical world.</p>
+
+<p>So this week, I can see see the conversation for others to pick up Christine Perey: Yeah, I want to piggyback on that.</p>
+
+<p>I think the question of accuracy generic mentioned he touched on it that if we have a spatially mapped world that we can Christine Perey: Compare to the users camera what's being what sensing in real time, that will go a long way to combine Christine Perey: The visual processing with the sensors like GPS and compass.</p>
+
+<p>So the combination of visual re localization and using the native sensors is is a key strategy going forward is no doubt about that.</p>
+
+<p>Christine Perey: But then on the other hand, there's a lot of there's a lot.</p>
+
+<p>Just a lot of noise in the world right big blocks of Christine Perey: Metal and water bodies of water terrible, and there's a lot of noise visually as well there any mirrors or and he reflective surfaces.</p>
+
+<p>They can reverse Christine Perey: The readings.</p>
+
+<p>So we're not out of the woods.</p>
+
+<p>I think from that perspective, the second part of that question was how to anchor the digital assets on the physical world that really at this time.</p>
+
+<p>There are Christine Perey: Just a few authoring environments that allow you to do that.</p>
+
+<p>And you can anchor to a floating object like a traditional marker or an image or something that can move around, or you can anchor to a physical Christine Perey: Location that's been defined in the authoring environment.</p>
+
+<p>I think we're at a stage now where the innovation and the kinds of things that people are doing with augmented reality is a bit held back by Christine Perey: The, the just, it was just too few authoring tools.</p>
+
+<p>Everyone is using unity and it's a great tool.</p>
+
+<p>If you're a game developer and you know how to use it already.</p>
+
+<p>Christine Perey: And it's fantastic for prototyping and creating tests, but at the in the long run for scaling.</p>
+
+<p>You can't have an app for every single object or every single orientation or place.</p>
+
+<p>So we're going to, I believe, seeing more Christine Perey: Diversity, we're certainly looking for that from the web community from the 3D web community.</p>
+
+<p>Ada Rose Cannon: I'd like to follow that up with what's currently available or at least being worked on in the web platform today.</p>
+
+<p>Ada Rose Cannon: To work on this.</p>
+
+<p>So with regarding geospatial Ada Rose Cannon: There is a an early Ada Rose Cannon: Incubation in the immersive web working group, could you alignment I've pasted the link into the chat.</p>
+
+<p>Ada Rose Cannon: And here's the link to the readme.</p>
+
+<p>So you can see this is what the current status of this looks like and getting feedback for this API would be very valuable.</p>
+
+<p>Ada Rose Cannon: It's not being super actively developed at the moment.</p>
+
+<p>Ada Rose Cannon: I didn't.</p>
+
+<p>The last commit to it was made in August.</p>
+
+<p>Ada Rose Cannon: But it's definitely something which we are in in are very interested in working on Ada Rose Cannon: With regard to the second part of your question and anchor.</p>
+
+<p>Like, how do you anchor a 3D model to a space in Ada Rose Cannon: On the NAR we actually have another API called anchors.</p>
+
+<p>Ada Rose Cannon: Which I've put linked to this one is a lot further developed and has implementations in the wild.</p>
+
+<p>Ada Rose Cannon: And this Ada Rose Cannon: This is for anchoring Ada Rose Cannon: The it lets you define an anchor based on a real world position and then it will keep that anchor on top of that real raw position so that you can place your 3D models inside Ada Rose Cannon: That particular frame of that anchor to keep it in in place, and that's where we're at today.</p>
+
+<p>That one is coming along pretty well actually Jan-Erik Vinje: That sounds like a good starting point, because we have an extended view of geo posts, we allow for Jan-Erik Vinje: connecting two different frames of reference.</p>
+
+<p>So obviously the GOP is itself the basic your posts, as we define it.</p>
+
+<p>This has a starting frame that is anchored to to geospatial frame of reference, but we we won't allow for transforms between Jan-Erik Vinje: Between different local frames of references that can be nested within the shoulder and every our rendering.</p>
+
+<p>So it's a case of that because they always use a Cartesian coordinate system for the rendering Jan-Erik Vinje: And within that cookies and coordinate system, you will have a an anchor that you might want to to Jan-Erik Vinje: Add an object to and there's a way to to go from that anchor inside the cookies and frame of reference.</p>
+
+<p>Jan-Erik Vinje: And all the way back and expressing the position we work position and orientation of that anchor as GMO software see contract transform it into the other.</p>
+
+<p>Jan-Erik Vinje: And the other way around.</p>
+
+<p>So both ways, should should be entirely possible to do within the large conceptual framework of the geo post spec.</p>
+
+<p>Jan-Erik Vinje: Yeah, that was Jan-Erik Vinje: My comment on that.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Okay, thanks.</p>
+
+<p>Thanks everyone for those for those great answers.</p>
+
+<p>And I guess I just wanted to pick up on stopping Christine mentioned for because we're so related question related to Ryan Ahola - Natural Resources Canada: Gaming with a covenant to get her to vote but gaming platforms really have a full system.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Design that really shines by enabling the integration between the gaming environment and interaction with with our users, of course.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Of course, accessibility is certainly an issue in some aspects of gaming.</p>
+
+<p>But there still is very good integration with with users.</p>
+
+<p>So the question is related to how does Ryan Ahola - Natural Resources Canada: Current development on on our side of the fence to on the geospatial side in the website aligned with the gaming industry.</p>
+
+<p>And I guess how we might be able to leverage their, their efforts to to help in the work that we're interested in.</p>
+
+<p>Jan-Erik Vinje: Yeah, I gotta jump back right in there before, you know, and just spoke, and there's a need for it.</p>
+
+<p>We're in these early phase of this technology, there's a need for R amp D and Jan-Erik Vinje: Christine mentioned that we currently we're at the point where we are you relying on visual positioning to have accurate your books.</p>
+
+<p>Jan-Erik Vinje: And that is very brittle those cameras.</p>
+
+<p>They have low typically on our devices.</p>
+
+<p>They have low dynamic range.</p>
+
+<p>And if the lighting conditions are poor things can fall apart.</p>
+
+<p>Jan-Erik Vinje: And we need to have like multimodal developments in the future.</p>
+
+<p>So I SPECT we have, you know, multiple decades of r&d with different kinds of sensors that could work together to provide Jan-Erik Vinje: By geo posing in more robust way so that when the weather is bad or the lighting is bad or other conditions change, you could you could Jan-Erik Vinje: Obtain your post and do continue to do real world spatial computing and display things correctly in in challenging conditions.</p>
+
+<p>Jan-Erik Vinje: So the gaming environment, just like the AI world.</p>
+
+<p>And just like the the autonomous driving worlds is is utilizing game engine technology to simulate their systems basically as autonomous vehicle for instance is a Jan-Erik Vinje: It's a look at it like a device with sensors and Jan-Erik Vinje: All the major Jan-Erik Vinje: Organization and we're working on developing that field they they simulate autonomous vehicle in a in a game engine to to see how Jan-Erik Vinje: Like synthetic sensor data can be handled by other autonomous driving systems and they can tune the weather, the lighting and the behavior of other vehicles.</p>
+
+<p>Jan-Erik Vinje: And test those really edge cases.</p>
+
+<p>So the same thing applies to our, our clouds technology area like we we should have similar tools to to develop our field.</p>
+
+<p>Thomas Logan (Equal Entry): I'm in with them.</p>
+
+<p>Patrick Cozzi, Cesium: Good times.</p>
+
+<p>Oh.</p>
+
+<p>Thomas Logan (Equal Entry): Yeah, just gonna say like, at least for Thomas Logan (Equal Entry): Staying on my audio theme for today.</p>
+
+<p>The Last of Us.</p>
+
+<p>Part two is a game that Thomas Logan (Equal Entry): Kind of famously has been able to be completed by people who are blind and it has tons of spatial information and it uses kind of a novel sonar and kind of sound notifications to know where objects and things are so I think Thomas Logan (Equal Entry): From that standpoint of, like, looking at this professional game implementation and knowing that people have been like crying with delight about how well it works.</p>
+
+<p>I definitely think the gaming industry is Thomas Logan (Equal Entry): A good place for inspiration to being like as you design like fully complete experiences like validating users, making sure that it actually does.</p>
+
+<p>Thomas Logan (Equal Entry): Work and and so on.</p>
+
+<p>I referenced that game.</p>
+
+<p>It's right now.</p>
+
+<p>It's kind of like one of the most access accessible exciting things and it does do the 3D 3D audio specialization and if they place.</p>
+
+<p>Patrick Cozzi, Cesium: Cool.</p>
+
+<p>Yeah, I just like to add, so I really believe in order to advance a are for maps and to advance 3D just in general.</p>
+
+<p>Patrick Cozzi, Cesium: We really need this collaboration.</p>
+
+<p>It's an at the intersection of games and graphics and and and Patrick Cozzi, Cesium: And geospatial right because if we're just coming at it from a geospatial from a map world.</p>
+
+<p>I mean, when you go to 2D to them 3D like 30 is not to D plus one, right, it's a whole new world.</p>
+
+<p>Patrick Cozzi, Cesium: And then likewise when you're a game engine and you want to add global scale high precision real world coordinates and working with that massive data, you have to bring in a lot of the geospatial type types of techniques.</p>
+
+<p>Patrick Cozzi, Cesium: So one example is, it's easy.</p>
+
+<p>And we've been collaborating closely with with Epic Games to build Patrick Cozzi, Cesium: 3D geospatial about right on top of Unreal Engine right cesium from rail or unreal.</p>
+
+<p>Does the fundamental rendering and the lighting.</p>
+
+<p>Patrick Cozzi, Cesium: Which is incredibly amazing and sophisticated and then on top of that cesium does the streaming for the 3D tiles.</p>
+
+<p>So based on The View.</p>
+
+<p>It brings in the you know the right real world content.</p>
+
+<p>Patrick Cozzi, Cesium: Using the global global recession and and I think we're really just at the beginning of this kind of fusion of gaming and geospatial Ryan Ahola - Natural Resources Canada: That's very, very interesting.</p>
+
+<p>I just wanted to note for for everyone that Ted Christina unfortunately had to go to another meeting for.</p>
+
+<p>That's why, that's why she's dropped off the call.</p>
+
+<p>But if she was is the recording.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Just wanted to mention to say thank thank you to her for presentation earlier in her participation in the panel.</p>
+
+<p>I think we have about eight minutes left in the panel.</p>
+
+<p>So we have we have time to do a couple more questions.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So one question that came up was, I guess we've been talking mostly about probably future states of AR and also 3D 3D components of that.</p>
+
+<p>So there's a question relating to how to get to, to that state and whether Ryan Ahola - Natural Resources Canada: It would be beneficial at least a starting point on this this path or going down for augmented reality if the web platforms to port it Ryan Ahola - Natural Resources Canada: To the map rendering and HTML and which is what map.</p>
+
+<p>The map ML proposal is aiming to do.</p>
+
+<p>So I guess if there any comments on that as whether that's at least a starting point for how to enable this new future.</p>
+
+<p>That would be it would be interesting.</p>
+
+<p>Jan-Erik Vinje: And thumbs up from me, you know, Jan-Erik Vinje: It's better to start with that and and I hope we can build on that, if we have a native and map elements that starts out that's to the then next thing is to extend it.</p>
+
+<p>So you could have the globe maps and the mercy modes later on.</p>
+
+<p>So, Jan-Erik Vinje: Get on with it.</p>
+
+<p>That's when you wonder, I wouldn't be wonderful.</p>
+
+<p>Yeah.</p>
+
+<p>Ada Rose Cannon: If you, if you want to be the change you wish to see in the world, a building a custom Web Components, usually a great place to start.</p>
+
+<p>Ada Rose Cannon: And that's Jan-Erik Vinje: Actually, actually.</p>
+
+<p>Yeah, I did one when I got my job in New York art at my Jan-Erik Vinje: When I had my interview I made a web component using that like Jan-Erik Vinje: One of the early libraries for creating Web Components and it looks very much like the Web Components and is proposed where you see the latitude and latitude.</p>
+
+<p>Jan-Erik Vinje: And longitude as parameters and when I moved around in the map those parameters were updated.</p>
+
+<p>So yeah, I've been on that track some that was to the maps.</p>
+
+<p>Ada Rose Cannon: It would be interesting if there was a native element.</p>
+
+<p>So currently WebEx are which is the only way to do a are in the web.</p>
+
+<p>Ada Rose Cannon: There's no way right now anyway to draw HTML elements into into WebEx are because it's purely Web GL based Ada Rose Cannon: So if there was to be some kind of native HTML element, the best way for it to to be able to get into WebEx are would be if it was able to expose some kind of Ada Rose Cannon: Of buffer, which could be loaded into the GPU to be used.</p>
+
+<p>Ada Rose Cannon: With Web GL or why PL to or where GPU.</p>
+
+<p>Ada Rose Cannon: So that Ada Rose Cannon: So that the that particular web engine you're using could then take that content and do smart stuff with it to lay it appropriately in your environment.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Right.</p>
+
+<p>No, no, thanks for your thoughts on that.</p>
+
+<p>Yeah.</p>
+
+<p>I think it'll be, I think, as, as we Ryan Ahola - Natural Resources Canada: Move down this path for for augmented reality as it becomes common part of everyday life.</p>
+
+<p>Eventually, we are going to be asking why the web platform doesn't support.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: 3D and augmented reality natively.</p>
+
+<p>So it's probably interesting idea to approach the 2D Map component first and then have something to build on for for 3D components.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: And we have one.</p>
+
+<p>One other question from the, from the audience.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: In consideration of your and Eric's earlier earlier presentation.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Whether you think that the layer terminology is confusing and three or four d environment.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Wondering if a term of view is better or if it has the same same problem.</p>
+
+<p>So I guess the question about terminology Ryan Ahola - Natural Resources Canada: Maybe you want Erica, since this is your presentation.</p>
+
+<p>If you'd like to comment on Jan-Erik Vinje: Yeah, people are routinely asking if layer is appropriate.</p>
+
+<p>So Jan-Erik Vinje: For me it's always been intuitive, but when I understand that not everyone feels the same way.</p>
+
+<p>So, and Jan-Erik Vinje: I'm not sure about view, but there could be another word that sort of hits hits the nail on the head.</p>
+
+<p>It might not be layer.</p>
+
+<p>Jan-Erik Vinje: But that is very coming from Macworld and also from Photoshop, Illustrator layers or know something that is sort of in the background as a concept that is easy to to fall back on.</p>
+
+<p>But some deep thinking goods reveal better concepts.</p>
+
+<p>Thomas Logan (Equal Entry): Unity uses that layer concept here for laying out objects and Thomas Logan (Equal Entry): You know setting.</p>
+
+<p>Thomas Logan (Equal Entry): Setting that on there so I Ryan Ahola - Natural Resources Canada: Think at Thomas Logan (Equal Entry): Least I've seen that terminology used there.</p>
+
+<p>Thomas Logan (Equal Entry): In that environment as well.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Okay, I guess we're down to about three minutes left on the panel.</p>
+
+<p>So I was, I think we'll just last one more question is kind of a closing question, but maybe everyone can can address Ryan Ahola - Natural Resources Canada: So I guess I was interested in.</p>
+
+<p>If there's one thing that you would like the attendees of the workshop to to help with or consider Ryan Ahola - Natural Resources Canada: For maps and and 3D slash augmented reality would, it would be since we have this audience here today who actually has the capability to do something.</p>
+
+<p>What, what, what you would ask them, so maybe we can, if anyone has has an opinion right away, feel free to jump in.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: We can we can have some time for everybody.</p>
+
+<p>Ada Rose Cannon: One thing which I'd really like is Ada Rose Cannon: If people could take a look at some of the repos in the immersive web Ada Rose Cannon: And and maybe even get involved if your company is is a debris three see member Ada Rose Cannon: And has to get involved in the work we're doing in two p three.</p>
+
+<p>See, because it would be really great to have the input of people with maps as a use case.</p>
+
+<p>Ada Rose Cannon: giving their opinion on those former cameras turned off and getting their input on Ada Rose Cannon: Whether or not the API's we were designing will fit your use cases.</p>
+
+<p>And I think we definitely do not want to preclude augmented reality maps from working in the web.</p>
+
+<p>Thomas Logan (Equal Entry): I'll just add that in TD TD maps for my kind of world has already been like a constant challenge from when I got into this world of accessibility.</p>
+
+<p>So Thomas Logan (Equal Entry): I just put out there to like really make sure people do care and consider the use case in 3D.</p>
+
+<p>Because, I mean, we still have a lot of challenges really considering just the 2D solutions for people with disabilities and Thomas Logan (Equal Entry): I'm very excited about what can come but um I'll just put it out there that I'm someone that's always interested in like trying out people's Thomas Logan (Equal Entry): You know prototype for things are working on.</p>
+
+<p>So I'm just definitely think of me.</p>
+
+<p>It's like someone that likes to try out samples and can like help you with the user scenario generation.</p>
+
+<p>Jan-Erik Vinje: If I can chime in.</p>
+
+<p>I mentioned in my presentation that opening our cloud is working on designing and implementing a reference open spatial computing platform and, what is more, we are actually trying that platform out in a city scale, starting with Jan-Erik Vinje: To European cities.</p>
+
+<p>So there's the city of Bari in Italy and the city.</p>
+
+<p>Oh, Helsinki, Finland and there might maybe during this autumn.</p>
+
+<p>There might be a few more cities as well.</p>
+
+<p>And we are seeking people who wants to participate on experimenting with what could be seen as a Jan-Erik Vinje: Prototype open spatial web platform consisting of standards and protocols all the standards and protocols are sort of Jan-Erik Vinje: In flux and work in progress.</p>
+
+<p>Nothing is fixed, so Jan-Erik Vinje: Is there a true like already kind of thing but have to bring grand scale Bari, for instance, has hundred square kilometres that has been mapped so that you could obtain here geo posts over there.</p>
+
+<p>So that would allow for kinds of use cases that span the city.</p>
+
+<p>Jan-Erik Vinje: So that is one aspect that obviously you can go to our GitHub opening up our GitHub repo and look at all the different projects there.</p>
+
+<p>Jan-Erik Vinje: And most of them are related open spatial computing platforms.</p>
+
+<p>I encourage you to look at look into those and also encourage you to join open air clouds participate in our working groups and our meetings on the open spatial computing platform.</p>
+
+<p>Jan-Erik Vinje: I think we're onto something very exciting for us to live by, like, like 1989 where timber industry.</p>
+
+<p>We're trying to invent the web with some some standards and protocols and some implementations Jan-Erik Vinje: And now we have this new opportunity for for the spatial era.</p>
+
+<p>And this is not like a one one man show this is something we're trying to bring a global community together to solve these challenges, not only the technical, but also the ethical around privacy and security and user control.</p>
+
+<p>Patrick Cozzi, Cesium: Yeah, then just to kind of round things out of piggybacking on that global community comment right so I do believe that AR hardware, you know, is not a mature and become widely spread right for both personal and professional use cases.</p>
+
+<p>Patrick Cozzi, Cesium: And software, folks, you know, we should be building now right and we need a combination of platforms that will kind of enable everyone to build Patrick Cozzi, Cesium: On top of us and and standards for interoperability.</p>
+
+<p>So I would just put a very broad call to action for, you know, anything that you can do to contribute to open standards, whether it's W three saved Kronos or GC.</p>
+
+<p>Patrick Cozzi, Cesium: Anything from from use cases to actual spec work implementation, it's really going to help lift up the whole community and bring AR forward as fast as we can.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Because.</p>
+
+<p>Great.</p>
+
+<p>Thanks.</p>
+
+<p>Thanks everyone for those for those those last answers to that final question.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So I just like to thank everyone for participating on the panel today I thought it was really very interesting, especially for Ryan Ahola - Natural Resources Canada: For myself as a stereotypical geospatial user doesn't really know anything about augmented reality or or three do it was really illuminating to see the future of the work that we're going going towards.</p>
+
+<p>So thank you everyone for your excellent participation.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: So I guess the last portion of our session today is is supposed to be a breakout session related to maps of objects specifically geo post Ryan Ahola - Natural Resources Canada: For web maps which I believe is being led by a young Eric Ryan Ahola - Natural Resources Canada: Finch again.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: I just wanted to check with our program committee members on because I believe we're, we're a little over time today.</p>
+
+<p>So I don't know if there's any considerations around that put the or if we can just move ahead with that with the breakout session.</p>
+
+<p>Amelia Bellamy-Royds: I think Amelia Bellamy-Royds: We can just continue on in the same space.</p>
+
+<p>I think our capture is dropping off but beyond that whoever is interested in the breakout it'll just continue on in the zoom conference system.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Great.</p>
+
+<p>Thanks, thanks, Amelia, so I guess what that we're free to continue.</p>
+
+<p>So I'm you and Eric, you're, you're free to go ahead Ryan Ahola - Natural Resources Canada: Okay.</p>
+
+<p>Jan-Erik Vinje: Well, with that, you know, being Ryan Ahola - Natural Resources Canada: respectful of Jan-Erik Vinje: people's time we might try to not spend the entire 30 minutes Jan-Erik Vinje: So maybe just just open the floor to questions and suggestions.</p>
+
+<p>Jan-Erik Vinje: And where you're able to facilitate so everyone who raises their hand can chime in.</p>
+
+<p>Is that so Ryan Ahola - Natural Resources Canada: Yeah, that's, that's Ryan Ahola - Natural Resources Canada: That's fine.</p>
+
+<p>Oh my, I think we, we have a fairly small group now so if if people want to ask their questions and a greater picture channel that's, that's fine.</p>
+
+<p>I'm happy to read them out or if people just want to Ryan Ahola - Natural Resources Canada: To speak at the zoom session that should that should be fine.</p>
+
+<p>I think it will be okay.</p>
+
+<p>Peter Rushforth: Awesome.</p>
+
+<p>It's been a real challenge staying quiet for that long.</p>
+
+<p>Jan-Erik Vinje: Well, feel free.</p>
+
+<p>You know, Okay.</p>
+
+<p>Amelia Bellamy-Royds: So to get things started.</p>
+
+<p>Amelia Bellamy-Royds: We've got people coming from geospatial and thing he of data formats.</p>
+
+<p>Amelia Bellamy-Royds: You talked about geo pose as a conceptual thing.</p>
+
+<p>But how do you actually integrate that in Amelia Bellamy-Royds: To like your geo JSON or your other map data format.</p>
+
+<p>Jan-Erik Vinje: Yeah, so Amelia Bellamy-Royds: Geo Jason Jan-Erik Vinje: Does Jan-Erik Vinje: Sort of was an inspiration for do both because it was so simple and easy, easy to comprehend just looking at it was compact.</p>
+
+<p>It was a massive overly complex XML structure.</p>
+
+<p>So it's been very popular in the in the Jan-Erik Vinje: Web Map community.</p>
+
+<p>I think we use it a lot in my workplace we store map data sometimes directly as a geo Jason Jan-Erik Vinje: For instance, we have this where we're we're allowing users to draw features and save them and use them later that there was a good case for geo Jason, Jason, even though it supports to the new 3D coordinates.</p>
+
+<p>Jan-Erik Vinje: And it's very much based in the GIS map data paradigm that has Jan-Erik Vinje: A lot of coordinates in in, for instance, latitude, longitude and Jan-Erik Vinje: The post itself.</p>
+
+<p>If you want to have a post, you, you, it's hard to work in latitude, longitude.</p>
+
+<p>That is why the basic geo post sort of creates a local Cartesian coordinate system that is tangential to to the episodes at that Jan-Erik Vinje: at that position particular coordinates.</p>
+
+<p>Jan-Erik Vinje: So we'll show you might be able to to add some attributes into a to Jason feature that could express the orientation of something at that point.</p>
+
+<p>Jan-Erik Vinje: So that could be sort of grafted directly on top of geo Jason Jan-Erik Vinje: And there's not a standard them, you might want nice like add some sort of extra standard to do just that could support posts and Jan-Erik Vinje: The way we encodes in our in like we saw published yet, but the way in our OTC standards.</p>
+
+<p>Working Group for JIRA post the way we encode it for basic to post implementation targets.</p>
+
+<p>Jan-Erik Vinje: And points towards a an encoding format as, as Jason that is even more so since then.</p>
+
+<p>Then Judaism, but that can be that because it's more Jan-Erik Vinje: It's a simple concept.</p>
+
+<p>It's not all kinds of lines and polygons and everything.</p>
+
+<p>You don't need to have a lot of structure to separate but it's only posts and then you, you have a simpler object.</p>
+
+<p>Yeah.</p>
+
+<p>Jan-Erik Vinje: Does that answer some of the question.</p>
+
+<p>Amelia Bellamy-Royds: Yes, thank you.</p>
+
+<p>Getting more ideas of what this would look like.</p>
+
+<p>Amelia Bellamy-Royds: If, at the risk of dominating the conversation.</p>
+
+<p>Another question is, are there devices that currently can record this information, like if I'm taking a photograph.</p>
+
+<p>Amelia Bellamy-Royds: Most PHONES CAN GIVE ME GPS coordinates of where I was standing, but can they give me the pose information that you can later reconstruct what direction I was looking at when I took that photograph.</p>
+
+<p>Jan-Erik Vinje: Well, Jan-Erik Vinje: I know not an expert on like active data, but there's slow metadata.</p>
+
+<p>You can have associated with a picture.</p>
+
+<p>So maybe there's someone else who knows if you capture like like and geomagnetic sensor data and I kind of thing.</p>
+
+<p>Jan-Erik Vinje: And I don't quite know if that is part of taking a picture from smartphone today.</p>
+
+<p>Jan-Erik Vinje: Should be possible.</p>
+
+<p>Jan-Erik Vinje: Oh yeah.</p>
+
+<p>No one seems to know Amelia Bellamy-Royds: What's any played around with Amelia Bellamy-Royds: The device sensors and Amelia Bellamy-Royds: Figuring out what your cameras, looking at Jan-Erik Vinje: So what you could do.</p>
+
+<p>You could if you are in an AR context and you're speaking with a Jan-Erik Vinje: Visual positioning service that has a very accurate position and orientation and it returns.</p>
+
+<p>There are a couple of service providers that provides Jan-Erik Vinje: Geo spatial position orientation already.</p>
+
+<p>And then you could have you can sort of bundle that image, together with Jan-Erik Vinje: That kind of extra meta data if if it's not supported directly in x.</p>
+
+<p>If you might be able to do that.</p>
+
+<p>So you take a picture and you're in a context and you obtain a post from when you took that picture that should be entirely possible to annotate picture with a Doug Schepers: very slightly meta off topic, but I just wanted to note that exit is only one format and believe it's only supported in JPEG and a few other formats.</p>
+
+<p>There are lots of different Doug Schepers: Metadata formats for raster data.</p>
+
+<p>Doug Schepers: There wasn't attempt a few years ago at WCC to unify them, but it didn't really go anywhere.</p>
+
+<p>There was a spec that was produced, but it didn't really go, it wasn't really adopted a I think that if we're going to that is actually effect on the ground for Doug Schepers: For standardization is actually starting to look at how this metadata could be encoded in Raster images if we're gonna if we wanted to do something like that and that could also Doug Schepers: Go into the annotation stuff that was talked about earlier.</p>
+
+<p>And there's a lot of.</p>
+
+<p>There's a lot of its fertile ground there.</p>
+
+<p>Doug Schepers: But, but there's still also some challenges.</p>
+
+<p>Jan-Erik Vinje: The algorithm is used by visual positioning always allows that you if you have a good map of an area.</p>
+
+<p>Jan-Erik Vinje: You can always obtain that after the fact.</p>
+
+<p>So if you come back three days later, have a photo and you know the general area and the local map and you could run an algorithm and obtain your post after the fact.</p>
+
+<p>Jan-Erik Vinje: That could be done for historical images.</p>
+
+<p>You know, it's more challenging because she thinks might have more things might have changed vegetation paints on walls and in buildings that have been removed all that but Jan-Erik Vinje: Certainly possible possible to do with historical a resistor.</p>
+
+<p>Well, we see some here apps that are doing that, where there's movies from the from standing camera somewhere and they put that movie into an AR experience.</p>
+
+<p>Jan-Erik Vinje: To the right location and you get some sort of Jan-Erik Vinje: Wind window into the past into the real world.</p>
+
+<p>A fun experience, it seems Jan-Erik Vinje: Yes, I think.</p>
+
+<p>Jan-Erik Vinje: I'm not gonna hold everyone here and just to see if Jan-Erik Vinje: The questions and comments are sort of starting to to to dry up.</p>
+
+<p>Now I am Amelia Bellamy-Royds: Have any Amelia Bellamy-Royds: Demos that you have something you can actually show us more than just the static images from the slides.</p>
+
+<p>Jan-Erik Vinje: Well, where you can Google Jan-Erik Vinje: To our partners.</p>
+
+<p>If you Google immersive and augmented city, you will be able to see some of Jan-Erik Vinje: The ways they can overlay stuff into the, into this next city scale use cases.</p>
+
+<p>Jan-Erik Vinje: So that is definitely one thing you could do, and there will be more demos.</p>
+
+<p>Pretty soon from the test beds.</p>
+
+<p>Where, where, where, hopefully, that is a demo of Jan-Erik Vinje: Similar things but then running on the platform running on on the preliminary geo pose protocol using the early version of the geo posts and coding format.</p>
+
+<p>Jan-Erik Vinje: So it's, it's something that could scale in a different way than having a number of different service providers with iOS and Craddick formats and protocols.</p>
+
+<p>Amelia Bellamy-Royds: Okay, that's great if you could put the actual names of those companies in the chat later so it's easier for people to find that would be great.</p>
+
+<p>Jan-Erik Vinje: So just go to YouTube and find those partners, those, those are the two companies that are running the two first despots commercial is running the one in Helsinki and hooking into cities running the one in Bari Doug Schepers: Right, I have a question.</p>
+
+<p>It's a little speculative Doug Schepers: But since we have time.</p>
+
+<p>I may as well ask it.</p>
+
+<p>Doug Schepers: I had been thinking about maps, I'll be honest, as sort of 2D objects and I I recognized that there's an intersection with XR but I hadn't really thought too deeply about it but.</p>
+
+<p>But the more I think about it.</p>
+
+<p>I do wonder Doug Schepers: If it might not be a good idea to start with something more ambitious that enables a broader set of use cases.</p>
+
+<p>Doug Schepers: Including, you know, not just traditional a traditional flat digital maps.</p>
+
+<p>But, uh, but 3D Doug Schepers: With geo perhaps with geo pose, perhaps with a yeah I, it seems to me like having geo pose an XR is pretty relevant to an emerging web sort of that has a AR and VR.</p>
+
+<p>Doug Schepers: And it seems like maps could be folded into that as a subset of that, am I thinking about it wrong or do other people feel like maybe maps by itself is Doug Schepers: Is actually only a subset of what we could do with AR VR geo pose 3D environments.</p>
+
+<p>Peter Rushforth: I'm sure you're right but you've got to start somewhere, but I'm I shouldn't be jumping in on generic so session but you got to start somewhere and to do is like Peter Rushforth: I mean I wouldn't call it simple, because I'm not, I'm not one of the geniuses inventing the 3D world.</p>
+
+<p>Peter Rushforth: And to Dr. It seems pretty hard to me, especially in the in the in the notion of Peter Rushforth: Making the content, making the content responsive.</p>
+
+<p>Peter Rushforth: To the, to the container like in in 3D and like in reality the container is the person right but in in in the 2D Web Map.</p>
+
+<p>The container is a rectangle on the screen.</p>
+
+<p>Peter Rushforth: And it seems to me that they're you know they're there, they're connected obviously nowadays with the mobile web and so on.</p>
+
+<p>Peter Rushforth: But we haven't we haven't even got the, the browser rendering even basic 2D stuff in that rectangle for us yet.</p>
+
+<p>It's all done by web developers, right, like so.</p>
+
+<p>I just, I would like to see the plan for integrating this into a web that people can use you know that Peter Rushforth: school kids can learn because you know I'm hearing a lot of high tech stuff here and Peter Rushforth: You know, where does that come back to Peter Rushforth: You know what I mean, like, Peter Rushforth: Yeah, HTML, so far as I can see no more.</p>
+
+<p>Peter Rushforth: Except in the dev Sure.</p>
+
+<p>Jan-Erik Vinje: As I would think both perspective are very good points.</p>
+
+<p>So, this is this is like a classical thing in software engineering like you want to like do the do the Jan-Erik Vinje: Redesign and refactoring.</p>
+
+<p>And you can try and like maybe just come up with, let's throw the things we already did away and start from scratch.</p>
+
+<p>And that allows for Jan-Erik Vinje: Some things to be easier.</p>
+
+<p>But then all the stuff you did with the old old paradigm and suddenly comes back and Jan-Erik Vinje: We usually do this.</p>
+
+<p>And now we can't do that anymore.</p>
+
+<p>How can we bring that into it.</p>
+
+<p>So then you always end up with a long journey.</p>
+
+<p>Anyways, where you have to Jan-Erik Vinje: Bring pulling stuff from the, from the old paradigm into the new and you have the opportunity to like have a gateway and say, say this is redundant, we don't we don't actually need it.</p>
+
+<p>This was totally meaningless to try and bring this into the future paradigm that might be Jan-Erik Vinje: The advantage of doing it that way.</p>
+
+<p>And the big problem is that when you like.</p>
+
+<p>Throw everything away and start from scratch it tends to take a long time before you have something that is remotely as usable as what you originally have so Doug Schepers: That's true.</p>
+
+<p>And also you you miss you, you lose the community of practitioners from the older tradition.</p>
+
+<p>Doug Schepers: That so you there's there's a skill loss there.</p>
+
+<p>There's a nice skill loss, but there's a Doug Schepers: There's a people loss as as people who are very knowledgeable about one area.</p>
+
+<p>Doug Schepers: might not feel comfortable going into something that's to radically different.</p>
+
+<p>Doug Schepers: And also thinking I'm just thinking about it from a pragmatic perspective.</p>
+
+<p>Doug Schepers: There's a Doug Schepers: There are certain controls that you would expect to have in a map zoom pan.</p>
+
+<p>Doug Schepers: There's the notion of tiling which I, as far as I can see, is not really present in ar VR 3D worlds.</p>
+
+<p>Jan-Erik Vinje: Oh, you will be wrong time.</p>
+
+<p>Doug Schepers: Oh, well, there I am.</p>
+
+<p>Jan-Erik Vinje: Calling is very useful in the 3D world as well.</p>
+
+<p>Doug Schepers: Well, then, then Doug Schepers: I then the put the pan and zoom seem also applicable.</p>
+
+<p>So maybe, maybe we should dig into the similarities between the Doug Schepers: You know, the, the, the world's in order to make sure that even if we start with something simpler, though not simple maps.</p>
+
+<p>Doug Schepers: That it it is minimal to extension and in into 3D environments.</p>
+
+<p>Jan-Erik Vinje: Yeah.</p>
+
+<p>Assume actually interesting.</p>
+
+<p>I had three stages few hours ago with them knowing an AR prototype for for someone and Jan-Erik Vinje: And one thing he asked her out of the blue.</p>
+
+<p>I had no idea would ask for that.</p>
+
+<p>But he was, how could you sue in this.</p>
+
+<p>And obviously, you know, if you have originally a Web Map and how soon controls.</p>
+
+<p>Jan-Erik Vinje: And you can if you then extend the original web maps to an immersive map and you still have assume control what you would have to do is sort of Jan-Erik Vinje: Take the same concept, but now instead of looking down at a map and zooming into the the map the sort of 2D map that you're looking down on Jan-Erik Vinje: You now you're looking with your posts and you will assume along your posts and and it's a similar concept, but you could leverage the same control and have similar user interactions for for it.</p>
+
+<p>Doug Schepers: And having a native zoom pan mechanism in the browser.</p>
+
+<p>Doug Schepers: Whether that's an API or what.</p>
+
+<p>However, the interface goes that would help with accessibility across different mediums.</p>
+
+<p>Doug Schepers: Absolutely against you could you could expose it as a standard control rather than just as a button, whatever.</p>
+
+<p>Yeah.</p>
+
+<p>Jan-Erik Vinje: With an API much better with an API.</p>
+
+<p>Exactly.</p>
+
+<p>Yeah.</p>
+
+<p>Doug Schepers: Thanks I appreciate you indulging me in that speculation.</p>
+
+<p>Okay.</p>
+
+<p>Jan-Erik Vinje: I think I actually, I don't think I should also soon leave this to have some dinner.</p>
+
+<p>And we probably quite some time over time.</p>
+
+<p>So thank you everyone for for hanging around for this interesting Jan-Erik Vinje: Discussion and hope to hope that people from this community touch and bump into each other.</p>
+
+<p>Jan-Erik Vinje: For for bringing special computing forward.</p>
+
+<p>Jan-Erik Vinje: Bye bye.</p>
+
+<p>Doug Schepers: Thanks, everyone.</p>
+
+<p>Ada Rose Cannon: I Ada Rose Cannon: Was having me.</p>
+
+<p>Peter Rushforth: Thank you very much.</p>
+
+<p>Peter rose Doug Schepers: Thank you viewers.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: I just Ryan Ahola - Natural Resources Canada: Wanted to thank everyone for participating today.</p>
+
+<p>And I guess just a reminder for everyone.</p>
+
+<p>So, tomorrow we will be continuing the workshop, the session starts at 12 o'clock.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Eastern time, which I believe it's 1600 UTC.</p>
+
+<p>Um, so we will pick up again tomorrow, so we'll see everyone again tomorrow.</p>
+
+<p>Thank you.</p>
+
+<p>Doug Schepers: Thanks for moderating Ryan.</p>
+
+<p>Ryan Ahola - Natural Resources Canada: Thanks.</p>
+
+<p>All right.</p>
+
+<p>Bryan Haberberger: Good job, everybody.</p>
+
+<p>Thank you.</p>
+
+<p>Thanks.</p>
+
+<p>I Ted Guild: Boom, boom, boom.</p>
+</body></html>
