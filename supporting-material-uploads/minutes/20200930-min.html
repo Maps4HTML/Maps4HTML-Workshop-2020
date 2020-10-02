@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>SV_MEETING_TITLE -- 02 Oct 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="SV_MEETING_TITLE" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>SV_MEETING_TITLE</h1>
+<h2>02 Oct 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>prushforth</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @prushforth @AmeliaBR My slides for later today are at <a href="https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.tar.gz">https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.tar.gz</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I'd like to connect to the videoconference a bit early and do a tech check (double-check that sharing desktop works and so on), please let me know at which time it would be convenient to do so.
+</p>
+
+<p class='phone'>
+@IvanSanchez_gitlab @tguild great I will connect when Ted says he can join.  I will upload and link to your slides
+</p>
+
+<p class='phone'>
+@IvanSanchez_gitlab I am using windows 10 with not too many utilities.  i.e. no 7zip.  Any ideas (from anyone) about how to extract the contents would be appreciated.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Lemme do a .zip for you
+</p>
+
+<p class='phone'>
+Thanks  I was about to try a git shell
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Try now at <a href="https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.zip">https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.zip</a>
+</p>
+
+<p class='phone'>
+thanks perfect
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I was expecting a 15-minute slot, but I've seen that there are 5 people for the 60-minute track. I timed myself at 12-13 minutes when rehearsing, so stuff should only bit *a bit* tight.
+</p>
+
+<p class='phone'>
+You can take the 15 minutes as promised if you need it.
+</p>
+
+<p class='phone'>
+I am on Ted's zoom call now and there seems to be someone else here who's name I don't recognize, but there's no talking so maybe it would work if you connect now?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Yeah, sure
+</p>
+
+<p class='phone'>
+I don't have host control but I don't think that matters
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; we have been having people connect at odd times last week and this, recognized many of the names
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; connected just now, gave @prushforth co-host and stopped the recording which was set to begin when meeting starts
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Raitis Bērziņš joined 18 minutes ago
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; Hello All
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='phone'>
+Greetings everyon
+</p>
+
+<p class='phone'>
+The objective of the proposal is not to cover all use cases, but to provide a baseline from which web developers may script / progressively enhance.  Somewhat similar to the Leaflet - Plugin architecture.
+</p>
+
+<p class='irc'>
+&lt;<cite>PlanetBye_twitter</cite>&gt; Hello everyone! This is Bente
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Welcome, Bente
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Great idea to look at Leaflet (&amp; other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Great idea to look at Leaflet (&amp; other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+</p>
+
+<p class='phone'>
+Yes.  HTML  is the framework, plugins are progressive enhancements
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Great idea to look at Leaflet (&amp; other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; wonder if one could collect some stats (github stars/ NPM download count?) to see what plugins are the most popular
+</p>
+
+<p class='phone'>
+Very cool that textures in geotiff tiles
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; PixiJS is a good example of a 2D GL-accelerated library that is  developer friendly, other game engines are worth looking at too
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; Of course @IvanSanchez_gitlab ToS is correct you should NOT access map tiles other than using the API - Ed xx
+</p>
+
+<p class='phone'>
+@IvanSanchez_gitlab: Leaflet users want to display Google basemaps.  DOM manipulation solves the issues in tile lag
+</p>
+
+<p class='phone'>
+That MapML does not control corporate lawyers is not a problem with MapML...
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; most 2d game engines are missing a key feature for map drawing though - efficient stroking of lines with dynamic screen-space width (i.e. adjusting the width of a linear feature via some log/exp function while zooming in purely in the shader)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Thanks for the clarification @edpars0ns
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @IvanSanchez_gitlab you are certainly deep in it!  We also use MutationObservers in some of our HTML magic tricks, and I agree it feels a bit dirty.  But man, it works!
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; I don't think we can ever stop web developers making up ugly hacks, but I'd love to get to the point of having a standard API for interacting with map data layers — and reduce the need for those hacks!
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Great thoughts @IvanSanchez_gitlab
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Great idea to look at Leaflet (&amp; other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I must say that GoogleMutant is, to my knowledge, the most used within the 20-ish that I made
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I hate that people associate collaborative editing with Google Docs. They didn't innovate that, and they aren't the best at it. Sigh.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I can have 3 camera angles right now. If I gather webcams from around the house I think I could go up to 6.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; LOL. Nerd. :)
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I once got an error regarding a USB hub not having enough bandwidth (I knew that USB bandwidth is limited, but never encountered the actual issue)
+</p>
+
+<p class='phone'>
+Maps today are a hack
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; ProTip: when using several webcams, connect them all to the computer itself, not to a hub.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Interesting. Not sure I'll ever need that, but good to keep in mind. Is this USB-C, or an earlier one?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; A reminder that Karel Charvat will be leading a breakout session about the map composition format he's proposing, after today's talks &amp; panels.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] Does @IvanSanchez have 2 different camera angles?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; It's actually a daisy-chain of USB3/USB-C hubs. Just don't go full-resolution with everything at once.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Does MapML support DEMs?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @dmorissette Will that demo be up for a while and are we allowed to play with it?  I would love to dig through it and see first hand what interacting with the standard is like.
+</p>
+
+<p class='phone'>
+@dmorissette  re: MapServer.  Server side CMS like MapServer, GeoServer and {commercial-GIS-provider-here} can make it simple to create and use maps on the web.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] @dmorissette Will that demo be up for a while and are we allowed to play with it?  I would love to dig through it and see first hand what interacting with the spec is like.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; This one : <a href="http://msdev.mapgears.com/mapml/demos/">http://msdev.mapgears.com/mapml/demos/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Since @ahocevar is talking about OpenLayer's &lt;canvas&gt; renderer for vector tiles, it's a good moment to remind that Leaflet.VectorGrid can do either canvas or SVG to render vector tiles (and has been unmaintained for a while, and interactivity in tiled SVG gets... hard)
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @IvanSanchez_gitlab does leaflet keep around a scene tree?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @fredesch Nope.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; At least not in the sense that 3D/videogame people understand "scene tree"
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @IvanSanchez_gitlab can you hit a single feature for instance click on a single area or point feature?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Yes - the click will get intercepted by the hitbox of a SVG thing, raise a leaflet event, get a unique ID of the feature that spawned that graphical representation
+</p>
+
+<p class='irc'>
+&lt;<cite>dmorissette</cite>&gt; @thehabes yes the <a href="http://msdev.mapgears.com/mapml/demos/">http://msdev.mapgears.com/mapml/demos/</a> will remain up for a while, but it's my sandbox environment, so it may have glitches at time
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; BTW @ahocevar , I've been working on a openlayers port of the geotiff-as-webgl-textures thing; at some point we should talk about whether that belongs in the main OL branch
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Zoom/resolution levels for vector data! This is so important for the web &amp; minimizing data/rendering requirements, so glad to see people working on it.
+</p>
+
+<p class='phone'>
+@thehabes there is also the GeoServer MapML community module, but you have to install it yourself: <a href="https://docs.geoserver.org/latest/en/user/community/mapml/index.html">https://docs.geoserver.org/latest/en/user/community/mapml/index.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Great, than you @prushforth @dmorissette .
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Is there a way to detect a graphics object underlying another graphics object in svg's hittest?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Well done, @tguild
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Oh no, <a href="https://datacoveeu.github.io/SensorThings">https://datacoveeu.github.io/SensorThings</a> is a 404!
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; Sounds good @IvanSanchez_gitlab - at least it should be listed on the plugins page!
+</p>
+
+<p class='phone'>
+@edpars0ns : has been putting geo data on the web since &lt;img usemap&gt; was cool
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; @AmeliaBR Vector tiles, like in the map I showed, also are organized in zoom levels.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; good point Andreas. Although they still have the difficulty of how to connect up partial features into a logical whole.
+</p>
+
+<p class='irc'>
+&lt;<cite>hylkevds</cite>&gt; <a href="https://datacoveeu.github.io/API4INSPIRE/">https://datacoveeu.github.io/API4INSPIRE/</a>
+</p>
+
+<p class='phone'>
+@ahocevar and @AmeliaBR tiles and zoom levels are (on the Web) fundamental organizing abstractions for geo-data and as such warrant implementation in HTML.
+</p>
+
+<p class='phone'>
+MapBox has a search engine?
+</p>
+
+<p class='phone'>
+@tguild question for the panel: is geospatial information important enough to be incorporated into HTML?
+</p>
+
+<p class='irc'>
+&lt;<cite>hylkevds</cite>&gt; @AmeliaBR yes, after running into the use-case I was a bit surprised that the OGC has nothing on it yet.
+</p>
+
+<p class='phone'>
+HTML is a meta platform, so no worries there
+</p>
+
+<p class='phone'>
+geo data is like any other domain of human thought, it is subjective.  HTML was created to allow all equal opportunity to express thoughts and perspective. As such geo data needs to be incorporated into the Web. (IMHO).
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; @AmeliaBR @hylkevds In OpenLayers, when working with vector data (not vector tiles), we reduce/optimize the geometries for the current resolution and viewport before rendering. For polygons, we use quantizing (and not Douglas Peucker or similar) to maintain topology. But there is indeed no good standardized or well established way to transfer a vector data set with low resolution to the browser and apply progressive
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; enhancement by loading diffs when a higher resolution is needed.
+</p>
+
+<p class='phone'>
+static map display is not of compelling interest, although geolocation of maps is still valuable; one of the key use cases of maps is to expose detail responsively
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; exactly.
+</p>
+
+<p class='irc'>
+&lt;<cite>KathiSchleidt</cite>&gt; @ahocevar but doesn't the OpenLayers approach still require downloading the entirety of the data? One reason we did the multiple resolutions was that the details of Norway took ages
+</p>
+
+<p class='irc'>
+&lt;<cite>hylkevds</cite>&gt; Yes, indeed. And not all of the detail is geospatial in itself. Features have many types of linked data
+</p>
+
+<p class='phone'>
+HTML incorporation of documents did not kill word processors, I don't think incorporating maps will kill anything.  It will make it grow.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The broadest community are the people that are sheepish with the idea of data (or technology, period).  Users fear brackets and things they don't understand.  A place on Earth is connectible and understandable, so the broadest impact will be one that makes people more comfortable with "technology" and "data" in a general sense.
+</p>
+
+<p class='irc'>
+&lt;<cite>KathiSchleidt</cite>&gt; We're more sensitive to the data volume issue as when it comes to the sensor data, the datastream can rapidly become MASSIVE, thus reflected at what levels can we first request more lightweight subsets as required for visualization
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; @KathiSchleidt yes, unless you use vector tile and live with the fact that polygons and linestrings are chopped into tiles. Which is not a problem for rendering and interacting with the data, but might be a problem for other use cases.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I loved Tom Lee's take
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; [edit] @KathiSchleidt yes, unless you use vector tiles and live with the fact that polygons and linestrings are chopped into tiles. Which is not a problem for rendering and interacting with the data, but might be a problem for other use cases.
+</p>
+
+<p class='phone'>
+HTML / CSS is fundamentally about rendering  semantics.  Maps requirements fit naturally into that paradigm.  Apologies to WebGL and friends, acknowledge the need for those tools, but they are out of scope for teaching citizens about maps.
+</p>
+
+<p class='phone'>
+<cite>Johannes:</cite> interop is key, widen scope. Competitors have their own focus; different markets.  Need to explore.
+</p>
+
+<p class='phone'>
+Canada has spent billions on open spatial data.  We don't want silos preventing people from using our open data.  We want citizens to be able to use it without necessary intermediaries.  HTML fits that use case.
+</p>
+
+<p class='phone'>
+Silos are created by friction, even small amounts of friction, at scale.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Tom Lee, the open street map statistics page:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="https://wiki.openstreetmap.org/wiki/Stats#Database_statistics_-_Active_reports">https://wiki.openstreetmap.org/wiki/Stats#Database_statistics_-_Active_reports</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Making open data doesn't necessarily mean sharing data.  Open data is generated and left in a bucket, and becomes shared when someone decides to use it.  If it isn't interoperable, standard, or friendly in any way, no one will pick it up.  This is important for Feature data in maps, which are separate from the georeferenced map of the world platform.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I'm very sorry to have missed much of the morning - II had numerous conflicts... I'm very much looking forward to the videos and wicg chat on some of those!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Making open data doesn't necessarily mean sharing data.  Open data is generated and left in a bucket, and becomes shared when someone decides to use it.  If it isn't interoperable, standard, or friendly in any way, no one will pick it up.  This is important for Feature data in maps, which are separate from the "georeferenced map of the world" system which can consume Features.
+</p>
+
+<p class='phone'>
+What do the commercial map providers say about the accessibility needs that have been expressed by our workshop participants?  This is also the layer in which HTML sits.
+</p>
+
+<p class='phone'>
+Hail Ed! No separate geospatial web!!
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; ^ same question as peter but for i18n/l10n
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Nicely said @edpars0ns .  This is why I like GeoJSON-LD and LOUD, and why I am trying to get it to a place where we can do some maintenance to catch it up with JSON-LD 1.1
+</p>
+
+<p class='phone'>
+If I was a commercial map provider, and I saw a movement towards standardizing the domain in which I worked, I would get out in front of it, and support it.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; [edit] ^ same question as peter but for i18n/l10n
+</p>
+
+<p class='phone'>
++1, sorry I forgot this important use case(s).
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yes, because interoperable data thinks of extendibility as a forethought, not an afterthought.  If you use it, your data can be taken and extended/enhanced, instead of overwritten
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='phone'>
+link for those without one, thanks!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Interoperable 2D data should be extendable to include 3D or 3D+Time, not discarded.  The 2D Map stuff being done now should be used to continue towards more complicated dimensional data
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; That would be <a href="https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part3-three-vertical-elephants.html">https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part3-three-vertical-elephants.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; If I were a 3VE, yeah, I'get in front. If I were not, going in front would be getting myself ready to get stomped.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] If I were a 3VE, yeah, I'd get in front. If I were not, going in front would be getting myself ready to get stomped.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; (Unless I were a startup and my cash-out strategy would be getting bought by a 3VE)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; &gt; What do the commercial map providers say about the accessibility needs that have been expressed by our workshop participants?  This is also the layer in which HTML sits.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I could be taking this really really out of context having missed a lot, but at some point you need to do things like paint pixels - for many things in the platform you can explain parts of the platform in terms of other parts of the platform.  Those things ultimately dont necessarily need to be mutually exclusive, do they?
+</p>
+
+<p class='phone'>
+OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='phone'>
+[edit] OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS
+</p>
+
+<p class='phone'>
+<a href="https://www.youtube.com/watch?v=mbyGfXO72mo&amp;list=PLA07raojXKMvK7plRxgROfDIXiTkcBtWf&amp;index=1">https://www.youtube.com/watch?v=mbyGfXO72mo&amp;list=PLA07raojXKMvK7plRxgROfDIXiTkcBtWf&amp;index=1</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; We will always become smarter, faster, wiser because we do not have the brains to get things exactly right the first time.  But we build on what we can get right, and data needs to be flexible to grow with us.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; The 3 vertical elephants, ahhh… I haven't heard that phrase, but so true when talking about web maps. One of the disappointments of this conference is that we haven't convinced more Google / Apple / Microsoft folks to participate, from either the map or the browser ends of those elephants.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; Not really issues with both - CC0 best perhaps ?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; From my perspective that is
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From the zoom chat:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Chris Little:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Maybe Karel was talking about the OGC Standard for User Feedback <a href="https://www.ogc.org/standards/guf">https://www.ogc.org/standards/guf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Jonathan:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Licensing: A quick search of my database shows 1759 different values for "access_constraints" across 187,000 spatial web services.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I have a very biased point of view about this particular issue - a bias that spawned from a 2009(?) conference in Sevilla with a Google Spain representative, who ripped off the Open Data Definition, changed three points, and gave a talk about "this are the conditions that your data has to have so it can be used by Google"
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; So, at least from my eyes, Google has been fighting *against* Open Data licenses for years. And I guess you're aware it'll take effort to change my mind.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; And yes I'm aware this is a biased point of view, but I'm allowed to have a biased point of view based on my experiences, am I not?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; Yes well we don't all sing from the same songsheet
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; At Google I mean
+</p>
+
+<p class='phone'>
+I have heard, but can't speak authoritatively, that performance and accessibility are closely related
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Little geo data, from the GeoJSON-LD talk last week : <a href="http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf">http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf</a>
+</p>
+
+<p class='phone'>
+For instance old devices
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I don't know the idiom "elephant in the room" because I'm not familiar with English.w
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] From the zoom chat:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] From Chris Little:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Maybe Karel was talking about the OGC Standard for User Feedback <a href="https://www.ogc.org/standards/guf">https://www.ogc.org/standards/guf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] From Jonathan:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Licensing: A quick search of my database shows 1759 different values for "access_constraints" across 187,000 spatial web services.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] (And 79364 of them have NULL access_constraints - so no clearly defined license at all).
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='phone'>
+[edit] OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS
+</p>
+
+<p class='irc'>
+&lt;<cite>hylkevds</cite>&gt; The new OGC APIs and SensorThings API are quite usable for people with only limited JS knowledge, but still, the easer it is the better
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I just want that Point to draw!
+</p>
+
+<p class='phone'>
+Join the maps for HTML community group
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I'll do it if you promise to draw my Point
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; “elephant in the room” = a very large problem that everyone is ignoring because they don't know what to do with it. (I honestly don't know what story it is from.)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Thanks
+</p>
+
+<p class='phone'>
+lol we can draw points
+</p>
+
+<p class='phone'>
+not very well yet
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; haha not helping your case
+</p>
+
+<p class='phone'>
+The panel have all been great sports for entering the building.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Or if the provider is doing something ridiculously proprietary, like encoding coordinates using base64 encoded wingdings.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; That part of my essay literally starts with an explanation of "elephant in the room" :-D and BTW @AmeliaBR the wikipedia article I link from the essay explains the ethymology of the expression, back to 1814 :-D
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Even paid providers, or perhaps especially paid providers, should be producing well encoded data
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @thehabes You mean like that infamous UK company encoding coordinates in a triplet of words from a 40000 word dictionary?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @IvanSanchez_gitlab haha exactly!  I'm not paying for that
+</p>
+
+<p class='phone'>
+HTML is the only standard with the appropriate scope for geo data
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; 🙈 The fact that I skimmed over that intro &amp; straight to the subheading is probably relevant to the idiom…
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; 🙄🤣
+</p>
+
+<p class='phone'>
+Vector tiles and HTML can play well together btw
+</p>
+
+<p class='phone'>
+opaque formats are silos
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The indoor accessibility stuff blew my mind.  The granularity that geo stuff depends on is intense.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The links Ted is talking about
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; <a href="http://docs.opengeospatial.org/per/19-032.html">http://docs.opengeospatial.org/per/19-032.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; <a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='phone'>
+The stuff I presented in Part One of the MapML proposal: &lt;map&gt; &lt;layer&gt; and &lt;extent&gt;.
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; I think that question was supposed to be for the panel, Peter… 😉
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='phone'>
+boo
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; :)
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+</p>
+
+<p class='phone'>
+jk
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Simplest thing is a map of the world that can translate Event locations into coordinates under one coordinate reference system
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I must remind @edpars0ns that integrating Google Maps could be waaaaaaaaay easier and could not depend on crazy hacks, as I explained in my talk :-)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Second thing is taking an image of a Map and making it work like that initial map
+</p>
+
+<p class='irc'>
+&lt;<cite>edpars0ns</cite>&gt; @IvanSanchez_gitlab you could just use the API ;-)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Which I am!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Third thing is transposing other, perhaps inaccurate, maps or images of maps on that map and inheriting the Event functionality
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Third thing is transposing other, perhaps inaccurate or fragmental, maps or images of maps on that map and inheriting the Event functionality
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @edpars0ns I am **literally** using the JS API, because the tile API documentation is so obscure and hard to find and restricted to "select users" that most people don't know there's one
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @edpars0ns I'll throw my gauntlet here: you tell me which **public**, **widely-available**, "keep-it-simple" API can I use to make GoogleMutant less of a hack, I'll make it less of a hack
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @IvanSanchez_gitlab I figured you were just going to write that for us :)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; ...because "keep-it-simple" is f****** using the f******* tiles as I f******* said in my talk
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; *takes a breath*
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Good panel, and good moderating, @tguild
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Tom Lee on Zoom:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; we have been at this for many years and are still working on our first projection!
+</p>
+
+<p class='phone'>
+Great panel Ted and panelists: thank you!
+</p>
+
+<p class='phone'>
+Re: keep it simple, please read <a href="https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf">https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Before the code-of-conduct people jump at me for writing `f*******` a few times in a row: I'm getting heated, passionate and angry here, and right now I think Ed is taking a hypocrite point of view by asking people to "make it simple" while basically being in charge of a platform that does, in fact, **not** "make it simple" to get data from (for
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; political/licensing/let's-ensure-that-the-browsers-send-telemetry reasons) as should have been made clear by GoogleMutant.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; So I'll be logging off and taking a breather here. And once again I invite everybody to read my essay at <a href="https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html">https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html</a> and to reply to the points of the essay or to the "gauntlet throwing" I did few minutes ago in the form of written articles/blog posts/esssays/whatever, because I don't feel I'll be capable of holding a civil conversation in
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; chat.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] So you're talking about logistics, ultimately? Supply-chain optimization via business intelligence *a la* Carto (<a href="https://carto.com/)">https://carto.com/)</a>?
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; Obviously that is logistics and supply-chain optimization. That was the example given there... But that's just an idea of how the software could be used and developed in that specific case. I guess the problem that maps for web will solve is the inter-connectivity with ''Things''. I'm highlighting what systems could be implemented in the map development with the widgets in order to get the most of
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; it and to work on ways that could possibly change IT infrastructures or atleast change how they operate to facilitate how Humans operate in general.  Other then that, there is countless ways geospatial data technology could be used to create new opportunities. But like I said, its about the possibilities of creating new ecosystems as the data is being available on the maps. Anyhow, I'm also trying
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; to understand how new Software Developments are crucial to give maps an utility as well as giving us  tools to make new standards in telecommunications as new wireless technologies are being deployed. That is why it is hard to name something that has not yet been created yet. I do not have pieces of codes that would explain how such mechanism would work if that's what you're asking ,sorry!! That's
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; an idea overview for the engineers and the developers. :)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; But we hope the platform is friendly enough that a researcher would use it study proposed ideas about solving world hunger
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Awesome @Raitis that is cool.  Is that like a desktop app?  That composition JSON doesn't seem like it is for a Web app but I could be wrong.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Like I have GeoJSON,  but it is behind a URL.  Could I just supply it a URL that is a GeoJSON object?  Kind of like <a href="http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf">http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf</a> but without all the stuff around its `obj.body`
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; That's cool.  I think we call the `Content State` in our API, and our state object looks a lot like that composition JSON
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; But that state object is not webby, it is meant to be uploaded at instantiation and I couldn't just pass it a URL either.  ty, here is the link to the repo he was talking about <a href="https://github.com/hslayers/hslayers-ng">https://github.com/hslayers/hslayers-ng</a>
+</p>
+
+<p class='phone'>
+woot
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @RunaBergheim GeoJSON is the default everyone goes with.  I am discovering this, everywhere.  It is a not-so-secret de facto.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @RunaBergheim We have an extremely similar stack.  We just don't do the socket stuff.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @RunaBergheim If you haven't yet, add GeoJSON-LD context (<a href="https://geojson.org/geojson-ld/)">https://geojson.org/geojson-ld/)</a> to your data, and look to produce 5 stat data (<a href="https://5stardata.info/en/)">https://5stardata.info/en/)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] @RunaBergheim If you haven't yet, add GeoJSON-LD context (<a href="https://geojson.org/geojson-ld/)">https://geojson.org/geojson-ld/)</a> to your data, and look to produce 5 star data (<a href="https://5stardata.info/en/)">https://5stardata.info/en/)</a>
+</p>
+
+<p class='phone'>
+Questions for the Map Whiteboard team
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @RunaBergheim This is already being worked on as a standard thing in the mapping community.  See <a href="https://iiif.io/community/groups/maps/,">https://iiif.io/community/groups/maps/,</a> and expect an invitation soon
+</p>
+
+<p class='phone'>
+[edit] Questions for the Map Whiteboard team
+</p>
+
+<p class='phone'>
+add them here
+</p>
+
+<p class='phone'>
+[edit] Questions for the Map Whiteboard team
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Have you looked into producing 5 star data? (<a href="https://5stardata.info/en/)">https://5stardata.info/en/)</a>  You have essentially done everything besides contextualizing your data.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; is it just me who is having trouble with w3c site today - I can't get to peter's link
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; Great presentations! Thank you
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @prushforth can you share your pdf linked above another way?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Challenge 3 Link : <a href="https://www.plan4all.eu/2020/09/challenge-3-citizen-science-network-for-peer-to-peer-maps-sharing/">https://www.plan4all.eu/2020/09/challenge-3-citizen-science-network-for-peer-to-peer-maps-sharing/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Challenge 5 Link : <a href="https://www.plan4all.eu/2020/09/challenge-5-whiteboard-future-collaborative-maps/">https://www.plan4all.eu/2020/09/challenge-5-whiteboard-future-collaborative-maps/</a>
+</p>
+
+<p class='phone'>
+@briankardell_twitter  you can't get to this link: <a href="https://www.w3.org/2020/maps/agenda">https://www.w3.org/2020/maps/agenda</a>
+</p>
+
+<p class='phone'>
+?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @ahocevar I missed your presentation unfortunately, but I am looking forward to the video.  Offscreen canvas patches in webkit minus stuff about text were just pushed yesterday by igalia woot
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @prushforth nope
+</p>
+
+<p class='phone'>
+ok I'll email it to you
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; thanks
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; not sure what is happening, but I am clearly able to log in to some things, and others don't let me
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; happened for csswg today too
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; @briankardell_twitter , I'm not having any trouble with w3.org, but if you just want to download people's presentations / position statements, you can get them from the website repo: <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/tree/master/supporting-material-uploads">https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/tree/master/supporting-material-uploads</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; thanks amelia - <a href="https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/blob/master/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf">https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/blob/master/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf</a> is i guess what I was looking for
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>

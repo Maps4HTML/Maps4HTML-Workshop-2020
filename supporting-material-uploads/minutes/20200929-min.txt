@@ -1,0 +1,234 @@
+07:41 <nicolocarpignoli> Okay I think I found it,  I  see Ted Guild (Host) currently connected
+07:52 <tguild> @nicolocarpignoli if you want to do an audio+video check before we start, feel free
+07:53 <nicolocarpignoli> No worries, thanks anyway
+08:17 <prushforth> @nicolocarpignoli  All these requirements are excellent.  What I fail to understand is why we don't work on solving them in standards, as a community. IMHO first step is to agree that maps can be standardized as a user level feature of browsers.  Thanks for helping make the case for that.
+08:18 <thehabes> If there were more time, I think Collaboration is another main use, in academics and research especially.  That opens the "Web" can of worms, so to speak.
+08:18 <nicolocarpignoli> I absolutely agree with you @prushforth , that should be the direction. @thehabes  nice catch! 
+08:20 <RealJoshue108> hello and apologies for being late
+08:21 <shepazu> Great presentation! Not exactly the first mention of accessibility in this workshop, though :)
+08:22 <RealJoshue108> anyone able to share zoom info?
+08:22 <prushforth> Joshue I will email it to you
+08:24 <thehabes> @nicolocarpignoli , we use Web Annotation (https://www.w3.org/TR/annotation-model/) to pass these kinds of textual data nodes around.  If you haven't seen that yet, this is how I can provide those pieces of requirement metadata when it isn't already a part of Map data, or when I mean to supplement information without overwriting it or changing the source data.  It is interesting, and may be of interest to you depending on
+08:24 <thehabes> you feel about Annotation.  
+08:24 <RealJoshue108> thanks Peter
+08:24 <RealJoshue108> am in
+08:24 <RealJoshue108> @RealJoshue108 wavets
+08:24 <RealJoshue108> @RealJoshue108 waves even..
+08:26 <satakagi> @prushforth 
+08:26 <satakagi> I have a view that may differ slightly. I'm sure you're already aware of that.
+08:26 <satakagi>  I believe that the function of a geographic map should be a higher conceptual function that encompasses other usages that have a similar functions.
+08:27 <nicolocarpignoli> @thehabes did not know them. I will definitely give a look. @RealJoshue108 that might interest you too (see previous Bryan's comment)
+08:28 <RealJoshue108> thanks @nicolocarpignoli 
+08:31 <prushforth> @satakagi Are referring to non-geographic maps, such as deep zoom on images?
+08:32 <satakagi> @prushforth Yes! That's what Amelia's report refers to as well.
+08:33 <thehabes> Is touch a reason why I remember things better when I physically write them down on something?  I am just one of those people where I drop pieces of audible conversation from my memory, but when I write it down I never have to look at the note to remember it.
+08:34 <prushforth> @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:38 <prushforth> Doug says that the primitives we need for maps are already there
+08:40 <prushforth> Sort of... he says a combo of standards and innovation will need to be applied to making maps accessible
+08:40 <thehabes> @ghobona Are there other accessibility schema/ontology/APIs you have worked on like IndoorGML http://docs.opengeospatial.org/is/14-005r5/14-005r5.html.  I agree with Doug.  As a developer, a schema or standard has to exist for me to even begin to know what accessibility users need.
+08:40 <nicolocarpignoli> @prushforth What are those primitives? Is he referring to "Web Annotation" spec too, or something else?
+08:41 <prushforth> the audio api, the vibration api were the specific ones he mentioned iirc
+08:42 <shepazu> I'm not sure rasters are that useless… there's a lot of innovation in machine vision on that front
+08:42 <shepazu> Of course, I prefer vector data with annotations, like SVG
+08:42 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:42 <satakagi> I'll make a thread about this topic.
+08:42 <satakagi> The quadrant tree tile pyramid structure, which has become well known in googleMaps, can be found in things that have nothing to do with geography, for example, JPEG 2000: https://northstar-www.dartmouth.edu/doc/idl/html_6.2/ Image_Tiling.html
+08:42 <satakagi> I think it's relatively common for these data structures to be defined independently of geography, and for there to be something else to associate them with geographic coordinates.
+08:42 <satakagi> 
+08:42 <satakagi> Translated with www.DeepL.com/Translator (free version)
+08:42 <satakagi> [edit] I'll make a thread about this topic.
+08:42 <satakagi> [edit] The quadrant tree tile pyramid structure, which has become well known in googleMaps, can be found in things that have nothing to do with geography, for example, JPEG 2000: https://northstar-www.dartmouth.edu/doc/idl/html_6.2/ Image_Tiling.html
+08:42 <satakagi> [edit] I think it's relatively common for these data structures to be defined independently of geography, and for there to be something else to associate them with geographic coordinates.
+08:42 <satakagi> [edit] 
+08:44 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:44 <satakagi> That is, if your mention of "tilted coordinate reference systems" is not geographical, then it seems relatively reasonable.
+08:45 <nicolocarpignoli> I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:46 <shepazu> I think the standards Tony is talking about, UX around earcons and auditory icons, is really important, even though it probably doesn't fit at W3C or (maybe) OGC… definitely something that needs to be followed up with, maybe with ICAD (International Conference on Auditory Display) 
+08:46 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:46 <prushforth> I don't see why a tiled coordinate reference system has to be geographic in nature; it might be confusing if we re-used a geographic tcrs for a non-geographic map application.  Perhaps need to define one for non-geo maps
+08:46 <RealJoshue108> +1 to @nicolasG - also shows that we need clear understanding of user needs for accessible maps
+08:46 <thehabes> If the Event structure is layed out well, it is easy to apply unit actions to those events.  For example, if a `click` event always produced a little click noise, it is pretty easy to go into that and change it to produce little click noise + vibration
+08:47 <thehabes> I would be curious to know how to design an Event structure for accessibility needs, I have never seen one of those before.
+08:47 <nicolocarpignoli> [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:47 <shepazu> From a web standards perspective, I agree we now have the basic building blocks
+08:47 <RealJoshue108> @thehabes as we know the click event is also critical for a11y as it is event agnostic
+08:48 <RealJoshue108> works for keyboard only users, switch user etc
+08:49 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:49 <satakagi> Maybe I'm mistaken?
+08:49 <satakagi> The "tilted coordinate reference systems" you are mentioning is one that does not have a geographical concept?
+08:49 <thehabes> @RealJoshue108 Exactly, I was primed by the presentations from yesterday that brought this stuff up.  Most Events have direct equivalents for those with disabilities, but it also occurs to me some Events will never happen for some users (perhaps they can't use a keyboard or mouse, so `click` is right out).  
+08:50 <RealJoshue108> sounds good @thehabes 
+08:50 <nicolocarpignoli> [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:50 <prushforth> Doug this is the case I'm trying to make around maps: the primitives all exist, *including* map semantics (image maps / layers).  Just need a little imagination and willingness to go there from the browsers
+08:50 <nicolocarpignoli> [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:50 <RealJoshue108> There is then the question what parts are missing?
+08:52 <satakagi> [edit] Maybe I'm misunderstood?
+08:52 <satakagi> [edit] The "tilted coordinate reference systems" you are mentioning is one that does not have a geographical concept?
+08:54 <prushforth> The problem with calling for user research is what the focus of the research is in terms of what map implementation should receive the results.  A standard for maps would help with that imho.
+08:55 <prushforth> The web platform should have maps is what I'm saying
+08:55 <nicolocarpignoli> [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:55 <RealJoshue108> IMO, a gap analysis would be goo
+08:55 <RealJoshue108> good even..
+08:55 <nicolocarpignoli> [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+08:56 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:56 <prushforth> So "tiled coordinate reference system" is a specific discussion of MapML https://maps4html.org/MapML/spec/#examples
+08:57 <shepazu> Honored to be on that panel with such knowledgeable innovators
+08:57 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+08:57 <prushforth> But I'm just saying these all, so far, associate a gcrs and pcrs, whereas in a non-geographic map, perhaps there wouldn't need to be a gcrs?
+08:59 <AmeliaBR> Yes, @prushforth, I think the implicit conclusion of this panel is that there should be a standard way for web page authors to share map data, so that browsers or browser extensions can build on it with auditory/haptic experiences.
+09:02 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+09:02 <satakagi> "OSMTILE" seems to have the meaning of the tiles used in Mercator's openStreetMap, which are associated with longitude and latitude.
+09:02 <satakagi> Is it my mistake?
+09:03 <thehabes> I agree that Object of Interest probably goes outside the scope of what GeoJSON is trying to do.  
+09:04 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+09:04 <prushforth> Not a mistake no, you are correct.
+09:04 <satakagi> [edit] "OSMTILE" seems to have the meaning of the tiles used in Mercator's openStreetMap, which are associated with longitude and latitude.
+09:04 <satakagi> [edit] Am I misunderstanding that?
+09:04 <satakagi> [edit] "OSMTILE" seems to have the meaning of the tiles used in Mercator's OpenStreetMap, which are associated with longitude and latitude.
+09:04 <satakagi> [edit] Am I misunderstanding that?
+09:04 <thehabes> ROI and POI is doable, but leveraging `properties` as a wildcard is a Bad Idea.  It is best to extend GeoJSON or apply your own schema to the `properties` object.
+09:05 <fredesch> @shepazu I missed the first hour - where can I hear the recording or read the transcript?
+09:06 <thehabes> @fredesch they have been good at posting videos here : https://www.youtube.com/playlist?list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ
+09:06 <thehabes> usually within 48 hours
+09:06 <fredesch> thx great
+09:07 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:07 <nicolocarpignoli> I think it's the starting point of all of these discussions. We definitely SHOULD have. How do you suggest to proceed?
+09:08 <SebastienDurand> @Jan-Erik, What you think is the viewer of the future, the next way to as we are trying to bring data together, through viewers and on the web?
+09:08 <SebastienDurand> [edit] @Jan-Erik, What you think is the viewer of the future, the next way forward, now everyone around the globe aims to bring data together, through viewers and on the web?
+09:09 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:09 <RealJoshue108> If there is a <map> element - then that could have dedicated semantics to support various user needs.
+09:10 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:10 <RealJoshue108> I don't think it is sufficient to just throw a ton of ARIA labels at e'thing!
+09:10 <RealJoshue108> They have a place for sure - but we need to work out where generic labelling and descriptive semantics are just not enought.
+09:10 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:11 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:11 <RealJoshue108> there may also be particular behaviours etc associated with custom elements/attributes etc that we need to consider.
+09:11 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:11 <prushforth> Yes! The <map> element already exists, and does have map/layer semantics, although it has been very much neglected
+09:11 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:11 <prushforth> We propose to renovate it
+09:11 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:11 <RealJoshue108> cool
+09:12 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:12 <RealJoshue108> You know more about these things than me *grin
+09:12 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:12 <prushforth> lol we are all newbies here
+09:12 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:12 <RealJoshue108> aun aprendo
+09:13 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:13 <RealJoshue108> IMO, there needs to be parallel discussion on leveraging what is there against clear user needs as this tech evolves
+09:13 <prushforth> Nice idea for globe mode for maps.  
+09:15 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:15 <prushforth> Amelia has been collecting and developing use cases and requirements over here  https://maps4html.org/HTML-Map-Element-UseCases-Requirements/
+09:15 <prushforth> My ears are burning
+09:16 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:16 <RealJoshue108> yes, I've seen that - its a great doc
+09:17 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+09:17 <satakagi> Thanks for confirming that.
+09:17 <satakagi> Roughly, I'm expecting something like the following
+09:17 <satakagi> <geographic map layer>.
+09:17 <satakagi> <something that relates the coordinates of an image to something geographical (projection or latitude and longitude (geographic coordinates) />).
+09:17 <satakagi> <deepZoomImage
+09:17 <satakagi> tileStructure="quadTreePyramid" urlTemplate="...." />
+09:17 <satakagi> </Geographical Map Layer>
+09:18 <satakagi> [edit] Thanks for confirming that.
+09:18 <satakagi> [edit] Roughly, I'm expecting something like the following
+09:18 <satakagi> [edit] <geographicMapLayer>
+09:18 <satakagi> [edit] <something that relates the coordinates of an image to something geographical (projection or latitude and longitude (geographic coordinates)) />
+09:18 <satakagi> [edit] <deepZoomImage
+09:18 <satakagi> [edit] tileStructure="quadTreePyramid" urlTemplate="...." />
+09:18 <satakagi> [edit] </geographicalMapLayer>
+09:19 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:19 <prushforth> +1
+09:20 <shepazu> These frames remind me of General Relativity :P
+09:21 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+09:21 <satakagi> If you don't intend for it to be geographical, <deepZoomImage.... > is only described.
+09:21 <prushforth> @lieberjosh  answered my question.  The starting position of a map in 3d is also a consideration. Thanks!
+09:22 <prushforth> [edit] The web platform should have maps is what I'm saying
+09:22 <nicolocarpignoli> totally agree
+09:24 <thehabes> Use Cases
+09:24 <thehabes> MapML : https://maps4html.org/HTML-Map-Element-UseCases-Requirements/
+09:24 <thehabes> IIIF Maps : https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps
+09:25 <thehabes> Thanks for gathering the MapML @prushforth @AmeliaBR .  It helps all mapping communities to have these things together so we can fill the gaps.
+09:30 <prushforth> @lieberjosh  what really is a map? A: a basic aid to visualization.  There is a continuum between flat maps facing north and visualizations that are more sophisticated / AR.  Great way to see the connection between what we could do and where we could go with it.
+09:30 <prushforth> Chris Little: Rob Smith's VMT proposal relevant to this use case
+09:30 <prushforth> 
+09:32 <thehabes> [edit] Thanks for gathering the MapML ones @prushforth @AmeliaBR .  It helps all mapping communities to have these things together so we can fill the gaps.
+09:34 <prushforth> RE Josh's comments: the availability of cloud storage, like Zarr, etc, is starting to remove one of the contraints on the large amount of data required to present 3/4D maps to an individual. 
+09:34 <prushforth> 
+09:35 <prushforth> Previous comment was from Chris Little, who's not on gitter
+09:35 <fredesch> Very similar to a 3d architecture app that lets you walk around...
+09:39 <prushforth> @lieberjosh  and Christine: thanks for your vision
+09:40 <thehabes> Is there a link to a use case collection by GeoPose or  OSCP?
+09:42 <prushforth> Patrick Cozzi: the intersection of maps and AR are killer use cases
+09:45 <AmeliaBR> Question for the panel: What's the best way to deal with geographic precision when combining map data with AR? Are there ways to anchor feature coordinates to the physical world?
+09:45 <thehabes> Wow I had never seen this https://www.w3.org/TR/webxr/
+09:47 <RealJoshue108> If you are interested in XR A11y please do review our new updated editors draft of XR Accessibility User Requirements https://www.w3.org/TR/2020/WD-xaur-20200916/
+09:48 <RealJoshue108> There is for sure a mapping with mapping :-)
+09:48 <SebastienDurand> Gaming platforms have full system, that shine by their integration enabling interaction with the user (left aside the accessibility side). So how does current development on our side of the fence aligns with that industry 
+09:48 <nicolocarpignoli> Talking about AR and Navigation: I'm the maintainer of AR.js that from version 3 features Location Based AR. The code is totally Open Source if you want to give it a look. I have used it in order to create AR geolocated trasure-hunts or other AR cultural-discovering  web  app for historical center of cities. Feel free to ping me to know more (do not want to spam, it's all OSS so I thought it might interest
+09:48 <nicolocarpignoli> some dev/designer) => https://ar-js-org.github.io/AR.js-Docs/ 
+09:48 <nicolocarpignoli> 
+09:50 <prushforth> Question for the panel:  would it be beneficial, or at least a start along the path to AR, if the Web platform supported 2D map rendering in HTML?
+09:50 <prushforth> 
+09:53 <AdaRoseCannon> https://github.com/immersive-web/geo-alignment
+09:53 <AdaRoseCannon> https://github.com/immersive-web/geo-alignment/blob/master/explainer.md
+09:53 <AmeliaBR> From Chris Little:
+09:53 <AmeliaBR> Panel Question: Considerng Jan-Erik's presentation, do you think the 'layer' terminology is confusing in a 3/4D environments? Is 'view@ better? or have the same issue.
+09:53 <AmeliaBR> 
+09:54 <AdaRoseCannon> https://github.com/immersive-web/anchors
+09:54 <prushforth> [edit] RE Josh's comments: the availability of cloud storage, like Zarr, etc, is starting to remove one of the contraints on the large amount of data required to present 3/4D maps to an individual. 
+09:54 <prushforth> [edit] 
+09:54 <AmeliaBR> Joshua Lieberman replied in zoom: 
+09:54 <AmeliaBR> Some OGC Innovation Program experience is that integrating structure and sensor data is best done “on the fly” using the right services and standards framework. Prior fusion is too inflexible to work well.
+09:54 <AmeliaBR> 
+10:01 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+10:01 <satakagi> I think it would be better to move the discussion in this thread to "discussion", is the following the right place?
+10:01 <satakagi> https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/
+10:04 <prushforth> Web component: https://geogratis.gc.ca/mapml/en/osmtile/osm/ 
+10:05 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+10:05 <AmeliaBR> @satakagi, that should work. Or please feel free to start a more specific thread.
+10:05 <thehabes> Question for GeoPose and Open AR Cloud:  Do you have your collection(s) of use cases available anywhere?
+10:07 <satakagi> [edit] I think it would be better to move the discussion in this thread to "discourse", is the following the right place?
+10:07 <satakagi> [edit] https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/
+10:07 <prushforth> [edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+10:07 <satakagi> :+1:
+10:07 <shepazu> Based on how SVG, a 2D vector format, is inappropriate to extend to 3D, I think maybe 3D should be considered from the beginning, rather than hoping to extend it later
+10:09 <thehabes> [edit] Question for GeoPose - Open AR Cloud - Immersive Web:  Do you have your collection(s) of use cases available anywhere?
+10:10 <shepazu> Regarding @AdaRoseCannon's comment about WebGL+HTML, maybe a shadow-DOM approach like was designed for Canvas might be suitable
+10:11 <prushforth> kml + google earth show the way to 3d in the browser, perhaps.  2d services are still important even in that application
+10:11 <AdaRoseCannon> The nice thing with Vector formats is that they can be parsed and rendered with geometry. 
+10:12 <AdaRoseCannon> [edit] The nice thing with Vector formats is that they can be parsed and rendered with geometry. 
+10:12 <shepazu> True, but the structure of SVG isn't suited for 3D
+10:12 <IvanSanchez_gitlab> Somehow I'm still convinced that the right way would be a SVG-like language that *leverages* GL abstract concepts, like SVG abstracted 2D drawing APIs back in the day
+10:12 <AdaRoseCannon> There are also ways to render SVG in the graphics card using https://github.com/servo/pathfinder
+10:13 <AdaRoseCannon> [edit] The nice thing with Vector formats is that they can be parsed and rendered with geometry. 
+10:13 <shepazu> (At the markup and DOM layer)
+10:13 <AdaRoseCannon> The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+10:14 <shepazu> It may well be
+10:14 <AdaRoseCannon> [edit] The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+10:14 <IvanSanchez_gitlab> Not sure. IMO GLTF already assumes too many abstractions
+10:14 <AdaRoseCannon> [edit] The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+10:14 <IvanSanchez_gitlab> and they might not be good for some aspects of GIS work
+10:15 <TechThomas> Hi all, if you have any geospatial things you want accessibility considerations on feel free to reach out https://twitter.com/techthomas or thomas@equalentry.com
+10:19 <thehabes> I agree Jan.  GeoJSON is good for coordinates, but if you want to do anything else, you have to do something on top of it or by extending it.
+10:26 <AmeliaBR> From Jan-Erik Vinje, the companies with GeoPose demos to check out:
+10:26 <AmeliaBR> Immersal
+10:26 <AmeliaBR> Augmented City
+10:26 <AmeliaBR> 
+10:27 <cperey_twitter> yes, thank you all on inputs and if you want to follow up, please reach out to me at cperey@perey.com
+10:28 <rahola_gitlab> Question from @shepazu if we should integrate 2 and 3D to start, rather than only focusing on 2D. Could this drive more use cases and possibly interest?
+10:32 <briankardell_twitter> is this not like a split between 2d and 3d in general tho?
+10:32 <thehabes> Even with the 2D stuff, the goal is to make each piece extendable so you never have to throw anything away (or at least only need too in the most extreme cases)
+10:33 <thehabes> I imagine the challenge of the time dimension is nearly the same for 2D and 3D POI/ROI/OiM.
+10:33 <thehabes> A "timeline" in a 3D sense is like watching a building being built in fast motion.
+10:34 <thehabes> [edit] Even with the 2D stuff, the goal is to make each piece extendable so you never have to throw anything away (or at least only need to in the most extreme cases)
+10:35 <RealJoshue108> thanks for a great sesssion
+10:35 <prushforth> That was a lot of fun
+10:44 <rahola_gitlab> Reminder to all that the next workshop session will start tomorrow (Sept. 30) at 16:00 UTC (12:00 PM EDT). 
+10:47 <nicolocarpignoli> Thank you all!
+11:56 <prushforth> It's going to take me some time to thoughtfully and appropriately respond to many comments in this chat feed.  I think I will try to do that mostly on [discourse](https://discourse.wicg.io/c/web-mapping/22), so that it's a bit more permanent and public. Thanks to @AmeliaBR  and @satakagi  who've copied some of the comments from here to there already.  I encourage others to offer their ideas over there too.  That is
+11:56 <prushforth> where Web platform developers discuss Web platform ideas, so even if they have muted us due to the onslaught of Web mapping content these past few days, they will have a handy reference at their fingertips.
+12:31 <NicolasRafaelPalomino> To answer your questions @AmeliaBR ;"The data that will be used to train the software really depends on the features of the widgets. I believe the best way is offering industrial or commercial geospatial data to interact with through the widgets will give us a good possibility to harness data... What we harness  harness could be anything between data from the services that are provided by the place
+12:31 <NicolasRafaelPalomino> such as ordering, checking availability , paying, or as just as capturing interactions with data that is available. Then applying''machine learning'' to deep analytics and big data analysis to the information that is generated from the interaction with the geospatial data can be used for better insight. The "AI" will be the automation of this data for improvements in effectiveness of their
+12:31 <NicolasRafaelPalomino> organizations.  The idea is to fuse that data together and draw conclusions and then present that information very quickly to drive change in how we manufacture, schedule and predict resources and outcomes, it is really about moving from data to answers.

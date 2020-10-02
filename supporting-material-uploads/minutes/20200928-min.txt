@@ -1,0 +1,232 @@
+23:57 <AmeliaBR> Ready for Week 2! Today's agenda https://discourse.wicg.io/c/web-mapping/22
+23:57 <prushforth> Welcome!
+23:58 <Helixopp> Good evening everyone... David Fazio dfazio@helixopp.com
+23:59 <prushforth> Thanks to everyone staying up late or getting up early
+00:02 <prushforth> Claudia's video: https://cloudstore.zih.tu-dresden.de/index.php/s/Z5SfoojCfLCwdLq 
+00:08 <IvanSanchez_gitlab> [coffee zombie.gif]
+00:09 <Helixopp> 2 types of memory: 1. Recall 2. Recognition. Maps deals with recognition. Important cognitive aspects of recognition: Attention, Perception, Memory  
+00:11 <AmeliaBR> Topic: Physical accessibility data in maps
+00:11 <prushforth> https://wheelmap.org
+00:12 <AmeliaBR> discourse page: https://discourse.wicg.io/t/physical-accessibility-data-in-maps/4852
+00:12 <IvanSanchez_gitlab> Ooohhh, semiotics of "sharper edges" = "more dangerous", nice detail
+00:13 <Helixopp> For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+00:17 <Helixopp> 1 interesting thing: physical accessibility specs vary widely by country. For example accessible ramps in Latin America are much steeper, and almost impossible to traverse without assistance than in other regions of the world. Whereas in US the slope is much more gradual. Providing that specific info would be important.
+00:22 <thehabes> Definitely screaming Linked Data...is `accessibility` your own thing?
+00:24 <thehabes> Yes! `@context` lets you have that description, and new data practices let you mix and match contexts as you need to combine and better supplement data, whether you own it or not.  
+00:27 <prushforth> Sebastian Felix: Why would you need all the <meta> elements in a MapML <feature>?  Aren't the semantic properties already specifiable in microformats or rdfa?
+00:27 <shepazu> FWIW, that markup didn't indicate that it was a hotel
+00:28 <shepazu> yeah, I think the idea is good, but the syntax needs work
+00:28 <prushforth> I LOVE the idea
+00:28 <fredesch> Are your accessibility  icons standardized/widely used?
+00:31 <Helixopp> The SEO argument has been around for websites for a long time, without much success.
+00:31 <Helixopp> Is this meant to supplement what hospitality providers are already doing, or replace it?
+00:32 <Helixopp> Hotels mostly provide their a11y info
+00:33 <thehabes> @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `<link
+00:33 <thehabes> href="">`ing them in.  Like with how it links in coordinate systems, for example. 
+00:34 <thehabes> Very nice presentation Sebastion, your thoughts are not entirely siloed.
+00:35 <thehabes> The key is keeping the vocabulary modular so the spec doesn't depend on it, but can include it.
+00:35 <ghobona> Great presentation Sebastian!
+00:35 <parths0609> Very interesting presentation on accessibility. 
+00:36 <AmeliaBR> Topic: Indoor maps
+00:40 <AmeliaBR> discourse: https://discourse.wicg.io/t/indoor-maps-floorplans/4853/2
+00:40 <AmeliaBR> Accessible Maps project: https://accessiblemaps.de/?page_id=121&lang=en
+00:41 <thehabes> In my experience, in general there is no schema on the web that describes the Senses in any way.  I hope I am wrong.
+00:42 <fredesch> How do you deal with poor signal strength in buildings?
+00:42 <Helixopp> [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+00:42 <opyh> Yes:
+00:42 <opyh> - You can mark your places on OpenStreetMap including indoor tagging (as shown by the talk happening right now)
+00:42 <opyh> - As a data provider, you can use A11yJSON / accessibility.cloud. Even if you don't have the technical abilities to generate A11yJSON, you can contact Sozialhelden e.V. in Berlin for this and we help you transforming your data into the harmonized data aformat.
+00:42 <opyh> - You could add schema.org on your webpage, e.g. as JSON-LD. When schema.org adds accessibility features, you can use them.
+00:42 <thehabes> Download the data ahead of time is a method, link how Google maps downloads the data around you and can work offline.
+00:44 <thehabes> [edit] Download the data ahead of time is a method, like how Google maps downloads the data around you and can work offline.
+00:45 <Helixopp> [edit] 1 interesting thing: physical accessibility specs vary widely by country. For example accessible ramps in Latin America are much steeper, and almost impossible to traverse without assistance than in other regions of the world. Whereas in US the slope is much more gradual. Providing that specific info would be important.
+00:45 <opyh> Good point, that's why we built a steepness property into A11yJSON (https://sozialhelden.github.io/a11yjson/3-interfaces/#ground). You can also tag the steepness of a ramp or surface on OpenStreetMap (https://wiki.openstreetmap.org/wiki/Key:incline), and in the GTFS pathways extension as `max_slope` (for public transit, https://developers.google.com/transit/gtfs/reference/#pathwaystxt)
+00:46 <thehabes> [edit] Definitely screaming Linked Data...is `accessibility` your own thing?
+00:46 <opyh> Yes, `accessibility` is our own thing but we want this (or something better!) to be a community standard
+00:47 <Helixopp> I wonder if the 3d photo/video capability of smartphones can be used to auto generate accessibility of environment info? 
+00:47 <prushforth> [edit] Sebastian Felix: Why would you need all the <meta> elements in a MapML <feature>?  Aren't the semantic properties already specifiable in microformats or rdfa?
+00:47 <opyh> Yes they are – `<meta>` is a tag that the RDFa extension would add to MapML in this case
+00:48 <Helixopp> Great. That's a big step forward
+00:48 <Helixopp> [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+00:48 <thehabes> Accessibility data can be and should be 5 star (open) data too.  Good presentation.
+00:49 <shepazu> COGA! COGA!
+00:50 <prushforth> [edit] Sebastian Felix: Why would you need all the <meta> elements in a MapML <feature>?  Aren't the semantic properties already specifiable in microformats or rdfa?
+00:50 <opyh> See example 36 on https://www.w3.org/TR/rdfa-primer/
+00:51 <Helixopp> [edit] I wonder if the 3d photo/video capability of smartphones can be used to auto generate accessibility of environment info? 
+00:51 <claudialoitsch> Hi David, we are working on a similar solution. Using computer vision (i.e. image segmentation) approaches to collect as many information as possible based on video material
+00:51 <AmeliaBR> Topic: Web Maps for Cognitive Accessibility — panel
+00:51 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+00:51 <opyh> The syntax is just RDFa :) It could be JSON-LD as well, of course.
+00:53 <AmeliaBR> discourse page (also has the background links): https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854
+00:54 <AmeliaBR> From Chris Little in the Zoom chat:  10:52 PM
+00:54 <AmeliaBR> Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+00:54 <AmeliaBR> 
+00:54 <AmeliaBR> From David Fazio:  10:53 PM
+00:54 <AmeliaBR> Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+00:54 <AmeliaBR> 
+00:54 <ghobona> Great presentation Claudia & Julian! Indoor mapping is becoming increasingly important. The OGC [IndoorGML](http://docs.opengeospatial.org/is/14-005r5/14-005r5.html) standard is relevant to this topic. 
+00:56 <ghobona> Note the recent [work done](http://docs.opengeospatial.org/per/19-032.html) by OGC and NIST on indoor mapping for public safety.
+00:56 <AmeliaBR> > 2 types of memory: 1. Recall 2. Recognition. Maps deals with recognition. Important cognitive aspects of recognition: Attention, Perception, Memory  
+00:56 <AmeliaBR> 
+00:56 <AmeliaBR> The 3 aspects David's talking about
+01:00 <AmeliaBR> We'll have time for a few audience questions, if you leave them here…
+01:00 <ghobona> [edit] Great presentation Claudia & Julian! Indoor mapping is becoming increasingly important. The OGC [IndoorGML](http://docs.opengeospatial.org/is/14-005r5/14-005r5.html) standard is relevant to this topic. 
+01:00 <claudialoitsch> Thank you! One of our objectives is to automatically detect as many information as possible from the existing indoor plan (escape plan, architectural drawings, BIM, etc.) and to provide different georeferenced output formats as well. We already started to create maps in IndoorGML but the problem ist to model the granular information need of people with disabilities to ensure they can really make use from
+01:00 <claudialoitsch> information in maps. 
+01:01 <shepazu> This snapshot method of landmark mapping that John Kirkwood describes is very efficient. It's how ants navigate visually
+01:04 <fredesch> [edit] Are your accessibility  icons standardized/widely used?
+01:04 <opyh> No, from what I know, the traffic light scheme with the 3 different shapes is so far only used on https://wheelmap.org and https://map.pfotenpiloten.org
+01:05 <Helixopp> [edit] The SEO argument has been around for websites for a long time, without much success.
+01:05 <opyh> Do you have data about this? I keep hearing that you should improve web a11y (e.g. use semantic HTML) to improve your search rank, but I don't know the specific algorithm impact
+01:05 <shepazu> (Or airports when you're in a hurry to get to your next gate)
+01:06 <prushforth> It's how I (used to) navigate road trips before Google maps
+01:07 <Helixopp> [edit] Is this meant to supplement what hospitality providers are already doing, or replace it?
+01:07 <opyh> The schema.org extension is supposed to extend what they are already doing. Together with the University of Innsbruck, the German board for tourism is working on this, too - it would go directly into https://schema.org/Hotel, for example (which is used by booking.com, for example)
+01:08 <thehabes> Devs will understand those important data points from schemas and APIs.  That's what something standard needs to be out there for the web.
+01:08 <prushforth> question for the panel: is there room for Web standards in serving the needs of COGA 
+01:09 <Helixopp> [edit] Hotels mostly provide their a11y info
+01:09 <opyh> Unfortunately not. The bad thing is that there is no open standard for by-room accessibility features. If a hotel is described as 'accessible with a wheelchair' this might mean a lot of things and in the worst case it's not actually accessible, but just provides an accessible toilet, for example, but they forgot to make enough space next to the bed (etc.)
+01:09 <thehabes> [edit] Devs will understand those important data points from schemas and APIs.  That's whysomething standard needs to be out there for the web.  There's so much here I can't even concieve of head of time as dev with my ignorance of accessibility needs.  
+01:09 <Helixopp> [edit] Hotels mostly provide their a11y info
+01:09 <opyh> The current state is that as a disabled guest, you _always_ have to make a follow-up call after your booking
+01:10 <Helixopp> [edit] Hotels mostly provide their a11y info
+01:10 <opyh> Details are often just a PDF that is on a different webpage - nobody wants to scrape 100 PDFs after browsing 100 rooms, so we think this information needs to be a data standard so it's searchable (currently it isn't)
+01:12 <opyh> Interesting discussion… So indoor mapping, on OSM for example, could add a tag for 'this object on the map is an important cue' so an assistant could use these?
+01:13 <Helixopp> [edit] Hotels mostly provide their a11y info
+01:13 <opyh> Here is an example of a search for specific accessibility criteria for Hotels: https://www.germany.travel/en/ms/barrier-free-travel/experience-barrier-free-travel-in-germany.html - this is what needs to be standardized, the organization behind this website is working on getting this into schema.org, too
+01:14 <shepazu> Man, there's a lot of different accessibility material in this workshop!
+01:14 <thehabes> [edit] Very nice presentation Sebastion, your thoughts are not entirely siloed.
+01:14 <opyh> Thanks! :)
+01:16 <opyh> The idea is we can start with an accessibility specific vocabulary to mix into the other vocabularies, and add the part where it makes sense directly into schema.org as it's the most popular standard
+01:16 <thehabes> [edit] @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `<link
+01:16 <thehabes> href="">`ing them in.  Like with how it links in coordinate systems, for example. 
+01:16 <ghobona> [edit] Great presentation Sebastian!
+01:16 <opyh> Thanks!
+01:18 <AmeliaBR> [edit] From Chris Little in the Zoom chat:  10:52 PM
+01:18 <AmeliaBR> [edit] Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+01:18 <AmeliaBR> [edit] 
+01:18 <AmeliaBR> [edit] From David Fazio:  10:53 PM
+01:18 <AmeliaBR> [edit] Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+01:18 <AmeliaBR> [edit] 
+01:18 <opyh> I have to say I was impressed by IMDF's documentation and attention to detail. And it has (some) accessibility additions already built-in. Here is the link: https://register.apple.com/resources/imdf/
+01:19 <AmeliaBR> Topic: Advanced Analytics Software Project for Geospatial Data
+01:20 <prushforth> @prushforth
+01:20 <prushforth> Indoor accessibility mapping could be incorporated into city construction by-laws
+01:20 <prushforth> Chris Little: Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+01:20 <prushforth> David Fazio: Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+01:20 <prushforth> 
+01:20 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:20 <shepazu> I know RDFa, but in this case, you're adding a lot of empty meta elements that inflates the DOM and bandwidth quite a lot, and isn't always a good authoring experience
+01:20 <AmeliaBR> Presentation is by Nicolas Rafael Palomino 
+01:20 <AmeliaBR> HTML slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx
+01:21 <AmeliaBR> [edit] Presentation is by Nicolas Rafael Palomino 
+01:21 <AmeliaBR> [edit] Powerpoint slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx
+01:23 <IvanSanchez_gitlab> I must say this: If this were an in-person session, I'd be frowning in my seat right now. There's an overload of buzzwords, and my brain cannot derive any useful content.
+01:26 <fredesch> What is M to M?
+01:26 <prushforth> [edit] @prushforth
+01:26 <prushforth> [edit] Indoor accessibility mapping could be incorporated into city construction by-laws
+01:26 <prushforth> [edit] Chris Little: Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+01:26 <prushforth> [edit] David Fazio: Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+01:26 <prushforth> [edit] 
+01:26 <opyh> That's something we are working on too. Example case: We talked to a bigger city in Germany recently. The outcome: When they make a call for bid for new elevators they build, the call for bid will include that the elevator must have a live status API to connect it to navigation apps like Wheelmap. We hope this can be a showcase for creating such a law on a bigger scale (e.g. EU, in our case).
+01:26 <thehabes> [edit] @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `<link
+01:26 <thehabes> href="">`ing them in.  Like with how it links in coordinate systems, for example. 
+01:26 <prushforth> Yes, <feature> is intended to be the least possible container for simple feature semantics, but we know how people will need to stretch the container to make it work.  My comment is mostly that I thought there was already an attribute-based encoding of semantics that would also apply to feature, both within <properties> as well as <geometry>.
+01:26 <IvanSanchez_gitlab> machine-to-machine?
+01:27 <satakagi> Maybe so
+01:27 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:27 <opyh> Would you have a specific other preference how to add the data? JSON-LD with selector references to the `<feature>` elements, or something else?
+01:27 <IvanSanchez_gitlab> [edit] I must say this: If this were an in-person session, I'd be frowning in my seat right now. There's an overload of buzzwords, and my brain cannot derive any useful content.
+01:27 <shepazu> +1
+01:28 <ghobona> Great presentation Nicolas!
+01:30 <AmeliaBR> From Chris Little in Zoom (he's firewalled out of gitter):
+01:30 <AmeliaBR> W3C SDWIG/WG has an ethical use of Geo data work theme
+01:30 <AmeliaBR> 
+01:30 <AmeliaBR> Topic: Embedding rendering & behavior configuration in map data
+01:30 <AmeliaBR> Speaker is Danielle Dupuy
+01:31 <AmeliaBR> Slides (powerpoint): https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx
+01:33 <Helixopp> [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+01:33 <opyh> If you want to participate in this process or know others that are interested, https://www.w3.org/community/lda/ and its mailing list is be a good place for coordinating all the related efforts
+01:33 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:33 <shepazu> I wonder if maybe there should be a link to a data API instead, with the link marked with semantic indicators?
+01:35 <prushforth> @opyh I echo the compliments on your presentation and I would love to see a <feature> based encoding of semantics that we could use to prove something useful for accessibility. It sounds like we should collaborate!
+01:35 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:35 <shepazu> So, a UA could load it on demand, without needing to populate the DOM with empty elements, much less verbose and clearer to read and to author
+01:36 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:36 <shepazu> that's just an idea, of course
+01:37 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:37 <opyh> Good idea… pro: less data transferred as not every user agent needs it, con: you'd reveal to the server's that you probably have a disability
+01:37 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:37 <opyh> The `sameAs` attribute would work for this.
+01:37 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:37 <shepazu> but when you consider all the different types of data for different demographics that you might want to include, multiplied by all the different places to be marked, this might be a more efficient method that's just as full-featured and enabling
+01:38 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:38 <opyh> Is there another standard that already does something similar, so we could use existing infrastructure for this? The idea about RDFa/microformats/JSON-LD was that there is already a lot of tooling around it
+01:39 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:39 <shepazu> Regarding revealing your PII… they can already sniff that if they're interested… but you could actually have the link point to a different resource that doesn't track, out of band, and have a user preference in your UA that whitelists acceptable sources
+01:40 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:40 <opyh> True. I think your idea is definitely good.
+01:41 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:41 <opyh> Thanks for the input :)
+01:41 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:41 <shepazu> RDFa works best when you're marking up existing text content elements, not populating blank meta elements
+01:43 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:43 <shepazu> To be honest, I'm not sure if anyone's done exactly what I'm proposing, but I'd be happy to talk about it offlist… would be easy to prototype with a browser extension
+01:43 <IvanSanchez_gitlab> Danielle's presentation kinda reminded me of an old experiment of mine, dubbed "spreadnik". Goal was to use spreadsheets to generate mapnik stylesheets (before all the work on graphical map style editors was made). Representing all the state for symbolizing features in a way that non-coders can change it is.... hard. That, or you make a hellscape of nested dialogs.
+01:46 <AmeliaBR> Topic: The History of Meteorology and Cartography
+01:46 <AmeliaBR> Presenter: Chris Little
+01:47 <AmeliaBR> Slides (PDF): https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf
+01:47 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:47 <opyh> ```    <feature vocab="https://schema.org" typeof="Hotel">
+01:47 <opyh>       <meta property="sameAs" content="https://myhotel.org/hotels/1234" />
+01:47 <opyh>       <geometry>…</geometry>
+01:47 <opyh>       <properties>…</properties>
+01:47 <opyh>     </feature>
+01:48 <opyh> [edit] `    <feature vocab="https://schema.org" typeof="Hotel">
+01:48 <opyh> [edit]       <meta property="sameAs" content="https://myhotel.org/hotels/1234" />
+01:48 <opyh> [edit]       <geometry>…</geometry>
+01:48 <opyh> [edit]       <properties>…</properties>
+01:48 <opyh> [edit]     </feature>
+01:48 <opyh> [edit] ` <feature vocab="https://schema.org" typeof="Hotel">
+01:48 <opyh> [edit]       <meta property="sameAs" content="https://myhotel.org/hotels/1234" />
+01:48 <opyh> [edit]       <geometry>…</geometry>
+01:48 <opyh> [edit]       <properties>…</properties>
+01:48 <opyh> [edit]     </feature>`
+01:49 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:49 <opyh> We'll be proposing something like this in MapML as an issue, I guess this is where this discussion belongs :) Thanks again!
+01:49 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+01:49 <shepazu> That doesn't seem to describe what the endpoint provides
+02:00 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:00 <opyh> Hmm. `<script type='application/ld+json;context="http://schema.org/"' src="https://api.myhotel.org/hotels/1234.jsonld"/>`? :D
+02:00 <opyh> [edit] Hmm. `<script type='application/ld+json;context="http://schema.org/"' src="https://api.myhotel.org/hotels/1234.jsonld"/>`? :D
+02:02 <prushforth> [edit] @opyh I echo the compliments on your presentation and I would love to see a <feature> based encoding of semantics that we could use to prove something useful for accessibility. It sounds like we should collaborate!
+02:02 <opyh> Thanks! Simply via issue in the MapML GitHub?
+02:10 <ghobona> Great presentation Danielle!
+02:10 <ghobona> Great presentation @chris-little!
+02:11 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:11 <shepazu> That tells you that there's a resource somewhere, but it doesn't tell you what to find at that endpoint… 
+02:11 <AmeliaBR> Topic: Web GIS application for Indian Prime Minister's Rural Road Programme
+02:11 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:11 <shepazu> same problem
+02:11 <AmeliaBR> Speaker: Sajeevan G of C-DAC
+02:11 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:11 <shepazu> where does it say, "if you're interested in physical accessibility info, get the data here"
+02:12 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:12 <shepazu> ?
+02:15 <AmeliaBR> http://www.pmgsy-grris.nic.in/
+02:15 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:15 <shepazu> (Or, in fact, any specific topic of interest)
+02:29 <AmeliaBR> question from Chris Little:
+02:29 <AmeliaBR> But horizontal errors in WGS84 ellipsoid could be 10s of metre if not 100m. Why not use an Indian Ref Sys.?
+02:29 <AmeliaBR> 
+02:29 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:29 <opyh> The problem is that schema.org does not have physical accessibility yet and our vocabulary for it isn't done yet. But as soon as it exists, you could directly link the accessibility JSON record
+02:30 <AmeliaBR> How will you address changes in WGS84 over time?
+02:30 <AmeliaBR> 
+02:31 <shepazu> [edit] yeah, I think the idea is good, but the syntax needs work
+02:31 <shepazu> well, until there's a schema and and at least one endpoint to provide the data, there's no solution that improvements in syntax can provide :)
+02:34 <AmeliaBR> [edit] How will you address changes in WGS84 over time?
+02:34 <AmeliaBR> [edit] Thank you for answering in the talk!
+02:34 <AmeliaBR> [edit] 
+02:36 <prushforth> We are hoping for enormous contributions
+02:36 <prushforth>

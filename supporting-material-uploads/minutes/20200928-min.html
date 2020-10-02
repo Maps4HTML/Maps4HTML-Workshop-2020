@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>SV_MEETING_TITLE -- 02 Oct 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="SV_MEETING_TITLE" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>SV_MEETING_TITLE</h1>
+<h2>02 Oct 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>opyh</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">Physical accessibility data in maps</a></li>
+<li><a href="#item02">Indoor maps</a></li>
+<li><a href="#item03">Web Maps for Cognitive Accessibility — panel</a></li>
+<li><a href="#item04">Advanced Analytics Software Project for Geospatial Data</a></li>
+<li><a href="#item05">Embedding rendering &amp; behavior configuration in map data</a></li>
+<li><a href="#item06">The History of Meteorology and Cartography</a></li>
+<li><a href="#item07">Web GIS application for Indian Prime Minister's Rural Road Programme</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Ready for Week 2! Today's agenda <a href="https://discourse.wicg.io/c/web-mapping/22">https://discourse.wicg.io/c/web-mapping/22</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Welcome!
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; Good evening everyone... David Fazio dfazio@helixopp.com
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Thanks to everyone staying up late or getting up early
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Claudia's video: <a href="https://cloudstore.zih.tu-dresden.de/index.php/s/Z5SfoojCfLCwdLq">https://cloudstore.zih.tu-dresden.de/index.php/s/Z5SfoojCfLCwdLq</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [coffee zombie.gif]
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; 2 types of memory: 1. Recall 2. Recognition. Maps deals with recognition. Important cognitive aspects of recognition: Attention, Perception, Memory
+</p>
+
+<h3 id="item01">Physical accessibility data in maps</h3>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="https://wheelmap.org">https://wheelmap.org</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; discourse page: <a href="https://discourse.wicg.io/t/physical-accessibility-data-in-maps/4852">https://discourse.wicg.io/t/physical-accessibility-data-in-maps/4852</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Ooohhh, semiotics of "sharper edges" = "more dangerous", nice detail
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; 1 interesting thing: physical accessibility specs vary widely by country. For example accessible ramps in Latin America are much steeper, and almost impossible to traverse without assistance than in other regions of the world. Whereas in US the slope is much more gradual. Providing that specific info would be important.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Definitely screaming Linked Data...is `accessibility` your own thing?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yes! `@context` lets you have that description, and new data practices let you mix and match contexts as you need to combine and better supplement data, whether you own it or not.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Sebastian Felix: Why would you need all the &lt;meta&gt; elements in a MapML &lt;feature&gt;?  Aren't the semantic properties already specifiable in microformats or rdfa?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; FWIW, that markup didn't indicate that it was a hotel
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; I LOVE the idea
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Are your accessibility  icons standardized/widely used?
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; The SEO argument has been around for websites for a long time, without much success.
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; Is this meant to supplement what hospitality providers are already doing, or replace it?
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; Hotels mostly provide their a11y info
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `&lt;link
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; href=""&gt;`ing them in.  Like with how it links in coordinate systems, for example.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Very nice presentation Sebastion, your thoughts are not entirely siloed.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The key is keeping the vocabulary modular so the spec doesn't depend on it, but can include it.
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Great presentation Sebastian!
+</p>
+
+<p class='irc'>
+&lt;<cite>parths0609</cite>&gt; Very interesting presentation on accessibility.
+</p>
+
+<h3 id="item02">Indoor maps</h3>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; discourse: <a href="https://discourse.wicg.io/t/indoor-maps-floorplans/4853/2">https://discourse.wicg.io/t/indoor-maps-floorplans/4853/2</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Accessible Maps project: <a href="https://accessiblemaps.de/?page_id=121&amp;lang=en">https://accessiblemaps.de/?page_id=121&amp;lang=en</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; In my experience, in general there is no schema on the web that describes the Senses in any way.  I hope I am wrong.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; How do you deal with poor signal strength in buildings?
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+</p>
+
+<p class='phone'>
+Yes:
+</p>
+
+<p class='phone'>
+- You can mark your places on OpenStreetMap including indoor tagging (as shown by the talk happening right now)
+</p>
+
+<p class='phone'>
+- As a data provider, you can use A11yJSON / accessibility.cloud. Even if you don't have the technical abilities to generate A11yJSON, you can contact Sozialhelden e.V. in Berlin for this and we help you transforming your data into the harmonized data aformat.
+</p>
+
+<p class='phone'>
+- You could add schema.org on your webpage, e.g. as JSON-LD. When schema.org adds accessibility features, you can use them.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Download the data ahead of time is a method, link how Google maps downloads the data around you and can work offline.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Download the data ahead of time is a method, like how Google maps downloads the data around you and can work offline.
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] 1 interesting thing: physical accessibility specs vary widely by country. For example accessible ramps in Latin America are much steeper, and almost impossible to traverse without assistance than in other regions of the world. Whereas in US the slope is much more gradual. Providing that specific info would be important.
+</p>
+
+<p class='phone'>
+Good point, that's why we built a steepness property into A11yJSON (<a href="https://sozialhelden.github.io/a11yjson/3-interfaces/#ground).">https://sozialhelden.github.io/a11yjson/3-interfaces/#ground).</a> You can also tag the steepness of a ramp or surface on OpenStreetMap (<a href="https://wiki.openstreetmap.org/wiki/Key:incline),">https://wiki.openstreetmap.org/wiki/Key:incline),</a> and in the GTFS pathways extension as `max_slope` (for public transit, <a href="https://developers.google.com/transit/gtfs/reference/#pathwaystxt)">https://developers.google.com/transit/gtfs/reference/#pathwaystxt)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Definitely screaming Linked Data...is `accessibility` your own thing?
+</p>
+
+<p class='phone'>
+Yes, `accessibility` is our own thing but we want this (or something better!) to be a community standard
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; I wonder if the 3d photo/video capability of smartphones can be used to auto generate accessibility of environment info?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] Sebastian Felix: Why would you need all the &lt;meta&gt; elements in a MapML &lt;feature&gt;?  Aren't the semantic properties already specifiable in microformats or rdfa?
+</p>
+
+<p class='phone'>
+Yes they are – `&lt;meta&gt;` is a tag that the RDFa extension would add to MapML in this case
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; Great. That's a big step forward
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Accessibility data can be and should be 5 star (open) data too.  Good presentation.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; COGA! COGA!
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] Sebastian Felix: Why would you need all the &lt;meta&gt; elements in a MapML &lt;feature&gt;?  Aren't the semantic properties already specifiable in microformats or rdfa?
+</p>
+
+<p class='phone'>
+See example 36 on <a href="https://www.w3.org/TR/rdfa-primer/">https://www.w3.org/TR/rdfa-primer/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] I wonder if the 3d photo/video capability of smartphones can be used to auto generate accessibility of environment info?
+</p>
+
+<p class='irc'>
+&lt;<cite>claudialoitsch</cite>&gt; Hi David, we are working on a similar solution. Using computer vision (i.e. image segmentation) approaches to collect as many information as possible based on video material
+</p>
+
+<h3 id="item03">Web Maps for Cognitive Accessibility — panel</h3>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+The syntax is just RDFa :) It could be JSON-LD as well, of course.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; discourse page (also has the background links): <a href="https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854">https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Chris Little in the Zoom chat:  10:52 PM
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From David Fazio:  10:53 PM
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Great presentation Claudia &amp; Julian! Indoor mapping is becoming increasingly important. The OGC [IndoorGML](<a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html)">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html)</a> standard is relevant to this topic.
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Note the recent [work done](<a href="http://docs.opengeospatial.org/per/19-032.html)">http://docs.opengeospatial.org/per/19-032.html)</a> by OGC and NIST on indoor mapping for public safety.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; &gt; 2 types of memory: 1. Recall 2. Recognition. Maps deals with recognition. Important cognitive aspects of recognition: Attention, Perception, Memory
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; The 3 aspects David's talking about
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; We'll have time for a few audience questions, if you leave them here…
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; [edit] Great presentation Claudia &amp; Julian! Indoor mapping is becoming increasingly important. The OGC [IndoorGML](<a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html)">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html)</a> standard is relevant to this topic.
+</p>
+
+<p class='irc'>
+&lt;<cite>claudialoitsch</cite>&gt; Thank you! One of our objectives is to automatically detect as many information as possible from the existing indoor plan (escape plan, architectural drawings, BIM, etc.) and to provide different georeferenced output formats as well. We already started to create maps in IndoorGML but the problem ist to model the granular information need of people with disabilities to ensure they can really make use from
+</p>
+
+<p class='irc'>
+&lt;<cite>claudialoitsch</cite>&gt; information in maps.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; This snapshot method of landmark mapping that John Kirkwood describes is very efficient. It's how ants navigate visually
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Are your accessibility  icons standardized/widely used?
+</p>
+
+<p class='phone'>
+No, from what I know, the traffic light scheme with the 3 different shapes is so far only used on <a href="https://wheelmap.org">https://wheelmap.org</a> and <a href="https://map.pfotenpiloten.org">https://map.pfotenpiloten.org</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] The SEO argument has been around for websites for a long time, without much success.
+</p>
+
+<p class='phone'>
+Do you have data about this? I keep hearing that you should improve web a11y (e.g. use semantic HTML) to improve your search rank, but I don't know the specific algorithm impact
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (Or airports when you're in a hurry to get to your next gate)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; It's how I (used to) navigate road trips before Google maps
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] Is this meant to supplement what hospitality providers are already doing, or replace it?
+</p>
+
+<p class='phone'>
+The schema.org extension is supposed to extend what they are already doing. Together with the University of Innsbruck, the German board for tourism is working on this, too - it would go directly into <a href="https://schema.org/Hotel,">https://schema.org/Hotel,</a> for example (which is used by booking.com, for example)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Devs will understand those important data points from schemas and APIs.  That's what something standard needs to be out there for the web.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; question for the panel: is there room for Web standards in serving the needs of COGA
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] Hotels mostly provide their a11y info
+</p>
+
+<p class='phone'>
+Unfortunately not. The bad thing is that there is no open standard for by-room accessibility features. If a hotel is described as 'accessible with a wheelchair' this might mean a lot of things and in the worst case it's not actually accessible, but just provides an accessible toilet, for example, but they forgot to make enough space next to the bed (etc.)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Devs will understand those important data points from schemas and APIs.  That's whysomething standard needs to be out there for the web.  There's so much here I can't even concieve of head of time as dev with my ignorance of accessibility needs.
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] Hotels mostly provide their a11y info
+</p>
+
+<p class='phone'>
+The current state is that as a disabled guest, you _always_ have to make a follow-up call after your booking
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] Hotels mostly provide their a11y info
+</p>
+
+<p class='phone'>
+Details are often just a PDF that is on a different webpage - nobody wants to scrape 100 PDFs after browsing 100 rooms, so we think this information needs to be a data standard so it's searchable (currently it isn't)
+</p>
+
+<p class='phone'>
+Interesting discussion… So indoor mapping, on OSM for example, could add a tag for 'this object on the map is an important cue' so an assistant could use these?
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] Hotels mostly provide their a11y info
+</p>
+
+<p class='phone'>
+Here is an example of a search for specific accessibility criteria for Hotels: <a href="https://www.germany.travel/en/ms/barrier-free-travel/experience-barrier-free-travel-in-germany.html">https://www.germany.travel/en/ms/barrier-free-travel/experience-barrier-free-travel-in-germany.html</a> - this is what needs to be standardized, the organization behind this website is working on getting this into schema.org, too
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Man, there's a lot of different accessibility material in this workshop!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Very nice presentation Sebastion, your thoughts are not entirely siloed.
+</p>
+
+<p class='phone'>
+Thanks! :)
+</p>
+
+<p class='phone'>
+The idea is we can start with an accessibility specific vocabulary to mix into the other vocabularies, and add the part where it makes sense directly into schema.org as it's the most popular standard
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `&lt;link
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; href=""&gt;`ing them in.  Like with how it links in coordinate systems, for example.
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; [edit] Great presentation Sebastian!
+</p>
+
+<p class='phone'>
+Thanks!
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] From Chris Little in the Zoom chat:  10:52 PM
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] From David Fazio:  10:53 PM
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='phone'>
+I have to say I was impressed by IMDF's documentation and attention to detail. And it has (some) accessibility additions already built-in. Here is the link: <a href="https://register.apple.com/resources/imdf/">https://register.apple.com/resources/imdf/</a>
+</p>
+
+<h3 id="item04">Advanced Analytics Software Project for Geospatial Data</h3>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @prushforth
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Indoor accessibility mapping could be incorporated into city construction by-laws
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Chris Little: Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; David Fazio: Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I know RDFa, but in this case, you're adding a lot of empty meta elements that inflates the DOM and bandwidth quite a lot, and isn't always a good authoring experience
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Presentation is by Nicolas Rafael Palomino
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; HTML slides: <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Presentation is by Nicolas Rafael Palomino
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Powerpoint slides: <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I must say this: If this were an in-person session, I'd be frowning in my seat right now. There's an overload of buzzwords, and my brain cannot derive any useful content.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; What is M to M?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] @prushforth
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] Indoor accessibility mapping could be incorporated into city construction by-laws
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] Chris Little: Apple is proposing its indoor mapping system IMDF as a community standard in OGC now, and it will be open for public comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] David Fazio: Didn’t Apple buy an indoor mapping company and kill it like 10 years ago?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit]
+</p>
+
+<p class='phone'>
+That's something we are working on too. Example case: We talked to a bigger city in Germany recently. The outcome: When they make a call for bid for new elevators they build, the call for bid will include that the elevator must have a live status API to connect it to navigation apps like Wheelmap. We hope this can be a showcase for creating such a law on a bigger scale (e.g. EU, in our case).
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] @prushforth  It's nice to see that a lot of people are using the syntax but struggling to fit their vocabulary in.  At least the right pieces are modularized.  Supporting all of us, or generally supporting Linked Data schema and context, means allowing MapML to take on context.  MapML can't possible pick and choose, but rather can support extension and, and standardized context inclusion, possibly through `&lt;link
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; href=""&gt;`ing them in.  Like with how it links in coordinate systems, for example.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Yes, &lt;feature&gt; is intended to be the least possible container for simple feature semantics, but we know how people will need to stretch the container to make it work.  My comment is mostly that I thought there was already an attribute-based encoding of semantics that would also apply to feature, both within &lt;properties&gt; as well as &lt;geometry&gt;.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; machine-to-machine?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Maybe so
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+Would you have a specific other preference how to add the data? JSON-LD with selector references to the `&lt;feature&gt;` elements, or something else?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] I must say this: If this were an in-person session, I'd be frowning in my seat right now. There's an overload of buzzwords, and my brain cannot derive any useful content.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; +1
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Great presentation Nicolas!
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Chris Little in Zoom (he's firewalled out of gitter):
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; W3C SDWIG/WG has an ethical use of Geo data work theme
+</p>
+
+<h3 id="item05">Embedding rendering &amp; behavior configuration in map data</h3>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Speaker is Danielle Dupuy
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Slides (powerpoint): <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Helixopp</cite>&gt; [edit] For maps that identify accessible spaces: I've seen several of these from different providers around the world. Is there plans to standardize, share information, and collaborate to provide a fully functional global solution?
+</p>
+
+<p class='phone'>
+If you want to participate in this process or know others that are interested, <a href="https://www.w3.org/community/lda/">https://www.w3.org/community/lda/</a> and its mailing list is be a good place for coordinating all the related efforts
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I wonder if maybe there should be a link to a data API instead, with the link marked with semantic indicators?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @opyh I echo the compliments on your presentation and I would love to see a &lt;feature&gt; based encoding of semantics that we could use to prove something useful for accessibility. It sounds like we should collaborate!
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; So, a UA could load it on demand, without needing to populate the DOM with empty elements, much less verbose and clearer to read and to author
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; that's just an idea, of course
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+Good idea… pro: less data transferred as not every user agent needs it, con: you'd reveal to the server's that you probably have a disability
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+The `sameAs` attribute would work for this.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; but when you consider all the different types of data for different demographics that you might want to include, multiplied by all the different places to be marked, this might be a more efficient method that's just as full-featured and enabling
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+Is there another standard that already does something similar, so we could use existing infrastructure for this? The idea about RDFa/microformats/JSON-LD was that there is already a lot of tooling around it
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Regarding revealing your PII… they can already sniff that if they're interested… but you could actually have the link point to a different resource that doesn't track, out of band, and have a user preference in your UA that whitelists acceptable sources
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+True. I think your idea is definitely good.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+Thanks for the input :)
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; RDFa works best when you're marking up existing text content elements, not populating blank meta elements
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; To be honest, I'm not sure if anyone's done exactly what I'm proposing, but I'd be happy to talk about it offlist… would be easy to prototype with a browser extension
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Danielle's presentation kinda reminded me of an old experiment of mine, dubbed "spreadnik". Goal was to use spreadsheets to generate mapnik stylesheets (before all the work on graphical map style editors was made). Representing all the state for symbolizing features in a way that non-coders can change it is.... hard. That, or you make a hellscape of nested dialogs.
+</p>
+
+<h3 id="item06">The History of Meteorology and Cartography</h3>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Presenter: Chris Little
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Slides (PDF): <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+```    &lt;feature vocab="<a href="https://schema.org">https://schema.org</a>" typeof="Hotel"&gt;
+</p>
+
+<p class='irc'>
+&lt;meta property="sameAs" content="<a href="https://myhotel.org/hotels/1234">https://myhotel.org/hotels/1234</a>" /&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>geometry</cite>&gt; …&lt;/geometry&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>properties</cite>&gt; …&lt;/properties&gt;
+</p>
+
+<p class='irc'>
+&lt;/feature&gt;
+</p>
+
+<p class='phone'>
+[edit] `    &lt;feature vocab="<a href="https://schema.org">https://schema.org</a>" typeof="Hotel"&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;meta property="sameAs" content="<a href="https://myhotel.org/hotels/1234">https://myhotel.org/hotels/1234</a>" /&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;geometry&gt;…&lt;/geometry&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;properties&gt;…&lt;/properties&gt;
+</p>
+
+<p class='phone'>
+[edit]     &lt;/feature&gt;
+</p>
+
+<p class='phone'>
+[edit] ` &lt;feature vocab="<a href="https://schema.org">https://schema.org</a>" typeof="Hotel"&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;meta property="sameAs" content="<a href="https://myhotel.org/hotels/1234">https://myhotel.org/hotels/1234</a>" /&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;geometry&gt;…&lt;/geometry&gt;
+</p>
+
+<p class='phone'>
+[edit]       &lt;properties&gt;…&lt;/properties&gt;
+</p>
+
+<p class='phone'>
+[edit]     &lt;/feature&gt;`
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+We'll be proposing something like this in MapML as an issue, I guess this is where this discussion belongs :) Thanks again!
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; That doesn't seem to describe what the endpoint provides
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+Hmm. `&lt;script type='application/ld+json;context="<a href="http://schema.org/">http://schema.org/</a>"' src="<a href="https://api.myhotel.org/hotels/1234.jsonld">https://api.myhotel.org/hotels/1234.jsonld</a>"/&gt;`? :D
+</p>
+
+<p class='phone'>
+[edit] Hmm. `&lt;script type='application/ld+json;context="<a href="http://schema.org/">http://schema.org/</a>"' src="<a href="https://api.myhotel.org/hotels/1234.jsonld">https://api.myhotel.org/hotels/1234.jsonld</a>"/&gt;`? :D
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; [edit] @opyh I echo the compliments on your presentation and I would love to see a &lt;feature&gt; based encoding of semantics that we could use to prove something useful for accessibility. It sounds like we should collaborate!
+</p>
+
+<p class='phone'>
+Thanks! Simply via issue in the MapML GitHub?
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Great presentation Danielle!
+</p>
+
+<p class='irc'>
+&lt;<cite>ghobona</cite>&gt; Great presentation @chris-little!
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; That tells you that there's a resource somewhere, but it doesn't tell you what to find at that endpoint…
+</p>
+
+<h3 id="item07">Web GIS application for Indian Prime Minister's Rural Road Programme</h3>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; same problem
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Speaker: Sajeevan G of C-DAC
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; where does it say, "if you're interested in physical accessibility info, get the data here"
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; ?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; <a href="http://www.pmgsy-grris.nic.in/">http://www.pmgsy-grris.nic.in/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (Or, in fact, any specific topic of interest)
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; question from Chris Little:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; But horizontal errors in WGS84 ellipsoid could be 10s of metre if not 100m. Why not use an Indian Ref Sys.?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='phone'>
+The problem is that schema.org does not have physical accessibility yet and our vocabulary for it isn't done yet. But as soon as it exists, you could directly link the accessibility JSON record
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; How will you address changes in WGS84 over time?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; [edit] yeah, I think the idea is good, but the syntax needs work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; well, until there's a schema and and at least one endpoint to provide the data, there's no solution that improvements in syntax can provide :)
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] How will you address changes in WGS84 over time?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit] Thank you for answering in the talk!
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; [edit]
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; We are hoping for enormous contributions
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+17:49 <edent_twitter> Evening all!
+17:59 <prushforth> OK hello everyone, chat here to provide commentary and questions
+18:12 <thehabes> Other thing like Bootstrap and Chota ultimately feel a lot like this too, being HTML powered markup. 
+18:13 <thehabes> [edit] Other thing like Bootstrap and Chota ultimately feel a lot like `<picture>`, `<audio>`, `<form>`, etc. being HTML powered markup. 
+18:14 <thehabes> oof definitely not `<geo>`
+18:15 <rahola_gitlab> Emoji idea is interesting. No language barrier.
+18:15 <briankardell_twitter> I don't want to disagree with the speaker's general thrust which I very much agree with, but my interpretation of picture is very different actually
+18:15 <thehabes> Heck yeah I don't want to have to type `<latitude>` every time it isn't already copied to my clipboard when `,lat>` is an option
+18:16 <thehabes> [edit] Heck yeah I don't want to have to type `<latitude>` every time it isn't already copied to my clipboard when `<lat>` is an option
+18:16 <zcorpan> @briankardell_twitter yeah, I was also going to say... the history for `<picture>` as stated is not correct -- it was actually developed by web developers first
+18:16 <briankardell_twitter> right
+18:16 <briankardell_twitter> the data would suggest it is more used than video despite being much newer too
+18:17 <briankardell_twitter> http://rainy-periwinkle.glitch.me/permalink/bea7b74a0b231db72177e1cbc3f0492bfdcccf53ac306d878dbc8e7bb67bab7f.html
+18:17 <briankardell_twitter> 
+18:17 <briankardell_twitter> http://rainy-periwinkle.glitch.me/permalink/c9fd4fa6a80a90c38a8552aa14724e59fd39afc4a4341e6d87744f1653b7f609.html
+18:17 <briankardell_twitter> both -- aside from that, I am all onboard with the rest actually
+18:18 <briankardell_twitter> also we had archive data on the picture polyfill before it was taken up
+18:18 <fredesch> Who would you ask? In my workplace, once you get outside the UI team developers are back end developers that may be developing UI and THEY DO NOT REALIZE HTML IS A SEMANTIC LANGUAGE
+18:19 <thehabes> I HATE that the order of [latitude, longitude] is not uniform (ex, taking goole map coords into leaflet)
+18:20 <briankardell_twitter> q+ on this point @prushforth ... this is very hard in practice when it is not concrete, because people will do things if you have an element that you _didn't_ expect, and that is often more interesting than the thing you even wanted
+18:20 <AmeliaBR> I think the argument that `<picture>` is an awkward markup API is true, though, but that's more because of the incremental development with a focus on fallback & reusing other attributes/elements, vs video & audio were more created all together.
+18:20 <IvanSanchez_gitlab> @edent_twitter If this were an in-person talk, I'd be nodding in agreement like 95% of the time
+18:21 <briankardell_twitter> @AmeliaBR yeah - that is fair, and so is much of what the speaker said about the involvement of standardistas - I dont think picture was anyone's first take
+18:22 <briankardell_twitter> one of the brians :)
+18:22 <briankardell_twitter> I asked a q above!
+18:25 <thehabes> [edit] Heck yeah I don't want to have to type `<latitude>` every time it isn't already copied to my clipboard when `<lat>` is an option
+18:25 <shepazu> Given that you'll only need to type `latitude` every once in a while, I think understandability trumps a few keystrokes
+18:26 <thehabes> @edent_twitter sure we may not know how to use it without looking at it, but if it supports formats we have all become comfortable with the transition into it is more seamless
+18:26 <thehabes> [edit] Heck yeah I don't want to have to type `<latitude>` every time it isn't already copied to my clipboard when `<lat>` is an option
+18:26 <AmeliaBR> In the zoom chat, Jonathan Moules made the same point:
+18:26 <AmeliaBR> Code is write-once read many. "Latitude" is thus clearer than "lat".
+18:26 <AmeliaBR> 
+18:27 <thehabes> I understand the `<feature>` element after looking at it once because I use geoJSON, but I didn't understand `<layer>` and `<extent>` after one look.\
+18:27 <zcorpan> q+ to talk about the chromium origin trials process
+18:28 <zcorpan> @prushforth ^
+18:28 <thehabes> [edit] Heck yeah I don't want to have to type `<latitude>` every time it isn't already copied to my clipboard when `<lat>` is an option
+18:28 <satakagi> https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API
+18:28 <satakagi> latitude
+18:28 <satakagi> [edit] https://developer.mozilla.org/en/docs/Web/API/Geolocation_API
+18:28 <satakagi> [edit] latitude
+18:29 <prushforth> @zcorpan  you next
+18:29 <thehabes> Definitely, I will not have much to say until I make a few P.O.C's from user stories I understand
+18:29 <satakagi> [edit] https://developer.mozilla.org/en/docs/Web/API/Geolocation_API
+18:29 <satakagi> [edit] > position.coords.latitude
+18:30 <thehabes> @zcorpan do you have a link to those origin trials?
+18:31 <briankardell_twitter> https://developers.chrome.com/origintrials/#/trials/active
+18:31 <zcorpan> https://www.chromium.org/blink/origin-trials
+18:31 <thehabes> Amazing response time
+18:31 <thehabes> ty
+18:32 <edent_twitter> Thanks for all the questions gang. I'll be sticking around for a bit - but it is quite late in the UK :-)
+18:33 <prushforth> J Moules (via zoom chat): Code is write-once read many. "Latitude" is thus clearer than "lat".
+18:33 <prushforth> 
+18:40 <prushforth> Thanks Terence for your contribution tonight!  
+18:42 <prushforth> yeah like really far in that direction!
+18:43 <thehabes> For developers it is becoming more important that APIs don't tighten themselves into a box.  Extendability considerations are key.  2D should only be different from 3D by 1 dimension, and that dimension should be possible with a small extension and vocabulary.  
+18:43 <thehabes> The time element additions should be standard, and work in all dimensions it affects
+18:45 <zcorpan> https://wpc.guide
+18:45 <thehabes> I think implementation before standards is why we are at this impass
+18:46 <fredesch> Why don't you show how you can do what google maps can do?  Commercial web sites use google maps because it does what they need done, is supported and can be easily brought into their website.  
+18:46 <thehabes> If I am left without rails to the pool of infinite possibilities, I will always pick the one with the least friction.  Standards = friction
+18:46 <prushforth> Google maps is not the Web.  It can inform a standard though.
+18:47 <prushforth> @thehabes Standards = maintaining the commons, so as to avoid tragedy
+18:47 <zcorpan> https://maps4html.org/HTML-Map-Element-UseCases-Requirements/
+18:50 <thehabes> @prushforth Sure, but it means doing things to a lesser degree of freedom than being able to do whatever you want.  Implementing without a standard is just that, be as free as I want to accomplish my task.  Standards seem an extra layer of complication for what seems unbeneficial as an overall part of finishing the task.
+18:50 <thehabes> Of course now I know this is not the case, but I had to filter though some standards to understand why.  A contract developer often does not have the time to go through the gauntlet. 
+18:51 <thehabes> But if you say "you must use this standard", then they have their rails
+18:51 <dmorissette> My WMS 1.3 axis order rant: http://dmorissette.blogspot.com/2012/12/dont-upgrade-to-wms-130-unless-you.html
+18:51 <edent_twitter> A standard doesn't stop you going your own way if you want. You can still use Flash video, or build your own component. But a standard makes it easier for people who don't want to roll their own.
+18:51 <prushforth> Yeah I guess people in the framework domain complain about the DOM, and wish they could re-invent the Web because they aren't document-oriented, they're app-oriented
+18:51 <prushforth> @edent_twitter exactly!
+18:53 <prushforth> Also, a standard should enable "progressive enhancement" by providing a reasonable simple api that can be built upon
+18:55 <thehabes> No, it doesn't stop me.  But then all my labels become strings, and we know that doesn't work for internationalization or accessibility technilogical concerns.  Or it means I use `<a>` instead of a `<button>` because I like it more
+18:55 <thehabes> [edit] No, it doesn't stop me.  But then all my labels become strings, and we know that doesn't work for internationalization or accessibility technological concerns.  Or it means I use `<a>` instead of a `<button>` because I like it more. 
+18:55 <fredesch> Thankfully there is not native carousel element.
+18:56 <IvanSanchez_gitlab> I agree with @zcorpan here - a `<slippy>` 2D pannable/zoomable thing is sensible, and some better way to build over WebGL/OpenGL (in a way that could fit with the D3 data model with less friction) would be awesome for dataviz in general
+18:56 <fredesch> [edit] Thankfully there is not native carousel element.
+18:56 <IvanSanchez_gitlab> ...but there is, and it's called `<marquee>`!
+18:57 <fredesch> [edit] Thankfully there is not native carousel element.
+18:57 <prushforth> lol
+18:59 <prushforth> Brian Kardell: Igalia has hackfests
+18:59 <prushforth> 
+18:59 <fredesch> Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:00 <prushforth> @fredesch Performance, accessibility, community, standards, HTML is everywhere non-siloed I could go on, but here's my presentation on it: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx
+19:01 <AmeliaBR> Q: Based on implementation headache, what are some specific missing browser features which would make web map libraries easier to build?
+19:01 <AmeliaBR> On the other side, can we improve standardization at the geo level (e.g., common format / syntax) to make things easier without browser changes?
+19:01 <prushforth> @tomkralidis q+ ^ from @AmeliaBR 
+19:02 <tomkralidis> k
+19:02 <prushforth> Darn good point Will.  We need the community to approach the orgs with $ to help.
+19:02 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:02 <edent_twitter> Here's my argument for creating it - https://shkspr.mobi/blog/2017/08/mapping-in-html-a-proposal-for-a-new-element/
+19:02 <fredesch> I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:02 <IvanSanchez_gitlab> @prushforth @fredesch ...and yet, I'm one of those people who will argue that one can get perf, accesibility, community and standards without putting more code in web browsers.
+19:03 <prushforth> You can't solve the problems I mentioned in my presentation without  a native element or two.
+19:04 <prushforth> What Andreas said
+19:05 <thehabes> Allowing a switch between different coordinate rendering systems (I think this is what I mean to say, but my vocabulary in this field isn't perfect)
+19:05 <thehabes> Also, consistent vocabulary would be nice.  The more groups I interact with, the more I realize people have different meanings of `goecode`, `geolocate`, `georectify`, `georeference`, `co-locate`, etc.
+19:05 <briankardell_twitter> it feels like plugging here but our rendering team is amazing, and we are even making the new Vulcan stuff.. I feel like we could help with that
+19:05 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:05 <fredesch> I understand folks want a native element but why would a browser add one when it will negatively impact performance of the browser. Performance affects market share.
+19:05 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:05 <IvanSanchez_gitlab> ...the way I see it is what I wrote in my essay about 3VE - I can imagine Google wrapping the native Android Google Maps Java code into Android Chrome, and make sure it works better with Google Maps (and Google Maps only)
+19:05 <prushforth> Awesome!  Let's work together
+19:06 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:06 <edent_twitter> Why would it impact the performance of the browser? Done right, it would use a phone's native mapping app and improve the performance.
+19:06 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:06 <fredesch> Where I work, we still have to support IE11. We are slow to adopt new features...
+19:06 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:06 <IvanSanchez_gitlab> It impacts performance just by the fact that there's more code to ship and update
+19:07 <thehabes> [edit] Allowing a switch between different coordinate reference systems (I think this is what I mean to say, but my vocabulary in this field isn't perfect)
+19:07 <thehabes> [edit] Also, consistent vocabulary would be nice.  The more groups I interact with, the more I realize people have different meanings of `goecode`, `geolocate`, `georectify`, `georeference`, `co-locate`, etc.
+19:07 <edent_twitter> It's late here and I need to go to bed. Thanks for all the great chat. Hope to see you all in person soon. Bye!
+19:08 <prushforth> Thanks Terence, goodnight!
+19:08 <edent_twitter> [edit] It's late here and I need to go to bed. Thanks for all the great chat. Hope to see you all in person soon. Bye!
+19:09 <IvanSanchez_gitlab> @ahocevar re: WebGL accessibility towards web devs, I blame early implementos for being lazy on just porting the OpenGL2 ES API instead of wrapping it in actual object-oriented abstractions
+19:09 <IvanSanchez_gitlab> [edit] @ahocevar re: WebGL accessibility towards web devs, I blame early implementors for being lazy on just porting the OpenGL2 ES API instead of wrapping it in actual object-oriented abstractions
+19:09 <ahocevar> Very good point @IvanSanchez_gitlab.
+19:10 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:10 <fredesch> very true
+19:10 <IvanSanchez_gitlab> (replace "lazy" with "pressured by management" or "under haste because of release dates" or whatver underlying reason, but my point of view as an outsider remains the same)
+19:10 <thehabes> I have a fun probably very off topic question.  Does the proposed `HTTP2 ` affect how HTML might work now, and does its existence mean that something is waiting for an extended HTML?
+19:12 <IvanSanchez_gitlab> AFAIK HTTP2 only affects TCP connections, it shouldn't affect HTML.
+19:12 <thehabes> I read a book on it, but have not implemented it in any way yet.  I have a fairly naïve understanding of it.
+19:12 <IvanSanchez_gitlab> As fas as maps go, it would alleviate the reasons for the hacks we use to load more tiles in parallel
+19:13 <thehabes> Wow not expecting answers.  Color me surprised.  
+19:13 <thehabes> Lol did not know `HTTP3` existed yet
+19:14 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:14 <prushforth> The way I see it is that Google has a search business that is probably more important than maps, and is based on searching.  Maps could help the former business and I don't really see a standard for maps competing with their maps product, actually.
+19:14 <thehabes> Cool, thanks for the explanation
+19:15 <AmeliaBR> From Jonathan Moules in Zoom:
+19:15 <AmeliaBR> HTTP is a Transport Protocol. It shouldn't really care about the stuff that's going over it, that's a higher level of the OSI model.
+19:15 <AmeliaBR> 
+19:15 <prushforth> How do we teach our kids about maps if we don't have a standard for maps
+19:16 <shepazu> (insert "map reduce" joke here)
+19:16 <IvanSanchez_gitlab> Answering @tomkralidis , I see a dystopian future where only three web mapping platforms work well natively in three web browsers. 
+19:16 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:16 <fredesch> We support health provider search in our network. We have a list view and a list + google map view. 
+19:17 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:17 <fredesch> You can click on a marker see which provider(s) are there and get directions to the provider (also has more info like phone number rating...)
+19:17 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:17 <fredesch> You have the same info in the list view
+19:18 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:18 <fredesch> It impacts performance because there is more to parse and worry about putting in the accessibility tree
+19:18 <fredesch> [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+19:18 <fredesch> Also events...
+19:19 <thehabes> Being fully on the developer side, I hate that I had to learn about different coordinate reference systems and why my coordinates don't work the same everywhere.  This makes `Features` way more abstract than they should be.
+19:19 <AmeliaBR> From Jonathan Moules:
+19:19 <AmeliaBR> What Daniel's talking about is a flavour of the Jevons Paradox - https://en.wikipedia.org/wiki/Jevons_paradox - "When technological progress or government policy increases the efficiency with which a resource is used the rate of consumption of that resource rises due to increasing demand"
+19:19 <AmeliaBR> 
+19:20 <thehabes> [edit] Being fully on the developer side, I hate that I had to learn about different coordinate reference systems and why my coordinates don't work the same everywhere.  This makes `Features` way more abstract than they should be.  Even when lat/lon order doesn't matter, like `[12,12]`.  That should always put me in Africa.
+19:20 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:20 <IvanSanchez_gitlab> @prushforth The way I see it, a standard for maps would enable (easier, cleaner) adversarial interoperability, and that's bad for business
+19:20 <fredesch> I don't hear anyone talking about how you relay the semantics of a map to a screen reader.  I did miss the first hour on Wednesday...
+19:20 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:20 <IvanSanchez_gitlab> See one of the links from my essay, https://www.eff.org/deeplinks/2019/10/adversarial-interoperability
+19:20 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:20 <prushforth> Ivan, I bought a domain but haven't had time to blog about it, but we disagree.
+19:21 <fredesch> If you get a native element. you must also define the semantics of the element and the accessibly APIs
+19:21 <shepazu> Making controls a commonly available API helps everyone, especially accessibility; you can make them flexible through the API
+19:22 <prushforth> @fredesch I think the <feature> element would be where I would say to start?
+19:22 <thehabes> Are maps considered for "offline" functionality, like how it can be with downloaded local Google Map data
+19:23 <prushforth> Service workers?
+19:23 <satakagi> PWA
+19:23 <ahocevar> Was just going to say that.
+19:23 <ahocevar> Already covered by existing standards.
+19:23 <AmeliaBR> From Chris Little on Zoom:
+19:23 <AmeliaBR> Question: does the panel think that maps will only take off when AR does?
+19:23 <AmeliaBR> 
+19:23 <prushforth> Maps are already big!  
+19:24 <IvanSanchez_gitlab> Offline/cached stuff is a political/economical problem, not a technical one. As I said yesterday, preventing users from caching means more billable HTTP requests, which means more cash.
+19:24 <thehabes> Yeah like service workers I suppose.  I guess since `<map>` would be HTML that ties right in.  +1
+19:24 <thehabes> I think maps have taken off already
+19:24 <IvanSanchez_gitlab> (I feel like I'm repeating stuff that I already wrote about, but I made a radical proposal for P2P IPFS-like caches at https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part5-the-gold-the-moor-the-sausage-machine.html )
+19:25 <briankardell_twitter> I feel like there are two very different aspects to the a11y questions... part of that is about interaction/interactive elements.. The answer to that is it should use the existing platform or fill in what is missing.  If it is about making the rendering accessible, are the existing forms not all there too?
+19:25 <fredesch> [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+19:25 <IvanSanchez_gitlab> I know. I guess I'm just cynical like that. But as time goes by, my experience tells me that thinking in adversarial terms is good.
+19:25 <satakagi> There's a 50MB limit on iOS, by the way.
+19:26 <satakagi> [edit] There's a 50MB limit on iOS, by the way. >Service wirker cache
+19:27 <thehabes> 1000 use cases in one place : https://gisgeography.com/gis-applications-uses/
+19:27 <briankardell_twitter> they have proprietary a things in everything else the browser does/did too
+19:27 <fredesch> You need two implementations to be added to HTML.
+19:29 <AmeliaBR> My analogy: YouTube (and its Google owners) didn't block `<video>`, it adopted it. IMO, The commercial asset is the map content (and the paid services to search/use it), not the map viewer.
+19:29 <fredesch> Won't Joanmarie require you have semantics and accessibility APIs defined for a new element?
+19:30 <thehabes> Yes.  It often has to be explained that an Image of a Map is not a map, especially to the Web.  It is an image.
+19:32 <satakagi> @AmeliaBR 
+19:32 <satakagi> The video element is similar to the video shown in youtube, but the map being discussed here seems to be similar to a service like youtube.
+19:32 <satakagi> 
+19:32 <satakagi> [edit] @AmeliaBR 
+19:32 <satakagi> [edit] The video element is similar to the each video shown in youtube, but the map being discussed here seems to be similar to a service like youtube.
+19:32 <satakagi> [edit] 
+19:35 <tguild> Topic: Summary, conclusion and next steps
+19:35 <tguild> scribenick: ted
+19:36 <tguild> Amelia: this is the last of our live sessions but not end of the workshop, reminder all the sessions are recorded and posted to Youtube
+19:36 <tguild> … continued conversations on Discourse
+19:36 <zcorpan> While we're plugging things, I'd like to also say that we (Bocoup) are available for hire to help to standardize new things for the web platform and drive consensus among stakeholders :)
+19:37 <tguild> … anyone you know who haven't been engaged in the discussions but interested, please direct them to agenda page and Discourse for videos and the next stage
+19:37 <tguild> Peter: thank you everyone, appreciate all the input and different perspectives
+19:38 <tguild> … I want to reiterate a number of things I learned this week. first and foremost is the importance of accessibility for web maps
+19:38 <tguild> … augmented reality will be important as well
+19:39 <tguild> … understanding of needs for web maps will evolve
+19:39 <tguild> … are there other stakeholders that you can identify that should be looped into this conversation?
+19:39 <tguild> … do people agree standardizing maps for the web is worthwhile? I know some disagree
+19:39 <fredesch> standardization is good
+19:39 <thehabes> Absolutely.  There are many stakeholders in cultural heritage and digital humanities.  We are a group that represents that stakeholder, and can be found at https://iiif.io/community/
+19:40 <thehabes> And specifically https://iiif.io/community/groups/maps/
+19:40 <tguild> … what are the next steps? try to form a new Working Group at W3C? perhaps a joint group with OGC or go back to the Community Group...
+19:41 <thehabes> Next steps : Integrate as implementers, do some small P.O.C's within the group if possible, and connect with feedback.
+19:41 <tguild> … I got making maps a first class citizen on web backward, first we need to get stakeholders, especially those wishing to fund this involved
+19:42 <NicolasRafaelPalomino> Worthy goal? maps is the future for sure.
+19:42 <prushforth> I forgot to mention internationalization
+19:42 <tguild> Doug: summary not as neccessary given people can watch the videos at their leisure
+19:42 <tguild> … focusing on take aways, future directions better for next stage
+19:43 <tguild> Amelia: we should strive to have a report with conclusions within a month
+19:44 <tguild> … whether it is just a summary or makes recommendations on how to advance
+19:44 <tguild> Peter: text rendering built into browsers should not have to be duplicated or repeated but can be leveraged 
+19:45 <tguild> … I agree we should wholeheartedly embrace all the effort that went into browser rendering
+19:45 <tguild> Bryan: we work with museums, librariers etc and I look forward to bringing this to my group and willing to work on proofs of concepts and bring back feedback
+19:46 <tguild> … I will be more helpful and informed instead of have intrepidations 
+19:46 <tguild> Peter: this proposal needs champions
+19:47 <tguild> Bryan: we took on following GeoJSON and this workshop enforced it is being widely embraced
+19:47 <tguild> Peter: before we can describe this as a polyfill it needs to be tested
+19:47 <tguild> Amelia: there are two sides to this story, we had a good discussion on low level issues such as rendering
+19:48 <tguild> … there is the other end where content creators who want an easy API for expressing their content on a map
+19:48 <tguild> … I suspect these things would need to move forward in parallel
+19:49 <tguild> … there are already leaf widgets. Peter's map element polyfill is currently done as a wrap around leaflet but there are other ways it could be done
+19:49 <thehabes> All these institutions tend to have people that can dabble in HTML, but scripting is a major gap to cross.
+19:49 <tguild> … just playing around what the markup could look like while leveraging existing map engines worthwhile
+19:49 <thehabes> Those people would definitely be less intimidated by a `<map>` element
+19:49 <tguild> … Bryan's clients don't care about the implementation details but how it works and to describe their content
+19:50 <thehabes> @tguilf Which is why "including" the user the whole time in development doesn't always work in the devs favor
+19:50 <thehabes> [edit] @tguild Which is why "including" the user the whole time in development doesn't always work in the devs favor
+19:50 <fredesch> Having done charting engines, my concern is semantics, interactivity and accessibility
+19:51 <thehabes> @prushforth and that's how most people treat them.  I want a map CMS that works like Omeka.
+19:51 <tguild> Peter: I don't think anything is changed on the server side, this is just a more natural format with less friction
+19:51 <thehabes> And I say that is not a real thing
+19:51 <thehabes> And then we pick a stack
+19:51 <tguild> … this is why the ESRI and MapBoxes don't see mapML as a threay
+19:51 <tguild> s/threay/threat/
+19:53 <shepazu> All these worlds are yours, @tguild, except Europa… attempt no landing there.
+19:54 <tguild> Fred: semantics, accessibility all needed for html co-element
+19:54 <tguild> … I think widgets are fine. having been in ARIA and other working group, trying to change elements a humungous task better to work on widgets
+19:55 <tguild> … we need better interactive ability, line of site, pan, zoom and understand spatial relationships
+19:55 <tguild> … it is possible and more so than just with mouse over
+19:55 <tguild> … there are big gaps being missed
+19:55 <satakagi> I think you have GeoJSON if only to represent the data.
+19:55 <satakagi> 
+19:55 <satakagi> 
+19:55 <satakagi> For elements to represent geographic information other than mapml's map,layer elements.
+19:55 <tguild> Amelia: good points Fred
+19:55 <shepazu> I think that there were lots of explorations of accessibility throughout the workshop
+19:56 <NicolasRafaelPalomino> I wonder why's maps and widgets are not yet being utilized and actively being developed in applications 
+19:56 <tguild> … how can we describe geographic content and interaction patterns in a standard way
+19:56 <IvanSanchez_gitlab> @fredesch You missed my thing with the joysticks?
+19:56 <cmhodgson> I think that semantics, interactivity and accessibility are the motivations for the <feature> element - we need something in the DOM to attach that too
+19:56 <tguild> … maps on the web are not addressing these needs
+19:57 <tguild> … we need to make map widgets more accessible to more people
+19:57 <tguild> Simon: we covered accessibility extensively earlier in these preceedings, what accessible maps can be like with eg touch and vibration for maps
+19:57 <tguild> … we should include this in the design by default
+19:58 <tguild> Fred: most maps fail all WCAG2 guidelines
+19:58 <cmhodgson> [edit] I think that semantics, interactivity and accessibility are the motivations for the <feature> element - we need something in the DOM to attach that too
+19:58 <prushforth> Linking too
+19:58 <tguild> … if you have a map element you should permit people to migrate around the map as easily with a keyboard as with a mouse, it is just essential
+19:59 <tguild> Simon: one of the requirements should be maps need to be accessible
+19:59 <tguild> … we need to have extensive discussions with the accessiblity community in order to make this successful
+20:00 <tguild> Gobe: we have done a good job at discussing needs. for future events we should try to engage the hardware manufacturers, not just mouse manufacturers but all forms of interaction with applications
+20:00 <satakagi> :+1:
+20:00 <shepazu> FWIW, gaming has really improved their accessibility in both hardware and software in recent years
+20:00 <tguild> … there is considerable research on machine interfaces
+20:01 <fredesch> @IvanSanchez_gitlab I saw your joystick that was very insightful
+20:01 <tguild> Peter: I will post a link to Discourse chat so people can contribute their ideas on next steps and conclusions
+20:01 <IvanSanchez_gitlab> I'm starting to really wonder if the joystick/gamepad behaviour from 2D maps in videogames (snapping to POIs, etc) could be ported over
+20:02 <tguild> Wendy: as Strategy Lead at W3C, happy to hear the discussion here and learn of new work you would like to see started at W3C
+20:02 <zcorpan> From the zoom chat:
+20:02 <zcorpan> Accessibility links:
+20:02 <zcorpan> https://accessiblemaps.de/?page_id=121&lang=en
+20:02 <zcorpan> http://docs.opengeospatial.org/per/19-032.html
+20:02 <zcorpan> http://docs.opengeospatial.org/is/14-005r5/14-005r5.html
+20:02 <zcorpan> https://www.w3.org/community/lda/ https://wheelmap.org/search
+20:02 <zcorpan> Bocoup review: https://bit.ly/bocoup-testbed16
+20:03 <fredesch> [edit] @IvanSanchez_gitlab I saw your joystick that was very insightful
+20:03 <IvanSanchez_gitlab> For reference: WIP at https://gitlab.com/IvanSanchez/leaflet.gamepad https://ivansanchez.gitlab.io/leaflet.gamepad/demo.html
+20:04 <zcorpan> [edit] From the zoom chat:
+20:04 <zcorpan> [edit] Accessibility links:
+20:04 <zcorpan> [edit] https://accessiblemaps.de/?page_id=121&lang=en
+20:04 <zcorpan> [edit] http://docs.opengeospatial.org/per/19-032.html
+20:04 <zcorpan> [edit] http://docs.opengeospatial.org/is/14-005r5/14-005r5.html
+20:04 <zcorpan> [edit] https://www.w3.org/community/lda/
+20:04 <zcorpan> [edit]  https://wheelmap.org/search
+20:04 <zcorpan> [edit] Bocoup review: https://bit.ly/bocoup-testbed16
+20:04 <IvanSanchez_gitlab> [edit] I'm starting to really wonder if the joystick/gamepad behaviour from 2D maps in videogames (snapping to POIs, etc) could be ported over
+20:04 <dmorissette> Your joystick example reminded me of a Kinect map control experiment we made a few years ago: https://vimeo.com/51767891
+20:05 <tguild> [adjourned]
+20:05 <prushforth> https://discourse.wicg.io/t/conclusions-take-aways-and-next-steps/4893 
+20:06 <shepazu> Thanks for repasting that, @zcorpan 
+20:13 <bdon_gitlab> 2D OffscreenCanvas has been mentioned in a couple presentations - does anyone have insight into the status of getting it into WebKit and Gecko? (and what could we do to accelerate this?)
+20:21 <AmeliaBR> @bdon_gitlab There's a work-in-progress implementation in Gecko, maybe @briankardell_twitter has info on WebKit.
+20:46 <prushforth> @bdon_gitlab Also, maybe @ahocevar has some insight into this

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>SV_MEETING_TITLE -- 02 Oct 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="SV_MEETING_TITLE" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>SV_MEETING_TITLE</h1>
+<h2>02 Oct 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>prushforth</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; Okay I think I found it,  I  see Ted Guild (Host) currently connected
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; @nicolocarpignoli if you want to do an audio+video check before we start, feel free
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; No worries, thanks anyway
+</p>
+
+<p class='phone'>
+@nicolocarpignoli  All these requirements are excellent.  What I fail to understand is why we don't work on solving them in standards, as a community. IMHO first step is to agree that maps can be standardized as a user level feature of browsers.  Thanks for helping make the case for that.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; If there were more time, I think Collaboration is another main use, in academics and research especially.  That opens the "Web" can of worms, so to speak.
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; I absolutely agree with you @prushforth , that should be the direction. @thehabes  nice catch!
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; hello and apologies for being late
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Great presentation! Not exactly the first mention of accessibility in this workshop, though :)
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; anyone able to share zoom info?
+</p>
+
+<p class='phone'>
+Joshue I will email it to you
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @nicolocarpignoli , we use Web Annotation (<a href="https://www.w3.org/TR/annotation-model/)">https://www.w3.org/TR/annotation-model/)</a> to pass these kinds of textual data nodes around.  If you haven't seen that yet, this is how I can provide those pieces of requirement metadata when it isn't already a part of Map data, or when I mean to supplement information without overwriting it or changing the source data.  It is interesting, and may be of interest to you depending on
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; you feel about Annotation.
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; thanks Peter
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; am in
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; @RealJoshue108 wavets
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; @RealJoshue108 waves even..
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @prushforth
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I have a view that may differ slightly. I'm sure you're already aware of that.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I believe that the function of a geographic map should be a higher conceptual function that encompasses other usages that have a similar functions.
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; @thehabes did not know them. I will definitely give a look. @RealJoshue108 that might interest you too (see previous Bryan's comment)
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; thanks @nicolocarpignoli
+</p>
+
+<p class='phone'>
+@satakagi Are referring to non-geographic maps, such as deep zoom on images?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @prushforth Yes! That's what Amelia's report refers to as well.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Is touch a reason why I remember things better when I physically write them down on something?  I am just one of those people where I drop pieces of audible conversation from my memory, but when I write it down I never have to look at the note to remember it.
+</p>
+
+<p class='phone'>
+@satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='phone'>
+Doug says that the primitives we need for maps are already there
+</p>
+
+<p class='phone'>
+Sort of... he says a combo of standards and innovation will need to be applied to making maps accessible
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @ghobona Are there other accessibility schema/ontology/APIs you have worked on like IndoorGML <a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html.">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html.</a>  I agree with Doug.  As a developer, a schema or standard has to exist for me to even begin to know what accessibility users need.
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; @prushforth What are those primitives? Is he referring to "Web Annotation" spec too, or something else?
+</p>
+
+<p class='phone'>
+the audio api, the vibration api were the specific ones he mentioned iirc
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I'm not sure rasters are that useless… there's a lot of innovation in machine vision on that front
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Of course, I prefer vector data with annotations, like SVG
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I'll make a thread about this topic.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The quadrant tree tile pyramid structure, which has become well known in googleMaps, can be found in things that have nothing to do with geography, for example, JPEG 2000: <a href="https://northstar-www.dartmouth.edu/doc/idl/html_6.2/">https://northstar-www.dartmouth.edu/doc/idl/html_6.2/</a> Image_Tiling.html
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I think it's relatively common for these data structures to be defined independently of geography, and for there to be something else to associate them with geographic coordinates.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Translated with www.DeepL.com/Translator (free version)
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] I'll make a thread about this topic.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] The quadrant tree tile pyramid structure, which has become well known in googleMaps, can be found in things that have nothing to do with geography, for example, JPEG 2000: <a href="https://northstar-www.dartmouth.edu/doc/idl/html_6.2/">https://northstar-www.dartmouth.edu/doc/idl/html_6.2/</a> Image_Tiling.html
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] I think it's relatively common for these data structures to be defined independently of geography, and for there to be something else to associate them with geographic coordinates.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit]
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; That is, if your mention of "tilted coordinate reference systems" is not geographical, then it seems relatively reasonable.
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I think the standards Tony is talking about, UX around earcons and auditory icons, is really important, even though it probably doesn't fit at W3C or (maybe) OGC… definitely something that needs to be followed up with, maybe with ICAD (International Conference on Auditory Display)
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='phone'>
+I don't see why a tiled coordinate reference system has to be geographic in nature; it might be confusing if we re-used a geographic tcrs for a non-geographic map application.  Perhaps need to define one for non-geo maps
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; +1 to @nicolasG - also shows that we need clear understanding of user needs for accessible maps
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; If the Event structure is layed out well, it is easy to apply unit actions to those events.  For example, if a `click` event always produced a little click noise, it is pretty easy to go into that and change it to produce little click noise + vibration
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I would be curious to know how to design an Event structure for accessibility needs, I have never seen one of those before.
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; From a web standards perspective, I agree we now have the basic building blocks
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; @thehabes as we know the click event is also critical for a11y as it is event agnostic
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; works for keyboard only users, switch user etc
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Maybe I'm mistaken?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The "tilted coordinate reference systems" you are mentioning is one that does not have a geographical concept?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @RealJoshue108 Exactly, I was primed by the presentations from yesterday that brought this stuff up.  Most Events have direct equivalents for those with disabilities, but it also occurs to me some Events will never happen for some users (perhaps they can't use a keyboard or mouse, so `click` is right out).
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; sounds good @thehabes
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='phone'>
+Doug this is the case I'm trying to make around maps: the primitives all exist, *including* map semantics (image maps / layers).  Just need a little imagination and willingness to go there from the browsers
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; There is then the question what parts are missing?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Maybe I'm misunderstood?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] The "tilted coordinate reference systems" you are mentioning is one that does not have a geographical concept?
+</p>
+
+<p class='phone'>
+The problem with calling for user research is what the focus of the research is in terms of what map implementation should receive the results.  A standard for maps would help with that imho.
+</p>
+
+<p class='phone'>
+The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; IMO, a gap analysis would be goo
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; good even..
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; [edit] I think too we already have all the technologies (as standards one) that can be used to make an accessible map viewer. We can use ARIA attributes - if not  new attributes - in order to  tag elements and create the labels I talked about on all the user needs I  showcased. This is one way to do that.
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='phone'>
+So "tiled coordinate reference system" is a specific discussion of MapML <a href="https://maps4html.org/MapML/spec/#examples">https://maps4html.org/MapML/spec/#examples</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Honored to be on that panel with such knowledgeable innovators
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='phone'>
+But I'm just saying these all, so far, associate a gcrs and pcrs, whereas in a non-geographic map, perhaps there wouldn't need to be a gcrs?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Yes, @prushforth, I think the implicit conclusion of this panel is that there should be a standard way for web page authors to share map data, so that browsers or browser extensions can build on it with auditory/haptic experiences.
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; "OSMTILE" seems to have the meaning of the tiles used in Mercator's openStreetMap, which are associated with longitude and latitude.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Is it my mistake?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I agree that Object of Interest probably goes outside the scope of what GeoJSON is trying to do.
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='phone'>
+Not a mistake no, you are correct.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] "OSMTILE" seems to have the meaning of the tiles used in Mercator's openStreetMap, which are associated with longitude and latitude.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Am I misunderstanding that?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] "OSMTILE" seems to have the meaning of the tiles used in Mercator's OpenStreetMap, which are associated with longitude and latitude.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Am I misunderstanding that?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; ROI and POI is doable, but leveraging `properties` as a wildcard is a Bad Idea.  It is best to extend GeoJSON or apply your own schema to the `properties` object.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @shepazu I missed the first hour - where can I hear the recording or read the transcript?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @fredesch they have been good at posting videos here : <a href="https://www.youtube.com/playlist?list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ">https://www.youtube.com/playlist?list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; usually within 48 hours
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; thx great
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; I think it's the starting point of all of these discussions. We definitely SHOULD have. How do you suggest to proceed?
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; @Jan-Erik, What you think is the viewer of the future, the next way to as we are trying to bring data together, through viewers and on the web?
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; [edit] @Jan-Erik, What you think is the viewer of the future, the next way forward, now everyone around the globe aims to bring data together, through viewers and on the web?
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; If there is a &lt;map&gt; element - then that could have dedicated semantics to support various user needs.
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; I don't think it is sufficient to just throw a ton of ARIA labels at e'thing!
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; They have a place for sure - but we need to work out where generic labelling and descriptive semantics are just not enought.
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; there may also be particular behaviours etc associated with custom elements/attributes etc that we need to consider.
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
+Yes! The &lt;map&gt; element already exists, and does have map/layer semantics, although it has been very much neglected
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
+We propose to renovate it
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; cool
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; You know more about these things than me *grin
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
+lol we are all newbies here
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; aun aprendo
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; IMO, there needs to be parallel discussion on leveraging what is there against clear user needs as this tech evolves
+</p>
+
+<p class='phone'>
+Nice idea for globe mode for maps.
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
+Amelia has been collecting and developing use cases and requirements over here  <a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">https://maps4html.org/HTML-Map-Element-UseCases-Requirements/</a>
+</p>
+
+<p class='phone'>
+My ears are burning
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; yes, I've seen that - its a great doc
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Thanks for confirming that.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; Roughly, I'm expecting something like the following
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; &lt;geographic map layer&gt;.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; &lt;something that relates the coordinates of an image to something geographical (projection or latitude and longitude (geographic coordinates) /&gt;).
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; &lt;deepZoomImage
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; tileStructure="quadTreePyramid" urlTemplate="...." /&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; &lt;/Geographical Map Layer&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Thanks for confirming that.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] Roughly, I'm expecting something like the following
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] &lt;geographicMapLayer&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] &lt;something that relates the coordinates of an image to something geographical (projection or latitude and longitude (geographic coordinates)) /&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] &lt;deepZoomImage
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] tileStructure="quadTreePyramid" urlTemplate="...." /&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] &lt;/geographicalMapLayer&gt;
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='phone'>
++1
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; These frames remind me of General Relativity :P
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; If you don't intend for it to be geographical, &lt;deepZoomImage.... &gt; is only described.
+</p>
+
+<p class='phone'>
+@lieberjosh  answered my question.  The starting position of a map in 3d is also a consideration. Thanks!
+</p>
+
+<p class='phone'>
+[edit] The web platform should have maps is what I'm saying
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; totally agree
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Use Cases
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; MapML : <a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">https://maps4html.org/HTML-Map-Element-UseCases-Requirements/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; IIIF Maps : <a href="https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps">https://github.com/IIIF/iiif-stories/issues?q=is%3Aissue+is%3Aopen+label%3Amaps</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Thanks for gathering the MapML @prushforth @AmeliaBR .  It helps all mapping communities to have these things together so we can fill the gaps.
+</p>
+
+<p class='phone'>
+@lieberjosh  what really is a map? A: a basic aid to visualization.  There is a continuum between flat maps facing north and visualizations that are more sophisticated / AR.  Great way to see the connection between what we could do and where we could go with it.
+</p>
+
+<p class='phone'>
+Chris Little: Rob Smith's VMT proposal relevant to this use case
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Thanks for gathering the MapML ones @prushforth @AmeliaBR .  It helps all mapping communities to have these things together so we can fill the gaps.
+</p>
+
+<p class='phone'>
+RE Josh's comments: the availability of cloud storage, like Zarr, etc, is starting to remove one of the contraints on the large amount of data required to present 3/4D maps to an individual.
+</p>
+
+<p class='phone'>
+Previous comment was from Chris Little, who's not on gitter
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Very similar to a 3d architecture app that lets you walk around...
+</p>
+
+<p class='phone'>
+@lieberjosh  and Christine: thanks for your vision
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Is there a link to a use case collection by GeoPose or  OSCP?
+</p>
+
+<p class='phone'>
+Patrick Cozzi: the intersection of maps and AR are killer use cases
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Question for the panel: What's the best way to deal with geographic precision when combining map data with AR? Are there ways to anchor feature coordinates to the physical world?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Wow I had never seen this <a href="https://www.w3.org/TR/webxr/">https://www.w3.org/TR/webxr/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; If you are interested in XR A11y please do review our new updated editors draft of XR Accessibility User Requirements <a href="https://www.w3.org/TR/2020/WD-xaur-20200916/">https://www.w3.org/TR/2020/WD-xaur-20200916/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; There is for sure a mapping with mapping :-)
+</p>
+
+<p class='irc'>
+&lt;<cite>SebastienDurand</cite>&gt; Gaming platforms have full system, that shine by their integration enabling interaction with the user (left aside the accessibility side). So how does current development on our side of the fence aligns with that industry
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; Talking about AR and Navigation: I'm the maintainer of AR.js that from version 3 features Location Based AR. The code is totally Open Source if you want to give it a look. I have used it in order to create AR geolocated trasure-hunts or other AR cultural-discovering  web  app for historical center of cities. Feel free to ping me to know more (do not want to spam, it's all OSS so I thought it might interest
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; some dev/designer) =&gt; <a href="https://ar-js-org.github.io/AR.js-Docs/">https://ar-js-org.github.io/AR.js-Docs/</a>
+</p>
+
+<p class='phone'>
+Question for the panel:  would it be beneficial, or at least a start along the path to AR, if the Web platform supported 2D map rendering in HTML?
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; <a href="https://github.com/immersive-web/geo-alignment">https://github.com/immersive-web/geo-alignment</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; <a href="https://github.com/immersive-web/geo-alignment/blob/master/explainer.md">https://github.com/immersive-web/geo-alignment/blob/master/explainer.md</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Chris Little:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Panel Question: Considerng Jan-Erik's presentation, do you think the 'layer' terminology is confusing in a 3/4D environments? Is 'view@ better? or have the same issue.
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; <a href="https://github.com/immersive-web/anchors">https://github.com/immersive-web/anchors</a>
+</p>
+
+<p class='phone'>
+[edit] RE Josh's comments: the availability of cloud storage, like Zarr, etc, is starting to remove one of the contraints on the large amount of data required to present 3/4D maps to an individual.
+</p>
+
+<p class='phone'>
+[edit]
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Joshua Lieberman replied in zoom:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Some OGC Innovation Program experience is that integrating structure and sensor data is best done “on the fly” using the right services and standards framework. Prior fusion is too inflexible to work well.
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I think it would be better to move the discussion in this thread to "discussion", is the following the right place?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/">https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/</a>
+</p>
+
+<p class='phone'>
+Web component: <a href="https://geogratis.gc.ca/mapml/en/osmtile/osm/">https://geogratis.gc.ca/mapml/en/osmtile/osm/</a>
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; @satakagi, that should work. Or please feel free to start a more specific thread.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Question for GeoPose and Open AR Cloud:  Do you have your collection(s) of use cases available anywhere?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] I think it would be better to move the discussion in this thread to "discourse", is the following the right place?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] <a href="https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/">https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/</a>
+</p>
+
+<p class='phone'>
+[edit] @satakagi my question around that is: do the coordinate systems of deep zoom applications need to be unique?  Can they re-use tiled coordinate reference systems, or a tiled coordinate system defined explicitly for deep zoom applications?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; :+1:
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Based on how SVG, a 2D vector format, is inappropriate to extend to 3D, I think maybe 3D should be considered from the beginning, rather than hoping to extend it later
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Question for GeoPose - Open AR Cloud - Immersive Web:  Do you have your collection(s) of use cases available anywhere?
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Regarding @AdaRoseCannon's comment about WebGL+HTML, maybe a shadow-DOM approach like was designed for Canvas might be suitable
+</p>
+
+<p class='phone'>
+kml + google earth show the way to 3d in the browser, perhaps.  2d services are still important even in that application
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; The nice thing with Vector formats is that they can be parsed and rendered with geometry.
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; [edit] The nice thing with Vector formats is that they can be parsed and rendered with geometry.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; True, but the structure of SVG isn't suited for 3D
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Somehow I'm still convinced that the right way would be a SVG-like language that *leverages* GL abstract concepts, like SVG abstracted 2D drawing APIs back in the day
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; There are also ways to render SVG in the graphics card using <a href="https://github.com/servo/pathfinder">https://github.com/servo/pathfinder</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; [edit] The nice thing with Vector formats is that they can be parsed and rendered with geometry.
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (At the markup and DOM layer)
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; It may well be
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; [edit] The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Not sure. IMO GLTF already assumes too many abstractions
+</p>
+
+<p class='irc'>
+&lt;<cite>AdaRoseCannon</cite>&gt; [edit] The ideal 3D model format for the web is GLTF I wonder if an extension in there could work
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; and they might not be good for some aspects of GIS work
+</p>
+
+<p class='irc'>
+&lt;<cite>TechThomas</cite>&gt; Hi all, if you have any geospatial things you want accessibility considerations on feel free to reach out <a href="https://twitter.com/techthomas">https://twitter.com/techthomas</a> or thomas@equalentry.com
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I agree Jan.  GeoJSON is good for coordinates, but if you want to do anything else, you have to do something on top of it or by extending it.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Jan-Erik Vinje, the companies with GeoPose demos to check out:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Immersal
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Augmented City
+</p>
+
+<p class='irc'>
+&lt;<cite>cperey_twitter</cite>&gt; yes, thank you all on inputs and if you want to follow up, please reach out to me at cperey@perey.com
+</p>
+
+<p class='irc'>
+&lt;<cite>rahola_gitlab</cite>&gt; Question from @shepazu if we should integrate 2 and 3D to start, rather than only focusing on 2D. Could this drive more use cases and possibly interest?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; is this not like a split between 2d and 3d in general tho?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Even with the 2D stuff, the goal is to make each piece extendable so you never have to throw anything away (or at least only need too in the most extreme cases)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I imagine the challenge of the time dimension is nearly the same for 2D and 3D POI/ROI/OiM.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; A "timeline" in a 3D sense is like watching a building being built in fast motion.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Even with the 2D stuff, the goal is to make each piece extendable so you never have to throw anything away (or at least only need to in the most extreme cases)
+</p>
+
+<p class='irc'>
+&lt;<cite>RealJoshue108</cite>&gt; thanks for a great sesssion
+</p>
+
+<p class='phone'>
+That was a lot of fun
+</p>
+
+<p class='irc'>
+&lt;<cite>rahola_gitlab</cite>&gt; Reminder to all that the next workshop session will start tomorrow (Sept. 30) at 16:00 UTC (12:00 PM EDT).
+</p>
+
+<p class='irc'>
+&lt;<cite>nicolocarpignoli</cite>&gt; Thank you all!
+</p>
+
+<p class='phone'>
+It's going to take me some time to thoughtfully and appropriately respond to many comments in this chat feed.  I think I will try to do that mostly on [discourse](<a href="https://discourse.wicg.io/c/web-mapping/22),">https://discourse.wicg.io/c/web-mapping/22),</a> so that it's a bit more permanent and public. Thanks to @AmeliaBR  and @satakagi  who've copied some of the comments from here to there already.  I encourage others to offer their ideas over there too.  That is
+</p>
+
+<p class='phone'>
+where Web platform developers discuss Web platform ideas, so even if they have muted us due to the onslaught of Web mapping content these past few days, they will have a handy reference at their fingertips.
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; To answer your questions @AmeliaBR ;"The data that will be used to train the software really depends on the features of the widgets. I believe the best way is offering industrial or commercial geospatial data to interact with through the widgets will give us a good possibility to harness data... What we harness  harness could be anything between data from the services that are provided by the place
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; such as ordering, checking availability , paying, or as just as capturing interactions with data that is available. Then applying''machine learning'' to deep analytics and big data analysis to the information that is generated from the interaction with the geospatial data can be used for better insight. The "AI" will be the automation of this data for improvements in effectiveness of their
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; organizations.  The idea is to fuse that data together and draw conclusions and then present that information very quickly to drive change in how we manufacture, schedule and predict resources and outcomes, it is really about moving from data to answers.
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>

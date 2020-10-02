@@ -1,0 +1,269 @@
+09:46 <IvanSanchez_gitlab> @prushforth @AmeliaBR My slides for later today are at https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.tar.gz
+09:46 <IvanSanchez_gitlab> I'd like to connect to the videoconference a bit early and do a tech check (double-check that sharing desktop works and so on), please let me know at which time it would be convenient to do so.
+10:50 <prushforth> @IvanSanchez_gitlab @tguild great I will connect when Ted says he can join.  I will upload and link to your slides
+11:00 <prushforth> @IvanSanchez_gitlab I am using windows 10 with not too many utilities.  i.e. no 7zip.  Any ideas (from anyone) about how to extract the contents would be appreciated.
+11:00 <IvanSanchez_gitlab> Lemme do a .zip for you
+11:00 <prushforth> Thanks  I was about to try a git shell 
+11:02 <IvanSanchez_gitlab> Try now at https://ivan.sanchezortega.es:444/2020-ogc-w3c-workshop-ivansanchez-slides.zip
+11:04 <prushforth> thanks perfect
+11:05 <IvanSanchez_gitlab> I was expecting a 15-minute slot, but I've seen that there are 5 people for the 60-minute track. I timed myself at 12-13 minutes when rehearsing, so stuff should only bit *a bit* tight.
+11:07 <prushforth> You can take the 15 minutes as promised if you need it.
+11:07 <prushforth> I am on Ted's zoom call now and there seems to be someone else here who's name I don't recognize, but there's no talking so maybe it would work if you connect now?
+11:07 <IvanSanchez_gitlab> Yeah, sure
+11:07 <prushforth> I don't have host control but I don't think that matters
+11:08 <tguild> we have been having people connect at odd times last week and this, recognized many of the names
+11:10 <tguild> connected just now, gave @prushforth co-host and stopped the recording which was set to begin when meeting starts
+11:11 <tguild> Raitis Bērziņš joined 18 minutes ago
+12:03 <edpars0ns> Hello All 
+12:04 <shepazu> Does @IvanSanchez have 2 different camera angles?
+12:04 <prushforth> Greetings everyon
+12:05 <prushforth> The objective of the proposal is not to cover all use cases, but to provide a baseline from which web developers may script / progressively enhance.  Somewhat similar to the Leaflet - Plugin architecture.
+12:06 <PlanetBye_twitter> Hello everyone! This is Bente 
+12:06 <shepazu> Welcome, Bente
+12:06 <AmeliaBR> Great idea to look at Leaflet (& other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+12:07 <AmeliaBR> [edit] Great idea to look at Leaflet (& other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+12:07 <prushforth> Yes.  HTML  is the framework, plugins are progressive enhancements
+12:08 <AmeliaBR> [edit] Great idea to look at Leaflet (& other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+12:08 <bdon_gitlab> wonder if one could collect some stats (github stars/ NPM download count?) to see what plugins are the most popular
+12:09 <prushforth> Very cool that textures in geotiff tiles
+12:12 <bdon_gitlab> PixiJS is a good example of a 2D GL-accelerated library that is  developer friendly, other game engines are worth looking at too
+12:14 <edpars0ns> Of course @IvanSanchez_gitlab ToS is correct you should NOT access map tiles other than using the API - Ed xx
+12:15 <prushforth> @IvanSanchez_gitlab: Leaflet users want to display Google basemaps.  DOM manipulation solves the issues in tile lag
+12:17 <prushforth> That MapML does not control corporate lawyers is not a problem with MapML...
+12:17 <bdon_gitlab> most 2d game engines are missing a key feature for map drawing though - efficient stroking of lines with dynamic screen-space width (i.e. adjusting the width of a linear feature via some log/exp function while zooming in purely in the shader) 
+12:17 <IvanSanchez_gitlab> Thanks for the clarification @edpars0ns 
+12:18 <thehabes> @IvanSanchez_gitlab you are certainly deep in it!  We also use MutationObservers in some of our HTML magic tricks, and I agree it feels a bit dirty.  But man, it works!
+12:18 <AmeliaBR> I don't think we can ever stop web developers making up ugly hacks, but I'd love to get to the point of having a standard API for interacting with map data layers — and reduce the need for those hacks!
+12:19 <fredesch> Great thoughts @IvanSanchez_gitlab 
+12:21 <AmeliaBR> [edit] Great idea to look at Leaflet (& other framework) _plugins_ for use cases. Most of those wouldn't be built in to a native map viewer, but they all should be possible as extensions to it.
+12:21 <IvanSanchez_gitlab> I must say that GoogleMutant is, to my knowledge, the most used within the 20-ish that I made
+12:26 <shepazu> I hate that people associate collaborative editing with Google Docs. They didn't innovate that, and they aren't the best at it. Sigh.
+12:26 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:26 <IvanSanchez_gitlab> I can have 3 camera angles right now. If I gather webcams from around the house I think I could go up to 6.
+12:26 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:26 <shepazu> LOL. Nerd. :)
+12:26 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:26 <IvanSanchez_gitlab> I once got an error regarding a USB hub not having enough bandwidth (I knew that USB bandwidth is limited, but never encountered the actual issue)
+12:27 <prushforth> Maps today are a hack
+12:27 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:27 <IvanSanchez_gitlab> ProTip: when using several webcams, connect them all to the computer itself, not to a hub.
+12:28 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:28 <shepazu> Interesting. Not sure I'll ever need that, but good to keep in mind. Is this USB-C, or an earlier one?
+12:28 <AmeliaBR> A reminder that Karel Charvat will be leading a breakout session about the map composition format he's proposing, after today's talks & panels.
+12:29 <shepazu> [edit] Does @IvanSanchez have 2 different camera angles?
+12:29 <IvanSanchez_gitlab> It's actually a daisy-chain of USB3/USB-C hubs. Just don't go full-resolution with everything at once.
+12:31 <fredesch> Does MapML support DEMs?
+12:31 <thehabes> @dmorissette Will that demo be up for a while and are we allowed to play with it?  I would love to dig through it and see first hand what interacting with the standard is like.
+12:32 <prushforth> @dmorissette  re: MapServer.  Server side CMS like MapServer, GeoServer and {commercial-GIS-provider-here} can make it simple to create and use maps on the web.
+12:32 <thehabes> [edit] @dmorissette Will that demo be up for a while and are we allowed to play with it?  I would love to dig through it and see first hand what interacting with the spec is like.
+12:33 <thehabes> This one : http://msdev.mapgears.com/mapml/demos/
+12:39 <IvanSanchez_gitlab> Since @ahocevar is talking about OpenLayer's <canvas> renderer for vector tiles, it's a good moment to remind that Leaflet.VectorGrid can do either canvas or SVG to render vector tiles (and has been unmaintained for a while, and interactivity in tiled SVG gets... hard)
+12:40 <fredesch> @IvanSanchez_gitlab does leaflet keep around a scene tree?
+12:41 <IvanSanchez_gitlab> @fredesch Nope.
+12:41 <IvanSanchez_gitlab> At least not in the sense that 3D/videogame people understand "scene tree"
+12:42 <fredesch> @IvanSanchez_gitlab can you hit a single feature for instance click on a single area or point feature?
+12:43 <IvanSanchez_gitlab> Yes - the click will get intercepted by the hitbox of a SVG thing, raise a leaflet event, get a unique ID of the feature that spawned that graphical representation
+12:44 <dmorissette>  @thehabes yes the http://msdev.mapgears.com/mapml/demos/ will remain up for a while, but it's my sandbox environment, so it may have glitches at time
+12:44 <IvanSanchez_gitlab> BTW @ahocevar , I've been working on a openlayers port of the geotiff-as-webgl-textures thing; at some point we should talk about whether that belongs in the main OL branch
+12:51 <AmeliaBR> Zoom/resolution levels for vector data! This is so important for the web & minimizing data/rendering requirements, so glad to see people working on it.
+12:52 <prushforth> @thehabes there is also the GeoServer MapML community module, but you have to install it yourself: https://docs.geoserver.org/latest/en/user/community/mapml/index.html 
+12:54 <thehabes> Great, than you @prushforth @dmorissette .  
+12:54 <satakagi> Is there a way to detect a graphics object underlying another graphics object in svg's hittest?
+12:55 <shepazu> Well done, @tguild 
+12:55 <thehabes> Oh no, https://datacoveeu.github.io/SensorThings is a 404!
+12:55 <ahocevar> Sounds good @IvanSanchez_gitlab - at least it should be listed on the plugins page!
+12:56 <prushforth> @edpars0ns : has been putting geo data on the web since <img usemap> was cool
+12:57 <ahocevar> @AmeliaBR Vector tiles, like in the map I showed, also are organized in zoom levels.
+12:58 <AmeliaBR> good point Andreas. Although they still have the difficulty of how to connect up partial features into a logical whole.
+12:58 <hylkevds> https://datacoveeu.github.io/API4INSPIRE/
+12:59 <prushforth> @ahocevar and @AmeliaBR tiles and zoom levels are (on the Web) fundamental organizing abstractions for geo-data and as such warrant implementation in HTML.
+12:59 <prushforth> MapBox has a search engine?
+13:00 <prushforth> @tguild question for the panel: is geospatial information important enough to be incorporated into HTML?
+13:02 <hylkevds> @AmeliaBR yes, after running into the use-case I was a bit surprised that the OGC has nothing on it yet.
+13:03 <prushforth> HTML is a meta platform, so no worries there
+13:06 <prushforth> geo data is like any other domain of human thought, it is subjective.  HTML was created to allow all equal opportunity to express thoughts and perspective. As such geo data needs to be incorporated into the Web. (IMHO).
+13:07 <ahocevar> @AmeliaBR @hylkevds In OpenLayers, when working with vector data (not vector tiles), we reduce/optimize the geometries for the current resolution and viewport before rendering. For polygons, we use quantizing (and not Douglas Peucker or similar) to maintain topology. But there is indeed no good standardized or well established way to transfer a vector data set with low resolution to the browser and apply progressive
+13:07 <ahocevar> enhancement by loading diffs when a higher resolution is needed.
+13:07 <prushforth> static map display is not of compelling interest, although geolocation of maps is still valuable; one of the key use cases of maps is to expose detail responsively
+13:08 <ahocevar> exactly.
+13:09 <KathiSchleidt> @ahocevar but doesn't the OpenLayers approach still require downloading the entirety of the data? One reason we did the multiple resolutions was that the details of Norway took ages
+13:09 <hylkevds> Yes, indeed. And not all of the detail is geospatial in itself. Features have many types of linked data
+13:10 <prushforth> HTML incorporation of documents did not kill word processors, I don't think incorporating maps will kill anything.  It will make it grow.
+13:10 <thehabes> The broadest community are the people that are sheepish with the idea of data (or technology, period).  Users fear brackets and things they don't understand.  A place on Earth is connectible and understandable, so the broadest impact will be one that makes people more comfortable with "technology" and "data" in a general sense.
+13:10 <KathiSchleidt> We're more sensitive to the data volume issue as when it comes to the sensor data, the datastream can rapidly become MASSIVE, thus reflected at what levels can we first request more lightweight subsets as required for visualization
+13:10 <ahocevar> @KathiSchleidt yes, unless you use vector tile and live with the fact that polygons and linestrings are chopped into tiles. Which is not a problem for rendering and interacting with the data, but might be a problem for other use cases.
+13:10 <shepazu> I loved Tom Lee's take
+13:11 <ahocevar> [edit] @KathiSchleidt yes, unless you use vector tiles and live with the fact that polygons and linestrings are chopped into tiles. Which is not a problem for rendering and interacting with the data, but might be a problem for other use cases.
+13:14 <prushforth> HTML / CSS is fundamentally about rendering  semantics.  Maps requirements fit naturally into that paradigm.  Apologies to WebGL and friends, acknowledge the need for those tools, but they are out of scope for teaching citizens about maps.
+13:15 <prushforth> Johannes: interop is key, widen scope. Competitors have their own focus; different markets.  Need to explore.
+13:17 <prushforth> Canada has spent billions on open spatial data.  We don't want silos preventing people from using our open data.  We want citizens to be able to use it without necessary intermediaries.  HTML fits that use case.
+13:19 <prushforth> Silos are created by friction, even small amounts of friction, at scale.
+13:19 <AmeliaBR> From Tom Lee, the open street map statistics page:
+13:19 <AmeliaBR> https://wiki.openstreetmap.org/wiki/Stats#Database_statistics_-_Active_reports
+13:19 <AmeliaBR> 
+13:22 <thehabes> Making open data doesn't necessarily mean sharing data.  Open data is generated and left in a bucket, and becomes shared when someone decides to use it.  If it isn't interoperable, standard, or friendly in any way, no one will pick it up.  This is important for Feature data in maps, which are separate from the georeferenced map of the world platform.
+13:22 <briankardell_twitter> I'm very sorry to have missed much of the morning - II had numerous conflicts... I'm very much looking forward to the videos and wicg chat on some of those!
+13:23 <thehabes> [edit] Making open data doesn't necessarily mean sharing data.  Open data is generated and left in a bucket, and becomes shared when someone decides to use it.  If it isn't interoperable, standard, or friendly in any way, no one will pick it up.  This is important for Feature data in maps, which are separate from the "georeferenced map of the world" system which can consume Features.
+13:24 <prushforth> What do the commercial map providers say about the accessibility needs that have been expressed by our workshop participants?  This is also the layer in which HTML sits.
+13:27 <prushforth> Hail Ed! No separate geospatial web!!
+13:28 <bdon_gitlab> ^ same question as peter but for i18n/l10n
+13:28 <thehabes> Nicely said @edpars0ns .  This is why I like GeoJSON-LD and LOUD, and why I am trying to get it to a place where we can do some maintenance to catch it up with JSON-LD 1.1
+13:29 <prushforth> If I was a commercial map provider, and I saw a movement towards standardizing the domain in which I worked, I would get out in front of it, and support it.
+13:31 <IvanSanchez_gitlab> @prushforth I disagree, hard. Essay, 3VE chapter.
+13:31 <bdon_gitlab> [edit] ^ same question as peter but for i18n/l10n
+13:31 <prushforth> +1, sorry I forgot this important use case(s).
+13:32 <thehabes> Yes, because interoperable data thinks of extendibility as a forethought, not an afterthought.  If you use it, your data can be taken and extended/enhanced, instead of overwritten
+13:33 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:33 <prushforth> link for those without one, thanks!
+13:34 <thehabes> Interoperable 2D data should be extendable to include 3D or 3D+Time, not discarded.  The 2D Map stuff being done now should be used to continue towards more complicated dimensional data
+13:34 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:34 <IvanSanchez_gitlab> That would be https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part3-three-vertical-elephants.html
+13:35 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:35 <IvanSanchez_gitlab> If I were a 3VE, yeah, I'get in front. If I were not, going in front would be getting myself ready to get stomped.
+13:35 <IvanSanchez_gitlab> [edit] If I were a 3VE, yeah, I'd get in front. If I were not, going in front would be getting myself ready to get stomped.
+13:36 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:36 <IvanSanchez_gitlab> (Unless I were a startup and my cash-out strategy would be getting bought by a 3VE)
+13:36 <briankardell_twitter> > What do the commercial map providers say about the accessibility needs that have been expressed by our workshop participants?  This is also the layer in which HTML sits.
+13:36 <briankardell_twitter> 
+13:36 <briankardell_twitter> I could be taking this really really out of context having missed a lot, but at some point you need to do things like paint pixels - for many things in the platform you can explain parts of the platform in terms of other parts of the platform.  Those things ultimately dont necessarily need to be mutually exclusive, do they?
+13:36 <prushforth> OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS 
+13:36 <IvanSanchez_gitlab> @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:38 <prushforth> [edit] OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS 
+13:38 <prushforth> https://www.youtube.com/watch?v=mbyGfXO72mo&list=PLA07raojXKMvK7plRxgROfDIXiTkcBtWf&index=1
+13:38 <thehabes> We will always become smarter, faster, wiser because we do not have the brains to get things exactly right the first time.  But we build on what we can get right, and data needs to be flexible to grow with us.  
+13:38 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:38 <AmeliaBR> The 3 vertical elephants, ahhh… I haven't heard that phrase, but so true when talking about web maps. One of the disappointments of this conference is that we haven't convinced more Google / Apple / Microsoft folks to participate, from either the map or the browser ends of those elephants.
+13:38 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:38 <edpars0ns> Not really issues with both - CC0 best perhaps ? 
+13:38 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:38 <edpars0ns> From my perspective that is
+13:40 <AmeliaBR> From the zoom chat:
+13:40 <AmeliaBR> From Chris Little:
+13:40 <AmeliaBR> Maybe Karel was talking about the OGC Standard for User Feedback https://www.ogc.org/standards/guf 
+13:40 <AmeliaBR> 
+13:40 <AmeliaBR> From Jonathan:
+13:40 <AmeliaBR> Licensing: A quick search of my database shows 1759 different values for "access_constraints" across 187,000 spatial web services.
+13:40 <AmeliaBR> 
+13:40 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:40 <IvanSanchez_gitlab> I have a very biased point of view about this particular issue - a bias that spawned from a 2009(?) conference in Sevilla with a Google Spain representative, who ripped off the Open Data Definition, changed three points, and gave a talk about "this are the conditions that your data has to have so it can be used by Google"
+13:41 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:41 <IvanSanchez_gitlab> So, at least from my eyes, Google has been fighting *against* Open Data licenses for years. And I guess you're aware it'll take effort to change my mind.
+13:41 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:41 <IvanSanchez_gitlab> And yes I'm aware this is a biased point of view, but I'm allowed to have a biased point of view based on my experiences, am I not?
+13:41 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:41 <edpars0ns> Yes well we don't all sing from the same songsheet
+13:41 <IvanSanchez_gitlab> [edit] @edpars0ns We got Creative Commons and ODBL licenses for years, and they're clear enough
+13:41 <edpars0ns> At Google I mean
+13:42 <prushforth> I have heard, but can't speak authoritatively, that performance and accessibility are closely related
+13:42 <thehabes> Little geo data, from the GeoJSON-LD talk last week : http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf
+13:42 <prushforth> For instance old devices 
+13:42 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:42 <satakagi> I don't know the idiom "elephant in the room" because I'm not familiar with English.w
+13:42 <AmeliaBR> [edit] From the zoom chat:
+13:42 <AmeliaBR> [edit] From Chris Little:
+13:42 <AmeliaBR> [edit] Maybe Karel was talking about the OGC Standard for User Feedback https://www.ogc.org/standards/guf 
+13:42 <AmeliaBR> [edit] 
+13:42 <AmeliaBR> [edit] From Jonathan:
+13:42 <AmeliaBR> [edit] Licensing: A quick search of my database shows 1759 different values for "access_constraints" across 187,000 spatial web services.
+13:42 <AmeliaBR> [edit] (And 79364 of them have NULL access_constraints - so no clearly defined license at all).
+13:42 <AmeliaBR> [edit] 
+13:42 <prushforth> [edit] OGC apis are great for professional developers, which is a different audience than those who use HTML/CSS 
+13:42 <hylkevds> The new OGC APIs and SensorThings API are quite usable for people with only limited JS knowledge, but still, the easer it is the better
+13:42 <thehabes> I just want that Point to draw!
+13:43 <prushforth> Join the maps for HTML community group
+13:44 <thehabes> I'll do it if you promise to draw my Point
+13:44 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:44 <AmeliaBR> “elephant in the room” = a very large problem that everyone is ignoring because they don't know what to do with it. (I honestly don't know what story it is from.)
+13:45 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:45 <satakagi> Thanks
+13:45 <prushforth> lol we can draw points
+13:45 <prushforth> not very well yet
+13:46 <thehabes> haha not helping your case
+13:46 <prushforth> The panel have all been great sports for entering the building.
+13:47 <thehabes> Or if the provider is doing something ridiculously proprietary, like encoding coordinates using base64 encoded wingdings. 
+13:48 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:48 <IvanSanchez_gitlab> That part of my essay literally starts with an explanation of "elephant in the room" :-D and BTW @AmeliaBR the wikipedia article I link from the essay explains the ethymology of the expression, back to 1814 :-D
+13:48 <thehabes> Even paid providers, or perhaps especially paid providers, should be producing well encoded data
+13:49 <IvanSanchez_gitlab> @thehabes You mean like that infamous UK company encoding coordinates in a triplet of words from a 40000 word dictionary?
+13:49 <thehabes> @IvanSanchez_gitlab haha exactly!  I'm not paying for that
+13:49 <prushforth> HTML is the only standard with the appropriate scope for geo data
+13:51 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:51 <AmeliaBR> 🙈 The fact that I skimmed over that intro & straight to the subheading is probably relevant to the idiom…
+13:52 <IvanSanchez_gitlab> [edit] @prushforth I disagree, hard. Essay, 3VE chapter.
+13:52 <IvanSanchez_gitlab> 🙄🤣
+13:52 <prushforth> Vector tiles and HTML can play well together btw
+13:53 <prushforth> opaque formats are silos
+13:54 <thehabes> The indoor accessibility stuff blew my mind.  The granularity that geo stuff depends on is intense.
+13:55 <thehabes> The links Ted is talking about
+13:55 <thehabes> http://docs.opengeospatial.org/per/19-032.html
+13:55 <thehabes> http://docs.opengeospatial.org/is/14-005r5/14-005r5.html
+13:55 <zcorpan> Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:56 <zcorpan> [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:56 <prushforth> The stuff I presented in Part One of the MapML proposal: <map> <layer> and <extent>.
+13:57 <zcorpan> [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:57 <AmeliaBR> I think that question was supposed to be for the panel, Peter… 😉
+13:57 <zcorpan> [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:57 <prushforth> boo
+13:57 <zcorpan> [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:57 <zcorpan> :)
+13:57 <zcorpan> [edit] Question: if you have to prioritize and pick 1 or 2 smaller parts/features of web maps to be implemented in browsers in the near term, what would they be?
+13:57 <prushforth> jk
+13:59 <thehabes> Simplest thing is a map of the world that can translate Event locations into coordinates under one coordinate reference system  
+13:59 <IvanSanchez_gitlab> I must remind @edpars0ns that integrating Google Maps could be waaaaaaaaay easier and could not depend on crazy hacks, as I explained in my talk :-)
+14:00 <thehabes> Second thing is taking an image of a Map and making it work like that initial map
+14:00 <edpars0ns> @IvanSanchez_gitlab you could just use the API ;-)
+14:00 <IvanSanchez_gitlab> Which I am!
+14:00 <thehabes> Third thing is transposing other, perhaps inaccurate, maps or images of maps on that map and inheriting the Event functionality
+14:01 <thehabes> [edit] Third thing is transposing other, perhaps inaccurate or fragmental, maps or images of maps on that map and inheriting the Event functionality
+14:01 <IvanSanchez_gitlab> @edpars0ns I am **literally** using the JS API, because the tile API documentation is so obscure and hard to find and restricted to "select users" that most people don't know there's one
+14:02 <IvanSanchez_gitlab> @edpars0ns I'll throw my gauntlet here: you tell me which **public**, **widely-available**, "keep-it-simple" API can I use to make GoogleMutant less of a hack, I'll make it less of a hack
+14:03 <thehabes> @IvanSanchez_gitlab I figured you were just going to write that for us :)
+14:03 <IvanSanchez_gitlab> ...because "keep-it-simple" is f****** using the f******* tiles as I f******* said in my talk
+14:03 <IvanSanchez_gitlab> *takes a breath*
+14:05 <shepazu> Good panel, and good moderating, @tguild 
+14:05 <AmeliaBR> From Tom Lee on Zoom:
+14:05 <AmeliaBR> we have been at this for many years and are still working on our first projection!
+14:05 <AmeliaBR> 
+14:06 <prushforth> Great panel Ted and panelists: thank you!
+14:07 <prushforth> Re: keep it simple, please read https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf 
+14:15 <IvanSanchez_gitlab> Before the code-of-conduct people jump at me for writing `f*******` a few times in a row: I'm getting heated, passionate and angry here, and right now I think Ed is taking a hypocrite point of view by asking people to "make it simple" while basically being in charge of a platform that does, in fact, **not** "make it simple" to get data from (for
+14:15 <IvanSanchez_gitlab> political/licensing/let's-ensure-that-the-browsers-send-telemetry reasons) as should have been made clear by GoogleMutant.
+14:15 <IvanSanchez_gitlab> 
+14:15 <IvanSanchez_gitlab> So I'll be logging off and taking a breather here. And once again I invite everybody to read my essay at https://ivan.sanchezortega.es:444/politics/2020/08/13/mapml-essay-tldr.html and to reply to the points of the essay or to the "gauntlet throwing" I did few minutes ago in the form of written articles/blog posts/esssays/whatever, because I don't feel I'll be capable of holding a civil conversation in
+14:15 <IvanSanchez_gitlab> chat.
+14:16 <IvanSanchez_gitlab> [edit] So you're talking about logistics, ultimately? Supply-chain optimization via business intelligence *a la* Carto (https://carto.com/) ?
+14:16 <NicolasRafaelPalomino> Obviously that is logistics and supply-chain optimization. That was the example given there... But that's just an idea of how the software could be used and developed in that specific case. I guess the problem that maps for web will solve is the inter-connectivity with ''Things''. I'm highlighting what systems could be implemented in the map development with the widgets in order to get the most of
+14:16 <NicolasRafaelPalomino> it and to work on ways that could possibly change IT infrastructures or atleast change how they operate to facilitate how Humans operate in general.  Other then that, there is countless ways geospatial data technology could be used to create new opportunities. But like I said, its about the possibilities of creating new ecosystems as the data is being available on the maps. Anyhow, I'm also trying
+14:16 <NicolasRafaelPalomino> to understand how new Software Developments are crucial to give maps an utility as well as giving us  tools to make new standards in telecommunications as new wireless technologies are being deployed. That is why it is hard to name something that has not yet been created yet. I do not have pieces of codes that would explain how such mechanism would work if that's what you're asking ,sorry!! That's
+14:16 <NicolasRafaelPalomino> an idea overview for the engineers and the developers. :)
+14:17 <thehabes> But we hope the platform is friendly enough that a researcher would use it study proposed ideas about solving world hunger
+14:26 <thehabes> Awesome @Raitis that is cool.  Is that like a desktop app?  That composition JSON doesn't seem like it is for a Web app but I could be wrong.
+14:29 <thehabes> Like I have GeoJSON,  but it is behind a URL.  Could I just supply it a URL that is a GeoJSON object?  Kind of like http://devstore.rerum.io/v1/id/5f6b903ae4b0a2afb73aeddf but without all the stuff around its `obj.body`
+14:32 <thehabes> That's cool.  I think we call the `Content State` in our API, and our state object looks a lot like that composition JSON
+14:34 <thehabes> But that state object is not webby, it is meant to be uploaded at instantiation and I couldn't just pass it a URL either.  ty, here is the link to the repo he was talking about https://github.com/hslayers/hslayers-ng
+14:41 <prushforth> woot
+14:44 <thehabes> @RunaBergheim GeoJSON is the default everyone goes with.  I am discovering this, everywhere.  It is a not-so-secret de facto.
+14:45 <thehabes> @RunaBergheim We have an extremely similar stack.  We just don't do the socket stuff.
+14:47 <thehabes> @RunaBergheim If you haven't yet, add GeoJSON-LD context (https://geojson.org/geojson-ld/) to your data, and look to produce 5 stat data (https://5stardata.info/en/)
+14:48 <thehabes> [edit] @RunaBergheim If you haven't yet, add GeoJSON-LD context (https://geojson.org/geojson-ld/) to your data, and look to produce 5 star data (https://5stardata.info/en/)
+14:48 <prushforth> Questions for the Map Whiteboard team
+14:49 <thehabes> @RunaBergheim This is already being worked on as a standard thing in the mapping community.  See https://iiif.io/community/groups/maps/, and expect an invitation soon
+14:50 <prushforth> [edit] Questions for the Map Whiteboard team
+14:50 <prushforth> add them here
+14:51 <prushforth> [edit] Questions for the Map Whiteboard team
+14:51 <thehabes> Have you looked into producing 5 star data? (https://5stardata.info/en/)  You have essentially done everything besides contextualizing your data.
+14:56 <briankardell_twitter> is it just me who is having trouble with w3c site today - I can't get to peter's link
+15:00 <NicolasRafaelPalomino> Great presentations! Thank you
+15:01 <briankardell_twitter> @prushforth can you share your pdf linked above another way?
+15:01 <thehabes> Challenge 3 Link : https://www.plan4all.eu/2020/09/challenge-3-citizen-science-network-for-peer-to-peer-maps-sharing/
+15:01 <thehabes> Challenge 5 Link : https://www.plan4all.eu/2020/09/challenge-5-whiteboard-future-collaborative-maps/
+15:02 <prushforth> @briankardell_twitter  you can't get to this link: https://www.w3.org/2020/maps/agenda
+15:03 <prushforth> ?
+15:03 <briankardell_twitter> @ahocevar I missed your presentation unfortunately, but I am looking forward to the video.  Offscreen canvas patches in webkit minus stuff about text were just pushed yesterday by igalia woot
+15:03 <briankardell_twitter> @prushforth nope
+15:03 <prushforth> ok I'll email it to you
+15:03 <briankardell_twitter> thanks
+15:04 <briankardell_twitter> not sure what is happening, but I am clearly able to log in to some things, and others don't let me
+15:04 <briankardell_twitter> happened for csswg today too
+15:11 <AmeliaBR> @briankardell_twitter , I'm not having any trouble with w3.org, but if you just want to download people's presentations / position statements, you can get them from the website repo: https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/tree/master/supporting-material-uploads
+15:20 <briankardell_twitter> thanks amelia - https://github.com/Maps4HTML/Maps4HTML-Workshop-2020/blob/master/supporting-material-uploads/position-statements/Peter_Rushforth-CCMEO.pdf is i guess what I was looking for

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>SV_MEETING_TITLE -- 02 Oct 2020</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css">
+  <meta content="SV_MEETING_TITLE" name="Title">  
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>SV_MEETING_TITLE</h1>
+<h2>02 Oct 2020</h2>
+
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>ted</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">Summary, conclusion and next steps</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+</ul>
+<hr>
+<div class="meeting">
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; Evening all!
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; OK hello everyone, chat here to provide commentary and questions
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Other thing like Bootstrap and Chota ultimately feel a lot like this too, being HTML powered markup.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Other thing like Bootstrap and Chota ultimately feel a lot like `&lt;picture&gt;`, `&lt;audio&gt;`, `&lt;form&gt;`, etc. being HTML powered markup.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; oof definitely not `&lt;geo&gt;`
+</p>
+
+<p class='irc'>
+&lt;<cite>rahola_gitlab</cite>&gt; Emoji idea is interesting. No language barrier.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I don't want to disagree with the speaker's general thrust which I very much agree with, but my interpretation of picture is very different actually
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Heck yeah I don't want to have to type `&lt;latitude&gt;` every time it isn't already copied to my clipboard when `,lat&gt;` is an option
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Heck yeah I don't want to have to type `&lt;latitude&gt;` every time it isn't already copied to my clipboard when `&lt;lat&gt;` is an option
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; @briankardell_twitter yeah, I was also going to say... the history for `&lt;picture&gt;` as stated is not correct -- it was actually developed by web developers first
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; right
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; the data would suggest it is more used than video despite being much newer too
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; <a href="http://rainy-periwinkle.glitch.me/permalink/bea7b74a0b231db72177e1cbc3f0492bfdcccf53ac306d878dbc8e7bb67bab7f.html">http://rainy-periwinkle.glitch.me/permalink/bea7b74a0b231db72177e1cbc3f0492bfdcccf53ac306d878dbc8e7bb67bab7f.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; <a href="http://rainy-periwinkle.glitch.me/permalink/c9fd4fa6a80a90c38a8552aa14724e59fd39afc4a4341e6d87744f1653b7f609.html">http://rainy-periwinkle.glitch.me/permalink/c9fd4fa6a80a90c38a8552aa14724e59fd39afc4a4341e6d87744f1653b7f609.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; both -- aside from that, I am all onboard with the rest actually
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; also we had archive data on the picture polyfill before it was taken up
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Who would you ask? In my workplace, once you get outside the UI team developers are back end developers that may be developing UI and THEY DO NOT REALIZE HTML IS A SEMANTIC LANGUAGE
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I HATE that the order of [latitude, longitude] is not uniform (ex, taking goole map coords into leaflet)
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; I think the argument that `&lt;picture&gt;` is an awkward markup API is true, though, but that's more because of the incremental development with a focus on fallback &amp; reusing other attributes/elements, vs video &amp; audio were more created all together.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @edent_twitter If this were an in-person talk, I'd be nodding in agreement like 95% of the time
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; @AmeliaBR yeah - that is fair, and so is much of what the speaker said about the involvement of standardistas - I dont think picture was anyone's first take
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; one of the brians :)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I asked a q above!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Heck yeah I don't want to have to type `&lt;latitude&gt;` every time it isn't already copied to my clipboard when `&lt;lat&gt;` is an option
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Given that you'll only need to type `latitude` every once in a while, I think understandability trumps a few keystrokes
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @edent_twitter sure we may not know how to use it without looking at it, but if it supports formats we have all become comfortable with the transition into it is more seamless
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Heck yeah I don't want to have to type `&lt;latitude&gt;` every time it isn't already copied to my clipboard when `&lt;lat&gt;` is an option
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; In the zoom chat, Jonathan Moules made the same point:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Code is write-once read many. "Latitude" is thus clearer than "lat".
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I understand the `&lt;feature&gt;` element after looking at it once because I use geoJSON, but I didn't understand `&lt;layer&gt;` and `&lt;extent&gt;` after one look.\
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; @prushforth ^
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Heck yeah I don't want to have to type `&lt;latitude&gt;` every time it isn't already copied to my clipboard when `&lt;lat&gt;` is an option
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; <a href="https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API">https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; latitude
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] <a href="https://developer.mozilla.org/en/docs/Web/API/Geolocation_API">https://developer.mozilla.org/en/docs/Web/API/Geolocation_API</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] latitude
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @zcorpan  you next
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Definitely, I will not have much to say until I make a few P.O.C's from user stories I understand
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] <a href="https://developer.mozilla.org/en/docs/Web/API/Geolocation_API">https://developer.mozilla.org/en/docs/Web/API/Geolocation_API</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] &gt; position.coords.latitude
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @zcorpan do you have a link to those origin trials?
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; <a href="https://developers.chrome.com/origintrials/#/trials/active">https://developers.chrome.com/origintrials/#/trials/active</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="https://www.chromium.org/blink/origin-trials">https://www.chromium.org/blink/origin-trials</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Amazing response time
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; ty
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; Thanks for all the questions gang. I'll be sticking around for a bit - but it is quite late in the UK :-)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; J Moules (via zoom chat): Code is write-once read many. "Latitude" is thus clearer than "lat".
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Thanks Terence for your contribution tonight!
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; yeah like really far in that direction!
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; For developers it is becoming more important that APIs don't tighten themselves into a box.  Extendability considerations are key.  2D should only be different from 3D by 1 dimension, and that dimension should be possible with a small extension and vocabulary.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; The time element additions should be standard, and work in all dimensions it affects
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="https://wpc.guide">https://wpc.guide</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I think implementation before standards is why we are at this impass
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Why don't you show how you can do what google maps can do?  Commercial web sites use google maps because it does what they need done, is supported and can be easily brought into their website.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; If I am left without rails to the pool of infinite possibilities, I will always pick the one with the least friction.  Standards = friction
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Google maps is not the Web.  It can inform a standard though.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @thehabes Standards = maintaining the commons, so as to avoid tragedy
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="https://maps4html.org/HTML-Map-Element-UseCases-Requirements/">https://maps4html.org/HTML-Map-Element-UseCases-Requirements/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @prushforth Sure, but it means doing things to a lesser degree of freedom than being able to do whatever you want.  Implementing without a standard is just that, be as free as I want to accomplish my task.  Standards seem an extra layer of complication for what seems unbeneficial as an overall part of finishing the task.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Of course now I know this is not the case, but I had to filter though some standards to understand why.  A contract developer often does not have the time to go through the gauntlet.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; But if you say "you must use this standard", then they have their rails
+</p>
+
+<p class='irc'>
+&lt;<cite>dmorissette</cite>&gt; My WMS 1.3 axis order rant: <a href="http://dmorissette.blogspot.com/2012/12/dont-upgrade-to-wms-130-unless-you.html">http://dmorissette.blogspot.com/2012/12/dont-upgrade-to-wms-130-unless-you.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; A standard doesn't stop you going your own way if you want. You can still use Flash video, or build your own component. But a standard makes it easier for people who don't want to roll their own.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Yeah I guess people in the framework domain complain about the DOM, and wish they could re-invent the Web because they aren't document-oriented, they're app-oriented
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @edent_twitter exactly!
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Also, a standard should enable "progressive enhancement" by providing a reasonable simple api that can be built upon
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; No, it doesn't stop me.  But then all my labels become strings, and we know that doesn't work for internationalization or accessibility technilogical concerns.  Or it means I use `&lt;a&gt;` instead of a `&lt;button&gt;` because I like it more
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] No, it doesn't stop me.  But then all my labels become strings, and we know that doesn't work for internationalization or accessibility technological concerns.  Or it means I use `&lt;a&gt;` instead of a `&lt;button&gt;` because I like it more.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Thankfully there is not native carousel element.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I agree with @zcorpan here - a `&lt;slippy&gt;` 2D pannable/zoomable thing is sensible, and some better way to build over WebGL/OpenGL (in a way that could fit with the D3 data model with less friction) would be awesome for dataviz in general
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Thankfully there is not native carousel element.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; ...but there is, and it's called `&lt;marquee&gt;`!
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Thankfully there is not native carousel element.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; lol
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Brian Kardell: Igalia has hackfests
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @fredesch Performance, accessibility, community, standards, HTML is everywhere non-siloed I could go on, but here's my presentation on it: <a href="https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx">https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Q: Based on implementation headache, what are some specific missing browser features which would make web map libraries easier to build?
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; On the other side, can we improve standardization at the geo level (e.g., common format / syntax) to make things easier without browser changes?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @tomkralidis q+ ^ from @AmeliaBR
+</p>
+
+<p class='irc'>
+&lt;<cite>tomkralidis</cite>&gt; k
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Darn good point Will.  We need the community to approach the orgs with $ to help.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; Here's my argument for creating it - <a href="https://shkspr.mobi/blog/2017/08/mapping-in-html-a-proposal-for-a-new-element/">https://shkspr.mobi/blog/2017/08/mapping-in-html-a-proposal-for-a-new-element/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @prushforth @fredesch ...and yet, I'm one of those people who will argue that one can get perf, accesibility, community and standards without putting more code in web browsers.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; You can't solve the problems I mentioned in my presentation without  a native element or two.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; What Andreas said
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Allowing a switch between different coordinate rendering systems (I think this is what I mean to say, but my vocabulary in this field isn't perfect)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Also, consistent vocabulary would be nice.  The more groups I interact with, the more I realize people have different meanings of `goecode`, `geolocate`, `georectify`, `georeference`, `co-locate`, etc.
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; it feels like plugging here but our rendering team is amazing, and we are even making the new Vulcan stuff.. I feel like we could help with that
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I understand folks want a native element but why would a browser add one when it will negatively impact performance of the browser. Performance affects market share.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; ...the way I see it is what I wrote in my essay about 3VE - I can imagine Google wrapping the native Android Google Maps Java code into Android Chrome, and make sure it works better with Google Maps (and Google Maps only)
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Awesome!  Let's work together
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; Why would it impact the performance of the browser? Done right, it would use a phone's native mapping app and improve the performance.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Where I work, we still have to support IE11. We are slow to adopt new features...
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; It impacts performance just by the fact that there's more code to ship and update
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Allowing a switch between different coordinate reference systems (I think this is what I mean to say, but my vocabulary in this field isn't perfect)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Also, consistent vocabulary would be nice.  The more groups I interact with, the more I realize people have different meanings of `goecode`, `geolocate`, `georectify`, `georeference`, `co-locate`, etc.
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; It's late here and I need to go to bed. Thanks for all the great chat. Hope to see you all in person soon. Bye!
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Thanks Terence, goodnight!
+</p>
+
+<p class='irc'>
+&lt;<cite>edent_twitter</cite>&gt; [edit] It's late here and I need to go to bed. Thanks for all the great chat. Hope to see you all in person soon. Bye!
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @ahocevar re: WebGL accessibility towards web devs, I blame early implementos for being lazy on just porting the OpenGL2 ES API instead of wrapping it in actual object-oriented abstractions
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] @ahocevar re: WebGL accessibility towards web devs, I blame early implementors for being lazy on just porting the OpenGL2 ES API instead of wrapping it in actual object-oriented abstractions
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; Very good point @IvanSanchez_gitlab.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; very true
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; (replace "lazy" with "pressured by management" or "under haste because of release dates" or whatver underlying reason, but my point of view as an outsider remains the same)
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I have a fun probably very off topic question.  Does the proposed `HTTP2 ` affect how HTML might work now, and does its existence mean that something is waiting for an extended HTML?
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; AFAIK HTTP2 only affects TCP connections, it shouldn't affect HTML.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I read a book on it, but have not implemented it in any way yet.  I have a fairly naïve understanding of it.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; As fas as maps go, it would alleviate the reasons for the hacks we use to load more tiles in parallel
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Wow not expecting answers.  Color me surprised.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Lol did not know `HTTP3` existed yet
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; The way I see it is that Google has a search business that is probably more important than maps, and is based on searching.  Maps could help the former business and I don't really see a standard for maps competing with their maps product, actually.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Cool, thanks for the explanation
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Jonathan Moules in Zoom:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; HTTP is a Transport Protocol. It shouldn't really care about the stuff that's going over it, that's a higher level of the OSI model.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; How do we teach our kids about maps if we don't have a standard for maps
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; (insert "map reduce" joke here)
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Answering @tomkralidis , I see a dystopian future where only three web mapping platforms work well natively in three web browsers.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; We support health provider search in our network. We have a list view and a list + google map view.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; You can click on a marker see which provider(s) are there and get directions to the provider (also has more info like phone number rating...)
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; You have the same info in the list view
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; It impacts performance because there is more to parse and worry about putting in the accessibility tree
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] Why the emphasis on making a native map element?  A widget that does MapML or whatever standard you want to push can get usage and support quickly compared with trying to get a native HTML element implemented.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Also events...
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Being fully on the developer side, I hate that I had to learn about different coordinate reference systems and why my coordinates don't work the same everywhere.  This makes `Features` way more abstract than they should be.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Jonathan Moules:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; What Daniel's talking about is a flavour of the Jevons Paradox - <a href="https://en.wikipedia.org/wiki/Jevons_paradox">https://en.wikipedia.org/wiki/Jevons_paradox</a> - "When technological progress or government policy increases the efficiency with which a resource is used the rate of consumption of that resource rises due to increasing demand"
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] Being fully on the developer side, I hate that I had to learn about different coordinate reference systems and why my coordinates don't work the same everywhere.  This makes `Features` way more abstract than they should be.  Even when lat/lon order doesn't matter, like `[12,12]`.  That should always put me in Africa.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @prushforth The way I see it, a standard for maps would enable (easier, cleaner) adversarial interoperability, and that's bad for business
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; I don't hear anyone talking about how you relay the semantics of a map to a screen reader.  I did miss the first hour on Wednesday...
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; See one of the links from my essay, <a href="https://www.eff.org/deeplinks/2019/10/adversarial-interoperability">https://www.eff.org/deeplinks/2019/10/adversarial-interoperability</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Ivan, I bought a domain but haven't had time to blog about it, but we disagree.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; If you get a native element. you must also define the semantics of the element and the accessibly APIs
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Making controls a commonly available API helps everyone, especially accessibility; you can make them flexible through the API
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @fredesch I think the &lt;feature&gt; element would be where I would say to start?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Are maps considered for "offline" functionality, like how it can be with downloaded local Google Map data
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Service workers?
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; PWA
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; Was just going to say that.
+</p>
+
+<p class='irc'>
+&lt;<cite>ahocevar</cite>&gt; Already covered by existing standards.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; From Chris Little on Zoom:
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; Question: does the panel think that maps will only take off when AR does?
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Maps are already big!
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; Offline/cached stuff is a political/economical problem, not a technical one. As I said yesterday, preventing users from caching means more billable HTTP requests, which means more cash.
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yeah like service workers I suppose.  I guess since `&lt;map&gt;` would be HTML that ties right in.  +1
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; I think maps have taken off already
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; (I feel like I'm repeating stuff that I already wrote about, but I made a radical proposal for P2P IPFS-like caches at <a href="https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part5-the-gold-the-moor-the-sausage-machine.html">https://ivan.sanchezortega.es:444/politics/2020/09/01/mapml-essay-part5-the-gold-the-moor-the-sausage-machine.html</a>)
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; I feel like there are two very different aspects to the a11y questions... part of that is about interaction/interactive elements.. The answer to that is it should use the existing platform or fill in what is missing.  If it is about making the rendering accessible, are the existing forms not all there too?
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] I can't see how you will convince google to support a new element that will impact browser performance and compete with one of their commercial products. Widgets can be used by sites that want them.
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I know. I guess I'm just cynical like that. But as time goes by, my experience tells me that thinking in adversarial terms is good.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; There's a 50MB limit on iOS, by the way.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] There's a 50MB limit on iOS, by the way. &gt;Service wirker cache
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; 1000 use cases in one place : <a href="https://gisgeography.com/gis-applications-uses/">https://gisgeography.com/gis-applications-uses/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>briankardell_twitter</cite>&gt; they have proprietary a things in everything else the browser does/did too
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; You need two implementations to be added to HTML.
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; My analogy: YouTube (and its Google owners) didn't block `&lt;video&gt;`, it adopted it. IMO, The commercial asset is the map content (and the paid services to search/use it), not the map viewer.
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Won't Joanmarie require you have semantics and accessibility APIs defined for a new element?
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Yes.  It often has to be explained that an Image of a Map is not a map, especially to the Web.  It is an image.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; @AmeliaBR
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; The video element is similar to the video shown in youtube, but the map being discussed here seems to be similar to a service like youtube.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] @AmeliaBR
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit] The video element is similar to the each video shown in youtube, but the map being discussed here seems to be similar to a service like youtube.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; [edit]
+</p>
+
+<h3 id="item01">Summary, conclusion and next steps</h3>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; scribenick: ted
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: this is the last of our live sessions but not end of the workshop, reminder all the sessions are recorded and posted to Youtube
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … continued conversations on Discourse
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; While we're plugging things, I'd like to also say that we (Bocoup) are available for hire to help to standardize new things for the web platform and drive consensus among stakeholders :)
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … anyone you know who haven't been engaged in the discussions but interested, please direct them to agenda page and Discourse for videos and the next stage
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: thank you everyone, appreciate all the input and different perspectives
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I want to reiterate a number of things I learned this week. first and foremost is the importance of accessibility for web maps
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … augmented reality will be important as well
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … understanding of needs for web maps will evolve
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … are there other stakeholders that you can identify that should be looped into this conversation?
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … do people agree standardizing maps for the web is worthwhile? I know some disagree
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; standardization is good
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Absolutely.  There are many stakeholders in cultural heritage and digital humanities.  We are a group that represents that stakeholder, and can be found at <a href="https://iiif.io/community/">https://iiif.io/community/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; And specifically <a href="https://iiif.io/community/groups/maps/">https://iiif.io/community/groups/maps/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … what are the next steps? try to form a new Working Group at W3C? perhaps a joint group with OGC or go back to the Community Group...
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Next steps : Integrate as implementers, do some small P.O.C's within the group if possible, and connect with feedback.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I got making maps a first class citizen on web backward, first we need to get stakeholders, especially those wishing to fund this involved
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; Worthy goal? maps is the future for sure.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; I forgot to mention internationalization
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Doug: summary not as neccessary given people can watch the videos at their leisure
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … focusing on take aways, future directions better for next stage
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: we should strive to have a report with conclusions within a month
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … whether it is just a summary or makes recommendations on how to advance
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: text rendering built into browsers should not have to be duplicated or repeated but can be leveraged
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I agree we should wholeheartedly embrace all the effort that went into browser rendering
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: we work with museums, librariers etc and I look forward to bringing this to my group and willing to work on proofs of concepts and bring back feedback
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I will be more helpful and informed instead of have intrepidations
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: this proposal needs champions
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Bryan: we took on following GeoJSON and this workshop enforced it is being widely embraced
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: before we can describe this as a polyfill it needs to be tested
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: there are two sides to this story, we had a good discussion on low level issues such as rendering
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there is the other end where content creators who want an easy API for expressing their content on a map
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I suspect these things would need to move forward in parallel
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there are already leaf widgets. Peter's map element polyfill is currently done as a wrap around leaflet but there are other ways it could be done
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; All these institutions tend to have people that can dabble in HTML, but scripting is a major gap to cross.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … just playing around what the markup could look like while leveraging existing map engines worthwhile
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; Those people would definitely be less intimidated by a `&lt;map&gt;` element
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … Bryan's clients don't care about the implementation details but how it works and to describe their content
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @tguilf Which is why "including" the user the whole time in development doesn't always work in the devs favor
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; [edit] @tguild Which is why "including" the user the whole time in development doesn't always work in the devs favor
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; Having done charting engines, my concern is semantics, interactivity and accessibility
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; @prushforth and that's how most people treat them.  I want a map CMS that works like Omeka.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: I don't think anything is changed on the server side, this is just a more natural format with less friction
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; And I say that is not a real thing
+</p>
+
+<p class='irc'>
+&lt;<cite>thehabes</cite>&gt; And then we pick a stack
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … this is why the ESRI and MapBoxes don't see mapML as a threat
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; All these worlds are yours, @tguild, except Europa… attempt no landing there.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: semantics, accessibility all needed for html co-element
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … I think widgets are fine. having been in ARIA and other working group, trying to change elements a humungous task better to work on widgets
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we need better interactive ability, line of site, pan, zoom and understand spatial relationships
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … it is possible and more so than just with mouse over
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there are big gaps being missed
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; I think you have GeoJSON if only to represent the data.
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; For elements to represent geographic information other than mapml's map,layer elements.
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Amelia: good points Fred
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; I think that there were lots of explorations of accessibility throughout the workshop
+</p>
+
+<p class='irc'>
+&lt;<cite>NicolasRafaelPalomino</cite>&gt; I wonder why's maps and widgets are not yet being utilized and actively being developed in applications
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … how can we describe geographic content and interaction patterns in a standard way
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; @fredesch You missed my thing with the joysticks?
+</p>
+
+<p class='irc'>
+&lt;<cite>cmhodgson</cite>&gt; I think that semantics, interactivity and accessibility are the motivations for the &lt;feature&gt; element - we need something in the DOM to attach that too
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … maps on the web are not addressing these needs
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we need to make map widgets more accessible to more people
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Simon: we covered accessibility extensively earlier in these preceedings, what accessible maps can be like with eg touch and vibration for maps
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we should include this in the design by default
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Fred: most maps fail all WCAG2 guidelines
+</p>
+
+<p class='irc'>
+&lt;<cite>cmhodgson</cite>&gt; [edit] I think that semantics, interactivity and accessibility are the motivations for the &lt;feature&gt; element - we need something in the DOM to attach that too
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; Linking too
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … if you have a map element you should permit people to migrate around the map as easily with a keyboard as with a mouse, it is just essential
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Simon: one of the requirements should be maps need to be accessible
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … we need to have extensive discussions with the accessiblity community in order to make this successful
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Gobe: we have done a good job at discussing needs. for future events we should try to engage the hardware manufacturers, not just mouse manufacturers but all forms of interaction with applications
+</p>
+
+<p class='irc'>
+&lt;<cite>satakagi</cite>&gt; :+1:
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; FWIW, gaming has really improved their accessibility in both hardware and software in recent years
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; … there is considerable research on machine interfaces
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; @IvanSanchez_gitlab I saw your joystick that was very insightful
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Peter: I will post a link to Discourse chat so people can contribute their ideas on next steps and conclusions
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; I'm starting to really wonder if the joystick/gamepad behaviour from 2D maps in videogames (snapping to POIs, etc) could be ported over
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; Wendy: as Strategy Lead at W3C, happy to hear the discussion here and learn of new work you would like to see started at W3C
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; From the zoom chat:
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Accessibility links:
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="https://accessiblemaps.de/?page_id=121&amp;lang=en">https://accessiblemaps.de/?page_id=121&amp;lang=en</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="http://docs.opengeospatial.org/per/19-032.html">http://docs.opengeospatial.org/per/19-032.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; <a href="https://www.w3.org/community/lda/">https://www.w3.org/community/lda/</a> <a href="https://wheelmap.org/search">https://wheelmap.org/search</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; Bocoup review: <a href="https://bit.ly/bocoup-testbed16">https://bit.ly/bocoup-testbed16</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>fredesch</cite>&gt; [edit] @IvanSanchez_gitlab I saw your joystick that was very insightful
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; For reference: WIP at <a href="https://gitlab.com/IvanSanchez/leaflet.gamepad">https://gitlab.com/IvanSanchez/leaflet.gamepad</a> <a href="https://ivansanchez.gitlab.io/leaflet.gamepad/demo.html">https://ivansanchez.gitlab.io/leaflet.gamepad/demo.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] From the zoom chat:
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Accessibility links:
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] <a href="https://accessiblemaps.de/?page_id=121&amp;lang=en">https://accessiblemaps.de/?page_id=121&amp;lang=en</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] <a href="http://docs.opengeospatial.org/per/19-032.html">http://docs.opengeospatial.org/per/19-032.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] <a href="http://docs.opengeospatial.org/is/14-005r5/14-005r5.html">http://docs.opengeospatial.org/is/14-005r5/14-005r5.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] <a href="https://www.w3.org/community/lda/">https://www.w3.org/community/lda/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit]  <a href="https://wheelmap.org/search">https://wheelmap.org/search</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>zcorpan</cite>&gt; [edit] Bocoup review: <a href="https://bit.ly/bocoup-testbed16">https://bit.ly/bocoup-testbed16</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>IvanSanchez_gitlab</cite>&gt; [edit] I'm starting to really wonder if the joystick/gamepad behaviour from 2D maps in videogames (snapping to POIs, etc) could be ported over
+</p>
+
+<p class='irc'>
+&lt;<cite>dmorissette</cite>&gt; Your joystick example reminded me of a Kinect map control experiment we made a few years ago: <a href="https://vimeo.com/51767891">https://vimeo.com/51767891</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>tguild</cite>&gt; [adjourned]
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; <a href="https://discourse.wicg.io/t/conclusions-take-aways-and-next-steps/4893">https://discourse.wicg.io/t/conclusions-take-aways-and-next-steps/4893</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>shepazu</cite>&gt; Thanks for repasting that, @zcorpan
+</p>
+
+<p class='irc'>
+&lt;<cite>bdon_gitlab</cite>&gt; 2D OffscreenCanvas has been mentioned in a couple presentations - does anyone have insight into the status of getting it into WebKit and Gecko? (and what could we do to accelerate this?)
+</p>
+
+<p class='irc'>
+&lt;<cite>AmeliaBR</cite>&gt; @bdon_gitlab There's a work-in-progress implementation in Gecko, maybe @briankardell_twitter has info on WebKit.
+</p>
+
+<p class='irc'>
+&lt;<cite>prushforth</cite>&gt; @bdon_gitlab Also, maybe @ahocevar has some insight into this
+</p>
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+<h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+<!-- Resolutions -->
+<ol></ol>
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes manually created (not a transcript), formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.154 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2018/09/25 16:35:56 $ 
+</address>
+<div class="diagnostics">
+
+</div>
+</body>
+</html>
