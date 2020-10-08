@@ -1,0 +1,3670 @@
+WEBVTT
+
+1
+00:00:01.290 --> 00:00:01.709
+Ryan Ahola - Natural Resources Canada: Great, thanks.
+
+2
+00:00:03.510 --> 00:00:10.170
+Ryan Ahola - Natural Resources Canada: So thank you everyone for joining us this morning or afternoon or evening, whatever time it is where you are. So this is are
+
+3
+00:00:10.860 --> 00:00:17.070
+Ryan Ahola - Natural Resources Canada: We today to session for the maps for the work what maps for the web workshop. My name is Ryan a hold of.
+
+4
+00:00:17.609 --> 00:00:23.280
+Ryan Ahola - Natural Resources Canada: The number of Natural Resources Canada and I'm part of the program committee that's been helping with the with Organizing. Organizing this workshop
+
+5
+00:00:24.120 --> 00:00:33.240
+Ryan Ahola - Natural Resources Canada: So today we have a few different sessions, starting with the first presentation about creating an accessible by map widgets and then we'll have a panel discussion.
+
+6
+00:00:33.750 --> 00:00:46.620
+Ryan Ahola - Natural Resources Canada: About the same topic, then we'll move into presentations on 3D maps 3D map display and also looking at followed up by panel session on maps and augmented reality and then we'll close with a breakout session on
+
+7
+00:00:47.850 --> 00:00:51.420
+Ryan Ahola - Natural Resources Canada: To post with maps of objects. What to post for for web maps.
+
+8
+00:00:53.310 --> 00:01:04.350
+Ryan Ahola - Natural Resources Canada: I think Peter posted the link to the gator chat in the chat for zoom. So if you can access that. And if there's. If you have any questions or any discussion of course these are running get chat.
+
+9
+00:01:05.130 --> 00:01:15.420
+Ryan Ahola - Natural Resources Canada: Online. And I think that's all the logistical information today, so I guess we'll start with the presentation from Niccolo
+
+10
+00:01:16.530 --> 00:01:22.560
+Ryan Ahola - Natural Resources Canada: I'm going to mess up your last name. I'm sorry but car carpet Noli and Joshua. Joshua O'Connor.
+
+11
+00:01:23.730 --> 00:01:35.610
+Ryan Ahola - Natural Resources Canada: About accessible web map widgets specifically completed an introduction for research from the research questions accessibility Task Force, I'd be accessible platform architectural working group.
+
+12
+00:01:37.470 --> 00:01:47.550
+Ryan Ahola - Natural Resources Canada: And I believe this is being done through a video which I've set up here so I'll make sure that I'll share my screen. And we'll make sure that we're looking at the right one.
+
+13
+00:02:13.140 --> 00:02:14.940
+Ryan Ahola - Natural Resources Canada: Of course, that doesn't work when you want it to work.
+
+14
+00:02:19.170 --> 00:02:31.380
+Hi everybody, my name is Nicola, and today I'm going to talk about accessible and it shows for an active member you were for the web platform. I'm going to show you user needs and requirements.
+
+15
+00:02:32.970 --> 00:02:51.120
+And from the damage receive a PA I'm inviting experts and the first of all I'd like to thank Josh corner from the WBC that has helped me a lot with this presentation and all the other members of the RTS from the APA WCC
+
+16
+00:02:53.730 --> 00:03:05.040
+So today we're going to talk about accessibility and maps as you know map so use every day to find the rules to navigate provide other information and all other
+
+17
+00:03:05.580 --> 00:03:13.920
+Very important user needs maps can be either complex or simple objects and according to the user needs.
+
+18
+00:03:14.700 --> 00:03:36.600
+They are configurable so user, most of the time is reach between differently years in order to see different data from for the same geographic area. So as you can imagine, in general, maps are complex object and from an accessibility perspective they represent a challenge, but
+
+19
+00:03:37.620 --> 00:03:45.390
+We have to start from one aspect and maybe the most important is the need for annotations.
+
+20
+00:03:46.680 --> 00:03:54.750
+We talk about annotations of geolocation data and maps beta different. Why are they so important for accessibility.
+
+21
+00:03:55.980 --> 00:04:06.120
+Tony Stockman: Because once those invitations are specified and then delivered, they become available to be read from machines or from humans.
+
+22
+00:04:06.960 --> 00:04:24.090
+Tony Stockman: For different options such as known Visual. Visual outlets like speech scientists or like samples and this is very important because text annotations is the most portable format and the only one that can be translated into other forms.
+
+23
+00:04:25.530 --> 00:04:36.600
+So we start from the text annotations and then we can deliver the data and the information for different users.
+
+24
+00:04:38.640 --> 00:04:50.730
+Nicholas Giudice: We have grouped all these use cases and requirements into four main fields regarding use cases for maps information retrieval navigation comparing and monitoring.
+
+25
+00:04:51.690 --> 00:05:01.620
+Nicholas Giudice: And you're going to start from the first one. But first of all, we like to say that the following user needs are neither exhaustive nor definitely if
+
+26
+00:05:02.370 --> 00:05:18.120
+Nicholas Giudice: They represent a starting point to begin to orientate towards user needs and potential requirements. So is a kind of a way to start to think about accessibility for a map object for
+
+27
+00:05:21.060 --> 00:05:34.590
+So usually is for information retrieval. We are going to start from the first user is. And the first two requirements. Okay, so the first user needs a student wants to learn the boundaries of a certain geographical area.
+
+28
+00:05:36.300 --> 00:05:54.570
+We have two requirements to solve these different regions must be labeled with text and other metadata and each place of interest. For example, like cities should be available with labels that should contain not only the place of interest, but also the region where it belongs.
+
+29
+00:05:55.980 --> 00:06:13.350
+In this user name and all other presented in this presentation meta data, maybe area or other HTML attributes. So this is to give some kind of nomenclature for meta data.
+
+30
+00:06:15.030 --> 00:06:23.730
+The second user needs a researcher wants to analyze the geographical area user using different room lever same measurements so
+
+31
+00:06:24.420 --> 00:06:41.610
+Users should be able to configure their experience on reading the map. This is very important because different user might need the different scale unit and other meta data in order to read and to
+
+32
+00:06:42.810 --> 00:06:57.780
+Understand the data that are on the map. And so scale unit and other meta data should be available as labels on the map context, of course, they also must be editable using available controls on an app.
+
+33
+00:07:01.440 --> 00:07:14.070
+user needs one con three a user wants to study only the rivers and the lakes of an area without being distracted by other data. This is very important because
+
+34
+00:07:14.940 --> 00:07:28.980
+As we said before, data are very complex object. And so most of the times user just want to read only certain data rather than all the data that are available on the maps and so
+
+35
+00:07:29.460 --> 00:07:46.230
+As a requirement for this user need mess different data must be available as leaders that can be switched on and off by the users, according to their user needs and the active layers must be available as text labels so they are
+
+36
+00:07:48.690 --> 00:07:53.070
+They can be found easily by users, while looking into the mouth.
+
+37
+00:07:55.590 --> 00:07:59.190
+Now we're going to talk about user needs for navigation.
+
+38
+00:08:02.400 --> 00:08:16.680
+We start with this user neither user with low vision wants to highlight dude between two places we have one requirement that might need to be solved with in order to
+
+39
+00:08:17.910 --> 00:08:29.460
+To solve this particular user need the distance between places must be available as a text enable this is very important because when a user wants to navigate towards
+
+40
+00:08:30.300 --> 00:08:43.710
+A specific destination. One of the most important information that he or her needs is the distance. And so if the user is using a real time litigation mode.
+
+41
+00:08:44.310 --> 00:08:57.450
+That is very common. So think about, we are we are a user that wants to navigate towards the navigation and we are moving while looking into the map. So we are using
+
+42
+00:08:58.050 --> 00:09:16.440
+Real time or near real time navigation mode. In this case, the distance should be updated because the position of the user is updating and they these updates should be presented to the user with text labels and should contain information about his new position.
+
+43
+00:09:20.550 --> 00:09:31.650
+Another user needs about maps and navigation, a user who finds orientation difficult wants to navigate to the destination. This is a very common user need
+
+44
+00:09:32.790 --> 00:09:39.000
+It for real time navigation mode is enabled, as we said on the user needs before
+
+45
+00:09:40.260 --> 00:09:47.640
+The direction to follow must be available as text labels and every update or change must be presented to the user.
+
+46
+00:09:49.080 --> 00:09:56.250
+But as we know, not every user find himself comfortable on using
+
+47
+00:09:58.380 --> 00:10:03.000
+Navigation orientation while looking into the map. And while
+
+48
+00:10:04.290 --> 00:10:11.940
+Walking, for example, on the real world. Sometimes these might be distracting or not easy to understand and so
+
+49
+00:10:12.450 --> 00:10:26.730
+Most of the time, if we have time to creation mode is enable the user needs direction that should be available as visual hints like arrows. So not only like as text labels as tax information.
+
+50
+00:10:28.050 --> 00:10:32.550
+Of course, is if the user is using these words, these warnings.
+
+51
+00:10:34.440 --> 00:10:39.090
+Should be presented also proper alternative text so
+
+52
+00:10:40.680 --> 00:10:45.690
+Alternative text with visual hints and also text labels for
+
+53
+00:10:46.950 --> 00:10:51.510
+In order to navigate towards Enrique our destination is very important to be provided.
+
+54
+00:10:52.080 --> 00:11:08.880
+In this case, if using visual, hence the alternative texts will need to be dynamically driven inaccurate and also updated in near real time is is very important because not every user find himself comfortable in using text.
+
+55
+00:11:10.590 --> 00:11:12.540
+Text the navigation information.
+
+56
+00:11:15.780 --> 00:11:29.220
+And other important user needs about navigation can be this one of wheelchair user wants to know the estimated time needed to move toward a certain destination, following the route on the map.
+
+57
+00:11:31.380 --> 00:11:52.980
+The estimated travel time is, as we said for the distance and other important information while using maps for navigation and the important thing here is that estimated travel time is strictly bounded to the travel mode and so estimated travel time must be available as text labels.
+
+58
+00:11:54.420 --> 00:12:03.930
+And also the estimated travel time must be available for different travel most. This is important as, for example, Google Maps that does
+
+59
+00:12:05.010 --> 00:12:26.220
+To present the different travel nodes with different estimated travel times. And the important thing here is also to present to the user, only those travel modes that are concrete completely available really available on that path for that destination. So
+
+60
+00:12:27.870 --> 00:12:44.070
+If the map presents estimated travel time according to travel modes that are really available for that path. The user has all the information that he needs and in order to know
+
+61
+00:12:45.330 --> 00:12:48.840
+How to navigate to that destination using the map.
+
+62
+00:12:50.250 --> 00:12:53.310
+This is a very common user needs.
+
+63
+00:12:55.320 --> 00:13:00.480
+For maps. So now we are going to talk about user needs for comparing
+
+64
+00:13:02.550 --> 00:13:10.560
+A JOURNALIST WANTS TO STUDY data about the spread of a virus on a larger geographic area. He wants to quickly understand the relevant data.
+
+65
+00:13:11.040 --> 00:13:20.940
+And spot the differences between countries also. This one is very common. Because think about maps using for your magazines or newspapers.
+
+66
+00:13:21.900 --> 00:13:40.410
+These maps should be easily understandable understandable for a very large number of users and so numeric data should be available as text labels placed over the map. And not only just with visual highlighting
+
+67
+00:13:41.430 --> 00:13:53.550
+This is important because a very important rule for accessibility in general is not to rely on the caller's not to rely on only on the symbols on shapes and sizes.
+
+68
+00:13:53.910 --> 00:14:10.830
+Because users most may not be able to spot differences on callers and on sizes easily. For example, and each label should contain the value the unit and related counter. So all the, the thought that the user needs.
+
+69
+00:14:12.090 --> 00:14:15.660
+To understand in order to have to understand the big picture.
+
+70
+00:14:17.100 --> 00:14:26.550
+And other requirement if numerically at are shown as we said before using color so sigh most a legend must be available as text annotation.
+
+71
+00:14:26.940 --> 00:14:46.020
+On the map context or near the map context. And this is important because if we are using not text data so visual highlighting of some kind. We have to provide a legend in order to understand those assemblies windows coloring and etc.
+
+72
+00:14:49.200 --> 00:14:58.440
+Another example strictly related to the prior one a blind student wants to know the demographic data of a certain area specifying on the map.
+
+73
+00:14:59.610 --> 00:15:07.980
+In this case we have, we are also talking about to numerically at that but we are talking about of blind students blind user and
+
+74
+00:15:08.610 --> 00:15:19.080
+Think about this blind user that wants to navigate all those data over the map that are yes our, our
+
+75
+00:15:19.980 --> 00:15:30.540
+Shown with text labels, but they are a lot. They are very large number of information on the map and the map. And so the user should navigate
+
+76
+00:15:31.260 --> 00:15:48.750
+One by one, and this is very difficult. It's it would become a very bad experience or very bad user experience. And so in this particular cases when we have a large number of information as numeric data on the map.
+
+77
+00:15:50.190 --> 00:15:56.820
+It should be provided an alternative mode in order to read those data and
+
+78
+00:15:58.050 --> 00:16:06.840
+With authority mode. Here we have an example numerical data maps are usually shown with different colors graduation ensembles, for example.
+
+79
+00:16:07.470 --> 00:16:21.840
+For different sizes. Think about the city with one times and people. That is a lie highlighted with a big, red circle and instead think about another one with 10 people that is shown with a tiny dot
+
+80
+00:16:23.460 --> 00:16:41.010
+Not every user may prefer or may be able to spot differences. So people who find difficult to different shade callers boundaries insightful can retrieve the same data using alternative mode example. For example, a table.
+
+81
+00:16:42.690 --> 00:16:54.210
+So it's very important to provide both data view and let the user decide which one to use. According to his username.
+
+82
+00:16:55.920 --> 00:17:03.510
+Last but not least, we are talking about monitoring on maps and we have here a user needed that.
+
+83
+00:17:04.710 --> 00:17:25.230
+Summarize all the other requirements that we talked about before this a user wants to analyze how real time data are changing on a geographic area shown on the map. So this is a very complex example user need because it contains.
+
+84
+00:17:26.550 --> 00:17:38.610
+A lot of numeric data real time updates and so the requirements are the following data must be available on the map as text labels for other metadata.
+
+85
+00:17:39.240 --> 00:17:54.330
+That should be updated automatically if the feature is Richard on because not every user may like the automatic updates of information, but they rather wants maybe to update with a refresh or with a specific
+
+86
+00:17:55.710 --> 00:17:56.550
+User action.
+
+87
+00:17:57.750 --> 00:18:11.400
+Also data should be available with another talented mode because we are talking about a complex data, a lot of numeric and complex data and for example at table should be provided and should be very useful for
+
+88
+00:18:12.480 --> 00:18:20.040
+A lot of users in order to read those data and be constantly updated about those informations
+
+89
+00:18:23.520 --> 00:18:42.990
+So I thank you again for the attention. Thank you Josh. For corner and all the RTS theme and thanks everybody. I hope I give you a first overview about maps and accessibility and the need for applications that are you, it would be would be a start.
+
+90
+00:18:44.340 --> 00:18:54.060
+Start in order to think about more about accessibility on maps on the context of the web platform. Thank you, everybody. Have a nice day.
+
+91
+00:18:57.330 --> 00:18:57.900
+Great.
+
+92
+00:18:59.040 --> 00:19:10.920
+Ryan Ahola - Natural Resources Canada: Okay. Excellent. Thank you. I got a call that was another great example of the, the importance of accessibility when we're talking about maps for the web. I just wanted to ask if if there's anything that you wanted to add
+
+93
+00:19:11.940 --> 00:19:15.840
+Ryan Ahola - Natural Resources Canada: Now, just before we transition into into our panel discussion on the topic.
+
+94
+00:19:17.700 --> 00:19:31.710
+Nicolò Carpignoli: Oh no, I thank you everybody for the attention. I am starting to see some comments some nice comments and very interesting topics on the gator chat so I'm ready to answer and to follow the discussion.
+
+95
+00:19:33.810 --> 00:19:34.950
+Ryan Ahola - Natural Resources Canada: Great, thanks a lot.
+
+96
+00:19:36.030 --> 00:19:37.830
+Ryan Ahola - Natural Resources Canada: So I guess I guess on that, um,
+
+97
+00:19:38.010 --> 00:19:46.320
+Ryan Ahola - Natural Resources Canada: I think we can transition straight into our panel discussion because it's on the same topic. And maybe that will be an opportunity for us to to have more discussion, ask them questions.
+
+98
+00:19:47.280 --> 00:19:57.930
+Ryan Ahola - Natural Resources Canada: So maybe with that, I'll transfer it over to Kobe homeowner from the Open Geospatial Consortium, who's going to be moderating this panel to introduce the panelists, so I'm
+
+99
+00:19:59.070 --> 00:20:02.760
+Doug Schepers: Actually, I should, we should make sure that everyone's here.
+
+100
+00:20:06.090 --> 00:20:06.450
+Gobe Hobona (OGC): Okay.
+
+101
+00:20:06.480 --> 00:20:16.080
+Gobe Hobona (OGC): So yeah, Ryan. Thanks for that introduction. So let me just quickly show it. So we have Doug
+
+102
+00:20:16.350 --> 00:20:18.090
+Gobe Hobona (OGC): Doug shoppers. Hi.
+
+103
+00:20:18.330 --> 00:20:23.490
+Gobe Hobona (OGC): Brendan dicks 20 Stockman and might Nikolas Giudice
+
+104
+00:20:24.960 --> 00:20:26.160
+Gobe Hobona (OGC): Are we on the call.
+
+105
+00:20:31.170 --> 00:20:32.070
+Doug Schepers: Nicholas. Are you there.
+
+106
+00:20:32.910 --> 00:20:33.420
+Nicholas Giudice: I'm here again.
+
+107
+00:20:34.020 --> 00:20:34.530
+Doug Schepers: Okay, great.
+
+108
+00:20:34.560 --> 00:20:36.000
+Gobe Hobona (OGC): Alright well
+
+109
+00:20:37.440 --> 00:20:39.570
+Gobe Hobona (OGC): That's, that's great. Okay.
+
+110
+00:20:40.890 --> 00:20:56.370
+Gobe Hobona (OGC): Good day everyone. So my name is Scott over one hour for the OTC the Open Geospatial Consortium and I'm going to be moderating the panel discussion over the next 30 minutes so
+
+111
+00:20:57.660 --> 00:21:07.770
+Gobe Hobona (OGC): Well, wanted to have a panel of experts discussing with us today. We have Doug shoppers from this studio
+
+112
+00:21:08.940 --> 00:21:23.370
+Gobe Hobona (OGC): We have Brendan big from audio odium and Brendan also works for this Smith Kettlewell I Research Institute, and we have Dr. Tony Stockman from Queen Mary University.
+
+113
+00:21:24.390 --> 00:21:30.690
+Gobe Hobona (OGC): In London, and Dr. Nicholas GG from the University of Maine.
+
+114
+00:21:31.890 --> 00:21:32.400
+Gobe Hobona (OGC): Welcome
+
+115
+00:21:33.510 --> 00:21:34.260
+Gobe Hobona (OGC): So,
+
+116
+00:21:36.060 --> 00:21:50.670
+Gobe Hobona (OGC): Let me first of all, just give you an overview of our panelists biographies, Dr. Purpose is the founder and director of fish studio and accessible data visualization startup in Chapel Hill.
+
+117
+00:21:52.440 --> 00:21:53.160
+Doug Schepers: North Carolina.
+
+118
+00:21:53.790 --> 00:22:00.090
+Gobe Hobona (OGC): USA because the dogs and sorry not North Carolina. All right.
+
+119
+00:22:01.380 --> 00:22:08.850
+Gobe Hobona (OGC): Previously Doug spent a decade defining standards as a technical product manager at WCC will conduct like
+
+120
+00:22:10.200 --> 00:22:17.670
+Gobe Hobona (OGC): Brendan bakes is currently an engineer at the Smith Kettlewell I research institute working on non visual
+
+121
+00:22:18.150 --> 00:22:35.760
+Gobe Hobona (OGC): Representations he graduated with his semesters and inclusive design in May 2019 from Marquette University, where he has thesis was on designing accessible non visual maps. He said blind web developer who has had enough vision to see me, but not enough to use it.
+
+122
+00:22:36.300 --> 00:22:54.510
+Gobe Hobona (OGC): The main focus of his research has been on digital audio maps in particular maps that have been developed through the natural log workflow, video games, he's the creator of audio multimodal map where we're sorry work component that can be embedded into our pages welcome Brendan
+
+123
+00:22:56.310 --> 00:23:09.870
+Gobe Hobona (OGC): Also joining us is Dr. Tony Stockman Senior Lecturer in the cognitive science research group and center for this one music in the School of electronic engineering and computer science at Queen Marion, University of London.
+
+124
+00:23:10.950 --> 00:23:19.650
+Gobe Hobona (OGC): Is commercial experience includes working as a systems programmer at Rolls Royce and as a Systems Analyst at ICI in Manchester.
+
+125
+00:23:20.250 --> 00:23:32.850
+Gobe Hobona (OGC): He has over 100 peer reviewed publications on interaction design and or charity space and develop the tutor for editable audio maps with this research student as lonely.
+
+126
+00:23:34.530 --> 00:23:44.070
+Gobe Hobona (OGC): 20 centimeters board member of the international community community for what a treat this display having served as president from 2011 to 2016 welcome Tony
+
+127
+00:23:46.560 --> 00:23:54.840
+Gobe Hobona (OGC): Got Dr. Nicholas Junichi a professor specially informatics in the School of Computing and Information Science at the University of Maine.
+
+128
+00:23:55.200 --> 00:24:03.120
+Gobe Hobona (OGC): Has worked for 20 years and they have multimodal special cognition and the design and evaluation not accessible special displays, including maps.
+
+129
+00:24:03.600 --> 00:24:10.740
+Gobe Hobona (OGC): His primary focus on accessibility for blind and visually impaired people are cited folks and
+
+130
+00:24:11.220 --> 00:24:24.060
+Gobe Hobona (OGC): Is free situations. He has published. Brilliant. The Syrian is on the proposal to access journals his recent years in recent years, he painted the development of Bible audio maps.
+
+131
+00:24:24.510 --> 00:24:33.930
+Gobe Hobona (OGC): Then, which are multimodal maps that are rendered on the types of smart devices such as phones and tablets welcome Nicolas
+
+132
+00:24:34.500 --> 00:24:48.390
+Gobe Hobona (OGC): So just before we get started with the questions are so Nick is an expert in by Pro Audio maps and Tony Tony and Brandon specialize in digital or the tree maps.
+
+133
+00:24:49.140 --> 00:25:00.810
+Gobe Hobona (OGC): So I think it's a great opportunity for us to ask them about these concepts. What these types are so let's start off with, let's start off with Nick, Nick.
+
+134
+00:25:01.920 --> 00:25:06.750
+Gobe Hobona (OGC): In one minute. Could you just give us an overview of what Viper audio map selfies.
+
+135
+00:25:07.440 --> 00:25:10.320
+Nicholas Giudice: Sure. So Viper audio maps. Um, can you hear me.
+
+136
+00:25:11.070 --> 00:25:12.030
+Doug Schepers: Yes, we're good.
+
+137
+00:25:12.270 --> 00:25:24.900
+Nicholas Giudice: If I brought your maps maps that are rendered on the touchscreen of a smart device. So it's a visual map that uses combinations of vibration audio and kinesthetic movement. So you might say, well, there's no touch on a touchscreen. I mean, touchscreens flat.
+
+138
+00:25:25.350 --> 00:25:29.010
+Nicholas Giudice: But it turns out if you if you read to the map and you're having someone move their hand around
+
+139
+00:25:29.340 --> 00:25:35.640
+Nicholas Giudice: When they touch a visual element you synchronous synchronous they trigger the vibration motor
+
+140
+00:25:35.940 --> 00:25:49.170
+Nicholas Giudice: At that x y location or auditory cues and the perception is one of feeling a line or a point or region and they can move their head around and explore that to learn the map. And it turns out it works really well for people to
+
+141
+00:25:50.280 --> 00:25:56.280
+Nicholas Giudice: Yet to learn different types of graphics and just very quickly. You may say, Well, why use touch verse audio or language.
+
+142
+00:25:57.060 --> 00:26:06.450
+Nicholas Giudice: And they all can work. But the beauty of touches that it's most similar to vision and is a non visual no of the non visual senses, it's closest division, especially for spatial information.
+
+143
+00:26:06.780 --> 00:26:11.910
+Nicholas Giudice: Like map so brain processes visual and tackle spatial cues.
+
+144
+00:26:12.480 --> 00:26:18.660
+Nicholas Giudice: Very similar. We use different areas, but the computation done by different by neurons in those areas is
+
+145
+00:26:18.930 --> 00:26:31.470
+Nicholas Giudice: Very similar. So when you want to convey spatial information. It's way easier to do it using touch, then, for instance, to try to describe a map with language which can work but but takes more cognitive load.
+
+146
+00:26:31.860 --> 00:26:40.110
+Nicholas Giudice: And so there's there's advantages, especially when we're doing thinking about this was a multimodal way they can work with other people's audio renderings but are adding touch.
+
+147
+00:26:40.500 --> 00:26:55.950
+Nicholas Giudice: And it just kind of fits with how the brain processes. So it's a bio inspired interface and that brain is inherently multimodal and so more devices and more interfaces, especially non visual ones to convey that convey that same information need to also be multimodal
+
+148
+00:26:57.690 --> 00:26:59.370
+Nicholas Giudice: And I could go on for a long time, but I will
+
+149
+00:26:59.400 --> 00:26:59.820
+Because I think
+
+150
+00:27:03.720 --> 00:27:05.520
+Gobe Hobona (OGC): Thanks, Nicholas for that. Overview
+
+151
+00:27:06.750 --> 00:27:08.520
+Gobe Hobona (OGC): Okay 20
+
+152
+00:27:09.810 --> 00:27:14.970
+Gobe Hobona (OGC): Just give us a one minute overview of what digital what a tree maps are from your perspective.
+
+153
+00:27:16.110 --> 00:27:26.730
+Tony Stockman: Or I mean, in a sense, you could say they are a subset of vibe or attacked on auditory maps. We tended to focus on audio.
+
+154
+00:27:28.200 --> 00:27:29.940
+Tony Stockman: And, not least because
+
+155
+00:27:30.960 --> 00:27:40.650
+Tony Stockman: Obviously sound cards come with most most PCs and we wanted something that was going to be sort of globally accessible.
+
+156
+00:27:41.820 --> 00:27:53.490
+Tony Stockman: The. The trick with designing these is how you're going to use different types of sound. So our requirements investigations talking to visually impaired users.
+
+157
+00:27:54.180 --> 00:28:02.850
+Tony Stockman: I've generally found that the really key information if you are restricting yourself to the audio mode of presentation.
+
+158
+00:28:03.450 --> 00:28:15.660
+Tony Stockman: really needs to be delivered with speech. So things like distance and information about turn by turn directions really needs to be given using speech, but
+
+159
+00:28:16.170 --> 00:28:40.920
+Tony Stockman: There is some real value to be had by leveraging our ability to hear other sounds at the same time as speech and make use of it and really those non speech sounds come into two categories one are one is auditory icons auditory icons are the audio equivalent of icons.
+
+160
+00:28:42.720 --> 00:29:02.310
+Tony Stockman: They use representative sounds to present landmarks or points of interest along the way. So in systems we've built. We had sounds to represent things like schools parks swimming pools cafes, restaurants, and so on.
+
+161
+00:29:03.840 --> 00:29:15.780
+Tony Stockman: And the trick there is to try to choose or to treat icons that are meaningful to most people wherever they happen to live and that can be quite tricky.
+
+162
+00:29:16.920 --> 00:29:22.380
+Tony Stockman: And and we've had lots of sort of prototyping sessions where we've worked through these with different groups of people.
+
+163
+00:29:23.400 --> 00:29:46.230
+Tony Stockman: And then the other type of non speech sounds are ear columns. These are more abstract sounds and the abstract because you particularly don't want them to be confused with auditory icons. You don't want people mistakenly to think that they represent a point of interest. So they are deliberately
+
+164
+00:29:48.300 --> 00:29:56.400
+Tony Stockman: Not natural sounding particularly but they can be used to convey other bits of information about
+
+165
+00:29:57.630 --> 00:29:58.620
+Tony Stockman: About the route.
+
+166
+00:29:59.940 --> 00:30:12.090
+Tony Stockman: Typically, possibly, things like how many, how many degrees are associated with a particular turn. I don't mean literally down to two one degree, obviously, but maybe
+
+167
+00:30:13.500 --> 00:30:20.130
+Tony Stockman: Breaking down as 360 into say chunks of 45 or 60 maybe
+
+168
+00:30:22.170 --> 00:30:31.950
+Tony Stockman: So here comes our unimportant contributing source of sound in ordinary maps and overall
+
+169
+00:30:32.940 --> 00:30:52.080
+Tony Stockman: The scale in developing a good orange tree map is how to choose the sounds that are going to be most effective and balancing these different types of sound so that they give an engaging and usable experience to people using the map.
+
+170
+00:30:54.660 --> 00:31:08.640
+Doug Schepers: Gabi, would you mind 30 seconds. Those are both excellent explanations, but do you mind if I give 30 seconds to people who may not be familiar with accessibility in general how wine people, for example, we'll use screen screen reader.
+
+171
+00:31:10.410 --> 00:31:12.330
+Doug Schepers: Very briefly, a
+
+172
+00:31:12.870 --> 00:31:26.760
+Doug Schepers: The two techniques that they talked about our supplemental in some some ways. In contrast, so with what most people with the typical modality for browsing the web.
+
+173
+00:31:27.300 --> 00:31:36.060
+Doug Schepers: That a blind person will use, which is by screen reader were in a screen reader is a piece of software. If you're not familiar with it, the screen here is a piece of software that
+
+174
+00:31:36.810 --> 00:31:45.930
+Doug Schepers: It's a bit like an audio book but interactive. So you can move around, you can fight. You can search, you can find things you can find the table of contents of a page.
+
+175
+00:31:46.230 --> 00:31:56.730
+Doug Schepers: It announces links at announcer announces alt text for images, things like this. But that is for textual content you can apply that to visual content, for example.
+
+176
+00:31:57.510 --> 00:32:06.840
+Doug Schepers: Reading out the image, the alt text of an image, but we have complex images like maps things that or data visualizations charts, etc.
+
+177
+00:32:08.040 --> 00:32:09.810
+Doug Schepers: That you're meant to
+
+178
+00:32:11.280 --> 00:32:30.990
+Doug Schepers: That you're meant to actually visually explore. That's where the techniques that in addition to hearing the speech things that's where these Bible tackle and and auditory maps really shine. So a combination of these things all of these techniques is really
+
+179
+00:32:32.400 --> 00:32:44.880
+Doug Schepers: What's sought here and I also, one thing I want to bring out is the techniques that they're talking about aren't necessarily going to be things that need to be
+
+180
+00:32:46.710 --> 00:32:57.030
+Doug Schepers: enabled by the are specifically enabled by the authors of the map. They might be things that
+
+181
+00:32:58.560 --> 00:33:03.450
+Doug Schepers: Are supplemental that are additional pieces of software. It says assistive technology.
+
+182
+00:33:04.170 --> 00:33:08.850
+Doug Schepers: That goes on top of a map that is properly annotated as per the last presentation.
+
+183
+00:33:09.270 --> 00:33:18.120
+Doug Schepers: And is properly marked up in such a way that it can be consumed and transformed into these modalities. Right. It can enhance these modalities, it can enable these modalities.
+
+184
+00:33:18.540 --> 00:33:30.300
+Doug Schepers: So you don't necessarily need to make your maps audio tech you know vibratory or audio tackle, but you should make your maps amenable to you to to using those techniques.
+
+185
+00:33:33.210 --> 00:33:33.960
+Gobe Hobona (OGC): Okay, thanks.
+
+186
+00:33:36.330 --> 00:33:36.960
+Gobe Hobona (OGC): Brendan
+
+187
+00:33:38.550 --> 00:33:45.540
+Gobe Hobona (OGC): Instance, you could give us just a one minute minute or so. Overview of digital with a tree maps from your
+
+188
+00:33:46.620 --> 00:33:47.520
+Gobe Hobona (OGC): From your perspective,
+
+189
+00:33:48.780 --> 00:33:59.040
+Brandon Biggs: Yeah, absolutely. So there are two different types and Tony gave a really good summary of digital auditory maps. But I think there are two two different
+
+190
+00:33:59.820 --> 00:34:04.710
+Brandon Biggs: Like overview types. There's interactive auditory maps. So those are the ones where you are.
+
+191
+00:34:05.160 --> 00:34:13.020
+Brandon Biggs: Having like an input device and you're moving around the map, very much like a game like World of Warcraft or something like that. Then there are
+
+192
+00:34:13.650 --> 00:34:22.140
+Brandon Biggs: presentational maps. And so those are like recordings and Tony's been working on these specifically and basically listen to, like, an overview of a map.
+
+193
+00:34:22.560 --> 00:34:31.980
+Brandon Biggs: And you can open different turn by turn information or you get you get information about the map has listened to it. And so the only interaction you have there is if you fast forward and rewind.
+
+194
+00:34:32.670 --> 00:34:41.220
+Brandon Biggs: And so I think those are the two main types of maps and they each present different information, but in my research.
+
+195
+00:34:41.910 --> 00:34:52.290
+Brandon Biggs: The interactive maps have been what you can present information such as shapes routes it getting route landmark in survey knowledge.
+
+196
+00:34:52.770 --> 00:35:06.630
+Brandon Biggs: Very quickly, and I think surveys are what the presentational maps are really, really good at. So I think you need kind of a mixture of both. And so, but you can have both which is what's really nice about auditory maps.
+
+197
+00:35:10.590 --> 00:35:10.980
+Gobe Hobona (OGC): Okay.
+
+198
+00:35:12.300 --> 00:35:14.220
+Gobe Hobona (OGC): Thanks, Brandon. Okay, so
+
+199
+00:35:15.870 --> 00:35:27.480
+Gobe Hobona (OGC): Let's move on to the next question. So we thought, East approaches to creating accessible. You know what a tree maps.
+
+200
+00:35:28.410 --> 00:35:46.890
+Gobe Hobona (OGC): What is the biggest challenge that you see standards development organizations needing to face but not just our development organization, but also browser developers. What's the biggest challenge that these organizations will encounter when they attempt to
+
+201
+00:35:48.000 --> 00:35:52.980
+Gobe Hobona (OGC): You know, develop standards around those types of maps.
+
+202
+00:35:54.180 --> 00:35:56.310
+Gobe Hobona (OGC): Shall we start with, let's start with Doug
+
+203
+00:35:57.960 --> 00:36:01.950
+Doug Schepers: Oh, um, I think I sort of summarize part of what
+
+204
+00:36:04.170 --> 00:36:15.150
+Doug Schepers: My goal there, which is to say, I think it was excellent presentation with several excellent presentations on extending the web to do different things.
+
+205
+00:36:16.530 --> 00:36:25.710
+Doug Schepers: around accessibility in terms of maps throughout this entire workshop I really liked the annotation when that was that immediately preceded this panel. I recommend people watch that.
+
+206
+00:36:27.630 --> 00:36:28.200
+Doug Schepers: And
+
+207
+00:36:29.220 --> 00:36:35.640
+Doug Schepers: I think that we have, we're fortunate. Now we've got a pretty rich platform.
+
+208
+00:36:37.470 --> 00:36:49.560
+Doug Schepers: In order to in, for example, we can enable vibratory maps. I don't want to step on Tony's toes, but we can enable vibratory maps, because we have the web vibration API.
+
+209
+00:36:50.580 --> 00:37:00.900
+Doug Schepers: We can enable the auditory maps, because we have the Web Audio API. So the some of the basic features that are needed to
+
+210
+00:37:02.700 --> 00:37:08.640
+Doug Schepers: To to to enable the modalities that we're talking about already there. I think that
+
+211
+00:37:10.560 --> 00:37:28.800
+Doug Schepers: One of the next steps is for us to have standard ways of representing a particular things, whether that's an ontology, or it just loosely based on text basically being able to say that something is a restaurant and from knowing that it's a restaurant and knowing
+
+212
+00:37:29.910 --> 00:37:35.310
+Doug Schepers: The geometry, etc. Have an area you can actually work out client side.
+
+213
+00:37:37.290 --> 00:37:44.850
+Doug Schepers: You can enable a lot of features client side. I think it's going to be a combination of web standards features that are already exist.
+
+214
+00:37:46.230 --> 00:37:52.680
+Doug Schepers: Perhaps either ontology or vocabularies like ARIA specifically around maps.
+
+215
+00:37:54.120 --> 00:38:01.560
+Doug Schepers: And and then probably a lot of of experimentation by pioneers like these guys who are
+
+216
+00:38:02.730 --> 00:38:03.390
+Doug Schepers: Who are
+
+217
+00:38:06.630 --> 00:38:22.830
+Doug Schepers: Really, making it work on the client side and then probably that you would need to be full folded back into standards going forward. I think it has to be a combination of of standards plus innovation in the in software.
+
+218
+00:38:23.940 --> 00:38:26.820
+Gobe Hobona (OGC): Okay. All right. Thanks, Doc. Okay, Brandon.
+
+219
+00:38:28.770 --> 00:38:36.600
+Gobe Hobona (OGC): Why don't you just share your thoughts on what the biggest challenges that standard government organizations and brother developers will encounter.
+
+220
+00:38:38.100 --> 00:38:51.420
+Brandon Biggs: Yeah, I think the three things. One is the data is neat that needs to be a lot more work with data on the second is the API's. There's some future API's like with XR
+
+221
+00:38:51.780 --> 00:39:07.710
+Brandon Biggs: That are coming out and we need to be thinking about those and how we can represent maps and that way. And the third is getting the users involved in whatever in whatever we make. So whether it's, you know, maps of these
+
+222
+00:39:09.030 --> 00:39:27.120
+Brandon Biggs: Accessible maps, you know, getting people who build these accessible maps involved with, you know, how the data should be represented, or if we're actually building these interfaces. We need the users to be experiencing those for the data. Specifically, I think there should be like a neat.
+
+223
+00:39:28.320 --> 00:39:37.470
+Brandon Biggs: Every single one of these interfaces that we've talked about requires a name attribute or a label actually very similar to what the guy in the last presentation was talking about.
+
+224
+00:39:37.890 --> 00:39:43.860
+Brandon Biggs: And that's just super critical and then another big issue that we need to be considering is raster data.
+
+225
+00:39:44.430 --> 00:40:00.300
+Brandon Biggs: Eraser data because it's extremely difficult right now for us to represent racer data in any liberal or audio maps, because it's just a picture and pictures are completely useless for computers and what we're doing essentially is translating
+
+226
+00:40:01.350 --> 00:40:06.600
+Brandon Biggs: The data and using the computer into a different modality. So pictures are inherently
+
+227
+00:40:08.160 --> 00:40:15.780
+Brandon Biggs: Visual. And so if we can get the underlying data from that picture into something more useful. That's going to be the
+
+228
+00:40:16.920 --> 00:40:22.140
+Brandon Biggs: Digital auditory maps and they will have auditory maps more useful.
+
+229
+00:40:23.160 --> 00:40:25.500
+Brandon Biggs: It'll actually be able to use that data.
+
+230
+00:40:26.760 --> 00:40:35.100
+Brandon Biggs: It'd be like using recording and make a picture of the recording. So we need to figure out a way to do is make racer information into some sort of
+
+231
+00:40:36.720 --> 00:40:44.250
+Brandon Biggs: Vector in getting some sort of vector geometries and then for the APIs. There's like
+
+232
+00:40:45.510 --> 00:40:53.460
+Brandon Biggs: These tactic clothes tactile gloves that are coming out that should be in the next couple years. And those will allow for 3D model maps.
+
+233
+00:40:54.060 --> 00:41:07.770
+Brandon Biggs: Which we don't have right now or raise line maps on like a piece of paper virtually and so we need to be thinking about having API's for these types of peripherals for XR
+
+234
+00:41:08.490 --> 00:41:14.790
+Brandon Biggs: And it won't just be for maps. It'll be for a whole bunch of other things too, but a mouse will definitely be part of that and
+
+235
+00:41:15.720 --> 00:41:26.820
+Brandon Biggs: Then we just, we just need to have lots of testing. So those are what I think are the three things that we need to be thinking about for going forward with these these interfaces. Okay.
+
+236
+00:41:26.910 --> 00:41:27.360
+All right. Thank you.
+
+237
+00:41:29.010 --> 00:41:32.040
+Gobe Hobona (OGC): Tony to just respond to that question, please.
+
+238
+00:41:33.750 --> 00:41:45.270
+Tony Stockman: Yeah, and I think from my work and my point of view, what one of the real problems actually is the lack of standards for auditory displays in general.
+
+239
+00:41:46.080 --> 00:42:02.850
+Tony Stockman: I have been involved with the international community for order to display for quite a while now and there simply are not standards for the way we represent things in audio, there's some things that are known to work relatively well
+
+240
+00:42:04.290 --> 00:42:11.820
+Tony Stockman: Under a guidelines for some specific elements. For example, the air cons that I talked about. Towards the end of my
+
+241
+00:42:13.230 --> 00:42:14.010
+Tony Stockman: Minute just now.
+
+242
+00:42:15.690 --> 00:42:24.510
+Tony Stockman: But in general, there's a real shortage of standards. And I think that's really a challenge for the auditory display community to to try to address.
+
+243
+00:42:25.530 --> 00:42:38.580
+Tony Stockman: And touching on the presentation we had on accessible maps which I agree was was excellent. I, I think as well. There is that and a little bit about what Brent Brandon said about
+
+244
+00:42:39.870 --> 00:42:40.680
+Tony Stockman: overviews
+
+245
+00:42:41.190 --> 00:42:49.860
+Tony Stockman: And we, one of the limitations of the work we did on interactive maps was the fact that you couldn't easily
+
+246
+00:42:50.880 --> 00:43:04.920
+Tony Stockman: Flip views or interact with the map at different levels. The, the system we implemented and allow somebody to effectively virtually walk along a route.
+
+247
+00:43:06.300 --> 00:43:14.820
+Tony Stockman: And encounter points of interest along the way and but you couldn't you couldn't kind of zoom out of that view.
+
+248
+00:43:16.050 --> 00:43:30.510
+Tony Stockman: And traverse the map easily at a, at a higher level, at a more rapid rate and gain more of an overview of what we're saying. And that, to some extent, is what our current work is is looking at
+
+249
+00:43:31.230 --> 00:43:43.290
+Tony Stockman: And then finally, I'd very much endorse what Brandon said about getting users involved. We've learned an awful lot about things to do and not to do concerning auditory icons.
+
+250
+00:43:44.370 --> 00:43:50.070
+Tony Stockman: Through prototyping with users. And I think that's got to be a key part of the way forward.
+
+251
+00:43:51.840 --> 00:43:52.650
+Gobe Hobona (OGC): Right, based on
+
+252
+00:43:54.420 --> 00:43:55.230
+Gobe Hobona (OGC): Nicholas
+
+253
+00:43:56.340 --> 00:43:58.530
+Gobe Hobona (OGC): Like to respond to the question.
+
+254
+00:43:59.730 --> 00:44:03.360
+Nicholas Giudice: Sure. So Tony and Brandon, a
+
+255
+00:44:04.680 --> 00:44:10.290
+Nicholas Giudice: Bunch of the points that I would make. But I guess what I would add here is that there needs to be especially for these non visual
+
+256
+00:44:10.800 --> 00:44:18.570
+Nicholas Giudice: Variants of maps and most people haven't cryptographers and that produces and designers haven't thought about auditorium Viper tackle.
+
+257
+00:44:19.050 --> 00:44:25.110
+Nicholas Giudice: And so we need to somehow bake into any type of standard more empirically derived visit guidelines for
+
+258
+00:44:25.680 --> 00:44:33.150
+Nicholas Giudice: You know, for design that are that really maximize or ensure that these elements are both per sexually salient and cognitively meaningful.
+
+259
+00:44:33.690 --> 00:44:44.880
+Nicholas Giudice: And so, you know, we have lots and lots of information out there about things in map elements in line thicknesses and do that. I mean, this is there's a huge array of
+
+260
+00:44:45.330 --> 00:44:52.170
+Nicholas Giudice: Visual parameters that are just guidelines for design, but that make a big difference in how the map is perceived and learn and remembered
+
+261
+00:44:52.740 --> 00:45:01.290
+Nicholas Giudice: None of that exists for these non visual maps and the parameters are different. You can't take a visual parameter and have it work for touches touch has
+
+262
+00:45:01.980 --> 00:45:11.220
+Nicholas Giudice: 500 times less sensory bandwidth. So we have to figure out, you know, we have to do kind of the bit low level psycho physical work to figure out what are the
+
+263
+00:45:11.640 --> 00:45:18.960
+Nicholas Giudice: You know what, what is a line that is most receivable. What are the threshold. When is it maximally readable, things like that. I think
+
+264
+00:45:19.410 --> 00:45:28.020
+Nicholas Giudice: To do that work which has started and people including some of the folks here, we started doing this but for a standard to
+
+265
+00:45:28.470 --> 00:45:33.870
+Nicholas Giudice: Be meaningful to actually work. We have to be able to have this really well clarified.
+
+266
+00:45:34.260 --> 00:45:45.720
+Nicholas Giudice: And also, Tony and Brenda bolted on this at some point, we need to think more about what information, but I think it was the information modality mapping. So when we're developing a map or any
+
+267
+00:45:46.140 --> 00:46:01.590
+Nicholas Giudice: Non visual multimodal graphic what part what properties. What attributes should be rendered by which modalities. So it makes sense to give labels and distance and as Tony talked about direction and things like that, through
+
+268
+00:46:02.040 --> 00:46:15.120
+Nicholas Giudice: auditory cues. But perhaps the actual geometric layout information might be through space, but that mapping isn't clearly specified. I think that will be really important for success with these types of maps.
+
+269
+00:46:17.550 --> 00:46:21.180
+Gobe Hobona (OGC): Okay, thank you. Nicholas. Okay, so, um,
+
+270
+00:46:22.350 --> 00:46:36.480
+Gobe Hobona (OGC): I mean, I'm from a standards development organization. And one of the first things that we do within that community is we research particular area of interest and try to understand
+
+271
+00:46:37.290 --> 00:46:51.600
+Gobe Hobona (OGC): You know what the issues requirements and needs around a particular topic. So my question. My next question to you is, you know, can you please suggest ideas for experimentation that could improve
+
+272
+00:46:54.330 --> 00:47:12.750
+Gobe Hobona (OGC): On this issue surrounding you know or the treatment and accessibility of web maps in general. Help us to prioritize our thinking in terms of where we should focus our innovation work. So shall we start with Nicholas
+
+273
+00:47:18.750 --> 00:47:22.560
+Nicholas Giudice: Sorry, I kind of already gave my answer. I guess in the last, the last
+
+274
+00:47:22.680 --> 00:47:23.310
+Section
+
+275
+00:47:24.540 --> 00:47:35.820
+Nicholas Giudice: But that yeah i mean the the experimentation that needs to be done and stuff that's been started. And it really hits on those points that that I'm doing, but it should be done with users as Brandon had said.
+
+276
+00:47:36.210 --> 00:47:45.270
+Nicholas Giudice: And I think it also needs to be done with how do you, it's not just getting the data that I talked about. But how to get that information to other
+
+277
+00:47:46.680 --> 00:47:49.920
+Nicholas Giudice: Map developers and people that are doing web based mapping
+
+278
+00:47:51.480 --> 00:48:05.550
+Nicholas Giudice: To learn how this type of thing can be implemented. They're obviously not going to be experts in using vibration. But if we do this right, and get very clear parameters and guidelines. These are things that can be used in generic
+
+279
+00:48:06.390 --> 00:48:21.150
+Nicholas Giudice: Application of maps. And I think that that's it's as much doing the experiments as getting the data and the results out to other people that can use it. That's important. And I think that that link is currently not always the case. I think that's, that's an important part going forward.
+
+280
+00:48:22.080 --> 00:48:23.400
+Gobe Hobona (OGC): Okay. All right, thanks.
+
+281
+00:48:24.810 --> 00:48:27.210
+Gobe Hobona (OGC): Tony didn't respond to your question.
+
+282
+00:48:28.230 --> 00:48:37.380
+Tony Stockman: Yeah, sure. Um, I'm really comes back to what we were saying, I think about involving users and finding out what works.
+
+283
+00:48:38.490 --> 00:48:46.620
+Tony Stockman: In, in our case in in audio. So I talked about presenting some information in speech and other information.
+
+284
+00:48:47.220 --> 00:49:00.720
+Tony Stockman: being presented in non speech sound and quite often. This can be done simultaneously and somebody can understand both streams of information, but it needs to be more work done on this to know
+
+285
+00:49:01.770 --> 00:49:14.850
+Tony Stockman: What kinds of combinations of sounds presented simultaneously or very close to one another. And I'm work well and what can people take in at any one time.
+
+286
+00:49:16.140 --> 00:49:26.610
+Tony Stockman: And particularly, picking up the point I made about overviews or the ability to to switch between different levels of map navigation.
+
+287
+00:49:27.870 --> 00:49:48.240
+Tony Stockman: As you as you zoom further out or get a higher level perspective on on the map, it may become necessary to present more information within a relatively short time period. So knowing what it is that that people actually want to know from a map. Overview
+
+288
+00:49:49.530 --> 00:50:04.650
+Tony Stockman: How best to make that that overview configurable so that people can actually specify what what elements they want to give emphasis to and and the means by which emphasis should be given to
+
+289
+00:50:05.490 --> 00:50:18.720
+Tony Stockman: Certain elements, so it's it's really effectively user investigations and exploring these these different options and what combinations work well.
+
+290
+00:50:20.490 --> 00:50:25.200
+Gobe Hobona (OGC): Thanks, Tony, we're nearly out of time. So Brendan
+
+291
+00:50:26.460 --> 00:50:29.400
+Gobe Hobona (OGC): Your next would respond to that question.
+
+292
+00:50:30.240 --> 00:50:37.680
+Brandon Biggs: Yeah, sure. So I think really the biggest thing that needs to happen is we just need to make more maps in all different types of modalities, I think.
+
+293
+00:50:37.770 --> 00:50:38.850
+Brandon Biggs: I think right now the biggest
+
+294
+00:50:39.690 --> 00:50:56.070
+Brandon Biggs: Problem is that we've we haven't really tried doing bark maps or topological maps of the Grand Canyon, or, you know, different, different types of maps that are required for me being a professional, you know, a geographer, and
+
+295
+00:50:57.090 --> 00:51:07.290
+Brandon Biggs: You know, doing all different types of maps that that that are out there. So I think that's really the next step, we just need to make a bunch of different maps. And I think that's what we're trying to do with the audience platform that
+
+296
+00:51:07.770 --> 00:51:23.730
+Brandon Biggs: I'm working on. And I know you know all of us here, Tony. Nick and I are really trying to make different types of maps. So I think that's, that's, you know, we're kind of doing that, but it it it just it's taking a little bit of time so
+
+297
+00:51:25.020 --> 00:51:26.160
+Brandon Biggs: Yeah, I think that's what needs to happen.
+
+298
+00:51:27.210 --> 00:51:27.870
+Gobe Hobona (OGC): Okay, right.
+
+299
+00:51:29.310 --> 00:51:32.430
+Gobe Hobona (OGC): OKAY, DOC would want to respond to that question.
+
+300
+00:51:32.910 --> 00:51:39.210
+Doug Schepers: Really quickly, I want to reiterate what everybody else has said, which is we need user testing, for example.
+
+301
+00:51:40.530 --> 00:51:46.170
+Doug Schepers: I know limitations of standards. Oftentimes there's not a lot of user research and real world data that goes into it. If
+
+302
+00:51:46.230 --> 00:51:52.440
+Doug Schepers: They try everyone tries good faith. But, for example, the color contrast ratio and trying to look at
+
+303
+00:51:53.820 --> 00:52:02.430
+Doug Schepers: Forever is a little bit arbitrary. It's not, it's not really hard data. And I know this has been improved and what CAD three
+
+304
+00:52:02.850 --> 00:52:11.940
+Doug Schepers: But I really think that we, there needs to be considered user research like like these older folks have said, and I also to reinforce the brand and said,
+
+305
+00:52:12.450 --> 00:52:23.490
+Doug Schepers: Different tasks, different kinds of maps have different tasks associated with them different goals, different things you want to do with them and we need different modalities to
+
+306
+00:52:24.510 --> 00:52:27.270
+Doug Schepers: To deal with that. And so we need to identify those tasks.
+
+307
+00:52:28.710 --> 00:52:38.070
+Doug Schepers: That each each type of math which tasks you can accomplish with each type of map and maybe work out how best to accomplish those things. But again,
+
+308
+00:52:38.550 --> 00:52:58.290
+Doug Schepers: Experimentation as everyone said and user research and and incremental changes to some of the existing web standards that we have and also in pushing out making sure people understand that they need to make the data available so that these modalities can be enabled through their maps.
+
+309
+00:52:59.340 --> 00:53:03.150
+Gobe Hobona (OGC): Okay. Thanks. Okay. Yeah. So that's all that we
+
+310
+00:53:04.230 --> 00:53:10.710
+Gobe Hobona (OGC): have in store for the for the panel. So I'd like to thank our panelists for
+
+311
+00:53:11.730 --> 00:53:30.660
+Gobe Hobona (OGC): For this session doc Sherpas from this video, Brendan Beck's from audio and Smith cattle. Well I research institute Dr 20 stock went from Queen Mary University and Dr. Nicholas judiciary from the University of Maine. Thank you for sharing your insight and
+
+312
+00:53:31.620 --> 00:53:35.370
+Gobe Hobona (OGC): And discussing with us on this very important
+
+313
+00:53:37.170 --> 00:53:37.530
+Thank you.
+
+314
+00:53:38.580 --> 00:53:39.000
+Gobe Hobona (OGC): Right.
+
+315
+00:53:39.480 --> 00:53:40.680
+Gobe Hobona (OGC): Think it's big to you.
+
+316
+00:53:41.580 --> 00:53:41.880
+Thanks.
+
+317
+00:53:43.350 --> 00:53:54.660
+Ryan Ahola - Natural Resources Canada: Great. Thanks, everyone. I think Cisco bay for for moderating that excellent question. Um, so next we're moving into a set of presentations on related to advances in 3D map display.
+
+318
+00:53:55.590 --> 00:54:03.720
+Ryan Ahola - Natural Resources Canada: So first off we're going to have you on Eric village who is the Managing Director of the open Eric Heart Association.
+
+319
+00:54:04.350 --> 00:54:14.490
+Ryan Ahola - Natural Resources Canada: And also a full stack developer at work hard, as he's also a co Chair of the OTC so God post standards. Working Group.
+
+320
+00:54:15.060 --> 00:54:26.010
+Ryan Ahola - Natural Resources Canada: And he's going to be giving a presentation titled from points of interest to maps of objects and I have your next presentation here so I'll just share my screen. And we'll start running through it.
+
+321
+00:54:29.700 --> 00:54:31.590
+Ryan Ahola - Natural Resources Canada: Should be able to see it now and
+
+322
+00:54:31.830 --> 00:54:32.520
+Jan-Erik Vinje: There you go.
+
+323
+00:54:37.380 --> 00:54:38.610
+Ryan Ahola - Natural Resources Canada: Okay. So take it away.
+
+324
+00:54:39.840 --> 00:54:47.160
+Jan-Erik Vinje: Thank you so much for the opportunity to speak here and go to next slide actually
+
+325
+00:54:49.410 --> 00:55:01.530
+Jan-Erik Vinje: Are we seeing, do you see all okay it's just cutting off a little bit in my zoom. That's fine. And yeah, I'm the managing director of opening our cloud and we we are
+
+326
+00:55:02.100 --> 00:55:16.920
+Jan-Erik Vinje: Working on driving the development of open interoperable technology data standards to connect the physical and digital worlds for the benefit of all. And we've got a couple of amongst our members. We have a couple of Dustin's who are
+
+327
+00:55:18.480 --> 00:55:30.810
+Jan-Erik Vinje: Contributing as volunteers on a fairly regular basis. And we have a semi growing number of partner organization for from the spatial computing industry. Next slide.
+
+328
+00:55:33.420 --> 00:55:38.850
+Jan-Erik Vinje: So straight to the topic we're now going to look at
+
+329
+00:55:40.230 --> 00:55:46.890
+Jan-Erik Vinje: How we can go from points of interest in math to interesting objects in math.
+
+330
+00:55:48.450 --> 00:55:52.110
+Jan-Erik Vinje: To look into that we might want to do a comparison of the two
+
+331
+00:55:54.060 --> 00:55:55.800
+Jan-Erik Vinje: So next slide.
+
+332
+00:55:59.400 --> 00:56:08.640
+Jan-Erik Vinje: Points of interest are very familiar to most people who have worked with maps to play refer to something by their position and that position.
+
+333
+00:56:09.150 --> 00:56:23.130
+Jan-Erik Vinje: Most cases is a 2D geographical position would be latitude and longitude or some other geographical coordinates, they can represent very different things. So toupee could be like yeah
+
+334
+00:56:24.330 --> 00:56:31.770
+It could be referring to a city, and then this one single point that refers to that city. So it could be a large area.
+
+335
+00:56:32.880 --> 00:56:48.420
+Jan-Erik Vinje: But it could also be a stationary object like like a building or statue or something of that sort. And then you could also have dynamic points that where you have for instance vehicles or people who are moving around.
+
+336
+00:56:50.820 --> 00:57:06.600
+Jan-Erik Vinje: Points tends to have a few common attributes you have categories you ID them you name them and very typically you find some generic symbols. So the
+
+337
+00:57:07.110 --> 00:57:24.570
+Jan-Erik Vinje: The category tends to inform what kind of generic abstract symbol used to represent the points of interest and then there could be any sort of metadata electric vehicles. They are very interesting case of poi data.
+
+338
+00:57:26.040 --> 00:57:41.310
+Jan-Erik Vinje: Could be very rich, you could have images of the charging station and you could have you, I'm talking about electric vehicle but electrical equal charges. You could have images, you could have the status of different charges if they are available or not.
+
+339
+00:57:43.470 --> 00:57:52.080
+Jan-Erik Vinje: Any kind of things. So, so the the world of points are quite large and complex and interesting
+
+340
+00:57:53.220 --> 00:58:14.820
+Jan-Erik Vinje: And objects in Maps share many of those features and but you you need to go to the third dimension. When you're talking about an object. And if you want to have them in the map, you need there. We were just spatial pose, or you need a 3D geospatial position and orientation.
+
+341
+00:58:16.050 --> 00:58:20.100
+Jan-Erik Vinje: Which allows for a six degrees of freedom positioning of the object.
+
+342
+00:58:21.510 --> 00:58:40.110
+Jan-Erik Vinje: Also something that is different from some some types of points objects, they have a limited 3D volume. They have bounced and most often, you would say that they have unique 3D geometry is for object. Not always, but that would be quite common.
+
+343
+00:58:41.700 --> 00:58:42.090
+Jan-Erik Vinje: And
+
+344
+00:58:43.140 --> 00:58:49.860
+Jan-Erik Vinje: You, you can then allow to visualize the concrete and specific that makes them more
+
+345
+00:58:51.780 --> 00:58:54.660
+Jan-Erik Vinje: Direct and less abstract and generic
+
+346
+00:58:56.610 --> 00:59:04.740
+Jan-Erik Vinje: You used to represent any real or virtual objects with a 3D volume and and a real world posts.
+
+347
+00:59:05.760 --> 00:59:19.890
+Jan-Erik Vinje: So that way when they can represent the subset of points and but do that in a way that is more spatially accurate and also they enable new ways to use maps like immersive maps.
+
+348
+00:59:21.210 --> 00:59:39.870
+Jan-Erik Vinje: And and a little note here that they as they share so many of the attributes of points of interest if there weren't a a standard four points and you could easily extend it to define objects in Maps. Next slide.
+
+349
+00:59:42.840 --> 00:59:50.190
+Jan-Erik Vinje: So yeah, this is a little bit of the lamenting because there are no standards obviously tried
+
+350
+00:59:51.360 --> 01:00:12.690
+Jan-Erik Vinje: Brave effort. And what you see is that companies are here and Google Maps and mood cut my company we handle points in different ways. We try to assemble different sources of points from from a range of sources. Maybe you write rappers. Maybe we write our own idiosyncratic point services.
+
+351
+01:00:14.760 --> 01:00:19.620
+Jan-Erik Vinje: Maybe the closest thing out there in the real world could be the points.
+
+352
+01:00:20.640 --> 01:00:33.960
+Jan-Erik Vinje: Feature of geo Jason, it has coordinate hair. A in this slide is he does a 2D coordinate it even supports 3D coordinates. And then you have properties where you could
+
+353
+01:00:34.950 --> 01:00:46.950
+Jan-Erik Vinje: As soon as we put in all the metadata of of the poison set up the categories or ideas that kind of thing. But that's not really it doesn't really cut it so
+
+354
+01:00:48.210 --> 01:00:49.410
+Jan-Erik Vinje: Okay. So next slide.
+
+355
+01:00:52.290 --> 01:00:58.860
+Jan-Erik Vinje: For talking about objects. I want to take you back to the time of paper maps. Next slide.
+
+356
+01:01:01.230 --> 01:01:06.840
+Jan-Erik Vinje: Next slide. Yeah, so this very beautiful map from Paris. Oh, previous
+
+357
+01:01:08.190 --> 01:01:23.790
+Jan-Erik Vinje: One back very beautiful map from Paris. You see, actually. You see the buildings and trees and different things as three dimensional objects in the map as a very rich way to visualize place.
+
+358
+01:01:25.410 --> 01:01:29.580
+Jan-Erik Vinje: And we see that if you go to the next slide.
+
+359
+01:01:31.770 --> 01:01:35.880
+Jan-Erik Vinje: Here you see this, this kind of approach is still being used.
+
+360
+01:01:37.050 --> 01:01:42.870
+Jan-Erik Vinje: Theme Park maps tend to have this way of representing. It's a very intuitive way to understand
+
+361
+01:01:44.220 --> 01:02:00.180
+Jan-Erik Vinje: And navigate and find what you're looking for. Interestingly here there's a combination of objects that are specific and using Craddick and then you have the generic points you have those numbers and letters that are more abstract
+
+362
+01:02:01.920 --> 01:02:02.700
+Jan-Erik Vinje: And the next slide.
+
+363
+01:02:05.700 --> 01:02:09.600
+Jan-Erik Vinje: So now we want to return to digital maps and. Next slide.
+
+364
+01:02:12.630 --> 01:02:24.900
+Jan-Erik Vinje: And there's something going on right around now it's been going on for some time, but map data is becoming more 3D and
+
+365
+01:02:25.440 --> 01:02:32.850
+Jan-Erik Vinje: By going in that direction, they can start to break out into the 3D world out from the 2D screens.
+
+366
+01:02:33.600 --> 01:02:50.160
+Jan-Erik Vinje: So if you're looking at the starting point. We have points on 2D maps leaflet is a library for web maps that displays flat 2D raster tiles. You could put points on top of that, then they are
+
+367
+01:02:51.810 --> 01:03:03.720
+Jan-Erik Vinje: In the realm of 2D coordinates. And then there's an evolution towards vector maps were Princeton map box they have metric tiles and you close so
+
+368
+01:03:04.470 --> 01:03:19.140
+Jan-Erik Vinje: Tilt those maps that are essentially flat, but by tilting the map, you get this intuition of, of the three 3D aspects of distance of things further apart comes closer together.
+
+369
+01:03:20.280 --> 01:03:21.840
+Jan-Erik Vinje: It's a, it's a great thing, but
+
+370
+01:03:23.160 --> 01:03:30.300
+Jan-Erik Vinje: The three aspect is limited to a flat plane where you might do some extrusions and you
+
+371
+01:03:32.280 --> 01:03:37.770
+Jan-Erik Vinje: Know it's so you have a ritual way to interact with the especially to the flat map.
+
+372
+01:03:39.480 --> 01:03:43.170
+Jan-Erik Vinje: More interesting though are the globe maps where
+
+373
+01:03:44.400 --> 01:03:49.380
+Jan-Erik Vinje: Where the real world is recreated three dimensionally on the screen.
+
+374
+01:03:50.670 --> 01:04:00.840
+Jan-Erik Vinje: And where you can place objects in those maps with geospatial six degrees of freedom position and orientation.
+
+375
+01:04:01.890 --> 01:04:07.770
+Jan-Erik Vinje: And what what we call geo post in our GC and also open air cloud.
+
+376
+01:04:09.180 --> 01:04:20.700
+Jan-Erik Vinje: And that's all great. And there's this is real world spatial computing three dimensional, but in open air cloud and in the industry and especially computing industry.
+
+377
+01:04:21.210 --> 01:04:34.770
+Jan-Erik Vinje: We want to bring those the map data out in the real world to create the immersive maps maps that we are in the middle of and we interact in in the way we interact with real world.
+
+378
+01:04:35.820 --> 01:04:52.350
+Jan-Erik Vinje: So open air cloud is is engaging this technology of real world spatial computing, which is more or less an infrastructure that it will be based on real time updated 3D maps that are in the cloud. Next slide.
+
+379
+01:04:55.200 --> 01:05:04.770
+Jan-Erik Vinje: So I mentioned geo post geospatial position and orientation and working with Christine chute. He will be speaking after me.
+
+380
+01:05:06.060 --> 01:05:23.520
+Jan-Erik Vinje: On on the OTC standards working group to define a universal standard for geospatial position and orientation. We've been working intensely since January 24 and hopefully we'll be able to publish a draft specification that can be reviewed by the Community.
+
+381
+01:05:24.990 --> 01:05:25.620
+Jan-Erik Vinje: Next slide.
+
+382
+01:05:30.210 --> 01:05:32.580
+Jan-Erik Vinje: Open Air clouds. Currently we are
+
+383
+01:05:33.780 --> 01:05:42.270
+Jan-Erik Vinje: Hoping to use this standard in our big project. Now we are working on something we call the open spatial computing platform that
+
+384
+01:05:42.870 --> 01:05:52.980
+Jan-Erik Vinje: We hope can enable what you call an open spatial web and also providing interoperability layer for real world spatial computing in general.
+
+385
+01:05:53.910 --> 01:06:12.570
+Jan-Erik Vinje: And it's, it's the most fundamental piece of that platform would be geo posts, and then there's the machine readable world and and discovering all the types of content and services related to, to, to the space around you and. Next slide.
+
+386
+01:06:16.770 --> 01:06:27.510
+Jan-Erik Vinje: So when we're talking about the spatial Web. It is very much a map concepts, where you those who have worked with maps, all the time, they can
+
+387
+01:06:28.260 --> 01:06:43.830
+Jan-Erik Vinje: Recognize the bottom part as base layers. The base layers in this concept are tied to the real physical world. It is the terrain. It is the building buildings.
+
+388
+01:06:45.360 --> 01:06:58.980
+Jan-Erik Vinje: But in addition to what is typically the the base layer. There's another aspect of reality that becomes part of this base layer. And now that is the dynamic part of the stuff that is moving around. That is why
+
+389
+01:07:00.090 --> 01:07:10.590
+Jan-Erik Vinje: This kind of math is not handmade. It is machine made it is based on machine perception and reality capture using sensors.
+
+390
+01:07:12.900 --> 01:07:20.010
+Jan-Erik Vinje: doesn't exclude some manual intervention but but the real time layer would not work without reality capture and machine perception.
+
+391
+01:07:21.240 --> 01:07:34.320
+Jan-Erik Vinje: On top of that, there are thematic layers that would be the kind of layers you didn't that might be transparent that contains extra information that you overlay on your base map.
+
+392
+01:07:35.010 --> 01:07:47.550
+Jan-Erik Vinje: But now the base map is three dimensional. And you're inside of it. And the overlay is all around you so, so that is sort of the main difference you live inside this map. So next, next slide.
+
+393
+01:07:49.620 --> 01:07:58.290
+Jan-Erik Vinje: This talk is about object or you jump to two slides. So the first. First I want to mention that on the bottom, bottom here.
+
+394
+01:07:59.040 --> 01:08:19.170
+Jan-Erik Vinje: When you want to represent things in the real world. You want to represent objects and you can then combine set of 3D geometric data with the geo posts that can be used to to have your both static and dynamic reality layers.
+
+395
+01:08:20.400 --> 01:08:31.320
+Jan-Erik Vinje: Those are the real things in the things that are made of atoms that you represent the base there but you have other types of objects that aren't always part of the real so you can go to next slide.
+
+396
+01:08:33.360 --> 01:08:48.660
+Jan-Erik Vinje: Those can be anything that could be could be virtual or it could be something from the past, something from the future something or not work at your location. It can be something abstract that convey some information about the place and
+
+397
+01:08:50.070 --> 01:09:00.990
+Jan-Erik Vinje: So you will be able to benefit from using objects in map throughout this all the layers of the spatial web. Next slide.
+
+398
+01:09:04.440 --> 01:09:14.100
+Jan-Erik Vinje: So bringing this back to W three C and web standards. I already lamented on the lack of a standard for points of interest. So
+
+399
+01:09:14.640 --> 01:09:26.490
+Jan-Erik Vinje: Somebody should pick up that so maybe W three C and OTC can get back together and figure that out. And if you go to next slide, I have my thoughts on objects in map.
+
+400
+01:09:28.530 --> 01:09:40.410
+Jan-Erik Vinje: browser support for objects in map should use the Odyssey GOP standard and also support automatic transformed from geospatial took, etc.
+
+401
+01:09:41.760 --> 01:09:47.760
+Jan-Erik Vinje: The currently the, the proposal where you're working on in our standard working
+
+402
+01:09:48.780 --> 01:09:57.120
+Jan-Erik Vinje: Had has something called the based NGO posts which is in latitude, longitude and that doesn't really work too well in
+
+403
+01:09:58.320 --> 01:10:12.510
+Jan-Erik Vinje: In screen coordinates or in in 3D in a 3D seen that is rendered using 3D graphics. So there is always this need to make the transform from the geo posts and over to kiss him.
+
+404
+01:10:14.640 --> 01:10:19.170
+Jan-Erik Vinje: And so this kind of support to be part of
+
+405
+01:10:20.340 --> 01:10:37.080
+Jan-Erik Vinje: Me kind of native Maps API and in the native map elements that is being discussed there, especially to modalities where where objects in map becomes especially useful so
+
+406
+01:10:38.460 --> 01:10:47.310
+Jan-Erik Vinje: That would be if we could make sure that the map elements supported the globe modes life. You see would see zoom or Google Earth that kind of
+
+407
+01:10:48.600 --> 01:10:49.140
+Jan-Erik Vinje: Engine
+
+408
+01:10:50.640 --> 01:11:05.280
+Jan-Erik Vinje: But also, and maybe even more so when you go for the immersive mode where we can pull the map up to one to one scale and youth from virtual reality or augmented reality.
+
+409
+01:11:06.240 --> 01:11:16.380
+Jan-Erik Vinje: And in particular, the that's where the last point here comes in when you're in. For instance, a web XR immersive mode and
+
+410
+01:11:18.210 --> 01:11:25.470
+Jan-Erik Vinje: If you use just GPS and compass from your device you you might fall bit short on the accuracy.
+
+411
+01:11:26.070 --> 01:11:35.250
+Jan-Erik Vinje: So a or cloud technology tends to leverage an AR clouds map representation of the world for positioning
+
+412
+01:11:36.000 --> 01:11:51.240
+Jan-Erik Vinje: And opening our cloud is working on developing a universal protocol where clients can speak to any our cloud positioning services, what we call geo post services to obtain the device posts.
+
+413
+01:11:52.080 --> 01:11:59.520
+Jan-Erik Vinje: And then you might end up with centimeter or a few centimeter accuracy at the current level of technology.
+
+414
+01:12:00.870 --> 01:12:16.140
+Jan-Erik Vinje: And if you have your device posts, you should be able to display object in Maps at there. We were locations and that is really from maybe what some
+
+415
+01:12:17.370 --> 01:12:18.240
+Jan-Erik Vinje: Some I've heard
+
+416
+01:12:19.560 --> 01:12:23.370
+Jan-Erik Vinje: There's this expression in the air cloud about painting the world with data.
+
+417
+01:12:24.510 --> 01:12:28.800
+Jan-Erik Vinje: And one of those data could be those objects. So that is
+
+418
+01:12:29.970 --> 01:12:30.990
+A hope for the future.
+
+419
+01:12:32.190 --> 01:12:37.500
+Jan-Erik Vinje: Thank you. I think now over to Christina and you will be able to learn a lot more about your posts.
+
+420
+01:12:41.160 --> 01:12:48.870
+Ryan Ahola - Natural Resources Canada: Great. Thanks, sir. Thanks, Eric. For that, for that excellent presentation of. It's interesting to hear see some of the requirements and needs for this transition to
+
+421
+01:12:49.500 --> 01:12:54.360
+Ryan Ahola - Natural Resources Canada: More 3D space and augmented reality for the Geospatial web community, so that's that's excellent.
+
+422
+01:12:55.350 --> 01:13:00.930
+Ryan Ahola - Natural Resources Canada: Yes. And as, as Eric mentioned. So now we're moving on to a presentation on our next presentation in the session.
+
+423
+01:13:01.620 --> 01:13:07.410
+Ryan Ahola - Natural Resources Canada: Which will be given by Christine Perry and also Josh Josh Lieberman. So Christine is
+
+424
+01:13:08.250 --> 01:13:15.060
+Ryan Ahola - Natural Resources Canada: A consultant for Perry research and consulting com. She's also a member of the open air cloud Association and with you on Eric is co Chair of the
+
+425
+01:13:15.810 --> 01:13:32.100
+Ryan Ahola - Natural Resources Canada: GC GC GC to post status. Working Group on Josh lever bit as a director of the innovation, one of the directors of the innovation program at the UGC so feel free to go ahead. I don't have your presentation. So I'm not sure if one of you wants to share your screen you
+
+426
+01:13:32.100 --> 01:13:35.700
+Christine Perey: Don't oh we provide it to Peter and he
+
+427
+01:13:36.210 --> 01:13:36.600
+Joshua Lieberman: Did it
+
+428
+01:13:37.440 --> 01:13:40.050
+Christine Perey: Okay, Josh. Wow, what a beautiful
+
+429
+01:13:40.110 --> 01:13:41.670
+Joshua Lieberman: Mountain like that.
+
+430
+01:13:43.500 --> 01:13:52.170
+Christine Perey: Perfect actually while Josh is doing this, I want to thank you everybody. And, and thanks generic for setting the stage.
+
+431
+01:13:53.460 --> 01:14:05.820
+Christine Perey: For this what Josh and I wanted to do is actually respond to a request that Peter made of US months ago, I think it was a request on behalf of the Committee running this
+
+432
+01:14:07.050 --> 01:14:07.980
+Christine Perey: This workshop
+
+433
+01:14:09.090 --> 01:14:09.690
+Christine Perey: That
+
+434
+01:14:11.010 --> 01:14:23.130
+Christine Perey: We share with you how geo post supports the new Web Map, what use cases and requirements and Josh can go into full screen mode or is that
+
+435
+01:14:24.450 --> 01:14:26.820
+Christine Perey: Is that what you see the
+
+436
+01:14:27.300 --> 01:14:29.670
+Joshua Lieberman: Very large screen. Hopefully, it still works.
+
+437
+01:14:29.850 --> 01:14:48.810
+Christine Perey: Yeah, it's just fine just fine. So what I did as a first step is I went into the document that was provided by Peter, which I'm sure many of you are familiar with describing the use cases and requirements and I kind of I pulled all of those
+
+438
+01:14:49.920 --> 01:15:00.840
+Christine Perey: Those out the the use cases and requirements. The functional requirements and then made them into tables and that's going to guide us a little bit, or at least that's the
+
+439
+01:15:01.860 --> 01:15:08.940
+Christine Perey: The origin of the structure of this this presentation. But before I do that, I think you could go to the next slide.
+
+440
+01:15:09.660 --> 01:15:25.170
+Christine Perey: Will be focusing primarily on the alignment between geo pose and and Web Map, but before that give a few minutes on geo pose and then hopefully we'll have a little time and we're going to transition into a discussion after this for
+
+441
+01:15:26.700 --> 01:15:36.330
+Christine Perey: more use cases and maybe showing talking about where things go next. One of the things I want to emphasize here is that
+
+442
+01:15:37.590 --> 01:15:51.420
+Christine Perey: God pose and the concepts that we're going to be discussing our 3D at their core just like objects imply and and really have a three dimensions in generics presentation.
+
+443
+01:15:51.960 --> 01:16:07.320
+Christine Perey: That's the case here, as well as the second big concept is the way we've broken these out as we're looking at three actors or audiences as they were defined, defined by the Web Map.
+
+444
+01:16:08.850 --> 01:16:26.610
+Christine Perey: Activity. So we're looking at the content creators roles and their needs. The visitors to websites and maps and then the developers of applications that combine content and maps and deliver services to users and go on to the next slide.
+
+445
+01:16:29.760 --> 01:16:39.420
+Christine Perey: So you've, you've heard quite a bit already but it's important for us to, to reiterate what is to pose.
+
+446
+01:16:40.470 --> 01:16:43.860
+Christine Perey: It is in Cartesian coordinate
+
+447
+01:16:44.880 --> 01:17:04.170
+Christine Perey: Or your coordinates with actually advanced this and going to provide that as an option. And it's anchored on the surface of the real world. There are a couple of different concepts that are allow us to extend from the simplest
+
+448
+01:17:05.580 --> 01:17:21.960
+Christine Perey: Frame to nested or advanced frames, we include some concepts around time and sequences of frames and you'll it's a quite a rich
+
+449
+01:17:22.350 --> 01:17:45.450
+Christine Perey: conceptual model. But again, as I come back to the core of this really is about placing objects, whether they're real or virtual or symbols into projections that are oriented at six degrees of freedom for for accuracy and richness. Next slide, please. I
+
+450
+01:17:45.480 --> 01:17:52.500
+Joshua Lieberman: Just want a quick comment here because there's this thing about frames here that may be confusing. And of course,
+
+451
+01:17:53.070 --> 01:18:05.370
+Joshua Lieberman: The basic part of this is orienting and object, but the way that's done is by fixing a frame of reference and as Christine said a Cartesian or possibly or Larian
+
+452
+01:18:05.880 --> 01:18:19.530
+Joshua Lieberman: Frame of reference, but you're fixing this frame of reference to something for geo pose. One of the two frames that is providing that position and orientation is fixed to the earth.
+
+453
+01:18:20.760 --> 01:18:24.930
+Joshua Lieberman: It can be fixed to another celestial body right for Selena no
+
+454
+01:18:26.100 --> 01:18:36.120
+Joshua Lieberman: Pose or so on. But for now, we're talking about the Earth. But the other thing though is tho those frames can be fixed for different purposes so
+
+455
+01:18:36.480 --> 01:18:46.530
+Joshua Lieberman: The base purposes. There's some object virtual or physical and the frame is attached to that object. So the objects.
+
+456
+01:18:47.400 --> 01:19:08.400
+Joshua Lieberman: position and orientation can be determined by the geo pose, but the frame can also mean a couple of other things. And this is relevant to the map Web Map cases, it can be relative to an observers ability to see so it can essentially represent the user viewpoint.
+
+457
+01:19:09.540 --> 01:19:16.170
+Joshua Lieberman: There where they're looking from what they're looking at in a 3D or six degrees of freedom perspective.
+
+458
+01:19:16.620 --> 01:19:17.820
+Joshua Lieberman: Or it's on the
+
+459
+01:19:17.820 --> 01:19:21.120
+Christine Perey: Next slide shows that has the figure of showing up.
+
+460
+01:19:21.240 --> 01:19:31.920
+Joshua Lieberman: Yeah, yeah. So in order so it can be the viewpoint, looking at or the perspective, looking from so let's go on to that.
+
+461
+01:19:34.950 --> 01:19:35.850
+Christine Perey: Exactly.
+
+462
+01:19:37.560 --> 01:19:38.100
+Christine Perey: Perfect.
+
+463
+01:19:39.270 --> 01:19:43.200
+Christine Perey: And so we're certainly happy to come back to this figure.
+
+464
+01:19:44.250 --> 01:19:53.100
+Christine Perey: If needed to show that again. The user is in this case in this particular illustration
+
+465
+01:19:54.480 --> 01:20:18.120
+Christine Perey: The beneficiary. But I also want to point out that there are a lot of machine to machine use cases for geo pose, which are not exactly in in scope for this particular workshop, but the use cases are diverse in time and space and and devices. So let's go to the next slide.
+
+466
+01:20:21.210 --> 01:20:45.030
+Christine Perey: As I said, we very much followed the framework that was provided in terms of this three categories. And in our case, you know, the assets being published into some sort of a server where the website visitors can get them, but also the application developers can use those to enhance their
+
+467
+01:20:46.200 --> 01:20:49.440
+Christine Perey: Runtime applications can go to the next slide.
+
+468
+01:20:51.600 --> 01:20:53.190
+Christine Perey: I think Josh, you're
+
+469
+01:20:54.870 --> 01:21:05.550
+Christine Perey: Our thought was perhaps we would you could explain a little bit more what we have on the right hand side of this table.
+
+470
+01:21:06.630 --> 01:21:15.600
+Christine Perey: In general, you can see, though, that GMOs isn't necessarily relevant for all of the use cases that were outlined.
+
+471
+01:21:17.250 --> 01:21:17.760
+Christine Perey: But some
+
+472
+01:21:18.540 --> 01:21:29.790
+Joshua Lieberman: Yeah, I mean this. The idea here was to take the use cases that have been defined and presented for these different roles dealing with web maps.
+
+473
+01:21:30.480 --> 01:21:53.520
+Joshua Lieberman: In this case of content, an author of content to be displayed in a Web Map and look at where geo pose might play a role. And so the here there is a kind of an idea for a role for specific use cases. For example, displaying a map centered on a point location.
+
+474
+01:21:54.810 --> 01:22:00.720
+Joshua Lieberman: So that you can have a location, an orientation and a scale of that map.
+
+475
+01:22:01.200 --> 01:22:09.930
+Joshua Lieberman: And you want that to be most appropriate to particular user. And that's generally the users viewpoint. And as we mentioned before, one of the
+
+476
+01:22:10.230 --> 01:22:34.500
+Joshua Lieberman: Roles that you oppose can play is to express a user's viewpoint. In fact, a sequence of geo poses can indicate a user's progress. For example, a taking a tour or changing their position and being able to display a map that has content for that viewpoint.
+
+477
+01:22:35.940 --> 01:22:57.990
+Joshua Lieberman: That you know can extend, for example, to displaying a route so not only saying okay you know we have some sort of assumption that indicators are aligned according to the route, but we can actually have objects relevant to the route that are aligned in the map as someone would see them.
+
+478
+01:22:59.730 --> 01:23:08.670
+Joshua Lieberman: And as far as displaying custom web content that's the same thing. So being able to symbolize or Mark objects, you know, they may be
+
+479
+01:23:09.090 --> 01:23:20.400
+Joshua Lieberman: Points of interest, but we can exactly use the geo pose to show this is the orientation in which you would see that building or that other feature.
+
+480
+01:23:21.270 --> 01:23:34.800
+Joshua Lieberman: As you encountered it along the route or from a particular perspective on the roof and that extends then into creating layers by assembling those objects which may be coming from
+
+481
+01:23:35.340 --> 01:23:46.170
+Joshua Lieberman: Many different places around the world, but using geo pose. They can be placed relative to each other and within the extent of a map layer.
+
+482
+01:23:48.090 --> 01:23:58.590
+Joshua Lieberman: Extending that further in time, then the use cases of providing animated spatial data, the animation, for example, the position and orientation.
+
+483
+01:23:59.010 --> 01:24:16.110
+Joshua Lieberman: Can come from a sequence or stream of geo pose objects that position that, you know, although within a 2D map layer the 3D position and orientation can be shown so
+
+484
+01:24:16.770 --> 01:24:29.970
+Joshua Lieberman: There are particular use cases here where it seems there's a useful role for geo pose. And we sort of sum up that in call it the
+
+485
+01:24:31.080 --> 01:24:44.940
+Joshua Lieberman: Content, you know, the geo pose assisted creator paradigm. So there's positioning content in a map using geo pose. There's positioning a map, according to a user viewpoint.
+
+486
+01:24:45.810 --> 01:25:01.860
+Joshua Lieberman: Or assembling a map layer from diverse features, each of which has their own position and orientation and then being able to have that change over time by the injection of updated do poses for those objects.
+
+487
+01:25:06.060 --> 01:25:07.200
+Joshua Lieberman: So the second
+
+488
+01:25:08.850 --> 01:25:22.860
+Joshua Lieberman: Stakeholder actor is the visitor, the user the viewer of this sort of Web Map and we have again this ability to have one's viewpoint tracked
+
+489
+01:25:23.250 --> 01:25:34.860
+Joshua Lieberman: You know whether that goes to a server or just remains in the browser, which then you know provides instructions. I want to see this map plane orientation.
+
+490
+01:25:36.780 --> 01:25:48.030
+Joshua Lieberman: And the ability for example, for a user to say um there's here's a point with, you know, one of those little carrot on it. I wonder what it really
+
+491
+01:25:49.140 --> 01:25:55.350
+Joshua Lieberman: Looks like a what's more information. So being able to pull more information, which includes, for example, a
+
+492
+01:25:56.430 --> 01:26:02.190
+Joshua Lieberman: A batch model of the gas station and its orientation. You know how you would see it.
+
+493
+01:26:03.240 --> 01:26:12.840
+Joshua Lieberman: As you came up to it, seeing that perspective and the map, but we yeah and so
+
+494
+01:26:13.920 --> 01:26:24.150
+Joshua Lieberman: Another way that this provides information on a map is to provide to or 3D filtering, even within a
+
+495
+01:26:25.560 --> 01:26:37.920
+Joshua Lieberman: 2D map layer to be able to say, for example, searching or sorting within a set of features in a map layer, you know, what's it ground level or what's higher up in the air or
+
+496
+01:26:38.340 --> 01:26:54.360
+Joshua Lieberman: What things can I see what things can I not see because they're hidden somewhere else. And so even when a 2D map that do pose information. You know what signs are facing me versus. I'm not going to be able to see them.
+
+497
+01:26:55.770 --> 01:26:58.110
+Joshua Lieberman: Can be derived from the geo pose information.
+
+498
+01:26:59.490 --> 01:27:01.470
+Joshua Lieberman: So there's another bit about here.
+
+499
+01:27:03.390 --> 01:27:13.560
+Joshua Lieberman: comes under the category of what really is a map. And so we think of a map and things like augmented and virtual reality as being very separate
+
+500
+01:27:15.030 --> 01:27:21.510
+Joshua Lieberman: But there's another perspective, in which, you know, a map is really a
+
+501
+01:27:22.830 --> 01:27:33.720
+Joshua Lieberman: Let's say a basic aid to visualization and so we don't really talk about this as imagination or creativity. We talked about this as well.
+
+502
+01:27:34.110 --> 01:27:52.080
+Joshua Lieberman: To use a map, you need map skills but math skills are, how do you, in your mind, take symbols from this flat piece of paper and inserted into your picture of the landscape that's presented before you in order to find something to navigate something to
+
+503
+01:27:53.460 --> 01:28:00.900
+Joshua Lieberman: Undertake some other tasks or learning with regard to that landscape. And so there really is a
+
+504
+01:28:02.010 --> 01:28:13.260
+Joshua Lieberman: Continuum is my assertion between a flat map oriented north with a fixed extent and scale and something which becomes more
+
+505
+01:28:13.770 --> 01:28:34.410
+Joshua Lieberman: Adaptable more responsive to that user's interests viewpoints perspective and progress, you know, so we're looking at the sort of other end of the spectrum of, you know, so far of augmented reality where you really are looking at
+
+506
+01:28:35.730 --> 01:28:49.230
+Joshua Lieberman: What's around you and in front of you and having those map objects placed into that view. But having a Web Map that is portable and is able to
+
+507
+01:28:50.700 --> 01:28:52.440
+Joshua Lieberman: Sort of transition from that.
+
+508
+01:28:53.820 --> 01:29:13.470
+Joshua Lieberman: Augmented reality to mapped reality to mapped formalism of reality is a way that can really be put into this spectrum of use and do pose, so that 3D
+
+509
+01:29:14.970 --> 01:29:21.930
+Joshua Lieberman: Position oriented patient information is an important part of establishing that continuum.
+
+510
+01:29:23.310 --> 01:29:35.400
+Joshua Lieberman: Okay, yeah. So oriented skill a map to my viewpoint retrieving view detailed objects for points of interest filter content by the positioning and orientation and then
+
+511
+01:29:36.120 --> 01:29:53.070
+Joshua Lieberman: As well, having this standard bit of data about where that object should be enables facilitates the offline storage of those objects. And in fact, enables for example them to be updated with small amounts of
+
+512
+01:29:53.970 --> 01:30:00.150
+Joshua Lieberman: Positioning information to minimize the bandwidth for example of updating that content.
+
+513
+01:30:01.200 --> 01:30:05.550
+Joshua Lieberman: So the third one is the application developer, you know what
+
+514
+01:30:06.630 --> 01:30:09.690
+Joshua Lieberman: Capabilities can a developer
+
+515
+01:30:11.010 --> 01:30:15.330
+Joshua Lieberman: Create using the assistance of the geo pose.
+
+516
+01:30:16.770 --> 01:30:26.400
+Joshua Lieberman: Definition of position and orientation and the ability to exchange interchange and manipulate that. So here for example.
+
+517
+01:30:27.390 --> 01:30:47.940
+Joshua Lieberman: Ability to provide feedback to users they manipulate the map so ability to show where that map plane and the map viewpoint is positioned for example in the user viewpoint, so that you know where am I looking at in the larger context, but in 3D.
+
+518
+01:30:49.230 --> 01:30:59.040
+Joshua Lieberman: Moving the map to a new position resume level again going from the flat map which we've we've kind of reduced to to say, okay, that's a map, but
+
+519
+01:30:59.460 --> 01:31:14.250
+Joshua Lieberman: What many people have shown us is that there has been for centuries. This desire to create maps that are on user perspective, you know, the map of Paris, and so on. It's just that.
+
+520
+01:31:15.810 --> 01:31:33.840
+Joshua Lieberman: Up until fairly recently those maps have been quite difficult to compute. So we've we've taken the, you know, sort of GIS flat map as the. That's what a map is when there's been a much more flexible a broader perspective of what a map is
+
+521
+01:31:34.980 --> 01:31:38.130
+Joshua Lieberman: Through time. It's just required
+
+522
+01:31:39.450 --> 01:31:41.850
+Joshua Lieberman: Really clever capabilities to do that.
+
+523
+01:31:43.890 --> 01:31:46.320
+Joshua Lieberman: And then looking at being able to
+
+524
+01:31:47.400 --> 01:31:49.830
+Joshua Lieberman: generate new vector features so
+
+525
+01:31:50.850 --> 01:32:05.100
+Joshua Lieberman: Having geo pose as an interchange format enables you to take data use that positioning from, you know, myriad sources and create new vector features.
+
+526
+01:32:05.460 --> 01:32:23.880
+Joshua Lieberman: And in fact update those features, for example, by being able to drag and drop a geo pose object, you know, this is where it is now. And, you know, have the map update. According to input of these new geo poses are geo pose sequences.
+
+527
+01:32:26.160 --> 01:32:37.860
+Joshua Lieberman: So leveraging the user geo pose using geo post sequences for animation generating new features from data, including geo poses or even geo poses.
+
+528
+01:32:38.580 --> 01:32:50.040
+Joshua Lieberman: Linked to features already there. And, you know, here's an idea. You can drag and drop those geo poses to animate map features, say, you know, okay.
+
+529
+01:32:50.400 --> 01:33:05.760
+Joshua Lieberman: Here's what it was. Then here's where it is now here's where it's going to be later. So there are. This is just the start of new ways that you could use to pose to extend the Web Map paradigm
+
+530
+01:33:06.540 --> 01:33:18.660
+Joshua Lieberman: You know, in some ways that are new in some ways that are just recovering what cartography used to be able to do but required you know that cartographer to sit in your phone and do that.
+
+531
+01:33:20.340 --> 01:33:25.620
+Joshua Lieberman: Okay, do you want to talk about the these functional requirements, Christine.
+
+532
+01:33:26.580 --> 01:33:30.600
+Christine Perey: You know, I, in the interest of time, and we've got a panel coming up.
+
+533
+01:33:32.220 --> 01:33:40.590
+Christine Perey: I think we should maybe move right to the third one, because that's where the greatest value lies.
+
+534
+01:33:42.960 --> 01:33:43.320
+Christine Perey: So,
+
+535
+01:33:43.440 --> 01:33:49.260
+Joshua Lieberman: These are our particular capabilities that we have been derived from those use cases.
+
+536
+01:33:49.800 --> 01:33:59.880
+Joshua Lieberman: And similarly, we've gone through and said, well, there may be some interesting ways to use geo pose. And I'll just know. You know, being able to use images, not just as
+
+537
+01:34:00.720 --> 01:34:15.630
+Joshua Lieberman: To rectify the images but actually show the swath or path of image acquisition is a possibility and then many of these are similar to the ones that we've
+
+538
+01:34:17.280 --> 01:34:20.220
+Joshua Lieberman: inferred from the use cases themselves.
+
+539
+01:34:21.540 --> 01:34:22.350
+Christine Perey: Exactly.
+
+540
+01:34:23.640 --> 01:34:32.010
+Christine Perey: Yeah, I think, I think this is really brings it home. I mean, since the requirements were driven by the use cases.
+
+541
+01:34:32.730 --> 01:34:56.640
+Christine Perey: They matched and you did a great job of explaining those use cases. So we think that there's a lot of potential for geo pose in the web maps and the implementations, not only the ones that the use cases requirements that were envisioned but that people will certainly be using this capability.
+
+542
+01:34:57.900 --> 01:35:15.420
+Christine Perey: invent new ways of using maps and that with the geo pose, they'll be able to not only position orient objects, but specifically with respect to a user and also be able to see where and how
+
+543
+01:35:16.110 --> 01:35:23.310
+Christine Perey: A user sees things from the user point of view, when you're designing applications and so forth. The
+
+544
+01:35:24.390 --> 01:35:33.930
+Christine Perey: The remarks that we made were organized really to keep parallel with the use cases and requirements document.
+
+545
+01:35:34.470 --> 01:35:44.760
+Christine Perey: And I think that's shown here. So content authors will be able to enrich what they have to offer using geo poses.
+
+546
+01:35:45.360 --> 01:35:57.390
+Christine Perey: Visitors will not only have a different and additional experiences of their existing maps and augmented reality and maybe being able to walk in a map walk
+
+547
+01:35:57.870 --> 01:36:13.860
+Christine Perey: Through space in a mapped way. And finally, there's a lot of applications and potential for developers to not only use simple geo post, but our sequences and animations and
+
+548
+01:36:15.990 --> 01:36:28.440
+Christine Perey: really enrich the the use cases. So again, as Josh also mentioned the idea of dragging and dropping some G oppose data.
+
+549
+01:36:29.130 --> 01:36:43.890
+Christine Perey: Into view and how is that going to enrich the experience and make it more more meaningful and perhaps give us new, new ways of thinking and looking at the world. I believe that's all we have.
+
+550
+01:36:46.530 --> 01:36:47.670
+Joshua Lieberman: Thank you Josh.
+
+551
+01:36:48.150 --> 01:36:48.870
+Thank you, Ryan.
+
+552
+01:36:51.270 --> 01:36:51.480
+Great.
+
+553
+01:36:52.800 --> 01:37:07.320
+Ryan Ahola - Natural Resources Canada: Excellent. Thank you. Thank you, Christina and Josh for that for that excellent presentation. Um, so as Christina mentioned, we're, we're about to start a panel discussion where we'll get into more of this 3D content and also a little bit on the authenticated reality.
+
+554
+01:37:08.880 --> 01:37:13.260
+Ryan Ahola - Natural Resources Canada: So we can, I guess we can start that now. So I believe that all of the panel members are here.
+
+555
+01:37:14.310 --> 01:37:22.440
+Ryan Ahola - Natural Resources Canada: So maybe I'm just going to introduce everyone, so maybe as I as I go through the introductions. You can just show your video and wave everyone or something.
+
+556
+01:37:24.000 --> 01:37:33.960
+Ryan Ahola - Natural Resources Canada: So I guess just to get started. So first stop. So the panel consists of a few different individuals we have Christina and yon Eric who everyone's just just met through their
+
+557
+01:37:34.680 --> 01:37:48.450
+Ryan Ahola - Natural Resources Canada: Current their presentations that we just had. We're also fortunate enough to have a diverse candidate who is the developer advocate and staff engineer at Samsung and is also a co Chair of the W three season versus web working group.
+
+558
+01:37:49.650 --> 01:38:05.460
+Ryan Ahola - Natural Resources Canada: Patrick cozy, who is the CEO of cesium is here as, as Thomas Logan, who is the owner of equal entry. So I'd like to thank everyone, everyone who has made themselves available today to participate in this panel to grow their, their expertise on on augmented reality.
+
+559
+01:38:06.630 --> 01:38:12.120
+Ryan Ahola - Natural Resources Canada: So maybe what I can start with, if I was interested if if any of the panelists.
+
+560
+01:38:12.900 --> 01:38:27.000
+Ryan Ahola - Natural Resources Canada: Wanted to provide any any opening remarks before I get into get into questions if there's anything that you wanted to say about what you do and your expertise on augmented reality I would certainly be welcome. Or we can just transition into questions. It's really up to you.
+
+561
+01:38:30.750 --> 01:38:36.420
+Thomas Logan (Equal Entry): I love to just say a quick thing about kind of my areas area of interest for augmented reality.
+
+562
+01:38:37.800 --> 01:38:45.840
+Thomas Logan (Equal Entry): So I'm Thomas Logan coming to you from Tokyo, Japan tonight. It's why it's very dark here right now but I own a company focused on
+
+563
+01:38:46.350 --> 01:38:50.070
+Thomas Logan (Equal Entry): Just improving technology for people disabilities. And I guess my
+
+564
+01:38:50.820 --> 01:38:59.250
+Thomas Logan (Equal Entry): specific area of interest. I went pretty deep on. It's not that broad, but it's a big problem for people with disabilities is the accessibility of crossing
+
+565
+01:38:59.610 --> 01:39:06.180
+Thomas Logan (Equal Entry): At busy traffic intersections out in the real world. So I wanted to bring into at least the discussion.
+
+566
+01:39:07.110 --> 01:39:14.820
+Thomas Logan (Equal Entry): Even with augmented reality, a lot of times there's thoughts of the visualization only part but the sonic sound.
+
+567
+01:39:15.810 --> 01:39:27.030
+Thomas Logan (Equal Entry): Components that can be put into augmented reality are very interesting for people who are blind and low vision when thinking about knowing whether or not it's safe to cross intersection. So I had done a project.
+
+568
+01:39:27.420 --> 01:39:39.750
+Thomas Logan (Equal Entry): With New York City, where have 40,000 intersections. They have in New York, only about 550 of those have that beeping tone locator to tell you when it's safe to walk or not and
+
+569
+01:39:40.620 --> 01:39:56.040
+Thomas Logan (Equal Entry): I just bring that in, is like something I think interesting to have as a user scenario we're talking about use cases in the previous one. But I think thinking also about the audio audio components of how this map data can be interpreted. It's very exciting.
+
+570
+01:39:57.210 --> 01:39:57.630
+Thomas Logan (Equal Entry): Thanks to me.
+
+571
+01:39:58.410 --> 01:40:02.400
+Christine Perey: Thanks, Thomas, I wanted to bounce on that I think we often overlook.
+
+572
+01:40:03.810 --> 01:40:10.110
+Christine Perey: Audio augmented reality and it is a field, but we can come back to that.
+
+573
+01:40:14.670 --> 01:40:20.940
+Ryan Ahola - Natural Resources Canada: Would anyone else like to mention that as an introduction or we can go into question for, for if everyone's ready
+
+574
+01:40:22.200 --> 01:40:35.340
+Patrick Cozzi, Cesium: Yeah, right. If I could use China quickly. So one is just, yeah. Thank you for inviting me to the event and the others panel. So, quick, quick intro for myself. So Patrick loses the CEO and cesium
+
+575
+01:40:36.450 --> 01:40:45.150
+Patrick Cozzi, Cesium: Kill a lot of work in the open standards world I chair her co chair this ad formats group at Kronos creators up to the GL TF
+
+576
+01:40:45.660 --> 01:40:57.150
+Patrick Cozzi, Cesium: Format. I'm really excited for augmented reality. I think that it's going to be a huge paradigm shift to how we experience computing right thinking about
+
+577
+01:40:57.480 --> 01:41:05.190
+Patrick Cozzi, Cesium: The screens on our phones and our laptops of today and what that means tomorrow and in 10 years from now.
+
+578
+01:41:06.000 --> 01:41:19.230
+Patrick Cozzi, Cesium: And I'm really excited about the intersection of maps and AR as kind of some of the main the main killer use cases and bringing temporal 3D to this so looking forward to chatting with everyone today.
+
+579
+01:41:20.850 --> 01:41:22.440
+Ryan Ahola - Natural Resources Canada: Great. Thanks, thanks, Patrick.
+
+580
+01:41:27.690 --> 01:41:34.260
+Ryan Ahola - Natural Resources Canada: So maybe, maybe we can get into questions if if you and Eric and either don't don't want to say anything at this point but
+
+581
+01:41:34.980 --> 01:41:40.410
+Ryan Ahola - Natural Resources Canada: And I would like to just encourage our audience who's listening to feel free to ask questions in the
+
+582
+01:41:40.950 --> 01:41:50.880
+Ryan Ahola - Natural Resources Canada: Chat. I do have a few questions to pose to the panel. But if there's something specific. You want to bring up. Please. Please go ahead. It's you're the ones we're trying to speak to some of your questions are
+
+583
+01:41:51.180 --> 01:41:52.320
+Ryan Ahola - Natural Resources Canada: Are certainly important.
+
+584
+01:41:53.640 --> 01:42:01.350
+Ryan Ahola - Natural Resources Canada: So maybe the first question that I was thinking of asking and and I think part of this might have partially been answered by the previous presentation.
+
+585
+01:42:02.370 --> 01:42:09.480
+Ryan Ahola - Natural Resources Canada: But I think there might be opportunities for some other opinions on this. I was thinking that I guess 3D and augmented reality really represents
+
+586
+01:42:09.990 --> 01:42:19.170
+Ryan Ahola - Natural Resources Canada: A fundamental shift in how the Geospatial web communities. Think about displaying information. I know, especially for for the geospatial community. I know myself it's
+
+587
+01:42:21.150 --> 01:42:28.140
+Ryan Ahola - Natural Resources Canada: This community is still fairly focused on two dimensional representations of content and analysis. That's how that's how the community is
+
+588
+01:42:28.530 --> 01:42:40.800
+Ryan Ahola - Natural Resources Canada: Traditionally a work. And that's where it's expertise this so I was kind of wondering what you think these communities need to consider when there's thinking about standards for developing Augmented Reality in 3D 3D maps.
+
+589
+01:42:42.210 --> 01:42:44.340
+Ryan Ahola - Natural Resources Canada: And maybe we can start with with ADA.
+
+590
+01:42:50.280 --> 01:42:51.150
+Ada Rose Cannon: So I think some stuff.
+
+591
+01:42:52.590 --> 01:43:00.750
+Ada Rose Cannon: So like, speaking of someone who who does run one of these groups for putting standards together for, um,
+
+592
+01:43:02.550 --> 01:43:08.880
+Ada Rose Cannon: For AR and VR on the web. I'm focusing on a half of this session.
+
+593
+01:43:10.260 --> 01:43:14.730
+Ada Rose Cannon: The thing which I'd like to focus on is working out the things which
+
+594
+01:43:16.440 --> 01:43:23.250
+Ada Rose Cannon: Were there is where there is some almost overlap with features that are required.
+
+595
+01:43:24.690 --> 01:43:35.880
+Ada Rose Cannon: By finding the bits where we can extend the the the existing X WebEx or device API to give access to the information you need.
+
+596
+01:43:37.650 --> 01:43:39.330
+Ada Rose Cannon: From the hardware to
+
+597
+01:43:40.440 --> 01:43:47.490
+Ada Rose Cannon: To display the content because the WebEx advice API is very low level, it's, it's pretty much raw access to
+
+598
+01:43:48.810 --> 01:43:56.370
+Ada Rose Cannon: To like the sensor data from the headset and access to display stuff on the headset itself.
+
+599
+01:43:57.570 --> 01:44:04.140
+Ada Rose Cannon: So finding the bits were getting access to this sensor data to the displays would be really beneficial.
+
+600
+01:44:10.050 --> 01:44:10.470
+Jan-Erik Vinje: Yes.
+
+601
+01:44:10.530 --> 01:44:22.440
+Ryan Ahola - Natural Resources Canada: Oh, that's, yeah, that's an excellent point. I think it's getting that that's that's your contact to be able to be make it usable for these applications is certainly important. I'm just wondering if anyone else has a follow up to that or or to the original question.
+
+602
+01:44:23.550 --> 01:44:44.430
+Jan-Erik Vinje: I think, yeah, that makes very much sense. So we're currently deep in the nitty gritty details of of what we want to develop in opening our cloud as a protocol for obtaining your geo post from a service and that method.
+
+603
+01:44:45.960 --> 01:44:59.010
+Jan-Erik Vinje: Starts with the sensor data from the device and we need to find ways that we can negotiate with the server, how we can send that sensor data and what's sensor data, the server needs.
+
+604
+01:44:59.940 --> 01:45:14.730
+Jan-Erik Vinje: So we want to leverage. What else is in the standards community around sensor data and then be able to communicate that and get access to that data and communicate that data to a
+
+605
+01:45:16.110 --> 01:45:29.790
+Jan-Erik Vinje: Web server, and then be able to get back and treated, almost like a new type of sensor data that has been refined that is more more accurate than the original sensor data for the purposes of something like posts.
+
+606
+01:45:30.930 --> 01:45:42.660
+Jan-Erik Vinje: So then you have a protocol for a GMO server. And that would be an awesome thing to to includes as a protocol for for use in the web context.
+
+607
+01:45:47.370 --> 01:45:57.300
+Thomas Logan (Equal Entry): I just wanted to add in, like, I guess, echoing on Brian's point about the a lot of government agencies or governments that would be consuming potentially these protocols.
+
+608
+01:45:57.750 --> 01:46:06.750
+Thomas Logan (Equal Entry): I think the data is a lot in 2D and my taking it back to my pedestrian signal example as a scenario. One of the things we encountered was
+
+609
+01:46:07.200 --> 01:46:15.090
+Thomas Logan (Equal Entry): The button that you actually press at a physical intersection. It's not always even at a standard height like it. It can be sometimes put
+
+610
+01:46:15.510 --> 01:46:27.510
+Thomas Logan (Equal Entry): Near the knee, it can sometimes we put me over the shoulder, and there was no data about that measured at all for the city. So when we were talking to them. It was first, like, Well, how do we measure that and then what's the system that you would even
+
+611
+01:46:28.110 --> 01:46:37.620
+Thomas Logan (Equal Entry): store that in so that it could be used in like an HR application or or VR application so that it could synthesize exactly like where that button was located so
+
+612
+01:46:38.400 --> 01:46:45.150
+Thomas Logan (Equal Entry): Just have that as a user scenario that I think if there was that standard and then there were software that you could type that into
+
+613
+01:46:46.740 --> 01:46:53.910
+Thomas Logan (Equal Entry): I definitely encountered that as a barrier, which is trying to like brainstorm how to build a cool solution for people with disabilities in any are
+
+614
+01:46:57.780 --> 01:47:06.090
+Ryan Ahola - Natural Resources Canada: Ya know, I was thinking that. So that's an interesting point because I think I've been at least in the geospatial community that's not like salad is something that's certainly not considered
+
+615
+01:47:06.720 --> 01:47:11.850
+Ryan Ahola - Natural Resources Canada: Because it's just not something that people are familiar with, with working with. So I think broadening the
+
+616
+01:47:13.050 --> 01:47:22.500
+Ryan Ahola - Natural Resources Canada: What our conceptions of what has to be included within geospatial to make things work for everyone and accessible way is certainly important for the community to consider.
+
+617
+01:47:23.610 --> 01:47:25.290
+Ryan Ahola - Natural Resources Canada: So no, that's a very interesting point.
+
+618
+01:47:26.790 --> 01:47:40.860
+Ryan Ahola - Natural Resources Canada: And maybe we can transition to a different question. And we had one in the panel or one of the Twitter chat with asking what the best way to deal with geographic precision is when combining map data with augmented reality.
+
+619
+01:47:41.940 --> 01:47:45.960
+Ryan Ahola - Natural Resources Canada: Also, are there ways to anchor feature coordinates to the to the physical world.
+
+620
+01:47:48.660 --> 01:47:51.360
+Ryan Ahola - Natural Resources Canada: Maybe you can ask Patrick if he has any comments on that.
+
+621
+01:47:52.800 --> 01:48:00.540
+Patrick Cozzi, Cesium: Yeah, so in just in 3D, even before we have to AR, you know, precision is always been a challenge, right, and
+
+622
+01:48:01.290 --> 01:48:07.260
+Patrick Cozzi, Cesium: In mapping when you can do anything from kind of gym and all the way out and seeing all the satellites orbiting the globe.
+
+623
+01:48:07.590 --> 01:48:21.090
+Patrick Cozzi, Cesium: To zooming into a car engine, right. And a lot of the 32 bit based GPUs will have precision errors with with chattering or what was the funding. So, you know, a lot of the global scale engines will go to great lengths.
+
+624
+01:48:21.690 --> 01:48:28.170
+Patrick Cozzi, Cesium: To emulate higher precision and and you pre computations for the coordinate system transforms
+
+625
+01:48:29.940 --> 01:48:36.420
+Patrick Cozzi, Cesium: As for when you start bringing this into AR the precision becomes super important.
+
+626
+01:48:37.050 --> 01:48:44.280
+Patrick Cozzi, Cesium: Just when you're overlaying that physical world, like say it's a infrastructure construction project and you want to put the H back in
+
+627
+01:48:44.550 --> 01:48:57.450
+Patrick Cozzi, Cesium: But it's only just been only just been framed out and there's there's two components. One is getting and for other folks on the panel to discuss is getting really accurate geo post position and orientation.
+
+628
+01:48:57.810 --> 01:49:04.980
+Patrick Cozzi, Cesium: And then the other is the rendering strategies to to overlay it overlay it slash also
+
+629
+01:49:06.030 --> 01:49:15.510
+Patrick Cozzi, Cesium: The Fighter depth tested with the with the physical world. So this week, I can see see the conversation for others to pick up
+
+630
+01:49:16.140 --> 01:49:33.000
+Christine Perey: Yeah, I want to piggyback on that. I think the question of accuracy generic mentioned he touched on it that if we have a spatially mapped world that we can
+
+631
+01:49:33.630 --> 01:49:43.470
+Christine Perey: Compare to the users camera what's being what sensing in real time, that will go a long way to combine
+
+632
+01:49:44.070 --> 01:50:03.000
+Christine Perey: The visual processing with the sensors like GPS and compass. So the combination of visual re localization and using the native sensors is is a key strategy going forward is no doubt about that.
+
+633
+01:50:04.680 --> 01:50:10.740
+Christine Perey: But then on the other hand, there's a lot of there's a lot. Just a lot of noise in the world right big blocks of
+
+634
+01:50:11.160 --> 01:50:22.800
+Christine Perey: Metal and water bodies of water terrible, and there's a lot of noise visually as well there any mirrors or and he reflective surfaces. They can reverse
+
+635
+01:50:23.670 --> 01:50:39.840
+Christine Perey: The readings. So we're not out of the woods. I think from that perspective, the second part of that question was how to anchor the digital assets on the physical world that really at this time. There are
+
+636
+01:50:41.070 --> 01:50:55.950
+Christine Perey: Just a few authoring environments that allow you to do that. And you can anchor to a floating object like a traditional marker or an image or something that can move around, or you can anchor to a physical
+
+637
+01:50:57.750 --> 01:51:13.920
+Christine Perey: Location that's been defined in the authoring environment. I think we're at a stage now where the innovation and the kinds of things that people are doing with augmented reality is a bit held back by
+
+638
+01:51:14.490 --> 01:51:27.540
+Christine Perey: The, the just, it was just too few authoring tools. Everyone is using unity and it's a great tool. If you're a game developer and you know how to use it already.
+
+639
+01:51:27.960 --> 01:51:49.140
+Christine Perey: And it's fantastic for prototyping and creating tests, but at the in the long run for scaling. You can't have an app for every single object or every single orientation or place. So we're going to, I believe, seeing more
+
+640
+01:51:50.280 --> 01:51:56.520
+Christine Perey: Diversity, we're certainly looking for that from the web community from the 3D web community.
+
+641
+01:51:58.980 --> 01:52:05.670
+Ada Rose Cannon: I'd like to follow that up with what's currently available or at least being worked on in the web platform today.
+
+642
+01:52:06.900 --> 01:52:12.090
+Ada Rose Cannon: To work on this. So with regarding geospatial
+
+643
+01:52:13.140 --> 01:52:16.380
+Ada Rose Cannon: There is a an early
+
+644
+01:52:17.730 --> 01:52:24.180
+Ada Rose Cannon: Incubation in the immersive web working group, could you alignment I've pasted the link into the chat.
+
+645
+01:52:26.250 --> 01:52:37.260
+Ada Rose Cannon: And here's the link to the readme. So you can see this is what the current status of this looks like and getting feedback for this API would be very valuable.
+
+646
+01:52:38.670 --> 01:52:41.700
+Ada Rose Cannon: It's not being super actively developed at the moment.
+
+647
+01:52:42.840 --> 01:52:45.570
+Ada Rose Cannon: I didn't. The last commit to it was made in August.
+
+648
+01:52:47.490 --> 01:52:53.490
+Ada Rose Cannon: But it's definitely something which we are in in are very interested in working on
+
+649
+01:52:54.540 --> 01:53:02.730
+Ada Rose Cannon: With regard to the second part of your question and anchor. Like, how do you anchor a 3D model to a space in
+
+650
+01:53:05.340 --> 01:53:09.540
+Ada Rose Cannon: On the NAR we actually have another API called anchors.
+
+651
+01:53:11.010 --> 01:53:15.900
+Ada Rose Cannon: Which I've put linked to this one is a lot further developed and has implementations in the wild.
+
+652
+01:53:17.970 --> 01:53:19.140
+Ada Rose Cannon: And this
+
+653
+01:53:20.520 --> 01:53:22.500
+Ada Rose Cannon: This is for anchoring
+
+654
+01:53:24.180 --> 01:53:36.570
+Ada Rose Cannon: The it lets you define an anchor based on a real world position and then it will keep that anchor on top of that real raw position so that you can place your 3D models inside
+
+655
+01:53:38.310 --> 01:53:48.330
+Ada Rose Cannon: That particular frame of that anchor to keep it in in place, and that's where we're at today. That one is coming along pretty well actually
+
+656
+01:53:50.940 --> 01:53:59.010
+Jan-Erik Vinje: That sounds like a good starting point, because we have an extended view of geo posts, we allow for
+
+657
+01:53:59.700 --> 01:54:18.990
+Jan-Erik Vinje: connecting two different frames of reference. So obviously the GOP is itself the basic your posts, as we define it. This has a starting frame that is anchored to to geospatial frame of reference, but we we won't allow for transforms between
+
+658
+01:54:20.280 --> 01:54:32.610
+Jan-Erik Vinje: Between different local frames of references that can be nested within the shoulder and every our rendering. So it's a case of that because they always use a Cartesian coordinate system for the rendering
+
+659
+01:54:33.450 --> 01:54:40.560
+Jan-Erik Vinje: And within that cookies and coordinate system, you will have a an anchor that you might want to to
+
+660
+01:54:41.700 --> 01:54:50.370
+Jan-Erik Vinje: Add an object to and there's a way to to go from that anchor inside the cookies and frame of reference.
+
+661
+01:54:51.090 --> 01:55:00.330
+Jan-Erik Vinje: And all the way back and expressing the position we work position and orientation of that anchor as GMO software see contract transform it into the other.
+
+662
+01:55:01.080 --> 01:55:10.800
+Jan-Erik Vinje: And the other way around. So both ways, should should be entirely possible to do within the large conceptual framework of the geo post spec.
+
+663
+01:55:16.530 --> 01:55:17.040
+Jan-Erik Vinje: Yeah, that was
+
+664
+01:55:18.720 --> 01:55:19.800
+Jan-Erik Vinje: My comment on that.
+
+665
+01:55:21.390 --> 01:55:31.560
+Ryan Ahola - Natural Resources Canada: Okay, thanks. Thanks everyone for those for those great answers. And I guess I just wanted to pick up on stopping Christine mentioned for because we're so related question related to
+
+666
+01:55:32.730 --> 01:55:39.930
+Ryan Ahola - Natural Resources Canada: Gaming with a covenant to get her to vote but gaming platforms really have a full system.
+
+667
+01:55:41.160 --> 01:55:49.260
+Ryan Ahola - Natural Resources Canada: Design that really shines by enabling the integration between the gaming environment and interaction with with our users, of course.
+
+668
+01:55:50.100 --> 01:55:58.650
+Ryan Ahola - Natural Resources Canada: Of course, accessibility is certainly an issue in some aspects of gaming. But there still is very good integration with with users. So the question is related to how does
+
+669
+01:55:59.340 --> 01:56:12.120
+Ryan Ahola - Natural Resources Canada: Current development on on our side of the fence to on the geospatial side in the website aligned with the gaming industry. And I guess how we might be able to leverage their, their efforts to to help in the work that we're interested in.
+
+670
+01:56:13.920 --> 01:56:25.770
+Jan-Erik Vinje: Yeah, I gotta jump back right in there before, you know, and just spoke, and there's a need for it. We're in these early phase of this technology, there's a need for R amp D and
+
+671
+01:56:26.610 --> 01:56:34.140
+Jan-Erik Vinje: Christine mentioned that we currently we're at the point where we are you relying on visual positioning to have accurate your books.
+
+672
+01:56:34.830 --> 01:56:48.450
+Jan-Erik Vinje: And that is very brittle those cameras. They have low typically on our devices. They have low dynamic range. And if the lighting conditions are poor things can fall apart.
+
+673
+01:56:49.620 --> 01:57:03.180
+Jan-Erik Vinje: And we need to have like multimodal developments in the future. So I SPECT we have, you know, multiple decades of r&d with different kinds of sensors that could work together to provide
+
+674
+01:57:04.110 --> 01:57:14.010
+Jan-Erik Vinje: By geo posing in more robust way so that when the weather is bad or the lighting is bad or other conditions change, you could you could
+
+675
+01:57:14.940 --> 01:57:24.240
+Jan-Erik Vinje: Obtain your post and do continue to do real world spatial computing and display things correctly in in challenging conditions.
+
+676
+01:57:24.780 --> 01:57:44.190
+Jan-Erik Vinje: So the gaming environment, just like the AI world. And just like the the autonomous driving worlds is is utilizing game engine technology to simulate their systems basically as autonomous vehicle for instance is a
+
+677
+01:57:45.660 --> 01:57:50.280
+Jan-Erik Vinje: It's a look at it like a device with sensors and
+
+678
+01:57:52.050 --> 01:57:53.520
+Jan-Erik Vinje: All the major
+
+679
+01:57:54.600 --> 01:58:04.380
+Jan-Erik Vinje: Organization and we're working on developing that field they they simulate autonomous vehicle in a in a game engine to to see how
+
+680
+01:58:05.730 --> 01:58:15.390
+Jan-Erik Vinje: Like synthetic sensor data can be handled by other autonomous driving systems and they can tune the weather, the lighting and the behavior of other vehicles.
+
+681
+01:58:15.840 --> 01:58:30.270
+Jan-Erik Vinje: And test those really edge cases. So the same thing applies to our, our clouds technology area like we we should have similar tools to to develop our field.
+
+682
+01:58:35.130 --> 01:58:35.880
+Thomas Logan (Equal Entry): I'm in with them.
+
+683
+01:58:36.450 --> 01:58:37.770
+Patrick Cozzi, Cesium: Good times. Oh.
+
+684
+01:58:37.800 --> 01:58:40.230
+Thomas Logan (Equal Entry): Yeah, just gonna say like, at least for
+
+685
+01:58:41.280 --> 01:58:46.740
+Thomas Logan (Equal Entry): Staying on my audio theme for today. The Last of Us. Part two is a game that
+
+686
+01:58:47.970 --> 01:59:02.100
+Thomas Logan (Equal Entry): Kind of famously has been able to be completed by people who are blind and it has tons of spatial information and it uses kind of a novel sonar and kind of sound notifications to know where objects and things are so I think
+
+687
+01:59:02.700 --> 01:59:14.190
+Thomas Logan (Equal Entry): From that standpoint of, like, looking at this professional game implementation and knowing that people have been like crying with delight about how well it works. I definitely think the gaming industry is
+
+688
+01:59:14.670 --> 01:59:24.330
+Thomas Logan (Equal Entry): A good place for inspiration to being like as you design like fully complete experiences like validating users, making sure that it actually does.
+
+689
+01:59:24.720 --> 01:59:36.630
+Thomas Logan (Equal Entry): Work and and so on. I referenced that game. It's right now. It's kind of like one of the most access accessible exciting things and it does do the 3D 3D audio specialization and if they place.
+
+690
+01:59:40.500 --> 01:59:49.230
+Patrick Cozzi, Cesium: Cool. Yeah, I just like to add, so I really believe in order to advance a are for maps and to advance 3D just in general.
+
+691
+01:59:49.530 --> 01:59:56.490
+Patrick Cozzi, Cesium: We really need this collaboration. It's an at the intersection of games and graphics and and and
+
+692
+01:59:56.820 --> 02:00:10.290
+Patrick Cozzi, Cesium: And geospatial right because if we're just coming at it from a geospatial from a map world. I mean, when you go to 2D to them 3D like 30 is not to D plus one, right, it's a whole new world.
+
+693
+02:00:11.040 --> 02:00:24.390
+Patrick Cozzi, Cesium: And then likewise when you're a game engine and you want to add global scale high precision real world coordinates and working with that massive data, you have to bring in a lot of the geospatial type types of techniques.
+
+694
+02:00:24.990 --> 02:00:31.290
+Patrick Cozzi, Cesium: So one example is, it's easy. And we've been collaborating closely with with Epic Games to build
+
+695
+02:00:31.710 --> 02:00:40.680
+Patrick Cozzi, Cesium: 3D geospatial about right on top of Unreal Engine right cesium from rail or unreal. Does the fundamental rendering and the lighting.
+
+696
+02:00:41.160 --> 02:00:53.310
+Patrick Cozzi, Cesium: Which is incredibly amazing and sophisticated and then on top of that cesium does the streaming for the 3D tiles. So based on The View. It brings in the you know the right real world content.
+
+697
+02:00:53.790 --> 02:01:02.100
+Patrick Cozzi, Cesium: Using the global global recession and and I think we're really just at the beginning of this kind of fusion of gaming and geospatial
+
+698
+02:01:05.280 --> 02:01:14.610
+Ryan Ahola - Natural Resources Canada: That's very, very interesting. I just wanted to note for for everyone that Ted Christina unfortunately had to go to another meeting for. That's why, that's why she's dropped off the call. But if she was is the recording.
+
+699
+02:01:15.660 --> 02:01:25.920
+Ryan Ahola - Natural Resources Canada: Just wanted to mention to say thank thank you to her for presentation earlier in her participation in the panel. I think we have about eight minutes left in the panel. So we have we have time to do a couple more questions.
+
+700
+02:01:27.030 --> 02:01:41.460
+Ryan Ahola - Natural Resources Canada: So one question that came up was, I guess we've been talking mostly about probably future states of AR and also 3D 3D components of that. So there's a question relating to how to get to, to that state and whether
+
+701
+02:01:42.390 --> 02:01:50.790
+Ryan Ahola - Natural Resources Canada: It would be beneficial at least a starting point on this this path or going down for augmented reality if the web platforms to port it
+
+702
+02:01:51.330 --> 02:02:05.670
+Ryan Ahola - Natural Resources Canada: To the map rendering and HTML and which is what map. The map ML proposal is aiming to do. So I guess if there any comments on that as whether that's at least a starting point for how to enable this new future. That would be it would be interesting.
+
+703
+02:02:12.360 --> 02:02:14.070
+Jan-Erik Vinje: And thumbs up from me, you know,
+
+704
+02:02:15.630 --> 02:02:34.770
+Jan-Erik Vinje: It's better to start with that and and I hope we can build on that, if we have a native and map elements that starts out that's to the then next thing is to extend it. So you could have the globe maps and the mercy modes later on. So,
+
+705
+02:02:36.660 --> 02:02:40.470
+Jan-Erik Vinje: Get on with it. That's when you wonder, I wouldn't be wonderful. Yeah.
+
+706
+02:02:42.930 --> 02:02:50.190
+Ada Rose Cannon: If you, if you want to be the change you wish to see in the world, a building a custom Web Components, usually a great place to start.
+
+707
+02:02:52.920 --> 02:02:53.430
+Ada Rose Cannon: And that's
+
+708
+02:02:53.520 --> 02:02:58.800
+Jan-Erik Vinje: Actually, actually. Yeah, I did one when I got my job in New York art at my
+
+709
+02:02:59.910 --> 02:03:04.260
+Jan-Erik Vinje: When I had my interview I made a web component using that like
+
+710
+02:03:04.740 --> 02:03:14.640
+Jan-Erik Vinje: One of the early libraries for creating Web Components and it looks very much like the Web Components and is proposed where you see the latitude and latitude.
+
+711
+02:03:14.940 --> 02:03:26.520
+Jan-Erik Vinje: And longitude as parameters and when I moved around in the map those parameters were updated. So yeah, I've been on that track some that was to the maps.
+
+712
+02:03:29.160 --> 02:03:37.800
+Ada Rose Cannon: It would be interesting if there was a native element. So currently WebEx are which is the only way to do a are in the web.
+
+713
+02:03:40.890 --> 02:03:51.900
+Ada Rose Cannon: There's no way right now anyway to draw HTML elements into into WebEx are because it's purely Web GL based
+
+714
+02:03:53.610 --> 02:04:06.210
+Ada Rose Cannon: So if there was to be some kind of native HTML element, the best way for it to to be able to get into WebEx are would be if it was able to expose some kind of
+
+715
+02:04:07.260 --> 02:04:10.620
+Ada Rose Cannon: Of buffer, which could be loaded into the GPU to be used.
+
+716
+02:04:11.730 --> 02:04:15.150
+Ada Rose Cannon: With Web GL or why PL to or where GPU.
+
+717
+02:04:17.790 --> 02:04:18.360
+Ada Rose Cannon: So that
+
+718
+02:04:20.940 --> 02:04:31.290
+Ada Rose Cannon: So that the that particular web engine you're using could then take that content and do smart stuff with it to lay it appropriately in your environment.
+
+719
+02:04:39.090 --> 02:04:43.230
+Ryan Ahola - Natural Resources Canada: Right. No, no, thanks for your thoughts on that. Yeah. I think it'll be, I think, as, as we
+
+720
+02:04:43.920 --> 02:04:51.300
+Ryan Ahola - Natural Resources Canada: Move down this path for for augmented reality as it becomes common part of everyday life. Eventually, we are going to be asking why the web platform doesn't support.
+
+721
+02:04:51.630 --> 02:05:00.870
+Ryan Ahola - Natural Resources Canada: 3D and augmented reality natively. So it's probably interesting idea to approach the 2D Map component first and then have something to build on for for 3D components.
+
+722
+02:05:02.490 --> 02:05:05.970
+Ryan Ahola - Natural Resources Canada: And we have one. One other question from the, from the audience.
+
+723
+02:05:07.080 --> 02:05:10.440
+Ryan Ahola - Natural Resources Canada: In consideration of your and Eric's earlier earlier presentation.
+
+724
+02:05:11.460 --> 02:05:16.740
+Ryan Ahola - Natural Resources Canada: Whether you think that the layer terminology is confusing and three or four d environment.
+
+725
+02:05:17.820 --> 02:05:24.330
+Ryan Ahola - Natural Resources Canada: Wondering if a term of view is better or if it has the same same problem. So I guess the question about terminology
+
+726
+02:05:26.550 --> 02:05:30.030
+Ryan Ahola - Natural Resources Canada: Maybe you want Erica, since this is your presentation. If you'd like to comment on
+
+727
+02:05:31.050 --> 02:05:35.790
+Jan-Erik Vinje: Yeah, people are routinely asking if layer is appropriate. So
+
+728
+02:05:36.840 --> 02:05:43.590
+Jan-Erik Vinje: For me it's always been intuitive, but when I understand that not everyone feels the same way. So, and
+
+729
+02:05:44.850 --> 02:05:52.770
+Jan-Erik Vinje: I'm not sure about view, but there could be another word that sort of hits hits the nail on the head. It might not be layer.
+
+730
+02:05:53.790 --> 02:06:13.440
+Jan-Erik Vinje: But that is very coming from Macworld and also from Photoshop, Illustrator layers or know something that is sort of in the background as a concept that is easy to to fall back on. But some deep thinking goods reveal better concepts.
+
+731
+02:06:16.020 --> 02:06:21.060
+Thomas Logan (Equal Entry): Unity uses that layer concept here for laying out objects and
+
+732
+02:06:21.150 --> 02:06:22.020
+Thomas Logan (Equal Entry): You know setting.
+
+733
+02:06:22.080 --> 02:06:23.970
+Thomas Logan (Equal Entry): Setting that on there so I
+
+734
+02:06:24.810 --> 02:06:25.260
+Ryan Ahola - Natural Resources Canada: Think at
+
+735
+02:06:25.680 --> 02:06:28.590
+Thomas Logan (Equal Entry): Least I've seen that terminology used there.
+
+736
+02:06:28.680 --> 02:06:30.030
+Thomas Logan (Equal Entry): In that environment as well.
+
+737
+02:06:35.640 --> 02:06:45.090
+Ryan Ahola - Natural Resources Canada: Okay, I guess we're down to about three minutes left on the panel. So I was, I think we'll just last one more question is kind of a closing question, but maybe everyone can can address
+
+738
+02:06:46.080 --> 02:06:53.370
+Ryan Ahola - Natural Resources Canada: So I guess I was interested in. If there's one thing that you would like the attendees of the workshop to to help with or consider
+
+739
+02:06:54.540 --> 02:07:10.530
+Ryan Ahola - Natural Resources Canada: For maps and and 3D slash augmented reality would, it would be since we have this audience here today who actually has the capability to do something. What, what, what you would ask them, so maybe we can, if anyone has has an opinion right away, feel free to jump in.
+
+740
+02:07:11.580 --> 02:07:13.350
+Ryan Ahola - Natural Resources Canada: We can we can have some time for everybody.
+
+741
+02:07:15.060 --> 02:07:16.920
+Ada Rose Cannon: One thing which I'd really like is
+
+742
+02:07:18.330 --> 02:07:23.850
+Ada Rose Cannon: If people could take a look at some of the repos in the immersive web
+
+743
+02:07:25.050 --> 02:07:30.300
+Ada Rose Cannon: And and maybe even get involved if your company is is a debris three see member
+
+744
+02:07:31.680 --> 02:07:43.140
+Ada Rose Cannon: And has to get involved in the work we're doing in two p three. See, because it would be really great to have the input of people with maps as a use case.
+
+745
+02:07:44.490 --> 02:07:49.920
+Ada Rose Cannon: giving their opinion on those former cameras turned off and getting their input on
+
+746
+02:07:52.020 --> 02:08:04.530
+Ada Rose Cannon: Whether or not the API's we were designing will fit your use cases. And I think we definitely do not want to preclude augmented reality maps from working in the web.
+
+747
+02:08:14.160 --> 02:08:23.730
+Thomas Logan (Equal Entry): I'll just add that in TD TD maps for my kind of world has already been like a constant challenge from when I got into this world of accessibility. So
+
+748
+02:08:24.180 --> 02:08:36.360
+Thomas Logan (Equal Entry): I just put out there to like really make sure people do care and consider the use case in 3D. Because, I mean, we still have a lot of challenges really considering just the 2D solutions for people with disabilities and
+
+749
+02:08:36.780 --> 02:08:45.330
+Thomas Logan (Equal Entry): I'm very excited about what can come but um I'll just put it out there that I'm someone that's always interested in like trying out people's
+
+750
+02:08:46.050 --> 02:08:56.760
+Thomas Logan (Equal Entry): You know prototype for things are working on. So I'm just definitely think of me. It's like someone that likes to try out samples and can like help you with the user scenario generation.
+
+751
+02:09:02.220 --> 02:09:23.040
+Jan-Erik Vinje: If I can chime in. I mentioned in my presentation that opening our cloud is working on designing and implementing a reference open spatial computing platform and, what is more, we are actually trying that platform out in a city scale, starting with
+
+752
+02:09:23.160 --> 02:09:42.840
+Jan-Erik Vinje: To European cities. So there's the city of Bari in Italy and the city. Oh, Helsinki, Finland and there might maybe during this autumn. There might be a few more cities as well. And we are seeking people who wants to participate on experimenting with what could be seen as a
+
+753
+02:09:44.580 --> 02:09:54.150
+Jan-Erik Vinje: Prototype open spatial web platform consisting of standards and protocols all the standards and protocols are sort of
+
+754
+02:09:56.340 --> 02:10:00.480
+Jan-Erik Vinje: In flux and work in progress. Nothing is fixed, so
+
+755
+02:10:02.220 --> 02:10:17.910
+Jan-Erik Vinje: Is there a true like already kind of thing but have to bring grand scale Bari, for instance, has hundred square kilometres that has been mapped so that you could obtain here geo posts over there. So that would allow for kinds of use cases that span the city.
+
+756
+02:10:19.470 --> 02:10:27.330
+Jan-Erik Vinje: So that is one aspect that obviously you can go to our GitHub opening up our GitHub repo and look at all the different projects there.
+
+757
+02:10:27.660 --> 02:10:42.720
+Jan-Erik Vinje: And most of them are related open spatial computing platforms. I encourage you to look at look into those and also encourage you to join open air clouds participate in our working groups and our meetings on the open spatial computing platform.
+
+758
+02:10:45.240 --> 02:10:58.560
+Jan-Erik Vinje: I think we're onto something very exciting for us to live by, like, like 1989 where timber industry. We're trying to invent the web with some some standards and protocols and some implementations
+
+759
+02:11:00.270 --> 02:11:20.700
+Jan-Erik Vinje: And now we have this new opportunity for for the spatial era. And this is not like a one one man show this is something we're trying to bring a global community together to solve these challenges, not only the technical, but also the ethical around privacy and security and user control.
+
+760
+02:11:24.360 --> 02:11:37.770
+Patrick Cozzi, Cesium: Yeah, then just to kind of round things out of piggybacking on that global community comment right so I do believe that AR hardware, you know, is not a mature and become widely spread right for both personal and professional use cases.
+
+761
+02:11:38.160 --> 02:11:48.840
+Patrick Cozzi, Cesium: And software, folks, you know, we should be building now right and we need a combination of platforms that will kind of enable everyone to build
+
+762
+02:11:49.080 --> 02:12:03.870
+Patrick Cozzi, Cesium: On top of us and and standards for interoperability. So I would just put a very broad call to action for, you know, anything that you can do to contribute to open standards, whether it's W three saved Kronos or GC.
+
+763
+02:12:04.320 --> 02:12:14.640
+Patrick Cozzi, Cesium: Anything from from use cases to actual spec work implementation, it's really going to help lift up the whole community and bring AR forward as fast as we can.
+
+764
+02:12:16.890 --> 02:12:22.050
+Ryan Ahola - Natural Resources Canada: Because. Great. Thanks. Thanks everyone for those for those those last answers to that final question.
+
+765
+02:12:22.680 --> 02:12:28.500
+Ryan Ahola - Natural Resources Canada: So I just like to thank everyone for participating on the panel today I thought it was really very interesting, especially for
+
+766
+02:12:29.160 --> 02:12:40.800
+Ryan Ahola - Natural Resources Canada: For myself as a stereotypical geospatial user doesn't really know anything about augmented reality or or three do it was really illuminating to see the future of the work that we're going going towards. So thank you everyone for your excellent participation.
+
+767
+02:12:42.570 --> 02:12:51.750
+Ryan Ahola - Natural Resources Canada: So I guess the last portion of our session today is is supposed to be a breakout session related to maps of objects specifically geo post
+
+768
+02:12:51.750 --> 02:12:55.650
+Ryan Ahola - Natural Resources Canada: For web maps which I believe is being led by a young Eric
+
+769
+02:12:56.760 --> 02:12:57.420
+Ryan Ahola - Natural Resources Canada: Finch again.
+
+770
+02:12:58.440 --> 02:13:08.280
+Ryan Ahola - Natural Resources Canada: I just wanted to check with our program committee members on because I believe we're, we're a little over time today. So I don't know if there's any considerations around that put the or if we can just move ahead with that with the breakout session.
+
+771
+02:13:11.520 --> 02:13:12.150
+Amelia Bellamy-Royds: I think
+
+772
+02:13:13.380 --> 02:13:29.760
+Amelia Bellamy-Royds: We can just continue on in the same space. I think our capture is dropping off but beyond that whoever is interested in the breakout it'll just continue on in the zoom conference system.
+
+773
+02:13:31.980 --> 02:13:36.960
+Ryan Ahola - Natural Resources Canada: Great. Thanks, thanks, Amelia, so I guess what that we're free to continue. So I'm you and Eric, you're, you're free to go ahead
+
+774
+02:13:38.040 --> 02:13:38.250
+Ryan Ahola - Natural Resources Canada: Okay.
+
+775
+02:13:38.310 --> 02:13:40.260
+Jan-Erik Vinje: Well, with that, you know, being
+
+776
+02:13:40.500 --> 02:13:41.850
+Ryan Ahola - Natural Resources Canada: respectful of
+
+777
+02:13:41.910 --> 02:13:47.250
+Jan-Erik Vinje: people's time we might try to not spend the entire 30 minutes
+
+778
+02:13:48.330 --> 02:13:55.380
+Jan-Erik Vinje: So maybe just just open the floor to questions and suggestions.
+
+779
+02:13:56.580 --> 02:14:03.120
+Jan-Erik Vinje: And where you're able to facilitate so everyone who raises their hand can chime in. Is that so
+
+780
+02:14:06.660 --> 02:14:07.620
+Ryan Ahola - Natural Resources Canada: Yeah, that's, that's
+
+781
+02:14:07.830 --> 02:14:19.950
+Ryan Ahola - Natural Resources Canada: That's fine. Oh my, I think we, we have a fairly small group now so if if people want to ask their questions and a greater picture channel that's, that's fine. I'm happy to read them out or if people just want to
+
+782
+02:14:20.970 --> 02:14:24.120
+Ryan Ahola - Natural Resources Canada: To speak at the zoom session that should that should be fine. I think it will be okay.
+
+783
+02:14:30.240 --> 02:14:33.390
+Peter Rushforth: Awesome. It's been a real challenge staying quiet for that long.
+
+784
+02:14:43.980 --> 02:14:45.060
+Jan-Erik Vinje: Well, feel free. You know,
+
+785
+02:14:45.510 --> 02:14:45.990
+Okay.
+
+786
+02:14:47.880 --> 02:14:50.040
+Amelia Bellamy-Royds: So to get things started.
+
+787
+02:14:52.890 --> 02:14:57.450
+Amelia Bellamy-Royds: We've got people coming from geospatial and thing he of data formats.
+
+788
+02:14:58.620 --> 02:15:05.940
+Amelia Bellamy-Royds: You talked about geo pose as a conceptual thing. But how do you actually integrate that in
+
+789
+02:15:07.140 --> 02:15:12.300
+Amelia Bellamy-Royds: To like your geo JSON or your other map data format.
+
+790
+02:15:15.240 --> 02:15:16.740
+Jan-Erik Vinje: Yeah, so
+
+791
+02:15:17.580 --> 02:15:19.050
+Amelia Bellamy-Royds: Geo Jason
+
+792
+02:15:21.780 --> 02:15:22.710
+Jan-Erik Vinje: Does
+
+793
+02:15:24.000 --> 02:15:40.260
+Jan-Erik Vinje: Sort of was an inspiration for do both because it was so simple and easy, easy to comprehend just looking at it was compact. It was a massive overly complex XML structure. So it's been very popular in the in the
+
+794
+02:15:41.550 --> 02:15:52.560
+Jan-Erik Vinje: Web Map community. I think we use it a lot in my workplace we store map data sometimes directly as a geo Jason
+
+795
+02:15:54.000 --> 02:16:10.260
+Jan-Erik Vinje: For instance, we have this where we're we're allowing users to draw features and save them and use them later that there was a good case for geo Jason, Jason, even though it supports to the new 3D coordinates.
+
+796
+02:16:11.580 --> 02:16:20.700
+Jan-Erik Vinje: And it's very much based in the GIS map data paradigm that has
+
+797
+02:16:23.700 --> 02:16:29.220
+Jan-Erik Vinje: A lot of coordinates in in, for instance, latitude, longitude and
+
+798
+02:16:30.390 --> 02:16:50.100
+Jan-Erik Vinje: The post itself. If you want to have a post, you, you, it's hard to work in latitude, longitude. That is why the basic geo post sort of creates a local Cartesian coordinate system that is tangential to to the episodes at that
+
+799
+02:16:51.360 --> 02:16:53.790
+Jan-Erik Vinje: at that position particular coordinates.
+
+800
+02:16:55.710 --> 02:17:08.970
+Jan-Erik Vinje: So we'll show you might be able to to add some attributes into a to Jason feature that could express the orientation of something at that point.
+
+801
+02:17:09.990 --> 02:17:14.040
+Jan-Erik Vinje: So that could be sort of grafted directly on top of geo Jason
+
+802
+02:17:15.150 --> 02:17:26.790
+Jan-Erik Vinje: And there's not a standard them, you might want nice like add some sort of extra standard to do just that could support posts and
+
+803
+02:17:28.830 --> 02:17:41.880
+Jan-Erik Vinje: The way we encodes in our in like we saw published yet, but the way in our OTC standards. Working Group for JIRA post the way we encode it for basic to post implementation targets.
+
+804
+02:17:42.390 --> 02:17:56.700
+Jan-Erik Vinje: And points towards a an encoding format as, as Jason that is even more so since then. Then Judaism, but that can be that because it's more
+
+805
+02:17:58.650 --> 02:18:12.660
+Jan-Erik Vinje: It's a simple concept. It's not all kinds of lines and polygons and everything. You don't need to have a lot of structure to separate but it's only posts and then you, you have a simpler object.
+
+806
+02:18:15.270 --> 02:18:15.510
+Yeah.
+
+807
+02:18:16.740 --> 02:18:19.200
+Jan-Erik Vinje: Does that answer some of the question.
+
+808
+02:18:19.650 --> 02:18:23.760
+Amelia Bellamy-Royds: Yes, thank you. Getting more ideas of what this would look like.
+
+809
+02:18:26.100 --> 02:18:41.100
+Amelia Bellamy-Royds: If, at the risk of dominating the conversation. Another question is, are there devices that currently can record this information, like if I'm taking a photograph.
+
+810
+02:18:41.640 --> 02:18:57.120
+Amelia Bellamy-Royds: Most PHONES CAN GIVE ME GPS coordinates of where I was standing, but can they give me the pose information that you can later reconstruct what direction I was looking at when I took that photograph.
+
+811
+02:18:59.520 --> 02:19:00.090
+Jan-Erik Vinje: Well,
+
+812
+02:19:01.950 --> 02:19:16.140
+Jan-Erik Vinje: I know not an expert on like active data, but there's slow metadata. You can have associated with a picture. So maybe there's someone else who knows if you capture like like and geomagnetic sensor data and I kind of thing.
+
+813
+02:19:17.280 --> 02:19:24.060
+Jan-Erik Vinje: And I don't quite know if that is part of taking a picture from smartphone today.
+
+814
+02:19:25.680 --> 02:19:26.730
+Jan-Erik Vinje: Should be possible.
+
+815
+02:19:32.190 --> 02:19:34.530
+Jan-Erik Vinje: Oh yeah. No one seems to know
+
+816
+02:19:36.780 --> 02:19:38.520
+Amelia Bellamy-Royds: What's any played around with
+
+817
+02:19:38.580 --> 02:19:41.250
+Amelia Bellamy-Royds: The device sensors and
+
+818
+02:19:42.600 --> 02:19:44.670
+Amelia Bellamy-Royds: Figuring out what your cameras, looking at
+
+819
+02:19:45.510 --> 02:19:53.370
+Jan-Erik Vinje: So what you could do. You could if you are in an AR context and you're speaking with a
+
+820
+02:19:54.450 --> 02:20:02.100
+Jan-Erik Vinje: Visual positioning service that has a very accurate position and orientation and it returns. There are a couple of service providers that provides
+
+821
+02:20:03.720 --> 02:20:11.940
+Jan-Erik Vinje: Geo spatial position orientation already. And then you could have you can sort of bundle that image, together with
+
+822
+02:20:12.480 --> 02:20:34.230
+Jan-Erik Vinje: That kind of extra meta data if if it's not supported directly in x. If you might be able to do that. So you take a picture and you're in a context and you obtain a post from when you took that picture that should be entirely possible to annotate picture with a
+
+823
+02:20:37.320 --> 02:20:49.290
+Doug Schepers: very slightly meta off topic, but I just wanted to note that exit is only one format and believe it's only supported in JPEG and a few other formats. There are lots of different
+
+824
+02:20:51.330 --> 02:20:53.910
+Doug Schepers: Metadata formats for raster data.
+
+825
+02:20:55.170 --> 02:21:12.450
+Doug Schepers: There wasn't attempt a few years ago at WCC to unify them, but it didn't really go anywhere. There was a spec that was produced, but it didn't really go, it wasn't really adopted a I think that if we're going to that is actually effect on the ground for
+
+826
+02:21:14.790 --> 02:21:26.640
+Doug Schepers: For standardization is actually starting to look at how this metadata could be encoded in Raster images if we're gonna if we wanted to do something like that and that could also
+
+827
+02:21:27.120 --> 02:21:34.620
+Doug Schepers: Go into the annotation stuff that was talked about earlier. And there's a lot of. There's a lot of its fertile ground there.
+
+828
+02:21:38.250 --> 02:21:40.530
+Doug Schepers: But, but there's still also some challenges.
+
+829
+02:21:45.810 --> 02:21:52.590
+Jan-Erik Vinje: The algorithm is used by visual positioning always allows that you if you have a good map of an area.
+
+830
+02:21:53.490 --> 02:22:04.770
+Jan-Erik Vinje: You can always obtain that after the fact. So if you come back three days later, have a photo and you know the general area and the local map and you could run an algorithm and obtain your post after the fact.
+
+831
+02:22:11.490 --> 02:22:27.750
+Jan-Erik Vinje: That could be done for historical images. You know, it's more challenging because she thinks might have more things might have changed vegetation paints on walls and in buildings that have been removed all that but
+
+832
+02:22:29.790 --> 02:22:44.010
+Jan-Erik Vinje: Certainly possible possible to do with historical a resistor. Well, we see some here apps that are doing that, where there's movies from the from standing camera somewhere and they put that movie into an AR experience.
+
+833
+02:22:45.090 --> 02:22:47.940
+Jan-Erik Vinje: To the right location and you get some sort of
+
+834
+02:22:49.560 --> 02:22:52.590
+Jan-Erik Vinje: Wind window into the past into the real world.
+
+835
+02:22:53.790 --> 02:22:55.350
+A fun experience, it seems
+
+836
+02:23:05.430 --> 02:23:06.210
+Jan-Erik Vinje: Yes, I think.
+
+837
+02:23:07.980 --> 02:23:11.370
+Jan-Erik Vinje: I'm not gonna hold everyone here and just to see if
+
+838
+02:23:12.780 --> 02:23:19.740
+Jan-Erik Vinje: The questions and comments are sort of starting to to to dry up. Now I am
+
+839
+02:23:21.000 --> 02:23:21.960
+Amelia Bellamy-Royds: Have any
+
+840
+02:23:23.430 --> 02:23:30.930
+Amelia Bellamy-Royds: Demos that you have something you can actually show us more than just the static images from the slides.
+
+841
+02:23:32.040 --> 02:23:34.230
+Jan-Erik Vinje: Well, where you can Google
+
+842
+02:23:35.310 --> 02:23:42.090
+Jan-Erik Vinje: To our partners. If you Google immersive and augmented city, you will be able to see some of
+
+843
+02:23:44.280 --> 02:23:51.540
+Jan-Erik Vinje: The ways they can overlay stuff into the, into this next city scale use cases.
+
+844
+02:23:53.640 --> 02:24:05.610
+Jan-Erik Vinje: So that is definitely one thing you could do, and there will be more demos. Pretty soon from the test beds. Where, where, where, hopefully, that is a demo of
+
+845
+02:24:06.750 --> 02:24:19.560
+Jan-Erik Vinje: Similar things but then running on the platform running on on the preliminary geo pose protocol using the early version of the geo posts and coding format.
+
+846
+02:24:20.250 --> 02:24:30.540
+Jan-Erik Vinje: So it's, it's something that could scale in a different way than having a number of different service providers with iOS and Craddick formats and protocols.
+
+847
+02:24:36.630 --> 02:24:46.950
+Amelia Bellamy-Royds: Okay, that's great if you could put the actual names of those companies in the chat later so it's easier for people to find that would be great.
+
+848
+02:24:48.270 --> 02:25:00.330
+Jan-Erik Vinje: So just go to YouTube and find those partners, those, those are the two companies that are running the two first despots commercial is running the one in Helsinki and hooking into cities running the one in Bari
+
+849
+02:25:01.560 --> 02:25:05.490
+Doug Schepers: Right, I have a question. It's a little speculative
+
+850
+02:25:06.630 --> 02:25:08.700
+Doug Schepers: But since we have time. I may as well ask it.
+
+851
+02:25:13.650 --> 02:25:30.180
+Doug Schepers: I had been thinking about maps, I'll be honest, as sort of 2D objects and I I recognized that there's an intersection with XR but I hadn't really thought too deeply about it but. But the more I think about it. I do wonder
+
+852
+02:25:32.100 --> 02:25:41.340
+Doug Schepers: If it might not be a good idea to start with something more ambitious that enables a broader set of use cases.
+
+853
+02:25:43.020 --> 02:25:54.690
+Doug Schepers: Including, you know, not just traditional a traditional flat digital maps. But, uh, but 3D
+
+854
+02:25:56.160 --> 02:26:14.730
+Doug Schepers: With geo perhaps with geo pose, perhaps with a yeah I, it seems to me like having geo pose an XR is pretty relevant to an emerging web sort of that has a AR and VR.
+
+855
+02:26:15.450 --> 02:26:29.130
+Doug Schepers: And it seems like maps could be folded into that as a subset of that, am I thinking about it wrong or do other people feel like maybe maps by itself is
+
+856
+02:26:30.480 --> 02:26:38.550
+Doug Schepers: Is actually only a subset of what we could do with AR VR geo pose 3D environments.
+
+857
+02:26:42.270 --> 02:26:53.550
+Peter Rushforth: I'm sure you're right but you've got to start somewhere, but I'm I shouldn't be jumping in on generic so session but you got to start somewhere and to do is like
+
+858
+02:26:55.230 --> 02:27:01.170
+Peter Rushforth: I mean I wouldn't call it simple, because I'm not, I'm not one of the geniuses inventing the 3D world.
+
+859
+02:27:02.190 --> 02:27:08.250
+Peter Rushforth: And to Dr. It seems pretty hard to me, especially in the in the in the notion of
+
+860
+02:27:09.360 --> 02:27:13.620
+Peter Rushforth: Making the content, making the content responsive.
+
+861
+02:27:14.790 --> 02:27:30.030
+Peter Rushforth: To the, to the container like in in 3D and like in reality the container is the person right but in in in the 2D Web Map. The container is a rectangle on the screen.
+
+862
+02:27:30.870 --> 02:27:37.830
+Peter Rushforth: And it seems to me that they're you know they're there, they're connected obviously nowadays with the mobile web and so on.
+
+863
+02:27:38.190 --> 02:27:57.150
+Peter Rushforth: But we haven't we haven't even got the, the browser rendering even basic 2D stuff in that rectangle for us yet. It's all done by web developers, right, like so. I just, I would like to see the plan for integrating this into a web that people can use you know that
+
+864
+02:27:58.290 --> 02:28:04.110
+Peter Rushforth: school kids can learn because you know I'm hearing a lot of high tech stuff here and
+
+865
+02:28:05.220 --> 02:28:06.870
+Peter Rushforth: You know, where does that come back to
+
+866
+02:28:09.390 --> 02:28:10.560
+Peter Rushforth: You know what I mean, like,
+
+867
+02:28:10.650 --> 02:28:15.390
+Peter Rushforth: Yeah, HTML, so far as I can see no more.
+
+868
+02:28:16.830 --> 02:28:17.790
+Peter Rushforth: Except in the dev
+
+869
+02:28:18.720 --> 02:28:19.230
+Sure.
+
+870
+02:28:23.280 --> 02:28:34.650
+Jan-Erik Vinje: As I would think both perspective are very good points. So, this is this is like a classical thing in software engineering like you want to like do the do the
+
+871
+02:28:35.190 --> 02:28:49.020
+Jan-Erik Vinje: Redesign and refactoring. And you can try and like maybe just come up with, let's throw the things we already did away and start from scratch. And that allows for
+
+872
+02:28:50.610 --> 02:28:58.770
+Jan-Erik Vinje: Some things to be easier. But then all the stuff you did with the old old paradigm and suddenly comes back and
+
+873
+02:28:59.940 --> 02:29:08.400
+Jan-Erik Vinje: We usually do this. And now we can't do that anymore. How can we bring that into it. So then you always end up with a long journey. Anyways, where you have to
+
+874
+02:29:08.760 --> 02:29:26.130
+Jan-Erik Vinje: Bring pulling stuff from the, from the old paradigm into the new and you have the opportunity to like have a gateway and say, say this is redundant, we don't we don't actually need it. This was totally meaningless to try and bring this into the future paradigm that might be
+
+875
+02:29:27.540 --> 02:29:46.290
+Jan-Erik Vinje: The advantage of doing it that way. And the big problem is that when you like. Throw everything away and start from scratch it tends to take a long time before you have something that is remotely as usable as what you originally have so
+
+876
+02:29:46.860 --> 02:29:56.910
+Doug Schepers: That's true. And also you you miss you, you lose the community of practitioners from the older tradition.
+
+877
+02:29:58.860 --> 02:30:03.960
+Doug Schepers: That so you there's there's a skill loss there. There's a nice skill loss, but there's a
+
+878
+02:30:05.400 --> 02:30:11.010
+Doug Schepers: There's a people loss as as people who are very knowledgeable about one area.
+
+879
+02:30:12.240 --> 02:30:15.930
+Doug Schepers: might not feel comfortable going into something that's to radically different.
+
+880
+02:30:17.280 --> 02:30:21.180
+Doug Schepers: And also thinking I'm just thinking about it from a pragmatic perspective.
+
+881
+02:30:24.240 --> 02:30:25.680
+Doug Schepers: There's a
+
+882
+02:30:26.820 --> 02:30:32.070
+Doug Schepers: There are certain controls that you would expect to have in a map zoom pan.
+
+883
+02:30:33.720 --> 02:30:42.570
+Doug Schepers: There's the notion of tiling which I, as far as I can see, is not really present in ar VR 3D worlds.
+
+884
+02:30:42.660 --> 02:30:44.550
+Jan-Erik Vinje: Oh, you will be wrong time.
+
+885
+02:30:44.580 --> 02:30:45.990
+Doug Schepers: Oh, well, there I am.
+
+886
+02:30:47.100 --> 02:30:50.730
+Jan-Erik Vinje: Calling is very useful in the 3D world as well.
+
+887
+02:30:51.450 --> 02:30:52.740
+Doug Schepers: Well, then, then
+
+888
+02:30:54.150 --> 02:31:02.670
+Doug Schepers: I then the put the pan and zoom seem also applicable. So maybe, maybe we should dig into the similarities between the
+
+889
+02:31:03.720 --> 02:31:12.630
+Doug Schepers: You know, the, the, the world's in order to make sure that even if we start with something simpler, though not simple maps.
+
+890
+02:31:14.640 --> 02:31:22.050
+Doug Schepers: That it it is minimal to extension and in into 3D environments.
+
+891
+02:31:22.770 --> 02:31:30.810
+Jan-Erik Vinje: Yeah. Assume actually interesting. I had three stages few hours ago with them knowing an AR prototype for for someone and
+
+892
+02:31:31.500 --> 02:31:44.280
+Jan-Erik Vinje: And one thing he asked her out of the blue. I had no idea would ask for that. But he was, how could you sue in this. And obviously, you know, if you have originally a Web Map and how soon controls.
+
+893
+02:31:46.140 --> 02:31:54.840
+Jan-Erik Vinje: And you can if you then extend the original web maps to an immersive map and you still have assume control what you would have to do is sort of
+
+894
+02:31:55.710 --> 02:32:04.710
+Jan-Erik Vinje: Take the same concept, but now instead of looking down at a map and zooming into the the map the sort of 2D map that you're looking down on
+
+895
+02:32:05.250 --> 02:32:21.990
+Jan-Erik Vinje: You now you're looking with your posts and you will assume along your posts and and it's a similar concept, but you could leverage the same control and have similar user interactions for for it.
+
+896
+02:32:23.040 --> 02:32:29.280
+Doug Schepers: And having a native zoom pan mechanism in the browser.
+
+897
+02:32:30.570 --> 02:32:39.960
+Doug Schepers: Whether that's an API or what. However, the interface goes that would help with accessibility across different mediums.
+
+898
+02:32:41.430 --> 02:32:50.760
+Doug Schepers: Absolutely against you could you could expose it as a standard control rather than just as a button, whatever. Yeah.
+
+899
+02:32:51.210 --> 02:32:54.720
+Jan-Erik Vinje: With an API much better with an API. Exactly. Yeah.
+
+900
+02:32:56.790 --> 02:32:59.790
+Doug Schepers: Thanks I appreciate you indulging me in that speculation.
+
+901
+02:33:02.280 --> 02:33:02.730
+Okay.
+
+902
+02:33:03.810 --> 02:33:20.190
+Jan-Erik Vinje: I think I actually, I don't think I should also soon leave this to have some dinner. And we probably quite some time over time. So thank you everyone for for hanging around for this interesting
+
+903
+02:33:20.220 --> 02:33:26.130
+Jan-Erik Vinje: Discussion and hope to hope that people from this community touch and bump into each other.
+
+904
+02:33:27.270 --> 02:33:30.120
+Jan-Erik Vinje: For for bringing special computing forward.
+
+905
+02:33:32.850 --> 02:33:33.300
+Jan-Erik Vinje: Bye bye.
+
+906
+02:33:34.470 --> 02:33:35.160
+Doug Schepers: Thanks, everyone.
+
+907
+02:33:36.900 --> 02:33:37.290
+Ada Rose Cannon: I
+
+908
+02:33:37.470 --> 02:33:38.190
+Ada Rose Cannon: Was having me.
+
+909
+02:33:38.520 --> 02:33:40.350
+Peter Rushforth: Thank you very much. Peter rose
+
+910
+02:33:41.010 --> 02:33:41.850
+Doug Schepers: Thank you viewers.
+
+911
+02:33:42.420 --> 02:33:42.840
+Ryan Ahola - Natural Resources Canada: I just
+
+912
+02:33:43.080 --> 02:33:53.970
+Ryan Ahola - Natural Resources Canada: Wanted to thank everyone for participating today. And I guess just a reminder for everyone. So, tomorrow we will be continuing the workshop, the session starts at 12 o'clock.
+
+913
+02:33:54.510 --> 02:34:02.040
+Ryan Ahola - Natural Resources Canada: Eastern time, which I believe it's 1600 UTC. Um, so we will pick up again tomorrow, so we'll see everyone again tomorrow. Thank you.
+
+914
+02:34:02.850 --> 02:34:04.050
+Doug Schepers: Thanks for moderating Ryan.
+
+915
+02:34:05.160 --> 02:34:05.940
+Ryan Ahola - Natural Resources Canada: Thanks. All right.
+
+916
+02:34:06.780 --> 02:34:09.390
+Bryan Haberberger: Good job, everybody. Thank you. Thanks. I
+
+917
+02:34:16.680 --> 02:34:17.640
+Ted Guild: Boom, boom, boom.
+
