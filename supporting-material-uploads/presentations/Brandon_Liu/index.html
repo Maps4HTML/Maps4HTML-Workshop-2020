@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset=utf-8>
+    <title>Multilingual Text Rendering</title>
+    <meta name=viewport content="width=device-width">
+    <link rel=stylesheet href="maps.css">
+    <script src="shower.js"></script>  <!-- Alternative: b6plus.js -->
+  </head>
+
+  <body class="shower fade-in">
+
+    <div class=progress></div>
+
+    <section class="cover slide clear" id=cover>
+      <h1>Multilingual Text Rendering</h1>
+      <address><a href="http://bdon.org">Brandon Liu</a>, <a href="https://protomaps.com">Protomaps LLC</a></address>
+      <p>September 23, 2020<br>
+    W3C/OGC Joint Workshop Series on Maps for the Web<br>
+    <a href="https://www.w3.org/2020/maps/"
+    >w3.org/2020/maps/</a></p>
+    </section>
+
+    <section class="slide clear side">
+      <img class="side" src="osmbase_montreal.png"></img>
+      <h2>Why Text?</h2>
+      <i>What is a map?</i>
+      <ol>
+        <li>Geometry, in some spatial reference system</li>
+        <li>Textual properties, possibly rendered as map labels</li>
+      </ol>
+      <i>Even if labeling is outside the scope of MapML, text presentation is <b>essential to maps</b> and worthy of forward thinking</i>
+    </section>
+
+    <section class="slide clear side">
+      <img class="side" src="osmbase_eastasia.png"></img>
+      <h2>Background and motivation</h2>
+      <ul>
+        <li>Myself: running OpenStreetMap-based services since 2013, focus on projects in East Asia</li>
+        <li><a href="https://protomaps.com">Protomaps:</a> Map API using OSM</li>
+        <li>OSM has a wealth of multilingual content</li>
+        <li>For this short presentation: narrow focus on Han (Chinese) script - only one part of global text</li>
+      </ul>
+    </section>
+
+    <style>
+      .maplabel {
+        padding-left:3px;
+        padding-right: 3px;
+        background-color:#dddddd;
+        position:absolute;
+        font-size:12px;
+      }
+
+      table, th, td {
+        border: 1px solid #aaaaaa;
+        text-align: center;
+      }
+    </style>
+
+    <style>
+      .mapcontainer {
+        height:290px;
+        width:290px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+      }
+    </style>
+
+    <section class="slide clear">
+      <h2>A simple dataset...</h2>
+      <pre>
+&lt;feature&gt;
+  &lt;geometry&gt;
+    &lt;coordinates&gt;&lt;point&gt;139.7400553 35.6432274&lt;/point&gt;&lt;/coordinates&gt;
+  &lt;/geometry&gt;
+  <span style="color:#999999">&lt;!-- Hong Kong, population --&gt;</span>
+  &lt;properties&gt;<span style="color:red">香港</span>,75000000&lt;/properties&gt;
+&lt;/feature&gt;
+&lt;feature&gt;
+  &lt;geometry&gt;
+    &lt;coordinates&gt;&lt;point&gt;114.1849161 22.3506270&lt;/point&gt;&lt;/coordinates&gt;
+  &lt;/geometry&gt;
+  <span style="color:#999999">&lt;!-- Minato-ku (a municipality in Tokyo), population --&gt;</span>
+  &lt;properties&gt;<span style="color:red">港区</span>,243000&lt;/properties&gt;
+&lt;/feature&gt; 
+      </pre>
+    </section>
+
+    <section class="slide clear">
+      <h2>A simple "map" in HTML...</h2>
+      <div class="mapcontainer">
+        <span class="maplabel" style="top:200px;left:70px;">
+          <span lang="zh-hant-hk" style="font-size:24px">香港</span><br/>
+          <span>7,500,000</span>
+        </span>
+        <span class="maplabel" style="top:150px;left:150px;">
+          <span lang="ja" style="font-size:24px">港区</span><br/>
+          <span>243,000</span>
+        </span>
+        <img style="height:100%" src="osm_eastasia.svg"></img>
+      </div>
+    </section>
+
+    <section class="slide side clear">
+      <div class="side" style="text-align:center">
+        zh-hant (Traditional Chinese)
+        <div style="font-size:60px" lang="zh-hant">港</div>
+        jp (Japanese)
+        <div style="font-size:60px" lang="ja">港</div>
+      </div>
+      <h2>Han Script: Locale Variants</h2>
+      <ul>
+        <li>Place names share a codepoint within Unicode "CJK Unified Ideographs": <a href="https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=港">U+6E2F 港</a></li>
+        <li>Variations are common. examples: 艹,辶 have different # of strokes depending on region</li>
+        <li>Place names are proper nouns, and users may be sensitive to how they are displayed</li>
+      </ul>
+      <div style="text-align:center;margin-top:1em;font-weight:500; background: #eeeeee;padding:0.5em">Maps are inherently multilingual documents; multiple languages on one map is unexceptional!</div>
+    </section>
+
+
+    <section class="slide clear">
+      <h2>Web Standards</h2>
+      <ul>
+        <li><a href="https://www.w3.org/International/questions/qa-lang-why">W3C Internationalization: Why use the language attribute?</a></li>
+        <li>Previous example (HTML)</li>
+        <pre>
+    &lt;span lang="zh-hant-hk"&gt;香港&lt;/span&gt;
+    &lt;span lang="ja"&gt;港区&lt;/span&gt;</pre>
+        <li>HTML standards solution: <b>element-level</b> <code>lang</code> attributes. Correct display of localized text is <b>supported by markup</b> and implemented in major browsers. Pan-CJK fonts ship with operating systems</li>
+        <li>also, <code>lang</code> attributes are recommended to power <b>accessibility features</b> such as screen readers.</li>
+      </ul>
+    </section>
+
+    <section class="slide clear side right">
+      <h2>Documents vs. Maps</h2>
+      <div class="columns" style="font-size:13px">
+        <div>
+          <h3>HTML</h3>
+          <ul>
+            <li>Recommended: one <code>lang</code> attribute at document level <br/><code>&lt;html lang="en-us"&gt;</code></li>
+            <li>In cases of multilingual text, element-level <code>lang</code> tagging</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Maps</h3>
+          <ul>
+            <li>Many map services provide only one version for all user languages</li>
+            <li>Client-rendered maps may still display local names + user transliteration</li>
+          </ul>
+        </div>
+      </div>
+      <img class="side" src="gmaps_multiling.png"></img>
+    </section>
+
+    <section class="slide clear">
+      <h2>Documents vs. Maps</h2>
+      <ul>
+        <li>Do graphics elements in HTML documents (SVG, Canvas) support <code>lang</code> attributes at the sub-document (element) level?</li>
+        <li>What is the current state of locale-specific text for web maps?</li>
+        <li>What enhancements to web standards would be useful?</li>
+      </ul>
+    </section>
+
+    <section class="slide clear">
+      <h2>SVG</h2>
+      <div class="mapcontainer">
+        <svg style="position:absolute" width="290px" height="290px">
+          <text x="70" y="230" style="font-size:30px" lang="zh-hant">香港</text>
+          <text x="150" y="170" style="font-size:30px" lang="ja">港区</text>
+        </svg>
+        <img style="height:100%" src="osm_eastasia.svg"></img>
+      </div>
+    </section>
+
+    <section class="slide clear">
+      <h2>SVG Results</h2>
+      <pre>
+&lt;svg&gt;
+  &lt;text x=&quot;70&quot; y=&quot;200&quot; lang=&quot;zh-hant&quot;&gt;&#x9999;&#x6e2f;&lt;/text&gt;
+  &lt;text x=&quot;150&quot; y=&quot;150&quot; lang=&quot;ja&quot;&gt;&#x6e2f;&#x533a;&lt;/text&gt;
+&lt;/svg&gt;
+      </pre>
+      <table style="margin-left:auto;margin-right:auto">
+        <thead>
+          <tr>
+            <td>Browser</td>
+            <td>document-level lang</td>
+            <td>element-level lang</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Safari 13</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Firefox 79</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Chrome 84</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Edge 85</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="slide clear">
+      <h2>Canvas</h2>
+      <div class="mapcontainer">
+        <canvas width="290px" height="290px" style="position:absolute" id="canvas"></canvas>
+        <img style="height:100%" src="osm_eastasia.svg"></img>
+      </div>
+      <script>
+        var ctx = document.getElementById('canvas').getContext('2d');
+        ctx.font = '30px sans-serif';
+        ctx.fillText('香港', 70, 230);
+        ctx.fillText('港区', 150, 170);
+      </script>
+    </section>
+
+    <section class="slide clear">
+      <h2>Canvas Results</h2>
+      <pre style="font-size:11px">
+&lt;script&gt;
+  var ctx = document.getElementById(&#039;canvas&#039;).getContext(&#039;2d&#039;);
+  ctx.font = &#039;30px sans-serif&#039;; <span style="color:red">// no way to specify lang!</span>
+  ctx.fillText(&#039;&#x9999;&#x6e2f;&#039;, 70, 200);
+  ctx.fillText(&#039;&#x6e2f;&#x533a;&#039;, 150, 150);
+&lt;/script&gt;</pre>
+      <table style="margin-left:auto;margin-right:auto">
+        <thead>
+          <tr>
+            <td>Browser</td>
+            <td>document-level lang</td>
+            <td>element-level lang</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Safari 13</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Firefox 79</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Chrome 84</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Edge</td>
+            <td>✅</td>
+            <td>❌</td>
+          </tr>
+        </tbody>
+      </table> 
+      <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Canvas/FormattedText.md">Canvas FormattedText proposal</a>
+    </section>
+
+    <section class="slide side clear">
+      <img class="side" src="osm_xiamen.png"></img>
+      <h2>Server-rendered maps...</h2>
+      <ul>
+        <li>Slippy maps: server-generated images generally default to one region via fonts</li>
+        <li>OpenStreetMap default tileset: policy is <i>display place names in the local language</i></li>
+        <li>However, place names in China rendered using Japan variants</li>
+        <li>Work to be done: add features to Mapnik, data to support locale-specific text</li>
+        <br/>
+        <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/2208">openstreetmap-carto: What about Han Unification?</a>
+      </ul>
+    </section>
+
+    <section class="slide side clear">
+       <h2>Client-rendered maps with WebGL</h2>
+      <img class="side" src="MontrealSDF.png"></img>
+       <ul>
+         <li>State of the art WebGL map renderers generate or download Signed Distance Fields (SDF)</li>
+         <li>Great graphics performance; tradeoff is complexity, need for downloads over network, visual fidelity</li>
+         <li>Shipping an entire text shaping and rendering stack via JS or even WASM has <b>little in common</b> with web standard text implementations</li>
+      </ul>
+    </section>
+
+    <section class="slide side clear">
+       <img class="side" src="pmap_xiamen.png"></img>
+       <h2>Client-rendered hybrid approach</h2>
+       <ul>
+         <li><a href="https://github.com/tangrams/tangram">Tangram</a> - Mapzen project, now Linux Foundation</li>
+         <li><b>web standard text capabilities via Canvas</b>: Variable fonts, Indic scripts, right-to-left, CJK variant fonts</b></li>
+         <li>Also: <a href="https://openlayers.org">OpenLayers</a>, <a href="https://github.com/protomaps/protomaps2d">Protomaps 2D</a></li>
+         <li>Text is rendered at a single size</li>
+         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffscreenCanvas</a> vital to making these performant</li>
+      </ul>
+    </section>
+
+    <section class="slide clear">
+      <h2>Aside: HTML &lt;video&gt;</h2>
+      Video has accompanying <a href="https://www.w3.org/TR/webvtt1/">WebVTT standard</a> for presenting timed text
+      <video style="width:75%; display:block; margin-left:auto;margin-right:auto;margin-top:1em" controls src='big_buck_bunny_5s.mp4'>
+        <track default src="track.vtt"/>
+      </video>
+      <span style="font-size:10px">© 2008, Blender Foundation / www.bigbuckbunny.org</span>
+    </section>
+
+    <section class="slide clear">
+      <h2>WebVTT Results</h2>
+      Use explicit <a href="https://www.w3.org/TR/webvtt1/#webvtt-cue-language-span">Cue Language Spans</a> for assigning presentation language
+      <pre>
+WEBVTT
+label
+00:00.000 --&gt; 00:05.000 line:50%
+&lt;lang zh&gt;&#x6e2f;&lt;/lang&gt; &lt;lang ja&gt;&#x6e2f;&lt;/lang&gt;</pre>
+    <table style="margin-left:auto;margin-right:auto">
+      <thead>
+        <tr>
+          <td>Browser</td>
+          <td>document-level lang</td>
+          <td>cue-level lang</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Safari 13</td>
+          <td>❌</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <td>Firefox 79</td>
+          <td>✅</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Chrome 84</td>
+          <td>✅</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <td>Edge 85</td>
+          <td>✅</td>
+          <td>❌</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+
+    <section class="slide clear">
+      <h2>Conclusions</h2>
+      <ul>
+        <li>Multi-language or multi-script maps are not edge cases</li>
+        <li>Text documents on the web support <b>element-level lang attributes</b> - an improvement over current web maps</li>
+        <li>Graphical standards: <code>svg, canvas, video, map</code> - if responsible for text presentation - should have these capabilities as well</li>
+      </ul>
+    </section>
+
+    <section class="clear cover slide">
+      <h2>THANK YOU!</h2>
+      <p><a href="mailto:brandon@protomaps.com">brandon@protomaps.com</a><br>
+    <a href="https://twitter.com/bdon">@bdon</a><br>
+      <p>September 23, 2020<br>
+    W3C/OGC Joint Workshop Series on Maps for the Web<br>
+    <a href="https://www.w3.org/2020/maps/"
+    >w3.org/2020/maps/</a></p>
+    </section>
+
+  </body>
+</html>

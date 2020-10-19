@@ -104,17 +104,22 @@ layout: default
                     {% for talk in detail_item[1] %}
                       <dd>
                         {% if talk.recording %}
-                          <a href="{{ talk.recording }}">{{ talk.title }}</a>
+                          <a href="{{ talk.recording }}" id="{{ talk.title | handle }}">{{ talk.title }}</a>
                         {% else %}
-                          {{ talk.title }}
-                        {% endif %}
-                        {% if talk.link %}
-                          <a class="slides-link" href="{{ talk.link }}">({{ talk.linktype | default: "slides"}})</a>
+                          <span id="{{ talk.title | slugify }}">{{ talk.title }}</span>
                         {% endif %}
                         <span class="author schedule-talk-info">{% include participant-link.html participant=talk.author %}</span>
-                        {% if talk.discourse %}
-                        <span class="discussion schedule-talk-info"><a href="{{ talk.discourse }}">Join the discussion!</a></span>
-                        {% endif %}
+                        <ul class="schedule-item-actions">
+                          {% if talk.link %}
+                            <li><a aria-describedby="{{ talk.title | slugify }}" class="schedule-item-action" href="{{ talk.link }}">{{ talk.linktype }}</a></li>
+                          {% endif %}
+                          {% for format in talk.slides %}
+                            <li><a aria-describedby="{{ talk.title | slugify }}" class="schedule-item-action" href="{{ format }}">{% unless format contains 'https://www.w3.org/2020/maps/' %}Link to{% else %}{{ format | split: '.' | last | upcase }}{% endunless %} Slides</a></li>
+                          {% endfor %}
+                          {% if talk.discourse %}
+                            <li><a aria-describedby="{{ talk.title | slugify }}" class="schedule-item-action" href="{{ talk.discourse }}">Discussion</a></li>
+                          {% endif %}
+                        </ul>
                       </dd>
                     {% endfor %}
                   {% elsif detail_item[0] == 'Panelists' %}

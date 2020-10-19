@@ -587,7 +587,7 @@ a.footnote-ref:after {
   list-style: none;
 }
 
-.schedule li + li {
+.schedule > li + li {
   margin-top: .5rem;
 }
 
@@ -664,19 +664,37 @@ a.footnote-ref:after {
 .schedule-item-details dd {
   margin: 0 0 0.5rem;
   border-top: none;
-  padding: 0;
+  padding: 0 0 0 0.5rem;
 }
 .schedule-item-details dd:last-child {
   margin-bottom: 0;
+}
+
+.schedule-item-actions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule-item-actions li {
+  display: inline-block;
+  margin: 0;
+}
+
+.schedule-item-action {
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  background-color: #f1f7ff;
+  color: #005a9c;
 }
 
 .schedule-talk-info {
   font-size: 90%;
   display: block;
   margin-bottom: .25em;
-}
-.schedule-talk-info::before {
-  content: "→ ";
 }
 
 .schedule-item-details dd + dt {
@@ -808,11 +826,8 @@ button {
   text-align: center;
 }
 
-main a[href$=".pdf"]::after {
+main a[href$=".pdf"]:not(.schedule-item-action)::after {
 	content: " (PDF)";
-}
-main a.slides-link[href$=".pdf"]::after {
-	content: none;
 }
 
 .visually-hidden {
