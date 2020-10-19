@@ -129,7 +129,7 @@
         - Moderator:
             - Doug Schepers
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/worldwide-web-maps-challenges-in-the-global-context/4890">Join the discussion, on Discourse!</a>
+            - '<a href="https://discourse.wicg.io/t/worldwide-web-maps-challenges-in-the-global-context/4890">Worldwide Web Maps: Challenges in the global context, on Discourse</a>'
     - title: "Extending GeoJSON for Web Applications"
       type: breakout
       details:
@@ -173,7 +173,7 @@
       slides: https://xrnavigation.io/audiom-getting-started/
       details:
         - Facilitator: Brandon Biggs
-        - Discussion: <a href="https://discourse.wicg.io/t/digital-nonvisual-maps/4838">Join the discussion on Discourse!</a>
+        - Discussion: <a href="https://discourse.wicg.io/t/digital-nonvisual-maps/4838">Digital Nonvisual Maps, on Discourse</a>
     - title: "The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)"
       slides: https://github.com/Maps4HTML/Web-Map-Custom-Element
       type: breakout
@@ -183,8 +183,7 @@
             - title: The MapML Proposal - Part Two
               author: Peter Rushforth
               slides: https://youtu.be/aqXmbNAaLAU?t=4903
-        - Discussion:
-          - <a href="https://discourse.wicg.io/t/the-mapml-proposal-part-two/4894">Join the discussion on Discourse!</a>
+              discourse: https://discourse.wicg.io/t/the-mapml-proposal-part-two/4894
 - title: "Week 2, Day 1"
   start: 2020-09-28T04:00Z
   video: https://www.youtube.com/watch?v=Jb-vLX7a1m0&list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ&index=5
@@ -216,7 +215,7 @@
         - Moderator:
             - Amelia Bellamy-Royds
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854">Cognitive Accessibility of Web Maps, on Discourse</a>
         - Background Reading:
             - '<a href="https://w3c.github.io/coga/issue-papers/wayfinding-indoors.html">COGA Issue Paper on Indoor Navigation / Wayfinding</a>'
             - '<a href="https://www.clearhelper.org/news/wayfinding/">Collection of Wayfinding links & resources</a>'
@@ -272,7 +271,7 @@
         - Moderator:
             - Gobe Hobona
         - Discussion:
-            - <a href="https://youtu.be/RPZlE5N-Nds?t=1257">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/creating-accessible-web-map-widgets/4874">Creating accessible web map widgets, on Discourse</a>
     - title: "Advances in 3D Map Display"
       type: presentations
       duration: "30 minutes"
@@ -301,7 +300,7 @@
         - Moderator:
             - Ryan Ahola
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/maps-and-augmented-reality/4916">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/maps-and-augmented-reality/4916">Maps & Augmented Reality, on Discourse</a>
     - title: "Maps of Objects: GeoPose for Web maps"
       type: breakout
 - title: "Week 2, Day 3"
@@ -351,14 +350,14 @@
         - Moderator:
             - Ted Guild
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/stakeholders-commercial-mapping-services-the-web/4919">Join the discussion on Discourse!</a>
+            - '<a href="https://discourse.wicg.io/t/stakeholders-commercial-mapping-services-the-web/4919">Stakeholders: Commercial Mapping Services on the web on Discourse</a>'
     - title: "Map Whiteboard: Collaborative Map-Making"
       type: breakout
       slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Whiteboard-Collaborative-Map-Making-breakout-session.pptx
       details:
         - Facilitator: Karel Charvat
         - Discussion:
-          - <a href="https://discourse.wicg.io/t/map-compositions-format/4883">Join the discussion on Discourse!</a>
+          - '<a href="https://discourse.wicg.io/t/map-compositions-format/4883">Map Whiteboard: Collaborative Map-Making on Discourse</a>'
 - title: "Week 2, Day 4"
   start: 2020-10-01T22:00Z
   video: https://youtu.be/9iw75LmnyvQ
@@ -385,7 +384,7 @@
         - Moderator:
             - Tom Kralidis
         - Discussion:
-          - <a href="https://discourse.wicg.io/t/stakeholders-open-source-for-web-mapping/4920">Join the discussion on Discourse!</a>
+          - '<a href="https://discourse.wicg.io/t/stakeholders-open-source-for-web-mapping/4920">Stakeholders: Open Source for Web Mapping on Discourse</a>'
     - title: "Conclusion / Next Steps"
       type: discussion
       duration: "30 minutes"
