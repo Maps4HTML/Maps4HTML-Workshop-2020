@@ -65,18 +65,24 @@ layout: default
 
 <article class="agenda">
 <h2 id="schedule">Schedule</h2>
-<p class="warning">
-  Please note the exact schedule is subject to change,
-  although we will try to keep to these time slots.
-</p>
 {% for day in site.data.agenda %}
-  <h3 id="day-{{ forloop.index }}">{{ day.title }}:
+  <div class="schedule-header">
+    <h3 id="day-{{ forloop.index }}">{{ day.title }}:
+      <time class="schedule-time{% if day.video %} past-event{% endif %}"
+            datetime="{{ day.start }}">{{ day.start | date: "%Y-%m-%d %H:%M" }}UTC</time>
+    </h3>
     {% if day.video %}
-    <a class="schedule-video-link" href="{{ day.video }}"
-      >Watch recording<span class="visually-hidden"> of {{ day.title }} sessions</span></a>
+      <a class="schedule-video-link" href="{{ day.video }}">
+        Watch recording<span class="visually-hidden"> of {{ day.title }} sessions</span>
+      </a>
     {% endif %}
-    <time class="schedule-time{% if day.video %} past-event{% endif %}"
-          datetime="{{ day.start }}">{{ day.start | date: "%Y-%m-%d %H:%M" }}UTC</time></h3>
+    {% if day.captions %}
+      <a class="schedule-captions-link" href="{{ day.captions }}">
+        View Captions<span class="visually-hidden"> of {{ day.title }} sessions</span>
+      </a>
+    {% endif %}
+
+  </div>
   <ol class="schedule">
     {% for item in day.agenda %}
       <li class="schedule-item">

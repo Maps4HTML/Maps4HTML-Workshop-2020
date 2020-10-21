@@ -553,22 +553,37 @@ a.footnote-ref:after {
 }
 
 .agenda h3 {
-  background: #005a9c;
+  margin: 0;
   color: white;
+}
+
+.schedule-header {
+  padding: 0.5rem 0;
+  background: #005a9c;
   box-shadow: 0 0 0 0.2rem #005a9c,
     0.1rem 0.1rem 0 0.2rem rgba(0,0,0,0.4);
   border-radius: 0.2rem;
 }
 
-.schedule-video-link {
+.schedule-video-link, .schedule-captions-link {
   display: inline-block;
+  margin-top: 0.5rem;
   padding: 0.25em;
   border-radius: 0.2em;
   background: white;
+  font-weight: 700;
   color: #005a9c;
+}
+.schedule-video-link {
+  margin-left: 1rem;
 }
 .schedule-video-link::before {
   content: "🎦 ";
+  font-size: 90%;
+  margin-left: -0.1em;
+}
+.schedule-captions-link::before {
+  content: "📝 ";
   font-size: 90%;
   margin-left: -0.1em;
 }
