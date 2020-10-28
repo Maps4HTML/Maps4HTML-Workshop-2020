@@ -34,11 +34,11 @@ Amelia Bellamy-Royds: You
 
 9
 00:00:48.690 --> 00:00:56.160
-Amelia Bellamy-Royds: Have hard hearing or hard time with English or people's accents. Hopefully this will help
+Amelia Bellamy-Royds: Have hard hearing or hard time with English or people's accents. Hopefully this will help.
 
 10
 00:00:58.800 --> 00:01:03.030
-Amelia Bellamy-Royds: As I said all wait a couple more minutes and then we'll actually get started.
+Amelia Bellamy-Royds: As I said I'll wait a couple more minutes and then we'll actually get started.
 
 11
 00:03:40.770 --> 00:03:41.550
@@ -46,7 +46,7 @@ Amelia Bellamy-Royds: Shall we begin
 
 12
 00:03:49.380 --> 00:03:51.420
-Amelia Bellamy-Royds: So, welcome. Oh.
+Amelia Bellamy-Royds: So, welcome all.
 
 13
 00:03:52.770 --> 00:03:57.420
@@ -58,7 +58,7 @@ Amelia Bellamy-Royds: My name is Amelia Bellamy Royds I'm one of the members of 
 
 15
 00:04:14.850 --> 00:04:21.150
-Amelia Bellamy-Royds: So welcome to what you are participating in is the W three see oh GC.
+Amelia Bellamy-Royds: So welcome to what you are participating in is the W3C OGC.
 
 16
 00:04:24.270 --> 00:04:25.890
@@ -66,7 +66,7 @@ Get this title correctly.
 
 17
 00:04:27.930 --> 00:04:32.160
-Amelia Bellamy-Royds: W three C OTC workshop on maps for the web.
+Amelia Bellamy-Royds: W3C OGC workshop on maps for the web.
 
 18
 00:04:33.330 --> 00:04:34.230
@@ -74,7 +74,7 @@ Amelia Bellamy-Royds: Um,
 
 19
 00:04:35.250 --> 00:04:42.510
-Amelia Bellamy-Royds: So our host organizations. The WCC the World Wide Web can search him.
+Amelia Bellamy-Royds: So our host organizations. The W3C, the World Wide Web Consortium.
 
 20
 00:04:44.040 --> 00:04:47.940
@@ -82,7 +82,7 @@ Amelia Bellamy-Royds: Works on standards for the web platform.
 
 21
 00:04:48.960 --> 00:04:54.930
-Amelia Bellamy-Royds: The OTC the Open Geospatial Consortium works on standards for
+Amelia Bellamy-Royds: The OGC, the Open Geospatial Consortium works on standards for
 
 22
 00:04:57.120 --> 00:05:00.690
@@ -94,7 +94,7 @@ Amelia Bellamy-Royds: Are
 
 24
 00:05:03.450 --> 00:05:09.570
-Amelia Bellamy-Royds: More specific hosts the maps for HTML community group which is a
+Amelia Bellamy-Royds: More specific hosts the Maps4HTML community group which is a
 
 25
 00:05:11.010 --> 00:05:12.210
@@ -110,7 +110,7 @@ Amelia Bellamy-Royds: Map presentation on the web more standardized and our host
 
 28
 00:05:30.780 --> 00:05:33.330
-Amelia Bellamy-Royds: Funding. A lot of this work and who are
+Amelia Bellamy-Royds: Funding a lot of this work and who are
 
 29
 00:05:37.110 --> 00:05:41.760
@@ -126,7 +126,7 @@ Amelia Bellamy-Royds: glad you made it here. If you are watching a archived vide
 
 32
 00:06:07.320 --> 00:06:34.620
-Amelia Bellamy-Royds: For reasons due to troublemakers jumping on zoom calls. We're not posting the live zoom links on the web. But if you registered for the conference in advance. You should have gotten an email from Ted guild that says something about workshop logistics in the title and it will have the
+Amelia Bellamy-Royds: For reasons due to troublemakers jumping on zoom calls. We're not posting the live zoom links on the web. But if you registered for the conference in advance. You should have gotten an email from Ted Guild that says something about workshop logistics in the title and it will have the
 
 33
 00:06:35.730 --> 00:06:36.600
@@ -142,7 +142,7 @@ Amelia Bellamy-Royds: Can't find that email, then do try to reach out to the pro
 
 36
 00:06:56.250 --> 00:06:56.820
-Amelia Bellamy-Royds: I'm
+Amelia Bellamy-Royds: Um
 
 37
 00:07:00.660 --> 00:07:05.880
@@ -158,7 +158,7 @@ Amelia Bellamy-Royds: And
 
 40
 00:07:31.140 --> 00:07:43.230
-Amelia Bellamy-Royds: The recordings will be hosted on the WCC YouTube channel. The discussion will continue on the W IC G discourse server.
+Amelia Bellamy-Royds: The recordings will be hosted on the W3C YouTube channel. The discussion will continue on the WICG Discourse server.
 
 41
 00:07:46.290 --> 00:08:04.320
@@ -166,7 +166,7 @@ Amelia Bellamy-Royds: And we'll have kind of open forum on each topic where peop
 
 42
 00:08:06.240 --> 00:08:14.100
-Amelia Bellamy-Royds: There is also a live chat on get her that we've set up. So that's just
+Amelia Bellamy-Royds: There is also a live chat on Gitter that we've set up. So that's just
 
 43
 00:08:15.930 --> 00:08:19.530
@@ -182,7 +182,7 @@ Amelia Bellamy-Royds: And just during the course of the workshop. It's a way to 
 
 46
 00:08:40.620 --> 00:08:44.040
-Amelia Bellamy-Royds: And if you're not familiar with get her. It's just a
+Amelia Bellamy-Royds: And if you're not familiar with Gitter, it's just a
 
 47
 00:08:45.900 --> 00:08:47.580
@@ -206,11 +206,11 @@ Amelia Bellamy-Royds: Put it in the zoom chat, but
 
 52
 00:09:30.060 --> 00:09:39.960
-Amelia Bellamy-Royds: The Gator and discourse will be kind of the more lasting chat that persist even after we close down the telecom
+Amelia Bellamy-Royds: The Gitter and Discourse will be kind of the more lasting chat that persist even after we close down the telecom
 
 53
 00:09:42.660 --> 00:09:54.990
-Amelia Bellamy-Royds: I'm one final important thing to mention this is a professional event we are operating under the W three C's code of conduct, we expect
+Amelia Bellamy-Royds: One final important thing to mention this is a professional event we are operating under the W3C's code of conduct, we expect
 
 54
 00:09:56.910 --> 00:10:13.380
@@ -222,7 +222,7 @@ Amelia Bellamy-Royds: Somebody could even put a link into the chat so you can sh
 
 56
 00:10:26.730 --> 00:10:37.680
-Amelia Bellamy-Royds: Any of the content in the of the behavior of other participants, you can reach out to the programming committee members or the W three see on boots office.
+Amelia Bellamy-Royds: Any of the content in the of the behavior of other participants, you can reach out to the programming committee members or the W3C on boots office.
 
 57
 00:10:40.980 --> 00:10:44.370
@@ -258,7 +258,7 @@ Amelia Bellamy-Royds: He is going to be talking to us today, kind of as a
 
 65
 00:11:40.350 --> 00:11:52.320
-Amelia Bellamy-Royds: Big intro introduction to the whole purpose of the workshop why maps for the web are worth talking about are worth standardizing are worth getting excited about.
+Amelia Bellamy-Royds: Big introduction to the whole purpose of the workshop why maps for the web are worth talking about are worth standardizing are worth getting excited about.
 
 66
 00:11:54.480 --> 00:11:56.880
@@ -266,11 +266,11 @@ Amelia Bellamy-Royds: Okay, Peter, are you ready to go.
 
 104
 00:11:58.860 --> 00:12:02.950
-Peter Rushforth: Good evening, and good morning. My name is Peter rush forth, and I work for natural resources, Canada's
+Peter Rushforth: Good evening, and good morning. My name is Peter Rushforth, and I work for Natural Resources Canada's
 
 105
 00:12:02.980 --> 00:12:03.580
-Peter Rushforth: Center from
+Peter Rushforth: Center form
 
 106
 00:12:06.760 --> 00:12:11.230
@@ -282,11 +282,11 @@ Today I want to talk about why we need to standardize maps for the web in HTML.
 
 108
 00:12:20.890 --> 00:12:36.340
-There are many reasons that people need or want to make web maps in the domain in which I work, it's a requirement of most projects. But how do you make a Web Map. It's easy right there are lots of ways to make a Web Map. You just need to pick a framework.
+There are many reasons that people need or want to make web maps in the domain in which I work, it's a requirement of most projects. But how do you make a Web Map. It's easy right? There are lots of ways to make a Web Map. You just need to pick a framework.
 
 109
 00:12:39.640 --> 00:12:47.830
-Each framework has its merits. Some are easy to get started with some come with a bunch of free lit data layers built right in.
+Each framework has its merits. Some are easy to get started with some come with a bunch of free data layers built right in.
 
 110
 00:12:48.880 --> 00:12:59.650
@@ -298,7 +298,7 @@ Interoperability pretty much does not exist. In short, there is no simplest choi
 
 112
 00:13:09.760 --> 00:13:20.770
-Once you decide, all the code that you write does belong to you, except it's bound to the framework, you've chosen making any change expensive and painful, the result.
+Once you decide, all the code that you write does belong to you, except it's bound to the framework, you've chosen making any change expensive and painful. The result?
 
 113
 00:13:22.450 --> 00:13:37.090
@@ -306,15 +306,15 @@ The result is silos. Although each web mapping framework is somewhat similar kno
 
 114
 00:13:39.370 --> 00:13:40.960
-Why do silos exist.
+Why do silos exist?
 
 115
 00:13:42.010 --> 00:13:56.800
-So I know this might be caused by a proprietary interest, such as those created to lock users into software platforms, but more likely they exist because we didn't take the trouble to collaborate and eliminate the barriers or or to create interoperability.
+Silos this might be caused by a proprietary interest, such as those created to lock users into software platforms, but more likely they exist because we didn't take the trouble to collaborate and eliminate the barriers or or to create interoperability.
 
 116
 00:13:59.980 --> 00:14:15.940
-Proposal. We'd like to make in this workshop is, why don't we work together to support all the users mapping framework providers are all trying to serve their users collectively collectively, the sum of their users is approximately equivalent to humanity as a whole.
+The proposal we'd like to make in this workshop is, why don't we work together to support all the users mapping framework providers are all trying to serve their users collectively, the sum of their users is approximately equivalent to humanity as a whole.
 
 117
 00:14:17.230 --> 00:14:27.070
@@ -326,19 +326,19 @@ Possibly reducing their individual frameworks responsibilities. Let's make a sta
 
 119
 00:14:39.550 --> 00:14:59.800
-Let's make a standard to serve users needs directly through common accessibility privacy safety linguistic and usability infrastructure, just as we try to do for users in the real world with roads, bridges, sidewalks crosswalks science, etc. While we're at it.
+Let's make a standard to serve users needs directly through common accessibility privacy, safety, linguistic, and usability infrastructure, just as we try to do for users in the real world with roads, bridges, sidewalks, crosswalks, signs, etc. While we're at it.
 
 120
 00:15:03.790 --> 00:15:14.590
-Let's make the standard and natural first step in learning so that maps can be taught at school, giving children a common starting point for learning about geography and the web without frameworks.
+Let's make the standard a natural first step in learning so that maps can be taught at school, giving children a common starting point for learning about geography and the web without frameworks.
 
 121
 00:15:17.050 --> 00:15:34.960
-Can silos truly disappear. Though the test of independent invention first described by Tim burners Lee is a kind of thought experiment. The notion is that any new protocol or format must be designed for introduction into an environment that has incumbents or it cannot succeed.
+Can silos truly disappear though? The test of independent invention first described by Tim burners Lee is a kind of thought experiment. The notion is that any new protocol or format must be designed for introduction into an environment that has incumbents or it cannot succeed.
 
 122
 00:15:36.070 --> 00:15:43.480
-At the invention of the web for example FTP gopher waste all existed in the mainstream already
+At the invention of the web for example FTP, Gopher, waste all existed in the mainstream already
 
 123
 00:15:44.530 --> 00:16:01.990
@@ -350,11 +350,11 @@ In the real world, infrastructure, often describes public facilities created for
 
 125
 00:16:12.310 --> 00:16:24.280
-Such infrastructure must be safe and accessible safe for everyone to use it must be fair and inclusive. What good would roads and bridges be if you could only drive a Ford on them.
+Such infrastructure must be safe and accessible, safe for everyone to use it must be fair and inclusive. What good would roads and bridges be if you could only drive a Ford on them.
 
 126
 00:16:25.330 --> 00:16:34.330
-It must be durable, because everybody uses it infrastructure must be built to serve. And last, and finally, it must be cost effective.
+It must be durable, because everybody uses it, infrastructure must be built to serve. And last, and finally, it must be cost effective.
 
 127
 00:16:34.870 --> 00:16:47.680
@@ -366,7 +366,7 @@ In the virtual world, the world wide web, and the software that supports it is v
 
 129
 00:17:03.610 --> 00:17:15.490
-But how do we avoid creating more silos in standardizing maps and spatial data for the web. The situation in web mapping Stan standards is a little bit like this x case CD comic
+But how do we avoid creating more silos in standardizing maps and spatial data for the web. The situation in web mapping standards is a little bit like this XKCD comic
 
 130
 00:17:16.210 --> 00:17:32.020
@@ -374,7 +374,7 @@ There are probably more than 14 different ways to create a Web Map and trying to
 
 131
 00:17:33.160 --> 00:17:41.860
-Many existing formats for to geospatial information already exist if one of them was suitable it probably would be a web standard
+Many existing formats for geospatial information already exist if one of them was suitable it probably would be a web standard
 
 132
 00:17:42.670 --> 00:17:51.670
@@ -394,23 +394,23 @@ The bonuses that HTML already implements basic map semantics.
 
 136
 00:18:13.150 --> 00:18:20.770
-HTML. Pictured here is the core language of the web and it was designed to bridge the divide between programmers and users.
+HTML, pictured here, is the core language of the web and it was designed to bridge the divide between programmers and users.
 
 137
 00:18:21.460 --> 00:18:40.060
-Ideally it allows everyone to have access to content regardless of ability. Further, it is straightforward enough to allow users to to become authors. This is embodied in the idea of view source culture in which the medium itself teaches the user what is possible and how to achieve it.
+Ideally it allows everyone to have access to content regardless of ability. Further, it is straightforward enough to allow users to to become authors. This is embodied in the idea of "view source culture" in which the medium itself teaches the user what is possible and how to achieve it.
 
 138
 00:18:41.320 --> 00:18:57.340
-Why are maps in HTML preferred over maps in JavaScript in the future because HTML requires and delivers interoperability, the browser will become a spatial integration platform shared standardized semantics mean interoperability.
+Why are maps in HTML preferred over maps in JavaScript in the future? Because HTML requires and delivers interoperability, the browser will become a spatial integration platform shared standardized semantics mean interoperability.
 
 139
 00:18:59.230 --> 00:19:12.250
-Discovery because of the rule of least for power web pages could have location indexing pages by location search engines will become spatial discovery platforms.
+Discovery, because of the rule of least for power web pages could have location indexing pages by location search engines will become spatial discovery platforms.
 
 140
 00:19:13.660 --> 00:19:26.980
-HTML requires and delivers inclusive pretty understandable and created by created by browser authors who are not necessarily programmers or authors who are not necessarily matters for that matter.
+HTML requires and delivers inclusivity, understandable and created by created by browser authors who are not necessarily programmers or authors who are not necessarily matters for that matter.
 
 141
 00:19:29.050 --> 00:19:48.550
@@ -422,7 +422,7 @@ HTML requires and delivers performance less runtime costs to HTML into JavaScrip
 
 143
 00:20:04.180 --> 00:20:13.420
-HTML requires and delivers scalability related to performance and inclusive city and possibly other aspects of this list.
+HTML requires and delivers scalability related to performance and inclusivity and possibly other aspects of this list.
 
 144
 00:20:14.650 --> 00:20:19.810
@@ -446,11 +446,11 @@ modern web crawlers can execute web applications to reveal the application gener
 
 149
 00:21:02.110 --> 00:21:16.930
-They can't understand semantics that aren't there, such as maps and location which don't exist yet in HTML standardized location is important not only for search and discovery, but also for accessibility and internationalization.
+They can't understand semantics that aren't there, such as maps and location which don't exist yet in HTML. Standardized location is important not only for search and discovery, but also for accessibility and internationalization.
 
 150
 00:21:17.950 --> 00:21:28.060
-Peter Rushforth: A key aspect of HTML is that it is standard its elements have defined visual and accessibility semantics, making it inherently inclusive.
+Peter Rushforth: A key aspect of HTML is that it is standard. Its elements have defined visual and accessibility semantics, making it inherently inclusive.
 
 151
 00:21:28.780 --> 00:21:34.540
@@ -470,7 +470,7 @@ Peter Rushforth: These aspects, taken together mean that maps in HTML will be mo
 
 155
 00:22:08.170 --> 00:22:14.620
-Peter Rushforth: Is Tim and I was a massive decade long effort and there's little appetite in the web standards community to repeat such an effort
+Peter Rushforth: HTML was a massive decade long effort and there's little appetite in the web standards community to repeat such an effort
 
 156
 00:22:15.460 --> 00:22:25.750
@@ -478,15 +478,15 @@ Peter Rushforth: HTML does however constantly change and today the HTML standard
 
 157
 00:22:26.620 --> 00:22:37.330
-Peter Rushforth: So how does the process work ideally developers like us who use JavaScript, HTML and CSS provide feedback to the web platform engineers.
+Peter Rushforth: So how does the process work? Ideally developers like us who use JavaScript, HTML and CSS provide feedback to the web platform engineers.
 
 158
 00:22:37.690 --> 00:22:50.050
-Peter Rushforth: Who prioritize implementing low level features that are views to the largest number of people often these features are of JavaScript, but also of CSS and HTML.
+Peter Rushforth: Who prioritize implementing low level features that are of use to the largest number of people often these features are of JavaScript, but also of CSS and HTML.
 
 159
 00:22:51.070 --> 00:23:00.310
-As low level features are implemented the thinking goes developers will hot will develop high level features as libraries or custom elements.
+As low level features are implemented, the thinking goes, developers will develop high level features as libraries or custom elements.
 
 160
 00:23:01.300 --> 00:23:09.040
@@ -498,7 +498,7 @@ These de facto standards can then be implemented natively by browser developers,
 
 162
 00:23:35.230 --> 00:23:42.610
-That maps are an emergent characteristic of the web even constituting a geo web is obvious to the most casual observer.
+That maps are an emergent characteristic of the web even constituting a Geo Web is obvious to the most casual observer.
 
 163
 00:23:44.020 --> 00:23:52.600
@@ -514,23 +514,23 @@ by specifying a new child layer element HTML could immediately incorporate dynam
 
 166
 00:24:20.950 --> 00:24:32.860
-HTML has evolved over time. It began as simple as simple text documents linked together. It was the linking that made them special linking has been described as the web superpower.
+HTML has evolved over time. It began as simple text documents linked together. It was the linking that made them special linking has been described as the web superpower.
 
 167
 00:24:34.120 --> 00:24:45.100
-Overtime media types have been added in response to user needs. And most recently, with the advent of the mobile web and responsive design not should be the next big thing.
+Over time, media types have been added in response to user needs. And most recently, with the advent of the mobile web and responsive design, maps should be the next big thing.
 
 168
 00:24:46.570 --> 00:25:00.430
-So we're actually is this virtuous feedback loop of which I spoke the maps for HTML community group was created based on the conviction that web mapping is an emergent or de facto standard of the web.
+So we're actually is this virtuous feedback loop of which I spoke the Maps4HTML community group was created based on the conviction that web mapping is an emergent or de facto standard of the web.
 
 169
 00:25:01.000 --> 00:25:18.160
-As sought by the extensible web manifesto. The main way to provide feedback to the browser standards community is for you, especially representing your organization or company to join them apps for HTML community group to contribute ideas comments and even code.
+As sought by the extensible web manifesto. The main way to provide feedback to the browser standards community is for you, especially representing your organization or company to join the Map4HTML community group to contribute ideas comments and even code.
 
 170
 00:25:19.180 --> 00:25:35.380
-Another important path for feedback from web mapping community to the web platform, folks, is the annual Mozilla web developer needs assessment or web DNA survey, please share the link mentioned web mapping mentioned maps in HTML.
+Another important path for feedback from web mapping community to the web platform, folks, is the annual Mozilla web developer needs assessment or web DNA survey, please share the link. Mention web mapping, mention maps in HTML.
 
 171
 00:25:38.470 --> 00:25:48.190
@@ -538,7 +538,7 @@ A key feature of the URL driven web of HTML is the ability to share documents us
 
 172
 00:25:49.000 --> 00:26:06.550
-also enables linking within and between resources, not to mention search and discovery, the simple architectural characteristic could make web map a geo web of the future, a benefit to users around the globe and to the interests that rely on it. In other words, everyone.
+also enables linking within and between resources, not to mention search and discovery, the simple architectural characteristic could make a geo web of the future, a benefit to users around the globe and to the interests that rely on it. In other words, everyone.
 
 173
 00:26:08.950 --> 00:26:13.810
@@ -582,7 +582,7 @@ Amelia Bellamy-Royds: So,
 
 183
 00:27:21.490 --> 00:27:25.690
-Amelia Bellamy-Royds: Next talk of the day is by Amelia Bellamy right that's me.
+Amelia Bellamy-Royds: Next talk of the day is by Amelia Bellamy-Royds, that's me.
 
 184
 00:27:30.130 --> 00:27:32.770
@@ -602,7 +602,7 @@ Amelia Bellamy-Royds: Task working
 
 188
 00:27:43.900 --> 00:27:49.420
-Amelia Bellamy-Royds: With the mouse for HTML community group was to really
+Amelia Bellamy-Royds: With the Maps4HTML community group was to really
 
 189
 00:27:52.060 --> 00:28:14.290
@@ -610,7 +610,7 @@ Amelia Bellamy-Royds: Assess the project that Peter and others in the geospatial
 
 190
 00:28:15.760 --> 00:28:25.810
-Amelia Bellamy-Royds: SVG vector graphic CSS also accessibility as it relates to those two topics and
+Amelia Bellamy-Royds: SVG vector graphic, CSS also accessibility as it relates to those two topics and
 
 191
 00:28:27.580 --> 00:28:33.010
@@ -630,11 +630,11 @@ Amelia Bellamy-Royds: It's not unlimited what these devices can do. We can't jus
 
 195
 00:29:09.970 --> 00:29:30.250
-Amelia Bellamy-Royds: Stick indefinitely or at least that's the goal of web standardization that once we have websites that are out there and that were web browsers. Try to support those going forward as much as possible. So we, there's a lot of
+Amelia Bellamy-Royds: Stick indefinitely or at least that's the goal of web standardization that once we have websites that are out there and that were web browsers. Try to support those going forward as much as possible. So, there's a lot of
 
 196
 00:29:31.270 --> 00:29:38.260
-Amelia Bellamy-Royds: Caution in the web standards world about adding new features to make sure that those features.
+Amelia Bellamy-Royds: Caution in the web standards world about adding new features to make sure that those features
 
 197
 00:29:39.790 --> 00:29:42.850
@@ -646,11 +646,11 @@ Amelia Bellamy-Royds: So,
 
 199
 00:29:52.120 --> 00:30:01.990
-Amelia Bellamy-Royds: One of the most important mental frameworks that is currently adopted by web standards, folks, is this idea
+Amelia Bellamy-Royds: One of the most important mental frameworks that is currently adopted by web standards folks, is this idea
 
 200
 00:30:02.620 --> 00:30:15.520
-Amelia Bellamy-Royds: Of an extensible web that the best thing the web platform can do is to create tools from which website authors and web application developers.
+Amelia Bellamy-Royds: Of an extensible web that the best thing the web platform can do is to create tools from which website authors and web application developers
 
 201
 00:30:16.060 --> 00:30:29.410
@@ -662,7 +662,7 @@ Amelia Bellamy-Royds: With the end goal, at least in theory that by demonstratin
 
 203
 00:30:41.620 --> 00:30:56.800
-Amelia Bellamy-Royds: They can bring that to the web standardization process and say this is a tested idea. This is a proven design pattern there is clear demand for it. Let scattered in standards so
+Amelia Bellamy-Royds: They can bring that to the web standardization process and say this is a tested idea. This is a proven design pattern there is clear demand for it. Let's standard the standards so
 
 204
 00:30:57.820 --> 00:31:01.240
@@ -670,7 +670,7 @@ Amelia Bellamy-Royds: Now I'm coming from with
 
 205
 00:31:03.880 --> 00:31:08.920
-Amelia Bellamy-Royds: The maps for HTML project. My first task was to
+Amelia Bellamy-Royds: The Maps4HTML project. My first task was to
 
 206
 00:31:10.000 --> 00:31:22.960
@@ -682,7 +682,7 @@ Amelia Bellamy-Royds: Very beginning
 
 208
 00:31:30.880 --> 00:31:37.390
-Amelia Bellamy-Royds: Of well almost the beginning. Ever since there's been images on the web. There have been maps on the web. There have been
+Amelia Bellamy-Royds: Well, almost the beginning. Ever since there's been images on the web. There have been maps on the web. There have been
 
 209
 00:31:38.110 --> 00:31:54.670
@@ -694,7 +694,7 @@ Amelia Bellamy-Royds: The map element as it currently exists in HTML isn't speci
 
 211
 00:32:18.310 --> 00:32:28.270
-Amelia Bellamy-Royds: It's just a simple picture that they generate on their web server have a map of Canada with icons and text baked in.
+Amelia Bellamy-Royds: It's just a simple picture that they generate on their web server of a map of Canada with icons and text baked in.
 
 212
 00:32:30.550 --> 00:32:42.700
@@ -706,7 +706,7 @@ Amelia Bellamy-Royds: Now this has nice features, it's supported widely in most 
 
 214
 00:33:01.810 --> 00:33:23.380
-Amelia Bellamy-Royds: Playing with it earlier, that it's no longer fully accessible in Chrome, because I tapping through these links in the picture and you can't tell where I'm tapping. So even browser is bake break accessibility now and then. And that's not a great thing, but
+Amelia Bellamy-Royds: Playing with it earlier, that it's no longer fully accessible in Chrome, because I tapping through these links in the picture and you can't tell where I'm tapping. So even browsers break accessibility now and then. And that's not a great thing, but
 
 215
 00:33:24.910 --> 00:33:41.050
@@ -746,11 +746,11 @@ Amelia Bellamy-Royds: We go into this idea of what are the use cases and require
 
 224
 00:35:27.610 --> 00:35:51.640
-Amelia Bellamy-Royds: Um, and because I'm working from this extensible web model of looking at what website developers and users have already come to expect the approach taken for this report, which is still incomplete draft and we welcome your contributions, is we're going to be looking at
+Amelia Bellamy-Royds: Um, and because I'm working from this extensible web model of looking at what website developers and users have already come to expect, the approach taken for this report, which is still incomplete draft and we welcome your contributions, is we're going to be looking at
 
 225
 00:35:53.830 --> 00:36:06.370
-Amelia Bellamy-Royds: It existing implementations of web maps and what are the common features that they have, what are the use cases they serve. And also, what are the limitations.
+Amelia Bellamy-Royds: existing implementations of web maps and what are the common features that they have, what are the use cases they serve. And also, what are the limitations.
 
 226
 00:36:06.880 --> 00:36:21.940
@@ -794,15 +794,15 @@ Amelia Bellamy-Royds: So this page is one of the many pages of examples for buil
 
 236
 00:38:15.190 --> 00:38:29.410
-Amelia Bellamy-Royds: Implement the features. So this is the very minimum basic combat that comes up. What do you get when you just say put them up on this web page on some cases it's very plain don't labels.
+Amelia Bellamy-Royds: Implement the features. So this is the very minimum basic map that comes up. What do you get when you just say put a map on this web page on some cases it's very plain, no labels.
 
 237
 00:38:30.730 --> 00:38:34.300
-Amelia Bellamy-Royds: Have a more content in the initial
+Amelia Bellamy-Royds: Others have a more content in the initial
 
 238
 00:38:36.760 --> 00:38:50.290
-Amelia Bellamy-Royds: And we've for the scripted ones we've got the examples of how much code you need to include in order to get that map on your web page, which of course goes to the accessibility for
+Amelia Bellamy-Royds: And for the scripted ones we've got the examples of how much code you need to include in order to get that map on your web page, which of course goes to the accessibility for
 
 239
 00:38:51.700 --> 00:38:52.750
@@ -810,7 +810,7 @@ Amelia Bellamy-Royds: Website authors.
 
 240
 00:38:55.180 --> 00:39:16.480
-Amelia Bellamy-Royds: Not gets me to a question when we're talking about use cases, it's worth thinking about use cases for whom, who are we thinking of using these web mapping tools. So within the report, we're looking at three main groups.
+Amelia Bellamy-Royds: That gets me to a question when we're talking about use cases, it's worth thinking about use cases for whom, who are we thinking of using these web mapping tools. So within the report, we're looking at three main groups.
 
 241
 00:39:18.460 --> 00:39:18.880
@@ -818,11 +818,11 @@ Amelia Bellamy-Royds: Or against
 
 242
 00:39:21.070 --> 00:39:40.780
-Amelia Bellamy-Royds: Three main groups, the content author who's creating a website or creating content for a website or a blog or something on the web and they just want to add a map to their blog post to their article to their Web Store.
+Amelia Bellamy-Royds: Three main groups, the content author who's creating a website or creating content for a website or a blog or something on the web and they just want to add a map to their blog post, to their article, to their Web Store.
 
 243
 00:39:44.110 --> 00:39:53.710
-Amelia Bellamy-Royds: They're not geospatial experts, they're not necessarily programming experts. They want the map for the content, it presents and so
+Amelia Bellamy-Royds: They're not geospatial experts, they're not necessarily programming experts. They want the map for the content it presents and so
 
 244
 00:39:55.000 --> 00:39:59.830
@@ -842,7 +842,7 @@ Amelia Bellamy-Royds: More complex data or more complex imagery it
 
 248
 00:40:22.180 --> 00:40:38.950
-Amelia Bellamy-Royds: Builds up depending on where they are. So some of the slightly more complex examples, we're looking at our have a pop up next to the marker. So there's a marker on the map, but you want extra information, a little bit of HTML. So
+Amelia Bellamy-Royds: Builds up depending on where they are. So some of the slightly more complex examples, we're looking at have a pop up next to the marker. So there's a marker on the map, but you want extra information, a little bit of HTML. So
 
 249
 00:40:40.210 --> 00:40:45.790
@@ -862,7 +862,7 @@ And it still works.
 
 253
 00:41:19.810 --> 00:41:32.260
-Amelia Bellamy-Royds: So there's a lot of behavior there other libraries takes a little more manual code to get the same behavior that's the open layers code for the demo. And so
+Amelia Bellamy-Royds: So there's a lot of behavior there other libraries takes a little more manual code to get the same behavior that's the OpenLayers code for the demo. And so
 
 254
 00:41:34.600 --> 00:41:47.500
@@ -874,15 +874,15 @@ Amelia Bellamy-Royds: Not only what you're doing. But how much work it takes far
 
 256
 00:41:58.450 --> 00:42:14.860
-Amelia Bellamy-Royds: Some other quick examples of content author use cases highlighting a region, rather than just a marker point. So for this example, we're using geo JSON as the data format for describing that polygon.
+Amelia Bellamy-Royds: Some other quick examples of content author use cases highlighting a region, rather than just a marker point. So for this example, we're using GeoJSON as the data format for describing that polygon.
 
 257
 00:42:15.400 --> 00:42:27.550
-Amelia Bellamy-Royds: And how easy is it to get that custom geo JSON shape into our map so that it lines up and can be styled custom
+Amelia Bellamy-Royds: And how easy is it to get that custom GeoJSON shape into our map so that it lines up and can be styled custom
 
 258
 00:42:35.440 --> 00:42:39.910
-Amelia Bellamy-Royds: Sorry soon popping up and blocking my
+Amelia Bellamy-Royds: Sorry Zoom is popping up and blocking my
 
 259
 00:42:41.080 --> 00:42:41.620
@@ -898,7 +898,7 @@ Amelia Bellamy-Royds: Then another use case is actually not mapping at all. This
 
 262
 00:42:53.350 --> 00:43:03.100
-Amelia Bellamy-Royds: Not a map. It's a painting, but it's a painting rendered within the mapping applications. This is leaflet JS, not with Open Street Map tiles.
+Amelia Bellamy-Royds: Not a map. It's a painting, but it's a painting rendered within the mapping applications. This is Leaflet JS, not with Open Street Map tiles.
 
 263
 00:43:03.760 --> 00:43:14.950
@@ -906,11 +906,11 @@ Amelia Bellamy-Royds: But the reason you might want to have a painting in a mapp
 
 264
 00:43:15.340 --> 00:43:29.020
-Amelia Bellamy-Royds: Where as you zoom in you load. Additional images with higher resolution instead of loading a giant file at the beginning. So this is an important
+Amelia Bellamy-Royds: Where as you zoom in you load additional images with higher resolution instead of loading a giant file at the beginning. So this is an important
 
 265
 00:43:29.920 --> 00:43:49.120
-Amelia Bellamy-Royds: Aspect that we're considering within our use cases report is how can the mapping tools and the features that are necessary for a good web maps. How can they also be used for other things that people want to do within the web platform.
+Amelia Bellamy-Royds: aspect that we're considering within our use cases report is how can the mapping tools and the features that are necessary for a good web maps. How can they also be used for other things that people want to do within the web platform.
 
 266
 00:43:50.230 --> 00:44:06.190
@@ -918,15 +918,15 @@ Amelia Bellamy-Royds: And if we can find these connections find these additional
 
 267
 00:44:07.480 --> 00:44:25.150
-Amelia Bellamy-Royds: Working to. Now I said a little content author the website owner is only one target ever use cases is the next one is our website visitor. So is someone going to a
+Amelia Bellamy-Royds: working too. Now I said a little content author the website owner is only one target of our use cases is the next one is our website visitor. So is someone going to a
 
 268
 00:44:26.560 --> 00:44:34.360
-Amelia Bellamy-Royds: Website have things that I want to do with a map that maybe the website owner didn't think about so
+Amelia Bellamy-Royds: website have things that I want to do with a map that maybe the website owner didn't think about so
 
 269
 00:44:36.310 --> 00:44:36.970
-Amelia Bellamy-Royds: I'm
+Amelia Bellamy-Royds: Um
 
 270
 00:44:38.170 --> 00:44:48.550
@@ -954,7 +954,7 @@ Amelia Bellamy-Royds: Desires or plans of the person who actually created the we
 
 276
 00:45:27.100 --> 00:45:42.100
-Amelia Bellamy-Royds: And I'm not going to get too much detail here. We've actually got a another talk later in the week Nick Chan will be talking about her assessment for this report on some of the interaction patterns in the
+Amelia Bellamy-Royds: And I'm not going to get too much detail here. We've actually got a another talk later in the week Nic Chan will be talking about her assessment for this report on some of the interaction patterns in the
 
 277
 00:45:43.480 --> 00:45:55.000
@@ -962,7 +962,7 @@ Amelia Bellamy-Royds: Various web mapping tools and what that relates to the acc
 
 278
 00:45:57.130 --> 00:46:16.780
-Amelia Bellamy-Royds: So moving on to our third category of use cases. That's your application developer. So this is again a website creator, but someone who's interested in maps in a more complicated level interested in adding new features, because
+Amelia Bellamy-Royds: So moving on to our third category of use cases. That's your application developer. So this is again, a website creator, but someone who's interested in maps in a more complicated level interested in adding new features, because
 
 279
 00:46:17.830 --> 00:46:26.470
@@ -970,31 +970,31 @@ Amelia Bellamy-Royds: There is so much that could be done with maps on the web. 
 
 280
 00:46:27.820 --> 00:46:38.290
-Amelia Bellamy-Royds: There are always going to be custom use cases. In addition, so for the application developer who wants to build additional geospatial features.
+Amelia Bellamy-Royds: There are always going to be custom use cases. In addition, so for the application developer who wants to build additional geospatial features
 
 281
 00:46:40.300 --> 00:46:46.930
-Amelia Bellamy-Royds: The use cases are about how much they can extend and build on the
+Amelia Bellamy-Royds: the use cases are about how much they can extend and build on the
 
 282
 00:46:47.980 --> 00:46:49.210
-Amelia Bellamy-Royds: Standard tool.
+Amelia Bellamy-Royds: standard tool
 
 283
 00:46:50.590 --> 00:46:55.420
-Amelia Bellamy-Royds: Without having to recreate all the basic features from scratch.
+Amelia Bellamy-Royds: without having to recreate all the basic features from scratch.
 
 284
 00:46:57.040 --> 00:47:08.470
-Amelia Bellamy-Royds: So one of our use case examples we've got is add a extra control that does something so trying to keep it simple so
+Amelia Bellamy-Royds: So one of our use case examples we've got is add a extra control that does something, so trying to keep it simple, so
 
 285
 00:47:09.010 --> 00:47:23.230
-Amelia Bellamy-Royds: Was our contributor Nick Fitzsimmons who added this one. So this is the feature it describes where the math is centered as we move it shows
+Amelia Bellamy-Royds: this was our contributor Nick Fitzsimmons who added this one. So this is the feature it describes where the math is centered as we move it shows
 
 286
 00:47:23.830 --> 00:47:39.310
-Amelia Bellamy-Royds: A different latitude and longitude and I can mark the current lot a tude and launch it at the center of it and I can pan away, and then I hit another button and it returns back so
+Amelia Bellamy-Royds: A different latitude and longitude and I can mark the current latitude and longitude at the center of it and I can pan away, and then I hit another button and it returns back so
 
 287
 00:47:41.590 --> 00:47:46.570
@@ -1034,7 +1034,7 @@ Amelia Bellamy-Royds: So within all these use cases. As I said, there are a lot 
 
 296
 00:49:32.110 --> 00:49:48.340
-Amelia Bellamy-Royds: And within of the each of these capabilities were then looking at is it implemented in existing tools is implemented in a consistent way where we can say there is a clear pattern of be
+Amelia Bellamy-Royds: And within of the each of these capabilities were then looking at is it implemented in existing tools? Is i implemented in a consistent way where we can say there is a clear pattern of be
 
 297
 00:49:48.940 --> 00:49:58.990
@@ -1046,11 +1046,11 @@ Amelia Bellamy-Royds: We're looking at, are there any connections to existing we
 
 299
 00:50:08.380 --> 00:50:28.210
-Amelia Bellamy-Royds: reused in a pattern that's consistent with the web or their proposals that are for other web features that we could connect up and are their use cases for this low level feature that is use cases beyond so
+Amelia Bellamy-Royds: reused in a pattern that's consistent with the web or are there proposals that are for other web features that we could connect up and are their use cases for this low level feature that is use cases beyond so
 
 300
 00:50:29.680 --> 00:50:42.280
-Amelia Bellamy-Royds: I've already shown the example of wanting to be able to zoom in and adjust resolution on non that content more generally just having pan and zoom as
+Amelia Bellamy-Royds: I've already shown the example of wanting to be able to zoom in and adjust resolution on non-map content more generally just having pan and zoom as
 
 301
 00:50:43.300 --> 00:50:56.860
@@ -1058,7 +1058,7 @@ Amelia Bellamy-Royds: It's a really complex interaction. There's different ways 
 
 302
 00:50:58.300 --> 00:51:15.400
-Amelia Bellamy-Royds: Zooming in on a product photo on a store that's not a map related, but there are similarities. And so if we had these low level features and sort of browser awareness of what pan and zoom is it could be used in multiple places.
+Amelia Bellamy-Royds: Zooming in on a product photo on a store that's not map related, but there are similarities. And so if we had these low level features and sort of browser awareness of what pan and zoom is it could be used in multiple places.
 
 303
 00:51:17.560 --> 00:51:20.170
@@ -1066,11 +1066,11 @@ Amelia Bellamy-Royds: The idea of having a pop up tool tip.
 
 304
 00:51:21.310 --> 00:51:27.670
-Amelia Bellamy-Royds: Sort of or an info box that pops up that something that happens in lots of user interfaces.
+Amelia Bellamy-Royds: Sort of or an info box that pops up, that's something that happens in lots of user interfaces.
 
 305
 00:51:28.990 --> 00:51:37.570
-Amelia Bellamy-Royds: But we don't have a built in way to position, things that are pop this up next to
+Amelia Bellamy-Royds: But we don't have a built in way to position things, that are pop this up next to
 
 306
 00:51:38.680 --> 00:51:47.500
@@ -1078,7 +1078,7 @@ Amelia Bellamy-Royds: Some other anchored thing but don't let it go off the edge
 
 307
 00:51:48.280 --> 00:52:03.790
-Amelia Bellamy-Royds: Anybody who's done a website coded that by hand those. There's a lot of things you have to think about to get right. If there was a built in primitive feature in the web for positioning a pop up where the browser.
+Amelia Bellamy-Royds: Anybody who's done a website coded that by hand those. There's a lot of things you have to think about to get right. If there was a built in primitive feature in the web for positioning a pop up where the browser
 
 308
 00:52:04.870 --> 00:52:12.640
@@ -1090,7 +1090,7 @@ Amelia Bellamy-Royds: There are lots of use cases for that beyond mapping
 
 310
 00:52:17.980 --> 00:52:40.780
-Amelia Bellamy-Royds: But that said, there are lots of things that are needed for maps that are map specific you need maps need to understand latitude and longitude. They need to understand how that gets sent to different projections and coordinate systems.
+Amelia Bellamy-Royds: But that said, there are lots of things that are needed for maps that are map specific. Maps need to understand latitude and longitude. They need to understand how that gets sent to different projections and coordinate systems.
 
 311
 00:52:47.860 --> 00:52:48.460
@@ -1118,7 +1118,7 @@ Amelia Bellamy-Royds: That's a brief overview of the project. One thing that
 
 317
 00:53:40.870 --> 00:54:00.430
-Amelia Bellamy-Royds: Has been very clear working on this project is just how many detailed creatures. There are once you start trying to list them all within the standard maps. So we are still working on the report we are welcoming contributors to the report, it's all on
+Amelia Bellamy-Royds: Has been very clear working on this project is just how many detailed features There are once you start trying to list them all within the standard maps. So we are still working on the report we are welcoming contributors to the report, it's all on
 
 318
 00:54:03.370 --> 00:54:04.090
@@ -1142,7 +1142,7 @@ Amelia Bellamy-Royds: Sorry link back from each section about
 
 323
 00:54:29.560 --> 00:54:45.460
-Amelia Bellamy-Royds: Let's discuss what should we mentioned a year. What should we conclude about, is this an essential feature of a Web Map. Is this a nice to have feature of a Web Map, is this okay this is never going to happen in the browser feature.
+Amelia Bellamy-Royds: Let's discuss what should we mentioned here. What should we conclude about, is this an essential feature of a Web Map, is this a nice to have feature of a Web Map, is this okay this is never going to happen in the browser feature.
 
 324
 00:54:46.660 --> 00:54:56.710
@@ -1154,7 +1154,7 @@ Amelia Bellamy-Royds: And go back to my hosting duties.
 
 326
 00:55:05.410 --> 00:55:17.800
-Amelia Bellamy-Royds: Final talk of the day is by Dan duck little who has been building maps on the web for many years since 2004
+Amelia Bellamy-Royds: Final talk of the day is by Dan 'Duck' Little who has been building maps on the web for many years since 2004
 
 327
 00:55:19.540 --> 00:55:21.640
@@ -1162,7 +1162,7 @@ Amelia Bellamy-Royds: When JavaScript was still
 
 328
 00:55:23.020 --> 00:55:36.130
-Amelia Bellamy-Royds: New and wild so geo moose is built using XML and Dan will be telling us about some of the lessons learned from that project and
+Amelia Bellamy-Royds: New and wild so Geomoose is built using XML and Dan will be telling us about some of the lessons learned from that project and
 
 329
 00:55:38.980 --> 00:55:41.350
@@ -1186,7 +1186,7 @@ Duck Little: Which is playing on the tune instead of HTML. We've used XML.
 
 334
 00:56:12.850 --> 00:56:25.930
-Duck Little: I can be found all over the internet with the handle the ducky little if anyone wants to have some follow up conversation, but do moose, or any of the controversial things I may or may not end up saying today a
+Duck Little: I can be found all over the internet with the handle The Ducky Little if anyone wants to have some follow up conversation, about Geomoose, or any of the controversial things I may or may not end up saying today a
 
 335
 00:56:28.090 --> 00:56:33.100
@@ -1194,15 +1194,15 @@ Duck Little: Little bit of background on the project itself. It's actually an OS
 
 336
 00:56:33.940 --> 00:56:42.310
-Duck Little: It do moose is a web client that started with a co worker and myself at the city of St. Paul in Minnesota in the US.
+Duck Little: GeoMoose is a WebGIS client that started with a co worker and myself at the city of St. Paul in Minnesota in the US.
 
 337
 00:56:42.940 --> 00:56:55.120
-Duck Little: The first release was back in, oh four and our big kind of coming out party was at the 2005 Map Server user group meeting for folks who are maybe not into
+Duck Little: The first release was back in '04, and our big kind of coming out party was at the 2005 Map Server user group meeting. For folks who are maybe not into
 
 338
 00:56:56.020 --> 00:57:11.500
-Duck Little: Open Source GIS software. History The Map Server user groups were the precursor to the foster G conference. So this is how, like, I started feeling old knowing that we were presenting at conferences that were the precursor to phosphor Jade.
+Duck Little: Open Source GIS software history The Map Server user groups were the precursor to the FOSS4G conference. So this is how, like, I started feeling old knowing that we were presenting at conferences that were the precursor to FOSS4G.
 
 339
 00:57:13.450 --> 00:57:31.180
@@ -1214,11 +1214,11 @@ Duck Little: providing detailed measure tools in the browser. That seems to be t
 
 341
 00:57:41.890 --> 00:58:00.700
-Duck Little: And a lot of health, a lot of having support for GC services through the years, including WF s t supports doing editing on the web and also adopting sort of web friendly technologies as they come through such as, you know, the early GL geo JSON and matte box vector tiles.
+Duck Little: And a lot of health, a lot of having support for OGC services through the years, including WFS-T supports doing editing on the web and also adopting sort of web friendly technologies as they come through such as, you know, the early GML, GeoJSON and MapBox vector tiles.
 
 342
 00:58:02.950 --> 00:58:07.480
-Duck Little: But I'm going to put us in the Wayback Machine and talk about the web of
+Duck Little: But I'm going to put us in the Wayback Machine and talk about the web of 2003.
 
 343
 00:58:10.090 --> 00:58:11.260
@@ -1230,19 +1230,19 @@ Duck Little: There was a lot of
 
 345
 00:58:15.280 --> 00:58:27.550
-Duck Little: Things going on that were really innovative, but people were still trying to figure it out for us as a GIS project one of our big first goals was to talk to Map Server.
+Duck Little: Things going on that were really innovative, but people were still trying to figure it out. For us as a GIS project one of our big first goals was to talk to MapServer.
 
 346
 00:58:28.210 --> 00:58:39.340
-Duck Little: So I mentioned that we come out of Minnesota and folks may remember that Map Server used to be called Minnesota Map Server or the University of Minnesota Map Server and
+Duck Little: So I mentioned that we come out of Minnesota and folks may remember that MapServer used to be called Minnesota Ma Server or the University of Minnesota MapServer and
 
 347
 00:58:40.120 --> 00:58:50.230
-Duck Little: My coworker James clustering, and I did actually work with Steve L'chaim on early Map Server code and it was sort of the de facto standard for how you render
+Duck Little: My coworker James Klassen and I did actually work with Steve L'chaim on early MapServer code and it was sort of the de facto standard for how you render
 
 348
 00:58:50.920 --> 00:59:02.530
-Duck Little: A complex map for the web. And because it's 2003 we wanted to use all of the cool features of the latest and greatest browser at the time, IE six
+Duck Little: A complex map for the web. And because it's 2003 we wanted to use all of the cool features of the latest and greatest browser at the time, IE6
 
 349
 00:59:03.400 --> 00:59:14.560
@@ -1254,7 +1254,7 @@ Duck Little: Now, those two things were both pretty normal. Actually, there are 
 
 351
 00:59:25.180 --> 00:59:45.160
-Duck Little: What made you most unique was that we were dealing with a data for for large municipality that had multiple departments that were trying to inventory lots and lots of different assets and that meant we had hundreds of different data layers that were being digitized and produced
+Duck Little: What made GeoMoose unique was that we were dealing with a data for for large municipality that had multiple departments that were trying to inventory lots and lots of different assets and that meant we had hundreds of different data layers that were being digitized and produced
 
 352
 00:59:49.090 --> 00:59:56.770
@@ -1266,7 +1266,7 @@ Duck Little: Trying to describe different layers and catalog. It has basic map c
 
 354
 01:00:04.030 --> 01:00:22.540
-Duck Little: This was what a modern web application, including occasionally the broken images senior looked like circa 2003. But this is sort of what we started with. And one of our first keys was the fact that we can describe these layers and controls actually using XML.
+Duck Little: This was what a modern web application, including occasionally the broken images seen here looked like circa 2003. But this is sort of what we started with. And one of our first keys was the fact that we can describe these layers and controls actually using XML.
 
 355
 01:00:26.770 --> 01:00:27.310
@@ -1274,11 +1274,11 @@ Duck Little: So,
 
 356
 01:00:28.360 --> 01:00:44.560
-Duck Little: We put all of this together and created an XML catalog. Because really we looked at the various pieces that we had and that we need to assemble some app servers configured using a format called map file. You can think of that is like a styling file for an for for a shape file.
+Duck Little: We put all of this together and created an XML catalog. Because really we looked at the various pieces that we had and that we need to assemble so MapServer's configured using a format called map file. You can think of that is like a styling file for an for for a shape file.
 
 357
 01:00:46.120 --> 01:00:55.030
-Duck Little: Because that's also what would have been popular circa 2000 307 and we had a lot of people contributing so XML was really, really.
+Duck Little: Because that's also what would have been popular circa 2003-2007 and we had a lot of people contributing so XML was really, really
 
 358
 01:00:55.930 --> 01:01:07.810
@@ -1286,11 +1286,11 @@ Duck Little: Unique for us and having a very basic markup was necessary for us b
 
 359
 01:01:08.470 --> 01:01:20.920
-Duck Little: So what juice became was a really, really fancy access Lt. So that took the XML and translated to HTML, which then also had a giant JavaScript file next to it to render it
+Duck Little: So what GeoMoose became was a really, really fancy XSLT. So that took the XML and translated to HTML, which then also had a giant JavaScript file next to it to render it
 
 360
 01:01:21.640 --> 01:01:30.880
-Duck Little: So I'm very sympathetic to the idea of we need to make the browser do more of this work. I really would have been sympathetic and oh yeah during this development time to
+Duck Little: So I'm very sympathetic to the idea of we need to make the browser do more of this work. I really would have been sympathetic and oh yeah during this development time too.
 
 361
 01:01:34.330 --> 01:01:51.130
@@ -1302,11 +1302,11 @@ Duck Little: Because you had a book with multiple pages of different maps. So we
 
 363
 01:02:02.080 --> 01:02:19.300
-Duck Little: And it had the ability to organize things hierarchically, so we call it the catalog was part of the map book each layer got a label and a description to its source file and whether it was on or off could also be grouped because again we're dealing with hundreds of different layers.
+Duck Little: And it had the ability to organize things hierarchically. So we call it the catalog was part of the map book each layer got a label and a description to its source file and whether it was on or off could also be grouped because again we're dealing with hundreds of different layers.
 
 364
 01:02:22.330 --> 01:02:30.370
-Duck Little: And this is what we got you from that Genesis moment to this and you can see a lot of interesting components that are going on here.
+Duck Little: And this is what we got to, from that Genesis moment to this and you can see a lot of interesting components that are going on here.
 
 365
 01:02:31.690 --> 01:02:40.210
@@ -1314,7 +1314,7 @@ Duck Little: As the maps evolved. There was a lot of things that were necessary.
 
 366
 01:02:40.630 --> 01:02:50.470
-Duck Little: If this looks more like a cat application than we achieved our goal at the time, but you can see in the catalog. Many, many layers very well organized
+Duck Little: If this looks more like a CAD application than we achieved our goal at the time, but you can see in the catalog. Many, many layers very well organized
 
 367
 01:02:51.520 --> 01:02:55.870
@@ -1326,7 +1326,7 @@ Duck Little: This entire user interface was described using XML.
 
 369
 01:03:06.220 --> 01:03:07.390
-Duck Little: And then we made it pretty
+Duck Little: And then we made it pretty!
 
 370
 01:03:08.560 --> 01:03:12.190
@@ -1334,7 +1334,7 @@ Duck Little: Um, one of the cool things that we were able to do is because
 
 371
 01:03:13.240 --> 01:03:19.900
-Duck Little: At the time the FTC was offering grants that allowed for cross community collaborations.
+Duck Little: At the time the FGDC was offering grants that allowed for cross community collaborations.
 
 372
 01:03:20.410 --> 01:03:28.240
@@ -1346,15 +1346,15 @@ Duck Little: And so we were able to access some of that funding to develop the a
 
 374
 01:03:40.150 --> 01:03:48.550
-Duck Little: At one point, nearly every county in Minnesota had a moose website because and quite a few in North Dakota and other neighboring
+Duck Little: At one point, nearly every county in Minnesota had a GeoMoose website because and quite a few in North Dakota and other neighboring
 
 375
 01:03:49.390 --> 01:04:00.220
-Duck Little: US states. In fact, we keep finding juice installations all across the world because people were able to really dig into the idea that you could describe a map using XML.
+Duck Little: US states. In fact, we keep finding GeoMoose installations all across the world because people were able to really dig into the idea that you could describe a map using XML.
 
 376
 01:04:03.400 --> 01:04:13.450
-Duck Little: And whoa, it was good things were really fast to render even on you know hardware that would have come with it six as the upgrade browser, it still ran really fast.
+Duck Little: And whoa, it was good things were really fast to render even on you know hardware that would have come with IE6 as the upgrade browser, it still ran really fast.
 
 377
 01:04:14.140 --> 01:04:21.220
@@ -1362,7 +1362,7 @@ Duck Little: And just like we were talking about HTML earlier being really great
 
 378
 01:04:21.880 --> 01:04:32.890
-Duck Little: epiphany that you can have by looking at the site and looking at the source we had that by being able to directly map in the definition of the way or an XML to what they would see in the user interface.
+Duck Little: epiphany that you can have by looking at the site and looking at the source, we had that by being able to directly map in the definition of the way or an XML to what they would see in the user interface.
 
 379
 01:04:36.460 --> 01:04:37.900
@@ -1378,11 +1378,11 @@ Duck Little: So if for some reason somebody put an aerial photography layer at t
 
 382
 01:05:06.130 --> 01:05:13.720
-Duck Little: There was also because we had targeted Map Server and event and then evolve that to WNs there wasn't really good ways of
+Duck Little: There was also, because we had targeted MapServer and event and then evolve that to WMS there wasn't really good ways of
 
 383
 01:05:14.440 --> 01:05:23.860
-Duck Little: targeting different types of data sources as much as you can come up with a way for defining how to describe that there's a data source there.
+Duck Little: targeting different types of data sources. As much as you can come up with a way for defining how to describe that there's a data source there
 
 384
 01:05:24.130 --> 01:05:31.270
@@ -1390,7 +1390,7 @@ Duck Little: The data sources are always going to be varied and that's continued
 
 385
 01:05:32.560 --> 01:05:51.700
-Duck Little: The other issue. We had this was an implementation detail is that every layer created an image tag really really cool because again, Ajax wasn't a thing. But then we started doing tiled maps. It broke, it broke it was making hundreds of requests in a second.
+Duck Little: The other issue. We had this was an implementation detail is that every layer created an image tag. Really really cool because again, AJAX wasn't a thing. But then we started doing tiled maps. It broke, it broke it was making hundreds of requests in a second.
 
 386
 01:05:53.800 --> 01:05:55.960
@@ -1398,15 +1398,15 @@ Duck Little: So we started the next version of the project.
 
 387
 01:05:57.760 --> 01:06:07.060
-Duck Little: Because you moose was built using a custom mapping library we were sort of the 15th standard that x Casey refers to whereas
+Duck Little: Because GeoMoose was built using a custom mapping library we were sort of the 15th standard that XKCD refers to whereas
 
 388
 01:06:09.220 --> 01:06:16.270
-Duck Little: And the reason for that was because open layers itself wasn't functional enough for us to switch over, but around 2007 it did.
+Duck Little: And the reason for that was because OpenLayers itself wasn't functional enough for us to switch over, but around 2007 it did.
 
 389
 01:06:17.410 --> 01:06:24.250
-Duck Little: It also had much better cross browser support because, well, you know, seven. You could still basically target IE and run everywhere.
+Duck Little: It also had much better cross browser support because, well, you know in '07, you could still basically target IE and run everywhere.
 
 390
 01:06:25.780 --> 01:06:30.970
@@ -1414,7 +1414,7 @@ Duck Little: And we also work with later versions of Netscape because they had t
 
 391
 01:06:32.050 --> 01:06:45.790
-Duck Little: But early versions of Firefox for coming out there. We're getting really usable JavaScript was becoming slightly less Wild Wild West it with the concept of classes and even user interface toolkits
+Duck Little: But early versions of Firefox for coming out there. We're getting really usable JavaScript was becoming slightly less Wild Wild West-y with the concept of classes and even user interface toolkits
 
 392
 01:06:47.980 --> 01:06:56.770
@@ -1430,15 +1430,15 @@ Duck Little: Here you can see it's a map book we gave it a version of 2.0
 
 395
 01:07:06.820 --> 01:07:18.940
-Duck Little: And we define this code snippet here that is for in this case aware of Fire, fire stations. It's saying that the type of this data is coming from Map Server.
+Duck Little: And we define this code snippet here that is for, in this case, a layer of fire stations. It's saying that the type of this data is coming from MapServer.
 
 396
 01:07:19.420 --> 01:07:32.890
-Duck Little: The name of the sources, the map source and this file element here is a shorthand to tell it. Okay, this is the map file so form the URL to work with that map file and inside of that map file. There's a layer name fire stations.
+Duck Little: The name of the sources is the map source and this file element here is a shorthand to tell it 'Okay, this is the map file so form the URL to work with that map file' and inside of that map file. There's a layer named 'Fire Stations'.
 
 397
 01:07:34.900 --> 01:07:45.730
-Duck Little: This allows you to do quite a few things. First of all, it allows you to group multiple layers into a single request because you can put 10 layers from single WNs source in that way.
+Duck Little: This allows you to do quite a few things. First of all, it allows you to group multiple layers into a single request because you can put 10 layers from single WMS source in that way.
 
 398
 01:07:48.460 --> 01:08:04.570
@@ -1446,7 +1446,7 @@ Duck Little: It also lets you break out as an administrator. The defining the ca
 
 399
 01:08:08.830 --> 01:08:23.620
-Duck Little: And this is a pretty basic juice two point O application, you can still see there's many, many layers that it's processing all at the same time. It's providing that asynchronous layer stack here in the map, along with a number of controls.
+Duck Little: And this is a pretty basic GeoMoose 2.0 application, you can still see there's many, many layers that it's processing all at the same time. It's providing that asynchronous layer stack here in the map, along with a number of controls.
 
 400
 01:08:27.220 --> 01:08:29.560
@@ -1458,7 +1458,7 @@ Duck Little: In terms of technical implementation, we had issues with what requi
 
 402
 01:08:38.710 --> 01:08:44.470
-Duck Little: Put the different bits of JavaScript together certain components stop working on newer versions of Internet Explorer.
+Duck Little: Put the different bits of JavaScript together, certain components stop working on newer versions of Internet Explorer.
 
 403
 01:08:44.860 --> 01:08:54.550
@@ -1466,27 +1466,27 @@ Duck Little: And a lot of JavaScript is moved to functional programming models w
 
 404
 01:08:55.570 --> 01:09:19.540
-Duck Little: Because we had push all of the description into our map book XML format it got unwieldy large, it was unsustainable to define every UI element inside of the XML. We enlightened. All of these all of the code for styling data feedback, including pop ups and identify templates and
+Duck Little: Because we had push all of the description into our map book XML format it got unwieldy large, it was unsustainable to define every UI element inside of the XML. We inlined all of these all of the code for styling data feedback, including pop ups and identify templates and
 
 405
 01:09:20.770 --> 01:09:29.530
-Duck Little: So it was hard to keep moving it forward is hard to evolve the application because we've sort of built ourselves into A into a tag corner in XML.
+Duck Little: So it was hard to keep moving it forward, it was hard to evolve the application because we've sort of built ourselves into a into a tag corner in XML.
 
 406
 01:09:32.110 --> 01:09:42.760
-Duck Little: Some other pretty important things happened while we were developing it Google tell the whole world about 10 different times and about 10 different ways people started putting mobile supercomputers in their hands.
+Duck Little: Some other pretty important things happened while we were developing it Google took over the whole world about 10 different times and about 10 different ways, people started putting mobile supercomputers in their hands,
 
 407
 01:09:44.680 --> 01:09:52.690
-Duck Little: The Open Street Map project started. You know, publishing new innovative ways of structuring some Geo data.
+Duck Little: The Open Street Map project started, you know, publishing new innovative ways of structuring some Geo data.
 
 408
 01:09:53.110 --> 01:10:07.540
-Duck Little: And a lot of vector data has gone to the web. You know, you think about the adaptation of geo JSON or matte box vector tiles. And the way you an administrator used to think about data was I have shaped files. I'm going to render them using my favorite
+Duck Little: And a lot of vector data has gone to the web. You know, you think about the adaptation of GeoJSON or MapBox vector tiles. And the way you an administrator used to think about data was 'I have shape files, I'm going to render them using my favorite
 
 409
 01:10:09.160 --> 01:10:12.820
-Duck Little: Map rendering service and it's going to get put in the browser. But now,
+Duck Little: Map rendering service and it's going to get put in the browser.' But now,
 
 410
 01:10:13.450 --> 01:10:19.630
@@ -1494,27 +1494,27 @@ Duck Little: You could just have data sitting in in an S3 bucket somewhere. And 
 
 411
 01:10:19.930 --> 01:10:26.680
-Duck Little: You know, Geo JSON data includes like matte box vector tiles could pre render a whole region of vector tiles and this even includes when you
+Duck Little: You know, GeoJSON data includes like MapBox vector tiles could pre render a whole region of vector tiles and this even includes,
 
 412
 01:10:27.190 --> 01:10:34.990
-Duck Little: More stream bubble formats like cloud optimized. Notice what if I just have a picture. I want to slice and dice and it's properly index.
+Duck Little: More streamable formats like cloud optimized GeoTIFFs. What if I just have a picture I want to slice and dice and it's properly indexed.
 
 413
 01:10:35.290 --> 01:10:46.090
-Duck Little: Or streaming will JSON, things like new line to eliminate JSON that work with stream mobile web servers. I mean, cheap cloud compute means you can put terabytes of data on a map for pennies.
+Duck Little: Or Streamable JSON, things like new line delimited JSON that work with streamable web servers. I mean, cheap cloud compute means you can put terabytes of data on a map for pennies.
 
 414
 01:10:48.730 --> 01:10:55.690
-Duck Little: So we thought we should adapt to the times and that brought about the juice 3.0 development.
+Duck Little: So we thought we should adapt to the times and that brought about the GeoMoose 3.0 development.
 
 415
 01:10:57.070 --> 01:11:05.920
-Duck Little: But even during our evaluation, even with all of the modern stuff that we were trying to to adopt and looking at new patterns.
+Duck Little: But even during our evaluation, even with all of the modern stuff that we were trying to to adopt and looking at new patterns
 
 416
 01:11:06.250 --> 01:11:17.590
-Duck Little: Of programming, we still came back to the best way to describe some of this stuff is knowing that there's a map that there are layers and that there are map sources and we can describe an XML.
+Duck Little: Of programming, we still came back to the best way to describe some of this stuff is knowing that there's a map that there are layers and that there are map sources and we can describe that in XML.
 
 417
 01:11:18.280 --> 01:11:25.720
@@ -1530,7 +1530,7 @@ Duck Little: Develop a brand new application on a completely fresh stack, both t
 
 420
 01:11:43.180 --> 01:12:00.010
-Duck Little: To the users the application looked very, very the same. In fact, we were able to write a small conversion tool that allowed users of june moves to to upgrade their XML to June was three. In fact about 90% of the tags were able to migrate forward.
+Duck Little: To the users the application looked very, very the same. In fact, we were able to write a small conversion tool that allowed users of GeoMoose 2 to to upgrade their XML to GeoMoose 3. In fact about 90% of the tags were able to migrate forward.
 
 421
 01:12:03.910 --> 01:12:12.700
@@ -1538,19 +1538,19 @@ Duck Little: This has helped a lot. We've got the ability to handle different ty
 
 422
 01:12:13.390 --> 01:12:18.700
-Duck Little: Things like JSON and vector tiles. We can parse them natively and render them for users.
+Duck Little: Things like GeoJSON and vector tiles. We can parse them natively and render them for users.
 
 423
 01:12:19.330 --> 01:12:27.070
-Duck Little: We also created the idea of a query as concept because sometimes you have browsers have different capabilities and you might want to present the data differently.
+Duck Little: We also created the idea of a 'query as' concept because sometimes you have browsers have different capabilities and you might want to present the data differently.
 
 424
 01:12:27.760 --> 01:12:41.890
-Duck Little: For example you we have the ability to define a layer as being displayed in the map using a WNs source. But if you want to get the attributes for a future it'll use W Fs.
+Duck Little: For example you we have the ability to define a layer as being displayed in the map using a WMS source. But if you want to get the attributes for a feature it'll use WFS.
 
 425
 01:12:44.290 --> 01:12:51.130
-Duck Little: But we learned some stuff and some real important lessons here cartography, it's hard.
+Duck Little: But we learned some stuff and some real important lessons here. Cartography is hard.
 
 426
 01:12:51.850 --> 01:13:02.080
@@ -1562,19 +1562,19 @@ Duck Little: There's been I think three different flavors of that throughout the
 
 428
 01:13:07.750 --> 01:13:14.530
-Duck Little: So LD the OTC standard for how to define a layer that gets pretty verbose, and can be very scary for people, even with editors.
+Duck Little: SLD the OGC standard for how to define a layer, that gets pretty verbose, and can be very scary for people, even with editors.
 
 429
 01:13:15.160 --> 01:13:27.040
-Duck Little: Matte box GL style sheets has been sort of a one organization show though it's been pretty innovative open layer styles styling, as you saw, as you could see in previous examples.
+Duck Little: MapBox GL style sheets has been sort of a one organization show though it's been pretty innovative. OpenLayer styles styling, as you saw, as you could see in previous examples
 
 430
 01:13:28.090 --> 01:13:35.320
-Duck Little: Just in the demo set can get very complicated for simple things like a point and Map Server map files are really
+Duck Little: Just in the demo set, can get very complicated for simple things like a point and MapServer map files are really
 
 431
 01:13:36.700 --> 01:13:51.040
-Duck Little: Great for styling stuff on the server. But there's no implementation in the client. And these are just the ones I could think of quickly that were mostly successes. At one point, there's been a lot of other things that have failed that the haven't quite made it through.
+Duck Little: Great for styling stuff on the server. But there's no implementation in the client. And these are just the ones I could think of quickly that were mostly successes at one point. T,here's been a lot of other things that have failed that the haven't quite made it through.
 
 432
 01:13:52.750 --> 01:14:04.270
@@ -1582,15 +1582,15 @@ Duck Little: The other thing we discovered is that performance can be quite hard
 
 433
 01:14:06.280 --> 01:14:15.670
-Duck Little: Even with Web GL. You don't want to put gigabyte. You need to think about how you're going to put gigabytes of data onto your map.
+Duck Little: Even with Web GL. You don't want to put gigabyte, you need to think about how you're going to put gigabytes of data onto your map.
 
 434
 01:14:17.200 --> 01:14:31.540
-Duck Little: And communicating. How do you the complex definitions can be hard as well. The query ass thing that I was previously bragging about is also one of the hardest concepts to explain to our administrators who are trying to do is get their data on the web.
+Duck Little: And communicating. How do you the complex definitions can be hard as well. The 'query as' thing that I was previously bragging about is also one of the hardest concepts to explain to our administrators who are trying to do is get their data on the web.
 
 435
 01:14:35.260 --> 01:14:40.960
-Duck Little: Also some future challenges just in the mapping sphere that I think are are
+Duck Little: Also some future challenges just in the mapping sphere that I think are, are
 
 436
 01:14:42.160 --> 01:14:52.300
@@ -1598,7 +1598,7 @@ Duck Little: We're trying to deal with as a project we're trying to think about 
 
 437
 01:14:52.900 --> 01:15:00.460
-Duck Little: point clouds are as a technology really really evolving. There's an end, there's a project called entwine that puts 3D points into the map.
+Duck Little: Point Clouds are as a technology really really evolving. There's an end, there's a project called entwine that puts 3D points into the map.
 
 438
 01:15:00.820 --> 01:15:12.100
@@ -1606,11 +1606,11 @@ Duck Little: And they've also become cheap and available because you can put a l
 
 439
 01:15:13.570 --> 01:15:23.920
-Duck Little: Growing through mobile. It was also hard people just expect a single site to work on just about every device that they have no one wants to think about going to the slash m dot HTML site anymore.
+Duck Little: Growing through mobile is also hard. People just expect a single site to work on just about every device that they have no one wants to think about going to the /m.html site anymore.
 
 440
 01:15:24.430 --> 01:15:36.850
-Duck Little: And a lot of maps cheat this by having an m dot HTML site somewhere or require or saying this doesn't work in your browser. But users are no longer accepting that they wanted to work on their tablet their laptop.
+Duck Little: And a lot of maps cheat this by having an m.html site somewhere or require or saying this doesn't work in your browser. But users are no longer accepting that they wanted to work on their tablet their laptop.
 
 441
 01:15:37.120 --> 01:15:43.240
@@ -1626,7 +1626,7 @@ Duck Little: And that's going to be a future challenge for describing a map.
 
 444
 01:16:08.350 --> 01:16:14.650
-Duck Little: So some big takeaways from the GMOs project through the years, you can XML it. There is a way of describing maps.
+Duck Little: So some big takeaways from the GeoMoose project through the years, you can XML it. There is a way of describing maps
 
 445
 01:16:15.430 --> 01:16:25.240
@@ -1638,7 +1638,7 @@ Duck Little: Also, I really think the idea of having a map source definition and
 
 447
 01:16:40.480 --> 01:16:51.610
-Duck Little: Styling is hard and gets complicated and needs to be considered hard and yes eventually a user will indeed try to stuff multiple gigabytes of data and render it in your browser.
+Duck Little: Styling is hard and gets complicated and needs to be considered hard and yes, eventually a user will indeed try to stuff multiple gigabytes of data and render it in your browser.
 
 448
 01:16:53.260 --> 01:16:56.260
@@ -1646,7 +1646,7 @@ Duck Little: All right, I went kind of fast because it's
 
 449
 01:16:57.610 --> 01:17:01.960
-Duck Little: Hoping to get a lot of content. But I'm always open to questions.
+Duck Little: Hoping to get a lot of content in. But I'm always open to questions.
 
 450
 01:17:09.730 --> 01:17:11.440
@@ -1678,7 +1678,7 @@ Amelia Bellamy-Royds: Use is the discourse.
 
 457
 01:17:41.920 --> 01:17:46.870
-Amelia Bellamy-Royds: Discourse dot W IC g.io and
+Amelia Bellamy-Royds: at discourse.WICG.io and
 
 458
 01:17:48.220 --> 01:17:53.770
@@ -1698,11 +1698,11 @@ Amelia Bellamy-Royds: remind everyone to check the agenda for the next session, 
 
 462
 01:18:20.320 --> 01:18:26.260
-Amelia Bellamy-Royds: So either tomorrow or the next day depending on what time zone. You're starting in and
+Amelia Bellamy-Royds: So either tomorrow or the next day depending on what time zone you're starting in and
 
 463
 01:18:27.880 --> 01:18:34.090
-Amelia Bellamy-Royds: I will not be hosting that one I think Peter rush fourth is up for hosting day two.
+Amelia Bellamy-Royds: I will not be hosting that one I think Peter Rushforth is up for hosting day two.
 
 464
 01:18:35.350 --> 01:18:37.330
@@ -1710,7 +1710,7 @@ Amelia Bellamy-Royds: Will be talking about
 
 465
 01:18:38.590 --> 01:18:55.030
-Amelia Bellamy-Royds: The map data and server standards OTC and how those standards are good for the web or maybe not good enough for the web. And we'll also have a hopefully very interesting panel.
+Amelia Bellamy-Royds: The map data and server standards, OGC, and how those standards are good for the web or maybe not good enough for the web. And we'll also have a hopefully very interesting panel,
 
 466
 01:18:57.610 --> 01:19:01.930
@@ -1730,11 +1730,11 @@ Amelia Bellamy-Royds: Like to thank everyone who has joined us today, or who is 
 
 470
 01:19:23.980 --> 01:19:25.780
-Peter Rushforth: posted links to the discourse.
+Peter Rushforth: I posted links to the discourse,
 
 471
 01:19:27.010 --> 01:19:46.450
-Peter Rushforth: Discourse forum with some topics. And as soon as that Dan's a presentation is available via video, I will post a link to that. But I'll post a link to his slides. First out with my appreciation Dennis really interesting, I would like to chat.
+Peter Rushforth: Discourse forum with some topics. And as soon as that Dan's presentation is available via video, I will post a link to that, but I'll post a link to his slides first. And with my appreciation Dennis really interesting, I would like to chat.
 
 472
 01:19:47.620 --> 01:19:49.210
