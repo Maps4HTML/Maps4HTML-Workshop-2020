@@ -2,7 +2,7 @@ WEBVTT
 
 1
 00:00:00.630 --> 00:00:22.380
-Peter Rushforth: I'll start. Okay, there we go. So, hello. Welcome to the day of the workshop, the joint or juicy W three see workshop on maps for the web. I'm Peter rush forth, and we're going to, we have a concluding program today that is very exciting. And then we're going to
+Peter Rushforth: I'll start. Okay, there we go. So, hello. Welcome to the day 8 of the workshop, the joint or OGC/W3C workshop on maps for the web. I'm Peter Rushforth, and we're going to, we have a concluding program today that is very exciting. And then we're going to
 
 2
 00:00:23.580 --> 00:00:34.680
@@ -10,31 +10,31 @@ Peter Rushforth: Have a have a discussion about conclusions and next steps that 
 
 3
 00:00:36.150 --> 00:00:42.690
-Peter Rushforth: I just like to remind everybody that we can chat on gator live chat is welcome there and
+Peter Rushforth: I just like to remind everybody that we can chat on Gitter, live chat is welcome there and
 
 4
 00:00:43.920 --> 00:00:54.540
-Peter Rushforth: I pasted the case that the URL to the guitar chat in the in the zoom chat, we can use the zoom chat for
+Peter Rushforth: I pasted the the URL to the Gitter chat in the in the zoom chat, we can use the zoom chat for
 
 5
 00:00:55.620 --> 00:01:05.130
-Peter Rushforth: Comment comments. If you don't have greater access but mostly just for zoom problems or what have you, audio problems that kind of thing.
+Peter Rushforth: comment. Comments if you don't have Gitter access but mostly just for zoom problems or what have you, audio problems, that kind of thing.
 
 6
 00:01:06.240 --> 00:01:13.230
-Peter Rushforth: And we're going. We do have a discourse forum category set up for
+Peter Rushforth: And we're going. We do have a Discourse forum category set up for
 
 7
 00:01:14.280 --> 00:01:21.660
-Peter Rushforth: web mapping and I'll paste that into the chat as well. And I've been we have been
+Peter Rushforth: web mapping and I'll paste that into the chat as well. And I've been, we have been
 
 8
 00:01:22.470 --> 00:01:40.590
-Peter Rushforth: Adding topics for each of the each, each of the sessions and linking to, presentations and videos. And slides as they become available. And we'll go ahead with doing that for tonight's work as well. And with that, I would like to introduce our
+Peter Rushforth: Adding topics for each of the each, each of the sessions and linking to, presentations and videos and slides as they become available. And we'll go ahead with doing that for tonight's work as well. And with that, I would like to introduce our,
 
 9
 00:01:42.150 --> 00:01:44.370
-Peter Rushforth: First of all, I'd like to remind everybody that the
+Peter Rushforth: Oh, first of all, I'd like to remind everybody that the
 
 10
 00:01:45.390 --> 00:01:47.730
@@ -42,7 +42,7 @@ Peter Rushforth: Workshop is operated under the
 
 11
 00:01:49.560 --> 00:02:01.440
-Peter Rushforth: Standards of Professional Conduct of the WCC and there is a link it on our workshop website at the bottom of the pit every page that I'll paste into the chat window.
+Peter Rushforth: Standards of Professional Conduct of the W3C and there is a link it on our workshop website at the bottom of every page that I'll paste into the chat window.
 
 12
 00:02:03.270 --> 00:02:03.990
@@ -50,19 +50,19 @@ Peter Rushforth: And
 
 13
 00:02:06.630 --> 00:02:14.100
-Peter Rushforth: And remind everybody to adhere to that, please, so that we don't have to meet you in the
+Peter Rushforth: And remind everybody to adhere to that, please, so that we don't have to mute you
 
 14
 00:02:15.300 --> 00:02:24.120
-Peter Rushforth: Alright. With that, I'd like to hand over the the stage to Terrence eating, who's going to give us a talk on
+Peter Rushforth: Alright. With that, I'd like to hand over the the stage to Terrence Eden, who's going to give us a talk on
 
 15
 00:02:25.770 --> 00:02:37.890
-Peter Rushforth: You user research on maps in HTML from his perspective. And that's the only talk to the night. We'll pass it into the panel after Terrence is finished. So parents if you'd like to share your screen and take over the great
+Peter Rushforth: You user research on maps in HTML from his perspective. And that's the only talk to the night, we'll pass it into the panel after Terrence is finished. So Terence if you'd like to share your screen and take over that'd be great.
 
 16
 00:02:39.300 --> 00:02:49.050
-Terence Eden: Thank you very much. So in time honored tradition. I'm going to start by saying, can everyone see my screen. You should see a big Hello my name is what's that on the screen.
+Terence Eden: Thank you very much. So in time honored tradition. I'm going to start by saying, can everyone see my screen. You should see a big 'Hello my name is' is that on the screen.
 
 17
 00:02:49.320 --> 00:02:50.040
@@ -78,7 +78,7 @@ Terence Eden: Good morning, good afternoon, good evening participants from aroun
 
 20
 00:03:02.070 --> 00:03:11.160
-Terence Eden: My name is Terrence eaten and for a bit of background on me. I was the UK Government's representative to the W three C's advisory committee.
+Terence Eden: My name is Terrence Eden and for a bit of background on me. I was the UK Government's representative to the W3C's advisory committee.
 
 21
 00:03:11.820 --> 00:03:27.510
@@ -86,7 +86,7 @@ Terence Eden: But for the last 18 months I've been working with the UK National 
 
 22
 00:03:27.630 --> 00:03:32.790
-Amelia Bellamy-Royds: I'm going to interrupt Terrence we're actually seeing your presenters view.
+Amelia Bellamy-Royds: Sorry to interrupt, Terrence we're actually seeing your presenters view, which is okay, but
 
 23
 00:03:33.330 --> 00:03:35.610
@@ -94,7 +94,7 @@ Terence Eden: Oh, interesting.
 
 24
 00:03:35.670 --> 00:03:37.830
-Amelia Bellamy-Royds: Want to just share the slides.
+Amelia Bellamy-Royds: If you just want to just share the slides.
 
 25
 00:03:38.940 --> 00:03:40.170
@@ -110,7 +110,7 @@ Peter Rushforth: Amelia.
 
 28
 00:03:53.040 --> 00:03:56.280
-Terence Eden: That's just a black screen. Brilliant. Thank you, zoom, I
+Terence Eden: That's just a black screen. Brilliant. Thank you, zoom, I...
 
 29
 00:03:57.840 --> 00:04:03.390
@@ -138,7 +138,7 @@ Peter Rushforth: Yeah.
 
 35
 00:04:19.950 --> 00:04:23.910
-Terence Eden: And you can't see all my top secret notes. I've written to remind me what I'm saying.
+Terence Eden: And you can't see all my top secret notes I've written to remind me what I'm saying.
 
 36
 00:04:24.930 --> 00:04:25.830
@@ -150,7 +150,7 @@ Terence Eden: The illusion is maintained.
 
 38
 00:04:29.760 --> 00:04:31.140
-Doug Schepers: See part of your screen.
+Doug Schepers: We only see part of your screen.
 
 39
 00:04:33.480 --> 00:04:37.050
@@ -174,15 +174,15 @@ Peter Rushforth: Slightly better
 
 44
 00:04:51.060 --> 00:04:52.590
-Doug Schepers: Well, not it better, but not
+Doug Schepers: Well, not it better, but not-
 
 45
 00:04:54.240 --> 00:04:57.150
-Terence Eden: Say, fine. You know what, then, in which case
+Terence Eden: Fine. You know what, then, in which case
 
 46
 00:04:57.210 --> 00:05:09.720
-Terence Eden: I will if you just give me one second. I know exactly what I will do, I will do it the old fashioned way. I'm so pleased that you're recording this, Peter, because that means that all of this will be preserved.
+Terence Eden: I will if you just give me one second. I know exactly what I will do, I will do it the old fashioned way. I'm so pleased that you're recording this, Peter, because that means that all of this will be preserved for
 
 47
 00:05:10.950 --> 00:05:11.970
@@ -190,11 +190,11 @@ Terence Eden: Generations.
 
 48
 00:05:12.000 --> 00:05:14.190
-Peter Rushforth: very capable editor and
+Peter Rushforth: We have a very capable editor in Ted Guild
 
 49
 00:05:16.530 --> 00:05:18.510
-Peter Rushforth: Clips and snippets, as appropriate.
+Peter Rushforth: who clips and snips, as appropriate.
 
 50
 00:05:20.760 --> 00:05:21.240
@@ -202,7 +202,7 @@ Terence Eden: So,
 
 51
 00:05:22.320 --> 00:05:26.490
-Terence Eden: Is that showing just mapping my users mapping our users now.
+Terence Eden: Is that showing just 'mapping our users'.
 
 52
 00:05:26.790 --> 00:05:28.140
@@ -254,7 +254,7 @@ Terence Eden: You shouldn't you can probably just see the whole
 
 64
 00:06:20.760 --> 00:06:23.040
-Doug Schepers: Maggie can only it is still cut off.
+Doug Schepers: In fact, wecan only, it is still cut off.
 
 65
 00:06:25.830 --> 00:06:27.090
@@ -274,7 +274,7 @@ Gobe Hobona (OGC): Have
 
 69
 00:06:44.610 --> 00:06:46.980
-Peter Rushforth: The app on the on the website here.
+Peter Rushforth: I have the PDF on the on the website here.
 
 70
 00:06:49.080 --> 00:06:51.570
@@ -290,7 +290,7 @@ Terence Eden: Is this cut off.
 
 73
 00:07:03.630 --> 00:07:08.580
-Doug Schepers: I hate worse when now we're only seeing a quarter of your screen.
+Doug Schepers: I hate to tell you it's worse, when now we're only seeing a quarter of your screen.
 
 74
 00:07:11.250 --> 00:07:11.880
@@ -302,7 +302,7 @@ Peter Rushforth: Why don't I do the PDF and you can say. Next slide.
 
 76
 00:07:15.600 --> 00:07:22.620
-Terence Eden: Next slide please. That sounds like a brilliant plan right I saw that if you want to take control the screen share
+Terence Eden: Next slide please. That sounds like a brilliant plan, right, I shall, if you want to take control the screen share
 
 77
 00:07:23.880 --> 00:07:24.210
@@ -310,15 +310,15 @@ Yeah.
 
 78
 00:07:28.590 --> 00:07:31.530
-Chris Little: Constellation I had a similar problem from Firefox.
+Chris Little: If it's any consolation I had a similar problem from Firefox.
 
 79
 00:07:33.840 --> 00:07:36.030
-Peter Rushforth: You see, you see the slide now.
+Peter Rushforth: You see, do you see the slide now.
 
 80
 00:07:37.770 --> 00:07:40.260
-Terence Eden: I can see. Hello, my name is I hope everyone
+Terence Eden: I can see 'Hello, my name is' I hope everyone
 
 81
 00:07:40.830 --> 00:07:41.190
@@ -326,11 +326,11 @@ Is
 
 82
 00:07:43.020 --> 00:07:53.610
-Terence Eden: Right. Well, listen, let's, let's just cut in here. Hi everyone and welcome to a completely seamless presentation. My name is Terrence Eden and
+Terence Eden: Right. Well, listen, let's, let's just cut in here. Hi everyone and welcome to a completely seamless presentation. My name is Terence Eden, and
 
 83
 00:07:55.260 --> 00:08:02.220
-Terence Eden: Bit of background, I was previously the UK Government's representatives, the W three. See, but for the last 18 months I've been working with the UK National Health Service.
+Terence Eden: Bit of background, I was previously the UK Government's representatives to the W3C, but for the last 18 months I've been working with the UK National Health Service.
 
 84
 00:08:02.460 --> 00:08:08.640
@@ -338,11 +338,11 @@ Terence Eden: This talk is in a personal capacity and doesn't represent the view
 
 85
 00:08:09.570 --> 00:08:21.630
-Terence Eden: So I've been following along with bits of the workshop as my timezone allows and I've really enjoyed what I've seen, but I think there's a way to make these proposals, even better, and that is talk to our users.
+Terence Eden: So I've been following along with bits of the workshop as my timezone allows, and I've really enjoyed what I've seen, but I think there's a way to make these proposals, even better, and that is talk to our users.
 
 86
 00:08:22.650 --> 00:08:31.110
-Terence Eden: And I've read through lots of the documentation been presented and some of the proposals and I see lots of use cases and user stories.
+Terence Eden: And I've read through lots of the documentation that's been presented and some of the proposals and I see lots of use cases and user stories.
 
 87
 00:08:31.410 --> 00:08:42.750
@@ -350,7 +350,7 @@ Terence Eden: Or what I don't see is any evidence that people have spoken to end
 
 88
 00:08:43.980 --> 00:08:53.820
-Terence Eden: So developers, our users to we often think of the user as being the person who is scrolling on their screen or, you know, interacting with an app, but
+Terence Eden: So developers are users too! We often think of the user as being the person who is scrolling on their screen or, you know, interacting with the map, but
 
 89
 00:08:54.090 --> 00:09:02.550
@@ -366,7 +366,7 @@ Terence Eden: Next slide please. And we were all nerds here, right, I can say th
 
 92
 00:09:23.730 --> 00:09:31.020
-Terence Eden: And I think we recognize the sentiment expressed in this monk, which says Linux is user friendly. It's just very picky about who it's friends are
+Terence Eden: And I think we recognize the sentiment expressed in this mug, which says 'Linux is user friendly. It's just very picky about who it's friends are'
 
 93
 00:09:31.920 --> 00:09:38.850
@@ -374,7 +374,7 @@ Terence Eden: Like this. This isn't about Linux. But specifically, but all commu
 
 94
 00:09:39.240 --> 00:09:46.650
-Terence Eden: If you don't know the right jargon or if you're a newbie, or if there's a high barrier to entry. It can be really intimidating getting started with something new.
+Terence Eden: If you don't know the right jargon, or if you're a newbie, or if there's a high barrier to entry. It can be really intimidating getting started with something new.
 
 95
 00:09:47.190 --> 00:09:58.530
@@ -382,7 +382,7 @@ Terence Eden: And this is a problem that HTML has as a language. And I want to t
 
 96
 00:09:59.190 --> 00:10:09.480
-Terence Eden: So, next slide please. So here are video and audio. So these are I say then, you then introduced an HTML5, but they still feel new to me.
+Terence Eden: So, next slide please. So here are video and audio. So these are I say they're new, they were introduced in HTML5, but they still feel new to me.
 
 97
 00:10:09.960 --> 00:10:27.060
@@ -398,11 +398,11 @@ Terence Eden: You know, really simple to understand really simple to use and the
 
 100
 00:10:50.340 --> 00:10:56.550
-Terence Eden: So they see his picture. And if you're not familiar with this, you know, it's a it's an extension to image sort of
+Terence Eden: So this is picture. And if you're not familiar with this, you know, it's a it's an extension to image, sort of
 
 101
 00:10:57.480 --> 00:11:08.370
-Terence Eden: It's kind of confusing to try and explain it to people. It's sort of superficially similar to order and video but it contains some really weird syntax. So it has significant white space and significant punctuation.
+Terence Eden: It's kind of confusing to try and explain it to people. It's sort of superficially similar to audio and video but it contains some really weird syntax. So it has significant white space and significant punctuation.
 
 102
 00:11:08.760 --> 00:11:16.500
@@ -410,11 +410,11 @@ Terence Eden: There's a media attribute which sort of looks a bit like CSS, but 
 
 103
 00:11:17.160 --> 00:11:30.120
-Terence Eden: Source set when other things use when image uses source the SRC, there's no all attribute natively, even when you teach this to people they find it confusing. You look at stack overflow or MDM documentation.
+Terence Eden: Source set when other things use when image uses source, the src, there's no alt attribute natively, even when you teach this to people they find it confusing. You look at stack overflow or MDM documentation,
 
 104
 00:11:30.510 --> 00:11:37.140
-Terence Eden: People find it developers users find it hard to use picture element. And I think that's one of the reasons why it doesn't get much use
+Terence Eden: People find it, developers users, find it hard to use picture element. And I think that's one of the reasons why it doesn't get much use
 
 105
 00:11:37.830 --> 00:11:45.780
@@ -430,27 +430,27 @@ Terence Eden: If we need to make sure that people want to use our product. And t
 
 108
 00:12:08.160 --> 00:12:22.560
-Terence Eden: So, next slide please. This is a slide which Peter presented earlier and I i love it if I was designing the map element. This is almost exactly how I would develop it.
+Terence Eden: So, next slide please. This is a slide which Peter presented earlier and I  love it. If I was designing the map element. This is almost exactly how I would develop it.
 
 109
 00:12:23.580 --> 00:12:32.790
-Terence Eden: And that's why it shouldn't be like this because I am not the average user my opinions shouldn't matter, even more importantly, the opinions of everyone on this call.
+Terence Eden: And that's why it shouldn't be like this, because I am not the average user my opinions shouldn't matter, even more importantly, the opinions of everyone on this call.
 
 110
 00:12:33.390 --> 00:12:42.000
-Terence Eden: shouldn't matter we are all maps nerds and standards nerds and HTML nerds, nerds of some sort, and it's not about us. It's all about
+Terence Eden: Shouldn't matter we are all maps nerds and standards nerds and HTML nerds, nerds of some sort, and it's not about us. It's not about
 
 111
 00:12:42.390 --> 00:12:50.550
-Terence Eden: People who spend their days, thinking about maps, we need to think about people who were being told by their boss, hey, I want to map on the website and needs to do this.
+Terence Eden: People who spend their days, thinking about maps, we need to think about people who were being told by their boss, hey, I want a map on the website and needs to do this.
 
 112
 00:12:51.090 --> 00:13:07.290
-Terence Eden: And they don't want to get into the semantic discussion of, you know, 100 different things. They want an element which they can really easily pick up and use and yep is powerful, but hasn't necessarily been designed for the needs of magnets and standards nerds and
+Terence Eden: And they don't want to get into the semantic discussion of, you know, 100 different things. They want an element which they can really easily pick up and use and yeah, is powerful, but hasn't necessarily been designed for the needs of mapping nerds and standards nerds and
 
 113
 00:13:08.400 --> 00:13:24.810
-Terence Eden: So I want to talk about how we get around to doing that. So my plan was actually to spend the last six months, talking to developers and other users to see what they expected from new elements, but, as some of you may have noticed the world has had other plans for the last six months.
+Terence Eden: So I want to talk about how we get around to doing that. So my plan was actually to spend the last six months, talking to developers and other users to see what they expected from new elements, but, as some of you may have noticed, the world has had other plans for the last six months.
 
 114
 00:13:26.220 --> 00:13:27.900
@@ -458,11 +458,11 @@ Terence Eden: So, next slide please.
 
 115
 00:13:29.190 --> 00:13:34.260
-Terence Eden: Here are some of the questions I wanted to ask, and I suggest before going much further.
+Terence Eden: Here are some of the questions I wanted to ask, and I suggest before going much further
 
 116
 00:13:34.830 --> 00:13:45.780
-Terence Eden: With these sorts of with this proposal that the group engage either a proper user research or do some, you know, really quite structured obey or informal user research to ask these questions.
+Terence Eden: With these sorts of, with this proposal that the group engage either a proper user research or do some, you know, really quite structured albeit informal user research to ask these questions
 
 117
 00:13:46.080 --> 00:13:55.200
@@ -470,15 +470,15 @@ Terence Eden: And others because these are the questions I would want asked me i
 
 118
 00:13:56.190 --> 00:14:11.490
-Terence Eden: I guess, the very first thing is, what should this element be cool. So I saw map. Yeah. You know, I've been doing HTML since well since before my beard was a lot shorter and does it make sense to recycle map.
+Terence Eden: I guess, the very first thing is, what should this element be called. So I saw map earlier. You know, I've been doing HTML since, well since, before my beard was a lot shorter and does it make sense to recycle map.
 
 119
 00:14:13.050 --> 00:14:31.200
-Terence Eden: You know, I saw a map book earlier. That's interesting to people understand what a map book is is essentially a geo think she is this about geography, would this make sense as an emoji. Why can't we have an emoji element. When would that be interesting with people get that
+Terence Eden: You know, I saw a map ook earlier. That's interesting to people understand what a map book is, is essentially a geo thing, is this about geography, would this make sense as an emoji. Why can't we have an emoji element, would that be interesting, would people get that
 
 120
 00:14:32.610 --> 00:14:42.780
-Terence Eden: Intuitively, we know that the majority of web developers in the future will speak Chinese. That's sort of almost demographic certainty, will this
+Terence Eden: Intuitively. We know that the majority of web developers in the future will speak Chinese. That's sort of almost demographic certainty, will this
 
 121
 00:14:43.380 --> 00:15:00.120
@@ -486,23 +486,23 @@ Terence Eden: Idea get more traction. If this is the first Chinese element. The 
 
 122
 00:15:02.160 --> 00:15:03.960
-Terence Eden: Mirror some things inside
+Terence Eden: There are some things inside
 
 123
 00:15:05.880 --> 00:15:08.940
-Terence Eden: The element that petered shown lat long
+Terence Eden: The element that Peter had shown, lat long
 
 124
 00:15:10.350 --> 00:15:19.860
-Terence Eden: Why lat long, is that what developers want see. Do they want latitude and longitude. Not everyone speaks English. We're not trying, you know, we don't have to save every single bite.
+Terence Eden: Why lat long, is that what developers want see. Do they want latitude and longitude. Not everyone speaks English. We're not trying, you know, we don't have to save every single byte.
 
 125
 00:15:20.700 --> 00:15:28.740
-Terence Eden: What other coordinate systems are being used people in the UK might want to use Ordnance Survey grid references, rather than latitude and longitude.
+Terence Eden: What other coordinate systems are being used, people in the UK might want to use Ordnance Survey grid references, rather than latitude and longitude.
 
 126
 00:15:29.190 --> 00:15:46.710
-Terence Eden: So perhaps we need to talk to us as to say, you know, not just the design of what mapping things we can put there, but the actual names that people want to use. I mean, if I'm Googling for something. Do I know what Latin lon are, why isn't it Latin long
+Terence Eden: So perhaps we need to talk to us as to say, you know, not just the design of what mapping things we can put there, but the actual names that people want to use. I mean, if I'm Googling for something. Do I know what lat and lon are, why isn't it lat and long?
 
 127
 00:15:47.760 --> 00:15:53.400
@@ -514,7 +514,7 @@ Terence Eden: The zoom thing I found really interesting. So I did chat very brie
 
 129
 00:16:02.850 --> 00:16:11.280
-Terence Eden: And it's really interesting. Some people think that zoom zero means there is no zoom. So your zoom all the way out and others say there's no zoom. So you're zoomed all the way in.
+Terence Eden: And it's really interesting. Some people think that zoom zero means there is no zoom. So your zoom all the way out, and others say there's no zoom. So you're zoomed all the way in.
 
 130
 00:16:13.140 --> 00:16:18.840
@@ -522,7 +522,7 @@ Terence Eden: What's, what's the consensus here there's what people use at the m
 
 131
 00:16:19.140 --> 00:16:27.990
-Terence Eden: There's also what other systems use should zoom be an integer, should it be a number two, or perhaps when people are saying, zoom, what they mean is fitted to the screen.
+Terence Eden: There's also what other systems use, should zoom be an integer, should it be a number at all, or perhaps when people are saying, zoom, what they mean is fit it to the screen.
 
 132
 00:16:28.500 --> 00:16:36.960
@@ -530,7 +530,7 @@ Terence Eden: Again what our expectations are of what zooming is in a mapping co
 
 133
 00:16:37.590 --> 00:16:49.980
-Terence Eden: Thinks any very different to how other elements work and that may be where their mental model is if we don't understand the mental model of people who want to use this element where we're going to wind up with a with a mess.
+Terence Eden: Thinks, very different to how other elements work and that may be where their mental model is if we don't understand the mental model of people who want to use this element, we're going to wind up with a with a mess.
 
 134
 00:16:51.150 --> 00:16:52.080
@@ -542,19 +542,19 @@ Terence Eden: Here's another one. So controls. This is something which I think
 
 136
 00:16:59.910 --> 00:17:12.120
-Terence Eden: The video and audio element. I've got wrong. They have a binary state controls on or off. And what that means is that little bar at the bottom, which allows you to play and pause and fast forward and stuff you can turn it on and off.
+Terence Eden: The video and audio element have got wrong. They have a binary state controls on or off. And what that means is that little bar at the bottom, which allows you to play and pause and fast forward and stuff you can turn it on and off.
 
 137
 00:17:12.720 --> 00:17:20.100
-Terence Eden: But that is that fine grained enough what controls to users expect our end users might expect to pinch and zoom and
+Terence Eden: But that is that fine grained enough, what controls do users expect our end users might expect, so end users might pinch and zoom and
 
 138
 00:17:20.520 --> 00:17:32.520
-Terence Eden: Pan and things. But what are the controls might have developer wants to see in there. Which ones would they want to turn on and off. Does it make sense to say I want this map to be panel, but not zoomable
+Terence Eden: Pan and things. But what are the controls might have developer wants to see in there. Which ones would they want to turn on and off. Does it make sense to say I want this map to be panable, but not zoomable
 
 139
 00:17:33.510 --> 00:17:44.040
-Terence Eden: Maybe, but we won't find that out unless we actually talk to people and find out what controls. Not only do they want to do they expect to be able to enable and disable
+Terence Eden: Maybe, but we won't find that out unless we actually talk to people and find out what controls not only do they want to do they expect to be able to enable and disable
 
 140
 00:17:45.510 --> 00:17:46.440
@@ -578,7 +578,7 @@ Terence Eden: And then, even more importantly, what do you hate about your curre
 
 145
 00:18:21.120 --> 00:18:36.960
-Terence Eden: New business, you know, sometimes the most powerful thing you can do is look at your competitors and ask the customers. What don't you like about that. And if you can be the opposite of that. If you can do the one thing well that others can't. And that's how you get traction
+Terence Eden: New business, you know, sometimes the most powerful thing you can do is look at your competitors and ask the customers. What don't you like about that. And if you can be the opposite of that. If you can do the one thing well, that others can't. And that's how you get traction
 
 146
 00:18:38.250 --> 00:18:38.820
@@ -586,7 +586,7 @@ Terence Eden: Because
 
 147
 00:18:40.290 --> 00:18:50.370
-Terence Eden: I'm literally wearing a t shirt, which says users. First, we can't rely on our own instincts our own instincts are wrong, because we think too much about this. If you look at you know there are some
+Terence Eden: I'm literally wearing a t-shirt, which says 'users first', we can't rely on our own instincts our own instincts are wrong, because we think too much about this. If you look at you know, there are some
 
 148
 00:18:50.910 --> 00:18:55.680
@@ -594,7 +594,7 @@ Terence Eden: Bizarre HTML elements which have been put in as far as I can tell,
 
 149
 00:18:56.550 --> 00:19:05.220
-Terence Eden: nerds like us said, oh, it would be really good if without actually talking to people and seeing if there was a absolute user need on whether they would get traction
+Terence Eden: nerds like us said, 'oh, it would be really good if' without actually talking to people and seeing if there was a absolute user need on whether they would get traction
 
 150
 00:19:05.670 --> 00:19:15.420
@@ -602,15 +602,15 @@ Terence Eden: And I think that mapping is too important to fall by the wayside l
 
 151
 00:19:16.200 --> 00:19:19.860
-Terence Eden: So who are our users. Do we know
+Terence Eden: So who are our users. Do we know?
 
 152
 00:19:20.850 --> 00:19:27.600
-Terence Eden: I mean, have we spoken out to people if this proposal gets into the standard, but nobody uses it, it will be a failure.
+Terence Eden: I mean, have we spoken out to people. If this proposal gets into the standard, but nobody uses it, it will be a failure.
 
 153
 00:19:27.810 --> 00:19:36.510
-Terence Eden: And you know will kind of have wasted all that time. Yes, we'll have done something that's very technically interesting but if it doesn't get us. Then there was no point to any of this.
+Terence Eden: And you know will kind of have wasted all our time. Yes, we'll have done something that's very technically interesting but if it doesn't get use. Then there was no point to any of this.
 
 154
 00:19:37.920 --> 00:19:54.390
@@ -622,7 +622,7 @@ Terence Eden: And that's the end of my presentation. Thank you very much for bea
 
 156
 00:20:07.980 --> 00:20:08.250
-Couple.
+Peter Rushforth: Sure we could take a couple.
 
 157
 00:20:11.040 --> 00:20:17.520
@@ -634,35 +634,35 @@ Peter Rushforth: Our, our domain in front of more developers to
 
 159
 00:20:24.030 --> 00:20:35.640
-Peter Rushforth: Explain the possibilities and I'll have people help influence it. I mean, part of the part of the challenge of community group is a low profile, you know, battling a little profile.
+Peter Rushforth: Explain the possibilities and I'll have people help influence it. I mean, part of the part of the challenge of a community group is a low profile, you know, battling a little profile.
 
 160
 00:20:37.350 --> 00:20:45.330
-Peter Rushforth: And I know there are vehicles for reaching out to users. Typically the the Mozilla Mozilla web DNA survey is
+Peter Rushforth: And I know there are vehicles for reaching out to users. Typically the the Mozilla, Mozilla web DNA survey is
 
 161
 00:20:47.820 --> 00:20:59.880
-Peter Rushforth: A vehicle for reaching users are reaching developers, but I think part of the challenges that webmasters milk web app developers don't see themselves as web developers.
+Peter Rushforth: A vehicle for reaching users, or reaching developers, but I think part of the challenges that web mappers, web map developers don't see themselves as web developers.
 
 162
 00:21:00.030 --> 00:21:01.020
-Terence Eden: In some King
+Terence Eden: In some cases,
 
 163
 00:21:01.620 --> 00:21:12.270
-Peter Rushforth: You know that there are some so high end professionals who are high end web developers that they are the intermediaries for web developers, right. They just want to have have that element.
+Peter Rushforth: You know that there are some high end professionals who are high end web developers, but they are the intermediaries for web developers, right. They just want to have have that element.
 
 164
 00:21:14.520 --> 00:21:15.720
-Peter Rushforth: That hopefully is not adult
+Peter Rushforth: That hopefully is not a dip.
 
 165
 00:21:18.300 --> 00:21:32.400
-Terence Eden: Yeah, thank you for that. So I'm just taking taking a quick look through the gates of thing it is entirely possible. I'm mistaken about the history of the picture element, it turns out, but but I will reiterate, you know, when I teach HTML.
+Terence Eden: Yeah, thank you for that. So I'm just taking taking a quick look through the Gitter thing it is entirely possible. I'm mistaken about the history of the picture element, it turns out, but but I will reiterate, you know, when I teach HTML
 
 166
 00:21:33.690 --> 00:21:43.290
-Terence Eden: Again, I see it as a that particular element is huge barrier to entry. I appreciate. There's a lot of historical baggage, but we potentially have a new chance here of
+Terence Eden: Again, I see it as a that particular element is huge barrier to entry and I appreciate. There's a lot of historical baggage, but we potentially have a new chance here of
 
 167
 00:21:44.790 --> 00:21:52.320
@@ -674,7 +674,7 @@ Terence Eden: That that's a valid thing. But again, Brian, you are you are possi
 
 169
 00:22:00.210 --> 00:22:13.560
-Terence Eden: I don't want to talk about dude every time. But again, I'm not the average user, it's worth chatting to people, especially people who were English isn't their first language to see whether they actually understand why things are abbreviated the way they are.
+Terence Eden: I don't want to type latitude every time. But again, I'm not the average user, it's worth chatting to people, especially people who, where English isn't their first language to see whether they actually understand why things are abbreviated the way they are.
 
 170
 00:22:15.990 --> 00:22:17.460
@@ -686,7 +686,7 @@ Terence Eden: Questions either here or in the chat or should we move on to the n
 
 172
 00:22:23.610 --> 00:22:29.280
-Peter Rushforth: Well, maybe we can move on and I can take some questions in the chat, because it's good for
+Peter Rushforth: Well, maybe we can move on and you can take some questions in the chat, because it's good form
 
 173
 00:22:29.910 --> 00:22:31.950
@@ -698,47 +698,43 @@ Chris Little: Actually
 
 175
 00:22:34.260 --> 00:22:34.920
-Chris Little: Says, Chris.
+Chris Little: It's Chris
 
 176
 00:22:35.430 --> 00:22:40.500
-Chris Little: Christie's as high as one of the things about asking users really made me
+Chris Little: Hi, one of the things about asking users really made me
 
 177
 00:22:41.670 --> 00:22:49.140
-Chris Little: Change my view. We're having a discussion in a geospatial community about the third dimension like geo JSON allows you to add
+Chris Little: Change my view. We're having a discussion in a geospatial community about the third dimension like GeoJSON allows you to add
 
 178
 00:22:50.940 --> 00:22:51.330
-Chris Little: Is that
+Chris Little: 'Z' or 'Zed'
 
 179
 00:22:52.740 --> 00:23:02.940
-Chris Little: The virtual corner and as a Spanish speaker. He said we should use altitude not elevation because elevations use for angles above the horizontal
+Chris Little: The virtual coordinate, and as a Spanish speaker, he said we should use altitude, not elevation because elevation's use for angles above the horizontal
 
 180
 00:23:03.060 --> 00:23:08.910
-Chris Little: One, but he said the real reason is because it's because it rhymes with latitude, longitude.
+Chris Little: but he said the real reason is because it's because it rhymes with latitude, longitude.
 
 181
 00:23:11.940 --> 00:23:13.200
-Terence Eden: You know what mnemonic
+Terence Eden: You know what mnemonics are a really powerful
 
 182
 00:23:14.370 --> 00:23:17.490
-Terence Eden: Thing is, though yeah i i would
+Terence Eden: Thing though, yeah I would
 
 183
 00:23:18.630 --> 00:23:26.160
-Terence Eden: I'd go with that. I've never heard an argument of development from from poetry before, but I'm all for it. Chris, I think that's a brilliant idea.
-
-184
-00:23:27.480 --> 00:23:28.260
-Terence Eden: So I
+Terence Eden: I'd go with that. I've never heard an argument of development from from poetry before, but I'm all for it, Chris, I think that's a brilliant idea.
 
 185
 00:23:28.350 --> 00:23:31.200
-Brian Kardell: Also asked a question in the channel. Can I ask, Oh,
+Brian Kardell: So I also asked a question in the channel, can I ask, Oh,
 
 186
 00:23:31.200 --> 00:23:32.280
@@ -750,7 +746,7 @@ Brian Kardell: That's okay. Um, so I actually, I really liked a lot of your pres
 
 188
 00:23:40.290 --> 00:23:45.300
-Brian Kardell: Agree with very much, even if they disagree with a couple of details and get her.
+Brian Kardell: Agree with very much, even if I disagreed with a couple of details in the Gitter
 
 189
 00:23:47.040 --> 00:23:48.780
@@ -758,7 +754,7 @@ Brian Kardell: But, uh,
 
 190
 00:23:49.890 --> 00:24:02.370
-Brian Kardell: I guess I would like to know more about what you propose in terms of what it means to talk to users because this is a bit of a thing that I have been really focused on and it is
+Brian Kardell: I guess, I would like to know more about what you propose in terms of what it means to talk to users, because this has been of a thing that I have been really focused on and it is
 
 191
 00:24:03.420 --> 00:24:09.510
@@ -782,11 +778,11 @@ Brian Kardell: Yeah yeah and and like once they have a tool and they can explore
 
 196
 00:24:31.290 --> 00:24:38.190
-Brian Kardell: It's one of like also why you get like one of the famous quotes about like faster horses, like people
+Brian Kardell: It's one of like also why you get like one of the famous quotes about like, faster horses, like people
 
 197
 00:24:38.190 --> 00:24:49.950
-Brian Kardell: Yes, the faster horses right but if you give them a car and you say, like, what do you think about this, then you know they begin doing interesting things and giving you
+Brian Kardell: for faster horses right, but if you give them a car and you say, like, what do you think about this, then you know they begin doing interesting things and giving you
 
 198
 00:24:49.950 --> 00:24:50.490
@@ -794,19 +790,19 @@ Terence Eden: Agree. Good.
 
 199
 00:24:52.680 --> 00:25:07.890
-Terence Eden: So part of this is, yes, we have to invent the future and you know we are much like Star Trek going where no one has gone before. And sometimes we're going to have to produce something which is so new and confusing to people that it will take time for them to adopt.
+Terence Eden: So part of this is, yes, we have to invent the future and you know, we are much like Star Trek, going where no one has gone before. And sometimes we're going to have to produce something which is so new and confusing to people that it will take time for them to adopt.
 
 200
 00:25:09.150 --> 00:25:13.770
-Terence Eden: That being said, one of the problems I see. And you know, I keep an eye on.
+Terence Eden: That being said, one of the problems I see, and you know, I keep an eye on
 
 201
 00:25:15.000 --> 00:25:17.550
-Terence Eden: incubators and I'm also on the
+Terence Eden: incubators and I'm also on the AMP,
 
 202
 00:25:19.110 --> 00:25:26.550
-Terence Eden: Google sample advisory board as well is people come along and they say, we've got this brilliant idea for a new element.
+Terence Eden: Google AMP advisory board as well is people come along and they say, we've got this brilliant idea for a new element.
 
 203
 00:25:27.120 --> 00:25:30.180
@@ -814,11 +810,11 @@ Terence Eden: And it sounds really interesting and you say okay do
 
 204
 00:25:30.750 --> 00:25:46.980
-Terence Eden: What the developers think about this and they go, Oh, we don't know. We just thought about it inside Google or inside Yahoo or inside, whatever. And that's, that's no way to do standards driven development. So what I actually propose is is a couple of things. One is make a very
+Terence Eden: What the developers think about this, and they go, Oh, we don't know, We just thought about it inside Google or inside Yahoo or inside, whatever. And that's, that's no way to do standards driven development. So what I actually propose is is a couple of things. One is, make a very
 
 205
 00:25:49.380 --> 00:25:58.290
-Terence Eden: user focused part of whether it's GitHub, or somewhere else where you can say, look, here are some of our proposals, what do you like what do you dislike about them.
+Terence Eden: user focused part of whether it's GitHub, or somewhere else, where you can say, look, here are some of our proposals, what do you like what do you dislike about them.
 
 206
 00:25:59.460 --> 00:26:03.090
@@ -826,11 +822,11 @@ Terence Eden: Go and find user groups where people are either
 
 207
 00:26:04.230 --> 00:26:12.960
-Terence Eden: Getting Started with HTML or a client experience and Austin very specific targeted questions now. I'm completely up front. I am not a user researcher.
+Terence Eden: Getting Started with HTML or are quite experienced and ask them very specific targeted questions. Now,  completely up front, I am not a user researcher.
 
 208
 00:26:13.680 --> 00:26:28.140
-Terence Eden: I don't even play one on TV. I would recommend finding either freelance one or professional one and getting them to design, you know, even just a questionnaire that you can put in front of people, so that you can start gathering
+Terence Eden: I don't even play one on TV. I would recommend finding either freelance one or professional one, and getting them to design, you know, even just a questionnaire that you can put in front of people, so that you can start gathering
 
 209
 00:26:29.220 --> 00:26:36.840
@@ -842,15 +838,15 @@ Terence Eden: Yeah, I don't see a lot of names which
 
 211
 00:26:42.270 --> 00:26:55.890
-Terence Eden: Are sort of outside Europe, I see a few which look like they might be. But, you know, we are not, you know, it's not the Western world, wherever it's the worldwide web. So we need to find a way to go out and reach web developers in
+Terence Eden: Are sort of outside Europe, I see a few which look like they might be. But, you know, we are not, you know, it's not the Western world, wherever it's the worldwide web. So we need to find a way to go out and reach web developers in,
 
 212
 00:26:57.060 --> 00:27:07.320
-Terence Eden: All around the world to ask them what they're mapping needs are one particular thing which I find interesting. And again, this isn't a
+Terence Eden: All around the world to ask them what they're mapping needs are, one particular thing which I find interesting, and again, this isn't a
 
 213
 00:27:08.160 --> 00:27:15.480
-Terence Eden: professional player comment is different countries recognize other different countries and, you know,
+Terence Eden: professional employer comment, is different countries recognize other different countries and, you know,
 
 214
 00:27:15.870 --> 00:27:25.530
@@ -862,11 +858,11 @@ Terence Eden: Does it show that this country is separate from that country becau
 
 216
 00:27:31.890 --> 00:27:40.470
-Terence Eden: So that's why we need to speak to a wide variety of people, because otherwise we'll end up with something which can't be used in certain countries. Sorry, I've gone off on a bit of a tangent that
+Terence Eden: So that's why we need to speak to a wide variety of people, because otherwise we'll end up with something which can't be used in certain countries. Sorry, I've gone off on a bit of a tangent there
 
 217
 00:27:41.160 --> 00:27:48.720
-Peter Rushforth: Okay. Um, well, we do have the math for HTML community group then we convene the
+Peter Rushforth: Okay. Um, well, we do have the Maps4HTML community group then we convene the
 
 218
 00:27:48.720 --> 00:27:50.010
@@ -878,15 +874,15 @@ Peter Rushforth: There's a worldwide workshop. So like everybody is welcome to j
 
 220
 00:27:58.500 --> 00:28:18.960
-Peter Rushforth: User surveys or anything, but we hope that people will come and help us solve these these issues right debate them but issues and about them, you know, suggest ways to to get definitive data on stuff. And I know that there's HTTP archive and so on. So there's lots of tools.
+Peter Rushforth: User surveys or anything, but we hope that people will come and help us solve these these issues right, debate them, put issues in about them, you know, suggest ways to to get definitive data on stuff. And I know that there's HTTP archive and so on. So there's lots of tools.
 
 221
 00:28:20.190 --> 00:28:22.980
-Brian Kardell: Yeah, a lot of ways your custom element.
+Brian Kardell: Yeah, I think in a lot of ways your custom element
 
 222
 00:28:23.130 --> 00:28:24.930
-Peter Rushforth: Goes okay
+Peter Rushforth: okay sorry
 
 223
 00:28:25.350 --> 00:28:27.840
@@ -894,7 +890,7 @@ Brian Kardell: And other and other mapping custom elements go
 
 224
 00:28:28.050 --> 00:28:36.390
-Brian Kardell: Further, because it, it means developers, where they live. Right. And it says, like, here's a thing.
+Brian Kardell: Further, because it, it meets developers, where they live. Right. And it says, like, here's a thing,
 
 225
 00:28:37.230 --> 00:28:44.940
@@ -902,7 +898,7 @@ Brian Kardell: And what do you think about it, it's very easy for them to explor
 
 226
 00:28:45.480 --> 00:28:58.560
-Brian Kardell: He was just speaking about that. I was curious about, like, if there were thoughts on how we could do that better because I'm like talking about real, concrete things. And what is your experience. What don't you like about them. What
+Brian Kardell: He was just speaking about that. I was curious about, like, if there were thoughts on how we could do that better, because like talking about real, concrete things, and what is your experience. What don't you like about them. What
 
 227
 00:28:59.610 --> 00:29:00.900
@@ -922,11 +918,11 @@ Peter Rushforth: So Simon has a has a question.
 
 231
 00:29:19.350 --> 00:29:22.260
-Simon Pieters: Yeah, it's more of a conventionally on the
+Simon Pieters: Yeah, it's more of a comment really on the
 
 232
 00:29:24.630 --> 00:29:24.870
-Terence Eden: The
+Simon Pieters: The
 
 233
 00:29:25.440 --> 00:29:34.800
@@ -934,7 +930,7 @@ Simon Pieters: Topic of how do we get feedback from web developers before it's l
 
 234
 00:29:35.940 --> 00:29:42.120
-Simon Pieters: already part of the process for chromium and they call it origin trials nuts.
+Simon Pieters: already part of the process for Chromium and they call it origin trials, that's
 
 235
 00:29:43.980 --> 00:29:46.200
@@ -946,7 +942,7 @@ Simon Pieters: Use a new feature before it's
 
 237
 00:29:50.910 --> 00:30:02.790
-Simon Pieters: shipped to everyone and they collect feedback from the people who opt into this origin trial and iterate on the Navy and API design.
+Simon Pieters: shipped to everyone and they collect feedback from the people who opt into this origin trial and iterate on the API design.
 
 238
 00:30:05.760 --> 00:30:21.900
@@ -966,15 +962,15 @@ Terence Eden: Good point. Yeah.
 
 242
 00:30:30.390 --> 00:30:45.480
-Peter Rushforth: Let's start with canada.ca. Okay, that's great. So I think we have a really interesting panel coming up so it we can move on to that and so
+Peter Rushforth: Let's start with canada.ca. Okay, that's great. So I think we have a really interesting panel coming up, so we can move on to that and so
 
 243
 00:30:47.760 --> 00:30:57.240
-Peter Rushforth: If there if we do do questions for that panel. Maybe we could raise our hand and zoom. I think there's a hand raising facility there and
+Peter Rushforth: If there if we do do questions for that panel, maybe we could raise our hand in zoom. I think there's a hand raising facility there and
 
 244
 00:30:57.750 --> 00:31:06.060
-Peter Rushforth: We can Organize, organize questions that way if there is time for them, there will certainly be like an open mic session later on where we have to look
+Peter Rushforth: We can organize, organize questions that way if there is time for them, there will certainly be like an open mic session later on where we have to look
 
 245
 00:31:06.870 --> 00:31:18.810
@@ -982,7 +978,7 @@ Peter Rushforth: Where we want to decide on future future next steps, kind of th
 
 246
 00:31:21.750 --> 00:31:25.410
-Peter Rushforth: Let's, let's, hand it over to Tom Khalida sentence panel.
+Peter Rushforth: Let's, let's, hand it over toTom Kralidis and his panel.
 
 247
 00:31:27.300 --> 00:31:27.720
@@ -994,11 +990,11 @@ Thanks, Peter.
 
 249
 00:31:31.620 --> 00:31:45.510
-Tom Kralidis: Okay so great. So this is the panel for for open source for for web mapping. I'm the moderator for the panel and we have Daniel Simon Andreas and I'm not sure is his will, online.
+Tom Kralidis: Okay so great. So this is the panel for for open source, for for web mapping. I'm the moderator for the panel and we have Daniel, Simon Andreas and I'm not sure is Will online.
 
 250
 00:31:47.160 --> 00:31:48.150
-Tom Kralidis: Will Mortensen
+Tom Kralidis: Will Mortenson
 
 251
 00:31:51.600 --> 00:31:55.740
@@ -1014,31 +1010,31 @@ Tom Kralidis: With regards to open sources what and web mapping open source has 
 
 254
 00:32:12.360 --> 00:32:32.130
-Tom Kralidis: Ecosystem open source software so you know those servers clients serialized partners, you know, all sorts of different open source software to in support of web mapping. So we've been doing this long enough for a long time and various phosphor G projects as well as the OSU community.
+Tom Kralidis: Ecosystem, open source software so you know there's servers, clients, serializers, parsers, you know, all sorts of different open source software to in support of web mapping. So we've been doing this long enough, for a long time in various Foss4g projects as well as the OSGeo community.
 
 255
 00:32:33.660 --> 00:32:40.920
-Tom Kralidis: Lots of web mapping going on there for, for, for decades in regards to this workshop and some of the discussions around
+Tom Kralidis: Lots of web mapping going on there for, for, for decades. In regards to this workshop and some of the discussions around
 
 256
 00:32:41.730 --> 00:33:00.720
-Tom Kralidis: Sort of making maps and the map element. Let's say more of a first class element. There's a lot of discussion around, how can we get this standardized in in in in HTML to, you know, it's all about lowering the barrier. And, you know, similar to the previous talk, lowering the barrier users.
+Tom Kralidis: Sort of making maps and the map element, let's say, more of a first class element. There's a lot of discussion around, how can we get this standardized in HTML to, you know, it's all about lowering the barrier. And, you know, similar to the previous talk, lowering the barrier, users,
 
 257
 00:33:01.860 --> 00:33:17.970
-Tom Kralidis: Making it making things easier easier for users. So how do we make maps first class in HTML and get that, you know, get that mechanism standardized. We all once we do get that standardized. We do that needs to be, you know, implemented.
+Tom Kralidis: Making it, making things easier for users. So how do we make maps first class in HTML and get that, you know, get that mechanism standardized. We all once we do get that standardized. We do that needs to be, you know, implemented.
 
 258
 00:33:19.800 --> 00:33:30.600
-Tom Kralidis: Over open sources also obviously part of the, the browser browser ecosystem. So adoption from those two communities is obviously is obviously key.
+Tom Kralidis: Open sources also obviously part of the, the browser ecosystem. So adoption from those two communities is obviously is obviously key.
 
 259
 00:33:31.140 --> 00:33:40.950
-Tom Kralidis: So here the overall discussion is is I guess what their relationships are what the synergies are between those communities. What opportunities exist to try to move forward.
+Tom Kralidis: So here, the overall discussion is is I guess what the relationships are what the synergies are between those communities, what opportunities exist to try to move forward.
 
 260
 00:33:42.390 --> 00:34:01.710
-Tom Kralidis: You know standardizing maps and in HTML in in when open source web browser projects, given all the lot of the experience that we also have him on a sort of foster diesel. So, as Peter mentioned, we can take questions on the on the chat. If folks want but
+Tom Kralidis: You know standardizing maps and in HTML in, when open source web browser projects, given all the lot of the experience that we also have him on a sort of Foss4g side. So, as Peter mentioned, we can take questions on the on the chat if folks want but
 
 261
 00:34:03.330 --> 00:34:06.600
@@ -1046,15 +1042,15 @@ Tom Kralidis: We'll, we'll start now. So at this point, I'd like the panel to
 
 262
 00:34:07.650 --> 00:34:18.570
-Tom Kralidis: Introduce themselves and you know your name, organization background and your role and relationship with with open source mapping and browser. So maybe we'll start with Simon
+Tom Kralidis: Introduce themselves and you know your name, organization, background and your role and relationship with with open source, mapping and browsers. So maybe we'll start with Simon
 
 263
 00:34:22.260 --> 00:34:34.440
-Simon Pieters: Thank you. I'm Simon Peters. I work at BU web platform consultancy firm. I have experience working on web standards and conformance tests for browsers.
+Simon Pieters: Thank you. I'm Simon Pieters. I work at Bocoup, a  web platform consultancy firm. I have experience working on web standards and conformance tests for browsers.
 
 264
 00:34:36.690 --> 00:34:44.400
-Simon Pieters: Book who participated in the OTC testbed 16 program to review the math ML proposals.
+Simon Pieters: Bocoup participated in the OGC testbed 16 program to review the MapML proposals.
 
 265
 00:34:45.810 --> 00:34:46.620
@@ -1066,7 +1062,7 @@ Simon Pieters: That's the
 
 267
 00:34:51.480 --> 00:34:56.010
-Simon Pieters: Context. That brings us to mapping, but the experience with
+Simon Pieters: Context that brings us to mapping, but the experience with
 
 268
 00:34:57.270 --> 00:34:59.160
@@ -1078,59 +1074,59 @@ Simon Pieters: Also relevant
 
 270
 00:35:04.080 --> 00:35:05.310
-Tom Kralidis: Great, thanks. Simon
+Tom Kralidis: Great, thanks Simon.
 
 271
 00:35:06.390 --> 00:35:07.080
-Tom Kralidis: Then yeah
+Tom Kralidis: Daniel?
 
 272
 00:35:08.730 --> 00:35:20.370
-Daniel Morissette: Well, I'm Daniel Morissette a software engineer and President at nine years. Nine years my own company. So as the company grows. I spend less time called him and more time just doing admin stuff.
+Daniel Morissette: Well, I'm Daniel Morissette a software engineer and President at MapGears. MapGears is my own company. So as the company grows, I spend less time coding and more time just doing admin stuff.
 
 273
 00:35:21.660 --> 00:35:31.260
-Daniel Morissette: Been involved in open source software since the mid 90s. I was introduced to the idea of releasing my source code instead of sending it
+Daniel Morissette: Been involved in open source software since the mid 90s. I was introduced to the idea of releasing my source code instead of selling it
 
 274
 00:35:31.890 --> 00:35:37.560
-Daniel Morissette: By Frank warmer. Damn. At the time I was writing jazz the translator and I've been involved in the geology, our libraries with him.
+Daniel Morissette: By Frank Warmerdam. At the time I was writing GIS data translator and I've been involved in the GDAL libraries with him
 
 275
 00:35:38.280 --> 00:35:46.470
-Daniel Morissette: When he created it then later on I started doing web mapping tried a couple of proprietary black boxes. Some people may may remember the names of
+Daniel Morissette: When he created it. Then later on I started doing web mapping, tried a couple of proprietary black boxes. Some people may may remember the names of
 
 276
 00:35:47.100 --> 00:35:59.880
-Daniel Morissette: Map objects and nothing's tree. The early versions. I mean, the later versions were better but I mean I'm talking about the ones in the late 90s I quickly gave up and came back to open source for web mapping as well. And I never go back to after so
+Daniel Morissette: Map Objects and MapXtreme. The early versions, I mean, the later versions were better but I mean I'm talking about the ones in the late 90s. I quickly gave up and came back to open source for web mapping as well and I never looked back after so
 
 277
 00:36:01.320 --> 00:36:10.260
-Daniel Morissette: Around 2000 I joined the University of Minnesota Map Server project I helped set it up as a tree collaborative project with Steve line was the only developer at the time.
+Daniel Morissette: Around 2000, I joined the University of Minnesota MapServer project, I helped set it up as a tree collaborative project with Steve Lime who was the only developer at the time.
 
 278
 00:36:10.860 --> 00:36:22.080
-Daniel Morissette: Then I've been involved in a GC for some for a little while and the days of the WS standard and when that context stuff, which may remind some stuff to some of you guys roadmap context.
+Daniel Morissette: Then I've been involved in OGC for some, for a little while and the days of the WMS standard and web map context stuff, which may remind some stuff to some of you guys, web map context.
 
 279
 00:36:22.980 --> 00:36:38.580
-Daniel Morissette: And then I've been also involved in the open source geospatial foundation when it was created in 2006 and involved in some of the committee's the incubator been on the board. So to sum it up my connections are open for software development mainly maps over and she doubled your
+Daniel Morissette: And then I've been also involved in the open source geospatial foundation when it was created in 2006 and involved in some of the committee's, the incubator, been on the board. So to sum it up my connections are open source software development, mainly in MapServer, GDAL and OGR,
 
 280
 00:36:39.660 --> 00:36:43.410
-Daniel Morissette: Standards and always Joe foundation going to three hats.
+Daniel Morissette: OGC Standards and OSGeo foundation, kind of three hats.
 
 281
 00:36:45.390 --> 00:36:48.180
-Tom Kralidis: Great, thank you. Then yeah, and
+Tom Kralidis: Great, thank you, Daniel, and
 
 282
 00:36:48.420 --> 00:36:49.170
-Andreas.
+Tom Kralidis: Andreas?
 
 283
 00:36:55.170 --> 00:36:56.460
-Daniel Morissette: you're muted and yes
+Daniel Morissette: You're muted Andreas
 
 284
 00:36:58.440 --> 00:36:59.310
@@ -1138,27 +1134,27 @@ Andreas Hocevar: Thank you very much.
 
 285
 00:37:00.660 --> 00:37:13.410
-Andreas Hocevar: My name is Andreas for Java. I've been involved in Geospatial web based mapping projects that are open source since 2007 I think
+Andreas Hocevar: My name is Andreas Hocevar. I've been involved in Geospatial web based mapping projects that are open source since 2007 I think,
 
 286
 00:37:14.610 --> 00:37:30.450
-Andreas Hocevar: Or maybe even earlier if I also think about community map builder, an old web mapping project that is retired now, but the biggest project of those is probably open layers which I'm also a very active developer in
+Andreas Hocevar: Or maybe even earlier if I also think about community map builder, an old web mapping project that is retired now, but the biggest project of those is probably OpenLayers, which I'm also a very active developer in
 
 287
 00:37:32.310 --> 00:37:50.340
-Andreas Hocevar: I'm self employed, basically, but I'm also director of a small company called W three to which provides development and consulting for everything in the field of browser based web mapping and web based chess systems.
+Andreas Hocevar: I'm self employed, basically, but I'm also director of a small company called W3Geo which provides development and consulting for everything in the field of browser based web mapping and web based GIS systems.
 
 288
 00:37:54.240 --> 00:38:02.250
-Tom Kralidis: Great, thank you. It looks like will is trying to connect so I'm sending him emails as we speak.
+Tom Kralidis: Great, thank you. It looks like Will is trying to connect, so I'm sending him emails as we speak.
 
 289
 00:38:03.480 --> 00:38:13.530
-Tom Kralidis: But notwithstanding that you know once he does get in. I'll sort of break and asked him to introduce himself and get him wired into the wired into the discussion so
+Tom Kralidis: But notwithstanding that, you know, once he does get in. I'll sort of break and ask him to introduce himself and get him wired into the, wired into the discussion so
 
 290
 00:38:14.310 --> 00:38:27.450
-Tom Kralidis: Let's see what happens there. So thank you for the introductions, everybody. And I guess my first question to the panel would be, you know, Daniel, we heard you talk about how would you see and
+Tom Kralidis: Let's see what happens there. So thank you for the introductions, everybody. And I guess my first question to the panel would be, you know, Daniel, we heard you talk about OGC and
 
 291
 00:38:28.500 --> 00:38:30.120
@@ -1166,15 +1162,15 @@ Tom Kralidis: You know, with regards to open source.
 
 292
 00:38:31.320 --> 00:38:37.800
-Tom Kralidis: In in the foster G community or the geospatial community and to sort of the web mapping ecosystem.
+Tom Kralidis: In in the Fiss4G community or the geospatial community and sort of, the web mapping ecosystem
 
 293
 00:38:39.270 --> 00:38:54.660
-Tom Kralidis: When we relate that to the standardization of maps in HTML. What are the kinds of things that I guess the foster G what mapping community can do in terms of helping with with standardization.
+Tom Kralidis: When we relate that to the standardization of maps in HTML. What are the kinds of things that I guess the Foss4G web mapping community can do in terms of helping with with standardization.
 
 294
 00:38:59.280 --> 00:39:00.960
-Daniel Morissette: Which refers to, like, dive.
+Daniel Morissette: Who should go first, like, should I dive?
 
 295
 00:39:01.590 --> 00:39:02.220
@@ -1182,19 +1178,19 @@ Tom Kralidis: Sure.
 
 296
 00:39:02.430 --> 00:39:10.950
-Daniel Morissette: Yeah, well I guess what, that's one of the things that I was that I did with the methanol stuff is testing the specs with the reference implementation so
+Daniel Morissette: Yeah, well I guess what, that's one of the things that I was, that I did with the MapML stuff, is testing the specs with the reference implementation so
 
 297
 00:39:11.280 --> 00:39:21.600
-Daniel Morissette: In my case anyway for myself, reading a draft abstract document know like a raw a spec document doesn't tell me much until I see it running so kicking the tires, I guess.
+Daniel Morissette: In my case anyway for myself, reading a draft abstract document, you know like a raw a spec document doesn't tell me much until I see it running so kicking the tires, I guess.
 
 298
 00:39:22.140 --> 00:39:32.790
-Daniel Morissette: And making it possible for others to see what the thing looks in real life is probably one of the means by which open source developers can help desk driving the specs essentially
+Daniel Morissette: And making it possible for others to see what the thing looks in real life, is probably one of the means by which open source developers can help, test driving the specs essentially
 
 299
 00:39:37.980 --> 00:39:38.550
-Tom Kralidis: Address.
+Tom Kralidis: Andreas?
 
 300
 00:39:39.870 --> 00:39:46.290
@@ -1206,7 +1202,7 @@ Andreas Hocevar: Inform standardization process for web maps, but just
 
 302
 00:39:52.860 --> 00:40:03.180
-Andreas Hocevar: Talking about or providing different use cases not only use cases, but also challenges that are related to implementing things
+Andreas Hocevar: Talking about, or providing different use cases not only use cases, but also challenges that are related to implementing things
 
 303
 00:40:03.930 --> 00:40:14.400
@@ -1214,15 +1210,15 @@ Andreas Hocevar: Right now we're implementing implementing things on higher leve
 
 304
 00:40:14.850 --> 00:40:24.360
-Andreas Hocevar: If they are deeper baked into into browsers. And I think this is an interesting process. There are very smart folks folks in the involved in the
+Andreas Hocevar: If they are deeper baked into into browsers. And I think this is an interesting process. There are very smart folks, folks in the involved in the
 
 305
 00:40:25.110 --> 00:40:38.220
-Andreas Hocevar: Map box shelters mapping library. They wrote a brilliant web based render but web child is very low level, you know, open layers. We use a higher level API Canvas 2D
+Andreas Hocevar: MapBox GL JS mapping library. They wrote a brilliant WebGL based render but WebGL is very low level, you know, in Open Layers. We use a higher level API, Canvas 2D
 
 306
 00:40:39.000 --> 00:40:51.300
-Andreas Hocevar: And I think the, the biggest chance in this case is to have a discussion about use cases, what's needed in rendering web maps the whole topic of styling vector maps of
+Andreas Hocevar: And I think the, the biggest chane in this case is to have a discussion about use cases, what's needed in rendering web maps, the whole topic of styling vector maps of
 
 307
 00:40:53.280 --> 00:40:53.820
@@ -1230,7 +1226,7 @@ Andreas Hocevar: Change.
 
 308
 00:40:56.340 --> 00:41:05.850
-Andreas Hocevar: With a rafters are displayed and there's definitely a lot of experience from developers of web mapping projects, whereas on the on the browser developer sites.
+Andreas Hocevar: With a rasters are displayed and there's definitely a lot of experience from developers of web mapping projects, whereas on the on the browser developer sides
 
 309
 00:41:06.420 --> 00:41:16.410
@@ -1238,27 +1234,27 @@ Andreas Hocevar: They know how to tweak performance on a low level in the browse
 
 310
 00:41:17.820 --> 00:41:37.740
-Andreas Hocevar: And we have even on this panel several developers that know about web mapping from the higher level API side and from how to use browsers, but we haven't really started the discussion yet with web browser developers. There are some
+Andreas Hocevar: And we have even on this panel, several developers that know about web mapping from the higher level API side and from how to use browsers, but we haven't really started the discussion yet with web browser developers. There are some
 
 311
 00:41:39.180 --> 00:41:47.850
-Andreas Hocevar: Things going on in the right direction like today, for example, there was an issue to us in the open layers GitHub tracker.
+Andreas Hocevar: Things going on in the right direction like today, for example, there was an issue in the OpenLayers GitHub tracker
 
 312
 00:41:49.020 --> 00:41:59.850
-Andreas Hocevar: About event sequences of touch events. And it was the first time that a browser developer suggested by themselves.
+Andreas Hocevar: About event sequences of touch events. And it was the first time that a browser developer suggested by themselves
 
 313
 00:42:00.390 --> 00:42:11.670
-Andreas Hocevar: To look into how its implemented in the browser to make it better suitable for open layers instead of the other way around. So that's an interesting development, and I think we have to move way further in that direction.
+Andreas Hocevar: To look into how its implemented in the browser to make it better suitable for OpenLayers instead of the other way around. So that's an interesting development, and I think we have to move way further in that direction.
 
 314
 00:42:15.570 --> 00:42:31.590
-Tom Kralidis: So basically bringing forward, you know, more and more use cases. And I'm also hearing you know implementation is good proof of helping with the with the standard and sanitization Simon. Do you have any comments sort of from the, from the browser side.
+Tom Kralidis: So basically bringing forward, you know, more and more use cases. And I'm also hearing you know implementation is good proof of helping with the, with the standard and standardization. Simon, do you have any comments sort of from the, from the browser side.
 
 315
 00:42:33.690 --> 00:42:44.520
-Simon Pieters: Yeah, just want to agree with the last thing as Andrea said that we really need. I think browser developers and the map.
+Simon Pieters: Yeah, just want to agree with the last thing as Andrea said that we really need, I think browser developers and the map
 
 316
 00:42:47.130 --> 00:42:51.990
@@ -1266,15 +1262,15 @@ Simon Pieters: Map framework developers to talk to each other and get an agreeme
 
 317
 00:42:53.010 --> 00:42:58.890
-Simon Pieters: Use cases and requirements and how we can change the box or to better
+Simon Pieters: Use cases and requirements and how we can change the browser to better
 
 318
 00:43:02.160 --> 00:43:06.240
-Simon Pieters: address those needs in a you know well designed way.
+Simon Pieters: address those needs in a you know, well designed way.
 
 319
 00:43:09.030 --> 00:43:18.450
-Simon Pieters: And if you want to help with standardization. What you really want to do is to participate in the standardization process.
+Simon Pieters: And if you want to help with standardization, what you really want to do is to participate in the standardization process.
 
 320
 00:43:19.560 --> 00:43:26.040
@@ -1290,7 +1286,7 @@ Simon Pieters: Evaluate existing solutions and come up with new solutions.
 
 323
 00:43:36.060 --> 00:43:40.860
-Simon Pieters: And then just discussed and get consensus or review proposals.
+Simon Pieters: And then just discuss and get consensus or review proposals.
 
 324
 00:43:41.940 --> 00:43:52.500
@@ -1298,15 +1294,15 @@ Simon Pieters: And after that, the next step would be to write conformance tests
 
 325
 00:43:53.700 --> 00:43:56.280
-Simon Pieters: Of user. So for developers to try it out.
+Simon Pieters: Of users, so for developers, to try it out.
 
 326
 00:44:00.120 --> 00:44:03.960
-Simon Pieters: And the. This is not something that has
+Simon Pieters: And the, this is not something that has
 
 327
 00:44:05.400 --> 00:44:12.090
-Simon Pieters: Or is very inclusive unnecessarily or this scene can seem like a world of
+Simon Pieters: Or is very inclusive necessarily, or this can seem like a world of
 
 328
 00:44:16.890 --> 00:44:19.710
@@ -1318,11 +1314,11 @@ Simon Pieters: Participate in some in standards.
 
 330
 00:44:25.410 --> 00:44:31.680
-Simon Pieters: And Alexis share a link to a guidebook that we Britain APU.
+Simon Pieters: And I'd like to share a link to a guidebook that we've written at Bocoup
 
 331
 00:44:32.940 --> 00:44:36.060
-Simon Pieters: To create an all around two
+Simon Pieters: To create an onramp to
 
 332
 00:44:37.740 --> 00:44:39.510
@@ -1330,7 +1326,7 @@ Simon Pieters: Standards work essentially
 
 333
 00:44:40.530 --> 00:44:45.120
-Simon Pieters: I'll share it, then it gets her Chuck, but it's w PC guide.
+Simon Pieters: I'll share it in the Gitter chat, but it's W3C.guide.
 
 334
 00:44:46.800 --> 00:44:50.520
@@ -1338,27 +1334,27 @@ Simon Pieters: And this goes through all of the necessary steps for
 
 335
 00:44:52.170 --> 00:44:56.190
-Simon Pieters: Participating and standardization that's different levels.
+Simon Pieters: Participating and standardization at different levels.
 
 336
 00:45:00.240 --> 00:45:01.980
-Tom Kralidis: How far do we go along. In
+Tom Kralidis: How far do we go along in
 
 337
 00:45:03.750 --> 00:45:19.560
-Tom Kralidis: You know when you standardize on how to use. Do you show up with the implementation first or do we come up with. Do we get the standard to a certain point before people do the implementations, a little bit of a chicken and make fun. What do you think about the sequence of those
+Tom Kralidis: You know, when you standardize something, do you show up with the implementation first or do we come up with, do we get the standard to a certain point before people do the implementations, a little bit of a chicken and egg but what do you think about the sequence of this?
 
 338
 00:45:21.630 --> 00:45:33.570
-Simon Pieters: I think the sequencing should be to get alignment on use cases and requirements, first with the all of the relevant stakeholders at the table. So you want both
+Simon Pieters: I think the sequencing should be to get alignment on use cases and requirements first, with the all of the relevant stakeholders at the table. So you want both
 
 339
 00:45:34.710 --> 00:45:37.620
-Simon Pieters: Browser implemented those who are going to
+Simon Pieters: Browser implementers those who are going to
 
 340
 00:45:39.030 --> 00:45:41.790
-Simon Pieters: Own the implementation on the browser side if you
+Simon Pieters: Own the implementation on the browser side, if you
 
 341
 00:45:43.320 --> 00:45:47.280
@@ -1370,27 +1366,27 @@ Simon Pieters: Stakeholders from browsers early on the process, I think, but you
 
 343
 00:45:57.270 --> 00:46:10.320
-Simon Pieters: The developers who are going to use the feature because without them. The browser implemented might come up with a solution that they think is great, but then it doesn't really solve the needs of
+Simon Pieters: The developers who are going to use the feature, because without them, the browser implementers might come up with a solution that they think is great, but then it doesn't really solve the needs of
 
 344
 00:46:11.850 --> 00:46:14.040
-Simon Pieters: Other developers for the users so
+Simon Pieters: Of the developers, of the users so
 
 345
 00:46:15.060 --> 00:46:23.280
-Simon Pieters: And that's something that happens sometimes there's like a lack of communication early on in the process.
+Simon Pieters: And that's something that happens sometimes, there's like a lack of communication early on in the process.
 
 346
 00:46:25.650 --> 00:46:37.410
-Tom Kralidis: And Andreas and or Danielle, are there. I guess we have, like, you know, a bank of of use cases. Throughout the years, one way or another that
+Tom Kralidis: And Andreas and or Daniel, are there, I guess we have, like, you know, a bank of of use cases, throughout the years, one way or another that
 
 347
 00:46:37.800 --> 00:46:45.240
-Tom Kralidis: That we can we can all work on sort of on the on the open source web mapping side that we can bring to the table with regards to
+Tom Kralidis: That we can we can all work on sort of on the on the open source web mapping side, that we can bring to the table with regards to
 
 348
 00:46:46.050 --> 00:46:56.100
-Tom Kralidis: You know end user cases is that, is that accurate or do we need, you know, specific targeted work to come up with all these use cases because that you know that's effort as well.
+Tom Kralidis: You know end user cases. Is that, is that accurate or do we need, you know, specific targeted work to come up with all these use cases because that you know that's effort as well.
 
 349
 00:46:57.540 --> 00:47:01.650
@@ -1398,11 +1394,11 @@ Daniel Morissette: Definitely an effort to build the complete list of all the us
 
 350
 00:47:03.540 --> 00:47:14.190
-Daniel Morissette: Amelia did some more conduct with Peter and I saw some of the work and it's quite a job to try to identify all the use cases and as Ivan showed in his
+Daniel Morissette: Amelia did some work on that with Peter and I saw some of the work, and it's quite a job to try to identify all the use cases and as Ivan showed in his
 
 351
 00:47:15.180 --> 00:47:26.460
-Daniel Morissette: His presentation. A couple of days ago. You can imagine a bunch of use cases that you've never thought of, so it's it's it's tough to have all the use cases. But I think it really starts with communication that's the key thing.
+Daniel Morissette: His presentation a couple of days ago. You can imagine a bunch of use cases that you've never thought of, so it's it's, it's tough to have all the use cases, but I think it really starts with communication, that's the key thing
 
 352
 00:47:27.480 --> 00:47:37.350
@@ -1410,63 +1406,60 @@ Daniel Morissette: Simon pointed out that, you know, get the web and geo people 
 
 353
 00:47:37.800 --> 00:47:49.110
-Daniel Morissette: Web. I mean browser people and until this exact size with the what is worship this week, but also some of the work that I did with Peter on using the spec so
+Daniel Morissette: Web, I mean browser people and until this exact size with the, well this workshop this week, but also some of the work that I did with Peter on using the spec so
 
 354
 00:47:50.070 --> 00:48:07.470
-Daniel Morissette: That's, I guess, workshops, like this one, and you're getting geo and when people talk to each other is one thing. And then as Aaron said in his talk today, speak to users is a good lesson, not just for this exercise, but for specs and zero. And if I may share an anecdote on that.
+Daniel Morissette: That's, I guess, workshops, like this one, and you're getting geo and web people talk to each other is one thing. And then as Terence said in his talk today, speak to users is a good lesson, not just for this exercise, but for specs in general. And if I may share an anecdote on that.
 
 355
 00:48:08.490 --> 00:48:12.660
-Daniel Morissette: On the OTC side if we had spoken to users in the
+Daniel Morissette: On the OGC side, if we had spoken to users in the WMS 1.3
 
 356
 00:48:13.920 --> 00:48:27.720
-Daniel Morissette: Working Group when the access order fiasco was done for those Worry no GC on those days. So the web spec was a very, very simple way to create a URL to request a map for a given region.
+Daniel Morissette: Working Group when the axis order fiasco was done. For those were in OGC on those days, so the WMS spec was a very, very simple way to create a URL to request a map for a given region.
 
 357
 00:48:28.290 --> 00:48:36.540
-Daniel Morissette: And to meet ISO compliance. The WS 1.3 working group decided that we had to abide to a big database of
+Daniel Morissette: And to meet ISO compliance, the WMS 1.3 working group decided that we had to abide to a big database of
 
 358
 00:48:37.590 --> 00:48:47.610
-Daniel Morissette: Projection coordinate system, which meant that led to the knowledge what what used to be longitude and latitude X and Y would now be latitude and longitude. Because when you talk about the
+Daniel Morissette: Projection coordinate system, which meant that latitude and longitude, wwhat used to be longitude and latitude, X and Y, would now be latitude and longitude because when you talk about the
 
 359
 00:48:48.750 --> 00:48:49.080
-That
+Daniel Morissette:  That
 
 360
 00:48:50.370 --> 00:48:56.070
-Daniel Morissette: The coordinates and degrees, you have to talk about. Let's do the monsoon because that's the way the database. Besides, it anyway.
+Daniel Morissette: The coordinates and degrees, you have to talk about latitude and longitude because that's the way the database has it. Besides, it anyway,
 
 361
 00:48:56.460 --> 00:49:01.710
-Daniel Morissette: This sounded like a good idea for compliance, but for the users for the simple
+Daniel Morissette: This sounded like a good idea for compliance, but for the users, for the simple
 
 362
 00:49:02.310 --> 00:49:13.800
-Daniel Morissette: Implementations like the simple WS clients that were trying to implement perspective, it became a nightmare. And it's been a nightmare for about 10 years of trying to explain to people why does my, my, where's my map not show up at the right place.
+Daniel Morissette: Implementations like the simple WMS clients that were trying to implement the spec, it became a nightmare. And it's been a nightmare for about 10 years of trying to explain to people why does my map not show up at the right place.
 
 363
 00:49:14.880 --> 00:49:22.260
-Daniel Morissette: I even wrote around on my blog at that I've had that one thought about this. So this is a perfect example of speaker users to validate your
+Daniel Morissette: I even wrote a rant on my blog at that, I've had that one thought about this. So this is a perfect example of speaker users to validate your
 
 364
 00:49:22.620 --> 00:49:33.480
-Daniel Morissette: Ideas, maybe not get all the ideas, but at least validate them before you you adopt your final spec. That's what communication, a good point. So good lesson for
+Daniel Morissette: Ideas, maybe not get all the ideas, but at least validate them before you, you adopt your final spec. That's what communication, a good point. So good lesson.
 
-365
-00:49:34.500 --> 00:49:34.770
-Tom Kralidis: Me.
 
 366
 00:49:35.130 --> 00:49:50.550
-Tom Kralidis: Yeah, I'd have to agree with that, I will say on my side that the the the current evolving Odissi API standard, I think, or maybe you're going in the right direction with with regards to that by share your pain about the access order and those and those memories, Daniel, for sure.
+Tom Kralidis: Yeah, I'd have to agree with that, I will say on my side that the the the current evolving OGC API standard, I think, or maybe you're going in the right direction with, with regards to that, by share your pain about the axis order and those and those memories, Daniel, for sure.
 
 367
 00:49:51.510 --> 00:49:57.030
-Andreas Hocevar: Urine and unfortunately, it continues with other OTC standards as well.
+Andreas Hocevar: Here and unfortunately, it continues with other OGC standards as well.
 
 368
 00:49:58.170 --> 00:50:05.040
@@ -1474,11 +1467,11 @@ Andreas Hocevar: But I couldn't agree more with Daniel about communication here 
 
 369
 00:50:06.360 --> 00:50:15.060
-Andreas Hocevar: I would say compared to other big players on the market up layers. The mapping library that I'm involved with is a small player.
+Andreas Hocevar: I would say compared to other big players on the market, OpenLayers, the mapping library that I'm involved with, is a small player.
 
 370
 00:50:17.160 --> 00:50:31.800
-Andreas Hocevar: And I think way bigger players like Google with Google Maps or apple with Apple Maps and both are way closer to browser development than than any of our first 40 projects are
+Andreas Hocevar: And I think way bigger players like Google with Google Maps or Apple with Apple Maps, and both are way closer to browser development than than any of our first Foss4g projects are
 
 371
 00:50:33.240 --> 00:50:46.350
@@ -1486,7 +1479,7 @@ Andreas Hocevar: So it to get those big players on board would be awesome. I don
 
 372
 00:50:48.780 --> 00:50:52.200
-Tom Kralidis: I think I think will has joined will, are you online.
+Tom Kralidis: I think, I think Will has joined, Will, are you online?
 
 373
 00:50:55.740 --> 00:50:56.610
@@ -1494,15 +1487,15 @@ Tom Kralidis: Think you're muted.
 
 374
 00:51:01.080 --> 00:51:03.630
-Tom Kralidis: Just one little. Welcome to the conversation here.
+Tom Kralidis: Just wanna loop Will into the conversation here.
 
 375
 00:51:07.170 --> 00:51:09.240
-Tom Kralidis: Okay, well, oh well.
+Tom Kralidis: Okay, Will
 
 376
 00:51:11.280 --> 00:51:11.820
-Tom Kralidis: Yeah.
+Tom Kralidis: Oh Will, can you hear me now?
 
 377
 00:51:12.690 --> 00:51:13.860
@@ -1514,55 +1507,55 @@ Will: I've got all kinds of
 
 379
 00:51:20.280 --> 00:51:24.420
-Will: Own and it's kind of wonky. So I apologize for being late.
+Will: Technical difficulties and it's kind of wonky. So I apologize for being late.
 
 380
 00:51:24.930 --> 00:51:29.610
-Tom Kralidis: No problem. You just want to sort of Midway here. Do you want to quickly introduce yourself.
+Tom Kralidis: No problem. You just want to sort of midway here, do you want to quickly introduce yourself.
 
 381
 00:51:30.660 --> 00:51:32.880
-Will: Yeah. So my name is one more.
+Will: Yeah. So my name is Will Mortenson
 
 382
 00:51:35.610 --> 00:51:48.990
-Will: Picture a National Geospatial Intelligence a largely what I do is is focus on a lot of open source technology and capabilities that are out there to basically help our foundation mapping missions that NGA
+Will: National Geospatial Intelligence. Largely what I do is is focus on a lot of open source technology capabilities that are out there, to basically help our foundation mapping missions at NGA
 
 383
 00:51:50.580 --> 00:51:51.990
-Tom Kralidis: Thanks. Thanks a lot. Well,
+Tom Kralidis: Thanks. Thanks a lot Will.
 
 384
 00:51:53.880 --> 00:52:03.870
-Tom Kralidis: Um, okay. So we're, you know, carrying on. We hear when you heard a lot about, you know, use cases and and and you know the differences in size between
+Tom Kralidis: Um, okay. So we're, you know, carrying on. We hear, we heard a lot about, you know, use cases and and and you know the differences in size between
 
 385
 00:52:04.890 --> 00:52:14.190
-Tom Kralidis: You know, foster G sort of web mapping community of developers, as well as, you know, as well as you know, the bigger the bigger browser players. We talked about
+Tom Kralidis: You know, Foss4G sort of web mapping community of developers, as well as, you know, as well as you know, the bigger, the bigger browser players. We talked about
 
 386
 00:52:15.360 --> 00:52:30.600
-Tom Kralidis: Process legitimising ideas coming up with proposals and working together, but we especially talked about communication to talk to talk between these these various companies which is which is obviously key.
+Tom Kralidis: Process, legitimising ideas, coming up with proposals and working together, but we especially talked about communication, to talk, to talk between these these various communities which is which is obviously key.
 
 387
 00:52:31.770 --> 00:52:42.990
-Tom Kralidis: What are people's ideas or thoughts around how do we raise. How do we cross pollinate and raise participation between these between these two communities. I mean,
+Tom Kralidis: What are people's ideas or thoughts around how do we raise, how do we cross pollinate and raise participation between these between these two communities. I mean,
 
 388
 00:52:43.800 --> 00:52:55.050
-Tom Kralidis: Working on that, you know, open source web mapping software projects is is you know one type of thing browsers. I'm not really sure. But I'm interested to learn
+Tom Kralidis: Working on that, you know, open source web mapping software projects is, is you know one type of thing. Browsers, I'm not really sure, but I'm interested to learn
 
 389
 00:52:55.920 --> 00:53:16.560
-Tom Kralidis: How do we, how do we raise participation of a web mapping folks inside the inside of the browser projects and you know and and vice versa. You know, beyond, beyond, beyond just the standards. I mean, how can we, how can we lower, lower the barriers to getting those two groups to work together.
+Tom Kralidis: How do we, how do we raise participation of a web mapping folks inside the, inside of the browser projects and you know and and vice versa. You know, beyond, beyond, beyond just the standards. I mean, how can we, how can we lower, lower the barriers to getting those two groups to work together.
 
 390
 00:53:23.520 --> 00:53:25.710
-Simon Pieters: So I think, first I have
+Simon Pieters: So I can go first. I have
 
 391
 00:53:28.260 --> 00:53:48.720
-Simon Pieters: One additional thing that I didn't mention and but I think will help with getting participation or interest from browser SEC East is to try to look outside of the map box and apply use cases for maps to
+Simon Pieters: One additional thing that I didn't mention and but I think will help with getting participation or interest from browsers at least, is to try to look outside of the map box and apply use cases for maps to
 
 392
 00:53:50.850 --> 00:53:53.610
@@ -1570,7 +1563,7 @@ Simon Pieters: Other problems, right, because the
 
 393
 00:53:55.560 --> 00:54:01.050
-Simon Pieters: Feature that benefits maps might also benefits three other
+Simon Pieters: Feature that benefits maps, might also benefits three other
 
 394
 00:54:02.550 --> 00:54:04.860
@@ -1586,7 +1579,7 @@ Simon Pieters: The
 
 397
 00:54:13.050 --> 00:54:26.100
-Simon Pieters: Patterning functionality that maps have which is kind of similar similar just scrolling, but it's a bit different, as well, because a map you can pan around and then end up at where you started.
+Simon Pieters: Panning functionality that maps, have which is kind of similar similar just scrolling, but it's a bit different, as well, because a map you can pan around and then end up at where you started.
 
 398
 00:54:27.330 --> 00:54:32.340
@@ -1594,11 +1587,11 @@ Simon Pieters: Which is kind of like infinite or looping overflow and
 
 399
 00:54:33.450 --> 00:54:41.610
-Simon Pieters: So that's something that maps need. But there are other use cases that also want to use that feature if you take an image carousel.
+Simon Pieters: So that's something that maps need, but there are other use cases that also want to use that feature, if you take an image carousel.
 
 400
 00:54:43.620 --> 00:54:44.280
-Simon Pieters: Where's the
+Simon Pieters: Where the
 
 401
 00:54:45.870 --> 00:54:50.640
@@ -1606,15 +1599,15 @@ Simon Pieters: Part of a page that has images are automatically
 
 402
 00:54:51.840 --> 00:54:52.590
-Simon Pieters: Flowing by
+Simon Pieters: Flowing by,
 
 403
 00:54:54.810 --> 00:55:03.660
-Simon Pieters: At the end of that you want. The first thing is to show again. And that's kind of hard to do right now because the there is no concept of looping overflow.
+Simon Pieters: At the end of that you want the first image to show again. And that's kind of hard to do right now because there is no concept of looping overflow.
 
 404
 00:55:06.180 --> 00:55:13.380
-Simon Pieters: But finding those common use cases between different needs automatically
+Simon Pieters: But finding those common use cases between different needs, automatically
 
 405
 00:55:14.940 --> 00:55:16.800
@@ -1634,15 +1627,15 @@ Simon Pieters: aren't even related to maps in the first place.
 
 409
 00:55:32.580 --> 00:55:40.290
-Andreas Hocevar: That's a very good point. I think, and I can tell from my experience with what people use open layers for
+Andreas Hocevar: That's a very good point, I think, and I can tell from my experience with what people use OpenLayers for
 
 410
 00:55:41.220 --> 00:56:02.250
-Andreas Hocevar: That one thing that happens very often is, people use open layers for deep zooming into images. So they provide their images in from low to high resolution so they can really super zoom in very deeply open layers has been used for displaying microscopic images from electron microscopes.
+Andreas Hocevar: That one thing that happens very often is, people use OpenLayers for deep zooming into images. So they provide their images in from low to high resolution so they can really zoom in very deeply, OpenLayers has been used for displaying microscopic images from electron microscopes.
 
 411
 00:56:03.450 --> 00:56:19.530
-Andreas Hocevar: And way more even dashboards for warehouse robots which are maps to some extent, but also not geographic maps in in the sense that we know. So that's, that's a very good point. I think
+Andreas Hocevar: And way more even dashboards for warehouse robots which are maps to some extent, but also not geographic maps in in the sense that we know. So that's, that's a very good point I think.
 
 412
 00:56:24.420 --> 00:56:26.970
@@ -1650,7 +1643,7 @@ Brian Kardell: There's a lot of knock on effects to that.
 
 413
 00:56:28.140 --> 00:56:28.380
-They
+Simon Pieters: Yep.
 
 414
 00:56:34.740 --> 00:56:37.350
@@ -1658,15 +1651,15 @@ Tom Kralidis: Are there, are there any opportunities.
 
 415
 00:56:38.580 --> 00:56:48.960
-Tom Kralidis: Like you know do do do do browser projects have you know they have code sprints or or hackathons where where potentially some of the, the web mapping crowd can
+Tom Kralidis: Like you know, do browser projects have you know they have code sprints or or hackathons where where potentially some of the, the web mapping crowd can
 
 416
 00:56:49.950 --> 00:56:55.830
-Tom Kralidis: You know, can, can attend or can we are there opportunities for colocation I know in
+Tom Kralidis: You know, can, can attend, or can we are there opportunities for colocation. I know in
 
 417
 00:56:56.340 --> 00:57:05.490
-Tom Kralidis: You know, a steel and the FOSS project community. We have a number of you know code sprints and hackathons to work with software that's a nice way of cross pollinating between
+Tom Kralidis: You know, OSGeo and the Foss4g project community. We have a number of you know code sprints and hackathons to work with software, that's a nice way of cross pollinating between
 
 418
 00:57:06.330 --> 00:57:18.420
@@ -1678,43 +1671,43 @@ Daniel Morissette: I saw that
 
 420
 00:57:21.720 --> 00:57:22.350
-So,
+Simon Pieters: So,
 
 421
 00:57:23.820 --> 00:57:24.270
-Simon Pieters: I'm going
+Simon Pieters: Oh go ahead
 
 422
 00:57:25.290 --> 00:57:32.940
-Daniel Morissette: Well, I sort of Brian wrote in the chat that again. Yeah, has the as a hack fest. And actually, the, the hack fest for yet yeah I looked it up.
+Daniel Morissette: Well, I saw that Brian wrote in the chat that again. Yeah, has the as a hack fest. And actually, the, the hackfest for Igalia, I looked it up.
 
 423
 00:57:33.450 --> 00:57:43.770
-Daniel Morissette: Was taking place. The week before the codes deals Yoko sprint, which was planned for me to see this year and was cancelled. And I think you get your servant was also cancel. So
+Daniel Morissette: Was taking place the week before the OSGeo code sprint, which was planned for MAy this year and was cancelled. And I think Igalia's event was also cancelled
 
 424
 00:57:44.640 --> 00:57:53.430
-Daniel Morissette: There may be potential. I was thinking about that potential for getting people from both sides to meet in one of those Evans and I'd add to what you said dumb that
+Daniel Morissette: There may be potential, I was thinking about that potential for getting people from both sides to meet in one of those events, and I'd add to what you said Tom that
 
 425
 00:57:55.200 --> 00:58:05.580
-Daniel Morissette: In the OSU case, we call them code sprints. But really, in my case anyway I don't read much code I spend a lot of time discussing features.
+Daniel Morissette: In the OSGeo case, we call them code sprints. But really, in my case anyway, I don't write much code I spend a lot of time discussing features,
 
 426
 00:58:06.990 --> 00:58:09.360
-Daniel Morissette: Not talking about beer. I see you smiling from
+Daniel Morissette: Not talking about beer. I see you smiling Tom,
 
 427
 00:58:10.410 --> 00:58:14.970
-Daniel Morissette: Discussing features discussing specs like getting the in the last one and when
+Daniel Morissette: Discussing features, discussing specs. Like in the last one,
 
 428
 00:58:15.450 --> 00:58:27.210
-Daniel Morissette: It happened that I use the one of the last codes for installs Yoko's friends to introduce a bunch of people to the map ML stuff and get some feedback which I brought back to the working group after to Peter, so
+Daniel Morissette: It happened that I use the one of the last codes springs, OSGeo code sprints to friends to introduce a bunch of people to the MapML stuff and get some feedback, which I brought back to the working group after to Peter, so
 
 429
 00:58:28.680 --> 00:58:33.660
-Daniel Morissette: It's, you know, even though we call it cold spring. It's not just about cold, it's really more about getting quarters together.
+Daniel Morissette: It's, you know, even though we call it code sprint. It's not just about code, it's really more about getting coders together
 
 430
 00:58:33.870 --> 00:58:34.860
@@ -1722,19 +1715,19 @@ Daniel Morissette: To make decisions.
 
 431
 00:58:35.190 --> 00:58:44.220
-Daniel Morissette: I don't know about the ganja ones are others. It would be interesting to hear about the other type of evidence on the web browser side to see where we can fit there.
+Daniel Morissette: I don't know about the Igalia ones, or others. It would be interesting to hear about the other type of events on the web browser side to see where we can fit there.
 
 432
 00:58:45.960 --> 00:58:57.960
-Brian Kardell: Yeah, so I was just mentioning that we have the activists that you can definitely you can definitely come to and what we had a few people from mapping community who were planning on coming to that actually
+Brian Kardell: Yeah, so I was just mentioning that we have the hackfest that you can definitely you can definitely come to, and what we had a few people from mapping community who were planning on coming to that actually
 
 433
 00:58:59.790 --> 00:59:11.640
-Brian Kardell: But that that's that's a good way to do that. There's also other events like there. There have been history or ugly. Some like extensible web events that are intended to bring developers.
+Brian Kardell: But that that's, that's a good way to do that. There's also other events like there. There have been historically some like extensible web events that are intended to bring developers.
 
 434
 00:59:13.410 --> 00:59:29.580
-Brian Kardell: And implement enters and standard East is all together and it has like breakout sessions that talk about things and you'll get some fast feedback, but it will ultimately probably be a lot like the feedback that
+Brian Kardell: And implementers and standardistas all together, and it has like breakout sessions that talk about things and you'll get some fast feedback, but it will ultimately, probably be a lot like the feedback that
 
 435
 00:59:30.600 --> 00:59:35.100
@@ -1742,7 +1735,7 @@ Brian Kardell: You've gotten so far, like that. There are
 
 436
 00:59:36.570 --> 00:59:47.190
-Brian Kardell: useful and interesting things that are smaller, more known quantity things that benefit many, many, many use cases. And those are good steps toward breaking your problem down
+Brian Kardell: useful and interesting things that are smaller, more known quantity things that benefit many, many, many use cases. And those are good steps toward breaking your problem down.
 
 437
 00:59:49.080 --> 00:59:51.180
@@ -1750,11 +1743,11 @@ Brian Kardell: That they would be the things to start with probably
 
 438
 00:59:53.130 --> 01:00:02.940
-Will: I would just add on. I'm not a programmer type either I more gather requirements from customers and users, but I would think that
+Will: I would just add, I'm not a programmer type either, I more gather requirements from customers and users, but I would think that
 
 439
 01:00:04.620 --> 01:00:14.250
-Will: As a government guy I don't necessarily know everything that's great and wonderful in the world. And so if I had the ability that or if we had people that could
+Will: As a government guy, I don't necessarily know everything that's great and wonderful in the world. And so if I had the ability there, or if we had people that could
 
 440
 01:00:15.120 --> 01:00:24.150
@@ -1766,27 +1759,27 @@ Will: contribute some dollars or some money towards these efforts. I think that 
 
 442
 01:00:34.230 --> 01:00:43.110
-Will: hackathons in the past for specific events and we do put out challenges now as well for certain geospatial type activities. So it's my thoughts.
+Will: hackathons in the past for specific events and we do put out challenges now as well, for certain geospatial type activities. So it's my thoughts.
 
 443
 01:00:44.760 --> 01:00:51.690
-Brian Kardell: But like I guess the other thing I was trying to get to is that they're like, if you want.
+Brian Kardell: But like, I guess the other thing I was trying to get to is that they're like, if you want
 
 444
 01:00:52.860 --> 01:01:04.020
-Brian Kardell: People who can help you find avenues in the web platform where there are things that could be SPECT like there are a lot of people who do that, Amelia.
+Brian Kardell: People who can help you find avenues in the web platform where there are things that could be specced like there are a lot of people who do that, Amelia
 
 445
 01:01:04.770 --> 01:01:13.380
-Brian Kardell: Does that and Boku does that and the galley does that and there's like a small community of people that you can reach out to to do that.
+Brian Kardell: Does that and Bocoup does that and the Igalia does that and there's like a small community of people that you can reach out to to do that.
 
 446
 01:01:15.180 --> 01:01:27.060
-Brian Kardell: Like if you want to actually get implement this time and talk about why things are complex and like what their costs are and what what kind of technical challenges you would have
+Brian Kardell: Like if you want to actually get implementers time and talk about why things are complex, and like what their costs are and what what kind of technical challenges you would have
 
 447
 01:01:27.840 --> 01:01:39.210
-Brian Kardell: A galley as a consultancy and you can like if you want to talk with it implemented were implemented so you can contract and
+Brian Kardell: Igalia's a consultancy and you can like if you want to talk with implementers, we're implemented so you can contract and
 
 448
 01:01:40.350 --> 01:01:41.310
@@ -1794,23 +1787,23 @@ Brian Kardell: Talk to us about that.
 
 449
 01:01:42.120 --> 01:01:58.320
-Will: No, I understand that. But what I'm saying is, I don't know that people inside. I don't know that people have that same technical know how inside of some of these organizations, especially the people that are making decisions. And so my point is, is that is enlightening. Some of these folks.
+Will: No, I understand that. But what I'm saying is, I don't know that people inside, I don't know that people have that same technical know how inside of some of these organizations, especially the people that are making decisions. And so my point is, is that, is enlightening some of these folks.
 
 450
 01:02:00.090 --> 01:02:03.330
-Will: Through events like this, another type pence.
+Will: Through events like this, and other types of events,
 
 451
 01:02:04.980 --> 01:02:11.370
-Will: Windings documents things that up to the public, where people through Highs on that I think would benefit your group.
+Will: Writings, documents, things that up to the public, where people throw eyes on that I think would benefit your group
 
 452
 01:02:12.330 --> 01:02:24.660
-Will: Soliciting more input or soliciting for getting people to be more excited or interested in helping out because like i said i i don't know that everybody has the same technical know how is a lot of you.
+Will: Soliciting more input or soliciting for getting people to be more excited or interested in helping out because like I said, I don't know that everybody has the same technical know how as a lot of you.
 
 453
 01:02:31.320 --> 01:02:48.390
-Tom Kralidis: So we've got a question from from from from Amelia and the question is based on implementation headaches. What are some of the specific browser features that are missing, which would make a Web Map libraries easier easier to build
+Tom Kralidis: So we've got a question from Amelia and the question is based on implementation headaches, what are some of the specific browser features that are missing, which would make a Web Map libraries easier, easier to build.
 
 454
 01:02:53.430 --> 01:02:57.300
@@ -1822,51 +1815,51 @@ Andreas Hocevar: Process could help most would be
 
 456
 01:03:01.830 --> 01:03:13.770
-Andreas Hocevar: Rendering API that's more suitable for for maps. I mentioned already web shell, which allows you to build very fast, very responsive maps, but it's a very low level API.
+Andreas Hocevar: Rendering API that's more suitable for maps. I mentioned already web GL, which allows you to build very fast, very responsive maps, but it's a very low level API.
 
 457
 01:03:14.580 --> 01:03:26.790
-Andreas Hocevar: And at least in the open source project. There's not really anyone with with good enough web scale skills. Maybe that will change. So we tried several times to implement a web chill render
+Andreas Hocevar: And at least in the OpenLayers project. There's not really anyone with with good enough WebGL skills. Maybe that will change. So we tried several times to implement a WebGL renderer
 
 458
 01:03:27.630 --> 01:03:41.820
-Andreas Hocevar: But for now, we still stick with the canvas to the API, which is a generic drawing API for for drawing on a on a canvas arbitrary geometric elements, but a render that
+Andreas Hocevar: But for now, we still stick with the canvas to the API, which is a generic drawing API for for drawing on a on a canvas, arbitrary geometric elements, but a renderer that
 
 459
 01:03:42.990 --> 01:04:04.140
-Andreas Hocevar: understands how how maps work especially vector maps where you have geometries and you have styles and you apply styles to those geometry based on attributes and based on your resolution, that's something where existing mapping libraries could be made much smaller by leveraging
+Andreas Hocevar: understands how, how maps work especially vector maps where you have geometries and you have styles and you apply styles to those geometry based on attributes and based on your resolution, that's something where existing mapping libraries could be made much smaller by leveraging
 
 460
 01:04:05.280 --> 01:04:09.870
-Andreas Hocevar: Higher level map specific rendering API's that might exist in a browser.
+Andreas Hocevar: Higher level map specific rendering APIs that might exist in a browser.
 
 461
 01:04:17.310 --> 01:04:20.010
-Tom Kralidis: On the other side is the second half of millions question.
+Tom Kralidis: On the other side, is the second half of Amelia's question.
 
 462
 01:04:21.570 --> 01:04:29.610
-Tom Kralidis: Is there anything we can do on the GL side to make to make things easier without necessarily changing the changing the browser.
+Tom Kralidis: Is there anything we can do on the geo side to make to make things easier without necessarily changing the changing the browser.
 
 463
 01:04:37.170 --> 01:04:48.540
-Tom Kralidis: In terms of maps or features. What are the folks have any. Will that have any impact or are we at the point where we need to dive deeper into the deeper into the browser.
+Tom Kralidis: In terms of maps or features. What are the folks have any, will that have any impact or are we at the point where we need to dive deeper into the deeper into the browser.
 
 464
 01:04:51.060 --> 01:04:58.230
-Amelia Bellamy-Royds: To jump in, in particular, I was thinking, well, about the issue about latitude versus longer today and those sorts of
+Amelia Bellamy-Royds: To jump in, in particular, I was thinking, well, about the issue about latitude versus longitude and those sorts of
 
 465
 01:04:59.850 --> 01:05:11.910
-Amelia Bellamy-Royds: Inconsistency is between different data sources that just make everything more confusing or different URL templates and formats.
+Amelia Bellamy-Royds: Inconsistency is between different data sources, that just make everything more confusing or different URL templates and formats.
 
 466
 01:05:14.370 --> 01:05:15.150
-Amelia Bellamy-Royds: Is that as
+Amelia Bellamy-Royds: Is that a
 
 467
 01:05:16.200 --> 01:05:19.590
-Amelia Bellamy-Royds: Solve problem or can we make
+Amelia Bellamy-Royds: Solved problem or can we make
 
 468
 01:05:21.420 --> 01:05:27.750
@@ -1874,7 +1867,7 @@ Amelia Bellamy-Royds: A lot of the work a lot easier by getting better standardi
 
 469
 01:05:32.280 --> 01:05:51.570
-Andreas Hocevar: That's, that's a good question, which is rare. There's no no cure, yes or no, I would say, I've been following standards and formats that are available that could be used for expressing maps starting a long time ago with with SVG, which
+Andreas Hocevar: That's, that's a good question, which is, there's no no cure, yes or no, I would say, I've been following standards and formats that are available that could be used for expressing maps, starting a long time ago with with SVG, which
 
 470
 01:05:52.650 --> 01:05:55.560
@@ -1886,7 +1879,7 @@ Andreas Hocevar: But because SVG.
 
 472
 01:05:59.700 --> 01:06:22.110
-Andreas Hocevar: Relies on the DOM and implements the whole DOM events. It's only suitable for a relatively low amounts of data. And if I if I look at at a vector, vector tiles. What, what we do today and and consider it as the best way to transport vector data for rendering to the browser.
+Andreas Hocevar: Relies on the DOM and implements the whole DOM events. It's only suitable for a relatively low amounts of data. And if, I if I look at at a vector, vector tiles. What, what we do today and and consider it as the best way to transport vector data for rendering to the browser.
 
 473
 01:06:23.430 --> 01:06:33.180
@@ -1894,15 +1887,15 @@ Andreas Hocevar: There are many similarities that to to SVG, but the gain in per
 
 474
 01:06:33.780 --> 01:06:43.680
-Andreas Hocevar: Better compression of the four of the format for transport is because we don't use a markup style language like XML and because we
+Andreas Hocevar: Better compression of the for-, of the format for transport is because we don't use a markup style language like XML and because we
 
 475
 01:06:44.190 --> 01:07:04.410
-Andreas Hocevar: Don't need to need to hold them and and and the DOM events. So I also saw a comment from Iran Sanchez Ortega, on, on the chat right now where he says that you can get performance X ability and community standards which without putting more code in web browsers.
+Andreas Hocevar: Don't need to need to hold DOM and and the DOM events. So I also saw a comment from Ivan Sanchez Ortega, on, on the chat right now where he says that you can get performance flexibility and community standards which without putting more code in web browsers.
 
 476
 01:07:05.790 --> 01:07:18.300
-Andreas Hocevar: That's, that's definitely true. The only question is how, how long do you want to go API. So the standard answer these days is probably web scale, which is very common for game developers.
+Andreas Hocevar: That's, that's definitely true. The only question is how, how long do you want to go API-wise. So the standard answer these days is probably WebGL, which is very common for game developers.
 
 477
 01:07:19.440 --> 01:07:25.080
@@ -1910,23 +1903,23 @@ Andreas Hocevar: There are game engines that run entirely in the browser and don
 
 478
 01:07:26.880 --> 01:07:41.040
-Andreas Hocevar: web chat is not accessible to to all developers, it's, it's, it has more people familiar with in the gaming community than in the GIS or mapping or geospatial community.
+Andreas Hocevar: WebGL is not accessible to to all developers, it's, it's, it has more people familiar with in the gaming community than in the GIS or mapping or geospatial community.
 
 479
 01:07:43.860 --> 01:07:52.380
-Daniel Morissette: I agree with what Andrea said about new better compression or mechanisms that would allow us to pass data from the server to the browser.
+Daniel Morissette: I agree with what Andreas said about new better compression or mechanisms that would allow us to pass data from the server to the browser.
 
 480
 01:07:52.860 --> 01:07:56.460
-Daniel Morissette: In a more efficient within a verbose, the HTML three
+Daniel Morissette: In a more efficient within a verbose, the HTML tree
 
 481
 01:07:57.210 --> 01:08:07.020
-Daniel Morissette: I mean, we've been dealing with, you know, in digital world we're dealing with large very large data sets. It's been like this since like we've always been dealing with very, very large data sets. So
+Daniel Morissette: I mean, we've been dealing with, you know, in digital world we're dealing with large very large data sets. It's been like this, since like, we've always been dealing with very, very large data sets. So
 
 482
 01:08:07.830 --> 01:08:24.690
-Daniel Morissette: If a mechanism was no like in this case in the methanol proposal, we're dealing with. We're still dealing with mark up with issue with an XML type of syntax and the more efficient than coding would definitely help if there was a standard way of, of having it of support.
+Daniel Morissette: If a mechanism was no like in this case in the MapML proposal, we're dealing with. We're still dealing with markup with issue with an XML type of syntax and the, more efficient than coding would definitely help if there was a standard way of, of having it, of support.
 
 483
 01:08:25.710 --> 01:08:33.120
@@ -1934,7 +1927,7 @@ Daniel Morissette: Efficiently streaming or having a progressive loading of bina
 
 484
 01:08:33.930 --> 01:08:38.100
-Brian Kardell: So, but, like, that's the wire format, but like, how do pixels.
+Brian Kardell: So, but, like, that's the wire format, but like, how do pixels get to the screen
 
 485
 01:08:39.750 --> 01:08:42.150
@@ -1946,27 +1939,27 @@ Brian Kardell: Yeah, I mean like inside an element.
 
 487
 01:08:48.420 --> 01:08:59.670
-Brian Kardell: You would want to base it ideally on something that exists in a platform. And I think question is what exists in the platform that you would build it off of today and front and presentations here.
+Brian Kardell: You would want to base it ideally on something that exists in a platform. And I think question is, what exists in the platform that you would build it off of today and from the presentations here.
 
 488
 01:09:00.600 --> 01:09:17.490
-Brian Kardell: And just my own like looking around, I could be way off, but it seems like there isn't entirely agreement yet like are people who want to use Canvas. There are people who are interested in maybe using SVG, because it has some good qualities
+Brian Kardell: And just my own like looking around, I could be way off, but it seems like there isn't entirely agreement yet, like are people who want to use Canvas. There are people who are interested in maybe using SVG, because it has some good qualities
 
 489
 01:09:19.050 --> 01:09:24.270
-Brian Kardell: Like what you send across the wire isn't necessarily what you have to use to render right
+Brian Kardell: Like what you send across the wire isn't necessarily what you have to use to render, right?
 
 490
 01:09:29.160 --> 01:09:30.270
-Peter Rushforth: Can I say something
+Peter Rushforth: Can I say something?
 
 491
 01:09:31.230 --> 01:09:50.070
-Peter Rushforth: Here, I guess I would just pitch the web, you know, the web is ubiquitous, the web underlies everything and it allows humans to express thoughts allows companies to express everything they need to express and
+Peter Rushforth: Here, I guess I would just pitch the web, you know, the web is ubiquitous, the web underlies everything, and it allows humans to express thoughts, allows companies to express everything they need to express and
 
 492
 01:09:52.890 --> 01:10:06.540
-Peter Rushforth: The world we live in is everywhere. It's everything we touch. It's every place we go with every place we are everything has a place in it and we need to be able to describe it in much the same way that we describe ideas with the web.
+Peter Rushforth: The world we live in is everywhere It's everything we touch. It's every place we go with every place we are everything has a place in it, and we need to be able to describe it in much the same way that we describe ideas with the web.
 
 493
 01:10:07.380 --> 01:10:15.330
@@ -1974,7 +1967,7 @@ Peter Rushforth: And so we need to leverage an existing standard platform using 
 
 494
 01:10:16.440 --> 01:10:32.940
-Peter Rushforth: That integrates into the standard fabric of the web, not the JavaScript layer of the web to describe our world. And I think we've heard that this is a desirable goal in the past couple of weeks from people in the AR and accessibility.
+Peter Rushforth: That integrates into the standard fabric of the web, not the JavaScript layer of the web to describe our world. And I think we've heard that this is a desirable goal in the past couple of weeks from people in the AR and accessibility
 
 495
 01:10:34.290 --> 01:10:36.180
@@ -1990,15 +1983,15 @@ Peter Rushforth: I just want these things to have a plan for for getting there f
 
 498
 01:10:50.370 --> 01:10:51.390
-Tom Kralidis: Yeah, when you
+Tom Kralidis: Yeah, when you-
 
 499
 01:10:51.690 --> 01:11:00.930
-Brian Kardell: When you crack open many of the more complex elements inside our other bits of the platform right like fetch underscores
+Brian Kardell: When you crack open many of the more complex elements inside our other bits of the platform right, like fetch underscores
 
 500
 01:11:01.710 --> 01:11:20.850
-Brian Kardell: Like everything that used to fetch data and we have primitives like streams and things like that. And even elements like video like the players are built up of other elements inside, but you don't like have to send the insides across the wire or something like they can
+Brian Kardell: Like everything that use to fetch data and we have primitives like streams and things like that. And even elements like video, like the players are built up of other elements inside, but you don't like have to send the insides across the wire or something like they can
 
 501
 01:11:21.870 --> 01:11:25.860
@@ -2006,27 +1999,27 @@ Brian Kardell: Like they can expand into more stuff.
 
 502
 01:11:26.940 --> 01:11:39.840
-Brian Kardell: And if you do that if you if you separate those concerns. It doesn't mean they can't be the same but it means they could not be the same. So you can split the problem at the joint.
+Brian Kardell: And if you do that, if you, if you separate those concerns. It doesn't mean they can't be the same but it means they could not be the same. So you can split the problem at the joint.
 
 503
 01:11:47.070 --> 01:11:50.580
-Tom Kralidis: I see one question here from Brian hamburger.
+Tom Kralidis: I see one question here from Bryan Haberberger.
 
 504
 01:11:51.840 --> 01:12:01.590
-Tom Kralidis: Asking about HTTP two. Does anybody. How would, what kind of implications. Would we have for putting maps in HTML and maps deeper into the browser.
+Tom Kralidis: Asking about HTTP2. Does anybody. How would, what kind of implications would we have for putting maps in HTML and maps deeper into the browser.
 
 505
 01:12:03.210 --> 01:12:08.640
-Tom Kralidis: With will from the perspective of HTTP two. Does anybody have any comments or thoughts around that.
+Tom Kralidis: With, from the perspective of HTTP2. Does anybody have any comments or thoughts around that.
 
 506
 01:12:11.280 --> 01:12:37.650
-Andreas Hocevar: On also only a small bit of experience with with open. There's what, what really works better with HTTP two. Is that a loading data from multiple sources in parallel, like loading tiles for a map is way faster with HTTP two then with HTTP one, and that's something we benefit from already
+Andreas Hocevar: On also only a small bit of experience with with OpenLayers. What really works better with HTTP2 is that a loading data from multiple sources in parallel, like loading tiles for a map is way faster with HTTP2 then with HTTP1, and that's something we benefit from already
 
 507
 01:12:38.490 --> 01:12:49.980
-Brian Kardell: I can tell you, like as proof of this. Just today I was looking at a Google map on a device that only supported HTTP one
+Brian Kardell: I can tell you, like as proof of this. Just today I was looking at a Google map on a device that only supported HTTP1
 
 508
 01:12:51.270 --> 01:12:51.870
@@ -2034,7 +2027,7 @@ Brian Kardell: And
 
 509
 01:12:53.880 --> 01:13:02.340
-Brian Kardell: Like there was you could pull the same thing up on the same device but supporting a to b to and the difference is
+Brian Kardell: Like there was, you could pull the same thing up on the same device but supporting HTTP2 and the difference is
 
 510
 01:13:04.110 --> 01:13:07.260
@@ -2042,39 +2035,39 @@ Brian Kardell: Incredible. It's really, really big deal.
 
 511
 01:13:10.920 --> 01:13:13.830
-Brian Kardell: But what's the question about three because three is
+Brian Kardell: But what's the question about 3 because 3 is
 
 512
 01:13:15.120 --> 01:13:16.620
-Brian Kardell: Sorry process.
+Brian Kardell: in sorta process
 
 513
 01:13:17.550 --> 01:13:22.620
-Simon Pieters: Yeah, the question was about two, but three is indeed the next thing.
+Simon Pieters: Yeah, the question was about 2, but 3 is indeed the next thing.
 
 514
 01:13:23.970 --> 01:13:24.240
-Simon Pieters: But
+Simon Pieters: But,
 
 515
 01:13:26.730 --> 01:13:27.210
-Simon Pieters: A
+Simon Pieters: Uh,
 
 516
 01:13:28.560 --> 01:13:36.570
-Simon Pieters: Events that it shouldn't affect HTML and a kind of agree with that. It makes performance better if you're loading a lot of images but
+Simon Pieters: Ivan said that it shouldn't affect HTML and I kind of agree with that. It makes performance better if you're loading a lot of images but
 
 517
 01:13:37.650 --> 01:13:44.940
-Simon Pieters: It doesn't make anything else but you still want to have an interaction.
+Simon Pieters: It doesn't make anything else, but you still want to have an interaction
 
 518
 01:13:47.220 --> 01:13:53.520
-Simon Pieters: In a way that's maps work with panning and zooming and want to have
+Simon Pieters: In a way that's maps work, with panning and zooming and want to have
 
 519
 01:13:56.670 --> 01:14:00.780
-Simon Pieters: API's that that you need for for maps and so on.
+Simon Pieters: APIs that that you need for for maps and so on.
 
 520
 01:14:02.280 --> 01:14:07.110
@@ -2082,7 +2075,7 @@ Simon Pieters: And that's how those things have nothing to do with what goes ove
 
 521
 01:14:08.220 --> 01:14:13.950
-Simon Pieters: More what what API's and primitives are available in the browser to use
+Simon Pieters: More what what APIs and primitives are available in the browser to use
 
 522
 01:14:16.560 --> 01:14:17.580
@@ -2094,27 +2087,27 @@ Tom Kralidis: Another question. So imagine. Imagine a world where we start movin
 
 524
 01:14:34.320 --> 01:14:47.580
-Tom Kralidis: Can we think about what the future could look like when you know once sort of maps become first class in in HTML and the browsers themselves what are, what is everybody's thoughts around, you know, what does
+Tom Kralidis: Can we think about what the future could look like when, you know, once sort of maps become first class in in HTML and the browsers themselves what are, what is everybody's thoughts around, you know, what does
 
 525
 01:14:48.090 --> 01:14:59.220
-Tom Kralidis: What does my web mapping software look like once we once we get there and, you know, how do we how do we see the future of those of those communities moving, you know, moving forward.
+Tom Kralidis: What does my web mapping software look like, once we once we get there and, you know, how do we how do we see the future of those of those communities moving, you know, moving forward.
 
 526
 01:15:05.490 --> 01:15:14.370
-Tom Kralidis: So let's say we gave you know the browser, you know, we added the map element. What does that reduce in a web mapping library. Let's see.
+Tom Kralidis: So let's say we gave you know the browser, you know, we added the map element. What does that reduce in a web mapping library, let's say.
 
 527
 01:15:15.480 --> 01:15:31.890
-Andreas Hocevar: But it definitely lets us focus more on what we can do with maps, how we can make nice maps, how we can support users in creating nice maps. If we can take the focus of the rendering and
+Andreas Hocevar: But it definitely lets us focus more on what we can do with maps, how we can make nice maps, how we can support users in creating nice maps. If we can take the focus off the rendering and
 
 528
 01:15:33.210 --> 01:15:45.900
-Andreas Hocevar: The more I think about it, the more like what has been said earlier in this discussion that it might help to see a map or a map like thing different from what we are used to
+Andreas Hocevar: The more I think about it, the more I like what has been said earlier in this discussion, that it might help to see a map or a map like thing different from what we are used to
 
 529
 01:15:48.120 --> 01:15:57.060
-Andreas Hocevar: And and really bring it to the basic concept of what we call a slip map which is panning and zooming and an image.
+Andreas Hocevar: And and really bring it to the basic concept of what we call a slippy map which is panning and zooming and an image.
 
 530
 01:15:57.960 --> 01:16:10.200
@@ -2122,15 +2115,15 @@ Andreas Hocevar: And maybe help with creating image from for images from geometr
 
 531
 01:16:10.680 --> 01:16:28.890
-Andreas Hocevar: And with that in place mapping libraries could probably develop in directions that we that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely that is in the way of leveraging resources for other kinds of developments.
+Andreas Hocevar: And with that in place, mapping libraries could probably develop in directions that we that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely that is in the way of leveraging resources for other kinds of developments.
 
 532
 01:16:36.120 --> 01:16:43.800
-Daniel Morissette: And the same type of evolution happen. The about 15 years ago when the Google Maps and being maps came to the world.
+Daniel Morissette: And the same type of evolution happened about 15 years ago when the Google Maps and Bing maps came to the world.
 
 533
 01:16:44.190 --> 01:16:55.800
-Daniel Morissette: We on the server side, people were telling us, well, you know, you were mapping stuff that's gone. That's going to die because now there's maps are everywhere. And actually that just opened up access to maps to
+Daniel Morissette: We on the server side, people were telling us, well, you know, your mapping stuff that's gone, that's going to die because now there's maps are everywhere. And actually that just opened up access to maps to
 
 534
 01:16:56.400 --> 01:17:06.960
@@ -2138,11 +2131,11 @@ Daniel Morissette: Democratize access. So I guess having maps as a first class c
 
 535
 01:17:08.160 --> 01:17:13.770
-Daniel Morissette: Know Before that. Before those days, producing maps was really a challenge because access to data was hard.
+Daniel Morissette: you know, before those days, producing maps was really a challenge because access to data was hard.
 
 536
 01:17:14.400 --> 01:17:22.110
-Daniel Morissette: And, you know, for those who just needed to have a couple of points on the map and all the Google and beings and other service providers just solve the problem for them.
+Daniel Morissette: And, you know, for those who just needed to have a couple of points on the map and all the Google and Bing and other service providers just solve the problem for them.
 
 537
 01:17:22.470 --> 01:17:36.990
@@ -2154,7 +2147,7 @@ Daniel Morissette: You know we developers will be able to focus on on the more i
 
 539
 01:17:53.340 --> 01:17:55.080
-Tom Kralidis: And deal with access order and all that.
+Tom Kralidis: And deal with axis order and all that.
 
 540
 01:17:56.310 --> 01:17:58.410
@@ -2166,11 +2159,11 @@ Daniel Morissette: I mean, that's the difference between geographers and
 
 542
 01:18:03.300 --> 01:18:05.850
-Daniel Morissette: No software engineers. You don't think the same way.
+Daniel Morissette: you know, software engineers. You don't think the same way.
 
 543
 01:18:08.580 --> 01:18:22.710
-Tom Kralidis: But an example, you know, videos, used to be in Flash, if I recall. Right. And then that became an element and you know i'm sure whoever was doing JavaScript around those things was a you know they they kept going with interacting with that element instead. Yeah.
+Tom Kralidis: But an example, you know, videos, used to be in Flash, if I recall, right. And then that became an element and you know I'm sure whoever was doing JavaScript around those things was a, you know, they they kept going with interacting with that element instead. Yeah.
 
 544
 01:18:23.670 --> 01:18:28.020
@@ -2178,11 +2171,11 @@ Andreas Hocevar: That's, that's a good point. That reminds me of another thing I
 
 545
 01:18:29.070 --> 01:18:49.290
-Andreas Hocevar: All relatively new browser elements that we saw appear in the last couple of years have relative simple ways of interacting with them for a video. It's basically making it full screen going back and forth going slow motion going time lapse.
+Andreas Hocevar: All relatively new browser elements that we saw appear in the last couple of years have relative simple ways of interacting with them for a video. It's basically making it full screen, going back and forth, going slow motion, going time lapse.
 
 546
 01:18:51.660 --> 01:19:04.920
-Andreas Hocevar: The only, the only format that I REMEMBER THAT HAD MORE INTERACTION WITH IT WAS VR ML, which was a standard that died, and I do see this this problem with maps as well. There are so many different ways to to interact with maps.
+Andreas Hocevar: The only, the only format that I remember that had more interaction with it was VR ML, which was a standard that died, and I do see this this problem with maps as well. There are so many different ways to to interact with maps.
 
 547
 01:19:05.520 --> 01:19:25.680
@@ -2190,19 +2183,19 @@ Andreas Hocevar: And to add controls to maps. So if we think about a standard fo
 
 548
 01:19:31.980 --> 01:19:33.000
-Simon Pieters: Think there are
+Simon Pieters: I think there are
 
 549
 01:19:36.060 --> 01:19:56.970
-Simon Pieters: Maps map implementations can vary quite a bit in their feature sets like in some maps. It's not enough just to pan and zoom you also want to be able to rotate the map until the nap. Maybe you want to view a 3D view of the map. And how would you do that if
+Simon Pieters: Maps, map implementations can vary quite a bit in their feature sets, like in some maps, it's not enough just to pan and zoom you also want to be able to rotate the map until the nap. Maybe you want to view a 3D view of the map. And how would you do that if
 
 550
 01:19:58.620 --> 01:20:00.300
-Simon Pieters: It was a decorative
+Simon Pieters: It was a declarative
 
 551
 01:20:01.350 --> 01:20:04.770
-Simon Pieters: Feature of HTML, you wouldn't be able to go through the without
+Simon Pieters: Feature of HTML, you wouldn't be able to go through 3D without
 
 552
 01:20:06.090 --> 01:20:09.780
@@ -2210,7 +2203,7 @@ Simon Pieters: Using Web GL again. And then the question is,
 
 553
 01:20:11.130 --> 01:20:19.770
-Simon Pieters: How much do you need to re implement if you need to do that. Are you still able to do use the panning and zooming
+Simon Pieters: How much do you need to reimplement if you need to do that. Are you still able to do use the panning and zooming
 
 554
 01:20:21.630 --> 01:20:26.880
@@ -2234,23 +2227,19 @@ Simon Pieters: Web developers want to use
 
 559
 01:20:50.850 --> 01:20:59.280
-Simon Pieters: A solution that is slightly different. They won't need to re implement everything because that means that the solution wasn't ideal.
+Simon Pieters: A solution that is slightly different. They won't need to reimplement everything because that means that the solution wasn't ideal.
 
 560
 01:21:02.280 --> 01:21:03.000
-Simon Pieters: Does that make sense.
+Simon Pieters: Does that make sense?
 
 561
 01:21:05.070 --> 01:21:12.780
-Andreas Hocevar: Definitely yes because the way you control or you interact with something is always opinionated in some way and
+Andreas Hocevar: Definitely yes, because the way you control or you interact with something is always opinionated in some way and
 
 562
 01:21:13.890 --> 01:21:21.090
-Andreas Hocevar: I think native browser. I meant should should not be too opinionated in in how you interact with them.
-
-563
-01:21:27.300 --> 01:21:27.600
-No.
+Andreas Hocevar: I think native browser, I meant should, should not be too opinionated in in how you interact with them.
 
 564
 01:21:29.250 --> 01:21:37.110
@@ -2258,11 +2247,11 @@ Tom Kralidis: Great. I'm wondering, do we have any other questions from from the
 
 565
 01:21:42.690 --> 01:21:43.020
-Chris Little: Okay.
+Chris Little: Yes, I have uh, Ok.
 
 566
 01:21:44.370 --> 01:22:02.160
-Amelia Bellamy-Royds: I was just going to read out Fred ashes comment which kind of could be a question is that he says I don't hear anyone talking about how you relayed the semantics of a map to a screen readers. So with the focus is all on improving
+Amelia Bellamy-Royds: I was just going to read out Fred Esch's comment which kind of could be a question is that he says I don't hear anyone talking about how you relay the semantics of a map to a screen readers. So with the focus is all on improving
 
 567
 01:22:03.660 --> 01:22:04.620
@@ -2274,7 +2263,7 @@ Amelia Bellamy-Royds: Like Web GL and canvas that, where do we get the idea of c
 
 569
 01:22:23.970 --> 01:22:35.310
-Simon Pieters: Okay, this is a great question and something that we need to seriously consider when designing solutions in the space maps should be accessible.
+Simon Pieters: Okay, this is a great question and something that we need to seriously consider when designing solutions in the space. >aps should be accessible.
 
 570
 01:22:36.660 --> 01:22:43.860
@@ -2290,7 +2279,7 @@ Simon Pieters: Create a map for the web. In the simplest possible way, then it s
 
 573
 01:22:55.800 --> 01:22:58.170
-Simon Pieters: In so far it can be right.
+Simon Pieters: In so far it can be, right.
 
 574
 01:23:02.250 --> 01:23:02.790
@@ -2310,31 +2299,31 @@ Simon Pieters: Accessibility is
 
 578
 01:23:17.790 --> 01:23:24.300
-Simon Pieters: It's hard to get. By default, but you will need need to make it possible to layer in somehow
+Simon Pieters: It's hard to get by default, but you will need need to make it possible to layer in somehow
 
 579
 01:23:27.030 --> 01:23:29.430
-Simon Pieters: Know that Canvas has
+Simon Pieters: I know that Canvas has
 
 580
 01:23:31.110 --> 01:23:40.320
-Simon Pieters: Already accessibility features that you can leverage with the focus of all elements that you can tap between but
+Simon Pieters: Already accessibility features that you can leverage with the focusable elements that you can tap between but
 
 581
 01:23:41.640 --> 01:23:43.890
-Simon Pieters: aren't being rendered on the comes
+Simon Pieters: aren't being rendered on the Canvas
 
 582
 01:23:48.600 --> 01:23:57.780
-Tom Kralidis: I see a question from Chris little on augmented reality saying through does the panel think that maps will only take off when er does
+Tom Kralidis: I see a question from Chris Little on augmented reality, saying does the panel think that maps will only take off when AR does?
 
 583
 01:24:05.280 --> 01:24:15.450
-Simon Pieters: I don't think there is necessarily a connection between that maps are popular on the web already
+Simon Pieters: I don't think there is necessarily a connection between that, maps are popular on the web already
 
 584
 01:24:17.250 --> 01:24:26.310
-Simon Pieters: And I don't see any reason why it would have to wait for AR, but maybe your takes off before native web maps happens
+Simon Pieters: And I don't see any reason why it would have to wait for AR, but maybe AR takes off before native web maps happens
 
 585
 01:24:27.780 --> 01:24:29.430
@@ -2342,7 +2331,7 @@ Simon Pieters: I think it could go either way.
 
 586
 01:24:30.990 --> 01:24:50.610
-Chris Little: Watch. I think the the my thinking behind the argument. The question is this. Lots of people can have a bit fed up with the blue dot not being where they are on the Mac, and when he takes off one assume they're going to have much better anchoring and better precision.
+Chris Little: I think, the my thinking behind the argument, the question is lots of people can have a bit fed up with the blue dot not being where they are on the map, and when AR takes off one assume they're going to have much better anchoring and better precision.
 
 587
 01:24:51.990 --> 01:24:54.960
@@ -2354,7 +2343,7 @@ Chris Little: Until the next generation of satellites come up
 
 589
 01:25:00.780 --> 01:25:02.070
-Chris Little: And maybe that'll give us energy
+Chris Little: And maybe that'll give us synergy,
 
 590
 01:25:09.870 --> 01:25:10.320
@@ -2362,31 +2351,31 @@ Simon Pieters: Maybe
 
 591
 01:25:14.400 --> 01:25:22.620
-Tom Kralidis: Any other questions or topics that people wanted to bring up or or discuss the very interesting panel discussion.
+Tom Kralidis: Any other questions or topics that people wanted to bring up or or discuss? Very interesting panel discussion.
 
 592
 01:25:30.300 --> 01:25:41.400
-Tom Kralidis: So hopefully one day when we have maps in in in the browser and maps in HTML. I mean, there's many, you know, data providers out there. There's over you know i certainly on the OTC side.
+Tom Kralidis: So hopefully one day when we have maps in in in the browser and maps in HTML. I mean, there's many, you know, data providers out there. There's over you know, certainly on the OGC side.
 
 593
 01:25:42.450 --> 01:25:48.360
-Tom Kralidis: Earlier this week I was at Apache con and George personal was mentioned that there's a over a million.
+Tom Kralidis: Earlier this week I was at Apache con and George Percivall was mentioned that there's a over a million
 
 594
 01:25:49.260 --> 01:26:04.530
-Tom Kralidis: OTC websites services out there. So I think as you know as we move forward and making those things easier on the OTC side and making them easier on the browser side A maps can can certainly has a place core place in the browser.
+Tom Kralidis: OGC websites services out there. So I think as you know as we move forward and making those things easier on the OGC side and making them easier on the browser side, maps can can certainly has a place, core place in the browser.
 
 595
 01:26:08.520 --> 01:26:09.690
-Peter Rushforth: Now, I asked the question.
+Peter Rushforth: Can I ask a question?
 
 596
 01:26:10.440 --> 01:26:22.890
-Peter Rushforth: Yeah, maybe I missed it. It was addressed already but like I heard on Twitter. Somebody say never on 1 million years, will Google allow maps to be integrated into
+Peter Rushforth: Yeah, maybe I missed it. It was addressed already but like I heard on Twitter somebody say never in 1 million years, will Google allow maps to be integrated into
 
 597
 01:26:23.670 --> 01:26:39.240
-Peter Rushforth: Or I'm not just know maps would never be integrated by the what working group, for the simple reason that Google, Microsoft and Apple have spatial data infrastructures private spatial data infrastructures and
+Peter Rushforth: not just, you know, maps would never be integrated by the what working group, for the simple reason that Google, Microsoft and Apple have spatial data infrastructures, private spatial data infrastructures and
 
 598
 01:26:40.980 --> 01:26:42.030
@@ -2398,11 +2387,11 @@ Peter Rushforth: Not got that belief, but can, can the panel or maybe talk about
 
 600
 01:26:53.430 --> 01:26:54.180
-Peter Rushforth: But can they see
+Peter Rushforth: Can they see
 
 601
 01:26:54.480 --> 01:26:54.960
-Anything.
+Peter Rushforth: Anything.
 
 602
 01:26:56.370 --> 01:27:03.480
@@ -2414,11 +2403,11 @@ Simon Pieters: They can't really
 
 604
 01:27:10.470 --> 01:27:20.550
-Simon Pieters: Gates keep what goes into HTML more than not prioritize implementing something in their browser engines, but
+Simon Pieters: Gatekeep what goes into HTML,` more than not prioritizing, implementing something in their browser engines, but
 
 605
 01:27:22.080 --> 01:27:36.540
-Simon Pieters: So the standards themselves are open source and have their own government models and no one company has full say what what goes into HTML.
+Simon Pieters: So the standards themselves are open source and have their own governance models and no one company has full say what what goes into HTML.
 
 606
 01:27:38.130 --> 01:27:38.700
@@ -2430,7 +2419,7 @@ Simon Pieters: Also, the browser engines aren't one to one to
 
 608
 01:27:46.620 --> 01:27:56.250
-Simon Pieters: These companies chromium is an open source project that several companies contribute to and have
+Simon Pieters: These companies. Chromium is an open source project that several companies contribute to and have
 
 609
 01:27:57.450 --> 01:28:00.510
@@ -2442,11 +2431,11 @@ Simon Pieters: Not completely tied to Google. Google certainly has
 
 611
 01:28:06.420 --> 01:28:10.590
-Simon Pieters: A lot of influence, but they don't have 100% influence over chromium.
+Simon Pieters: A lot of influence, but they don't have 100% influence over Chromium.
 
 612
 01:28:12.930 --> 01:28:27.240
-Simon Pieters: With the you guys are also contributing and Microsoft or big contributor also offer on Samsung, a lot of companies are maintaining this project.
+Simon Pieters: With the Igalia also contributing and Microsoft or big contributor also Opera and Samsung, a lot of companies are maintaining this project.
 
 613
 01:28:29.730 --> 01:28:31.170
@@ -2454,7 +2443,7 @@ Simon Pieters: And of course, Mozilla is
 
 614
 01:28:33.810 --> 01:28:40.620
-Simon Pieters: Or the gecko engine that sits behind Firefox is also open source and for web gets
+Simon Pieters: Or the gecko engine that sits behind Firefox is also open source and for WebKit
 
 615
 01:28:43.260 --> 01:28:45.210
@@ -2462,11 +2451,11 @@ Simon Pieters: The engine behind Safari.
 
 616
 01:28:48.060 --> 01:28:50.430
-Simon Pieters: You each of these have their own
+Simon Pieters: Each of these have their own
 
 617
 01:28:55.050 --> 01:29:09.360
-Simon Pieters: Teams that decide what what goes into each project. And if something is implemented into browsers or into browser engines, then it's de facto part of HTML or part of the web.
+Simon Pieters: Teams that decide what what goes into each project. And if something is implemented in two browsers or in two browser engines, then it's defacto part of HTML or part of the web.
 
 618
 01:29:11.160 --> 01:29:12.210
@@ -2474,11 +2463,11 @@ Simon Pieters: And at that point.
 
 619
 01:29:14.820 --> 01:29:26.190
-Simon Pieters: No company can say that it shouldn't go into the danger standard because it's part of the process to define things that are implemented.
+Simon Pieters: No company can say that it shouldn't go into the de jour standard because it's part of the process to define things that are implemented.
 
 620
 01:29:28.440 --> 01:29:30.300
-Tom Kralidis: So, I'm so sorry but
+Tom Kralidis: So, I'm sorry, go ahead
 
 621
 01:29:30.930 --> 01:29:32.100
@@ -2486,23 +2475,23 @@ Andreas Hocevar: Also, I think.
 
 622
 01:29:33.180 --> 01:29:44.490
-Andreas Hocevar: This statement on Twitter comes from a point of view that sees a map as the data behind the map and like in Google Maps.
+Andreas Hocevar: This statement on Twitter comes from a point of view that sees a map as, the data behind the map and like in Google Maps,
 
 623
 01:29:45.060 --> 01:30:02.580
-Andreas Hocevar: Key part of the map is all the information that you show us with a map itself the map content, but we're talking about a way to display data in a map like manner and also open layers is a mapping library that's only about the code.
+Andreas Hocevar: Key part of the map is all the information that you show us with a map itself the map content, but we're talking about a way to display data in a map like manner and also OpenLayers is a mapping library that's only about the code
 
 624
 01:30:02.610 --> 01:30:12.810
-Andreas Hocevar: To display maps, not, not about the data. So you can use Open Street Map for a street map or you can use your own data and visualize that. But data is not part of the offering and
+Andreas Hocevar: To display maps, not, not about the data. So you can use OpenStreetMap for a street map or you can use your own data and visualize that. But data is not part of the offering and
 
 625
 01:30:13.350 --> 01:30:29.040
-Andreas Hocevar: Just the fact that you have a spatial data infrastructure which is more about the data than, than the software, you need to display this data shouldn't stop anyone from making that part of the of HTML or of what browsers can do
+Andreas Hocevar: Just the fact that you have a spatial data infrastructure which is more about the data than, than the software, you need to display this data, shouldn't stop anyone from making that part of the of HTML or of what browsers can do
 
 626
 01:30:32.520 --> 01:30:42.330
-Tom Kralidis: And I imagined assignment, I imagine. These are the open source browser communities are the project's themselves, do they, do they have like I know in a lot of boys do projects we have project steering committees.
+Tom Kralidis: And I imagine, Simon, I imagine these are the open source browser communities or the project's themselves, they, they have like I know in a lot of OSGeo projects we have project steering committees.
 
 627
 01:30:43.110 --> 01:30:47.370
@@ -2530,7 +2519,7 @@ Simon Pieters: API owners or what what they call us for for each project.
 
 633
 01:31:14.910 --> 01:31:25.890
-Daniel Morissette: Alright if if there really is pushed back until it's hard to tell if it's true or just proceed from our standpoint, the release is push back from those organizations those companies.
+Daniel Morissette: Alright, if if there really is pushback until it's hard to tell if it's true or just proceed from our standpoint, if there really is push back from those organizations those companies.
 
 634
 01:31:27.510 --> 01:31:33.390
@@ -2538,7 +2527,7 @@ Daniel Morissette: It kind of reminds me of the vendor lock in the world, we had
 
 635
 01:31:33.780 --> 01:31:40.890
-Daniel Morissette: Where it was common practice for jazz software companies to have their own format their own data format their own data system.
+Daniel Morissette: Where it was common practice for GIS software companies to have their own format, their own data format, their own data system
 
 636
 01:31:41.130 --> 01:31:48.930
@@ -2546,7 +2535,7 @@ Daniel Morissette: To force users into using the whole suite of their software a
 
 637
 01:31:49.440 --> 01:31:56.280
-Daniel Morissette: The way to break that so I guess open source implementations of whatever map standard with the site on even if there was pushback.
+Daniel Morissette: The way to break that so I guess open source implementations of whatever map standard with we decide on even if there was pushback
 
 638
 01:31:57.090 --> 01:32:07.740
@@ -2554,27 +2543,27 @@ Daniel Morissette: From some companies at some point they will they will probabl
 
 639
 01:32:08.340 --> 01:32:18.510
-Daniel Morissette: A good example of like a standard that did work and nobody could could kill, even though it's simple and could be called Cloud. It's the web service WNs
+Daniel Morissette: A good example of like a standard that did work and nobody could could kill, even though it's simple and could be called flawed, it's the web service, WMS
 
 640
 01:32:19.680 --> 01:32:31.230
-Daniel Morissette: Every vendor in the jazz world supports it. They have to the camp not supported and the the can't even support it in a way that they break it, because it's too simple. So
+Daniel Morissette: Every vendor in the GIS world supports it. They have to, they can't not support it and they can't even support it in a way that they break it, because it's too simple. So
 
 641
 01:32:32.010 --> 01:32:36.840
-Daniel Morissette: And another example. The G doll or GR the file format library.
+Daniel Morissette: And another example. The GDAL OGR, the file format library.
 
 642
 01:32:37.680 --> 01:32:48.930
-Daniel Morissette: It's breaking the site is data silos, by supporting all the file formats and allowing people to go back and forth between the formats and all the giants vendors, all of them.
+Daniel Morissette: It's breaking the si-, these data silos, by supporting all the file formats and allowing people to go back and forth between the formats and all the GIS vendors, all of them.
 
 643
 01:32:49.620 --> 01:32:55.830
-Daniel Morissette: Integrate. I don't think there's any one of them that many, many fold, but I haven't heard of manifold in a while.
+Daniel Morissette: Integrate. I don't think there's any one of them that, maybe Manifold, but I haven't heard of Manifold in a while.
 
 644
 01:32:56.790 --> 01:33:07.560
-Daniel Morissette: But I think all of them do do use the g.no JIRA libraries to read to read each other's file formats. So open source software can be a way to break the silos and
+Daniel Morissette: But I think all of them do do use the GDAL OGR libraries to read to read each other's file formats. So open source software can be a way to break the silos and
 
 645
 01:33:08.520 --> 01:33:21.150
@@ -2590,7 +2579,7 @@ Tom Kralidis: Okay, we're a couple of minutes over time. Any other final comment
 
 648
 01:33:42.000 --> 01:33:59.610
-Tom Kralidis: Okay, okay, well, I'd like to thank Daniel Simon Andreas and will for for your participation in the panel, I would also like to thank the audience for for bringing forward the the useful questions. I think we, we've had a good discussions here and I really think we're at a
+Tom Kralidis: Okay, okay, well, I'd like to thank Daniel, Simo,n Andreas and Will for for your participation in the panel, I would also like to thank the audience for for bringing forward the the useful questions. I think we, we've had a good discussions here and I really think we're at a
 
 649
 01:34:00.690 --> 01:34:07.860
@@ -2598,7 +2587,7 @@ Tom Kralidis: Crossroads or tipping point in terms of how to move maps deeper in
 
 650
 01:34:09.060 --> 01:34:26.700
-Tom Kralidis: Of what mapping and so as soon as big part of part of browsers as well. So let's see what we can do to try to marry those communities further in terms of the implementations and obviously the standard moving forward. So thank you to everybody and thanks to the
+Tom Kralidis: Of what mapping and so as soon as big part of part of browsers as well. So let's see what we can do to try to marry those communities further in terms of the implementations and obviously the standard moving forward. So thank you to everybody and thanks to the panel.
 
 651
 01:34:28.800 --> 01:34:37.050
@@ -2618,7 +2607,7 @@ Peter Rushforth: summarize and conclude and talk about next steps. So that'll be
 
 655
 01:35:06.630 --> 01:35:07.710
-Amelia Bellamy-Royds: Idea. I just
+Amelia Bellamy-Royds: Yeah, I just
 
 656
 01:35:07.770 --> 01:35:16.890
@@ -2626,7 +2615,7 @@ Amelia Bellamy-Royds: Wanted to take a few minutes to talk about logistically, s
 
 657
 01:35:17.340 --> 01:35:26.160
-Amelia Bellamy-Royds: But in a way, it isn't the end of the workshop, because of course we're setting this up as much as possible to encourage
+Amelia Bellamy-Royds: But in a way, it isn't the end of the workshop, because of course, we're setting this up as much as possible to encourage
 
 658
 01:35:26.790 --> 01:35:36.690
@@ -2634,7 +2623,7 @@ Amelia Bellamy-Royds: Asynchronous participation from people who couldn't call i
 
 659
 01:35:37.260 --> 01:35:46.290
-Amelia Bellamy-Royds: All these sessions are getting posted on YouTube, all the discussion is getting migrated over into theme topics on discourse.
+Amelia Bellamy-Royds: All these sessions are getting posted on YouTube, all the discussion is getting migrated over into theme topics on Discourse.
 
 660
 01:35:47.130 --> 01:36:04.830
@@ -2642,7 +2631,7 @@ Amelia Bellamy-Royds: And we're going to try and keep those open for about a mon
 
 661
 01:36:06.420 --> 01:36:25.020
-Amelia Bellamy-Royds: I would encourage everybody who has been engaged in the discussion so far. If you know of anyone else who would be interested in any of these topics. Definitely point them to the videos point them to the discussion. Let's
+Amelia Bellamy-Royds: I would encourage everybody who has been engaged in the discussion so far, if you know of anyone else who would be interested in any of these topics. Definitely point them to the videos, point them to the discussion. Let's
 
 662
 01:36:26.430 --> 01:36:37.230
@@ -2650,7 +2639,7 @@ Amelia Bellamy-Royds: keep the conversation going. This is not, not the end of t
 
 663
 01:36:44.130 --> 01:36:47.310
-Peter Rushforth: Yeah, thanks. Amelia. I'm so
+Peter Rushforth: Yeah, thanks. Amelia. So,
 
 664
 01:36:49.020 --> 01:36:50.580
@@ -2662,11 +2651,11 @@ Peter Rushforth: Want to say thank you to everyone.
 
 666
 01:36:55.260 --> 01:36:58.530
-Peter Rushforth: For participating over the past two weeks and
+Peter Rushforth: For participating over the past two weeks, and
 
 667
 01:37:00.300 --> 01:37:17.220
-Peter Rushforth: To say that it's a bit of a dream come true to have all these really awesome map Web Map developers and graphics experts and web standards experts participate in a workshop that could talk about this subject and
+Peter Rushforth: To say that it's a bit of a dream come true to have all these really awesome map, Web Map developers and graphics experts and web standards experts participate in a workshop that could talk about this subject and
 
 668
 01:37:18.480 --> 01:37:19.380
@@ -2690,7 +2679,7 @@ Peter Rushforth: Potentially more important than they currently are, in fact, an
 
 673
 01:38:05.910 --> 01:38:16.950
-Peter Rushforth: I think that that that those are two big takeaways for myself and you know it's going to definitely require more reading and and understanding and of course empathy.
+Peter Rushforth: I think that that that those are two big takeaways for myself and you know it's going to definitely require more reading and and understanding and of course, empathy.
 
 674
 01:38:19.170 --> 01:38:25.260
@@ -2718,19 +2707,19 @@ Peter Rushforth: So that's the first thing. And the second thing is do. Do peopl
 
 680
 01:39:20.970 --> 01:39:24.960
-Peter Rushforth: I hear something dog panting or something.
+Peter Rushforth: I hear something, dog panting or something.
 
 681
 01:39:26.730 --> 01:39:35.940
-Peter Rushforth: Okay, thanks. And then the. The other thing you know to be cup should match become a first class object on the web, like video basically along those lines. So
+Peter Rushforth: Okay, thanks. And then the. The other thing you know to become should match become a first class object on the web, like video basically along those lines. So
 
 682
 01:39:36.450 --> 01:39:45.510
-Peter Rushforth: We need to talk about that and share opinions and respectfully share opinions on that topic. And so, you know, if
+Peter Rushforth: We need to talk about that, and share opinions and respectfully share opinions on that topic. And so, you know, if
 
 683
 01:39:46.170 --> 01:40:05.490
-Peter Rushforth: If so, what are the next steps. Should we seek a working group at the W three. See, should we see see could join working group between the W three C and the GC or should we retrench back to the community group and do more research and development and and
+Peter Rushforth: If so, what are the next steps. Should we seek a working group at the W3C, should we see see could joint working group between the W3C and the OGC or should we retrench back to the community group and do more research and development and and
 
 684
 01:40:06.510 --> 01:40:11.850
@@ -2738,7 +2727,7 @@ Peter Rushforth: You know, what are the next steps in, in, in the audience's vie
 
 685
 01:40:14.910 --> 01:40:29.760
-Peter Rushforth: Okay, so I guess. Oh. Finally, I would like to say that part of part of what I've realized is that, you know, my, my intent was to you know get big organizations to participate in this in this
+Peter Rushforth: Okay, so I guess, finally, I would like to say that part of part of what I've realized is that, you know, my, my intent was to you know, get big organizations to participate in this in this
 
 686
 01:40:30.960 --> 01:40:38.820
@@ -2746,7 +2735,7 @@ Peter Rushforth: Workshop in the hopes that they would say, okay, well that's go
 
 687
 01:40:39.360 --> 01:40:48.180
-Peter Rushforth: But what I realized is that I got that backwards. So what has to happen in my, in my view, and I'll share that with you before we get our discussion going.
+Peter Rushforth: But what I realized is that I got that backwards. So what has to happen in my, in my view, and I'll share that with you, before we get our discussion going.
 
 688
 01:40:48.510 --> 01:40:57.000
@@ -2754,15 +2743,15 @@ Peter Rushforth: Is that the community needs to approach the big organizations a
 
 689
 01:40:57.630 --> 01:41:05.490
-Peter Rushforth: And that's the way that this is get this gets raised up on the radar of the decision makers in governments and funding organizations.
+Peter Rushforth: And that's the way that this is get, this gets raised up on the radar of the decision makers in governments and funding organizations.
 
 690
 01:41:06.000 --> 01:41:16.740
-Peter Rushforth: And, you know, with the with the evidence. I think that's being provided in this workshop that that case can be made, but I'd like to hear other people on views on
+Peter Rushforth: And, you know, with the with the evidence. I think that's being provided in this workshop that that case can be made, but I'd like to hear other people, views on
 
 691
 01:41:17.340 --> 01:41:18.600
-Peter Rushforth: Put that evidences and the
+Peter Rushforth: what that evidences and the
 
 692
 01:41:18.600 --> 01:41:20.520
@@ -2770,7 +2759,7 @@ Peter Rushforth: Coordination that's necessary. So
 
 693
 01:41:22.230 --> 01:41:30.510
-Peter Rushforth: With that, maybe I'll turn it over to questions if we could you know somehow regulate the flow of questions and I can comment.
+Peter Rushforth: With that, maybe I'll turn it over to questions if we could you know somehow regulate the flow of questions and comments.
 
 694
 01:41:31.320 --> 01:41:33.810
@@ -2778,15 +2767,15 @@ Doug Schepers: I have a an observation. This is Doug
 
 695
 01:41:34.170 --> 01:41:34.440
-Yeah.
+Peter Rushforth: Yeah.
 
 696
 01:41:36.450 --> 01:41:45.000
-Doug Schepers: I traditionally WPC workshops, the ones I've helped organize the ones I've attended have
+Doug Schepers: I, traditionally W3C workshops, the ones I've helped organize the ones I've attended have
 
 697
 01:41:47.760 --> 01:41:50.880
-Doug Schepers: Have done a summary of the proceedings.
+Doug Schepers: Have done a summary of the proceedings
 
 698
 01:41:50.970 --> 01:41:51.810
@@ -2798,15 +2787,15 @@ Doug Schepers: It's a little bit less necessary since we've
 
 700
 01:41:57.570 --> 01:42:11.370
-Doug Schepers: Done videos and have everything available, which is not normally how it's done at WCC but I think that that might be a really useful next step for the committee and for anybody else who wants to contribute to
+Doug Schepers: Done videos and have everything available, which is not normally how it's done at W3C, but I think that that might be a really useful next step for the committee and for anybody else who wants to contribute to
 
 701
 01:42:15.210 --> 01:42:17.760
-Doug Schepers: Make some findings report.
+Doug Schepers: Make some, a findings report.
 
 702
 01:42:18.930 --> 01:42:23.400
-Doug Schepers: Some takeaways future directions, things like that that
+Doug Schepers: Some takeaways, future directions, things like that that
 
 703
 01:42:24.900 --> 01:42:30.090
@@ -2822,7 +2811,7 @@ Amelia Bellamy-Royds: Within about a month, we should start trying to write a re
 
 706
 01:42:57.210 --> 01:43:19.530
-Amelia Bellamy-Royds: That is on the table, whether that report is just a summary of what was talked about, or whether it actually has recommendations and specific requests that kind of depends on what happens here. And what happens in the discourse and whether we have
+Amelia Bellamy-Royds: That is on the table, whether that report is just a summary of what was talked about, or whether it actually has recommendations and specific requests that kind of depends on what happens here. And what happens in the Discourse and whether we have
 
 707
 01:43:21.720 --> 01:43:27.990
@@ -2834,7 +2823,7 @@ Peter Rushforth: I sort of whiffed on on the following topic, which was internat
 
 709
 01:43:38.910 --> 01:43:49.440
-Peter Rushforth: Brandon, you made in his panel with Doug was that, you know, a lot of the that the rendering text rendering and rendering
+Peter Rushforth: Brandon Liu made in his panel with Doug was that, you know, a lot of the that the rendering text rendering and rendering
 
 710
 01:43:50.250 --> 01:44:01.110
@@ -2842,7 +2831,7 @@ Peter Rushforth: Intelligence built into browsers shouldn't have to be duplicate
 
 711
 01:44:02.070 --> 01:44:17.580
-Peter Rushforth: Central person centuries of work that has gone into those rendering enter engines and and I wholeheartedly agree with that. And I guess I think I heard that from Andrea said earlier about rendering in general.
+Peter Rushforth: Centries, person centuries of work that has gone into those rendering enter engines and and I wholeheartedly agree with that. And I guess I think I heard that from Andreas earlier about rendering in general.
 
 712
 01:44:19.440 --> 01:44:20.580
@@ -2858,7 +2847,7 @@ Peter Rushforth: People with comments about any of the aforementioned
 
 715
 01:44:33.960 --> 01:44:46.770
-Bryan Haberberger: Absolutely. Hi, Peter. It's Brian. Hi everybody it's Brian. Hi. I just want to say definitely you know we're group that works with the digital humanities, you know, so a lot of cultural heritage museums, libraries.
+Bryan Haberberger: Absolutely. Hi, Peter. It's Bryan. Hi everybody it's Bryan. Hi. I just want to say definitely you know we're group that works with the digital humanities, you know, so a lot of cultural heritage museums, libraries.
 
 716
 01:44:47.640 --> 01:45:00.030
@@ -2878,11 +2867,11 @@ Bryan Haberberger: Get little implementations and try to do some proof of concep
 
 720
 01:45:22.920 --> 01:45:33.030
-Bryan Haberberger: Especially you know I'm speaking as a developer and definitely coming from the developer mindset. You know, when I will be able to most help you is when I've tried to implement it and I know the little specifics, because
+Bryan Haberberger: Especially you know I'm speaking as a developer and definitely coming from the developer mindset, you know, when I will be able to most help you is when I've tried to implement it and I know the little specifics, because
 
 721
 01:45:33.450 --> 01:45:37.260
-Bryan Haberberger: Otherwise, I'm just kind of coming in with trepidation and worries that I haven't even approved yet so
+Bryan Haberberger: Otherwise, I'm just kind of coming in with trepidation and worries that I haven't even proved yet so
 
 722
 01:45:39.300 --> 01:45:49.080
@@ -2894,7 +2883,7 @@ Peter Rushforth: Yeah, that'd be great.
 
 724
 01:45:52.230 --> 01:45:59.250
-Peter Rushforth: Be sure to check out the Web Map custom element, call it feel on on the map for HTML community group.
+Peter Rushforth: Be sure to check out the Web Map custom element polyfill on on the Map4HTML community group.
 
 725
 01:46:00.720 --> 01:46:07.770
@@ -2906,23 +2895,23 @@ Bryan Haberberger: taboo topic a little bit during this
 
 727
 01:46:13.470 --> 01:46:21.210
-Peter Rushforth: Adoption adopt it, make it your own, you know, like it needs a champion like there's just a lot in this proposal, right. So it needs.
+Peter Rushforth: No, not at all, adopt it, make it your own, you know, like it needs a champion like there's just a lot in this proposal, right. So it needs champions.
 
 728
 01:46:22.110 --> 01:46:28.980
-Bryan Haberberger: I just, I've been looking for more and more evidence of sort of geo JSON on the web, which is why you know this workshop. It was
+Bryan Haberberger: I just, I've been looking for more and more evidence of sort of GeoJSON on the web, which is why you know this workshop. It was
 
 729
 01:46:29.460 --> 01:46:38.550
-Bryan Haberberger: Evident. It is a weird de facto thing that everybody's using and to see that, you know, we took on following it, and that it can be parsed down into your markup languages.
+Bryan Haberberger: Evident. It is a weird de facto thing that everybody's using and to see that, you know, we took on following it, and that it can be parsed down into your markup languages
 
 730
 01:46:39.150 --> 01:46:51.930
-Bryan Haberberger: Is great. It just means you know a lot of stuff will just work with that little in between to to figure out how to go okay, instead of throwing it into reviewer that's gonna absorb a JSON object. How can I realized that is a, you know, Matt, that no object and show it instead
+Bryan Haberberger: Is great. It just means you know a lot of stuff will just work with that little in between to to figure out how to go okay, instead of throwing it into viewer that's gonna absorb a JSON object. How can I realized that is a, you know, MapML object and show it instead
 
 731
 01:46:52.560 --> 01:47:01.740
-Peter Rushforth: Yeah, again, it's a it's a proof of concept at this point where before it can be truly be described as a poly fill it has to actually work properly. So
+Peter Rushforth: Yeah, again, it's a it's a proof of concept at this point where before it can be truly be described as a polyfill it has to actually work properly. So
 
 732
 01:47:01.860 --> 01:47:03.690
@@ -2942,7 +2931,7 @@ Amelia Bellamy-Royds: Yeah, those are good points. And it's kind of
 
 736
 01:47:14.820 --> 01:47:33.390
-Amelia Bellamy-Royds: There are sort of two sides to this story. Um, we had a good discussion today narrowboat rendering issues and low level issues and trying to improve things from that end. But then there's the other end of the people who are
+Amelia Bellamy-Royds: There are sort of two sides to this story. Um, we had a good discussion today now about rendering issues and low level issues and trying to improve things from that end. But then there's the other end of the people who are
 
 737
 01:47:35.310 --> 01:47:52.470
@@ -2954,15 +2943,15 @@ Amelia Bellamy-Royds: I suspect these things will have to move forward in parall
 
 739
 01:48:02.070 --> 01:48:06.060
-Amelia Bellamy-Royds: They're already the map, you are widgets like
+Amelia Bellamy-Royds: They're already, the map viewer widgets like
 
 740
 01:48:07.140 --> 01:48:18.360
-Amelia Bellamy-Royds: leaflet and open layers and the commercial ones as well, but they don't necessarily have the easiest API's for content creator. And so something like
+Amelia Bellamy-Royds: Leaflet and OpenLayers and the commercial ones as well, but they don't necessarily have the easiest APIs for content creator. And so something like
 
 741
 01:48:19.500 --> 01:48:33.480
-Amelia Bellamy-Royds: Peters Bap element Polly Phil is basically just it's a currently done as a wraparound leaflet but it's a different API for sending your data to leave it and there were other
+Amelia Bellamy-Royds: Peter's map element polyfill is basically just, it's a currently done as a wrapper around Leaflet but it's a different API for sending your data to Leaflet and there are other
 
 742
 01:48:35.640 --> 01:48:39.870
@@ -2970,11 +2959,11 @@ Amelia Bellamy-Royds: Ways that could be done with Web Components and
 
 743
 01:48:42.420 --> 01:48:59.940
-Amelia Bellamy-Royds: Just playing around with what the market could look like. While we're using the existing mapping like a bruise as the rendering layer, if that's something that could be done as a proof of concept and shipping to people like
+Amelia Bellamy-Royds: Just playing around with what the markup could look like. While we're using the existing mapping libraries as the rendering layer, if that's something that could be done as a proof of concept and shipping to people like
 
 744
 01:49:01.080 --> 01:49:04.680
-Amelia Bellamy-Royds: The Brian is museum.
+Amelia Bellamy-Royds: The, Bryan's museum
 
 745
 01:49:06.090 --> 01:49:18.360
@@ -2986,19 +2975,18 @@ Amelia Bellamy-Royds: So that's one end and then we also have the other end were
 
 747
 01:49:43.530 --> 01:49:50.940
-Amelia Bellamy-Royds: Sort of two streams of attack. I think that will one day maybe merge in a standardized map.
-
+Amelia Bellamy-Royds: Sort of two streams of attack I think, that will one day maybe merge in a standardized map
 748
 01:49:51.990 --> 01:49:53.010
-Amelia Bellamy-Royds: You were in the browser.
+Amelia Bellamy-Royds: Viewer in the browser.
 
 749
 01:49:59.430 --> 01:50:22.710
-Peter Rushforth: So like, I'm just to hearken back to the open source discussion and the open source to community. We tried to seed the idea in the real world, by creating maximal implementations in to server Map Server G down or GR because these are
+Peter Rushforth: So like, I'm just to hearken back to the open source discussion and the open source to community. We tried to seed the idea in the real world, by creating MapML implementations in GeoServer, MapServer, GDAL, OGR because these are
 
 750
 01:50:23.880 --> 01:50:31.650
-Peter Rushforth: The I call them geospatial content management systems because they're clearly a server side component and I'm
+Peter Rushforth: The, I call them geospatial content management systems because they're clearly a server side component and I'm
 
 751
 01:50:33.060 --> 01:50:49.050
@@ -3006,7 +2994,7 @@ Peter Rushforth: You know, I don't think anything is really changed on the serve
 
 752
 01:50:50.640 --> 01:51:05.190
-Peter Rushforth: In theory, so. Um so yeah i mean i. This is why the essays and the map boxes. I don't believe should be threatened by maps in HTML, because it's just another
+Peter Rushforth: In theory, so. Um so yeah, I mean, this is why the ESRIs and the MapBox, I don't believe, should be threatened by maps in HTML, because it's just another
 
 753
 01:51:06.420 --> 01:51:07.590
@@ -3018,7 +3006,7 @@ Peter Rushforth: And just the most important format on Earth.
 
 755
 01:51:22.800 --> 01:51:24.210
-Peter Rushforth: In history cover.
+Peter Rushforth: In history, of earth.
 
 756
 01:51:25.260 --> 01:51:27.030
@@ -3026,11 +3014,11 @@ Doug Schepers: You mean the most important
 
 757
 01:51:28.740 --> 01:51:33.570
-Doug Schepers: Feature of on Earth. You mean regarding earth right
+Doug Schepers: Feature of on Earth, you mean regarding earth right
 
 758
 01:51:33.870 --> 01:51:36.240
-Peter Rushforth: No, no, HTML darn but HTML.
+Peter Rushforth: No, no, HTML, talking about HTML.
 
 759
 01:51:38.490 --> 01:51:39.120
@@ -3046,11 +3034,11 @@ Doug Schepers: Well, I'm saying, you know, it is
 
 762
 01:51:45.000 --> 01:51:49.410
-Doug Schepers: At least for a lot of purposes for maps. It is about Earth is the most
+Doug Schepers: At least, for a lot of purposes for maps, it is about Earth, is the most
 
 763
 01:51:50.460 --> 01:51:54.570
-Doug Schepers: Earth related element that could be good that we could have
+Doug Schepers: Earth related element that could, that we could have
 
 764
 01:51:56.520 --> 01:51:56.910
@@ -3074,7 +3062,7 @@ Doug Schepers: So a Mars, Venus. Yes, yes.
 
 769
 01:52:05.520 --> 01:52:13.470
-Ted Guild: I'm looking at the various other moons of Saturn myself first word relocate the election results, but anyway.
+Ted Guild: I'm looking at the various other moons of Saturn myself, as far as to  relocate after the election results, but anyway.
 
 770
 01:52:15.300 --> 01:52:15.960
@@ -3082,11 +3070,11 @@ Ted Guild: The
 
 771
 01:52:17.460 --> 01:52:28.590
-Ted Guild: I want to hear more from others. You know how many will appear acknowledge that, you know, there's some sort of it in vocal in in these proceedings, sort of a post this to the proposal.
+Ted Guild: I want to hear more from others. You know how many will appear acknowledge that, you know, there's some sort of it in vocal in in these proceedings, sort of oppose this to the proposal.
 
 772
 01:52:30.750 --> 01:52:33.810
-Ted Guild: For various people green. That is absolutely necessary.
+Ted Guild: For various people agreeing. That is absolutely necessary.
 
 773
 01:52:34.890 --> 01:52:37.650
@@ -3102,7 +3090,7 @@ Ted Guild: Was using that trying to overload existing
 
 776
 01:52:45.390 --> 01:52:51.960
-Ted Guild: Elements, for example of a Chanel being being one with what you others think
+Ted Guild: Elements, for example, of a HTML being being one with, what do others think
 
 777
 01:52:53.160 --> 01:53:00.990
@@ -3114,35 +3102,35 @@ Fred Esch: It. This is Fred and I've been listening for a while and my backgroun
 
 779
 01:53:12.660 --> 01:53:24.360
-Fred Esch: Mapping charting and yada see community, but my rose recent life has been in accessibility and one of the things that I think that you're totally ignoring is
+Fred Esch: Mapping, charting and Geodyssey community, but my most recent life has been in accessibility and one of the things that I think that you're totally ignoring is
 
 780
 01:53:25.290 --> 01:53:40.440
-Fred Esch: The semantics interactivity and accessibility API's that are needed for any native HTML element. And I just did not hear anything about that.
+Fred Esch: The semantics, interactivity and accessibility APIs that are needed for any native HTML element. And I just did not hear anything about that.
 
 781
 01:53:41.370 --> 01:53:54.180
-Fred Esch: And I think widgets are fine. I can't see you, convincing, having been on the Oreo. Working Group and the accessible platforms. Working Group. It's really painful to see
+Fred Esch: And I think widgets are fine. I can't see you convincing, having been on the ARIA Working Group and the Accessible Platforms Working Group. It's really painful to see
 
 782
 01:53:54.840 --> 01:54:06.630
-Fred Esch: API's added or changed and bringing in a new element. Seems like a humongous task. I think it really should focus on widgets that do things useful.
+Fred Esch: API's added or changed and bringing in a new element seems like a humongous task. I think it really should focus on widgets that do things useful.
 
 783
 01:54:07.440 --> 01:54:18.240
-Fred Esch: And worry about native element. After you know what all your semantics, how to support interactivity for people that only use keyboards and I mean interactivity not zoom and pan, but
+Fred Esch: And worry about native element ater you know what all your semantics, how to support interactivity for people that only use keyboards and I mean interactivity not zoom and pan, but
 
 784
 01:54:18.780 --> 01:54:31.920
-Fred Esch: A investigate the features on the map. I mean, people don't just want to see a map. They don't want to see tiles. They want to be able to interrogate, do you want to do like a site, do you want to do.
+Fred Esch: A investigate the features on the map. I mean, people don't just want to see a map. They don't want to see tiles. They want to be able to interrogate, do you want to do line a site, do you want to do.
 
 785
 01:54:32.310 --> 01:54:43.050
-Fred Esch: You know, what is the thing next to this in the Northeast direction they want to know spatial relationships and people need to be able to invest in pay that like maybe when mouse over
+Fred Esch: You know, what is the thing next to this in the Northeast direction they want to know spatial relationships and people need to be able to invesigate that like maybe when mouse over
 
 786
 01:54:43.410 --> 01:54:54.750
-Fred Esch: That you need to do that with keyboards. It's all possible. But I don't think that any, any of the things I've heard, and I didn't miss the first hour on Wednesday, which is the one I want to
+Fred Esch: That you need to do that with keyboards. It's all possible. But I don't think that any, any of the things I've heard, and I did miss the first hour on Wednesday, which is the one I want to
 
 787
 01:54:56.850 --> 01:55:00.510
@@ -3150,15 +3138,15 @@ Fred Esch: Just think there's there's big gaps and you're just missing the whole
 
 788
 01:55:01.950 --> 01:55:02.730
-Fred Esch: Oh need
+Fred Esch: whole need
 
 789
 01:55:05.700 --> 01:55:11.490
-Amelia Bellamy-Royds: some very good points spread. And of course, we've worked together in the past on
+Amelia Bellamy-Royds: That's some very good points spread. And of course, we've worked together in the past on
 
 790
 01:55:12.780 --> 01:55:27.930
-Amelia Bellamy-Royds: Trying to describe the semantics of data visualization and that never quite got into the burroughs's in any standardized way, but that is something else that needs to happen is, how can we describe
+Amelia Bellamy-Royds: Trying to describe the semantics of data visualization and that never quite got into the browsers in any standardized way, but that is something else that needs to happen is, how can we describe
 
 791
 01:55:29.820 --> 01:55:49.440
@@ -3166,7 +3154,7 @@ Amelia Bellamy-Royds: Geographic content in a standardized way and how can we de
 
 792
 01:55:50.820 --> 01:55:52.590
-Amelia Bellamy-Royds: The work that has happened.
+Amelia Bellamy-Royds: The work that has happened
 
 793
 01:55:54.840 --> 01:56:03.780
@@ -3174,7 +3162,7 @@ Amelia Bellamy-Royds: In the discussions about accessibility has made it clear t
 
 794
 01:56:05.760 --> 01:56:13.140
-Amelia Bellamy-Royds: Standard right now that maps on the web as they currently are serving that needs so
+Amelia Bellamy-Royds: Standard right now that maps on the web as they currently are serving that need, so
 
 795
 01:56:15.090 --> 01:56:18.510
@@ -3182,11 +3170,11 @@ Amelia Bellamy-Royds: Whether or not there becomes a standard
 
 796
 01:56:19.560 --> 01:56:22.320
-Amelia Bellamy-Royds: Map element to create a map view or widget.
+Amelia Bellamy-Royds: Map element to create a map viewer widget.
 
 797
 01:56:24.000 --> 01:56:30.540
-Amelia Bellamy-Royds: Work needs to happen about making the existing map fewer widgets more accessible to more people.
+Amelia Bellamy-Royds: Work needs to happen about making the existing map viewer widgets more accessible to more people.
 
 798
 01:56:35.160 --> 01:56:37.260
@@ -3198,7 +3186,7 @@ Simon Pieters: Didn't really address accessibility.
 
 800
 01:56:41.490 --> 01:56:51.720
-Simon Pieters: Today, but this has been covered earlier in the workshop with the accessibility reviews of existing and not widgets and also
+Simon Pieters: Today, but this has been covered earlier in the workshop with the accessibility reviews of existing map widgets and also
 
 801
 01:56:53.580 --> 01:56:57.150
@@ -3206,35 +3194,35 @@ Simon Pieters: I don't remember what their name was but demonstrating
 
 802
 01:56:59.460 --> 01:57:07.770
-Simon Pieters: What accessible accessible max can look like with the if you're a blind user with the
+Simon Pieters: What accessible, accessible maps can look like with the, if you're a blind user with the
 
 803
 01:57:10.170 --> 01:57:21.090
-Simon Pieters: Touch an audio or vibration which was very insightful, at least for me, and I think it's something that we should consider supporting
+Simon Pieters: Touch and audio or vibration which was very insightful, at least for me, and I think it's something that we should consider supporting
 
 804
 01:57:22.950 --> 01:57:24.030
-Simon Pieters: In somehow
+Simon Pieters: Somehow
 
 805
 01:57:25.050 --> 01:57:28.320
-Simon Pieters: By default, if we add nuts to the web.
+Simon Pieters: By default, if we add maps to the web.
 
 806
 01:57:29.220 --> 01:57:38.010
-Fred Esch: And Nick did say most of the map widgets fail. Most of the wicked to guidelines that she listed. It was pretty
+Fred Esch: And Nic did say most of the map widgets fail most of the WCAG to guidelines that she listed. It was pretty
 
 807
 01:57:39.120 --> 01:57:49.080
-Fred Esch: Turned out and audio. The only other thing I saw audio. I know that there was a panel discussion on Wednesday, which I missed that I really wanted to see
+Fred Esch: Terrible. The only other thing I saw, audio, I know that there was a panel discussion on Wednesday, which I missed that I really wanted to see
 
 808
 01:57:49.740 --> 01:58:08.640
-Fred Esch: But, but the main widget, you put up there. If you have a map element, you should let a keyboard user, go to the northeast to the next feature if you have one feature and another feature and point features they should be able to migrate around there, just like you would and see a pop up.
+Fred Esch: But, but the main widget, you put up there. If you have a map element, you should let a keyboard user, go to the northeast to the next feature, if you have one feature and another feature and point features, they should be able to migrate around there, just like you would and see a pop up.
 
 809
 01:58:10.440 --> 01:58:22.380
-Fred Esch: You know, maybe there's a toolkit type functionality, a keyboard user should be able to do that as easily as analyses without making them go through the DOM order. That's just a central
+Fred Esch: You know, maybe there's a tooltip type functionality, a keyboard user should be able to do that as easily as a mouse user without making them go through the DOM order. That's just essential
 
 810
 01:58:22.680 --> 01:58:26.730
@@ -3242,7 +3230,7 @@ Simon Pieters: Yeah. So I agree, and I think this it
 
 811
 01:58:28.140 --> 01:58:39.030
-Simon Pieters: ties back to the discussion on use cases and requirements. One of the requirements should be that maps should be accessible and what falls out of that like
+Simon Pieters: ties back to the discussion on use cases and requirements. One of the requirements should be that maps should be accessible, and what falls out of that like
 
 812
 01:58:39.660 --> 01:58:50.730
@@ -3254,7 +3242,7 @@ Simon Pieters: Whatever we designed for the web so that it's successful
 
 814
 01:59:01.440 --> 01:59:01.950
-Gobe Hobona (OGC): This is
+Gobe Hobona (OGC): Hi, this is Gobe,
 
 815
 01:59:06.030 --> 01:59:09.660
@@ -3262,19 +3250,19 @@ Gobe Hobona (OGC): I think with this workshop. We've done a good job of
 
 816
 01:59:11.670 --> 01:59:15.540
-Gobe Hobona (OGC): When I say we, I mean, although dispense I've done a good job of discussing
+Gobe Hobona (OGC): When I say we, I mean, all the particpants I've done a good job of discussing
 
 817
 01:59:16.650 --> 01:59:18.180
-Gobe Hobona (OGC): Needs to get
+Gobe Hobona (OGC): Need to get
 
 818
 01:59:19.890 --> 01:59:21.330
-Gobe Hobona (OGC): Come, no.
+Gobe Hobona (OGC): no,
 
 819
 01:59:22.740 --> 01:59:23.340
-Gobe Hobona (OGC): Class I
+Gobe Hobona (OGC): first class maps in the browser
 
 820
 01:59:25.200 --> 01:59:26.310
@@ -3282,7 +3270,7 @@ Gobe Hobona (OGC): I think with future
 
 821
 01:59:26.310 --> 01:59:35.400
-Gobe Hobona (OGC): Events, we should also try to engage the hardware manufacturers. So the those sins that develop
+Gobe Hobona (OGC): Events, we should also try to engage the hardware manufacturers. So the those that develop
 
 822
 01:59:36.690 --> 01:59:38.220
@@ -3294,7 +3282,7 @@ Gobe Hobona (OGC): People to interact
 
 824
 01:59:42.060 --> 01:59:47.250
-Gobe Hobona (OGC): So not just like mouse manufacturers, but all the other
+Gobe Hobona (OGC): So not just like, mouse manufacturers, but all the other
 
 825
 01:59:48.480 --> 01:59:54.090
@@ -3310,39 +3298,39 @@ Gobe Hobona (OGC): Bridge, you know, from the physical world to the virtual worl
 
 828
 02:00:04.680 --> 02:00:20.580
-Gobe Hobona (OGC): So maybe with future workshops we should try and speak to some of those manufacturers. I know in the modeling and simulation community. There are a lot of devices that have come to the fore, but also in the research arena like
+Gobe Hobona (OGC): So maybe with future workshops, we should try and speak to some of those manufacturers. I know in the modeling and simulation community there are a lot of devices that have come to the fore, but also in the research arena like
 
 829
 02:00:21.780 --> 02:00:40.500
-Gobe Hobona (OGC): Brain to machine to machine interfaces that are being researched on. So I think there's a lot of options out there that could make for a very interesting discussion on this topic and in future workshops
+Gobe Hobona (OGC): Brain to machine, to machine interfaces that are being researched on. So I think there's a lot of options out there that could make for a very interesting discussion on this topic and in future workshops
 
 830
 02:00:47.640 --> 02:00:47.910
-Gobe Hobona (OGC): Thank you.
+Peter Rushforth:: Thank you Gobe.
 
 831
 02:00:49.950 --> 02:00:59.670
-Peter Rushforth: So I'm just going to paste the chat into the chat a discourse item, where we can share any more of our thoughts about the conclusions and next steps and so on.
+Peter Rushforth: So I'm just going to paste the chat into the chat a Discourse item, where we can share any more of our thoughts about the conclusions and next steps and so on.
 
 832
 02:01:01.500 --> 02:01:02.460
-Peter Rushforth: On discourse.
+Peter Rushforth: On Discourse.
 
 833
 02:01:06.060 --> 02:01:12.780
-Peter Rushforth: And we're basically out of time. I know it's late for very late for people in Europe and
+Peter Rushforth: And we're basically out of time, I know it's late for very late for people in Europe and
 
 834
 02:01:14.280 --> 02:01:20.640
-Peter Rushforth: May be daunting and in Asia. But anyhow, so I would like to
+Peter Rushforth: May be dawning in Asia. But anyhow, so I would like to
 
 835
 02:01:21.990 --> 02:01:29.640
-Peter Rushforth: Give over to Ted from the W three see to maybe have a word about conclusions and
+Peter Rushforth: Give over to Ted from the W3C to maybe have a word about conclusions and
 
 836
 02:01:30.930 --> 02:01:33.510
-Amelia Bellamy-Royds: Looks like one day from the W three C's.
+Amelia Bellamy-Royds: Looks like Wendy from the W3C's...
 
 837
 02:01:33.960 --> 02:01:36.270
@@ -3354,35 +3342,35 @@ Wendy Seltzer: Well, I
 
 839
 02:01:40.770 --> 02:01:43.770
-Wendy Seltzer: Don't want to take away from Chad and I'll hand it back to Ted
+Wendy Seltzer: Don't want to take away from Ted and I'll hand it back to Ted
 
 840
 02:01:46.020 --> 02:02:10.410
-Wendy Seltzer: Just as strategy late at W three say I'm excited to hear the discussion here and we'll welcome any follow up that you have for places that we can fill gaps and existing standards work or new work that you might like to see starting to W three say that the team is here to help.
+Wendy Seltzer: Just as strategy lead at W3C I'm excited to hear the discussion here and we'll welcome any follow up that you have for places that we can fill gaps and existing standards work or new work that you might like to see started at the W3C, that the team is here to help.
 
 841
 02:02:23.400 --> 02:02:23.820
-Ted Guild: Us.
+Peter Rushforth: Thank you very much Wendy.
 
 842
 02:02:26.040 --> 02:02:29.640
-Ted Guild: Program creating sort of bed earlier and try and figure out how and where to structure.
+Ted Guild: Program committee sort of met earlier and try and figure out how and where to structure
 
 843
 02:02:31.530 --> 02:02:39.450
-Ted Guild: Sort of what what we have been peers mission that before we we certainly have the community group. The meantime while we move towards the next step.
+Ted Guild: Sort of what, what Peter mentioned that before we, we certainly have the community group in the meantime while we move towards the next step.
 
 844
 02:02:39.960 --> 02:02:51.510
-Ted Guild: So we don't have to wait until something is be correct. Now that a mechanism to do so in addition to discourse, there's plenty of opportunities. It's sort of a form these ideas.
+Ted Guild: So we don't have to wait until something is set up, we currently have a mechanism to do so. In addition to discourse, there's plenty of opportunities to sort of form these ideas.
 
 845
 02:02:52.800 --> 02:03:00.990
-Ted Guild: I my big takeaway that there is enough common interests that this needs to advancement in some form.
+Ted Guild: I my big takeaway that there is enough common interests that, this needs to advancement in some form.
 
 846
 02:03:02.160 --> 02:03:11.040
-Ted Guild: There's certainly gaps accessibility be no rather significant one that we identify, we need to address better inferior how to incorporate and
+Ted Guild: There's certainly gaps, accessibility being a rather significant one that we identify, we need to address better and figure out how to incorporate and
 
 847
 02:03:12.870 --> 02:03:13.920
@@ -3390,11 +3378,11 @@ Ted Guild: I guess.
 
 848
 02:03:16.350 --> 02:03:22.830
-Ted Guild: You know, additional sort of tweaks and features, but that's that's what takes place. And while you work on standards.
+Ted Guild: You know, additional sort of tweaks and features, but that's that's what takes place and while you work on standards.
 
 849
 02:03:23.310 --> 02:03:34.200
-Ted Guild: And we have a great starting off point things to Peter and really and everyone else who's contributed to it and to map them out and really thank you for putting that on the table, and thank you for
+Ted Guild: And we have a great starting off point thanks to Peter and Amelia and everyone else who's contributed to MapML, and really thank you for putting that on the table, and thank you for
 
 850
 02:03:35.610 --> 02:03:36.870
@@ -3402,19 +3390,19 @@ Ted Guild: Peer especially
 
 851
 02:03:38.130 --> 02:03:38.640
-Ted Guild: Really as
+Ted Guild: Amelia
 
 852
 02:03:40.710 --> 02:03:44.070
-Ted Guild: Certainly as well in the rest of the program committee go be in died.
+Ted Guild: Certainly as well in the rest of the program committee, Gobe, Doug
 
 853
 02:03:45.270 --> 02:03:48.540
-Ted Guild: Ryan and so forth and missing. Lots of people
+Ted Guild: Ryan and so forth and missing lots of people
 
 854
 02:03:49.980 --> 02:04:03.150
-Ted Guild: But lots of, lots of people have contributed this race proof of concepts that are taking place as well, all the various speakers and there's there's clear their interests.
+Ted Guild: But lots of, lots of people have contributed this, writing proof of concepts that are taking place as well, all the various speakers and there's there's clear interests.
 
 855
 02:04:04.440 --> 02:04:05.850
@@ -3426,11 +3414,11 @@ Ted Guild: refine the proposal.
 
 857
 02:04:09.390 --> 02:04:10.050
-Ted Guild: But I
+Ted Guild: But I [dog barking]
 
 858
 02:04:12.930 --> 02:04:26.820
-Ted Guild: Where it can take place and that was the voice of agreement from my dog sort of should give me a shout out to the Peter she achieved Peter friends find out anyway, back to you. Here, let me go on you like him.
+Ted Guild: Where it can take place and that was the voice of agreement from my dog, she's giving a shout out to the Peter, she and Peter friends right out anyway, back to you. Here, let me go on you mute while I can.
 
 859
 02:04:27.030 --> 02:04:28.440
@@ -3446,11 +3434,11 @@ Peter Rushforth: And with that. Good night.
 
 862
 02:04:43.860 --> 02:04:44.910
-Doug Schepers: Thanks, Peter. By all
+Doug Schepers: Thanks, Peter. Bye all
 
 863
 02:04:45.510 --> 02:04:46.800
-Bryan Haberberger: By everyone will see here
+Bryan Haberberger: By everyone will see you around.
 
 864
 02:04:46.800 --> 02:04:47.640
@@ -3459,4 +3447,3 @@ Ted Guild: Okay, thanks.
 865
 02:04:48.960 --> 02:04:49.290
 Peter Rushforth: Bye.
-
