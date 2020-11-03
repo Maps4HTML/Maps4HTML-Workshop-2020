@@ -2,11 +2,11 @@ WEBVTT
 
 6
 00:00:00.880 --> 00:00:14.560
-Peter Rushforth: Well, welcome everyone to the day two of the maps for the web workshop that joint WPC oh GC map for the web workshop and Peter rush FORTH AND VERY PLEASED TO
+Peter Rushforth: Well, welcome everyone to the day two of the Maps for the Web workshop, the joint W3C OGC maps for the web workshop, I'm Peter Rushforth and I'm pleased
 
 7
 00:00:15.640 --> 00:00:17.380
-Peter Rushforth: That if all joined us today.
+Peter Rushforth: that you've all joined us today.
 
 8
 00:00:18.400 --> 00:00:20.080
@@ -14,7 +14,7 @@ Peter Rushforth: We have a very tight schedule.
 
 9
 00:00:21.460 --> 00:00:28.540
-Peter Rushforth: So will be will be pretty strict about the times for for talks. But before we get there.
+Peter Rushforth: So we'll be pretty strict about the times for for talks. But before we get there,
 
 10
 00:00:30.700 --> 00:00:33.100
@@ -26,7 +26,7 @@ Peter Rushforth: The few web links that we have to share. We try to make the ses
 
 12
 00:00:41.950 --> 00:00:57.040
-Peter Rushforth: over each other. So we have a gator chat room that there, everybody should hang out in and Ted will paste that link into the chat has pasted it here into the chat and
+Peter Rushforth: over each other. So we have a Gitter chat room that there, everybody should hang out in and Ted will paste that link into the chat, has pasted it here into the chat and
 
 13
 00:00:58.360 --> 00:01:17.500
@@ -38,15 +38,15 @@ Peter Rushforth: After the after the presentation, I'll create a
 
 15
 00:01:24.100 --> 00:01:25.090
-Peter Rushforth: Discourse.
+Peter Rushforth: Discourse
 
 16
 00:01:26.740 --> 00:01:37.090
-Peter Rushforth: topic for discussion in the web incubator community group web mapping category. And if you have comments that could help.
+Peter Rushforth: topic for discussion in the Web Incubator Community Group web mapping category. And if you have comments that could help.
 
 17
 00:01:37.990 --> 00:01:58.210
-Peter Rushforth: You know, identify things that that or any comments about a participants presentation that's a good place to talk about them because browser developers hang out there and are sort of listening sometimes and anyhow it's a it's a good good place to chat about people's presentations.
+Peter Rushforth: You know, identify things that that or any comments about a participants presentation that's a good place to talk about them, because browser developers hang out there and are sort of listening sometimes, and anyhow it's a it's a good good place to chat about people's presentations.
 
 18
 00:02:01.000 --> 00:02:03.280
@@ -54,11 +54,11 @@ Peter Rushforth: And I just like to remind everybody that we're
 
 19
 00:02:04.360 --> 00:02:11.950
-Peter Rushforth: operating under the WCC code of conduct and their title paste a link to that as well. So if you have
+Peter Rushforth: operating under the W3C code of conduct and there, Ted'll paste a link to that as well. So if you have
 
 20
 00:02:13.960 --> 00:02:18.760
-Peter Rushforth: Basically, it's all about professional conduct and interaction. So
+Peter Rushforth: Basically, it's all about professional conduct and interaction, so
 
 21
 00:02:20.470 --> 00:02:26.110
@@ -66,15 +66,15 @@ Peter Rushforth: If you have concerns, please approach to any, any one of the co
 
 22
 00:02:27.910 --> 00:02:41.980
-Peter Rushforth: And with that, I would like to introduce the agenda or speaker agenda for the day. We're going to start off with Dr. Go by hub, owner of the Open Geospatial Consortium, who will speak about the
+Peter Rushforth: And with that, I would like to introduce the agenda or speaker agenda for the day. We're going to start off with Dr. Gobe Hobona, of the Open Geospatial Consortium, who will speak about the
 
 23
 00:02:43.330 --> 00:02:55.150
-Peter Rushforth: The global OTC API's effort that is underway. And with that, I'll let go by share his screen and I will put myself on mute, as I hope everybody else will.
+Peter Rushforth: The global OGC APIs effort that is underway. And with that, I'll let Gobe share his screen and I will put myself on mute, as I hope everybody else will.
 
 24
 00:03:00.190 --> 00:03:01.150
-Gobe Hobona (OGC): share my screen.
+Gobe Hobona (OGC): I will share my screen.
 
 25
 00:03:11.710 --> 00:03:13.600
@@ -82,135 +82,135 @@ Gobe Hobona (OGC): Can you see my current slide.
 
 26
 00:03:16.660 --> 00:03:31.360
-Gobe Hobona (OGC): Okay, thank you. Okay, good. Good day everyone. So my name is Coco wanna I work for the Open Geospatial Consortium, also known as the OTC and want to talk to you today about OTC API standards for the web.
+Gobe Hobona (OGC): Okay, thank you. Okay, good. Good day everyone. So my name is Gobe Hobona, I work for the Open Geospatial Consortium, also known as the OGC and want to talk to you today about OGC API standards for the web.
 
 27
 00:03:34.270 --> 00:03:42.700
-Gobe Hobona (OGC): Or. First of all, introduce the OTC and then provide some background about OTC API standards, the development of those standards.
+Gobe Hobona (OGC): I'll first of all, introduce the OGC and then provide some background about OGC API standards, the development of those standards.
 
 28
 00:03:43.150 --> 00:03:51.760
-Gobe Hobona (OGC): also explain some of the motivation behind the development of the standards and provide an overview of the orgy CPS lenders.
+Gobe Hobona (OGC): I'll also explain some of the motivation behind the development of the standards and provide an overview of the OGC API standards.
 
 29
 00:03:52.240 --> 00:04:07.720
-Gobe Hobona (OGC): Also describe the innovation initiatives that we're using to support the development of the standards and explain how anyone any member of the general public can get involved in the development of those standards.
+Gobe Hobona (OGC): I'll also describe the innovation initiatives that we're using to support the development of the standards and explain how anyone, any member of the general public can get involved in the development of those standards.
 
 30
 00:04:09.610 --> 00:04:22.150
-Gobe Hobona (OGC): Or she see is a global consortium, with more than 500 member organizations those organizations include in this commercial organizations government
+Gobe Hobona (OGC): OGC is a global consortium, with more than 500 member organizations. T,hose organizations include in this commercial organizations, government
 
 31
 00:04:22.960 --> 00:04:41.800
-Gobe Hobona (OGC): Departments research and academic institutions or he see provides a neutral and trusted forum for tackling interoperability issues and Odyssey is a hub for leadership and innovation for all things related to location.
+Gobe Hobona (OGC): Departments, research and academic institutions. OGC provides a neutral and trusted forum for tackling interoperability issues and OGC is a hub for thought leadership and innovation for all things related to location.
 
 32
 00:04:44.980 --> 00:04:55.900
-Gobe Hobona (OGC): Now, more than 500 organizations that are part of the old GC and those organizations come from the commercial government research and academic sectors.
+Gobe Hobona (OGC): Now, more than 500 organizations that are part of the OGC and those organizations come from the commercial, government, research and academic sectors.
 
 33
 00:04:56.260 --> 00:05:17.260
-Gobe Hobona (OGC): commercial organizations come to the GC to improve our business development to enhance our competitive technical advantage to glow that global brands and also to increase the likelihood of receiving innovation funding in the future from all the networking and knowledge.
+Gobe Hobona (OGC): Commercial organizations come to the OGC to improve our business development to enhance competitive technical advantage, to glow that global brands and also to increase the likelihood of receiving innovation funding in the future from all the networking and knowledge
 
 34
 00:05:19.390 --> 00:05:27.070
-Gobe Hobona (OGC): Transfer that takes place within those GC many departments come to DC to improve the innovation and Mike at support.
+Gobe Hobona (OGC): Transfer that takes place within the OGC. <any departments come to OGC to improve the innovation and might get support,
 
 35
 00:05:27.460 --> 00:05:35.890
-Gobe Hobona (OGC): To gain trust that advice to expand our international partnerships and to improve our corporate policy support and certification.
+Gobe Hobona (OGC): To gain trusted advice to, expand our international partnerships, and to improve our corporate policy support and certification.
 
 36
 00:05:36.580 --> 00:05:48.910
-Gobe Hobona (OGC): research and academic organizations come to DC to expand our applied research partnerships to improve the chances of receiving innovation funding in the future based on all the
+Gobe Hobona (OGC): Research and academic organizations come to OGC to expand our applied research partnerships, to improve the chances of receiving innovation funding in the future based on all the
 
 37
 00:05:49.630 --> 00:05:59.110
-Gobe Hobona (OGC): Interactions with commercial and other organizations are also expand by international collaborations and increase citations as well.
+Gobe Hobona (OGC): Interactions with commercial and other organizations, but to also expand by international collaborations and increase citations as well.
 
 38
 00:06:00.280 --> 00:06:08.950
-Gobe Hobona (OGC): So over the past couple of decades or GC has developed a suite of standards. Some of those standards deal with all GC web services.
+Gobe Hobona (OGC): So over the past couple of decades OGC has developed a suite of standards. Some of those standards deal with OGC web services.
 
 39
 00:06:09.310 --> 00:06:20.380
-Gobe Hobona (OGC): Some of the more popular or GC web service standards include the Web Map Service standard, also known as I BMS the Web Map tile service, also known as W MTS
+Gobe Hobona (OGC): Some of the more popular OGC web service standards include the Web Map Service standard, also known as WMS, the Web Map Tile Service, also known as WMTS,
 
 40
 00:06:20.770 --> 00:06:31.810
-Gobe Hobona (OGC): The web feature service, also known as the bfs. And the word coverage service, also known as WCS these standards have been used in areas such as geology transportation
+Gobe Hobona (OGC): The Web Feature Service, also known as WFS, and the Web Coverage Service, also known as WCS. These standards have been used in areas such as geology, transportation
 
 41
 00:06:33.160 --> 00:06:45.550
-Gobe Hobona (OGC): City management environmental data manage management hydrology and other areas that currently more than 200,000 or GC web services deployed across the web.
+Gobe Hobona (OGC): City management, environmental data, management, hydrology and other areas. There are currently more than 200,000 OGC web services deployed across the web.
 
 42
 00:06:48.430 --> 00:06:58.420
-Gobe Hobona (OGC): So about five years ago or GC started looking into the relationship between representational state transfer or rest approaches.
+Gobe Hobona (OGC): So about five years ago OGC started looking into the relationship between representational state transfer or REST approaches
 
 43
 00:06:59.050 --> 00:07:13.000
-Gobe Hobona (OGC): In relation to or GC web services. And what you can see on the slide right now is an analysis conducted in 2015 which related characteristics of rest approaches, which is what you see on the far left column.
+Gobe Hobona (OGC): In relation to OGC web services. And what you can see on the slide right now is an analysis conducted in 2015 which related characteristics of REST approaches, which is what you see on the far left column,
 
 44
 00:07:14.020 --> 00:07:18.580
-Gobe Hobona (OGC): In relation to Odyssey web services, which is what you see on the right hand side of the slide.
+Gobe Hobona (OGC): in relation to OGC web services, which is what you see on the right hand side of the slide.
 
 45
 00:07:20.710 --> 00:07:32.860
-Gobe Hobona (OGC): So in 2015 or GC conducted research comparing rest to classical DC web services and then in 2016 the focus shifted from rest to web API is
+Gobe Hobona (OGC): So in 2015, OGC conducted research comparing REST to classical OGC web services and then in 2016 the focus shifted from rest to web APIs
 
 46
 00:07:33.340 --> 00:07:43.780
-Gobe Hobona (OGC): In 2017 or DC publisher white people on Open Geospatial API's and in 2018 work on version three of the word feature service started
+Gobe Hobona (OGC): In 2017 or OGC published a white paper on Open Geospatial APIs, and in 2018 work on version three of the Web Feature Service started
 
 47
 00:07:44.650 --> 00:08:05.470
-Gobe Hobona (OGC): In 2019 the DFS three or the version three of the word feature service that was renamed and called the CPI features and that was in recognition that the approach that was being adopted by the way, Office three was offering a new paradigm within the
+Gobe Hobona (OGC): In 2019 the WFS3 or the version three of the Web Feature Service that was renamed and called the OGC API features and that was in recognition that the approach that was being adopted by the WFS3 was offering a new paradigm within the
 
 48
 00:08:06.940 --> 00:08:18.610
-Gobe Hobona (OGC): C suite of standards for the OTC standards baseline, then by the end of 2019 or the CPI features part one, was published as an official or GC standard
+Gobe Hobona (OGC): OGC suite of standards, for the OOGC standards baseline. Then by the end of 2019 OGC API Features Part One, was published as an official OGC standard
 
 49
 00:08:20.050 --> 00:08:33.760
-Gobe Hobona (OGC): So why are we concerned with all this API is why we developed an easy or GC API as well. Web API, very popular and effective method for rapid software development.
+Gobe Hobona (OGC): So why are we concerned with all this API, why we developed all these OGC APIs? Well, Web APIs are a very popular and effective method for rapid software development.
 
 50
 00:08:34.210 --> 00:08:45.670
-Gobe Hobona (OGC): And what we have found is that with the proliferation of web API's the variations and those a web API S has to an extent to create it Intel pro interoperability.
+Gobe Hobona (OGC): And what we have found is that with the proliferation of web APIs, the variations and those web APIs has to an extent to created interoperability.
 
 51
 00:08:46.510 --> 00:09:02.980
-Gobe Hobona (OGC): So open standards. I've been developed to enable interoperability between independent implementations and all GC API's being developed, with a view of improving geospatial interoperability between web API's.
+Gobe Hobona (OGC): So open standards are being developed to enable interoperability between independent implementations and OGC APIs are being developed with a view of improving geospatial interoperability between web APIs.
 
 52
 00:09:05.230 --> 00:09:13.030
-Gobe Hobona (OGC): And then number of principles that the old GC is using to develop these or GC API standards, some of the principles are shown on this slide.
+Gobe Hobona (OGC): And then number of principles that the OGC is using to develop these OGC API standards, some of the principles are shown on this slide.
 
 53
 00:09:13.660 --> 00:09:26.470
-Gobe Hobona (OGC): First and foremost, the OTC API standards. I've been developed to offer modular API building blocks those building blocks will specially an evil with web API is in a consistent way.
+Gobe Hobona (OGC): First and foremost, the OGC API standards are being developed to offer modular API building blocks. Those building blocks will specially enable web APIs in a consistent way.
 
 54
 00:09:27.220 --> 00:09:37.480
-Gobe Hobona (OGC): And why using a number of principles and approaches identified in the special date on the web, best practices which have been developed jointly between OTC and the W three see
+Gobe Hobona (OGC): And by using a number of principles and approaches identified in the Spatial Data on the Web Best Practices, which have been developed jointly between OGC and the W3C.
 
 55
 00:09:38.860 --> 00:09:50.350
-Gobe Hobona (OGC): What you see API standards leverage the openapi specification specifically to help describe the API's themselves as well as implementations of those of the CP is
+Gobe Hobona (OGC): What you see API standards leverage the OpenAPI specification specifically to help describe the APIs themselves, as well as implementations of those OGC APIs
 
 56
 00:09:51.070 --> 00:10:05.740
-Gobe Hobona (OGC): Another key principle is that the OTC API's are being developed to be as developer friendly as possible. So there's a specific focus on developing experience and usability.
+Gobe Hobona (OGC): Another key principle is that the OGC API's are being developed to be as developer friendly as possible. So there's a specific focus on developing experience and usability.
 
 57
 00:10:06.790 --> 00:10:17.500
-Gobe Hobona (OGC): And we do all of this development work publicly on GitHub on a public repository, while using any implementations of the CPS thunder.
+Gobe Hobona (OGC): And we do all of this development work publicly on GitHub on a public repository, while using any implementations of the OGC API standard.
 
 58
 00:10:18.700 --> 00:10:25.570
-Gobe Hobona (OGC): To involve the general public at using initiatives such as sprints and why using that to
+Gobe Hobona (OGC): To involve the general public at using initiatives such as sprints and by using that to
 
 59
 00:10:26.800 --> 00:10:33.610
@@ -218,59 +218,59 @@ Gobe Hobona (OGC): To solicit feedback from the public and to use that field fee
 
 60
 00:10:36.370 --> 00:10:48.130
-Gobe Hobona (OGC): Another key principle is that of API first. So we're using an API first approach to develop other APIs using Open API openapi
+Gobe Hobona (OGC): Another key principle is that of API first. So we're using an API first approach to develop other APIs using OpenAPI, the OpenAPI
 
 61
 00:10:50.320 --> 00:11:11.020
-Gobe Hobona (OGC): Specification to describe those API's and this enables us to describe in a machine readable way the resources offered by the API, the behavior of the API as well as other aspects, supported by the openapi specification
+Gobe Hobona (OGC): specification to describe those APIs and this enables us to describe in a machine readable way the resources offered by the API, the behavior of the API as well as other aspects, supported by the OpenAPI specification.
 
 62
 00:11:13.090 --> 00:11:15.460
-Gobe Hobona (OGC): So what are those API standards.
+Gobe Hobona (OGC): So what are those API standards?
 
 63
 00:11:16.540 --> 00:11:37.660
-Gobe Hobona (OGC): So we have the ODI CPI features standard. So this is a fully fledged OTC standards, part one, although the CPS standards standard was published. Towards the end of 2019 and work is ongoing on developing additional parts and extensions to orgy CPI.
+Gobe Hobona (OGC): So we have the OGC API features standard. So this is a fully fledged OGC standard, part one, although the OGC API standards standard was published towards the end of 2019 and work is ongoing on developing additional parts and extensions to OGC API.
 
 64
 00:11:38.710 --> 00:11:48.070
-Gobe Hobona (OGC): For the sake of features and they also a number of other or the CPS standards that are currently under development for instance OTC common
+Gobe Hobona (OGC): For the sake of features. There's also a number of other OGC API standards that are currently under development for instance OGC Common
 
 65
 00:11:48.400 --> 00:11:55.780
-Gobe Hobona (OGC): Which provides a series of requirements that are applicable across all orgy CPI standards.
+Gobe Hobona (OGC): Which provides a series of requirements that are applicable across all OGC API standards.
 
 66
 00:11:56.740 --> 00:12:06.190
-Gobe Hobona (OGC): We've got only CPR coverages which deals with access to coverage data such as roster imagery or TCP records which deals with access to meta data.
+Gobe Hobona (OGC): We've got OGC API Coverages which deals with access to coverage data such as raster imagery, OGC API Records which deals with access to meta data.
 
 67
 00:12:06.640 --> 00:12:15.550
-Gobe Hobona (OGC): Or do CPR processes which deals with access to geospatial processes such as buffering routing hydro logic models and so on.
+Gobe Hobona (OGC): OGC API Processes which deals with access to geospatial processes such as buffering, routing, hydrologic models and so on.
 
 68
 00:12:16.390 --> 00:12:26.350
-Gobe Hobona (OGC): Are you CPI towels, which deals with access to talent resources such as vector tiles Todd rust coverages tiled maps and so on.
+Gobe Hobona (OGC): OGC API Tiles, which deals with access to tiled resources such as vector tiles, tiled raster coverages, tiled maps and so on.
 
 69
 00:12:27.130 --> 00:12:40.570
-Gobe Hobona (OGC): Or do you see API maps which deals with access to electronic friended maps or the CPI environmental data retrieval, which deals with access to environmental data such as metallurgical and weather data.
+Gobe Hobona (OGC): OGC API Maps which deals with access to electronic rendered maps, OGC API Environmental Data Retrieval, which deals with access to environmental data such as metallurgical and weather data.
 
 70
 00:12:41.290 --> 00:12:57.430
-Gobe Hobona (OGC): And then we also have already seen cast Dallas, which deals with access to petroleum information such as thousand symbologist ology and also working on a number of future concepts, for instance, an API for discrete global grid systems as well as another for routing.
+Gobe Hobona (OGC): And then we also have OGC API Styles, which deals with access to information such as styles and symbology. We're also working on a number of future concepts, for instance, an API for discrete global grid systems as well as another for routing.
 
 71
 00:12:59.920 --> 00:13:08.950
-Gobe Hobona (OGC): Now, what can you expect from each approved or GC standard, you can expect a standard document and an open API definition document.
+Gobe Hobona (OGC): Now, what can you expect from each approved OGC API standard? you can expect a standard document and an OpenAPI definition document.
 
 72
 00:13:09.610 --> 00:13:24.220
-Gobe Hobona (OGC): You can expect an executable test suite to how implemented validate whether or not the implementations comply with those standards. You can also expect tutorials. And guys, what you can see on the screen on
+Gobe Hobona (OGC): You can expect an executable test suite to how implementors validate whether or not the implementations comply with those standards. You can also expect tutorials and guides, what you can see on the screen on
 
 73
 00:13:25.540 --> 00:13:33.430
-Gobe Hobona (OGC): Examples specifically focusing on our GC features which provides access to vector feature data.
+Gobe Hobona (OGC): Examples specifically focusing on OGC API features which provides access to vector feature data.
 
 74
 00:13:34.870 --> 00:13:38.290
@@ -286,11 +286,11 @@ Gobe Hobona (OGC): planned to be published by the end of this year, as well as o
 
 77
 00:13:52.690 --> 00:14:11.770
-Gobe Hobona (OGC): Another thing you can. You'll notice from this slide is that many of the standards are being developed as multi part standards. What this means is that they are. There's one core specification, as well as a number of extensions, all within the same standard standard
+Gobe Hobona (OGC): Another thing you can, you'll notice from this slide is that many of the standards are being developed as multi part standards. What this means is that they are, there's one core specification, as well as a number of extensions, all within the same standard standard
 
 78
 00:14:14.320 --> 00:14:29.560
-Gobe Hobona (OGC): And we're using a number of innovation initiatives to develop these standards. Examples include Sprint's hackathons pilots Testaments, as well as others. But you can see on the slide, are some of the innovation initiatives, we've held since
+Gobe Hobona (OGC): And we're using a number of innovation initiatives to develop these standards. Examples include Sprints, hackathons, pilots, testers, as well as others. But you can see on the slide, are some of the innovation initiatives, we've held since 2019.
 
 79
 00:14:31.540 --> 00:14:41.110
@@ -302,19 +302,19 @@ Gobe Hobona (OGC): We've held several sprints since then.
 
 81
 00:14:47.530 --> 00:15:07.480
-Gobe Hobona (OGC): And next on the calendar is virtual coach sprint. On September 29 to the 30th, we will focus on the OTC API common and ODI CPI features standards in order to participate in the sprint. You'll have to register this URL shown on the slide.
+Gobe Hobona (OGC): And next on the calendar is a virtual code sprint. On September 29 to the 30th, we will focus on the OGC API Gommon and OGC API Features standards in order to participate in the sprint, you'll have to register this URL shown on the slide.
 
 82
 00:15:09.070 --> 00:15:17.800
-Gobe Hobona (OGC): And and that's it. If you have any questions please feel free to send an email message to the address shown on this.
+Gobe Hobona (OGC): And and that's it. If you have any questions please feel free to send an email message to the address shown on this
 
 83
 00:15:19.060 --> 00:15:34.900
-Gobe Hobona (OGC): Side and you can also visit the ODI CPI otc.org website where you'll find information about OTC API's as well as initiatives that we're planning to develop those standards and that's it. Thank you.
+Gobe Hobona (OGC): slide and you can also visit the OGC API at ogcapi.ogc.org website where you'll find information about OGC API's as well as initiatives that we're planning to develop those standards and that's it. Thank you.
 
 84
 00:15:36.460 --> 00:15:37.960
-Peter Rushforth: Great, thank you very much. Kobe.
+Peter Rushforth: Great, thank you very much, Gobe.
 
 85
 00:15:39.730 --> 00:15:46.510
@@ -326,7 +326,7 @@ Peter Rushforth: Well, I'd like to introduce our next speakers and then keep thi
 
 87
 00:15:58.000 --> 00:16:10.960
-Peter Rushforth: The next topic will be about piaggio API, which I believe is a no GC API implementation by Tom curliness Angelo Santos and Francesco Bartoli who are all present today so
+Peter Rushforth: The next topic will be about pygeoapi, which I believe is a OGC API implementation by Tom Kralidis, Angelos Tzotsos and Francesco Bartoli, who are all present today so
 
 88
 00:16:12.250 --> 00:16:13.090
@@ -350,11 +350,11 @@ Peter Rushforth: Tom, I think you're on mute.
 
 93
 00:16:27.790 --> 00:16:29.350
-Tom Kralidis: No thanks. Sorry. Can you hear me.
+Tom Kralidis: Oh thanks. Sorry. Can you hear me.
 
 94
 00:16:29.710 --> 00:16:32.590
-Tom Kralidis: Yeah, can I can folks see my screen.
+Tom Kralidis: Yeah, can, can folks see my screen.
 
 95
 00:16:34.390 --> 00:16:34.720
@@ -366,23 +366,23 @@ Tom Kralidis: Excellent. Okay, so thanks for thanks for the introduction.
 
 97
 00:16:40.270 --> 00:16:52.180
-Tom Kralidis: We will give a small presentation today on the pie Joe API project. So the piaggio API project is a OS to community project.
+Tom Kralidis: We will give a small presentation today on the pygeoapi project. So the pygeoapi project is a OS geo community project.
 
 98
 00:16:52.690 --> 00:17:05.170
-Tom Kralidis: And it currently implements. Many of the OTC of the evolving Odissi API standards. It is a reference implementation for already for the OTC API feature standard so
+Tom Kralidis: And it currently implements many of the OGC, of the evolving OGC API standards. It is a reference implementation for already for the OGC API Feature standard so
 
 99
 00:17:06.640 --> 00:17:13.630
-Tom Kralidis: Whoops. So I'm just going to give an overview, following on from gobies presentation around. I won't get into all of these
+Tom Kralidis: Whoops. So I'm just going to give an overview, following on from Gobe's presentation around. I won't get into all of these
 
 100
 00:17:14.200 --> 00:17:26.770
-Tom Kralidis: As they sort of echo what what Colby is saying, but I'll talk a little bit about the the project itself, some of the core capabilities as well as example of production instances and where we're hoping to go
+Tom Kralidis: As they sort of echo what what Gobe is saying, but I'll talk a little bit about the the project itself, some of the core capabilities as well as example of production instances and where we're hoping to go
 
 101
 00:17:28.000 --> 00:17:29.080
-Tom Kralidis: Moving moving forward.
+Tom Kralidis: Moving forward.
 
 102
 00:17:32.200 --> 00:17:33.610
@@ -390,23 +390,23 @@ Tom Kralidis: So the project was created.
 
 103
 00:17:34.690 --> 00:17:34.870
-Tom Kralidis: In
+Tom Kralidis: In 2018
 
 104
 00:17:35.920 --> 00:17:44.860
-Tom Kralidis: So, as we mentioned, there was a some initial work on on code sprints and hackathons around WF S3, which was called at the time so we
+Tom Kralidis: So, as Gobe mentioned, there was a some initial work on on code sprints and hackathons around WFS3, which was called at the time so we
 
 105
 00:17:45.670 --> 00:17:58.090
-Tom Kralidis: We participated in in that sprint and have been participated in the visibility in the subsequent sprint for more juicy on OTC API. So project has been around for for a couple of years.
+Tom Kralidis: We participated in in that sprint and have been participated in the visibility in the subsequent sprint from OGC on OGC APIs. So project has been around for for a couple of years.
 
 106
 00:18:00.130 --> 00:18:05.740
-Tom Kralidis: We designed it sort of as a geospatial data. Data API framework where
+Tom Kralidis: We designed it sort of as a geospatial data, data API framework where
 
 107
 00:18:07.180 --> 00:18:16.690
-Tom Kralidis: It where it can be very extensible and is available through numerous web front end technology approaches, at least for at least for Python.
+Tom Kralidis: It where it can be very extensible and is available through numerous web front-end technology approaches, at least for at least for Python.
 
 108
 00:18:17.110 --> 00:18:28.810
@@ -414,7 +414,7 @@ Tom Kralidis: And we really wanted it to be extensible on the back end to be abl
 
 109
 00:18:30.100 --> 00:18:42.160
-Tom Kralidis: There really should be a map here, I guess. But there's a growing international team from from from many countries and time zones. So meetings are always interesting to schedule but gives you an idea of
+Tom Kralidis: There really should be a map here, I guess. But there's a growing international team from many countries and time zones. So meetings are always interesting to schedule but gives you an idea of
 
 110
 00:18:43.840 --> 00:18:51.160
@@ -426,15 +426,15 @@ Tom Kralidis: That already is.
 
 112
 00:18:55.510 --> 00:19:09.160
-Tom Kralidis: So again, it's an OTC API server implementation in in Python. It chooses to it publishes data. So we don't really get into massaging data too much, but it's basically a data publishing tool.
+Tom Kralidis: So again, it's an OGC API server implementation in in Python. It chooses to it publishes data. So we don't really get into massaging data too much, but it's basically a data publishing tool.
 
 113
 00:19:10.450 --> 00:19:30.040
-Tom Kralidis: And it leverages the powerful ecosystem of Python packages. So for those who are familiar with, with Python. There's a huge ecosystem of geospatial tooling underneath and piaggio API is a is basically a shim on top of all of that to be able to provide this functionality.
+Tom Kralidis: And it leverages the powerful ecosystem of Python packages. So for those who are familiar with, with Python, there's a huge ecosystem of geospatial tooling underneath and pygeoapi API is a is basically a shim on top of all of that to be able to provide this functionality.
 
 114
 00:19:32.500 --> 00:19:39.220
-Tom Kralidis: So you can run hide your API from the, from the command line or you can run it from from a web application.
+Tom Kralidis: So you can run pygeoapi from the, from the command line or you can run it from from a web application.
 
 115
 00:19:40.660 --> 00:19:48.970
@@ -442,47 +442,47 @@ Tom Kralidis: I'll just give you an idea of the of the overall architecture of t
 
 116
 00:19:50.980 --> 00:20:01.720
-Tom Kralidis: And then we have a series of web front end. So if you're familiar with Python web frameworks. They're available in flask and starlet and other other frameworks.
+Tom Kralidis: And then we have a series of web front-ends. So if you're familiar with Python web frameworks. They're available in Flask and Starlette and other other frameworks.
 
 117
 00:20:02.140 --> 00:20:12.490
-Tom Kralidis: If you have your, your own downstream implementation, you can use pipe do API as a library and deploy it alongside your own mem your own your own implementation.
+Tom Kralidis: If you have your, your own downstream implementation, you can use pygeoapi as a library and deploy it alongside your own mem your own your own implementation.
 
 118
 00:20:13.180 --> 00:20:32.410
-Tom Kralidis: So again, we have a very small but robust and flexible core and which has made made available through these through these web API's and that core itself takes takes a number of different back ends or format or databases or search index through
+Tom Kralidis: So again, we have a very small but robust and flexible core and which has made made available through these through these web APIs and that core itself takes takes a number of different back ends or format or databases or search index through
 
 119
 00:20:33.430 --> 00:20:40.960
-Tom Kralidis: Through these data provider plugin. So we have a a plugin mechanism for the entire project where you're able to
+Tom Kralidis: Through these data provider plugins. So we have a a plugin mechanism for the entire project where you're able to
 
 120
 00:20:42.280 --> 00:20:56.650
-Tom Kralidis: You know, plug your data into the piaggio API framework, no matter where it sits or how it's sorted out. As long as you implement the API accordingly. Then, then you'll be able to, you know, publish ideas who PIES YOU API there by
+Tom Kralidis: You know, plug your data into the pygeoapi framework, no matter where it sits or how it's sorted out. As long as you implement the API accordingly. Then, then you'll be able to, you know, publish your data through pygeoapi thereby
 
 121
 00:20:58.000 --> 00:21:00.190
-Tom Kralidis: satisfying the OTC API standards.
+Tom Kralidis: satisfying the OGC API standards.
 
 122
 00:21:03.580 --> 00:21:12.520
-Tom Kralidis: There's a number of different back ends already out of the box or some of you may be familiar with some of these, but we do also support the GL
+Tom Kralidis: There's a number of different back ends already out of the box or some of you may be familiar with some of these, but we do also support the GDAL
 
 123
 00:21:13.360 --> 00:21:29.410
-Tom Kralidis: Underlying underlying software which reads, hundreds of different format. So if you're geospatial data is compatible with genealogy are it's automatically compile compatible with piaggio API. And you can put it out to the CP is quite easily.
+Tom Kralidis: Underlying underlying software which reads, hundreds of different formats. So if you're geospatial data is compatible with GDAL-OGR are it's automatically compile compatible with pygeoapi. And you can put it out to the OGC APIs quite easily.
 
 124
 00:21:33.040 --> 00:21:42.310
-Tom Kralidis: We recently implemented the support for covered data providers. So those of you who are into grids are roster data or multi dimensional data.
+Tom Kralidis: We recently implemented the support for covered data providers. So those of you who are into grids, or raster data or multi dimensional data,
 
 125
 00:21:43.240 --> 00:21:53.770
-Tom Kralidis: Earth observation data that this is now possible through pi to API and the evolving or DC API coverages specification. So really exciting stuff here.
+Tom Kralidis: Earth observation data that this is now possible through pygeoapi and the evolving OGC API coverages specification. So really exciting stuff here.
 
 126
 00:21:56.350 --> 00:22:08.440
-Tom Kralidis: We've recently implemented in terms of tiles. So we have the, the ability to connect to a directory structure for for tiles or object storage.
+Tom Kralidis: We've recently implemented in terms of tiles. So we have the, the ability to connect to a directory structure for for tiles or object storage,
 
 127
 00:22:09.520 --> 00:22:13.570
@@ -490,39 +490,39 @@ Tom Kralidis: local or remote. We'll talk a little bit about that later.
 
 128
 00:22:15.340 --> 00:22:29.200
-Tom Kralidis: And we also implement the schema.org sort of linked data approaches to make to make resources available through pie to API search engine friendly and and discoverable through through mass market approaches.
+Tom Kralidis: And we also implement the schema.org sort of linked data approaches to make to make resources available through pygeoapi search engine friendly and and discoverable through through mass market approaches.
 
 129
 00:22:31.480 --> 00:22:40.870
-Tom Kralidis: So I'll walk you through some screenshots in terms of in terms of capabilities. So here's a default view of when you stand up a piaggio API instance you get
+Tom Kralidis: So I'll walk you through some screenshots in terms of in terms of capabilities. So here's a default view of when you stand up a pygeoapi instance you get
 
 130
 00:22:41.650 --> 00:22:50.860
-Tom Kralidis: A web presence and it's go we may have mentioned the you know HTML or web page web page capabilities in ODI CPI is a
+Tom Kralidis: A web presence and as Gobe  may have mentioned the you know HTML or web page web page capabilities in OGC APIs is a
 
 131
 00:22:51.400 --> 00:22:58.750
-Tom Kralidis: Is a is a diet desirable thing for mass market integration. So here's an HTML view of the landing page for a pipe Padre
+Tom Kralidis: Is a desirable thing for mass market integration. So here's an HTML view of the landing page for a pygeoapi
 
 132
 00:22:59.200 --> 00:23:16.240
-Tom Kralidis: Pio API implementation. Here we can see, you can browse the, you know what, what kind of collections are configured what processes are available, how the how a developer can interact with the API through the API definition as well as a conformance page to find out what standards are implemented.
+Tom Kralidis: implementation. Here we can see, you can browse the, you know what, what kind of collections are configured what processes are available, how a developer can interact with the API through the API definition as well as a conformance page to find out what standards are implemented.
 
 133
 00:23:17.860 --> 00:23:31.660
-Tom Kralidis: Here, here's our open API page so API first approach, you can walk through all the different endpoints and find out more about what parameters are accepted what their data types are what a response looks like and so on.
+Tom Kralidis: Here's our OpenAPI page so, API first approach, you can walk through all the different endpoints and find out more about what parameters are accepted what their data types are, what a response looks like and so on.
 
 134
 00:23:34.000 --> 00:23:40.450
-Tom Kralidis: Here's a screenshot around or do you see API features. So this is showing some, some, like some late data.
+Tom Kralidis: Here's a screenshot around OGC API features. So this is showing some, some, like some lake data.
 
 135
 00:23:43.000 --> 00:23:51.340
-Tom Kralidis: We've recently implemented in the last month or so, or do you see API coverages so that was a provided by USGS
+Tom Kralidis: We've recently implemented in the last month or so, OGC API Coverages so that was a provided by USGS
 
 136
 00:23:52.090 --> 00:24:08.140
-Tom Kralidis: Into into the into the project. So we're appreciative of that. So there you can see an example of some global temperature, temperature data, which is a which is provided through OTC API coverage to in the coverage JSON format. And then we can see
+Tom Kralidis: Into the project. So we're appreciative of that. So there you can see an example of some global temperature, temperature data, which is a which is provided through OGC API Coverage to in the coverage JSON format. And then we can see
 
 137
 00:24:09.340 --> 00:24:10.450
@@ -530,7 +530,7 @@ Tom Kralidis: A map there of the data.
 
 138
 00:24:13.750 --> 00:24:20.350
-Tom Kralidis: Fresh off the press. We just implemented, which the API tiles. So for Jessica who's on this.
+Tom Kralidis: Fresh off the press. We just implemented, OGC API tiles. So Francesco who's on this
 
 139
 00:24:20.920 --> 00:24:27.730
@@ -538,59 +538,59 @@ Tom Kralidis: Presentation recently implemented that. So that's a valued edition
 
 140
 00:24:28.330 --> 00:24:36.700
-Tom Kralidis: Around publishing tiles to PIES YOU API, whether they're local tiles or whether they're available remotely through through object storage.
+Tom Kralidis: Around publishing tiles to pygeoapi, whether they're local tiles or whether they're available remotely through through object storage.
 
 141
 00:24:39.940 --> 00:24:51.970
-Tom Kralidis: As well as OTC API processes. So you can configure any kind of process that you want, whether it's synchronous or a synchronous using the pie to API framework and making that available through through all the proc
+Tom Kralidis: As well as OGC API Processes. So you can configure any kind of process that you want, whether it's synchronous or a synchronous using the pygeoapi framework and making that available through through all the proc
 
 142
 00:24:54.790 --> 00:25:04.720
-Tom Kralidis: Finally we've we have implementation, we have support for the spatial temporal asset catalog or the stack implementation, which allows for a browser catalog of
+Tom Kralidis: Finally we've we have implementation, we have support for the spatial temporal asset catalog or the STAC implementation, which allows for a browser catalog of
 
 143
 00:25:05.530 --> 00:25:16.810
-Tom Kralidis: Of geospatial temporal assets. So you can drill down directory trees of geospatial data and then get to the actual files peruse and see what they look like, and then download them if you wish.
+Tom Kralidis: Of geospatial temporal assets. So you can drill down directory trees of geospatial data and then get to the actual files,peruse and see what they look like, and then download them if you wish.
 
 144
 00:25:21.610 --> 00:25:31.780
-Tom Kralidis: So that's a little bit of an overview about what the project is all about how how it sort of setup and what its core capabilities are a walk you through some examples of production instances.
+Tom Kralidis: So that's a little bit of an overview about what the project is all about how how it sort of setup and what its core capabilities are, I'll walk you through some examples of production instances.
 
 145
 00:25:32.440 --> 00:25:45.250
-Tom Kralidis: So we here at the Meteorological Service of Canada and deployed piaggio API as part of our National Geospatial API weather climate water API platform, which is called geo med
+Tom Kralidis: So we here at the Meteorological Service of Canada and deployed pygeoapi as part of our National Geospatial API weather climate water API platform, which is called GEOMET
 
 146
 00:25:46.690 --> 00:25:55.240
-Tom Kralidis: So we provide real time whether data from numerical weather prediction, as well as hydro. Hydro metric and climate archive data.
+Tom Kralidis: So we provide real time weather, data from numerical weather prediction, as well as hydrometric and climate archive data.
 
 147
 00:25:56.320 --> 00:26:08.860
-Tom Kralidis: So we initially use Python API to provide our climate or hydro metric and our climate data through the the OTC API feature standard and that's made available through
+Tom Kralidis: So we initially use pygeoapi to provide our climate or hydrometric and our climate data through the the OGC API feature standard and that's made available through
 
 148
 00:26:09.580 --> 00:26:26.350
-Tom Kralidis: Through God, whether it should see as you can see there. So you can go to that link and and and look at, you know, hundreds of years of climate. Climate archive data in the in the in the AWS S3 format. We also implemented a
+Tom Kralidis: Through geo.weather.gc.ca, as you can see there. So you can go to that link and and and look at, you know, hundreds of years of climate archive data in the in the in the WFS3 format. We also implemented a
 
 149
 00:26:28.090 --> 00:26:33.400
-Tom Kralidis: data extraction capabilities through OTC API processes, which basically looks through
+Tom Kralidis: data extraction capabilities through OGC API processes, which basically looks through
 
 150
 00:26:35.260 --> 00:26:44.770
-Tom Kralidis: simulations of climate data forecast data and extracting time series out of those in providing basically providing time series extraction from a
+Tom Kralidis: simulations of climate data, forecast data and extracting time series out of those in providing, basically providing time series extraction from a
 
 151
 00:26:45.220 --> 00:27:05.380
-Tom Kralidis: Coverage into into a CSV or a geo JSON, we are looking at increasing we are looking at providing more support more piaggio API capability through our platform. So we're looking into doing things with coverages as well as the evolving OTC API records standard
+Tom Kralidis: Coverage into into a CSV or a GeoJSON, we are looking at increasing we are looking at providing more support more pygeoapi capability through our platform. So we're looking into doing things with coverages as well as the evolving OGC API records standard
 
 152
 00:27:08.140 --> 00:27:24.640
-Tom Kralidis: There's also an implementation from the global soil information system by by UN FL. So they they've provided a lot of work and examples on doing JSON LD in in in page API. So you can click and visit that website.
+Tom Kralidis: There's also an implementation from the global soil information system by by UNFAO. So they they've provided a lot of work and examples on doing JSON LD in in in pygeoapi, So you can click and visit that website,
 
 153
 00:27:25.990 --> 00:27:27.100
-Tom Kralidis: When you have a chance
+Tom Kralidis: When you have a chance.
 
 154
 00:27:30.010 --> 00:27:32.890
@@ -602,7 +602,7 @@ Tom Kralidis: I think the project for just over two years is is a is implemented
 
 156
 00:27:42.250 --> 00:27:55.870
-Tom Kralidis: I think this is very telling of the the the OTC API efforts and the goals of lowering the barrier for developer implementation. SO THIS VERY QUICK UPDATE. UPDATE to this project by
+Tom Kralidis: I think this is very telling of the the the OGC API efforts and the goals of lowering the barrier for developer implementation. So this very quick update to this project by
 
 157
 00:27:57.280 --> 00:28:03.460
@@ -610,7 +610,7 @@ Tom Kralidis: By increasing number of developers. And that's, I think that's a c
 
 158
 00:28:05.080 --> 00:28:21.520
-Tom Kralidis: We're looking to, you know, given the OTC API standards development efforts are our public we are you know sort of moving along with the evolution of those standards. So we're looking to implement the maps tiles and
+Tom Kralidis: We're looking to, you know, given the OGC API standards development efforts are public, we are you know sort of moving along with the evolution of those standards. So we're looking to implement the maps, tiles and
 
 159
 00:28:22.810 --> 00:28:31.180
@@ -618,19 +618,19 @@ Tom Kralidis: And records as part of as part of a future future implementation a
 
 160
 00:28:31.930 --> 00:28:40.300
-Tom Kralidis: And the next one will be improving is the processes a support with some of the updates that have been going on in the processing standards. Working Group.
+Tom Kralidis: And the next one will be improving is the processes a support with some of the updates that have been going on in the Processing Standards Working Group.
 
 161
 00:28:40.840 --> 00:29:00.940
-Tom Kralidis: More data providers. So we want to provide them as flexible a capability for people to hook up their data as possible. We recently had Google Summer of Code contributions from two students to provide capability on supporting the common query language or sequel.
+Tom Kralidis: More data providers. So we want to provide them as flexible a capability for people to hook up their data as possible. We recently had Google Summer of Code contributions from two students to provide capability on supporting the common query language or CQL
 
 162
 00:29:02.200 --> 00:29:22.330
-Tom Kralidis: Standard as well as doing doing transaction. So create update, update, delete, we're looking into better content negotiation, as well as spreading the project through through through through more approaches. So OSU live is a live dvd
+Tom Kralidis: Standard as well as doing doing transaction. So create update, update, delete, we're looking into better content negotiation, as well as spreading the project through through through through more approaches. So OSU live is a live DVD
 
 163
 00:29:23.350 --> 00:29:32.320
-Tom Kralidis: Or live implementation that you can download and run all of the ways to sort of software free and open source geospatial software. So as a very popular.
+Tom Kralidis: Or live implementation that you can download and run all of the ways to sort of software free and open source geospatial software. So that's a very popular
 
 164
 00:29:32.980 --> 00:29:41.920
@@ -642,11 +642,11 @@ Tom Kralidis: And there's a variety of support mechanisms that
 
 166
 00:29:48.520 --> 00:30:04.630
-Tom Kralidis: If you're looking for support through these various organizations, we have a we have a gator channel that that folks can come in and ask questions. There's a mailing list. There's documentation you can peruse all the links as you wish there and
+Tom Kralidis: If you're looking for support through these various organizations, we have a, we have a Gitter channel that that folks can come in and ask questions. There's a mailing list. There's documentation you can peruse all the links as you wish there and
 
 167
 00:30:05.890 --> 00:30:18.490
-Tom Kralidis: That's, that's, that's pretty much it. So thank you for listening and unless Angeles or friend Francesco has any comments or things to add that I may have missed. I'd like to thank everybody for listening.
+Tom Kralidis: That's, that's, that's pretty much it. So thank you for listening and unless Angelos or Francesco has any comments or things to add that I may have missed. I'd like to thank everybody for listening.
 
 168
 00:30:20.440 --> 00:30:21.910
@@ -666,7 +666,7 @@ Peter Rushforth: Francesco asked if we could do see a demo. And we'll just keep 
 
 172
 00:30:36.400 --> 00:30:43.930
-Peter Rushforth: But thank you very much. It looks like a very interesting project and something that pretty much anybody's in geospatial could use
+Peter Rushforth: But thank you very much. It looks like a very interesting project and something that pretty much anybody in geospatial could use
 
 173
 00:30:45.460 --> 00:30:47.890
@@ -674,27 +674,27 @@ Peter Rushforth: So with that, we're going to move on to the next.
 
 174
 00:30:50.410 --> 00:31:01.090
-Peter Rushforth: Next talk in our agenda and with thanks to Heather or closed caption or for her great efforts so far because we're, we're really making them work hard today.
+Peter Rushforth: Next talk in our agenda and with thanks to Heather our closed caption or for her great efforts so far because we're, we're really making them work hard today.
 
 175
 00:31:02.230 --> 00:31:13.900
-Peter Rushforth: So I'll pass the control over to join my soul will talk to us about the connection of the math ML initiative with a GIC standards such as the new would you see API tiles.
+Peter Rushforth: So I'll pass the control over to Joan Masó will talk to us about the connection of the MapMP initiative with a OGC standards such as the new OGC API tiles.
 
 176
 00:31:16.630 --> 00:31:23.440
-Peter Rushforth: Talk and the Would You see why mouse. So to on are you on unmuted.
+Peter Rushforth: Talk and the OGC WMS. So, Joan, are you on unmuted.
 
 177
 00:31:28.210 --> 00:31:29.260
-Peter Rushforth: I'm not hearing to on
+Peter Rushforth: I'm not hearing Joan
 
 178
 00:31:35.710 --> 00:31:37.240
-Joan Masó (CREAF): I believe now I
+Joan Masó (CREAF): I believe now I am
 
 179
 00:31:38.200 --> 00:31:39.160
-Joan Masó (CREAF): Know you're gone live
+Joan Masó (CREAF): now I'm online
 
 180
 00:31:40.810 --> 00:31:41.230
@@ -706,7 +706,7 @@ Joan Masó (CREAF): Okay, thank you for for presenting me and working at graph h
 
 182
 00:31:51.580 --> 00:31:58.150
-Joan Masó (CREAF): Always close working with the with the OTC with different standards evolving.
+Joan Masó (CREAF): Always close working with the with the OGC with different standards evolving.
 
 183
 00:32:00.700 --> 00:32:03.010
@@ -718,23 +718,23 @@ Joan Masó (CREAF): There are several ways that you can send from the server to 
 
 185
 00:32:16.390 --> 00:32:28.690
-Joan Masó (CREAF): Low level thing that you could do is to serve pocket some kind of a description of the geospatial objects or maybe the pixels from the server bend some kind of a protocol and send it
+Joan Masó (CREAF): Low level thing that you could do is to serve packet some kind of a description of the geospatial objects or maybe the pixels from the server, bend some kind of a protocol and send it
 
 186
 00:32:29.740 --> 00:32:47.110
-Joan Masó (CREAF): To the client, you would also think about creating some kind of a JavaScript code that will allow you to manipulate data and to present it into the screen or you could think that HTML.
+Joan Masó (CREAF): To the client, you would also think about creating some kind of a JavaScript code that will allow you to manipulate data and to present it into the screen, or you could think that HTML.
 
 187
 00:32:48.280 --> 00:32:49.840
-Joan Masó (CREAF): Good actually be able
+Joan Masó (CREAF): could actually be able
 
 188
 00:32:51.250 --> 00:33:01.450
-Joan Masó (CREAF): To do the mapping thing by itself. And we all know that my email is precisely that approach. But I wanted to present that in
+Joan Masó (CREAF): To do the mapping thing by itself. And we all know that MapML is precisely that approach. But I wanted to present that in
 
 189
 00:33:01.870 --> 00:33:08.800
-Joan Masó (CREAF): In perspective, because actually the first approach is what urgency web services has been doing for more than a decade.
+Joan Masó (CREAF): In perspective, because actually the first approach is what OGC web services has been doing for more than a decade.
 
 190
 00:33:09.370 --> 00:33:20.260
@@ -742,7 +742,7 @@ Joan Masó (CREAF): This idea of having these key value pair requests. And then 
 
 191
 00:33:21.010 --> 00:33:32.260
-Joan Masó (CREAF): That we are now transitioning into the open API world. And this is going to make some of these things are a little bit more easy because, for instance, we are
+Joan Masó (CREAF): That we are now transitioning into the OpenAPI world. And this is going to make some of these things are a little bit more easy because, for instance, we are
 
 192
 00:33:32.590 --> 00:33:44.920
@@ -750,23 +750,23 @@ Joan Masó (CREAF): Changing from an XML to the JSON that worked more naturally 
 
 193
 00:33:46.480 --> 00:33:55.870
-Joan Masó (CREAF): In the JavaScript world. You can you can use leave late you can use Google Maps, you know, the experience of doing that. It's
+Joan Masó (CREAF): In the JavaScript world. You can you can use Leaflet, you can use Google Maps, you know, the experience of doing that. It's
 
 194
 00:33:57.520 --> 00:34:04.510
-Joan Masó (CREAF): Easier, and in the low level awesome in this
+Joan Masó (CREAF): Easier, and in the low level, in this
 
 195
 00:34:05.800 --> 00:34:14.380
-Joan Masó (CREAF): You know down level. Here we have the map a male and female is just some elements into HTML page.
+Joan Masó (CREAF): You know down level here we have the MapML. MapML is just some elements into HTML page
 
 196
 00:34:14.860 --> 00:34:36.970
-Joan Masó (CREAF): That you could use to actually communicate them up to the client actually the GC has a standard is called always context. I didn't make a set of resources that you can see together in a in a client that plays a similar but different role is not, of course, an extension of
+Joan Masó (CREAF): That you could use to actually communicate them up to the client actually the OGC has a standard is called always context. I didn't make a set of resources that you can see together in a client that plays a similar but different role is not, of course, an extension of
 
 197
 00:34:38.170 --> 00:34:42.580
-Joan Masó (CREAF): Of it of HTML is actually an atom in colleague
+Joan Masó (CREAF): HTML is actually an atom in colleague
 
 198
 00:34:43.630 --> 00:34:59.380
@@ -778,15 +778,15 @@ Joan Masó (CREAF): Communicating services among them, but it's difficult to do 
 
 200
 00:35:10.960 --> 00:35:25.780
-Joan Masó (CREAF): builds these get came up request interpret the response, maybe a GMO maybe maybe a, you know, the file, something like that and then create some HTML content.
+Joan Masó (CREAF): builds these GET KVP request, interpret the response, maybe a GML maybe maybe a, you know, TIFF file, something like that and then create some HTML content.
 
 201
 00:35:26.740 --> 00:35:35.770
-Joan Masó (CREAF): Using these doors to be in order for the user to actually see something maybe you could use Canvas instead. But the idea is the thing.
+Joan Masó (CREAF): Using these JavaSCript to be in order for the user to actually see something maybe you could use Canvas instead. But the idea is the thing.
 
 202
 00:35:36.490 --> 00:35:47.380
-Joan Masó (CREAF): With the with the approach of open API. This is number two here in my slide you can automatically create some content from code from the open API document.
+Joan Masó (CREAF): With the with the approach of OpenAPI. This is number two here in my slide you can automatically create some content from code from the OpenAPI document.
 
 203
 00:35:47.980 --> 00:35:56.770
@@ -794,27 +794,27 @@ Joan Masó (CREAF): You'll have the ability to parse automatically JSON from Jav
 
 204
 00:35:57.370 --> 00:36:13.660
-Joan Masó (CREAF): And show the information that it's actually great for maximum flexibility and for combining several services together. Why these complicated. We all know that that you know you can take leave late. If you know a little bit of JavaScript.
+Joan Masó (CREAF): And show the information that it's actually great for maximum flexibility and for combining several services together. but this is complicated. We all know that that you know you can take Leaflet. If you know a little bit of JavaScript.
 
 205
 00:36:15.340 --> 00:36:29.230
-Joan Masó (CREAF): You can simply program using some sentences here and there in USD ML page and it's reasonably easy to do at least the minimum mob equalization, but with with my mail you have simply tax.
+Joan Masó (CREAF): You can simply program using some sentences here and there in your HTML page and it's reasonably easy to do at least the minimum map visualization, but with with MapML you have simply tax.
 
 206
 00:36:30.550 --> 00:36:43.870
-Joan Masó (CREAF): You you have elements that you add into your HTML describing what the map should have not how it should be presented. But what is it
+Joan Masó (CREAF): You you have elements that you add into your HTML describing what the map should have, not how it should be presented. But what is it
 
 207
 00:36:45.640 --> 00:36:54.430
-Joan Masó (CREAF): We have been exploring for more than four years now. The relation between the Odyssey standards on the on the map a male
+Joan Masó (CREAF): We have been exploring for more than four years now. The relation between the OGC standards on the on the MapML
 
 208
 00:36:56.920 --> 00:36:58.420
-Joan Masó (CREAF): Standard and we
+Joan Masó (CREAF): Standard and we,
 
 209
 00:37:01.060 --> 00:37:14.620
-Joan Masó (CREAF): Got I have collected these experiences of the different test beds and you can you can visit this URL there on the right, Hudson on the right hand side story and
+Joan Masó (CREAF):  I have collected these experiences of the different test beds and you can you can visit this URL there on the right, on the right hand side, sorry,
 
 210
 00:37:16.090 --> 00:37:18.880
@@ -822,35 +822,35 @@ Joan Masó (CREAF): It's difficult to summarize, so I will say that in
 
 211
 00:37:21.700 --> 00:37:23.950
-Joan Masó (CREAF): In in 17
+Joan Masó (CREAF): In in '17
 
 212
 00:37:25.090 --> 00:37:26.380
-Joan Masó (CREAF): What we lead was
+Joan Masó (CREAF): What we did was
 
 213
 00:37:27.550 --> 00:37:34.900
-Joan Masó (CREAF): Our first experience and we compare my email with all the various contexts in a dean, what we did was
+Joan Masó (CREAF): Our first experience and we compare MapML with all the various contexts. In '18, what we did was
 
 214
 00:37:36.130 --> 00:37:58.870
-Joan Masó (CREAF): To suggest that mother Mel should include your URL templates and actually these ended up into the into the mobile specification in desperate 15, what we did was, for instance, suggesting that or GC API features could never see a map ML content in the items part of the of the API.
+Joan Masó (CREAF): To suggest that MapML should include your URL templates and actually these ended up into the into the MapML specification in Testbed 15, what we did was, for instance, suggesting that OGC API features could never see a MapML content in the items part of the of the API
 
 215
 00:38:01.090 --> 00:38:15.580
-Joan Masó (CREAF): Implementation and in 16 in the diabetic thing that it's currently happening. We are more focused on on building clients that good show inputs of machine learning processes.
+Joan Masó (CREAF): Implementation and in 16 in the Testbed 16 that it's currently happening. We are more focused on on building clients that could show inputs of machine learning processes.
 
 216
 00:38:16.660 --> 00:38:26.050
-Joan Masó (CREAF): From my point of view, and I'm biased, it's all about tiles. So what do you see a map or Melchior exactly the same title model.
+Joan Masó (CREAF): From my point of view, and I'm biased, it's all about tiles. So what do you see a MapML is exactly the same title model.
 
 217
 00:38:26.920 --> 00:38:35.740
-Joan Masó (CREAF): You know, this is called diamond exit in the mathematical tiles called in a different system, but each kind of the same mother model defines for
+Joan Masó (CREAF): in OGC it's called Tile Matrix Set, in MapML it's called Tiled Coordinate Reference System, but each kind of the same. MapML defines four
 
 218
 00:38:36.190 --> 00:38:46.000
-Joan Masó (CREAF): Dial call the different systems. Well, in India GC, you could define that, how much you said that you like as far as you are able to describe it.
+Joan Masó (CREAF): Tiled Coordinate Reference Systems. Well in the OGC, you could define the Tile Matrix Set you like as far as you are able to describe it.
 
 219
 00:38:47.410 --> 00:38:49.240
@@ -858,31 +858,31 @@ Joan Masó (CREAF): Actually we make an effort
 
 220
 00:38:51.490 --> 00:39:09.610
-Joan Masó (CREAF): To allow for three of the four TCS as in math ML to be also in the OTC a standard called two dimensional automatic set next D. And those are the equivalence between the math ML names in the left hand side on the
+Joan Masó (CREAF): To allow for three of the four TCRS as in math ML to be also in the OGC a standard called Two Dimensional Matrix Set Annex D. And those are the equivalence between the MapML names in the left hand side on the
 
 221
 00:39:10.690 --> 00:39:12.640
-Joan Masó (CREAF): Odyssey names in the right
+Joan Masó (CREAF): OGC names in the right.
 
 222
 00:39:15.100 --> 00:39:21.880
-Joan Masó (CREAF): Tile sets. So we are talking about Dale said we are talking about collections of tiles that are going to be
+Joan Masó (CREAF): Tile sets. So we are talking about tile sets, we are talking about collections of tiles that are going to be
 
 223
 00:39:22.660 --> 00:39:44.860
-Joan Masó (CREAF): Partially presented to the to the user and will be kind of automatically replaced by others while user panel adult child sex are represented by URL templates, both in Odyssey API dolls and industrial TS as presented by government for and also in in my email.
+Joan Masó (CREAF): Partially presented to the to the user and will be kind of automatically replaced by others while user pans and zooms. Those are represented by URL templates, both in OGC API Tiles and WMTS as presented by Gobe before, and also in MapML.
 
 224
 00:39:46.030 --> 00:39:54.280
-Joan Masó (CREAF): So the same URL template this useful there, you'll see the representation in the urgency openapi
+Joan Masó (CREAF): So the same URL template is useful there, you'll see the representation in the OGC OpenAPI
 
 225
 00:39:56.860 --> 00:40:10.150
-Joan Masó (CREAF): To do the presentation. And you see below in an email document I took the liberty to actually replace the x, y and Zed Barrios why the valuables that usually
+Joan Masó (CREAF): georepresentation. And you see below in MapML document I took the liberty to actually replace the x, y and z variables why the valuables that usually
 
 226
 00:40:11.770 --> 00:40:20.560
-Joan Masó (CREAF): Usually using OTC I believe I'm not violating the the map umbrella standard by doing that. And these looks more similar.
+Joan Masó (CREAF): Usually used in OGC, I believe I'm not violating the MapML standard by doing that. And these looks more similar.
 
 227
 00:40:22.060 --> 00:40:22.870
@@ -890,59 +890,59 @@ Joan Masó (CREAF): So, actually.
 
 228
 00:40:24.820 --> 00:40:31.540
-Joan Masó (CREAF): Not the mail tiles are used, but my email doesn't specify how you will use them.
+Joan Masó (CREAF): In MapML tiles are used, but MapML doesn't specify how you will produce them.
 
 229
 00:40:32.140 --> 00:40:47.830
-Joan Masó (CREAF): In my email. There is no specification on how you will produce a mapping document. It's just telling you how I'm at the mill document should build like on the other hand, you do you see API tiles I collection can be distributed styles.
+Joan Masó (CREAF): In MapML there is no specification on how you will produce a mapping document, it's just telling you what a MapML should look like. On the other hand, in the OGC API tiles, the collection can be distributed as tiles.
 
 230
 00:40:48.880 --> 00:41:00.310
-Joan Masó (CREAF): So each style could be available as your as a URL responding to the URL template and India GC map tiles. There is a new thing that is called the title said meta data document.
+Joan Masó (CREAF): So each style could be available as your as a URL responding to the URL template and the OGC map tiles, there is a new thing that is called the tileset metadata document.
 
 231
 00:41:00.790 --> 00:41:09.910
-Joan Masó (CREAF): That it's going to be explaining after that and I will try to convince you that actually the map amount ease at I'll send middle they document.
+Joan Masó (CREAF): That it's going to be explained after that and I will try to convince you that actually the MapML is a tileset metadata document.
 
 232
 00:41:10.300 --> 00:41:22.090
-Joan Masó (CREAF): First let me say that didn't do this API guys will have several other sources that are listed here. And the last one allows us to connect or to transform our collection into tiles.
+Joan Masó (CREAF): First let me say that the OGC API will have several other sources that are listed here. And the last one allows us to connect or to transform our collection into tiles.
 
 233
 00:41:22.960 --> 00:41:36.010
-Joan Masó (CREAF): But what I would like to present to you is the style said object. And this little set of Ziggy's in these particular path of the of the API representation you bet on a JSON document describing the title said
+Joan Masó (CREAF): But what I would like to present to you is the tileset object. And this tileset object is in these particular path of the of the API representation, you have a JSON document describing the tileset
 
 234
 00:41:36.550 --> 00:41:43.150
-Joan Masó (CREAF): A bit a bit of a de telematics a definition automatic set limits are your item plate and
+Joan Masó (CREAF): A bit of metadata, TileMatrixSet definition, TileMatrixSetLimits, URI template
 
 235
 00:41:43.780 --> 00:41:52.870
-Joan Masó (CREAF): Maybe some description of the content of the tiles and this is I you ML diagram of how how it looks like. But actually, as I say, is
+Joan Masó (CREAF): Maybe some description of the content of the tiles, and this is a diagram of how how it looks like. But actually, as I say, is
 
 236
 00:41:53.620 --> 00:42:02.710
-Joan Masó (CREAF): Going to be a JSON file, but he tried to compare that another male is actually something that does a very similar thing.
+Joan Masó (CREAF): Going to be a JSON file, but if you tried to compare that MapML is actually something that does a very similar thing.
 
 237
 00:42:03.070 --> 00:42:11.350
-Joan Masó (CREAF): It provides some bit of metadata that I feel there, it points to the time it said definition or them dial in this case.
+Joan Masó (CREAF): It provides some bit of metadata, a title there, it points to the TileMatrixSetDefinition, or tile in this case.
 
 238
 00:42:11.710 --> 00:42:25.030
-Joan Masó (CREAF): It's a term limits. For instance, the maximum zoom will be 15 and it points to a URL template. As you can see there. So, I mean, the similarities is so clear that, actually, I
+Joan Masó (CREAF): It's states some limits, for instance, the maximum zoom will be 15, and it points to a URL template as you can see there. So, I mean, the similarities is so clear that, actually, I
 
 239
 00:42:27.010 --> 00:42:34.060
-Joan Masó (CREAF): You know I manipulated the OTC API allows example that I'm using it.
+Joan Masó (CREAF): You know I manipulated the OGC API Tile example that I'm using it
 
 240
 00:42:36.070 --> 00:42:49.180
-Joan Masó (CREAF): In the, in the, you have not in the swagger hub. I'm just to fill that actually apart from the JSON representation do we could have a map a male representation. So maybe because I cannot use
+Joan Masó (CREAF): In the Github, no, in the SwaggerHub. Just to tell, that actually apart from the JSON representation, we could have a MapML representation. So maybe because I cannot use
 
 241
 00:42:49.900 --> 00:42:58.330
-Joan Masó (CREAF): The actual media type format the mail, because then the swagger hub doesn't recognize that this is the XML but or or micro XML.
+Joan Masó (CREAF): The actual media type for MapML, because then the SwaggerHub doesn't recognize that this is the XML, or or micro XML.
 
 242
 00:42:59.380 --> 00:43:03.730
@@ -954,23 +954,23 @@ Joan Masó (CREAF): That really really
 
 244
 00:43:08.320 --> 00:43:22.690
-Joan Masó (CREAF): Makes this relation between mapper mail and an odyssey API as possible. So in conclusion, mother mail is the simplest way for adding geospatial information in web browser that I know and mother mail makes us
+Joan Masó (CREAF): Makes this relation between MapML and an OGC API Tiles possible. So in conclusion, MapML is the simplest way for adding geospatial information in web browser that I know and MapML makes use
 
 245
 00:43:24.040 --> 00:43:24.940
-Joan Masó (CREAF): Of the oddity
+Joan Masó (CREAF): Of the OGC
 
 246
 00:43:26.230 --> 00:43:28.960
-Joan Masó (CREAF): Or can make use of all the urgency API dials.
+Joan Masó (CREAF): Tiles
 
 247
 00:43:30.220 --> 00:43:44.170
-Joan Masó (CREAF): To make it the urgency KPIs tiles you simpler in browser. So it provides a way to communicate to have the ABA resources. The title said on the URL template tiles to the browser itself.
+Joan Masó (CREAF): To make it the OGC API Tiles use simpler in browser. So it provides a way to communicate two of the API resources (tileset and tile URI templates) to the browser itself.
 
 248
 00:43:45.250 --> 00:43:55.540
-Joan Masó (CREAF): So the Odyssey API tiles provides a way to automatically generate mob ML documents, or at least that is our resumes that could have a representation in that
+Joan Masó (CREAF): So the OGC API tiles provides a way to automatically generate MapML documents, or at least that is our assumes that could have a representation in that
 
 249
 00:43:56.590 --> 00:43:57.130
@@ -978,15 +978,15 @@ Joan Masó (CREAF): Form.
 
 250
 00:43:58.600 --> 00:44:08.140
-Joan Masó (CREAF): And do GC APA style could become the CGI of the mob ML form. So, actually.
+Joan Masó (CREAF): And the OGC API style could become the CGI of the MapML form. So, actually.
 
 251
 00:44:08.590 --> 00:44:21.400
-Joan Masó (CREAF): What I'm suggesting here in this presentation is that the urgency API is part one to consider to describe how to generate map ML documents as an alternate the format to the current JSON title set
+Joan Masó (CREAF): What I'm suggesting here in this presentation is that the OGC API is part one to consider to describe how to generate MapML documents as an alternate the format to the current JSON tile set
 
 252
 00:44:21.760 --> 00:44:34.900
-Joan Masó (CREAF): Meta data that needs on the urgency to the time magic set the standard and actually we are also considered on all of the out of the format for vector tiles for my box vector tiles of the skull tiles as
+Joan Masó (CREAF): Meta data that needs on the OGC to the tile matrix set standard and actually we are also considering an alternative format for vector tiles for MapBox vector tiles that is called TileJSON
 
 253
 00:44:35.980 --> 00:44:36.610
@@ -994,15 +994,15 @@ Joan Masó (CREAF): So, thank you.
 
 254
 00:44:38.530 --> 00:44:48.670
-Peter Rushforth: Thank you very much to one. So very interesting and would be great to connect the monumental effort of the OTC API work with the
+Peter Rushforth: Thank you very much Joan. So very interesting and would be great to connect the monumental effort of the OGC API work with the
 
 255
 00:44:49.690 --> 00:44:55.420
-Peter Rushforth: Browser community through a media type. So with that little move on to
+Peter Rushforth: Browser community through a media type. So with that we'll move on to
 
 256
 00:44:56.500 --> 00:44:58.570
-Peter Rushforth: Jonathan rules of GLC
+Peter Rushforth: Jonathan Moules of GeoSeer
 
 257
 00:45:00.130 --> 00:45:04.330
@@ -1010,7 +1010,7 @@ Peter Rushforth: Which is a Geospatial web services search engine and he's got a
 
 258
 00:45:06.070 --> 00:45:14.830
-Peter Rushforth: Few points to make about about his experience in developing that search engine. So Jonathan. Thank you very much and pass it over to you.
+Peter Rushforth: Few points to make about about his experience in developing that search engine. So Jonathan. Thank you very much and I'll pass it over to you.
 
 259
 00:45:16.150 --> 00:45:17.530
@@ -1026,15 +1026,15 @@ Jonathan: Screen anyway.
 
 262
 00:45:24.790 --> 00:45:34.540
-Jonathan: So good. Excellent. Thank you. Ah, hello, everyone. Welcome to Edinburgh. Imagine your hair gray sky green buildings.
+Jonathan: So good. Excellent. Thank you. Ah, hello, everyone. Welcome to Edinburgh. Imagine your hair gray sky gray buildings.
 
 263
 00:45:35.560 --> 00:45:37.810
-Jonathan: That's Edinburgh. I've been very nice buildings to be
+Jonathan: That's Edinburgh. They're very nice buildings to be fair.
 
 264
 00:45:38.950 --> 00:45:47.350
-Jonathan: So we've set the scene. I am here to talk to you about some of the limitations to the use of AGC spatial web services.
+Jonathan: So we've set the scene. I am here to talk to you about some of the limitations to the use of OGC spatial web services.
 
 265
 00:45:51.130 --> 00:45:57.520
@@ -1042,7 +1042,7 @@ Jonathan: Specifically, the discovery problem. How do you find the services, wha
 
 266
 00:45:58.330 --> 00:46:11.950
-Jonathan: To wit. I've created GSA, which is a search engine for services and then some thoughts and conclusions around such finding the services and what the problems currently are.
+Jonathan: To wit. I've created GeoSeer, which is a search engine for such services and then some thoughts and conclusions around such finding the services and what the problems currently are.
 
 267
 00:46:13.900 --> 00:46:19.510
@@ -1054,27 +1054,27 @@ Jonathan: Yeah, so
 
 269
 00:46:24.520 --> 00:46:39.640
-Jonathan: We've lost the page. So specifically, we're talking about the services w w w MTS WCS go be has already talked about them. They're all OTC services. They're all lots and lots of them on the Internet Question is how do you find them.
+Jonathan: We've lost the page. So specifically, we're talking about the services WMS, WMTS, WFS, WCS, Gobe has already talked about them. They're all OGC services. They're all lots and lots of them on the Internet. Question is how do you find them?
 
 270
 00:46:41.980 --> 00:46:53.680
-Jonathan: You can try Googling but it's difficult. There are lots of portals. So the primary way to really find these things is with photos. Probably the portals is there are a lot of them.
+Jonathan: You can try Googling but it's difficult. There are lots of portals. So the primary way to really find these things is with photos. The problem with the portals is there are a lot of them.
 
 271
 00:46:54.580 --> 00:47:07.420
-Jonathan: So I am aware of about 200 see can portals and 150 CSW portals. There is some overlap between them. But the short version is there are literally hundreds of these
+Jonathan: So I am aware of about 200 CKAN portals and 150 CSW portals. There is some overlap between them. But the short version is there are literally hundreds of these.
 
 272
 00:47:07.840 --> 00:47:24.400
-Jonathan: On top of that, you've got inspire portal and then all the art GIS ones as well. There are a lot of them. And the interesting thing about these is they don't actually have many of the services on them, but we'll get to that in a bit.
+Jonathan: On top of that, you've got Inspire portal and then all the ArcGIS ones as well. There are a lot of them. And the interesting thing about these is they don't actually have many of the services on them, but we'll get to that in a bit.
 
 273
 00:47:27.820 --> 00:47:37.570
-Jonathan: So that brings us on to juicy juicy is designed to help you try and find services. Great. This isn't actually talk about juicer, per se, but the data that I've discovered
+Jonathan: So that brings us on to GeoSeer, GeoSeer is designed to help you try and find services. Great. This isn't actually a talk about GeoSeer, per se, but the data that I've discovered
 
 274
 00:47:38.110 --> 00:47:47.020
-Jonathan: Or we just got from the creation of juicer and the juicer analysis to see from having this huge index on the services juicer is a search engine.
+Jonathan: Or we've discovered from the creation of GeoSeer and the GeoSeer analysis to see from having this huge index on the services. So GeoSeer is a search engine.
 
 275
 00:47:47.950 --> 00:48:01.120
@@ -1082,7 +1082,7 @@ Jonathan: For the services, the way it works behind the scenes, very short versi
 
 276
 00:48:02.260 --> 00:48:11.920
-Jonathan: Some all the metadata lives there optimistic right there and present turns it into basically a plastic Search Database behind it.
+Jonathan: Some all the metadata lives there, optimistic right therm and present turns it into basically a plastic Search Database behind it.
 
 277
 00:48:13.360 --> 00:48:15.010
@@ -1094,15 +1094,15 @@ Jonathan: So,
 
 279
 00:48:18.580 --> 00:48:23.800
-Jonathan: What the results of that well GSA has pined it
+Jonathan: What the results of that well GeoSeer has pined it
 
 280
 00:48:25.180 --> 00:48:34.570
-Jonathan: has managed to find 5000 different hosts or data and our hostess basically domain name example.com G I stuck on two different domains, two different hosts.
+Jonathan: has managed to find 5000 different hosts or data and our host is basically domain name example.com, arcgis.com, two different domains, two different hosts.
 
 281
 00:48:35.740 --> 00:48:50.110
-Jonathan: USGS is one host usda.gov is one host. I forgot the top of my head, where the subdomains counters have per host. But either way, there are many there are 5000 of them. As you can see here this is data from December.
+Jonathan: USGS is one host, usda.gov is one host. I forgot the top of my head, where the subdomains counters have per host. But either way, there are many there are 5000 of them. As you can see here this is data from December.
 
 282
 00:48:51.130 --> 00:48:57.160
@@ -1110,59 +1110,47 @@ Jonathan: That she served as even well it's about the same number of hosts. Now,
 
 283
 00:48:57.460 --> 00:48:59.410
-Peter Rushforth: John or your slides advancing
+Peter Rushforth: John, are your slides advancing?
 
 284
 00:49:01.000 --> 00:49:03.700
-Jonathan: They should be. Which one are you looking at
+Jonathan: They should be. Which one are you looking at?
 
 285
 00:49:04.600 --> 00:49:08.890
-Peter Rushforth: We're looking at the w w w MTS and WCS
+Peter Rushforth: We're looking at the WMS, WMTS, WFS and WCS slide
 
 286
 00:49:10.720 --> 00:49:16.990
-Jonathan: Yeah computer's broken. Yes, I've got a few slides. Let's just stop the screen sharing and restarted.
+Jonathan: Yeah computer's broken. Yes, I've got a few slides. Let's just stop the screen sharing and restart it.
 
 287
 00:49:26.170 --> 00:49:27.250
-Jonathan: Have I progressed.
+Jonathan: Have I progressed?
 
 288
 00:49:28.870 --> 00:49:29.530
-Jonathan: Hasn't changed.
+Jonathan: Has it changed?
 
 289
 00:49:29.950 --> 00:49:31.030
-Peter Rushforth: Yeah yeah
-
-290
-00:49:31.210 --> 00:49:32.710
-Peter Rushforth: Excellent. Yo portals.
+Peter Rushforth: Yeah yeah, we can see portals.
 
 291
 00:49:33.550 --> 00:49:42.790
-Jonathan: Excellent. So yes, this is what I was talking about when there are like 200 portals and so you've got your 200 see can portals and 150 CSW portals.
+Jonathan: Excellent. So yes, this is what I was talking about when there are like 200 portals and so you've got your 200 CKAN portals and 150 CSW portals.
 
 292
 00:49:48.850 --> 00:49:54.070
-Jonathan: This is just a screenshot GSA when I was talking about that Scott capabilities document was just XML.
-
-293
-00:49:54.160 --> 00:49:54.910
-Peter Rushforth: Everyone loves that.
+Jonathan: This is just a screenshot GeoSeer when I was talking about that, get capabilities document was just XML. Everyone loves that.
 
 294
-00:49:55.180 --> 00:49:55.750
-Jonathan: So this was
-
-295
-00:49:56.170 --> 00:49:56.890
-Jonathan: Just talking about
+00:49:55.180 --> 00:49:56.890
+Jonathan: So this was what I was just talking about.
 
 296
 00:49:57.310 --> 00:50:00.820
-Peter Rushforth: Maybe I think the when you go into
+Peter Rushforth: Maybe I think the, when you go into
 
 297
 00:50:02.800 --> 00:50:07.150
@@ -1174,7 +1162,7 @@ Yep.
 
 299
 00:50:08.860 --> 00:50:09.220
-Jonathan: Better
+Jonathan: Better?
 
 300
 00:50:09.880 --> 00:50:10.210
@@ -1182,7 +1170,7 @@ Yeah.
 
 301
 00:50:11.860 --> 00:50:23.410
-Jonathan: Lieber office seems to be quite broken presenting stuff. My goodness. Open Source Big fan, but this is better. So this is hopefully showing you the number of hosts and number services and stuff.
+Jonathan: Libre office seems to be quite for broken presenting stuff, ironic. My goodness. Big fan of Open Source. So this is hopefully showing you the number of hosts and number of services and stuff.
 
 302
 00:50:25.810 --> 00:50:26.590
@@ -1194,7 +1182,7 @@ Jonathan: So,
 
 304
 00:50:30.070 --> 00:50:34.270
-Jonathan: Yeah, sorry. Well as like good thing. This is a lightning talks bad time for technical problems.
+Jonathan: Yeah, sorry. Well as like good thing. This is a lightning talks, so bad time for technical problems.
 
 305
 00:50:36.130 --> 00:50:41.020
@@ -1202,23 +1190,23 @@ Jonathan: The number of. You can see the weirdness going on there with open. I d
 
 306
 00:50:43.930 --> 00:50:54.430
-Jonathan: Technology right that's what we all do the number of hosts. So we've got 5000 and Jesse, you can see that if you look at all of the see can portals minus the USA one because it's different because it is
+Jonathan: Technology right that's what we all do the number of hosts. So we've got 5000 on GeoSeer you can see that if you look at all of the CKAN portals minus the USA one because it's different because it is
 
 307
 00:50:55.780 --> 00:51:09.160
-Jonathan: You've only got 5% of the total number of hosts, and about 3% of the total number of data sets are available via all of those 200 see can portals as compared to
+Jonathan: You've only got 5% of the total number of hosts, and about 3% of the total number of data sets are available via all of those 200 CKAN portals as compared to
 
 308
 00:51:10.180 --> 00:51:30.130
-Jonathan: Being on set, you know, CSW 6% even if you to manually go through those 315 portals, you would only find a small fraction of the data that is actually out there. Now there's own. These are all of these numbers of services that actually out there and actually live and actually current
+Jonathan: Being on GeoSeer, you know, CSW 6%, even if you to manually go through those 350 portals, you would only find a small fraction of the data that is actually out there. Now there's own. These are all of these numbers of services that actually out there and actually live and actually current
 
 309
 00:51:31.180 --> 00:51:36.250
-Jonathan: So they should respond. They did respond to get capabilities request. So that actually that
+Jonathan: So they should respond. They did respond to get capabilities request. So that actually there
 
 310
 00:51:38.470 --> 00:51:50.620
-Jonathan: The stuff on the portal is portals, of course, don't necessarily always have current live data. So the actual number of claims hosts may be higher, but this is number, it's actually there so you can see the problem with portals is
+Jonathan: The stuff on the portal is portals, of course, don't necessarily always have current live data. So the actual number of claimed hosts may be higher, but this is number, it's actually there so you can see the problem with portals is
 
 311
 00:51:52.000 --> 00:51:54.580
@@ -1226,19 +1214,15 @@ Jonathan: Well, they don't really have much on them.
 
 312
 00:51:56.290 --> 00:51:59.200
-Jonathan: And of course there are so many, so there's a blog post about it.
+Jonathan: And of course there are so many, so there's an entire blog post about it.
 
 313
 00:52:02.380 --> 00:52:19.210
-Jonathan: So let's move on to other problems metadata. Everyone loves talking about fact that everyone feels and metadata. This is the only slide on it. But the short version is they really don't. And if you actually look at, say, the blue bits are decent metadata that's
+Jonathan: So let's move on to other problems metadata. Everyone loves talking about fact that everyone fills in metadata. This is the only slide on it. But the short version is they really don't. And if you actually look at, say, the blue bits are decent metadata that's
 
 314
 00:52:19.570 --> 00:52:20.560
-Peter Rushforth: 50 characters.
-
-315
-00:52:21.280 --> 00:52:25.960
-Peter Rushforth: 10 words. Sorry. JOHN the slide for mine is still on.
+Peter Rushforth: I think, sorry, John the slide for mine is still on.
 
 316
 00:52:27.250 --> 00:52:28.030
@@ -1246,7 +1230,7 @@ Peter Rushforth: Number nine.
 
 317
 00:52:29.110 --> 00:52:31.060
-Jonathan: Number nine is going on here.
+Jonathan: Oh dear, what is going on here.
 
 318
 00:52:32.440 --> 00:52:36.400
@@ -1266,15 +1250,15 @@ Jonathan: That
 
 322
 00:52:42.730 --> 00:52:46.150
-Peter Rushforth: Well, actually, I know you're on 1010 according to my screen.
+Peter Rushforth: Well, actually, I know you're on 10 according to my screen.
 
 323
 00:52:47.080 --> 00:52:58.450
-Jonathan: Brilliant. Okay. Yep. So 10 is the data set meta data. Keep going on this, tell me if it doesn't update. I'll tell you when I do the next slide. So part of fun.
+Jonathan: Brilliant. Okay. Yep. So 10 is the data set meta data. Keep going on this, tell me if it doesn't update. I'll tell you when I do the next slide. It's all part of the fun.
 
 324
 00:53:01.180 --> 00:53:06.490
-Jonathan: Data Set meta data. So basically, no one fills in for WNs there's
+Jonathan: Data Set meta data. So basically, no one fills in for WMS there's
 
 325
 00:53:07.120 --> 00:53:08.410
@@ -1290,7 +1274,7 @@ Jonathan: Less than half of the services have any
 
 328
 00:53:15.250 --> 00:53:22.630
-Jonathan: Day filled in the abstract. So how are you going to find the services are out there, and it's just not that
+Jonathan: Metadata filled in the abstract. So how are you going to find the services are out there, and it's just not there.
 
 329
 00:53:24.310 --> 00:53:24.850
@@ -1302,7 +1286,7 @@ Jonathan: Hopefully a map.
 
 331
 00:53:28.120 --> 00:53:28.690
-Peter Rushforth: And
+Peter Rushforth: Hmmm,
 
 332
 00:53:30.190 --> 00:53:31.330
@@ -1322,7 +1306,7 @@ Jonathan: I have to click a lot apparently before zoom picks it up.
 
 336
 00:53:40.120 --> 00:53:59.320
-Jonathan: Yeah, so this is global coverage of where all these data sets are mostly Europe, these, this is just the title of in map of interest, mostly Europe so be quite a few North America. There's a hotspot over the Belgium and France, Germany, try point
+Jonathan: Yeah, so this is global coverage of where all these data sets are, mostly Europe, these, this is just the title of in map of interest, mostly Europe so be quite a few North America. There's a hotspot over the Belgium and France, Germany, try point
 
 337
 00:54:00.370 --> 00:54:04.570
@@ -1334,19 +1318,19 @@ Hotspots
 
 339
 00:54:08.770 --> 00:54:09.400
-Jonathan: URL.
+Jonathan: at that URL.
 
 340
 00:54:11.980 --> 00:54:12.910
-Jonathan: Slide going to click a lot
+Jonathan: Next Slide, going to click a lot
 
 341
 00:54:13.750 --> 00:54:23.920
-Jonathan: Here we go, so juicy usage. So despite you say having a huge number of index of being completely free to use doesn't even have adverts
+Jonathan: Here we go, so GeoSeer usage. So despite GeoSeer having a huge number of index of being completely free to use, doesn't even have adverts
 
 342
 00:54:24.520 --> 00:54:40.180
-Jonathan: And there's actually very little uptake of it, which indicates there isn't much call for searching for the services in the first place. So we've got 2 million data sets and juicy as only gets around 1500 searches per month.
+Jonathan: there's actually very little uptake of it, which indicates there isn't much call for searching for the services in the first place. So we've got 2 million data sets and GeoSeer only gets around 1500 searches per month.
 
 343
 00:54:41.320 --> 00:54:44.860
@@ -1354,7 +1338,7 @@ Jonathan: So all of these data sets are out there. They're all published
 
 344
 00:54:46.420 --> 00:55:07.090
-Jonathan: Huge amounts of money being spent to publish them, but just collect them publish them alone inspire, for example, the end result is that doesn't seem to be a huge amount of uptake in actually collect the in people finding these data sets or being interested in finding these data sets.
+Jonathan: Huge amounts of money being spent to publish them, but just collect them publish them alone, Inspire, for example, the end result is that doesn't seem to be a huge amount of uptake in actually collect, uh, in people finding these data sets or being interested in finding these data sets.
 
 345
 00:55:08.920 --> 00:55:12.340
@@ -1362,7 +1346,7 @@ Jonathan: Which brings us on to the conclusions.
 
 346
 00:55:14.830 --> 00:55:15.280
-Jonathan: Around that
+Jonathan: Click around there
 
 347
 00:55:16.300 --> 00:55:18.640
@@ -1382,23 +1366,19 @@ Jonathan: There doesn't seem to be much call for service and data discovery, it'
 
 351
 00:55:35.320 --> 00:55:39.580
-Jonathan: Most of services that have ever existed doing it now defunct
+Jonathan: Most of services that have ever existed doing it are now defunct
 
 352
-00:55:43.270 --> 00:55:43.630
-Jonathan: Slide
-
-353
-00:55:44.050 --> 00:55:44.500
-Advanced
+00:55:43.270 --> 00:55:44.500
+I don't think the slide advanced.
 
 354
 00:55:45.730 --> 00:55:51.280
-Jonathan: Now this is just thoughts. In conclusion, same effectively reading them out. So you're not missing a huge amount
+Jonathan: No? This is just thoughts and conclusions, I'm effectively reading them out. You're not missing a huge amount.
 
 355
 00:55:53.410 --> 00:55:56.920
-Jonathan: Yeah. Zoom Plus Lieber office is not a combination you want to use.
+Jonathan: Yeah. Zoom Plus Libre office is not a combination you want to use.
 
 356
 00:55:58.780 --> 00:56:02.260
@@ -1418,15 +1398,15 @@ Jonathan: That I suppose I want to ask or to put forward is how many of these se
 
 360
 00:56:26.710 --> 00:56:36.100
-Jonathan: Isn't just to share and how many exists, just to host data for their own data portals. So if you build a web app you happen to come with the web app happens to come with a WNs
+Jonathan: Isn't just to share and how many exists, just to host data for their own data portals. So if you build a web app you happen to come with the web app happens to come with a WMS
 
 361
 00:56:37.600 --> 00:56:46.240
-Jonathan: That bill that's just deployed for its own portal as compared to ones that are explicitly designed for is all our data habits about it.
+Jonathan: That built, that's just deployed for its own portal as compared to ones that are explicitly designed for is all our data habits about it.
 
 362
 00:56:48.820 --> 00:56:55.420
-Jonathan: Doesn't even if there is much of that explicit sharing that doesn't seem too much explicit usage based on juices.
+Jonathan: Doesn't even if there is much of that explicit sharing that doesn't seem too much explicit usage based on GeoSeer
 
 363
 00:56:56.470 --> 00:57:05.950
@@ -1446,11 +1426,11 @@ Jonathan: Struggling get bugs. Yes.
 
 367
 00:57:10.930 --> 00:57:30.010
-Peter Rushforth: You very much. I mean a partner, aside from the technical bugs, which are always a bit confounding when you're live for the presenter, but not so much for us. I mean, I think we got the idea you presented some very interesting food for thought and thank you for that.
+Peter Rushforth: You very much. I mean apart, aside from the technical bugs, which are always a bit confounding when you're live for the presenter, but not so much for us. I mean, I think we got the idea you presented some very interesting food for thought and thank you for that.
 
 368
 00:57:31.300 --> 00:57:31.750
-Thank you.
+Jonathan: Thank you.
 
 369
 00:57:33.400 --> 00:57:36.730
@@ -1486,11 +1466,11 @@ Ted Guild: Few minutes if necessary.
 
 377
 00:58:06.880 --> 00:58:16.810
-Peter Rushforth: Yeah. Yeah, true. Probably the panel is not going to go too long. All right. So Tom and agile and agile, San Francisco, could you
+Peter Rushforth: Yeah. Yeah, true. Probably the panel is not going to go too long. All right. So Tom and Angelos and Francesco, could
 
 378
 00:58:17.920 --> 00:58:21.970
-Peter Rushforth: I want one of you share your screen and give us a demo that you were proposing.
+Peter Rushforth:  one of you share your screen and give us a demo that you were proposing.
 
 379
 00:58:25.510 --> 00:58:27.760
@@ -1502,7 +1482,7 @@ Francesco Bartoli: To share my screen.
 
 381
 00:59:31.330 --> 00:59:31.720
-Francesco Bartoli: D.
+Francesco Bartoli: Just a moment.
 
 382
 01:00:21.250 --> 01:00:21.880
@@ -1510,15 +1490,11 @@ Francesco Bartoli: Hello.
 
 383
 01:00:23.770 --> 01:00:24.880
-Bryan Haberberger: Are you seeing my screen.
+Francesco Bartoli: Are you seeing my screen.
 
 384
 01:00:25.780 --> 01:00:26.260
-Not yet.
-
-385
-01:00:29.500 --> 01:00:30.040
-Peter Rushforth: Hello, no.
+Peter Rushforth: Not yet.
 
 386
 01:00:31.150 --> 01:00:34.150
@@ -1530,31 +1506,31 @@ Francesco Bartoli: No, I'm sharing
 
 388
 01:00:37.360 --> 01:00:38.500
-Peter Rushforth: Okay, no, I am
+Peter Rushforth: Okay, now I am
 
 389
 01:00:39.730 --> 01:01:09.100
-Francesco Bartoli: Okay, cool. Now this is the landing page by geo API we this is a local obviously obviously this is a local instance JUST TO GIVE YOU THE MORE DETAIL, DETAIL about this permission from Tom. We have two resources. One, it's the now famous large lakes.
+Francesco Bartoli: Okay, cool. Now this is the landing page of pygeoapi, we-, this is a local obviously obviously this is a local instance just to give you more detail, detail about this permission from Tom. We have two resources. One, it's the now famous large lakes.
 
 390
 01:01:10.210 --> 01:01:39.610
-Francesco Bartoli: The lake, sir, is rules the lakes layer as to kind of specification under the providers. One is the feature the GAC API feature. And the other one is the Odyssey API tiles. As you can see here the, the actual data for the
+Francesco Bartoli: The lake, sir, is rules the lakes layer as two kind of specification under the providers. One is the feature the GAC API feature. And the other one is the OGC API tiles. As you can see here the, the actual data for the
 
 391
 01:01:40.930 --> 01:01:53.620
-Francesco Bartoli: Odyssey API tire and point comes from a local instance, a local object store provided by a menial server. So we have
+Francesco Bartoli: OGC API tile and point comes from a local instance, a local object store provided by a menial server. So we have
 
 392
 01:01:54.790 --> 01:02:01.750
-Francesco Bartoli: My books vector tiles loaded into an object store and provided
+Francesco Bartoli: MapBox vector tileset loaded into an object store and provided
 
 393
 01:02:02.770 --> 01:02:09.460
-Francesco Bartoli: Locally to configure it to the baiju API. So
+Francesco Bartoli: Locally to configure it to the pygeoapi API. So
 
 394
 01:02:10.660 --> 01:02:23.020
-Francesco Bartoli: Essentially from the landing page, we can go through the collection, we can explore all the collection in the assistance and if you
+Francesco Bartoli: Essentially from the landing page, we can go through the collection, we can explore all the collection in this instance and if you
 
 395
 01:02:24.580 --> 01:02:25.480
@@ -1562,39 +1538,39 @@ Francesco Bartoli: If you go
 
 396
 01:02:26.800 --> 01:02:55.060
-Francesco Bartoli: Over the large lakes year there is the an introduction HTML. These is the HTML. HTML representation. But essentially, on the link in the upper right side, we have also the JSON representation and the JSON LD. So essentially if you want to
+Francesco Bartoli: Over the large lakes year there is the an introduction HTML. These is the HTML representation. But essentially, on the link in the upper right side, we have also the JSON representation and the JSON LD. So essentially if you want to
 
 397
 01:02:56.440 --> 01:03:10.180
-Francesco Bartoli: To go to the actual vector tiles representation for larger large lakes. We can follow these links and we open up
+Francesco Bartoli: To go to the actual vector tiles representation for large lakes. We can follow these links and we open up
 
 398
 01:03:11.080 --> 01:03:25.450
-Francesco Bartoli: The HTML representation on the maps which dynamically load and proxy the di the vector tiles. So the my books back toward sites.
+Francesco Bartoli: The HTML representation on the maps which dynamically load and proxy the vector tiles. So the MapBox vector tiles
 
 399
 01:03:26.200 --> 01:03:54.220
-Francesco Bartoli: Which are provided by the backend server. And for me, we have also the meta data presentation in the tile JSON format. So if you go to that link a new HTML page is Chauvet and obviously there is also it's JSON representation and
+Francesco Bartoli: Which are provided by the backend server. And from here, we have also the meta data representation in the tile JSON format. So if you go to that link a new HTML page is shown and obviously there is also it's JSON representation and
 
 400
 01:03:55.270 --> 01:03:59.200
-Francesco Bartoli: Just to reinforce the concept that a john
+Francesco Bartoli: Just to reinforce the concept that John
 
 401
 01:04:00.250 --> 01:04:07.090
-Francesco Bartoli: told you before, there is obviously year the JSON representation of the
+Francesco Bartoli: told you before, there is obviously here the JSON representation of the
 
 402
 01:04:08.110 --> 01:04:17.620
-Francesco Bartoli: Vector of. Yeah, or the vector tiles and points. So you can have the actual you arrive and played
+Francesco Bartoli: Vector, yeah, of the vector tiles and points. So you can have the actual URI template
 
 403
 01:04:18.730 --> 01:04:26.500
-Francesco Bartoli: With the different tile Metrix set ID and where that title magic set ID.
+Francesco Bartoli: With the different Tile Matrix Set ID and where that Tile Matrix Set ID resides,
 
 404
 01:04:27.580 --> 01:04:33.850
-Francesco Bartoli: resides in terms of actual JSON content and
+Francesco Bartoli: resides in terms of actual JSON content and tht,
 
 405
 01:04:37.630 --> 01:04:51.430
@@ -1610,11 +1586,11 @@ Francesco Bartoli: Actual
 
 408
 01:04:57.850 --> 01:05:13.090
-Francesco Bartoli: Or GC API feature HTML representation here you have the an overview already in provided in HTML markup and essentially the
+Francesco Bartoli: OGC API feature HTML representation here you have the, an overview already in provided in HTML map and essentially the
 
 409
 01:05:15.580 --> 01:05:23.140
-Francesco Bartoli: Nice HTML. HTML representation of the records and all of these can be also
+Francesco Bartoli: Nice HTML representation of the records and all of these can be also
 
 410
 01:05:25.150 --> 01:05:35.200
@@ -1622,7 +1598,7 @@ Francesco Bartoli: Correlate as a JSON representation which provides the feature
 
 411
 01:05:36.280 --> 01:05:36.940
-Francesco Bartoli: bailouts.
+Francesco Bartoli: payload.
 
 412
 01:05:38.650 --> 01:05:41.320
@@ -1630,7 +1606,7 @@ Francesco Bartoli: And I think it's
 
 413
 01:05:42.640 --> 01:05:44.110
-Francesco Bartoli: That seat. I don't know if
+Francesco Bartoli: That's it. I don't know if
 
 414
 01:05:45.310 --> 01:05:47.980
@@ -1638,19 +1614,19 @@ Francesco Bartoli: There is some question about
 
 415
 01:05:49.360 --> 01:05:57.970
-Francesco Bartoli: By GOP I in general or the vector style implementation. I'm open to to answer.
+Francesco Bartoli: pygeoapi in general or the vector style implementation. I'm open to to answer.
 
 416
 01:06:08.410 --> 01:06:11.170
-Francesco Bartoli: I don't tell you, Peter.
+Francesco Bartoli: I don't hear you, Peter.
 
 417
 01:06:16.510 --> 01:06:17.380
-I'm going to stop.
+I'm going to stop sharing.
 
 418
 01:06:26.950 --> 01:06:27.760
-Ted Guild: Hearing Peter
+Ted Guild: Also not hearing Peter,
 
 419
 01:06:28.900 --> 01:06:30.610
@@ -1662,7 +1638,7 @@ Ted Guild: Shoppers in this panel on
 
 421
 01:06:36.340 --> 01:06:38.200
-Ted Guild: One. Sorry.
+Ted Guild: On, Sorry.
 
 422
 01:06:44.140 --> 01:06:45.190
@@ -1698,7 +1674,7 @@ Peter Rushforth: We're going to go over to our panel now of stakeholders for gov
 
 430
 01:07:38.710 --> 01:08:00.880
-Peter Rushforth: And we have from the National Center of geographic information in Spain Emilio Lopez from arrow and from the Canadian geospatial data infrastructure. We have Cameron Wilson. I hope and Sebastian direct from the Canadian federal geospatial platform.
+Peter Rushforth: And we have from the National Centre of Geographic Information in Spain, Emilio López Romero and from the Canadian Geospatial Data Infrastructure, we have Cameron Wilson, I hope, and Sébastien Durand from the Canadian Federal Geospatial Platform.
 
 431
 01:08:02.200 --> 01:08:04.540
@@ -1710,7 +1686,7 @@ Peter Rushforth: And so
 
 433
 01:08:08.590 --> 01:08:12.400
-Peter Rushforth: What I'd like to do is to ask each of them starting with Sebastian.
+Peter Rushforth: What I'd like to do is to ask each of them starting with Sébastien
 
 434
 01:08:13.450 --> 01:08:17.740
@@ -1718,7 +1694,7 @@ Peter Rushforth: To introduce themselves and tell us a little bit about
 
 435
 01:08:19.210 --> 01:08:36.370
-Peter Rushforth: About the their background and the and their potential use of maps for the web maps in HTML and and help. I'll leave that up to you guys. So, Sebastian, over to you.
+Peter Rushforth: About their background and the and their potential use of maps for the web maps in HTML and and help. I'll leave that up to you guys. So, Sébastien, over to you.
 
 436
 01:08:37.180 --> 01:08:38.170
@@ -1726,47 +1702,47 @@ Sébastien Durand (Canada - NRCAN - CGP): Well, thank you.
 
 437
 01:08:39.250 --> 01:08:46.120
-Sébastien Durand (Canada - NRCAN - CGP): First, I'd like to thank everybody on the phone on the line today. I'm really pleased to be part of that.
+Sébastien Durand (Canada - NRCAN - CGP): First, I'd like to thank everybody on the phone or on the line today. I'm really pleased to be part of that.
 
 438
 01:08:47.560 --> 01:08:59.470
-Sébastien Durand (Canada - NRCAN - CGP): That workshop. I think it's a perfect setup for for the Canadian just visual platform. It's quite a context. So I just want to say a big thanks and I'm quite amazed with the pertinence of the conversation.
+Sébastien Durand (Canada - NRCAN - CGP): That workshop. I think it's a perfect setup for for the Canadian geospatial platform. It's quite a context. So I just want to say a big thanks and I'm quite amazed with the pertinence of the conversation.
 
 439
 01:09:00.160 --> 01:09:14.650
-Sébastien Durand (Canada - NRCAN - CGP): Has been happening so far. So kudos to all so myself. May, June, analytics team manager within the Canadian just visual platform. We are within the natural resource Canada obviously for the Government of Canada. No.
+Sébastien Durand (Canada - NRCAN - CGP): Has been happening so far. So kudos to all. So myself, I'm a geoanalytics team manager within the Canadian geospatioal platform. We are within the Natural Resource Canada obviously for the Government of Canada.
 
 440
 01:09:16.690 --> 01:09:32.830
-Sébastien Durand (Canada - NRCAN - CGP): Bottle my general responsibilities are to provide products to the to the different clients. We have and it does provide over time, a lot of expertise and not expertise but a good sense of what are the requirements.
+Sébastien Durand (Canada - NRCAN - CGP): Part of my general responsibilities are to provide products to the to the different clients we have, and it does provide over time, a lot of expertise and not expertise but a good sense of what are the requirements.
 
 441
 01:09:33.760 --> 01:09:44.380
-Sébastien Durand (Canada - NRCAN - CGP): Of all the geo people, people who have interesting journey maps, for example. So just going back to the Canadian special platform itself.
+Sébastien Durand (Canada - NRCAN - CGP): Of all the geo people, people who have interesting geo need maps, for example. So just going back to the Canadian geospatial platform itself.
 
 442
 01:09:45.040 --> 01:09:58.900
-Sébastien Durand (Canada - NRCAN - CGP): We are an organization that aims to enable the government and what we we did find is lately. I mean, while the platform has been actively importing data from diverse level of jurisdiction being
+Sébastien Durand (Canada - NRCAN - CGP): We are an organization that aims to enable the government and what we we did find is lately, I mean, while the platform has been actively importing data from diverse level of jurisdiction being
 
 443
 01:09:59.530 --> 01:10:06.430
-Sébastien Durand (Canada - NRCAN - CGP): From federal, provincial to referral sources. The platform is also working at improving its web presence.
+Sébastien Durand (Canada - NRCAN - CGP): From federal, provincial and territorial sources. The platform is also working at improving its web presence.
 
 444
 01:10:07.960 --> 01:10:16.030
-Sébastien Durand (Canada - NRCAN - CGP): The cadence platform didn't realize how crucial it is to facilitate search discovery and visualization through the web.
+Sébastien Durand (Canada - NRCAN - CGP): The Canadian geospatial platform didn't realize how crucial it is to facilitate search discovery and visualization through the web.
 
 445
 01:10:16.810 --> 01:10:21.610
-Sébastien Durand (Canada - NRCAN - CGP): I mean, nowadays, even in government situation where we realize that the web is gaining even more.
+Sébastien Durand (Canada - NRCAN - CGP): I mean, nowadays, even in COVID situation where we realize that the web is gaining even more
 
 446
 01:10:22.120 --> 01:10:33.010
-Sébastien Durand (Canada - NRCAN - CGP): Proceedings, it's the primary means of communication. So it's, it is really at the front end and how we disseminate content so that's that's crucial, crucial.
+Sébastien Durand (Canada - NRCAN - CGP): precedence, it's the primary means of communication. So it's, it is really at the front end and how we disseminate content so that's crucial content, crucial
 
 447
 01:10:33.940 --> 01:10:46.690
-Sébastien Durand (Canada - NRCAN - CGP): And the medical center. So now with the children's information from all fields definitely can be integrated to provide insight through both space and time. And I guess that's a everybody around the table is spirit that
+Sébastien Durand (Canada - NRCAN - CGP): element to consider. So now with the geo lens information from all fields definitely can be integrated to provide insight through both space and time. And I guess that's a everybody around the table has figured that
 
 448
 01:10:47.800 --> 01:11:01.900
@@ -1774,7 +1750,7 @@ Sébastien Durand (Canada - NRCAN - CGP): But there's actually a magical feeling
 
 449
 01:11:02.980 --> 01:11:19.990
-Sébastien Durand (Canada - NRCAN - CGP): But also because it provides a feel of a common operating picture to all users that is the true value of a geo product, it, it transcends all the different spheres of in which the information has been gathered from you can put it all together.
+Sébastien Durand (Canada - NRCAN - CGP): But also because it provides a feel of a common operating picture to all users that is the true value of a geo product, it, it transcends all the different spheres of in which the information has been gathered from, you can put it all together.
 
 450
 01:11:21.070 --> 01:11:30.100
@@ -1786,27 +1762,27 @@ Sébastien Durand (Canada - NRCAN - CGP): Tangible information and simple fashio
 
 452
 01:11:43.360 --> 01:11:53.980
-Sébastien Durand (Canada - NRCAN - CGP): So, until now, I mean expert have been using scripts search engines optimization API's along with advanced software to make an publish maps.
+Sébastien Durand (Canada - NRCAN - CGP): So, until now, I mean expert have been using scripts, search engines, optimization, APIs along with advanced software to make and publish maps.
 
 453
 01:11:55.660 --> 01:12:04.540
-Sébastien Durand (Canada - NRCAN - CGP): But I think we have to ask ourselves the following question is what are not. Does this make the job information through the available and accessible and consumable
+Sébastien Durand (Canada - NRCAN - CGP): But I think we have to ask ourselves the following question is whether or not does this make the geo information through the available and accessible and consumable
 
 454
 01:12:06.880 --> 01:12:18.070
-Sébastien Durand (Canada - NRCAN - CGP): Nowadays, I guess, the web is the primary means of expression, like I mentioned before, and an HTML is obviously edit score and it does act as a lowest common denominator.
+Sébastien Durand (Canada - NRCAN - CGP): Nowadays, I guess, the web is the primary means of expression, like I mentioned before, and an HTML is obviously at it's core and it does act as a lowest common denominator.
 
 455
 01:12:20.350 --> 01:12:28.990
-Sébastien Durand (Canada - NRCAN - CGP): Because we see that over 90% of the new not quite data now processes Joe references down to just images that you think with your phone.
+Sébastien Durand (Canada - NRCAN - CGP): Because we see that over 90% of the new not quite data now poesses geo references down to just images that you take with your phone.
 
 456
 01:12:29.620 --> 01:12:48.430
-Sébastien Durand (Canada - NRCAN - CGP): It makes logical sense to see that this community investigate and address how we can how can we act of mapping be made more accessible to all HTML users directly from their browsers as they actually called their page. So I think that is providing a bit of a
+Sébastien Durand (Canada - NRCAN - CGP): It makes logical sense to see that this community investigate and address how we can, how can the act of mapping be made more accessible to all HTML users directly from their browsers as they actually code their page. So I think that is providing a bit of a
 
 457
 01:12:50.050 --> 01:13:07.630
-Sébastien Durand (Canada - NRCAN - CGP): Perspective that is both mine and that of the GP or Keynesian special platform and I'll be happy to answer any other questions or give some further insights or maybe address some challenges that we may have if that's of interest to the panel.
+Sébastien Durand (Canada - NRCAN - CGP): Perspective that is both mine and that of the GP or Canadian geospatial platform and I'll be happy to answer any other questions or give some further insights or maybe address some challenges that we may have if that's of interest to the panel.
 
 458
 01:13:09.220 --> 01:13:09.910
@@ -1814,11 +1790,11 @@ Sébastien Durand (Canada - NRCAN - CGP): Thank you very much.
 
 459
 01:13:12.550 --> 01:13:21.460
-Peter Rushforth: Thank you very much. SEBASTIAN. So I'll pass it over to a miracle Lopez Romero from the inspire initiative in Spain.
+Peter Rushforth: Thank you very much, Sébastien. So I'll pass it over to Emilio López Romero from the Inspire initiative in Spain.
 
 460
 01:13:22.510 --> 01:13:23.950
-Peter Rushforth: Night. Thank you. You're welcome.
+Peter Rushforth: Thank you and welcome.
 
 461
 01:13:25.600 --> 01:13:26.350
@@ -1830,7 +1806,7 @@ Emilio López (CNIG): Okay. Thank you, Peter. And thank you for the opportunity 
 
 463
 01:13:42.700 --> 01:13:58.390
-Emilio López (CNIG): My name is Emily Lopez, director of the National Center of geographic information. One of the main goals of my institution is the coordination of the national spatial data infrastructure office paying
+Emilio López (CNIG): My name is  Emilio López. director of the National Centre of Geographic Information. One of the main goals of my institution is the coordination of the national spatial data infrastructure office paying
 
 464
 01:13:59.650 --> 01:14:00.400
@@ -1838,19 +1814,19 @@ Emilio López (CNIG): There are
 
 465
 01:14:01.810 --> 01:14:09.460
-Emilio López (CNIG): Several organizations involved different administrative levels, national, regional and local
+Emilio López (CNIG): Several organizations involved at different administrative levels, national, regional and local
 
 466
 01:14:11.050 --> 01:14:35.110
-Emilio López (CNIG): And I think that it's important to notice that in Europe, the Member States has to fulfill the requirements of inspire Director of the European Commission, establishing SDI for Europe, consisting of national SBA and aim to facilitate the decision making process regarding environment.
+Emilio López (CNIG): And I think that it's important to notice that in Europe, the Member States has to fulfill the requirements of Inspire Directive of the European Commission, establishing SDI for Europe, consisting of national SDA and aim to facilitate the decision making process regarding environment.
 
 467
 01:14:36.940 --> 01:14:46.990
-Emilio López (CNIG): Hence a standardization harmonization and common the specification have become Natale mandatory but crucial for us.
+Emilio López (CNIG): Hence a standardization harmonization and common specification have become not only mandatory but crucial for us.
 
 468
 01:14:49.450 --> 01:15:00.490
-Emilio López (CNIG): Since we are providing a with web services achieving at companies use our services has been an important challenge.
+Emilio López (CNIG): Since we are providing a with web services achieving AT companies use our services has been an important challenge.
 
 469
 01:15:01.900 --> 01:15:04.270
@@ -1858,7 +1834,7 @@ Emilio López (CNIG): Even though they are free and open
 
 470
 01:15:06.610 --> 01:15:28.630
-Emilio López (CNIG): Therefore, fill in the gap between our web services Web Map will feature work cattle services and web developers is beta an open API new disease specification map futures on the web at fundamental level will be part of the solution. I'm sure
+Emilio López (CNIG): Therefore, fill in the gap between our web services Web Map will feature work cattle services and web developers is vital and OpenAPI new geo specification map futures on the web at fundamental level will be part of the solution. I'm sure
 
 471
 01:15:30.820 --> 01:15:31.180
@@ -1870,7 +1846,7 @@ Emilio López (CNIG): To say, I would like to say that
 
 473
 01:15:36.100 --> 01:15:43.510
-Emilio López (CNIG): A one out of four maps that adult load using our top phones.
+Emilio López (CNIG): A one out of four maps that load using our platforms
 
 474
 01:15:45.550 --> 01:15:48.880
@@ -1882,11 +1858,11 @@ Emilio López (CNIG): And other important aspect because there are several admin
 
 476
 01:16:03.070 --> 01:16:06.610
-Emilio López (CNIG): Agriculture to ministry and have the most important
+Emilio López (CNIG): Agriculture ministry and have the most important
 
 477
 01:16:07.690 --> 01:16:21.430
-Emilio López (CNIG): Clients, we have, but a our feeling is that the private sector is not using the our free. I'm hoping resources.
+Emilio López (CNIG): Clients, we have, but our feeling is that the private sector is not using the our free -I'm hoping- resources
 
 478
 01:16:23.560 --> 01:16:24.100
@@ -1898,7 +1874,7 @@ Emilio López (CNIG): Thank you. This is what I would like to say first time.
 
 480
 01:16:31.390 --> 01:16:38.620
-Peter Rushforth: Thank you very much, Emilio is interesting it aligns with some of the things we talked about today.
+Peter Rushforth: Thank you very much, Emilio, that is interesting, it aligns with some of the things we talked about today.
 
 481
 01:16:41.020 --> 01:16:41.770
@@ -1906,7 +1882,7 @@ Peter Rushforth: So,
 
 482
 01:16:42.910 --> 01:16:51.280
-Peter Rushforth: Now I'd like to introduce Cameron Wilson of the Canadian geospatial data infrastructure and let him speak for himself. Thanks, Cameron.
+Peter Rushforth: Now I'd like to introduce Cameron Wilson of the Canadian Geospatial Data Infrastructure and let him speak for himself. Thanks, Cameron.
 
 483
 01:16:53.770 --> 01:16:54.670
@@ -1922,7 +1898,7 @@ cawilson: I may work with Natural Resources Canada and I've been working on spat
 
 486
 01:17:08.950 --> 01:17:26.020
-cawilson: In a program called geo connections program. I'm the manager of the program. And we've been doing a lot of work on standards in the Arctic and Canada's geospatial data infrastructure and also trying to incorporate both marine and bland base infrastructures.
+cawilson: In a program called geo connections program. I'm the manager of the program. And we've been doing a lot of work on standards in the Arctic and Canada's geospatial data infrastructure and also trying to incorporate both marine and land based infrastructures.
 
 487
 01:17:27.760 --> 01:17:36.640
@@ -1930,7 +1906,7 @@ cawilson: My formal training and as a geographer, and that as part of that train
 
 488
 01:17:37.330 --> 01:17:51.400
-cawilson: That's one bias. I sort of like to declare right off the bat. And so this lends itself well to where we're having these conversations but be more integrated into the general web environment of the world and having that value of location and time.
+cawilson: That's one bias I sort of like to declare right off the bat. And so this lends itself well to where we're having these conversations but be more integrated into the general web environment of the world and having that value of location and time.
 
 489
 01:17:52.720 --> 01:17:55.570
@@ -1946,7 +1922,7 @@ cawilson: Maps are effectively the PowerPoint of those analytics. They're the ou
 
 492
 01:18:20.740 --> 01:18:35.530
-cawilson: I have. I've been an open data champions since 1999 1998 with the formation of a website called geo gratis and the main value around that was out of data democratization.
+cawilson: I have, I've been an open data champions since 1998 with the formation of a website called geo gratis and the main value around that was out of data democratization.
 
 493
 01:18:36.580 --> 01:18:44.710
@@ -1954,19 +1930,19 @@ cawilson: What I didn't realize at that point in time 20 years ago is that we al
 
 494
 01:18:46.000 --> 01:18:56.920
-cawilson: Those early days, you know, the data access was strictly through an FTP server was very simple, very crude but also quite effective for a certain audience.
+cawilson: Those early days, you know, the data access was strictly through an FTP server, was very simple, very crude but also quite effective for a certain audience.
 
 495
 01:18:58.090 --> 01:19:07.900
-cawilson: Today, while I would argue a veneer of gender geography, a very thin veneer geography is available through popular apps that we use on our phones on a regular basis.
+cawilson: Today, while I would argue a veneer of geography, a very thin veneer geography is available through popular apps that we use on our phones on a regular basis.
 
 496
 01:19:08.620 --> 01:19:12.850
-cawilson: These ads are to primarily designed to maximize advertising revenue.
+cawilson: These apps are to primarily designed to maximize advertising revenue.
 
 497
 01:19:13.540 --> 01:19:21.250
-cawilson: For those people putting on the content and provides driving directions. So those will seem to the two main use cases for any for the apps you have on your phone.
+cawilson: For those people putting out the content and provides driving directions. So those will seem to the two main use cases for any for the apps you have on your phone.
 
 498
 01:19:22.030 --> 01:19:33.430
@@ -1974,15 +1950,15 @@ cawilson: They do not begin to address the social, economic or environmental nee
 
 499
 01:19:34.990 --> 01:19:46.180
-cawilson: Conversely, are sort of what we are bread and butter that we're all kind of comfortable with his family survive. So the old term was GIS on the web, you effectively restored during
+cawilson: Conversely, are sort of what we are bread and butter that we're all kind of comfortable with is, I guess, so the old term was GIS on the web, well effectively we're still doing it,
 
 500
 01:19:47.050 --> 01:20:01.870
-cawilson: Data catalogs and other sort of portal implementations. They remain would argue that dish for the general public usage. You see my see my all my kids now old are in their 20s and 30s.
+cawilson: Data catalogs and other sort of portal implementations. They remain would argue that niche for the general public usage. You see, all my kids now old, are in their 20s and 30s.
 
 501
 01:20:03.580 --> 01:20:13.360
-cawilson: You know, they're looking for Matt and unless you're going hunting and even then, one of my subclinical Sunday's a horrible, horrible time trying to find all this stuff with GOP geographically table ports.
+cawilson: You know, they're looking for maps, unless they're going hunting and even then, one of my son's has a horrible, horrible time trying to find all this stuff with geographically data portals.
 
 502
 01:20:15.640 --> 01:20:27.040
@@ -1994,15 +1970,15 @@ Peter Rushforth: Thank you very much. Cameron well said.
 
 504
 01:20:33.640 --> 01:20:38.140
-Peter Rushforth: So now I'd like to introduce Dan Sullivan from NASA to
+Peter Rushforth: So now I'd like to introduce Don Sullivan from NASA to
 
 505
 01:20:39.640 --> 01:20:41.080
-Peter Rushforth: round out our panel today.
+Peter Rushforth: to round out our panel today.
 
 506
 01:20:43.690 --> 01:20:46.900
-Peter Rushforth: Don's only on the phone today. So over you don't
+Peter Rushforth: Don's only on the phone today. So over you Don
 
 507
 01:20:49.090 --> 01:20:50.050
@@ -2010,15 +1986,15 @@ Peter Rushforth: If you're still there.
 
 508
 01:20:55.000 --> 01:21:03.040
-don sullivan: Alrighty, thank you can hear me now. Yes. All right. Yeah, I gotta go to mute and unmute into play here. So good morning. Oh.
+don sullivan: Alrighty, thank you can hear me now. Yes. All right. Yeah, I gotta go to mute and unmute into play here. So good morning all
 
 509
 01:21:04.240 --> 01:21:09.490
-don sullivan: I'm sorry about the unlike a video on my laptop and videos disabled.
+don sullivan: I'm sorry about the lack of video on my laptop, I'm on a NASA laptop and videos disabled.
 
 510
 01:21:10.600 --> 01:21:19.180
-don sullivan: would also like to preface this with with all of what I'm going to be saying this morning is is my opinion. My personal opinion, and it's not necessarily the
+don sullivan: would also like to preface this with with all of what I'm going to be saying this morning is is my opinion, my personal opinion, and it's not necessarily the
 
 511
 01:21:19.750 --> 01:21:24.970
@@ -2030,7 +2006,7 @@ don sullivan: Thinking around the GIS World Forum for a long time. Um, well. Oka
 
 513
 01:21:44.590 --> 01:21:52.150
-don sullivan: Doing them doing JS on the web. When I worked on a program that displayed the USGS digital or the photo quarter quad.
+don sullivan: Doing them doing GIS on the web. When I worked on a program that displayed the USGS digital or the photo quarter quad.
 
 514
 01:21:53.320 --> 01:21:54.790
@@ -2038,23 +2014,23 @@ don sullivan: On telco base maps.
 
 515
 01:21:55.930 --> 01:22:00.040
-don sullivan: This was, this was, um, I don't know 9495, something like that.
+don sullivan: This was, this was, um, I don't know '94, '95, something like that.
 
 516
 01:22:01.360 --> 01:22:07.360
-don sullivan: The browser, we use was mosaic. For those of you who remember this, and we had a third web server in any case.
+don sullivan: The browser, we used was mosaic. For those of you who remember this, and we had a CERN web server in any case.
 
 517
 01:22:08.320 --> 01:22:19.540
-don sullivan: That was, that was horrible. All the Jimmy relations on we're on the server. It was just, it was a nightmare. But we did it anyhow. I'm one of the authors of the first implementations of the web service for the OTC
+don sullivan: That was, that was horrible. All the geo installations on, were on the server. It was just, it was a nightmare. But we did it anyhow. I'm one of the authors of the first implementations of the web map service for the OGC
 
 518
 01:22:21.190 --> 01:22:25.690
-don sullivan: Illusion plus and Jeff t shirt da or the other ones.
+don sullivan: Lucian Plesea and Jeff De La Beaujardiere were the other ones.
 
 519
 01:22:27.190 --> 01:22:32.770
-don sullivan: I'm the one that's representative to the Open Geospatial Consortium technical committee where I could share a few few
+don sullivan: I'm the maps representative to the Open Geospatial Consortium technical committee where I co-chair a few
 
 520
 01:22:34.480 --> 01:22:38.770
@@ -2066,11 +2042,11 @@ don sullivan: I'm the, the Chair of the US delegation to ISO TC 211 G is here. A
 
 522
 01:22:49.720 --> 01:22:59.170
-don sullivan: Map something the web and and and maps as first class citizens. I went, oh my God, yeah. So, um, so I'm, I'm here, just as a
+don sullivan: Map on the web and and and maps as first class citizens. I went, oh my God, yeah. So, um, so I'm, I'm here, just as a
 
 523
 01:22:59.830 --> 01:23:12.100
-don sullivan: Champion. I think this is just an amazing idea that that is that has been way too long in coming out the wind for this for over 20 years now so so good morning all and I'll go back to you. But I'll be glad to answer questions.
+don sullivan: Champion. I think this is just an amazing idea that that is that has been way too long in coming out, I've been waiting for this for over 20 years now so so good morning all and I'll go back to you. But I'll be glad to answer questions.
 
 524
 01:23:15.160 --> 01:23:15.910
@@ -2086,7 +2062,7 @@ Peter Rushforth: If you have other questions you can type them into the the the 
 
 527
 01:23:41.320 --> 01:23:43.600
-Peter Rushforth: So yeah, I have a question. Cameron.
+Peter Rushforth: So yeah, I have a question, Cameron.
 
 528
 01:23:45.250 --> 01:23:51.580
@@ -2094,15 +2070,15 @@ Peter Rushforth: How, uh, you know, if you were looking for the non commercial
 
 529
 01:23:52.930 --> 01:24:00.340
-Peter Rushforth: Information that the government's can provide. Like how would that how do you see that
+Peter Rushforth: Information that governments can provide. Like how would that how do you see that
 
 530
 01:24:01.960 --> 01:24:03.730
-Peter Rushforth: You know, how do you see that being them.
+Peter Rushforth: You know, how do you see that being,
 
 531
 01:24:06.280 --> 01:24:17.290
-Peter Rushforth: Happening on the web and like non commercial government information that could be provided in a way to make it more useful. How do you see that being
+Peter Rushforth: Happening on the web and like non-commercial government information that could be provided in a way to make it more useful. How do you see that being,
 
 532
 01:24:19.000 --> 01:24:22.030
@@ -2126,39 +2102,39 @@ cawilson: A person might do in their house that has nothing to do with geography
 
 537
 01:24:36.700 --> 01:24:42.250
-cawilson: Know like there's that they have a task to do a household has a task to do so.
+cawilson: You know like they have a task to do, a household has a task to do.
 
 538
 01:24:44.470 --> 01:24:53.050
-cawilson: I noticed you know i don't know what it's like in every in every other city, but I know many cities in Canada, the real estate market has just gone nuts.
+cawilson: I noticed, you know, I don't know what it's like in every in every other city, but I know many cities in Canada, the real estate market has just gone nuts.
 
 539
 01:24:54.130 --> 01:25:05.800
-cawilson: I don't know if it's your coven or whatever, but the the demand exceeds supply. So if I wanted to go buy a house or a cottage right now. How would I do that.
+cawilson: I don't know if it's due to COVID or whatever, but the the demand exceeds supply. So if I wanted to go buy a house or a cottage right now. How would I do that.
 
 540
 01:25:06.460 --> 01:25:16.960
-cawilson: And I know how I would do it even as a geographer knowing you. But all this great stuff. I would just go to my favorite browser, and I would start searching for a house.
+cawilson: And I know how I would do it even as a geographer knowing about all this great stuff. I would just go to my favorite browser, and I would start searching for a house.
 
 541
 01:25:17.650 --> 01:25:27.640
-cawilson: And let's say that hostess in a different city to make it a bit more interesting. So I know nothing about where I'm looking. I just know I want to be in a certain area for some reason. So I wouldn't let
+cawilson: And let's say that house in a different city to make it a bit more interesting. So I know nothing about where I'm looking. I just know I want to be in a certain area for some reason. So,
 
 542
 01:25:29.320 --> 01:25:36.160
-cawilson: My family laughs at me because once I get on a browser, I can have 20 3040 tabs going. I'm actually surprised the browser can still work.
+cawilson: My family laughs at me because once I get on a browser, I can have 20, 30, 40 tabs going. I'm actually surprised the browser can still work.
 
 543
 01:25:36.760 --> 01:25:50.140
-cawilson: And you get, you know, so you're what you're searching for. Well, you know, I have this area of interest to buy a house or a cottage. So I'm looking around that area but but know what are the values of those of those properties in that area.
+cawilson: And you get, you know, so you're what you're searching for. Well, you know, I have this area of interest to buy a house or a cottage. So I'm looking around that area but, what are the values of those of those properties in that area.
 
 544
 01:25:51.310 --> 01:25:57.340
-cawilson: What is around the houses are a factor behind. Is there a school behind or toxic dump behind it, or is it a beautiful park.
+cawilson: What is around the houses, is there a factory behind, is there a school behind or toxic dump behind it, or is it a beautiful park.
 
 545
 01:25:59.020 --> 01:26:07.540
-cawilson: Is our education for myself and family to go to. What's the crime rate. What's the access to health facilities retail and public transit.
+cawilson: Is there education for myself and family to go to. What's the crime rate. What's the access to health facilities, retail and public transit.
 
 546
 01:26:08.140 --> 01:26:13.600
@@ -2170,7 +2146,7 @@ cawilson: You know, I'd have nothing to actually guide me as to all these option
 
 548
 01:26:27.430 --> 01:26:37.930
-cawilson: So imagine you know we're now I can just drag one tab on to another tab drag and drop. Basically, and it will build up a visual representation
+cawilson: So imagine you know we're now I can just drag one tab on to another tab, drag and drop, basically, and it will build up a visual representation
 
 549
 01:26:38.590 --> 01:26:48.370
@@ -2182,15 +2158,15 @@ cawilson: And this is what happens. So I see that as one scenario where, you kno
 
 551
 01:26:58.900 --> 01:27:07.150
-cawilson: Synthesis of my research in a map form rather to to be being driven by the browser engine is suddenly tapping into some sort of plugin.
+cawilson: Synthesis of my research in a map form rather intuitively  being driven by the browser engine is suddenly tapping into some sort of plugin.
 
 552
 01:27:08.290 --> 01:27:11.530
-cawilson: We also see other examples, we'd have a law work in the Arctic.
+cawilson: We also see other examples, we do a lot of work in the Arctic.
 
 553
 01:27:13.330 --> 01:27:18.370
-cawilson: And you know, it's very important because this is the polls are being devastated by climate.
+cawilson: And you know, it's very important because this is, the Poles are being devastated by climate.
 
 554
 01:27:20.170 --> 01:27:25.390
@@ -2198,11 +2174,11 @@ cawilson: So how, and the people that live in the Arctic in these remote communi
 
 555
 01:27:26.860 --> 01:27:34.990
-cawilson: Learning about geography and API is and all his stuff is the absolute last thing on their mind they're dealing with, you know,
+cawilson: Learning about geography and APIs, and all this stuff is the absolute last thing on their mind they're dealing with, you know,
 
 556
 01:27:36.310 --> 01:27:39.130
-cawilson: serious health issues employment issues.
+cawilson: serious health issues, employment issues.
 
 557
 01:27:41.440 --> 01:27:42.430
@@ -2210,15 +2186,11 @@ cawilson: Clean water.
 
 558
 01:27:43.000 --> 01:27:45.760
-cawilson: Very you know fundament on mental so life.
-
-559
-01:27:46.660 --> 01:27:48.790
-Peter Rushforth: Somebody not community because
+cawilson: Very you know fundamentals to life.
 
 560
 01:27:49.870 --> 01:28:01.420
-Peter Rushforth: Somebody on the chat. Clear out that you know there's portals like Zillow and real estate com available for like host search. And I guess that's true. But I guess it doesn't apply to
+Peter Rushforth: Somebody on the chat pointed out that you know there's portals like Zillow and realestate.com available for like house search. And I guess that's true. But I guess it doesn't apply to
 
 561
 01:28:02.650 --> 01:28:08.710
@@ -2230,7 +2202,7 @@ Peter Rushforth: For things that you're you're looking for in the Arctic, becaus
 
 563
 01:28:15.790 --> 01:28:16.570
-Peter Rushforth: No, no, there's
+cawilson: No, no, there's
 
 564
 01:28:16.960 --> 01:28:24.970
@@ -2238,7 +2210,7 @@ cawilson: Really, but I'm just what I'm suggesting is even, even with we have re
 
 565
 01:28:25.540 --> 01:28:38.860
-cawilson: It's not showing what the hospital, is it doesn't say there's a Children's Hospital. It doesn't say if you know you know i don't get mugged. When I walk out the door. You know you want all this is similar information is with questions, how to easily combine that in summary information.
+cawilson: It's not showing what the hospital, is it doesn't say there's a Children's Hospital. It doesn't say if you know you know i don't get mugged when I walk out the door. You know you want all this ancillary information with, the  questions is how to easily combine that in summary information.
 
 566
 01:28:39.550 --> 01:28:48.190
@@ -2246,7 +2218,7 @@ Peter Rushforth: Right. Okay. Well, another question that's come in is, what is 
 
 567
 01:28:49.270 --> 01:28:56.680
-Peter Rushforth: Government in regards to mapping on the web. So maybe I'll hand that off to Sebastian from the Canadian geospatial platform.
+Peter Rushforth: Government in regards to mapping on the web. So maybe I'll hand that off to Sébastien from the Canadian geospatial platform.
 
 568
 01:28:58.330 --> 01:29:02.650
@@ -2254,7 +2226,7 @@ Sébastien Durand (Canada - NRCAN - CGP): That's a, that's a good question. Just
 
 569
 01:29:03.700 --> 01:29:13.030
-Sébastien Durand (Canada - NRCAN - CGP): The platform does provide a stepping stone and answers they need from maybe half of the government departments and agencies. So that's the number of contributors, we have
+Sébastien Durand (Canada - NRCAN - CGP): The platform does a provide a stepping stone and answers they need from maybe half of the government departments and agencies. So that's the number of contributors, we have
 
 570
 01:29:13.570 --> 01:29:22.060
@@ -2266,11 +2238,11 @@ Sébastien Durand (Canada - NRCAN - CGP): After all that, you know, I think that
 
 572
 01:29:29.890 --> 01:29:39.850
-Sébastien Durand (Canada - NRCAN - CGP): I wouldn't first want to go with what is the role of government in in all this. And how do we enroll government is is to administer certainly an easy and easy.
+Sébastien Durand (Canada - NRCAN - CGP): I would first want to go with what is the role of government in in all this. And how do we enroll government is, is to administer certainly an easy, an easy fact,
 
 573
 01:29:40.390 --> 01:29:52.810
-Sébastien Durand (Canada - NRCAN - CGP): Now the question is, how does the government administer technically you actually define rights restrictions and responsibilities on futures through time and space. So again, you kind of set up the framework that way.
+Sébastien Durand (Canada - NRCAN - CGP): Now the question is, how does the government administer, technically you actually define rights, restrictions and responsibilities on features through time and space. So again, you kind of set up the framework that way.
 
 574
 01:29:54.190 --> 01:30:10.090
@@ -2278,23 +2250,23 @@ Sébastien Durand (Canada - NRCAN - CGP): Now what's unique about government is 
 
 575
 01:30:11.980 --> 01:30:24.970
-Sébastien Durand (Canada - NRCAN - CGP): The ultimate need of the government is to be able to leverage such ultimate framework. So now it's not for who's into the cloud. For example, we're trying to establish all that properly.
+Sébastien Durand (Canada - NRCAN - CGP): The ultimate need of the government is to be able to leverage such ultimate framework. So now the platform moves into the cloud, for example, we're trying to establish all that properly.
 
 576
 01:30:25.810 --> 01:30:38.410
-Sébastien Durand (Canada - NRCAN - CGP): But build the knowledge takes over that framework so that we can then render authoritative map products. And I think the best example for that is, is go visit
+Sébastien Durand (Canada - NRCAN - CGP): But build the knowledge base over that framework so that we can then render authoritative map products. And I think the best example for that is, is  COVID
 
 577
 01:30:40.450 --> 01:30:47.680
-Sébastien Durand (Canada - NRCAN - CGP): Having account of your local area on Google cases is very pertinent. But everybody wants to see
+Sébastien Durand (Canada - NRCAN - CGP): Having a count of your local area on COVID cases is very pertinent. But everybody wants to see
 
 578
 01:30:48.460 --> 01:30:58.030
-Sébastien Durand (Canada - NRCAN - CGP): Whereas the hotspots. How does it go in time. What's the, what are the trends, so that you can actually represent properly. The, the theological situation associated with coded
+Sébastien Durand (Canada - NRCAN - CGP): Where's the hotspots. How does it go in time. What's the, what are the trends, so that you can actually represent properly the, the epidemiological situation associated with COVID
 
 579
 01:30:58.690 --> 01:31:14.170
-Sébastien Durand (Canada - NRCAN - CGP): So, so that perspective requires actually an integrated perspective, it requires a an effort from a coalition of groups that actually built on the third set of data to deliver something that is usable, the question about
+Sébastien Durand (Canada - NRCAN - CGP): So, so that perspective requires actually an integrated perspective, it requires an effort from a coalition of groups that actually built on the authoratative of data to deliver something that is usable, the question about
 
 580
 01:31:15.790 --> 01:31:24.460
@@ -2306,11 +2278,11 @@ Sébastien Durand (Canada - NRCAN - CGP): We want to make the data out there ava
 
 582
 01:31:29.950 --> 01:31:41.260
-Sébastien Durand (Canada - NRCAN - CGP): We as technical experts democrats or john or Joe special experts, we need to bring the products, up to a point where it, it becomes a viable entity.
+Sébastien Durand (Canada - NRCAN - CGP): We as technical experts or technocrats or John or Joe special experts, we need to bring the products, up to a point where it, it becomes a viable entity.
 
 583
 01:31:41.830 --> 01:31:53.380
-Sébastien Durand (Canada - NRCAN - CGP): That can be consumed by anyone. And that's what actually makes the system work and and we see the GC doing a fair amount of work from a backbone standpoint.
+Sébastien Durand (Canada - NRCAN - CGP): That can be consumed by anyone. And that's what actually makes the system work and and we see the OGC doing a fair amount of work from a backbone standpoint.
 
 584
 01:31:53.920 --> 01:32:07.540
@@ -2318,7 +2290,7 @@ Sébastien Durand (Canada - NRCAN - CGP): But in the end, this whole environment
 
 585
 01:32:08.290 --> 01:32:21.430
-Sébastien Durand (Canada - NRCAN - CGP): Your just rock waiting for, you know, the cake so that that living capacity needs to be provided through the mapping experience from the back end up to the front and whole experience so
+Sébastien Durand (Canada - NRCAN - CGP): Your just a rock waiting for, you know, decay so that that living capacity needs to be provided through the mapping experience from the back-end up to the front-end whole experience so
 
 586
 01:32:21.730 --> 01:32:31.630
@@ -2334,19 +2306,19 @@ Peter Rushforth: Okay.
 
 589
 01:32:38.260 --> 01:32:51.070
-Peter Rushforth: Thank you for that. Um, I guess I would encourage the other panelists to chime in with editorials on other on there on the panel responses just
+Peter Rushforth: Thank you for that. Um, I guess I would encourage the other panelists to chime in with editorials on other on the panel responses just
 
 590
 01:32:51.340 --> 01:32:55.030
-cawilson: Like on a point to that Sebastian just mentioned, but the world government.
+cawilson: Like just to add a point to that Sébastien just mentioned, about the role of government.
 
 591
 01:32:55.630 --> 01:33:04.000
-cawilson: So if we consider you know you know what's popular on the web. You know, like I cannot be honest I use Google Maps a lot when I have to go find something. I'm looking for a supplier.
+cawilson: So if we consider you know you know what's popular on the web. You know, like I'll be honest I use Google Maps a lot when I have to go find something. I'm looking for a supplier.
 
 592
 01:33:04.330 --> 01:33:14.920
-cawilson: A restaurant and you driving directions. There's an accident on the road. It's great for that. And that's all. And you know law that's monetize through advertising revenue.
+cawilson: A restaurant, I need driving directions, there's an accident on the road. It's great for that. And that's all. And you know a lot of that's monetized through advertising revenue
 
 593
 01:33:16.120 --> 01:33:19.030
@@ -2354,27 +2326,27 @@ cawilson: In that case, Google or whatever the platform is would receive
 
 594
 01:33:20.740 --> 01:33:32.050
-cawilson: But government's responsibilities are very broad. As I mentioned, economic, social and environment and government is not monetizing through advertising government monetize this or taxes.
+cawilson: But government's responsibilities are very broad. As I mentioned, economic, social and environment. And government is not monetizing through advertising, government monetizes through taxes.
 
 595
 01:33:32.890 --> 01:33:46.810
-cawilson: So in order to meet you know what the voters want us and simply. So how does the richness of all all that data around, especially the environment society and economy, make it into
+cawilson: So in order to meet you know what the voters want ostensibly. So how does the richness of all all that data around, especially the environment, society and economy, make it into
 
 596
 01:33:48.040 --> 01:33:52.150
-cawilson: mass market applications. I think that's a fundamental question for government
+cawilson: mass market applications. I think that's a fundamental question for government.
 
 597
 01:33:56.680 --> 01:33:57.100
-Peter Rushforth: Okay.
+Peter Rushforth: Okay,
 
 598
 01:33:58.960 --> 01:34:04.000
-Peter Rushforth: I have a question for Dawn from the audience up through the, through the
+Peter Rushforth: I have a question for Don from the audience up through the, through the
 
 599
 01:34:05.740 --> 01:34:06.550
-Peter Rushforth: Get her channel.
+Peter Rushforth: Gitter channel.
 
 600
 01:34:07.900 --> 01:34:12.850
@@ -2382,11 +2354,7 @@ Peter Rushforth: Are there special needs and requirements for maps for NASA like
 
 601
 01:34:18.160 --> 01:34:22.930
-don sullivan: Okay, I'm sorry I wasn't quite catching that timeline dimensions repeat
-
-602
-01:34:23.890 --> 01:34:24.520
-don sullivan: It. Yeah.
+don sullivan: Okay, I'm sorry I wasn't quite catching that timeline dimensions repeat the question please?
 
 603
 01:34:24.580 --> 01:34:32.500
@@ -2398,15 +2366,15 @@ don sullivan: Um, boy. Okay, so that they can be answered so many different ways
 
 605
 01:34:45.970 --> 01:34:54.730
-don sullivan: Time sensitive dimensions to almost everything we do, we're primarily data providers, although in the airborne science program where I spend most of my time.
+don sullivan: Time sensitive dimensions to almost everything we do, we're primarily data providers, although in the airborne science program where I spend most of my time,
 
 606
 01:34:55.120 --> 01:35:14.140
-don sullivan: We're, we're data consumers primarily of aviation, that was really, really quickly and accurately. So yes, there is a, there certainly as a temporal domain to it. I'm still not exactly sure what the questions, go on. But, but, yes, the and again I'll take note of airborne science programs specifically
+don sullivan: We're, we're data consumers primarily of aviation, that visualize really, really quickly and accurately. So yes, there is a, there certainly as a temporal domain to it. I'm still not exactly sure what the questions, go on. But, but, yes, the and again I'll take note of airborne science programs specifically
 
 607
 01:35:15.340 --> 01:35:33.700
-don sullivan: We we live with with data that is that is that is temporarily define and and and both producers and consumers. So if you could elaborate on the question a little bit. I'd be glad to go where where the questioner.
+don sullivan: We live with data that is s temporarily define and  and both produce it and consume it. So if you could elaborate on the question a little bit. I'd be glad to go where the questioner
 
 608
 01:35:34.780 --> 01:35:35.320
@@ -2418,19 +2386,19 @@ Peter Rushforth: Okay, well,
 
 610
 01:35:40.600 --> 01:35:43.330
-Peter Rushforth: Let me see their information.
+Peter Rushforth: Let me see if there is more information.
 
 611
 01:35:43.840 --> 01:35:47.050
-cawilson: And Peter and john I can probably compliment about one a little bit
+cawilson: And Peter and john I can probably compliment on that one a little bit
 
 612
 01:35:48.790 --> 01:35:50.530
-cawilson: And talk about the article. Little bit earlier.
+cawilson: I was talking about the Arctic a little bit earlier.
 
 613
 01:35:51.790 --> 01:36:11.410
-cawilson: And one of the goals for socializing right now is the notion of a six dimensional art exhibition data infrastructure. So the six dimensions would be x, y and Zed, but based on any coordinate system, including to school global grid systems which can also like well into mapping, though.
+cawilson: And one of the goals for socializing right now is the notion of a six dimensional Arctic exhibition data infrastructure. So the six dimensions would be x, y and z, but based on any coordinate system, including discrete global grid systems which can also like well into MapML
 
 614
 01:36:12.790 --> 01:36:25.030
@@ -2438,23 +2406,23 @@ cawilson: And then can be anywhere from, you know, geology, right up to the atmo
 
 615
 01:36:26.140 --> 01:36:37.420
-cawilson: Obviously for change detection. The next one is any scale or vectors. So anything with a direction and magnitude. So I'm thinking currents and migration.
+cawilson: Obviously for change detection. The next one is any scalar vectors. So anything with a direction and magnitude. So I'm thinking currents and migration.
 
 616
 01:36:38.380 --> 01:36:49.960
-cawilson: Would be in that and the sixth one is what I would call grey literature. So the whole bibliographic community around the scientific literature and house. They all have a location as well and how that incorporated
+cawilson: Would be in that and the sixth one is what I would call grey literature. So the whole bibliographic community around the scientific literature, cause they all have a location as well and how will that be incorporated
 
 617
 01:36:51.340 --> 01:36:51.670
-Peter Rushforth: Right.
+Peter Rushforth: Great.
 
 618
 01:36:54.070 --> 01:37:00.820
-Peter Rushforth: Well, I guess in defense of the math ML specification. We try to
+Peter Rushforth: Well, I guess in defense of the MapML specification. We try to
 
 619
 01:37:02.110 --> 01:37:24.730
-Peter Rushforth: Pay attention to the W s and W MTS use of dimensions. So you can in theory query the query the map source at any at any value of discrete dimension that is provided as a select list and I'll go through that in my breakout
+Peter Rushforth: Pay attention to the WMS and WMTS use of dimensions. So you can in theory query the map source at any value of discrete dimension that is provided as a select list and I'll go through that in my breakout
 
 620
 01:37:25.750 --> 01:37:26.140
@@ -2462,7 +2430,7 @@ Peter Rushforth: But
 
 621
 01:37:28.270 --> 01:37:33.610
-Peter Rushforth: So there's a question about, is it the cost of cost effectiveness of
+Peter Rushforth: So there's a question about, is it, the cost effectiveness of
 
 622
 01:37:34.990 --> 01:37:35.320
@@ -2470,23 +2438,23 @@ Peter Rushforth: Of
 
 623
 01:37:37.270 --> 01:37:46.330
-Peter Rushforth: Maps in HTML or versus API implementations of it. And I think that the question is more
+Peter Rushforth: Maps in HTML or versus API implementations of it. And I think that the question is more,
 
 624
 01:37:47.410 --> 01:38:05.500
-Peter Rushforth: And I'll put it out to the panel. Is it is it. I mean, I think the the idea of maps in HTML is to make it simple, like the simplest possible interface to get a basic map going and and the idea behind that is not to choose between API's and
+Peter Rushforth: And I'll put it out to the panel. I mean, I think the the idea of maps in HTML is to make it simple, like the simplest possible interface to get a basic map going and and the idea behind that is not to choose between APIs and
 
 625
 01:38:07.000 --> 01:38:22.180
-Peter Rushforth: And client technology, but to have both, you know, to make them work compatible and so would would simplifying with simplifying the developer experience. Let's say for at the low end
+Peter Rushforth: And client technology, but to have both, you know, to make them work compatibly and, so would simplifying the developer experience, let's say for at the low end
 
 626
 01:38:23.620 --> 01:38:30.850
-Peter Rushforth: Or at the entry level with simplifying the entry level make a difference to the consumption of your services. Is that something that
+Peter Rushforth: Or at the entry level, or simplifying the entry level make a difference to the consumption of your services. Is that something that
 
 627
 01:38:32.710 --> 01:38:39.520
-Peter Rushforth: Would be of interest and valuable for for your, for your business, your use cases.
+Peter Rushforth: Would be of interest and valuable for your, for your business, your use cases.
 
 628
 01:38:41.350 --> 01:38:44.710
@@ -2494,7 +2462,7 @@ Peter Rushforth: And I'll maybe I'll put that to Emilio
 
 629
 01:38:48.700 --> 01:39:04.720
-Emilio López (CNIG): Yes, thank you. Um, I was thinking that one product, at least for us when when your web services are free. I'm hoping is that sometimes a. We don't know.
+Emilio López (CNIG): Yes, thank you. Um, I was thinking that one product, at least for us when your web services are free. I'm hoping is that sometimes ah, We don't know
 
 630
 01:39:06.490 --> 01:39:10.300
@@ -2506,23 +2474,23 @@ Emilio López (CNIG): Because
 
 632
 01:39:12.970 --> 01:39:32.440
-Emilio López (CNIG): Yes, we know, then the number of requests bus. A if you don't have information in the user agent or the fields of the HTTP protocol. It's impossible to know to know
+Emilio López (CNIG): Yes, we know, then the number of requests. But, if you don't have information in the user agent or the fields of the HTTP protocol. It's impossible to know to know
 
 633
 01:39:34.390 --> 01:39:39.640
-Emilio López (CNIG): Something very important information all of our clients and this is a
+Emilio López (CNIG): Some very important information of our clients and this is a
 
 634
 01:39:41.020 --> 01:39:46.780
-Emilio López (CNIG): Difficulty that we suffer with a wire services.
+Emilio López (CNIG): Difficulty that we suffer with our services.
 
 635
 01:39:47.980 --> 01:39:58.720
-Emilio López (CNIG): And I would like to say something about alternative data because always a mapping agencies. Talk about that our data.
+Emilio López (CNIG): And I would like to say something about alternative data because always a mapping agencies talk about that our data
 
 636
 01:40:00.250 --> 01:40:15.250
-Emilio López (CNIG): Alternative, but I think that it is not enough for instance if you use topographic map from our National Geographic Institute and finally a you are lost in the forest.
+Emilio López (CNIG): Alternative, but I think that it is not enough. For instance if you use topographic map from our National Geographic Institute and finally, you are lost in the forest.
 
 637
 01:40:17.350 --> 01:40:19.060
@@ -2530,23 +2498,19 @@ Emilio López (CNIG): We don't have any
 
 638
 01:40:20.140 --> 01:40:32.860
-Emilio López (CNIG): There are not any legal implication, so that our data are out there it is. It's not enough is important. The good quality and
+Emilio López (CNIG): There are not any legal implication, so that our data alternative, it's not enough. It's important, the quality and
 
 639
 01:40:34.150 --> 01:40:35.770
-Emilio López (CNIG): Updating all of the data.
-
-640
-01:40:37.000 --> 01:40:38.050
-Emilio López (CNIG): Or a
+Emilio López (CNIG): Updating of the data.
 
 641
 01:40:39.100 --> 01:40:46.960
-Emilio López (CNIG): Or the thing is for coverage that data in this case in Spain, a cluster data.
+Emilio López (CNIG): Or the thing is for coverage data in this case in Spain, a cluster data.
 
 642
 01:40:48.130 --> 01:40:53.740
-Emilio López (CNIG): Around our not only our authority, but a are
+Emilio López (CNIG): Around our not only authorative, but are
 
 643
 01:40:54.790 --> 01:41:03.310
@@ -2554,15 +2518,15 @@ Emilio López (CNIG): legally binding as well. So I think that this is an import
 
 644
 01:41:10.120 --> 01:41:12.790
-don sullivan: Like this done, if I could type in for a second here.
+don sullivan: Peter this is Don, if I could pipe in for a second here.
 
 645
 01:41:13.720 --> 01:41:15.700
-Peter Rushforth: Yes, please. I'm
+Peter Rushforth: Yes, please.
 
 646
 01:41:15.790 --> 01:41:26.410
-don sullivan: Just a thought. And, and, again, maybe I'm almost face the rest of the panelists and folks online would correct me right away if I couldn't. Please, or if you would please. Um, but
+don sullivan: Just a thought. And, and, again, maybe I'm almost face the rest of the panelists and folks online would correct me right away if I could please, or if you would please.
 
 647
 01:41:26.950 --> 01:41:35.800
@@ -2570,27 +2534,27 @@ don sullivan: But, but I'm looking at this as not being really issue of of autho
 
 648
 01:41:38.140 --> 01:41:45.040
-don sullivan: And again, maybe I'm being very simplistic, but I, as a consumer of geographic data visualization visualizing and browser.
+don sullivan: And again, maybe I'm being very simplistic, but I, as a consumer of geographic data visualizing in a browser.
 
 649
 01:41:46.660 --> 01:41:54.880
-don sullivan: I'm really tired of having to deal with my going to use least that are Carter G D or or match up and you know I mean about and how am I going to do the rendering and, you know, and
+don sullivan: I'm really tired of having to deal with 'Am I going to  use Leaflet, or Carto GD or MapShip and you know I mean about and how am I going to do the rendering and, you know, and
 
 650
 01:41:55.390 --> 01:42:02.560
-don sullivan: And so now we we already have a system or an herbal and science. We've got a visualization tool kit. A common operating picture.
+don sullivan: And so now we we already have a system or in airborne science. We've got a visualization tool kit, a common operating picture
 
 651
 01:42:03.070 --> 01:42:12.790
-don sullivan: System that we ingest regular web services. Well, we really need, you know, we really need other services, we really need thread. So now we've got threads in there too and and
+don sullivan: System that we ingest regular web services. Well, we really need, you know, we really need other services, we really need threads. So now we've got threads in there too and and
 
 652
 01:42:13.270 --> 01:42:24.910
-don sullivan: And I would love to. I would love to be able to write something really simple an HTML with a map tag or something like that and and I thought, that's kind of what this
+don sullivan: And I would love to, I would love to be able to write something really simple in HTML with a map tag or something like that and and I thought, that's kind of what this
 
 653
 01:42:25.810 --> 01:42:35.380
-don sullivan: This whole thing was, was going to, um, so, so, correct me if I'm wrong but but but if we could just take the obstruction up to the to the very highest level.
+don sullivan: This whole thing was, was going to, um, so, so, correct me if I'm wrong but but but if we could just take the abstruction up to the to the very highest level.
 
 654
 01:42:35.920 --> 01:42:46.630
@@ -2598,7 +2562,7 @@ don sullivan: And aren't we talking about making it simpler and getting rid of a
 
 655
 01:42:50.560 --> 01:42:51.790
-Peter Rushforth: SEBASTIAN. I'll let you
+Peter Rushforth: Sébastien, I'll let you answer.
 
 656
 01:42:53.410 --> 01:43:00.610
@@ -2606,39 +2570,39 @@ Sébastien Durand (Canada - NRCAN - CGP): Well, I'm actually would like just to 
 
 657
 01:43:02.170 --> 01:43:05.230
-Sébastien Durand (Canada - NRCAN - CGP): That's what I was trying to do with the opening statement. If
+Sébastien Durand (Canada - NRCAN - CGP): That's what I was trying to do with the opening statement.
 
 658
 01:43:06.670 --> 01:43:19.750
-Sébastien Durand (Canada - NRCAN - CGP): 90% of the newly acquired data is geo referencing as as your reference. So we should by default. Try to facilitate the depiction of the depiction through a map capacity.
+Sébastien Durand (Canada - NRCAN - CGP): 90% of the newly acquired data is geo referencing, as georeference. So we should by default try to facilitate the depiction of the depiction through a map capacity.
 
 659
 01:43:20.560 --> 01:43:28.930
-Sébastien Durand (Canada - NRCAN - CGP): On HTML. HTML make that barrier as simple as possible. The reason is from my standpoint as to why this is important.
+Sébastien Durand (Canada - NRCAN - CGP): On HTML, through HTML. Make that barrier as simple as possible. The reason is from my standpoint as to why this is important.
 
 660
 01:43:29.680 --> 01:43:43.270
-Sébastien Durand (Canada - NRCAN - CGP): We have a limited amount of resource Joe resource and technical experts within our organization and trying to sustain the communication requirements associated with all of these data whether or not they are derivative
+Sébastien Durand (Canada - NRCAN - CGP): We have a limited amount of resource, geo resource and technical experts within our organization and trying to sustain the communication requirements associated with all of these data whether or not they are authoritative
 
 661
 01:43:44.920 --> 01:43:49.810
-Sébastien Durand (Canada - NRCAN - CGP): We can we can even making a knowledge to the domain.
+Sébastien Durand (Canada - NRCAN - CGP): We can't, we can't even making a nudge to the domain.
 
 662
 01:43:51.700 --> 01:43:53.650
-Sébastien Durand (Canada - NRCAN - CGP): The. It's like saying that's trying to
+Sébastien Durand (Canada - NRCAN - CGP):  It's like saying, that's trying to ah,
 
 663
 01:43:54.850 --> 01:44:09.250
-Sébastien Durand (Canada - NRCAN - CGP): It's a communication tool that communication to be as simple as possible. And because most of the information nowadays is to enable HTML should be directly to enable that means have the capacity to show that information.
+Sébastien Durand (Canada - NRCAN - CGP): It's a communication tool that communication to be as simple as possible. And because most of the information nowadays is geoenabled, HTML should be directly geo enable, that means have the capacity to show that information.
 
 664
 01:44:10.600 --> 01:44:13.780
-Sébastien Durand (Canada - NRCAN - CGP): That bearable requirement in my, in my perspective.
+Sébastien Durand (Canada - NRCAN - CGP): That barebone requirement in my, in my perspective.
 
 665
 01:44:15.790 --> 01:44:22.840
-Peter Rushforth: I mean, I guess the only editorial I can comment, try, try and combine what Don was asking a
+Peter Rushforth: I mean, I guess the only editorial I can comment, try, try and combine what Don was asking,
 
 666
 01:44:24.010 --> 01:44:24.340
@@ -2654,7 +2618,7 @@ Peter Rushforth: The user is the integrating
 
 669
 01:44:31.990 --> 01:44:41.530
-Peter Rushforth: Person element in this architecture right like HTML is made for users. It's designed for accessibility elements bring
+Peter Rushforth: Person, element in this architecture right like, HTML is made for users. It's designed for accessibility elements bring
 
 670
 01:44:42.610 --> 01:44:48.820
@@ -2670,15 +2634,15 @@ Peter Rushforth: It's that the the common facilities that users need can be buil
 
 673
 01:45:06.250 --> 01:45:21.610
-Peter Rushforth: Language of the web. And so, you know, maps are very much a user oriented thing. And I think that we need to think about. Exactly. I mean the difference between thinking about it, things like API's and services and thinking about
+Peter Rushforth: Language of the web. And so, you know, maps are very much a user oriented thing. And I think that we need to think about.  I mean the difference between thinking about it, things like API's and services and thinking about
 
 674
 01:45:22.690 --> 01:45:34.420
-Peter Rushforth: A facility in HTML is the difference is the user right in an API and a fan of service you're thinking about the user being a programmer.
+Peter Rushforth: A facility in HTML is, the difference is the user right in an API and in a service you're thinking about the user being a programmer.
 
 675
 01:45:35.050 --> 01:45:44.620
-Peter Rushforth: Whereas when you're thinking about providing something in HTML, you're thinking about the user is the person sitting consuming the thing that you're producing
+Peter Rushforth: Whereas when you're thinking about providing something in HTML, you're thinking about the user is the person sitting, consuming the thing that you're producing
 
 676
 01:45:45.880 --> 01:46:07.510
@@ -2686,27 +2650,27 @@ Peter Rushforth: And so that's the difference. So I think it's a mindset thing. 
 
 677
 01:46:09.070 --> 01:46:25.240
-Peter Rushforth: From it at design time. And so I think that what what the master HTML initiative is trying to do is to get the geospatial community to think about how can we bring the factors that affect all users.
+Peter Rushforth: From it at design time. And so I think that what what the Maps4HTML initiative is trying to do is to get the geospatial community to think about how can we bring the factors that affect all users
 
 678
 01:46:26.320 --> 01:46:32.080
-Peter Rushforth: When using maps into that common framework and let
+Peter Rushforth: When using maps, into that common framework and let,
 
 679
 01:46:33.250 --> 01:46:45.460
-Peter Rushforth: Web developers can should be able to enhance that. But there should be, we should think about how people consume mounts and spatial information at the standards level as well.
+Peter Rushforth: Web developers can should be able to enhance that. But there should be, we should think about how people consume maps and spatial information at the standards level as well.
 
 680
 01:46:55.480 --> 01:46:58.480
-cawilson: And just a comment a little bit more on Dan's point
+cawilson: And just a comment a little bit more on Don's point
 
 681
 01:46:59.770 --> 01:47:05.830
-cawilson: So Don ugly these certain when you started your time. He said, You didn't think this was related to
+cawilson: So Don, I believe these certain when you started your time. He said, You didn't think this was related to
 
 682
 01:47:08.200 --> 01:47:22.000
-cawilson: The data reliability or the 4K dumbness of the data and to monetization. I agree with you. I think the authoritative data. This is just another channel. So the data is either authoritative renown authoritative with or without not the know
+cawilson: The data reliability or the authoratative of the data and to monetization. I agree with you. I think the authoritative data. This is just another channel. So the data is either authoritative or nonauthoritative with or without MapML
 
 683
 01:47:24.010 --> 01:47:31.630
@@ -2714,15 +2678,15 @@ cawilson: The monetization point though. I think the point around that. As you k
 
 684
 01:47:33.220 --> 01:47:42.160
-cawilson: And I think there's the but as I said, that's just a veneer of the data. So how do we get all the other data, you know the rest of the iceberg.
+cawilson: And I think there's the, but as I said, that's just a veneer of the data. So how do we get all the other data, you know the rest of the iceberg.
 
 685
 01:47:44.050 --> 01:48:01.690
-cawilson: Available and easy to use format, just to save you said like, no, you can't expect the average user start playing if leaflet or whatever. So why isn't this just a simple browser query and integration within the browser should be that simple using you know simple languages like HTML.
+cawilson: Available in an easy to use format, just to save you said like, no, you can't expect the average user to start playing with Leaflet or whatever. So why isn't this just a simple browser query and integration within the browser should be that simple, using you know simple languages like HTML.
 
 686
 01:48:06.040 --> 01:48:16.000
-Sébastien Durand (Canada - NRCAN - CGP): And I just want to add another thing there about the dominant about photography business of the data. I understand it's not the topic of that discussion, but
+Sébastien Durand (Canada - NRCAN - CGP): And I just want to add another thing there about the comment about authoratativeness of the data. I understand it's not the topic of that discussion, but
 
 687
 01:48:17.440 --> 01:48:25.240
@@ -2730,11 +2694,11 @@ Sébastien Durand (Canada - NRCAN - CGP): It is important when you put yourself 
 
 688
 01:48:26.500 --> 01:48:39.250
-Sébastien Durand (Canada - NRCAN - CGP): If they can have confidence in the product that they will produce that is important and and at the DG level when I create something they all want to know where the information comes from
+Sébastien Durand (Canada - NRCAN - CGP): If they can have confidence in the product that they will produce, that is important and and at the DG level when I create something they all want to know where the information comes from
 
 689
 01:48:39.880 --> 01:48:49.840
-Sébastien Durand (Canada - NRCAN - CGP): So that they can have confidence in the product so that that concept of authoritative nurse or legally binding data is actually quite critical.
+Sébastien Durand (Canada - NRCAN - CGP): So that they can have confidence in the product so that, that concept of authoritative nurse or legally binding data is actually quite critical.
 
 690
 01:48:51.340 --> 01:48:56.920
@@ -2742,15 +2706,15 @@ Sébastien Durand (Canada - NRCAN - CGP): And should be conveyed throughout the 
 
 691
 01:48:58.660 --> 01:49:12.460
-Sébastien Durand (Canada - NRCAN - CGP): But in a nutshell. Even if you have the best infrastructure around with all that authoritative data legally binding. If you're not enabling the users to easily create those products on the, on the other page, it's
+Sébastien Durand (Canada - NRCAN - CGP): But in a nutshell. Even if you have the best infrastructure around with all that authoritative data, legally binding. If you're not enabling the users to easily create those products on the, on the page, it's
 
 692
 01:49:13.660 --> 01:49:16.450
-Sébastien Durand (Canada - NRCAN - CGP): Again bottleneck and communication and
+Sébastien Durand (Canada - NRCAN - CGP): Again bottleneck in communication and
 
 693
 01:49:17.530 --> 01:49:29.560
-Sébastien Durand (Canada - NRCAN - CGP): Again Coover hours pretty in engagement golden this year and trying to provide again a response to different departments, and I can tell you that making those maps were
+Sébastien Durand (Canada - NRCAN - CGP): Again COVID. I was pretty engaged in COVID this year and trying to provide again a response to different departments, and I can tell you that making those maps were
 
 694
 01:49:30.100 --> 01:49:35.740
@@ -2758,15 +2722,15 @@ Sébastien Durand (Canada - NRCAN - CGP): extremely painful. It was a painful pr
 
 695
 01:49:36.670 --> 01:49:44.860
-Sébastien Durand (Canada - NRCAN - CGP): The proper ways to do that communication, making sure that the map products, but also the dashboards and all those things were actually meeting requirements.
+Sébastien Durand (Canada - NRCAN - CGP): The proper ways to do that communication, making sure that the map products, but also the dashboards and all those things were actually meeting requirements,
 
 696
 01:49:45.400 --> 01:49:59.200
-Sébastien Durand (Canada - NRCAN - CGP): We gag assessment, the Kenyan government with template and all those things, these are the type of of hurdles. We have to go through when we want to push any information out there to the public. We need to make sure it is.
+Sébastien Durand (Canada - NRCAN - CGP): from WCAG assessment, the Canadian government web template and all those things, these are the type of of hurdles we have to go through when we want to push any information out there to the public. We need to make sure it is
 
 697
 01:50:00.610 --> 01:50:10.690
-Sébastien Durand (Canada - NRCAN - CGP): consumable and Nexon meets all the laws. What we have to do it relatively short like in a short time fashion when it's to address and answer a crisis such as called it
+Sébastien Durand (Canada - NRCAN - CGP): consumable and meets all the laws. What we have to do it relatively short, like in a short time fashion when it's to address and answer a crisis such as COVID
 
 698
 01:50:11.200 --> 01:50:18.610
@@ -2774,11 +2738,11 @@ Sébastien Durand (Canada - NRCAN - CGP): So that brings back even more the requ
 
 699
 01:50:18.910 --> 01:50:31.450
-Sébastien Durand (Canada - NRCAN - CGP): Directly supported by the browser developers so that we can just lucky. Let's rely on that thing. It is really a standard. It's not a. It's not a schema or whatever it is a standard for all to depict
+Sébastien Durand (Canada - NRCAN - CGP): Directly supported by the browser developers so that we can just okay, let's rely on that thing. It is really a standard. It's not a. It's not a schema or whatever it is a standard for all to depict,
 
 700
 01:50:32.260 --> 01:50:45.220
-Sébastien Durand (Canada - NRCAN - CGP): That it's the Go To way to make a map on the web. And that would be a big, big, big uplift our capacity to to connect interpret and make the information interoperable.
+Sébastien Durand (Canada - NRCAN - CGP): That it's the 'Go-To' way to make a map on the web. And that would be a big, big, big uplift our capacity to to connect, interpret and make the information interoperable.
 
 701
 01:50:45.550 --> 01:50:53.470
@@ -2786,7 +2750,7 @@ Sébastien Durand (Canada - NRCAN - CGP): And give the tools and ammunition for 
 
 702
 01:50:55.060 --> 01:50:55.750
-Sébastien Durand (Canada - NRCAN - CGP): My perspective.
+Sébastien Durand (Canada - NRCAN - CGP): Anyway, my perspective again.
 
 703
 01:50:57.190 --> 01:51:05.650
@@ -2794,7 +2758,7 @@ don sullivan: You know, I like I completely. I completely agree. And also I want
 
 704
 01:51:06.040 --> 01:51:14.350
-don sullivan: That I'm saying accuracy is not important. Or, or, you know, some sort of quality metric is not important thumbs veteran and Cameron, please. I
+don sullivan: That I'm saying accuracy is not important. Or, or, you know, some sort of quality metric is not important, Sébastien and Cameron, please. I
 
 705
 01:51:14.860 --> 01:51:19.480
@@ -2802,23 +2766,23 @@ don sullivan: Didn't mean to say that at all. As a matter of fact, I would sugge
 
 706
 01:51:20.290 --> 01:51:30.430
-don sullivan: We reconsider our traditional metrics for for accuracy. I mean, you know, we deal with some, you know, where's it on the words on the ground run or three spacer and six space and and
+don sullivan: We reconsider our traditional metrics for for accuracy. I mean, you know, we deal with some, you know, where's it on the on the ground run, or three space and six space and and
 
 707
 01:51:30.970 --> 01:51:36.880
-don sullivan: And so we're going to use the the the geological surveys plus or minus 40 meters accuracy or we're going to use the
+don sullivan: And so we're going to use the geological surveys plus or minus 40 meters accuracy or we're going to use the
 
 708
 01:51:37.390 --> 01:51:43.660
-don sullivan: The, the firefighters. I mean I deal with them with wildfires and imaging fires a lot and and they're
+don sullivan: The, the firefighters. I mean I deal with them with wildfires and imaging fires a lot and and there
 
 709
 01:51:44.020 --> 01:51:53.140
-don sullivan: The accuracy metric. I got from them is, don't put fire on the wrong side of the road. So now we're talking plus or minus a meter absolute accuracy. So, so, so I think we need to to rethink that.
+don sullivan: The accuracy metric I got from them is, don't put fire on the wrong side of the road. So now we're talking plus or minus a meter absolute accuracy. So, so, so I think we need to to rethink that.
 
 710
 01:51:53.620 --> 01:52:03.790
-don sullivan: There's a, there's a group in in the in your organization called ISA your son's information partnerships that is looking at that whole that whole issue and they've come up with like
+don sullivan: There's a, there's a group in the organization called AISA aeroscience information partnerships that is looking at that whole that whole issue and they've come up with like
 
 711
 01:52:04.150 --> 01:52:10.240
@@ -2826,7 +2790,7 @@ don sullivan: I consider a really novel and valuable approach and its operationa
 
 712
 01:52:10.900 --> 01:52:21.460
-don sullivan: The idea of accuracy and and you know and data quality into usability, you know. Is it is it good for this, this group, or is it the good for this group. And that's, that's, that's an orthogonal
+don sullivan: The idea of accuracy and and you know and data quality into usability, you know. Is it is it good for this, this group, or is it the good for this group. And that's an orthogonal
 
 713
 01:52:21.760 --> 01:52:31.810
@@ -2834,7 +2798,7 @@ don sullivan: Issue to maps on the web, but it's certainly important. So again, 
 
 714
 01:52:32.350 --> 01:52:44.020
-don sullivan: Other than saying that was that was orthogonal to putting it as a as putting in baptism first class citizen HTML. So, so one to get the end before the end of the panel. I wanted to make sure that wasn't leaving you on the pressure. My apologies.
+don sullivan: Other than saying that was that was orthogonal to putting it as putting a map as a first class citizen HTML. So, so one to get the in before the end of the panel. I wanted to make sure that wasn't leaving you on the pressure. My apologies.
 
 715
 01:52:47.500 --> 01:52:48.340
@@ -2842,7 +2806,7 @@ Sébastien Durand (Canada - NRCAN - CGP): Oh, that's good.
 
 716
 01:52:50.440 --> 01:52:55.240
-Sébastien Durand (Canada - NRCAN - CGP): Obviously coming from those life accuracy. Doesn't matter which would have issues.
+Sébastien Durand (Canada - NRCAN - CGP): Obviously coming from tjhat side, 'accuracy doesn't matter', would have issues.
 
 717
 01:52:59.980 --> 01:53:00.700
@@ -2850,11 +2814,11 @@ Peter Rushforth: Okay, well,
 
 718
 01:53:01.810 --> 01:53:18.040
-Peter Rushforth: I think the panel has a vote run its course. But I, but I would like to extend my thanks to Emilio and Dawn and Sebastian and Cameron for being willing participants and in the discussion and
+Peter Rushforth: I think the panel has about run its course. But I, but I would like to extend my thanks to Emilio and Don and Sébastien and Cameron for being willing participants and in the discussion and
 
 719
 01:53:20.290 --> 01:53:33.730
-Peter Rushforth: I'm going to hang around on Twitter for a long time, another two weeks. So anyhow, I hope that they will tune in on Twitter as well and potentially interact with other members of the audience.
+Peter Rushforth: I'm going to hang around on Gitter for a long time, another two weeks. So anyhow, I hope that they will tune in on Gitter as well and potentially interact with other members of the audience
 
 720
 01:53:35.620 --> 01:53:41.890
@@ -2862,7 +2826,7 @@ Peter Rushforth: There so I'll be posting links to the the presentations and the
 
 721
 01:53:43.480 --> 01:53:56.560
-Peter Rushforth: Discussions about about those things. So those are good places to comment make comments about about thing those presentations for the authors to get feedback about and to answer questions or whatever.
+Peter Rushforth: Discussions about, about those things. So those are good places to comment, make comments about, about thing those presentations for the authors to get feedback about and to answer questions or whatever.
 
 722
 01:53:57.580 --> 01:53:58.630
@@ -2887,4 +2851,3 @@ Francesco Bartoli: Thank you.
 727
 01:54:35.440 --> 01:54:35.980
 don sullivan: Thank you.
-

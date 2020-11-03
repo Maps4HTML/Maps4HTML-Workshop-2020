@@ -1,6 +1,7 @@
 - title: "Week 1, Day 1"
   start: 2020-09-21T04:00Z
   video: https://www.youtube.com/watch?v=Ji3HF35Hpso&list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ&index=1
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200921-captions.html
   agenda:
     - title: "Introduction"
       type: presentations
@@ -12,7 +13,9 @@
             - title: Why maps for the web
               author: Peter Rushforth
               discourse: https://discourse.wicg.io/t/why-maps-for-html/4797/2
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Why%20Maps%20for%20HTML%20-%20Peter%20Rushforth.pdf
     - title: "State of Web map widgets today"
       type: presentations
       duration: "1 hour"
@@ -23,14 +26,15 @@
               author: Amelia Bellamy-Royds
               discourse: https://discourse.wicg.io/t/use-cases-and-requirements-for-web-maps/4796/3
               link: https://maps4html.org/HTML-Map-Element-UseCases-Requirements/
-              linktype: draft report
+              linktype: Draft Report
             - title: Geomoose
               author: Dan Little
               discourse: https://discourse.wicg.io/t/the-geomoose-web-mapping-framework/4799
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/geomoose-dan-little-slides.pdf
 - title: "Week 1, Day 2"
   start: 2020-09-22T12:00Z
   video: https://www.youtube.com/watch?v=kYZ1RBQFHEU
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200922-captions.html
   agenda:
     - title: "State of map data & server standards today"
       type: presentations
@@ -41,20 +45,25 @@
             - title: OGC APIs for web use
               author: Gobe Hobona
               discourse: https://discourse.wicg.io/t/ogc-geospatial-standard-apis-for-web-use/4842/3
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Gobe_Hobona.pdf
             - title: pygeoapi
               author: Tom Kralidis, Angelos Tzotsos, Francesco Bartoli
               discourse: https://discourse.wicg.io/t/pygeoapi-an-ogc-api-to-geospatial-data/4814
-              link: https://pygeoapi.io/presentations/default/#/frontpage
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/pygeoapi.pdf
             - title: Connection of the MapML initiative with OGC standards such as the new OGC API Tiles candidate or the old WMS
               author: Joan Masó
-              discourse: https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811/11
               discourse: https://discourse.wicg.io/t/ogc-api-tiles-as-provider-of-tiles-and-mapml-documents/4811
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Joan_Maso_Connection_Of_The_MapML_Initiative_With_OGC_Standards-V2.pdf
             - title: Limitations to use of OGC services
               author: Jonathan Moules
               discourse: https://discourse.wicg.io/t/the-difficulty-of-discovering-ogc-services/4844/4
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.odp
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.odp
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jonathan_Moules.pdf
     - title: "Stakeholders: Government geospatial data providers & the web"
       type: panel
       duration: "1 hour"
@@ -71,6 +80,7 @@
 - title: "Week 1, Day 3"
   start: 2020-09-23T16:00Z
   video: https://www.youtube.com/watch?v=zJkJcvmUA5o
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200923-captions.html
   agenda:
     - title: "Native map viewer for the Web platform"
       type: presentations
@@ -80,19 +90,22 @@
             - title: "Extending the Web: Maps, The Commons, and Pie"
               author: Brian Kardell
               discourse: https://discourse.wicg.io/t/maps-and-the-extensible-web-model/4847/3
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-web-commons.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brian_Kardell-extending-the-web-maps-and-the-web-commons.pdf
             - title: The MapML Proposal - Part One
               author: Peter Rushforth
               discourse: https://discourse.wicg.io/t/the-mapml-proposal-goals-and-details/4848/3
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Peter_Rushforth-The-MapML-Proposal-Part-One.pdf
             - title: Bocoup's Review of the MapML Proposal
               author: Simon Pieters
               discourse: https://discourse.wicg.io/t/the-mapml-proposal-goals-and-details/4848/3
-              link: https://slides.com/zcorpan/bocoup-review-mapml/
+              slides: https://slides.com/zcorpan/bocoup-review-mapml/
             - title: Quad Tree Composite Tiling and the standardization of tiling; Decentralized Web Mapping
               author: Satoru Takagi
               discourse: https://discourse.wicg.io/t/vector-tiling-on-svgmap/3135
               link: https://satakagi.github.io/mapsForWebWS2020-docs/
+              linktype: Paper
     - title: "Internationalization and Security"
       type: presentations
       duration: "30 minutes"
@@ -102,11 +115,11 @@
             - title: Multilingual text rendering
               author: Brandon Liu
               discourse: https://discourse.wicg.io/t/multilingual-text-rendering-for-web-maps/4850/3
-              link: http://bdon.org/maps-for-the-web/
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Liu/index.html
             - title: Fuzzy Geolocation
               author: Thijs Brentjens
               discourse: https://discourse.wicg.io/t/fuzzy-geolocation-improve-privacy-and-security/4822
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Thijs_Brentjens/fuzzy-geolocation/
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Thijs_Brentjens/fuzzy-geolocation/index.html
     - title: "Worldwide Web Maps: Challenges in the global context"
       type: panel
       duration: "30 minutes"
@@ -119,7 +132,7 @@
         - Moderator:
             - Doug Schepers
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/worldwide-web-maps-challenges-in-the-global-context/4890">Join the discussion, on Discourse!</a>
+            - '<a href="https://discourse.wicg.io/t/worldwide-web-maps-challenges-in-the-global-context/4890">Worldwide Web Maps: Challenges in the global context, on Discourse</a>'
     - title: "Extending GeoJSON for Web Applications"
       type: breakout
       details:
@@ -127,16 +140,21 @@
         - Talks:
             - title: Expressing GeoJSON as JSON-LD 1.1
               author: Bryan Haberberger
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/bryan_haberberger-geojson-presentation.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/bryan_haberberger-geojson-presentation.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/bryan_haberberger-geojson-presentation.pdf
             - title: "GeoJSON-T: Adding time to the GeoJSON standard"
               author: Karl Grossner
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Grossner_geojson-t.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Grossner_geojson-t.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Grossner_geojson-t.pdf
         - Discussion:
             - <a href="https://discourse.wicg.io/t/extending-geojson-for-web-application/4851">Extending GeoJSON for Web Applications, on Discourse</a>
 
 - title: "Week 1, Day 4"
   start: 2020-09-24T22:00Z
   video: https://www.youtube.com/watch?v=aqXmbNAaLAU
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200924-captions.html
   agenda:
     - title: "Creating accessible Web map widgets"
       type: presentations
@@ -146,32 +164,34 @@
             - title: UI patterns in existing web map widgets
               author: Nic Chan
               discourse: https://discourse.wicg.io/t/ui-patterns-in-existing-web-map-widgets/4855
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nic_Chan/
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nic_Chan/index.html
             - title: Introduction to Digital Nonvisual Maps
               author: Brandon Biggs
               discourse: https://discourse.wicg.io/t/digital-nonvisual-maps/4838
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Brandon_Biggs.pdf
     - title: Building Cross-Sensory Maps Using Audiom
       type: breakout
       duration: "60 minutes"
-      link: https://xrnavigation.io/audiom-getting-started/
+      slides: https://xrnavigation.io/audiom-getting-started/
       details:
         - Facilitator: Brandon Biggs
-        - Discussion: <a href="https://discourse.wicg.io/t/digital-nonvisual-maps/4838">Join the discussion on Discourse!</a>
+        - Discussion: <a href="https://discourse.wicg.io/t/digital-nonvisual-maps/4838">Digital Nonvisual Maps, on Discourse</a>
     - title: "The &lt;map&gt; and &lt;layer&gt; speculative polyfill (MapML)"
-      link: https://github.com/Maps4HTML/Web-Map-Custom-Element
+      slides: https://github.com/Maps4HTML/Web-Map-Custom-Element
       type: breakout
       details:
         - Facilitator: Peter Rushforth
         - Talks:
             - title: The MapML Proposal - Part Two
               author: Peter Rushforth
-              link: https://youtu.be/aqXmbNAaLAU?t=4903
-        - Discussion:
-          - <a href="https://discourse.wicg.io/t/the-mapml-proposal-part-two/4894">Join the discussion on Discourse!</a>
+              slides: https://youtu.be/aqXmbNAaLAU?t=4903
+              discourse: https://discourse.wicg.io/t/the-mapml-proposal-part-two/4894
 - title: "Week 2, Day 1"
   start: 2020-09-28T04:00Z
   video: https://www.youtube.com/watch?v=Jb-vLX7a1m0&list=PLNhYw8KaLq2VuEWzz096iRjtvWel-p2AJ&index=5
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200928-captions.html
   agenda:
     - title: "Web Maps for Real-World Accessibility"
       type: presentations
@@ -180,11 +200,13 @@
         - Talks:
             - title: Physical accessibility data in maps
               author: Sebastian Felix Zappe
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sebastian_Felix_Zappe_Holger_Dieteric.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sebastian_Felix_Zappe_Holger_Dieteric.pdf
               discourse: https://discourse.wicg.io/t/physical-accessibility-data-in-maps/4852
             - title: Indoor maps
               author: Claudia Loitsch & Julian Striegl
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Claudia_Loitsch_Julian_Striegl.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Claudia_Loitsch_Julian_Striegl.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Claudia_Loitsch_Julian_Striegl.pdf
               discourse: https://discourse.wicg.io/t/indoor-maps-floorplans/4853
     - title: "Web Maps for Cognitive Accessibility"
       type: panel
@@ -198,7 +220,7 @@
         - Moderator:
             - Amelia Bellamy-Royds
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/cognitive-accessibility-of-web-maps/4854">Cognitive Accessibility of Web Maps, on Discourse</a>
         - Background Reading:
             - '<a href="https://w3c.github.io/coga/issue-papers/wayfinding-indoors.html">COGA Issue Paper on Indoor Navigation / Wayfinding</a>'
             - '<a href="https://www.clearhelper.org/news/wayfinding/">Collection of Wayfinding links & resources</a>'
@@ -209,23 +231,28 @@
         - Talks:
             - title: Advanced Analytics Software Project for Geospatial Data
               author: Nicolas Rafael Palomino
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolas_Rafael_Palomino-W3C-Application.pdf
               discourse: https://discourse.wicg.io/t/advanced-analytics-software-project-for-geospatial-data/4859
             - title: Embedding rendering & behavior configuration in map data
               author: Danielle Dupuy
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Danielle_Dupuy_W3C-OGC_EmbeddingMapData.pdf
               discourse: https://discourse.wicg.io/t/embedding-rendering-behavior-configuration-in-map-data/4860
             - title: The History of Meteorology and Cartography
               author: Chris Little
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Chris_Little-Meteorology-and-MapsCut1.pdf
               discourse: https://discourse.wicg.io/t/the-history-of-meteorology-and-cartography/4861
             - title: Web GIS application for Indian Prime Minister's Rural Road Programme
               author: Sajeevan G
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sajeevan_G-maps-for-the-web.pdf 
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sajeevan_G-maps-for-the-web.pdf
               discourse: https://discourse.wicg.io/t/web-gis-application-for-indian-prime-ministers-rural-road-programme/4862
 - title: "Week 2, Day 2"
   start: 2020-09-29T12:00Z
   video: https://www.youtube.com/watch?v=RPZlE5N-Nds
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200929-captions.html
   agenda:
     - title: Creating accessible Web map widgets
       type: presentations
@@ -234,7 +261,9 @@
         - Talks:
             - title: Towards Accessible Annotations for a Native Map Viewer for the Web Platform
               author: Nicolò Carpignoli & Joshue O Connor
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolo_Carpignoli-Maps-for-the-Web.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolo_Carpignoli-Maps-for-the-Web.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Nicolo_Carpignoli-Maps-for-the-Web.pdf
               discourse: https://discourse.wicg.io/t/towards-accessible-annotations-for-a-native-map-viewer-for-the-web-platform/4873
     - title: Creating accessible Web map widgets
       type: panel
@@ -248,7 +277,7 @@
         - Moderator:
             - Gobe Hobona
         - Discussion:
-            - <a href="https://youtu.be/RPZlE5N-Nds?t=1257">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/creating-accessible-web-map-widgets/4874">Creating accessible web map widgets, on Discourse</a>
     - title: "Advances in 3D Map Display"
       type: presentations
       duration: "30 minutes"
@@ -256,11 +285,13 @@
         - Talks:
             - title: "GeoPose: From point-of-interest to maps-of-objects"
               author: Jan-Erik Vinje
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jan-Erik_Vinje-From Points-of-interest_to_maps_of_objects.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jan-Erik_Vinje-From Points-of-interest_to_maps_of_objects.pdf
               discourse: https://discourse.wicg.io/t/geopose-from-point-of-interest-to-maps-of-objects/4914
             - title: "How GeoPose aligns with use cases and requirements for Web map authors"
               author: Christine Perey and Josh Lieberman
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pdf
               discourse: https://discourse.wicg.io/t/how-geopose-aligns-with-use-cases-and-requirements-for-web-map-authors/4915
     - title: Maps and augmented reality
       type: panel
@@ -275,12 +306,13 @@
         - Moderator:
             - Ryan Ahola
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/maps-and-augmented-reality/4916">Join the discussion on Discourse!</a>
+            - <a href="https://discourse.wicg.io/t/maps-and-augmented-reality/4916">Maps & Augmented Reality, on Discourse</a>
     - title: "Maps of Objects: GeoPose for Web maps"
       type: breakout
 - title: "Week 2, Day 3"
   start: 2020-09-30T16:00Z
   video: https://www.youtube.com/watch?v=ny7sIfddwJE
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20200930-captions.html
   agenda:
     - title: "Advanced web graphics for mapping"
       type: presentations
@@ -289,23 +321,29 @@
         - Talks:
             - title: Map adventures in weird web standards - gyroscopes, texture cubes, and mutants
               author: Iván Sánchez Ortega
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/2020-ogc-w3c-workshop-ivansanchez-slides/slides.html
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/2020-ogc-w3c-workshop-ivansanchez-slides/slides.html
               discourse: https://discourse.wicg.io/t/map-adventures-in-weird-web-standards-gyroscopes-texture-cubes-and-mutants/4882
             - title: Map Compositions format
               author: Karel Charvat
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Compositions-format-intro-presentation-by-Karel.pptx
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Compositions-format-intro-presentation-by-Karel.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Compositions-format-intro-presentation-by-Karel.pdf
               discourse: https://discourse.wicg.io/t/map-compositions-format/4883
             - title: MapML implementations in MapServer, GDAL and OGR
-              author: Daniel Morrissette
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Daniel_Morissette-ogc-w3c-mapml-in-mapserver-gdal-ogr.pptx
+              author: Daniel Morissette
+              slides:
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Daniel_Morissette-ogc-w3c-mapml-in-mapserver-gdal-ogr.pptx
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Daniel_Morissette-ogc-w3c-mapml-in-mapserver-gdal-ogr.pdf
               discourse: https://discourse.wicg.io/t/mapml-implementations-in-mapserver-gdal-and-ogr/4884
             - title: OffScreenCanvas for rendering performance
               author: Andreas Hocevar
-              link: https://docs.google.com/presentation/d/1vIIbUgdHenfx2rA96-oJhf0aRcpC3QlhVl6kWFf69Bw/edit#slide=id.gd9c453428_0_16
+              slides:
+                - https://docs.google.com/presentation/d/1vIIbUgdHenfx2rA96-oJhf0aRcpC3QlhVl6kWFf69Bw/edit#slide=id.gd9c453428_0_16
+                - https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Andreas_Hocevar_OpenLayers.pdf
               discourse: https://discourse.wicg.io/t/offscreencanvas-for-improved-map-rendering-performance/4885
             - title: Dynamic and Observational Spatial Data
               author: Thomas Usländer, Hylke van der Schaaf, Katharina Schleidt
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Schleidt_van_der_Schaaf_ Uslander-Dynamic-and-Observational-Spatial-Data.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Schleidt_van_der_Schaaf_ Uslander-Dynamic-and-Observational-Spatial-Data.pdf
               discourse: https://discourse.wicg.io/t/dynamic-and-observational-spatial-data/4886
     - title: "Stakeholders: Commercial mapping services & the web"
       type: panel
@@ -319,17 +357,18 @@
         - Moderator:
             - Ted Guild
         - Discussion:
-            - <a href="https://discourse.wicg.io/t/stakeholders-commercial-mapping-services-the-web/4919">Join the discussion on Discourse!</a>
+            - '<a href="https://discourse.wicg.io/t/stakeholders-commercial-mapping-services-the-web/4919">Stakeholders: Commercial Mapping Services on the web on Discourse</a>'
     - title: "Map Whiteboard: Collaborative Map-Making"
       type: breakout
-      link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Whiteboard-Collaborative-Map-Making-breakout-session.pptx
+      slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Karel_Charvat-Map-Whiteboard-Collaborative-Map-Making-breakout-session.pptx
       details:
         - Facilitator: Karel Charvat
         - Discussion:
-          - <a href="https://discourse.wicg.io/t/map-compositions-format/4883">Join the discussion on Discourse!</a>
+          - '<a href="https://discourse.wicg.io/t/map-compositions-format/4883">Map Whiteboard: Collaborative Map-Making on Discourse</a>'
 - title: "Week 2, Day 4"
   start: 2020-10-01T22:00Z
   video: https://youtu.be/9iw75LmnyvQ
+  captions: https://www.w3.org/2020/maps/supporting-material-uploads/minutes/20201001-captions.html
   agenda:
     - title: "Web developer priorities"
       type: presentations
@@ -339,7 +378,7 @@
         - Talks:
             - title: User Research on Maps in HTML
               author: Terence Eden
-              link: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Edent-Mapping-Workshop.pdf
+              slides: https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Edent-Mapping-Workshop.pdf
               discourse: https://discourse.wicg.io/t/user-research-on-maps-in-html/4918
     - title: "Stakeholders: Open Source for Web Mapping"
       type: panel
@@ -353,7 +392,7 @@
         - Moderator:
             - Tom Kralidis
         - Discussion:
-          - <a href="https://discourse.wicg.io/t/stakeholders-open-source-for-web-mapping/4920">Join the discussion on Discourse!</a>
+          - '<a href="https://discourse.wicg.io/t/stakeholders-open-source-for-web-mapping/4920">Stakeholders: Open Source for Web Mapping on Discourse</a>'
     - title: "Conclusion / Next Steps"
       type: discussion
       duration: "30 minutes"
@@ -385,7 +424,8 @@
 #             - title: Why maps for the web
 #               author: Peter Rushforth
 #               discourse: url-of-discourse-page
-#               link: url-of-slides-or-paper
+#               slides: array of slide links
+#               link: additional link (resources, etc)
 #               linktype: link text if not slides
 #     - title: "Stakeholders: Government geospatial data providers & the web"
 #       type: panel
