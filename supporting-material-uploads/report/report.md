@@ -1,9 +1,3 @@
-
-
-
-[TOC]
-
-
 <h2>Report on the Joint W3C-OGC Workshop on Maps for the Web</h2>
 
 
@@ -15,8 +9,9 @@ Geospatial information on the Web is fragmented, inadequately covered by Web sta
 On the topic of standardizing maps for the Web, the workshop surfaced a wide range of information, and opinion, the latter ranging from negative to cautious to outright enthusiasm. The hesitant feel a standard could prevent people from effectively using maps compared to current proprietary offerings. Those voicing cautious endorsement the idea and strongly encourage “keeping it simple.” Others were optimistic on calls to action to standardize maps as it reduces the barriers to their use by everyone, of all abilities technical, physical, cognitive.
 
 
-> (A native map HTML element would) definitely let us focus more on what we can do with maps; how we can make nice maps, how we can support users in creating nice maps...the more I think about it, the more I like...the basic concept of … a slippy map.... with that in place, mapping libraries could probably develop in directions that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely in the way of ... other kinds of developments.
-> Andreas Hocevar, OpenLayers developer / OSGEO
+> *(A native map HTML element would) definitely let us focus more on what we can do with maps; how we can make nice maps, how we can support users in creating nice maps...the more I think about it, the more I like...the basic concept of … a slippy map.... with that in place, mapping libraries could probably develop in directions that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely in the way of ... other kinds of developments.*
+
+-- Andreas Hocevar, OpenLayers developer / OSGEO
 
 The workshop demonstrated the receptiveness on the part of the Web standards community, to the idea of standardizing maps in browsers (the Web Plat, with the caveat that the work will be costly and time consuming.  Web Platform advocates suggest that efforts to standardize maps should be incremental in nature, starting with use cases and requirements, and proceeding to specification and development. In the light of such willingness to cooperate, and with the knowledge that the Web Platform is the last and only “even playing field” in our global information space, it is imperative that the geospatial standards community continue, and to increase our participation in Web standards development, promulgating standard and simplified access to maps and spatial information (maps in HTML), for everyone, of all abilities.
 
@@ -62,22 +57,22 @@ The panel first described the nature of audio maps, and the different types of a
 Tony Stockman, on challenges facing the auditory map domain:
 
 
-> One of the real problems, actually, is the lack of standards for auditory displays in general.
+> *One of the real problems, actually, is the lack of standards for auditory displays in general.*
 
 Nicholas Giudice, on challenges facing the auditory map domain:
 
 
-> ...for non visual variants of maps, cartographers...haven't thought about auditory and vibro tactile map (cartography), and so we need to somehow bake into any type of standard, more empirically derived guidelines for design that ...ensure that these elements are both perceptually salient and cognitively meaningful. 
+> *...for non visual variants of maps, cartographers...haven't thought about auditory and vibro tactile map (cartography), and so we need to somehow bake into any type of standard, more empirically derived guidelines for design that ...ensure that these elements are both perceptually salient and cognitively meaningful.*
 
 Brandon Biggs - about challenges for standards organizations:
 
 
-> There are three (challenges). One is the data; there needs to be a lot more work with data. The second is the APIs. There's some future APIs like with XR that are coming out and we need to be thinking about those and how we can represent maps in that way. And the third is getting the users involved in whatever we make.
+> *There are three (challenges). One is the data; there needs to be a lot more work with data. The second is the APIs. There's some future APIs like with XR that are coming out and we need to be thinking about those and how we can represent maps in that way. And the third is getting the users involved in whatever we make.*
 
 Brandon Biggs - on how standards organizations can facilitate auditory map innovation:
 
 
-> The thing that needs to happen is we need to make more maps in all different types of modalities... the biggest problem is that we've we haven't really tried doing BART maps or topological maps of the Grand Canyon, or, you know, different, different types of maps that are required for being a professional, a geographer
+> *The thing that needs to happen is we need to make more maps in all different types of modalities... the biggest problem is that we've we haven't really tried doing BART maps or topological maps of the Grand Canyon, or, you know, different, different types of maps that are required for being a professional, a geographer*
 
 <h4 id="augmented-reality-ar">Augmented Reality (AR)</h4>
 
@@ -85,14 +80,14 @@ Brandon Biggs - on how standards organizations can facilitate auditory map innov
 Jan-Erik Vinje, of Norkart.no, who is Managing Director of the Open AR Cloud Association, gave a [presentation](https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Jan-Erik_Vinje-From%20Points-of-interest_to_maps_of_objects.pdf) on the emerging OGC GeoPose standard. Jan-Erik described what a “GeoPose” is, by comparing it with 2D points of interest (POIs).  In contrast to POIs, which can be rendered on a 2D Web map, a GeoPose lends itself to rendering in a 3D globe projection environment, and supports “six degrees of freedom”, meaning a GeoPose can describe the position and orientation of objects in space.  Jan-Erik goes on to emphasize that GeoPose is attempting to create a standard for describing the attitude of things in the real and virtual world.  As such, things in the real world tend to move around, and because of this, the representation of things needs to be machine-made, but this doesn’t exclude the possibility of manual interventions.  He indicates that all of these concepts are fundamentally compatible with the concept of a “map”, with layers, that is 3D and in which you live, but in which you could have objects that are part of the virtual world, such as historical objects, but which don’t have a physical reality.  In sum, Jan-Erik is describing what augmented reality is,  and he asserts that a native browser Maps API should support a “globe mode”, which could be the basis for a standardized augmented reality:
 
 
-> ...(with GeoPose) support (in) the native map elements...objects in (the) map become especially useful...if we could make sure that the map elements supported the globe mode...like...Cesium or Google Earth
+> *...(with GeoPose) support (in) the native map elements...objects in (the) map become especially useful...if we could make sure that the map elements supported the globe mode...like...Cesium or Google Earth*
 
 Christine Perey and Josh Lieberman gave a [presentation](https://www.w3.org/2020/maps/supporting-material-uploads/presentations/M4W_GeoPoseUseCases_Perey_LIeberman.pdf), about how GeoPose might be integrated with, or supply use cases supporting the Use Cases and Requirements for Web Maps being developed  by the Maps for HTML Community Group. The approach they take is to classify the use cases according to the actor's role, be they content author, Web site visitor or application developer, and they usefully itemize these by reference to the UCR for Web Maps, tabulating exactly how GeoPose aligns with and extends these with 3D GeoPosed considerations. It is worth noting that certain of the GeoPose Web Map use case extensions, such as views along a route from any / different directions, aligns with the spatial cues considerations for cognitive needs users, brought forward by the members of the COGA panel.
 
 Josh Lieberman - Open Geospatial Consortium:  
 
 
-> ...there really is a continuum...between a flat map oriented north with a fixed extent and scale and...augmented reality where you really are looking at what's around you and in front of you and having map objects placed into that view.  … (A) Web Map that ... is able to transition from … augmented reality to (a) mapped formalism of reality...can really be put into this spectrum...GeoPose is an important part of establishing that continuum
+> *...there really is a continuum...between a flat map oriented north with a fixed extent and scale and...augmented reality where you really are looking at what's around you and in front of you and having map objects placed into that view.  … (A) Web Map that ... is able to transition from … augmented reality to (a) mapped formalism of reality...can really be put into this spectrum...GeoPose is an important part of establishing that continuum*
 
 A distinguished and enthusiastic [panel](https://youtu.be/RPZlE5N-Nds?t=5820) of AR researchers, entrepreneurs and standards practitioners convened, which included Patrick Cozzi, CEO of Cesium, Thomas Logan of Equal Entry, Christine Perey and Jan-Erik Vinje of the Open AR Cloud Association, and Ada Rose Cannon from the Samsung Internet team. 
 
@@ -101,22 +96,22 @@ The panel started out with Thomas Logan pointing out that a lot of times when pe
 Jan-Erik Vinje - Open AR Cloud Association:
 
 
-> Thumbs up from me! It's better to start with (2D native Web maps) and ... build on that. If we have native map elements that start out as 2D then the next thing is to extend it. So you could have the globe maps and the immersive modes later on. So, get on with it; that would be wonderful.
+> *Thumbs up from me! It's better to start with (2D native Web maps) and ... build on that. If we have native map elements that start out as 2D then the next thing is to extend it. So you could have the globe maps and the immersive modes later on. So, get on with it; that would be wonderful.*
 
 Ada Rose Cannon - Samsung Internet:
 
 
-> It would be interesting if there was a native element. Currently Web XR is the only way to do AR in the Web... the best way for it to to be able to get into Web XR would be if it was able to expose some kind of buffer, so that the particular web engine you're using could then take that content and do smart stuff with it to layer it appropriately in your environment.
+> *It would be interesting if there was a native element. Currently Web XR is the only way to do AR in the Web... the best way for it to to be able to get into Web XR would be if it was able to expose some kind of buffer, so that the particular web engine you're using could then take that content and do smart stuff with it to layer it appropriately in your environment.*
 
 Thomas Logan - Equal Entry:
 
 
-> 2D maps for my kind of world have been a constant challenge from when I got into this world of accessibility. So I just put it out there to really make sure people do care and consider the (accessibility) use case in 3D.
+> *2D maps for my kind of world have been a constant challenge from when I got into this world of accessibility. So I just put it out there to really make sure people do care and consider the (accessibility) use case in 3D.*
 
 Patrick Cozzi - Cesium:
 
 
-> I really believe in order to advance AR for maps and to advance 3D geospatial in general, we really need this collaboration, at the intersection of games and graphics and geospatial.... I think we're really just at the beginning of this kind of fusion of gaming and geospatial.
+> *I really believe in order to advance AR for maps and to advance 3D geospatial in general, we really need this collaboration, at the intersection of games and graphics and geospatial.... I think we're really just at the beginning of this kind of fusion of gaming and geospatial.*
 
 <h4 id="internationalization">Internationalization</h4>
 
@@ -131,17 +126,17 @@ The workshop convened a [panel of experts](https://youtu.be/zJkJcvmUA5o?t=4642) 
 Brandon Liu, Protomaps: 
 
 
-> For something to become a Web standard, it's not good to have a half-baked internationalisation solution; it's not good if the solution is just a minimum viable product that only works for left to right, languages, for example... I'm curious if (the internationalization built into) Web browsers already can influence broader cartographic possibilities for web maps.
+> *For something to become a Web standard, it's not good to have a half-baked internationalisation solution; it's not good if the solution is just a minimum viable product that only works for left to right, languages, for example... I'm curious if (the internationalization built into) Web browsers already can influence broader cartographic possibilities for web maps.*
 
 Thijs Brentjens, Geonovum:
 
 
-> (Web map accessibility) is a very important topic…(however) it isn’t (very important) in geospatial work ...(we have) this idea that maps are visual-only… you can't make that accessible. So we just don't do it. ...It requires us to...start ...breaking down the idea...we have that maps are not easy to make accessible because I think there are options.
+> *(Web map accessibility) is a very important topic…(however) it isn’t (very important) in geospatial work ...(we have) this idea that maps are visual-only… you can't make that accessible. So we just don't do it. ...It requires us to...start ...breaking down the idea...we have that maps are not easy to make accessible because I think there are options.*
 
 Siva Pidaparthi, ESRI: 
 
 
-> When we are looking at new standards, we should also be thinking about other, different, coordinate systems, not just Web Mercator, or like WGS84, which are good for global data, but for local data they are not very good. We should take additional coordinate reference systems into account.
+> *When we are looking at new standards, we should also be thinking about other, different, coordinate systems, not just Web Mercator, or like WGS84, which are good for global data, but for local data they are not very good. We should take additional coordinate reference systems into account.*
 
 <h4 id="privacy">Privacy</h4>
 
@@ -213,7 +208,7 @@ A government stakeholder panel was convened to discuss the importance of geospat
 Don Sullivan, NASA Ames Research Center: 
 
 
-> When I heard about... maps on the web and maps as first class citizens. I went, oh my God, yeah. So I'm here...as a champion. I think this is just an amazing idea that has been way too long in coming out. I've been waiting for this for over 20 years now.
+> *When I heard about... maps on the web and maps as first class citizens. I went, oh my God, yeah. So I'm here...as a champion. I think this is just an amazing idea that has been way too long in coming out. I've been waiting for this for over 20 years now.*
 
 <h4 id="stakeholders-open-source-for-web-mapping">Stakeholders: Open Source for Web Mapping</h4>
 
@@ -223,22 +218,22 @@ A panel of open source geospatial and browser developers discussed what needs to
 Daniel Morissette, MapGears/OSGEO:
 
 
-> A good example of a standard that did work and nobody could kill, even though it's simple, and could be called flawed, is the web map service, WMS.  If it's good enough, people are going to use it, and if the map integration in HTML is good enough, it's gonna win over time.
+> *A good example of a standard that did work and nobody could kill, even though it's simple, and could be called flawed, is the web map service, WMS.  If it's good enough, people are going to use it, and if the map integration in HTML is good enough, it's gonna win over time.*
 
 Will Mortenson, NGA Gnome Program:
 
 
-> I gather requirements from customers and users;...as a government guy, I don't necessarily know everything…(about how Web browsers work). So if we had people...from the public side (who) could stress why (investing in maps in browsers is) important, (the government could invest) money towards these efforts.
+> *I gather requirements from customers and users;...as a government guy, I don't necessarily know everything…(about how Web browsers work). So if we had people...from the public side (who) could stress why (investing in maps in browsers is) important, (the government could invest) money towards these efforts.*
 
 Andreas Hocevar - OpenLayers / OSGEO: 
 
 
-> (A native map HTML element would) definitely let us focus more on what we can do with maps; how we can make nice maps, how we can support users in creating nice maps...the more I think about it, the more I like...the basic concept of … a slippy map.... with that in place, mapping libraries could probably develop in directions that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely in the way of ... other kinds of developments.
+> *(A native map HTML element would) definitely let us focus more on what we can do with maps; how we can make nice maps, how we can support users in creating nice maps...the more I think about it, the more I like...the basic concept of … a slippy map.... with that in place, mapping libraries could probably develop in directions that we cannot even think about yet. But this strong focus on the rendering that we have now is definitely in the way of ... other kinds of developments.*
 
 Simon Pieters - Bocoup: 
 
 
-> Browser developers and map framework developers need to talk to each other and get an agreement on use cases and requirements and how we can change the browser to better address those needs in a well designed way.  ...when designing solutions in (this) space... ...maps should be accessible to people who use screen readers … by default, insofar as (they) can be. But for more custom rendering, when you use canvas or WebGL, then accessibility is hard to get by default, but you will need to make it possible to layer in, somehow.
+> *Browser developers and map framework developers need to talk to each other and get an agreement on use cases and requirements and how we can change the browser to better address those needs in a well designed way.  ...when designing solutions in (this) space... ...maps should be accessible to people who use screen readers … by default, insofar as (they) can be. But for more custom rendering, when you use canvas or WebGL, then accessibility is hard to get by default, but you will need to make it possible to layer in, somehow.*
 
 <h4 id="commercial-mapping-stakeholders">Commercial Mapping Stakeholders</h4>
 
@@ -248,17 +243,17 @@ Ted Guild of the World Wide Web Consortium (W3C) convened a panel of stakeholder
 Daniel Lewis - Geotab:
 
 
-> ...(during) disaster(s)...the ability for decision makers to quickly go in and get access to that kind of data..ultimately the point of this stuff is…(to) make decisions based on it...having the ability to quickly iterate on that ...is really important. ...interoperability is ... a key thing going through all of this...baking that standard into the tool that everybody uses... immediately starts to break down the silos”
+> *...(during) disaster(s)...the ability for decision makers to quickly go in and get access to that kind of data..ultimately the point of this stuff is…(to) make decisions based on it...having the ability to quickly iterate on that ...is really important. ...interoperability is ... a key thing going through all of this...baking that standard into the tool that everybody uses... immediately starts to break down the silos*
 
 Tom Lee - Mapbox:
 
 
-> For us, unlocking performance is really important. Moving to a native implementation could really unlock some additional performance. … anything that can be done to unlock more performance will push the frontier forward and if standardization can be part of that, then that's really great.
+> *For us, unlocking performance is really important. Moving to a native implementation could really unlock some additional performance. … anything that can be done to unlock more performance will push the frontier forward and if standardization can be part of that, then that's really great.*
 
 Ed Parsons - Google:
 
 
-> My message is, we need to be more mainstream. We need to be much more standard citizens of the web as opposed to creating our own separate Geospatial web where we did things differently.
+> *My message is, we need to be more mainstream. We need to be much more standard citizens of the web as opposed to creating our own separate Geospatial web where we did things differently.*
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -268,15 +263,13 @@ Wendy Seltzer - W3C Strategy Lead and Counsel:
  
 
 
-> ...as strategy lead at W3C I'm excited to hear the discussion here and we'll welcome any follow up that you have for places that we can fill gaps in existing standards work or new work that you might like to see started at the W3C, that the team is here to help.
+> *...as strategy lead at W3C I'm excited to hear the discussion here and we'll welcome any follow up that you have for places that we can fill gaps in existing standards work or new work that you might like to see started at the W3C, that the team is here to help.*
 
 Web mapping standards have previously focused on server-side technologies and infrastructure, and there is a robust set of standards for map servers which closely interact with universal modern client-side techniques such as tiled “slippy maps” that can be panned and zoomed. Because these techniques are de facto standards between all web map providers, and have been stable for some years, there are common factors that would clearly benefit from formal client-side standardization: tiling, panning, zooming, coordinate reference systems, layers, accessible map features (e.g. geometric areas of interest), and more.
 
 Another impetus for standardizing maps is improved accessibility in web maps, which was a major theme of the workshop. Several surveys of existing mapping frameworks demonstrated a fundamental lack of accessibility, which needs to be addressed in web standards.
 
-<h4> \
-Next steps \
-</h4>
+<h4> Next steps </h4>
 
 
 The next logical step is to begin the discussion for how a working group should scope these features in its charter. The two main points for discussion are what is and is not in scope for the first charter, and whether to define higher-level map-specific features or to break the functionality down into functional primitives that can solve a wider set of use cases beyond maps. 
