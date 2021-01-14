@@ -29,6 +29,9 @@ body {
   max-width: 66rem;
   padding: 3em;
 }
+main {
+  line-height: 1.4;
+}
 body > header {
   grid-area: header;
 }
@@ -356,7 +359,7 @@ ul, ol {
   margin-left: 0;
   padding-left: 1em;
 }
-ul ul, ol ul, dl ul {
+ul ul, ol ul, dl ul, blockquote cite {
   list-style: circle;
   list-style: "➢ ";
   margin: 0.5rem 0 1rem;
@@ -366,7 +369,16 @@ li {
 }
 
 blockquote {
-  margin-left: 1em;
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  border-left: solid #ddd 0.25rem;
+  font-family: "Bookman Old Style", Bookman, serif;
+  line-height: 1.2;
+}
+blockquote cite {
+  display: list-item;
+  list-style-position: inside;
+  font-style: italic;
 }
 
 dd {
@@ -784,7 +796,7 @@ a.footnote-ref:after {
   }
 }
 
-cite { font-weight: bold;}
+.irc cite { font-weight: bold;}
 
 ol ol { margin: 1rem;}
 
