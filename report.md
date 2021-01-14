@@ -8,6 +8,8 @@ description: >-
 
 {% include relBase.html %}
 
+<p class="warning">This is a draft report, it is still being reviewed and edited by the program committee.</p>
+
 <h2 id="executive-summary">Executive Summary</h2>
 
 Geospatial information on the Web is fragmented, inadequately covered by Web standards, and lacking interoperability. This raises significant barriers to its effective use. Efforts to standardize geoinformation have focused on established geospatial developers, leaving out the full range of people who communicate with map data on the web. An opportunity exists today to standardize maps and spatial information in HTML, lowering barriers for diverse stakeholders: web developers, GIS data providers, map solution providers, commercial geo-app services, and individual web users, in particular the disabled community.
@@ -25,6 +27,8 @@ The workshop demonstrated the receptiveness on the part of the Web standards com
 For the geospatial standards community, the Web Platform provides an essential open and even playing field for development and innovation, and for providing access to maps and spatial information to the widest audiences. Given the cautious willingness to cooperate from the Web standards community, the geospatial standards community will need to continue to promote the standardization of maps on the Web, and to increase participation in relevant Web standards development.
 
 This report concludes that the next step forward for this initiative should be negotiation of the terms of reference for a W3C working group that draws its inputs and requirements from relevant W3C, WHATWG and OGC (standards) working groups.
+
+<p class="info">Session videos, transcripts, and supporting material are available from the <a href="{{ relBase }}/agenda">agenda page</a> of the workshop website.</p>
 
 <h2 id="introduction">Introduction</h2>
 
