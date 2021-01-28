@@ -66,7 +66,7 @@ Tony Stockman, on challenges facing the auditory map domain:
 
 > One of the real problems, actually, is the lack of standards for auditory displays in general.
 
-Nicholas Giudice, on challenges facing the auditory map domain:
+Nicholas Giudice, on challenges facing the auditory and vibrotactile map domain:
 
 > …for non visual variants of maps, cartographers…haven't thought about auditory and vibro tactile map [cartography], and so we need to somehow bake into any type of standard, more empirically derived guidelines for design that… ensure that these elements are both perceptually salient and cognitively meaningful.
 
