@@ -47,7 +47,7 @@ Claudia Loitsch和Julian Striegl描述了如何使用地图来改善[室内位�
 
 物理无障碍是指为身体残疾者提供的设施，如轮椅坡道等。WheelMap.org网站的Sebastian Felix Zappe认为[HTML中的地图可以被用于“残障主流化”](https://www.w3.org/2020/maps/supporting-material-uploads/presentations/Sebastian_Felix_Zappe_Holger_Dieteric.pdf)，也就是说，确保无障碍信息通过标准的制定，成为所有Web地图服务的一部分。
 
-来自Smith-Ketttlewell眼科研究所的Brandon Biggs[强调了向盲人和视力受损用户展示地图内容的重要性](https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Brandon_Biggs-Smith-Kettlewell.pdf)。WCAG标准和技术目前还没有涵盖Web地图中图形信息的复杂性，也没有涵盖将这种空间信息传达给非可视Web用户的方法。随着浏览器新增的内置功能，比如Web振动、音频和语音识别API，可以为Web创建更高级的非可视化地图。为了生成数字或振感有声地图，地理空间数据集中的每个要素都需要名称和完整的几何特征。Biggs开发的非视觉地图使用了空间碰撞检测，用户操作他们在空间中的虚拟位置，当虚拟位置与要素发生碰撞时，就会读出要素的名称属性。现有的栅格地图和未标记的特征向量集不能提供所需的文本描述。即使是将要素标记为点标记的地图也一样，因为要素在空间中的比例是未知的。Biggs的结论是，如果不考虑非可视地图对Web地图要素信息的数据建模要求，构建标准HTML组件是毫无意义的。这指出了建立Web地图标准需要解决的至少两个关键问题。
+来自Smith Kettlewell眼科研究所的Brandon Biggs[强调了向盲人和视力受损用户展示地图内容的重要性](https://www.w3.org/2020/maps/supporting-material-uploads/position-statements/Brandon_Biggs-Smith-Kettlewell.pdf)。WCAG标准和技术目前还没有涵盖Web地图中图形信息的复杂性，也没有涵盖将这种空间信息传达给非可视Web用户的方法。随着浏览器新增的内置功能，比如Web振动、音频和语音识别API，可以为Web创建更高级的非可视化地图。为了生成数字或振感有声地图，地理空间数据集中的每个要素都需要名称和完整的几何特征。Biggs开发的非视觉地图使用了空间碰撞检测，用户操作他们在空间中的虚拟位置，当虚拟位置与要素发生碰撞时，就会读出要素的名称属性。现有的栅格地图和未标记的特征向量集不能提供所需的文本描述。即使是将要素标记为点标记的地图也一样，因为要素在空间中的比例是未知的。Biggs的结论是，如果不考虑非可视地图对Web地图要素信息的数据建模要求，构建标准HTML组件是毫无意义的。这指出了建立Web地图标准需要解决的至少两个关键问题。
 
 <h4 id="web-maps-for-cognitive-accessibility">Web地图的认知障碍可访问性</h4>
 
@@ -55,7 +55,7 @@ Claudia Loitsch和Julian Striegl描述了如何使用地图来改善[室内位�
 
 <h4 id="creating-accessible-web-map-widgets">建立无障碍Web地图部件</h4>
 
-本次研讨会汇集了无障碍Web地图这一新兴领域的全球专家和研究人员。他们讨论了残障人士，特别是有视觉障碍的人，使用Web地图会面临的问题，以及Web地图社区可以共同采取哪些行动来促进对地图内容和功能的可访问性。专家组成员包括来自Fizz Studio的Doug Schepers、来自Smith Ketttlewell眼科研究所的工程师Brandon Biggs、来自玛丽皇后大学的Tony Stockman博士和来自缅因大学的Nicholas Giudice博士。
+本次研讨会汇集了无障碍Web地图这一新兴领域的全球专家和研究人员。他们讨论了残障人士，特别是有视觉障碍的人，使用Web地图会面临的问题，以及Web地图社区可以共同采取哪些行动来促进对地图内容和功能的可访问性。专家组成员包括来自Fizz Studio的Doug Schepers、来自Smith Kettlewell眼科研究所的工程师Brandon Biggs、来自玛丽皇后大学的Tony Stockman博士和来自缅因大学的Nicholas Giudice博士。
 
 专家组首先描述了有声地图的性质，和目前存在的不同类型的有声和振感地图，并且描述了这些地图的特点和区别。包括音频标记（耳标），视觉和触觉之间的关系和相似性，以及如何在这样的地图中便于实现与API的设计。专家组还强调了标准化有声地图的重要考虑因素和要求，例如地图特征需要名称或标签属性，以及需要能够自动转换栅格数据，以便向听觉或触觉用户呈现。专家组讨论的另一个内容是，绘图学已经为视觉地图建立了良好的规则，有必要通过对相关用户的研究，让绘图学为非视觉地图制定类似的心理－生理标准。
 
