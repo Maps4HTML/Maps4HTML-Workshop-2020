@@ -8,6 +8,8 @@ description: >-
 
 {% include relBase.html %}
 
+Translations available: [Une traduction français du rapport est ici]({{ relBase }}/report-fr); [中文翻译在这里]({{ relBase }}/report-zh)
+
 <h2 id="executive-summary">Executive Summary</h2>
 
 Geospatial information on the Web is fragmented, inadequately covered by Web standards, and lacking interoperability. This raises significant barriers to its effective use. Efforts to standardize geoinformation have focused on established geospatial developers, leaving out the full range of people who communicate with map data on the web. An opportunity exists today to standardize maps and spatial information in HTML, lowering barriers for diverse stakeholders: web developers, GIS (Geographic Information Systems) developers, data providers, map solution providers, commercial geo-app services, and individual web users, in particular the disabled community.

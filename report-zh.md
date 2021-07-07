@@ -7,7 +7,7 @@ description: >-
 
 {% include relBase.html %}
 
-以下报告内容的[原始英文版本在这里](https://www.w3.org/2020/maps/report)。
+以下报告内容的[原始英文版本在这里]({{ relBase }}/report)。 [法语翻译在这里]({{ relBase }}/report-fr)。
 
 <h2 id="executive-summary">执行摘要</h2>
 
